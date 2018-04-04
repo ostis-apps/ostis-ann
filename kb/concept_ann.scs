@@ -1,0 +1,4 @@
+concept_ann
+	<- sc_node_not_relation;
+	=> nrel_main_idtf: [Искусственная нейронная сеть] (* <- lang_ru;; *);
+	=> nrel_main_idtf: [Artificial neural network] (* <- lang_en;; *);;
