@@ -33,11 +33,11 @@ linear_recirculation_network_for_compression
 			*);;
 		*);
 		
-<-linear_recirculation_network;
+
 =>nrel_number_of_layers:[2](*<-integer;;*);
 <=inclusion: dimensional_neural_networks;
 			 
-<-rrel_explored_concept:subject_domain_of_dimensional_neural_networks;
+<-rrel_explored_concept:subject_domain_of_dimensional_neural_network;
 ///////////////////////////////////////////////////////////////////
 <- rrel_key_sc_element:...
 (*

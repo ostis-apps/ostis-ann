@@ -37,4 +37,5 @@ neuron_node
 			=> nrel_format: format_png;;
 		*);;
 	*);;
-*);;
+*);
+<-rrel_explored_concept:subject_domain_of_artificial_neural_networks;;

@@ -51,7 +51,7 @@ linear_recirculation_network
 <- rrel_key_sc_element:...
 (*
 	<- illustration;;
-	=> nrel_main_idtf: [Рис. (линейная рециркуляционная сеть)] (* <- lang_ru;;	*);;
+	=> nrel_main_idtf: [Рис. (Пример линейной рециркуляционной сети)] (* <- lang_ru;;	*);;
 	<= nrel_sc_text_translation:...
 	(*
 		-> rrel_example: "file://images/example_recirculation_nn.png"

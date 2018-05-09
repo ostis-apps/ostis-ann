@@ -161,6 +161,16 @@ imaging_task
 	[сопоставление образов]
 	(* <- lang_ru;; *);;
 	
+Pattern_matching_action_1
+	=>nrel_main_idtf:
+	[Действие по сопоставлению образов 1]
+	(* <- lang_ru;; *);;
+	
+pattern_matching_action
+	=>nrel_main_idtf:
+	[Действие по сопоставлению образов]
+	(* <- lang_ru;; *);;
+	
 Imaging_task_1
 	=>nrel_main_idtf:
 	[Cопоставление образов 1]
@@ -169,6 +179,11 @@ Imaging_task_1
 Image_compression_action_1
 	=>nrel_main_idtf:
 	[Действие по сжатию образа 1]
+	(* <- lang_ru;; *);;
+	
+image_compression_action
+	=>nrel_main_idtf:
+	[действие по сжатию образа]
 	(* <- lang_ru;; *);;
 	
 Image_restoring_action_1
@@ -204,6 +219,21 @@ output//?
 input_layer//
 	=>nrel_main_idtf:
 	[входной слой]
+	(* <- lang_ru;; *);;
+	
+hidden_layer//
+	=>nrel_main_idtf:
+	[скрытый слой]
+	(* <- lang_ru;; *);;
+	
+subject_domain_of_symptom_descriptions
+	=>nrel_main_idtf:
+	[Предметная область признаковых описаний]
+	(* <- lang_ru;; *);;
+	
+subject_domain_of_algebraic_structures
+	=>nrel_main_idtf:
+	[Предметная область алгебраических систем]
 	(* <- lang_ru;; *);;
 	
 output_layer//

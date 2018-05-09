@@ -25,4 +25,5 @@ symptom
 			(*
 				->nrel_functional_mapping;; 
 			*);;
-		*);;
+		*);
+<-rrel_maximum_studied_object_class:subject_domain_of_symptom_descriptions;;

@@ -34,7 +34,7 @@ nrel_neuron_node
 <- antireflexive_relation;
 <- antisymmetric_relation;
 <- antitransitive_relation;
-
+<-rrel_explored_concept:subject_domain_of_artificial_neural_networks;
 /////////////////////////////////////////////////////////////////////
 <- rrel_key_sc_element:...
 (*

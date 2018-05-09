@@ -28,6 +28,7 @@ formal_neuron_with_activation_function
 		*);
 ///////////////////////////////////////////////////////////////////
 	<=nrel_inclusion:formal_neuron;
+	<-rrel_explored_concept:subject_domain_of_artificial_neural_networks;
 
 /////////////////////////////////////////////////////////////////////
 <- rrel_key_sc_element: statement_formal_neuron_with_activation_function

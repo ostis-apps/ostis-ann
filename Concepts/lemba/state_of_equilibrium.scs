@@ -7,7 +7,7 @@ state_of_equilibrium
 	
 ///////////////////////////////////////////////////////////////////////////
 	<-rrel_key_sc_element: 
-	Definition_of_neuron_node
+	...
 		(*
 			<-definition;;
 			<=nrel_sc_text_translation:...
@@ -30,4 +30,6 @@ state_of_equilibrium
 			*);;
 		*);
 		
-<-immeasurable_parameter;;
+<-immeasurable_parameter;
+
+<-rrel_explored_concept:subjdomain_parameters_and_values;;
