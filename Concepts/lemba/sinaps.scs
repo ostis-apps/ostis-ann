@@ -1,0 +1,40 @@
+sinaps
+	=>nrel_main_idtf:
+	[нейронный узел]
+	(* <- lang_ru;; *);
+	
+///////////////////////////////////////////////////////////////////////////
+	<-rrel_key_sc_element: 
+	Definition_of_sinaps
+		(*
+			<-definition;;
+			<=nrel_sc_text_translation:...
+			(*
+				-> rrel_example:
+				[<p>				
+				<b>Синапс</b>  - ситуативная дуга <sc_element sys_idtf = "neural_network_in_graphical_representation">нейронной сети в графовом представлении</sc_element> .
+				</p>] 
+				(*
+				<-lang_ru;;
+				=> nrel_format: format_html;;
+				*);;
+			*);;
+		=>nrel_main_idtf:[Опр. (синапс)](* <-lang_ru;; => nrel_format: format_html;;*);;
+		<=nrel_using_constants:...
+			(*
+				->neural_network_in_graphical_representation;vertex;; 
+			*);;
+		*);
+///////////////////////////////////////////////////////////////////
+<- rrel_key_sc_element:...
+(*
+	<- illustration;;
+	=> nrel_main_idtf: [Рис. (синапс)] (* <- lang_ru;;	*);;
+	<= nrel_sc_text_translation:...
+	(*
+		-> rrel_example: "file://images/neuron_node.png"
+		(*
+			=> nrel_format: format_png;;
+		*);;
+	*);;
+*);;
