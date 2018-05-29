@@ -11,12 +11,14 @@ cd ann.ostis
 ## Build knowledge base
 Ubuntu:
 ```sh
-./ostis/scripts/build_kb.sh
+cd ann.ostis/ostis/scripts
+./build_kb.sh
 ```
 
 ## Run
 Run on ubuntu:
 ```sh
-./ostis/scripts/run_sctp.sh
-./ostis/scripts/run_scweb.sh
+cd ann.ostis/ostis/scripts
+./run_sctp.sh
+./run_scweb.sh
 ```
