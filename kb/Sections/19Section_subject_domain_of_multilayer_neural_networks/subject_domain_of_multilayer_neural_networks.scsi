@@ -8,11 +8,3 @@ subject_domain_of_multilayer_neural_networks
 <- subject_domain;
 -> rrel_maximum_studied_object_class: 
 	multilayer_neural_network;;
-	
-multilayer_neural_network
-	<- sc_node_not_relation;
-	=>nrel_main_idtf:
-	[многослойная нейронная сеть]
-	(* <- lang_ru;;*);
-	[multilayerlayer neural network]
-	(* <- lang_en;; *);;
