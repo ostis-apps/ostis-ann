@@ -1,0 +1,8 @@
+# ostis
+ostis/
+*.*~
+
+# Intellij
+*.iml
+.idea/
+
