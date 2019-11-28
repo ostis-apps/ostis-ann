@@ -1,0 +1,54 @@
+perceptron<-sc_node_not_relation;;
+
+perceptron=>nrel_main_idtf:
+[персептрон](*<-lang_ru;;*);
+[perceptron](*<-lang_en;;*);;
+
+
+
+nrel_inclusion->(math_concept=>perceptron);;
+
+perceptron<- rrel_key_sc_element: ...
+(*
+<- definition;;
+=> nrel_main_idtf:
+      [Опр. (классификатор)] (* <- lang_ru;; *);;
+=> nrel_using_constants: 
+	{
+		math_concept;
+		information;
+		brain;
+		nrel_perception
+	};; 
+<= nrel_sc_text_translation: ... 
+		(*
+			->rrel_example:
+			[Персептрон - это <b><sc_element sys_idtf="math_concept">математическая модель</b> восприятия <b><sc_element sys_idtf="information">информации</b> <b><sc_element sys_idtf="brain">мозгом</b>.](*<- lang_ru;;=>nrel_format: format_html;;*);;
+		*);;
+*);;
+
+
+perceptron<- rrel_key_sc_element: ... 
+(*
+ => nrel_main_idtf:
+[Утв. 1 о персептрон] (* <- lang_ru;; *);;
+ <= nrel_sc_text_translation: ...
+	 (*
+    	  -> rrel_example:
+		[<b><sc_element sys_idtf="model">Модель</b> персептрона была предложена <b><sc_element sys_idtf="Frank_Rosenblatt">Фрэнком Розенблаттом</b>.](*<-lang_ru;;=>nrel_format: format_html;;*);;
+	*);;
+=> nrel_using_constants: 
+{
+Frank_Rosenblatt;
+model
+};;
+*);;
+
+perceptron-> rrel_example:
+[*
+perceptron->math_concept;;
+math_concept->
+[*
+brain<=nrel_perception:information;;
+*];;
+*];;
