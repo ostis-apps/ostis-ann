@@ -1,8 +1,4 @@
-# ostis
-ostis/
-*.*~
-
-# Intellij
-*.iml
-.idea/
-
+.idea
+.vscode
+*.scs~
+ostis
