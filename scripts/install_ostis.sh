@@ -20,13 +20,6 @@ include_kb()
   cd ..
 }
 
-include_kpm()
-{
-  cd sc-machine/scripts
-	./make_all.sh
-	cd ../..
-}
-
 cd ..
 if [ -d "ostis" ]; 
 	then
@@ -40,6 +33,5 @@ if [ -d "ostis" ];
 		cd ostis
 		prepare_platform
 		include_kb
-		include_kpm
 fi
 
