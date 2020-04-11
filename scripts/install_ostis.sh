@@ -22,9 +22,7 @@ include_kb()
 
 include_kpm()
 {
-  cd sc-machine
-  echo 'add_subdirectory(${SC_MACHINE_ROOT}/../../problem-solver/cxx ${SC_MACHINE_ROOT}/bin)' >> ./CMakeLists.txt
-	cd ./scripts
+  cd sc-machine/scripts
 	./make_all.sh
 	cd ../..
 }
@@ -40,7 +38,6 @@ if [ -d "ostis" ];
 		echo -en "Install OSTIS platform\n"
 		git clone https://github.com/ShunkevichDV/ostis.git
 		cd ostis
-    git checkout 0.5.0
 		prepare_platform
 		include_kb
 		include_kpm
