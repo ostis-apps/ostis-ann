@@ -1,0 +1,17 @@
+subject_domain_structure_of_artificial_neural_networks
+	=> nrel_main_idtf:
+	[Предметная область структура нейронных сетей]
+	(* <- lang_ru;; *);
+	[Subject domain structure of artificial neural networks]
+	(* <- lang_en;; *);
+		
+<- subject_domain;;
+
+
+
+
+
+
+
+
+

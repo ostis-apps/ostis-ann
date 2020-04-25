@@ -1,8 +1,0 @@
-subject_domain_of_continuous_neural_networks
-	=> nrel_main_idtf:
-	[Предметная область непрерывных нейронных сетей]
-	(* <- lang_ru;; *);
-	[Subject domain of continuous neural networks]
-	(* <- lang_en;; *);
-		
-<- subject_domain;;
