@@ -1,8 +1,8 @@
 section_subject_domain_tasks_solved_by_neural_networks
 => nrel_main_idtf: 
-	[Раздел. Предметная область задач решаемых нейронными сетями]
+	[Раздел. Предметная область задач решаемых искусственными нейронными сетями]
 	(* <- lang_ru;;*);
-	[Section. Subject domain of tasks solved by neural networks]
+	[Section. Subject domain of tasks solved by artificial neural networks]
 	(* <- lang_en;; *);
 
 <= nrel_section_decomposition:

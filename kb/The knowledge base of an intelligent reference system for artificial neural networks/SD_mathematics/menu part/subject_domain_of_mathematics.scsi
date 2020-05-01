@@ -1,8 +1,8 @@
 subject_domain_of_mathematics
 	=> nrel_main_idtf:
-	[Предметная область математики нейронных сетей]
+	[Предметная область математики искусственных нейронных сетей]
 	(* <- lang_ru;; *);
-	[Subject domain of neural networks mathematics]
+	[Subject domain of artificial neural networks mathematics]
 	(* <- lang_en;; *);
 		
 <- subject_domain;;

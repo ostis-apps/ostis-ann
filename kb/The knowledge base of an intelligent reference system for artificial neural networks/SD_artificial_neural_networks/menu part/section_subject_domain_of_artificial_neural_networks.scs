@@ -1,6 +1,6 @@
 section_subject_domain_of_artificial_neural_networks
 => nrel_main_idtf: 
-    [Раздел. Предметная область по искусственным нейронным сетям](* <- lang_ru;; *);
+    [Раздел. Предметная область искусственных нейронных сетей](* <- lang_ru;; *);
 => nrel_idtf: 
 	[Subject domain of artificial neural networks](*<- lang_en;;*);
 

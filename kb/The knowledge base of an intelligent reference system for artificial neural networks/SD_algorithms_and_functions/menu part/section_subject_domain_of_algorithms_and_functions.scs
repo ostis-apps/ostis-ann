@@ -1,8 +1,8 @@
 section_subject_domain_of_algorithms_and_functions
 => nrel_main_idtf: 
-	[Раздел. Предметная область алгоритмов и функций нейронных сетей]
+	[Раздел. Предметная область алгоритмов и функций искусственных нейронных сетей]
 	(* <- lang_ru;;*);
-	[Section. Subject domain of neural networks algorithms and functions]
+	[Section. Subject domain of artificial neural networks algorithms and functions]
 	(* <- lang_en;; *);
 
 <- not_enough_formed_structure;
