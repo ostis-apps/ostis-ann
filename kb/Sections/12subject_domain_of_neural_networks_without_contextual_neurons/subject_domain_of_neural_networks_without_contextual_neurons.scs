@@ -1,8 +1,0 @@
-subject_domain_of_neural_networks_without_contextual_neurons
-<- sc_node_struct;
-
-=> nrel_main_idtf:
-	[Предметная область нейронных сетей без контекстных нейронов]
-	(* <- lang_ru;; *);
-	[Subject domain of neural networks without contextual neurons]
-        (* <- lang_en;; *);;

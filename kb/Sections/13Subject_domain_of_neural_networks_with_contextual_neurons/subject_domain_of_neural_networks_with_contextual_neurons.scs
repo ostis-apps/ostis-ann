@@ -1,8 +1,0 @@
-subject_domain_neural_networks_with_contextual_neurons
-<- sc_node_struct;
-
-=> nrel_main_idtf:
-	[Предметная область нейронных сетей с контексными нейроннами]
-	(* <- lang_ru;; *);
-	[Subject domain neural networks with contextual neurons]
-        (* <- lang_en;; *);;
