@@ -1,0 +1,47 @@
+sc_node_not_relation->output_statistic;;
+sc_node_not_relation->output_data;;
+sc_node_not_relation->data;;
+sc_node_not_relation->input_statistic;;
+sc_node_not_relation->neural_network;;
+sc_node_norole_relation->nrel_forecast;;
+sc_node_norole_relation->nrel_learning;;
+
+
+
+output_statistic=> nrel_main_idtf: [Выходные статистические данные](* <- lang_ru;; *);;
+output_statistic=> nrel_main_idtf: [Output statistic data](* <- lang_en;; *);;
+output_statistic=> nrel_idtf: [Выходная статистика](* <- lang_ru;; *);;
+output_statistic=> nrel_idtf: [Output statistic](* <- lang_en;; *);;
+definition ->...
+(*
+->rrel_key_sc_element: output_statistic;;
+<= nrel_sc_text_translation: ...(*->rrel_example:[Выходные статические данные - это спрогназированные нейронной сетью статистические данные.](*<-lang_ru;;=> nrel_format: format_html;;*);;*);;
+=> nrel_main_idtf: [Определение (Выходные статистические данные)](*<- lang_ru;;=> nrel_format: format_html;;*);;
+=> nrel_using_constants:
+{ 
+nrel_forecast;
+data;
+neural_network
+};;
+*);; 
+
+
+statement ->...
+(*
+->rrel_key_sc_element: output_statistic;;
+<= nrel_sc_text_translation: ...(*->rrel_example:[Выходные статистические данные синтезируются с помощью обучения на<b><sc_element sys_idtf="input_statistica">входных статистических данных</b> .](*<-lang_ru;;=> nrel_format: format_html;;*);;*);;
+=> nrel_main_idtf: [Утверждение(Выходные статистические данные)](*<- lang_ru;;=> nrel_format: format_html;;*);;
+=> nrel_using_constants:
+{
+nrel_learning;
+input_statistic
+};;	
+*);;
+illustration -> ...
+(*
+->rrel_key_sc_element: output_statistic;;
+<= nrel_sc_text_translation: ...(*->"file://images/output_statistic.png";;*);;
+=> nrel_main_idtf: [Рисунок(Выходные статистические данные)](*<- lang_ru;;*);;
+*);;
+output_data=>nrel_inclusion:output_statistic;;
+output_statistic<-rrel_explored_concept: section_subject_domain_input_output_data;;

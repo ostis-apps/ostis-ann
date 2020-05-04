@@ -1,0 +1,41 @@
+sc_node_not_relation->output_face;;
+sc_node_not_relation->output_data;;
+sc_node_not_relation->input_picture;;
+sc_node_norole_relation->nrel_process;;
+sc_node_not_relation->neural_network;;
+
+
+output_face=> nrel_main_idtf: [Выходное изображение лица](* <- lang_ru;; *);;
+output_face=> nrel_main_idtf: [Output face](* <- lang_en;; *);;
+definition ->...
+(*
+->rrel_key_sc_element: output_face;;
+<= nrel_sc_text_translation: ...(*->rrel_example:[Выходное изображение лица - <b><sc_element sys_idtf="output_data">выходные данные</b> нейронной сети,представляющие собой обработанное или созданное изображение лица человека .](*<-lang_ru;;=> nrel_format: format_html;;*);;*);;
+=> nrel_main_idtf: [Определение (Выходное изображение лица)](*<- lang_ru;;=> nrel_format: format_html;;*);;
+=> nrel_using_constants:
+{ 
+output_data;
+neural_network
+};;
+*);; 
+
+
+statement ->...
+(*
+->rrel_key_sc_element: output_face;;
+<= nrel_sc_text_translation: ...(*->rrel_example:[С помощью нейронных сетей, <b><sc_element sys_idtf="output_data"> выпускающих</b> изображение лица сегодня создаются различные deep fake.](*<-lang_ru;;=> nrel_format: format_html;;*);;*);;
+=> nrel_main_idtf: [Утверждение(Выходное изображение лица)](*<- lang_ru;;=> nrel_format: format_html;;*);;
+=> nrel_using_constants:
+{
+output_data;
+neural_network
+};;
+*);;
+illustration -> ...
+(*
+->rrel_key_sc_element: output_face;;
+<= nrel_sc_text_translation: ...(*->"file://images/output_face.png";;*);;
+=> nrel_main_idtf: [Рисунок(Выходное изображение лица)](*<- lang_ru;;*);;
+*);;
+output_data=>nrel_inclusion:output_face;;
+output_face<-rrel_explored_concept: section_subject_domain_input_output_data;;

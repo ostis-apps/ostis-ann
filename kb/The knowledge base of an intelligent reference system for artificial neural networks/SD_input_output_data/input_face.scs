@@ -1,0 +1,42 @@
+sc_node_not_relation->input_face;;
+sc_node_not_relation->input_data;;
+sc_node_not_relation->neural_network;;
+sc_node_not_relation->output_face;;
+sc_node_norole_relation->nrel_learning;;
+
+
+input_face=> nrel_main_idtf: [Входное изображение лица](* <- lang_ru;; *);;
+input_face=> nrel_main_idtf: [Input face](* <- lang_en;; *);;
+definition ->...
+(*
+->rrel_key_sc_element: input_face;;
+<= nrel_sc_text_translation: ...(*->rrel_example:[Изображение лица  -<b><sc_element sys_idtf="input_data">входные данные</b>,которые принимает нейронная сеть для обучения или преобразования.](*<-lang_ru;;=> nrel_format: format_html;;*);;*);;
+=> nrel_main_idtf: [Определение (Входное изображение лица)](*<- lang_ru;;=> nrel_format: format_html;;*);;
+=> nrel_using_constants:
+{ 
+input_data;
+neural_network;
+nrel_learning
+};;
+*);; 
+
+
+statement ->...
+(*
+->rrel_key_sc_element: input_face;;
+<= nrel_sc_text_translation: ...(*->rrel_example:[Нейронные сети могут обрабатывать изображения так что, <b><sc_element sys_idtf="output_face">выходные изображения   лиц </b>  невозможно отличить от естественных  изображений.](*<-lang_ru;;=> nrel_format: format_html;;*);;*);;
+=> nrel_main_idtf: [Утверждение(Входное изображение лица)](*<- lang_ru;;=> nrel_format: format_html;;*);;
+=> nrel_using_constants:
+{
+output_face;
+neural_network
+};;	
+*);;
+illustration -> ...
+(*
+->rrel_key_sc_element: input_face;;
+<= nrel_sc_text_translation: ...(*->"file://images/input_face.png";;*);;
+=> nrel_main_idtf: [Рисунок(Входное изображение лица)](*<- lang_ru;;*);;
+*);;
+input_data=>nrel_inclusion:input_face;;
+input_face<-rrel_explored_concept: section_subject_domain_input_output_data;;

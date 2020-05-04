@@ -1,0 +1,41 @@
+sc_node_not_relation->output_variable;;
+sc_node_not_relation->input_variable;;
+sc_node_not_relation->output_data;;
+sc_node_not_relation->variable;;
+sc_node_norole_relation->nrel_process;;
+sc_node_not_relation->neural_network;;
+sc_node_not_relation->y;;
+
+
+output_variable=> nrel_main_idtf: [Выходная переменная](* <- lang_ru;; *);;
+output_variable=> nrel_main_idtf: [Output variable](* <- lang_en;; *);;
+definition ->...
+(*
+->rrel_key_sc_element: output_variable;;
+<= nrel_sc_text_translation: ...(*->rrel_example:[Выходная переменная - переменная,поступающая на <b><sc_element sys_idtf="output_data">выход</b> нейронной сети после обработки.](*<-lang_ru;;=> nrel_format: format_html;;*);;*);;
+=> nrel_main_idtf: [Определение (Выходная переменная)](*<- lang_ru;;=> nrel_format: format_html;;*);;
+=> nrel_using_constants:
+{ 
+output_data;
+neural_network;
+nrel_process;
+variable
+};;
+*);; 
+
+
+statement ->...
+(*
+->rrel_key_sc_element: output_variable;;
+<= nrel_sc_text_translation: ...(*->rrel_example:[Выходная переменная получается в результате обработки нейронной сети <b><sc_element sys_idtf="input_variable">входной переменной</b>.](*<-lang_ru;;=> nrel_format: format_html;;*);;*);;
+=> nrel_main_idtf: [Утверждение(Выходная переменная)](*<- lang_ru;;=> nrel_format: format_html;;*);;
+=> nrel_using_constants:
+{
+nrel_process;
+neural_network;
+input_variable
+};;
+*);;
+y<-rrel_example:output_variable;;
+output_data=>nrel_inclusion:output_variable;;
+output_variable<-rrel_explored_concept: section_subject_domain_input_output_data;;

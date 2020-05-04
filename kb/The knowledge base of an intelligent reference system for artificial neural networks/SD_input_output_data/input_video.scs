@@ -1,0 +1,38 @@
+sc_node_not_relation->input_video;;
+sc_node_not_relation->input_data;;
+sc_node_norole_relation->nrel_process;;
+sc_node_norole_relation->nrel_learning;;
+sc_node_not_relation->neural_network;;
+sc_node_not_relation->Titanic;;
+
+
+input_video=> nrel_main_idtf: [Входное видео](* <- lang_ru;; *);;
+input_video=> nrel_main_idtf: [Input video](* <- lang_en;; *);;
+definition ->...
+(*
+->rrel_key_sc_element: input_video;;
+<= nrel_sc_text_translation: ...(*->rrel_example:[Входное видео является одним из видов <b><sc_element sys_idtf="input_data">входных данных</b>,которые поступают в нейронную сеть для<b><sc_element sys_idtf="nrel_learning">обучения</b>  или обработки.](*<-lang_ru;;=> nrel_format: format_html;;*);;*);;
+=> nrel_main_idtf: [Определение (Входное видео)](*<- lang_ru;;=> nrel_format: format_html;;*);;
+=> nrel_using_constants:
+{ 
+input_data;
+neural_network;
+nrel_learning
+};;
+*);; 
+
+
+statement ->...
+(*
+->rrel_key_sc_element: input_video;;
+<= nrel_sc_text_translation: ...(*->rrel_example:[Нейронные сети,способные обрабатывать видео и извлекать некоторую нужную информацию,на данный момент являются одними из наиболее частоиспользуемых.](*<-lang_ru;;=> nrel_format: format_html;;*);;*);;
+=> nrel_main_idtf: [Утверждение(Входное видео)](*<- lang_ru;;=> nrel_format: format_html;;*);;
+=> nrel_using_constants:
+{
+nrel_process;
+neural_network
+};;
+*);;
+Titanic<-rrel_example:input_video;;
+input_data=>nrel_inclusion:input_video;;
+input_video<-rrel_explored_concept: section_subject_domain_input_output_data;;
