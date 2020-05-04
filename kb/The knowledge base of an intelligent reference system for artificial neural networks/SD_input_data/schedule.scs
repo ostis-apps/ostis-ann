@@ -1,0 +1,38 @@
+sc_node_not_relation->schedule;;
+
+
+schedule=> nrel_main_idtf: [график](* <- lang_ru;; *);;
+schedule=> nrel_main_idtf: [schedule](* <- lang_en;; *);;
+definition ->...
+(*
+->rrel_key_sc_element: schedule;;
+<= nrel_sc_text_translation: ...(*->rrel_example:[график - график ,представляющий собой <b><sc_element sys_idtf="input_data">входные данные</b> нейронной сети, необходимые ей для обработки или обучения.](*<-lang_ru;;=> nrel_format: format_html;;*);;*);;
+=> nrel_main_idtf: [Определение (график)](*<- lang_ru;;=> nrel_format: format_html;;*);;
+=> nrel_using_constants:
+{ 
+schedule;
+nrel_forecast;
+nrel_process;
+neural_network
+};;
+*);; 
+
+
+statement ->...
+(*
+->rrel_key_sc_element: schedule;;
+<= nrel_sc_text_translation: ...(*->rrel_example:[Графики необходимы для обучения нейронной сети и последующего решения задач прогназирования .](*<-lang_ru;;=> nrel_format: format_html;;*);;*);;
+=> nrel_main_idtf: [Утверждение(график)](*<- lang_ru;;=> nrel_format: format_html;;*);;
+=> nrel_using_constants:
+{
+nrel_forecast
+};;
+*);;
+illustration -> ...
+(*
+->rrel_key_sc_element: schedule;;
+<= nrel_sc_text_translation: ...(*->"file://images/input_schedule.png";;*);;
+=> nrel_main_idtf: [Рисунок(график)](*<- lang_ru;;*);;
+*);;
+input_data=>nrel_inclusion:schedule;;
+schedule<-rrel_explored_concept: section_subject_domain_input_data;;

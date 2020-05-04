@@ -1,0 +1,36 @@
+sc_node_not_relation->date;;
+
+date=> nrel_main_idtf: [дата](* <- lang_ru;; *);;
+date=> nrel_main_idtf: [date](* <- lang_en;; *);;
+definition ->...
+(*
+->rrel_key_sc_element: date;;
+<= nrel_sc_text_translation: ...(*->rrel_example:[Дата -<b><sc_element sys_idtf="input_data">входные данные</b>, которую представляют сабой дату,состоящую из дня,месяца и года,так же может быть указано и время.](*<-lang_ru;;=> nrel_format: format_html;;*);;*);;
+=> nrel_main_idtf: [Определение (дата)](*<- lang_ru;;=> nrel_format: format_html;;*);;
+=> nrel_using_constants:
+{ 
+input_data;
+date
+};;
+*);; 
+
+
+statement ->...
+(*
+->rrel_key_sc_element: date;;
+<= nrel_sc_text_translation: ...(*->rrel_example:[Дата , поступающая в нейронную сеть , в виде <b><sc_element sys_idtf="input_data">входных данных</b>,используются для определения даты произвдения продукта.](*<-lang_ru;;=> nrel_format: format_html;;*);;*);;
+=> nrel_main_idtf: [Утверждение(дата)](*<- lang_ru;;=> nrel_format: format_html;;*);;
+=> nrel_using_constants:
+{
+neural_network;
+input_data
+};;
+*);;
+illustration -> ...
+(*
+->rrel_key_sc_element: date;;
+<= nrel_sc_text_translation: ...(*->"file://images/input_date.png";;*);;
+=> nrel_main_idtf: [Рисунок(дата)](*<- lang_ru;;*);;
+*);;
+input_data=>nrel_inclusion:date;;
+date<-rrel_explored_concept: section_subject_domain_input_data;;

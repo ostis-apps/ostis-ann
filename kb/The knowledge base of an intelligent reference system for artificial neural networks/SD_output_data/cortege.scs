@@ -1,0 +1,39 @@
+sc_node_not_relation->cortege;;
+
+
+cortege=> nrel_main_idtf: [кортеж](* <- lang_ru;; *);;
+cortege=> nrel_main_idtf: [cortege](* <- lang_en;; *);;
+definition ->...
+(*
+->rrel_key_sc_element: cortege;;
+<= nrel_sc_text_translation: ...(*->rrel_example:[кортеж - упорядоченное <b><sc_element sys_idtf="set">множество</b> элементов,содержащий обработанные нейронной сетью элементы.](*<-lang_ru;;=> nrel_format: format_html;;*);;*);;
+=> nrel_main_idtf: [Определение (кортеж)](*<- lang_ru;;=> nrel_format: format_html;;*);;
+=> nrel_using_constants:
+{ 
+input_data;
+neural_network;
+set
+};;
+*);; 
+
+
+statement ->...
+(*
+->rrel_key_sc_element: cortege;;
+<= nrel_sc_text_translation: ...(*->rrel_example:[Кортеж является <b><sc_element sys_idtf="output_data">выходными данными</b>  нейронных сетей изпользуемых для решения задач или доказательства теорем.](*<-lang_ru;;=> nrel_format: format_html;;*);;*);;
+=> nrel_main_idtf: [Утверждение(кортеж)](*<- lang_ru;;=> nrel_format: format_html;;*);;
+=> nrel_using_constants:
+{
+neural_network;
+nrel_process
+};;
+*);;
+
+illustration -> ...
+(*
+->rrel_key_sc_element: cortege;;
+<= nrel_sc_text_translation: ...(*->"file://images/output_cortege.png";;*);;
+=> nrel_main_idtf: [Рисунок(кортеж)](*<- lang_ru;;*);;
+*);;
+output_data=>nrel_inclusion:cortege;;
+cortege<-rrel_explored_concept: section_subject_domain_output_data;;

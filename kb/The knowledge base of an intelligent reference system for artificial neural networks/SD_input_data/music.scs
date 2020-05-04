@@ -1,0 +1,31 @@
+sc_node_not_relation->music;;
+
+music=> nrel_main_idtf: [музыкальная дорожка](* <- lang_ru;; *);;
+music=> nrel_main_idtf: [music track](* <- lang_en;; *);;
+definition ->...
+(*
+->rrel_key_sc_element: music;;
+<= nrel_sc_text_translation: ...(*->rrel_example:[музыкальная дорожка  - один из видов  <b><sc_element sys_idtf="input_data">входных данных</b> ,которые поступают в нейронные сети, в виде двоичного кода .](*<-lang_ru;;=> nrel_format: format_html;;*);;*);;
+=> nrel_main_idtf: [Определение (музыкальная дорожка)](*<- lang_ru;;=> nrel_format: format_html;;*);;
+=> nrel_using_constants:
+{ 
+input_data;
+neuron
+};;
+*);; 
+
+
+statement ->...
+(*
+->rrel_key_sc_element: music;;
+<= nrel_sc_text_translation: ...(*->rrel_example:[Входная музыка используется нейронными сетями,котороые сами обрабатывают музыку и могу создавать музыкальные дорожки.](*<-lang_ru;;=> nrel_format: format_html;;*);;*);;
+=> nrel_main_idtf: [Утверждение(музыкальная дорожка)](*<- lang_ru;;=> nrel_format: format_html;;*);;
+=> nrel_using_constants:
+{
+neural_network;
+nrel_process
+};;
+*);;
+classic_music<-rrel_example:music;;
+music<=nrel_inclusion:input_data;;
+music<-rrel_explored_concept: section_subject_domain_input_data;;

@@ -1,0 +1,32 @@
+sc_node_not_relation->music;;
+
+music=> nrel_main_idtf: [музыкальная дорожка](* <- lang_ru;; *);;
+music=> nrel_main_idtf: [music track](* <- lang_en;; *);;
+definition ->...
+(*
+->rrel_key_sc_element: music;;
+<= nrel_sc_text_translation: ...(*->rrel_example:[музыкальная дорожка  - один из видов  <b><sc_element sys_idtf="output_data">выходных данных</b> ,которые выходят из нейронных сетей после обработки .](*<-lang_ru;;=> nrel_format: format_html;;*);;*);;
+=> nrel_main_idtf: [Определение (музыкальная дорожка)](*<- lang_ru;;=> nrel_format: format_html;;*);;
+=> nrel_using_constants:
+{ 
+input_data;
+neuron
+};;
+*);; 
+
+
+statement ->...
+(*
+->rrel_key_sc_element: music;;
+<= nrel_sc_text_translation: ...(*->rrel_example:[Выходная музыка может быть результатом обработки или может быть создана нейронной сетью.](*<-lang_ru;;=> nrel_format: format_html;;*);;*);;
+=> nrel_main_idtf: [Утверждение(музыкальная дорожка)](*<- lang_ru;;=> nrel_format: format_html;;*);;
+=> nrel_using_constants:
+{
+neural_network;
+nrel_process;
+nrel_result
+};;
+*);;
+country_music<-rrel_example:music;;
+music<=nrel_inclusion:output_data;;
+music<-rrel_explored_concept: section_subject_domain_output_data;;
