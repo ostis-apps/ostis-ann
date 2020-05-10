@@ -1,19 +1,12 @@
 sc_node_not_relation->output_music;;
-sc_node_not_relation->output_data;;
-sc_node_not_relation->neural_network;;
-sc_node_not_relation->country_music;;
-sc_node_norole_relation->nrel_process;;
-sc_node_norole_relation->nrel_result;;
 
-output_music=> nrel_main_idtf: [Выходная музыка](* <- lang_ru;; *);;
-output_music=> nrel_main_idtf: [Output music](* <- lang_en;; *);;
-output_music=> nrel_idtf: [Выходная музыкальная дорожка](* <- lang_ru;; *);;
-output_music=> nrel_idtf: [Output music track](* <- lang_en;; *);;
+output_music=> nrel_main_idtf: [выходная музыкальная дорожка](* <- lang_ru;; *);;
+output_music=> nrel_main_idtf: [output music track](* <- lang_en;; *);;
 definition ->...
 (*
 ->rrel_key_sc_element: output_music;;
 <= nrel_sc_text_translation: ...(*->rrel_example:[Выходная музыкальная дорожка  - один из видов  <b><sc_element sys_idtf="output_data">выходных данных</b> ,которые выходят из нейронных сетей после обработки .](*<-lang_ru;;=> nrel_format: format_html;;*);;*);;
-=> nrel_main_idtf: [Определение (Выходная музыка)](*<- lang_ru;;=> nrel_format: format_html;;*);;
+=> nrel_main_idtf: [Определение (выходная музыкальная дорожка)](*<- lang_ru;;=> nrel_format: format_html;;*);;
 => nrel_using_constants:
 { 
 input_data;
@@ -26,7 +19,7 @@ statement ->...
 (*
 ->rrel_key_sc_element: output_music;;
 <= nrel_sc_text_translation: ...(*->rrel_example:[Выходная музыка может быть результатом обработки или может быть создана нейронной сетью.](*<-lang_ru;;=> nrel_format: format_html;;*);;*);;
-=> nrel_main_idtf: [Утверждение(Выходная музыка)](*<- lang_ru;;=> nrel_format: format_html;;*);;
+=> nrel_main_idtf: [Утверждение(выходная музыкальная дорожка)](*<- lang_ru;;=> nrel_format: format_html;;*);;
 => nrel_using_constants:
 {
 neural_network;

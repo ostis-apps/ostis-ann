@@ -1,19 +1,13 @@
 sc_node_not_relation->output_map;;
-sc_node_not_relation->output_data;;
-sc_node_not_relation->input_map;;
-sc_node_norole_relation->nrel_mapping;;
-sc_node_norole_relation->nrel_process;;
-sc_node_not_relation->neural_network;;
-sc_node_not_relation->output_map_x;;
 
 
-output_map=> nrel_main_idtf: [Выходное соответствие](* <- lang_ru;; *);;
-output_map=> nrel_main_idtf: [Output map](* <- lang_en;; *);;
+output_map=> nrel_main_idtf: [выходное соответствие](* <- lang_ru;; *);;
+output_map=> nrel_main_idtf: [output map](* <- lang_en;; *);;
 definition ->...
 (*
 ->rrel_key_sc_element: output_map;;
 <= nrel_sc_text_translation: ...(*->rrel_example:[Выходное соответствие - тройка элементов(<b><sc_element sys_idtf="nrel_mapping*">соответствие</b>),которое поступает на <b><sc_element sys_idtf="output_data*">выход</b> из нейронной сети после обработки.](*<-lang_ru;;=> nrel_format: format_html;;*);;*);;
-=> nrel_main_idtf: [Определение (Выходное соответствие)](*<- lang_ru;;=> nrel_format: format_html;;*);;
+=> nrel_main_idtf: [Определение (выходное соответствие)](*<- lang_ru;;=> nrel_format: format_html;;*);;
 => nrel_using_constants:
 { 
 output_data;
@@ -28,7 +22,7 @@ statement ->...
 (*
 ->rrel_key_sc_element: output_map;;
 <= nrel_sc_text_translation: ...(*->rrel_example:[Выходное соответствие формируется из <b><sc_element sys_idtf="input_map*">входного соответствия</b>  после обработки нейронной сетью.](*<-lang_ru;;=> nrel_format: format_html;;*);;*);;
-=> nrel_main_idtf: [Утверждение(Выходное соответствие)](*<- lang_ru;;=> nrel_format: format_html;;*);;
+=> nrel_main_idtf: [Утверждение(выходное соответствие)](*<- lang_ru;;=> nrel_format: format_html;;*);;
 => nrel_using_constants:
 {
 input_map;

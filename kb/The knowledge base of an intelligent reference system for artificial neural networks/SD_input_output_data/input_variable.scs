@@ -1,18 +1,13 @@
 sc_node_not_relation->input_variable;;
-sc_node_not_relation->input_data;;
-sc_node_not_relation->variable;;
-sc_node_norole_relation->nrel_process;;
-sc_node_not_relation->neural_network;;
-sc_node_not_relation->x;;
 
 
-input_variable=> nrel_main_idtf: [Входная переменная](* <- lang_ru;; *);;
-input_variable=> nrel_main_idtf: [Input variable](* <- lang_en;; *);;
+input_variable=> nrel_main_idtf: [входная переменная](* <- lang_ru;; *);;
+input_variable=> nrel_main_idtf: [input variable](* <- lang_en;; *);;
 definition ->...
 (*
 ->rrel_key_sc_element: input_variable;;
 <= nrel_sc_text_translation: ...(*->rrel_example:[Входная переменная - переменная содержащая различные значения и поступающая на <b><sc_element sys_idtf="input_data">вход</b> нейронной сети.](*<-lang_ru;;=> nrel_format: format_html;;*);;*);;
-=> nrel_main_idtf: [Определение (Входная переменная)](*<- lang_ru;;=> nrel_format: format_html;;*);;
+=> nrel_main_idtf: [Определение (входная переменная)](*<- lang_ru;;=> nrel_format: format_html;;*);;
 => nrel_using_constants:
 { 
 input_data;
@@ -26,7 +21,7 @@ statement ->...
 (*
 ->rrel_key_sc_element: input_variable;;
 <= nrel_sc_text_translation: ...(*->rrel_example:[Переменная может содержать различные значения,в зависимости от применения нейронной сети.](*<-lang_ru;;=> nrel_format: format_html;;*);;*);;
-=> nrel_main_idtf: [Утверждение(Входная переменная)](*<- lang_ru;;=> nrel_format: format_html;;*);;
+=> nrel_main_idtf: [Утверждение(входная переменная)](*<- lang_ru;;=> nrel_format: format_html;;*);;
 => nrel_using_constants:
 {
 neural_network;

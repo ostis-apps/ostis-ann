@@ -1,15 +1,13 @@
 sc_node_norole_relation->nrel_input_data;;
-sc_node_not_relation->data;;
-sc_node_not_relation->neuron;;
-sc_node_not_relation->244;;
 
-nrel_input_data=> nrel_main_idtf: [Входные данные*](*<- lang_ru;;*);;
-nrel_input_data=> nrel_main_idtf: [Input data*](*<- lang_en;;*);;
+
+nrel_input_data=> nrel_main_idtf: [входные данные*](*<- lang_ru;;*);;
+nrel_input_data=> nrel_main_idtf: [input data*](*<- lang_en;;*);;
 definition ->... 
 (*
 ->rrel_key_sc_element: nrel_input_data;;
 <= nrel_sc_text_translation: ...(*->rrel_example:[Входные данные - данные , которые поступают на вход и обрабатываются <b><sc_element sys_idtf="neuron">нейроном</b> .](*<-lang_ru;;=> nrel_format: format_html;;*);;*);;
-=> nrel_main_idtf: [Определение (Входные данные*)](*<- lang_ru;;=> nrel_format: format_html;;*);;
+=> nrel_main_idtf: [Определение (входные данные*)](*<- lang_ru;;=> nrel_format: format_html;;*);;
 => nrel_using_constants:
 {
 neuron;
@@ -21,7 +19,7 @@ statement ->...
 (*
 ->rrel_key_sc_element:nrel_input_data;;
 <= nrel_sc_text_translation: ...(*->rrel_example:[Входные данные могут поступать как из вне, так и из других <b><sc_element sys_idtf="neuron">нейронов</b>.](*<-lang_ru;;=> nrel_format: format_html;;*);;*);;
-=> nrel_main_idtf: [Утверждение(Входные данные*)](*<- lang_ru;;=> nrel_format: format_html;;*);;
+=> nrel_main_idtf: [Утверждение(входные данные*)](*<- lang_ru;;=> nrel_format: format_html;;*);;
 => nrel_using_constants:
 { 
 neuron
@@ -29,12 +27,8 @@ neuron
 *);;
 
 
-relation => nrel_inclusion: oriented_relation;; 
-relation => nrel_inclusion: binary_relation;;
+
 oriented_relation -> nrel_input_data;;
-binary_relation => nrel_inclusion: antireflexive_relation;;
-binary_relation => nrel_inclusion: antitransitive_relation;;
-binary_relation => nrel_inclusion: antisymmetric_relation;; 
 antireflexive_relation -> nrel_input_data;; 
 antitransitive_relation -> nrel_input_data;;
 antisymmetric_relation -> nrel_input_data;;
@@ -54,6 +48,7 @@ arity_2=>nrel_measurement:2;;
 arity_2->nrel_input_data;;
 number->2;;
 
+sc_node_not_relation->244;;
 formal_neuron=>nrel_input_data:244;;
 number->244;;
 nrel_input_data<-rrel_explored_concept: section_subject_domain_input_output_data;;

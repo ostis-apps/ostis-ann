@@ -1,20 +1,14 @@
 sc_node_not_relation->output_speech;;
-sc_node_not_relation->output_data;;
-sc_node_not_relation->input_speech;;
-sc_node_not_relation->speech;;
-sc_node_not_relation->artificial_speech;;
-sc_node_not_relation->neural_network;;
-sc_node_norole_relation->nrel_result;;
 
 
 
-output_speech=> nrel_main_idtf: [Выходная речь](* <- lang_ru;; *);;
-output_speech=> nrel_main_idtf: [Output speech](* <- lang_en;; *);;
+output_speech=> nrel_main_idtf: [выходная речь](* <- lang_ru;; *);;
+output_speech=> nrel_main_idtf: [output speech](* <- lang_en;; *);;
 definition ->...
 (*
 ->rrel_key_sc_element: output_speech;;
 <= nrel_sc_text_translation: ...(*->rrel_example:[Выходная речь - речь , синтезированная нейронной сетью или результат обработки<b><sc_element sys_idtf="input_speech">входной речи</b> .](*<-lang_ru;;=> nrel_format: format_html;;*);;*);;
-=> nrel_main_idtf: [Определение (Выходная речь)](*<- lang_ru;;=> nrel_format: format_html;;*);;
+=> nrel_main_idtf: [Определение (выходная речь)](*<- lang_ru;;=> nrel_format: format_html;;*);;
 => nrel_using_constants:
 { 
 speech;
@@ -29,7 +23,7 @@ statement ->...
 (*
 ->rrel_key_sc_element: output_speech;;
 <= nrel_sc_text_translation: ...(*->rrel_example:[Нейронные сети , синтезирующие искусственную речь является одним из наиболее перспективных направлений развития.](*<-lang_ru;;=> nrel_format: format_html;;*);;*);;
-=> nrel_main_idtf: [Утверждение(Выходная речь)](*<- lang_ru;;=> nrel_format: format_html;;*);;
+=> nrel_main_idtf: [Утверждение(выходная речь)](*<- lang_ru;;=> nrel_format: format_html;;*);;
 => nrel_using_constants:
 {
 speech;

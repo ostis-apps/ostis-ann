@@ -1,19 +1,12 @@
 sc_node_not_relation->input_music;;
-sc_node_not_relation->neuron;;
-sc_node_not_relation->input_data;;
-sc_node_not_relation->neural_network;;
-sc_node_not_relation->classic_music;;
-sc_node_norole_relation->nrel_process;;
 
-input_music=> nrel_main_idtf: [Входная музыка](* <- lang_ru;; *);;
-input_music=> nrel_main_idtf: [Input music](* <- lang_en;; *);;
-input_music=> nrel_idtf: [Входная музыкальная дорожка](* <- lang_ru;; *);;
-input_music=> nrel_idtf: [Input music track](* <- lang_en;; *);;
+input_music=> nrel_main_idtf: [входная музыкальная дорожка](* <- lang_ru;; *);;
+input_music=> nrel_main_idtf: [input music track](* <- lang_en;; *);;
 definition ->...
 (*
 ->rrel_key_sc_element: input_music;;
 <= nrel_sc_text_translation: ...(*->rrel_example:[Входная музыкальная дорожка  - один из видов  <b><sc_element sys_idtf="input_data">входных данных</b> ,которые поступают в нейронные сети, в виде двоичного кода .](*<-lang_ru;;=> nrel_format: format_html;;*);;*);;
-=> nrel_main_idtf: [Определение (Входная музыка)](*<- lang_ru;;=> nrel_format: format_html;;*);;
+=> nrel_main_idtf: [Определение (входная музыкальная дорожка)](*<- lang_ru;;=> nrel_format: format_html;;*);;
 => nrel_using_constants:
 { 
 input_data;
@@ -26,7 +19,7 @@ statement ->...
 (*
 ->rrel_key_sc_element: input_music;;
 <= nrel_sc_text_translation: ...(*->rrel_example:[Входная музыка используется нейронными сетями,котороые сами обрабатывают музыку и могу создавать музыкальные дорожки.](*<-lang_ru;;=> nrel_format: format_html;;*);;*);;
-=> nrel_main_idtf: [Утверждение(Входная музыка)](*<- lang_ru;;=> nrel_format: format_html;;*);;
+=> nrel_main_idtf: [Утверждение(входная музыкальная дорожка)](*<- lang_ru;;=> nrel_format: format_html;;*);;
 => nrel_using_constants:
 {
 neural_network;

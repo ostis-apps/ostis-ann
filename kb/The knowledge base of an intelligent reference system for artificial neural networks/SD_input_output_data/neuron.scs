@@ -1,20 +1,15 @@
 sc_node_not_relation->neuron;;
-sc_node_not_relation->neural_network;;
-sc_node_not_relation->neuron_node;;
-sc_node_not_relation->activation_function;;
-sc_node_not_relation->input_signal;;
-sc_node_not_relation->formal_neuron;;
 
 
-neuron=> nrel_main_idtf: [Нейрон](* <- lang_ru;; *);;
-neuron=> nrel_main_idtf: [Neuron](* <- lang_en;; *);;
+neuron=> nrel_main_idtf: [нейрон](* <- lang_ru;; *);;
+neuron=> nrel_main_idtf: [neuron](* <- lang_en;; *);;
 neuron=> nrel_idtf: [Искусственный нейрон](* <- lang_ru;; *);;
 neuron=> nrel_idtf: [Artificial neuron](* <- lang_en;; *);;
 definition ->...
 (*
 ->rrel_key_sc_element: neuron;;
 <= nrel_sc_text_translation: ...(*->rrel_example:[Нейрон - узел нейронной сети, являющийся упращённой моделью естественного нейрона.](*<-lang_ru;;=> nrel_format: format_html;;*);;*);;
-=> nrel_main_idtf: [Определение (Нейрон)](*<- lang_ru;;=> nrel_format: format_html;;*);;
+=> nrel_main_idtf: [Определение (нейрон)](*<- lang_ru;;=> nrel_format: format_html;;*);;
 => nrel_using_constants:
 { 
 neural_network;
@@ -27,7 +22,7 @@ statement ->...
 (*
 ->rrel_key_sc_element: neuron;;
 <= nrel_sc_text_translation: ...(*->rrel_example:[Математически, искусственный нейрон обычно представляют как некоторую нелинейную<b><sc_element sys_idtf="activation_function">функцию активации</b> от единственного аргумента — линейной комбинации всех <b><sc_element sys_idtf="input_signal;">входных сигналов</b>.](*<-lang_ru;;=> nrel_format: format_html;;*);;*);;
-=> nrel_main_idtf: [Утверждение(Нейрон)](*<- lang_ru;;=> nrel_format: format_html;;*);;
+=> nrel_main_idtf: [Утверждение(нейрон)](*<- lang_ru;;=> nrel_format: format_html;;*);;
 => nrel_using_constants:
 {
 input_signal;

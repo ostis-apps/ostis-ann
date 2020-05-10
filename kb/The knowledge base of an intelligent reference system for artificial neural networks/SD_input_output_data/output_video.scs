@@ -1,19 +1,13 @@
 sc_node_not_relation->output_video;;
-sc_node_not_relation->output_data;;
-sc_node_not_relation->input_video;;
-sc_node_norole_relation->nrel_process;;
-sc_node_norole_relation->nrel_learning;;
-sc_node_not_relation->neural_network;;
-sc_node_not_relation->Avatar;;
 
 
-output_video=> nrel_main_idtf: [Выходное видео](* <- lang_ru;; *);;
-output_video=> nrel_main_idtf: [Output video](* <- lang_en;; *);;
+output_video=> nrel_main_idtf: [выходное видео](* <- lang_ru;; *);;
+output_video=> nrel_main_idtf: [output video](* <- lang_en;; *);;
 definition ->...
 (*
 ->rrel_key_sc_element: output_video;;
 <= nrel_sc_text_translation: ...(*->rrel_example:[Выходное видео является одним из видов <b><sc_element sys_idtf="output_data">выходных данных</b>,выходное видео может или создаваться самой нейронной сетью или быть результатом обработки <b><sc_element sys_idtf="input_video">входного видео</b> .](*<-lang_ru;;=> nrel_format: format_html;;*);;*);;
-=> nrel_main_idtf: [Определение (Выходное видео)](*<- lang_ru;;=> nrel_format: format_html;;*);;
+=> nrel_main_idtf: [Определение (выходное видео)](*<- lang_ru;;=> nrel_format: format_html;;*);;
 => nrel_using_constants:
 { 
 input_data;
@@ -28,7 +22,7 @@ statement ->...
 (*
 ->rrel_key_sc_element: output_video;;
 <= nrel_sc_text_translation: ...(*->rrel_example:[В современных программах по обработке видео часто используются нейронные сети , для создания определённых эффектов или для улучшения качества уже обработанного видео.](*<-lang_ru;;=> nrel_format: format_html;;*);;*);;
-=> nrel_main_idtf: [Утверждение(Выходное видео)](*<- lang_ru;;=> nrel_format: format_html;;*);;
+=> nrel_main_idtf: [Утверждение(выходное видео)](*<- lang_ru;;=> nrel_format: format_html;;*);;
 => nrel_using_constants:
 {
 nrel_process;

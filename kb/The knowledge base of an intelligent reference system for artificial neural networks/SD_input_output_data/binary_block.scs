@@ -1,13 +1,4 @@
 sc_node_not_relation->binary_block;;
-sc_node_not_relation->object;;
-sc_node_not_relation->raw_data;;
-sc_node_not_relation->preparation;;
-sc_node_not_relation->file;;
-sc_node_not_relation->block_y;;
-sc_node_not_relation->neural_element;;
-
-sc_node_norole_relation->nrel_treatment;;
-sc_node_norole_relation->nrel_main_task;;
 
 binary_block=> nrel_main_idtf: [бинарный блок](* <- lang_ru;; *);;
 binary_block=> nrel_main_idtf: [binary block](* <- lang_en;; *);;

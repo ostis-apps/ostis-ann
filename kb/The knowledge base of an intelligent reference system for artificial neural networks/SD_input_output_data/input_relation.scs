@@ -1,17 +1,12 @@
 sc_node_not_relation->input_relation;;
-sc_node_not_relation->input_data;;
-sc_node_not_relation->relation;;
-sc_node_norole_relation->rrel_relation;;
-sc_node_norole_relation->nrel_solution;;
-sc_node_not_relation->neural_network;;
 
-input_relation=> nrel_main_idtf: [Входное отношение](* <- lang_ru;; *);;
-input_relation=> nrel_main_idtf: [Input relation](* <- lang_en;; *);;
+input_relation=> nrel_main_idtf: [входное отношение](* <- lang_ru;; *);;
+input_relation=> nrel_main_idtf: [input relation](* <- lang_en;; *);;
 definition ->...
 (*
 ->rrel_key_sc_element: input_relation;;
 <= nrel_sc_text_translation: ...(*->rrel_example:[Входное отношение - экземпляр класса <b><sc_element sys_idtf="relation*">отношений</b>,который используется нейронной сетью.](*<-lang_ru;;=> nrel_format: format_html;;*);;*);;
-=> nrel_main_idtf: [Определение (Входное отношение)](*<- lang_ru;;=> nrel_format: format_html;;*);;
+=> nrel_main_idtf: [Определение (входное отношение)](*<- lang_ru;;=> nrel_format: format_html;;*);;
 => nrel_using_constants:
 { 
 relation;
@@ -24,7 +19,7 @@ statement ->...
 (*
 ->rrel_key_sc_element: input_relation;;
 <= nrel_sc_text_translation: ...(*->rrel_example:[Отношение,как входные данные используется нейронными сетями для решения задач дискретной математики.](*<-lang_ru;;=> nrel_format: format_html;;*);;*);;
-=> nrel_main_idtf: [Утверждение(Входное отношение)](*<- lang_ru;;=> nrel_format: format_html;;*);;
+=> nrel_main_idtf: [Утверждение(входное отношение)](*<- lang_ru;;=> nrel_format: format_html;;*);;
 => nrel_using_constants:
 {
 input_data;
@@ -36,7 +31,7 @@ illustration -> ...
 (*
 ->rrel_key_sc_element: input_picture;;
 <= nrel_sc_text_translation: ...(*->"file://images/input_relation.png";;*);;
-=> nrel_main_idtf: [Рисунок(Входное отношение)](*<- lang_ru;;*);;
+=> nrel_main_idtf: [Рисунок(входное отношение)](*<- lang_ru;;*);;
 *);;
 input_data=>nrel_inclusion:input_relation;;
 input_relation<-rrel_explored_concept: section_subject_domain_input_output_data;;
