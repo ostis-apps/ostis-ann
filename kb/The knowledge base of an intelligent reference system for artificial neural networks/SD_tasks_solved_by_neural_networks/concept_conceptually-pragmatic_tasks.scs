@@ -1,10 +1,12 @@
-concept_conceptually_pragmatic_tasks<-sc_node_not_relation;;
+concept_conceptually_pragmatic_tasks
+<-sc_node_not_relation;
+<=nrel_inclusion:tasks;
 
-concept_conceptually_pragmatic_tasks=>nrel_main_idtf:
+=>nrel_main_idtf:
 [концептуально прагматические задачи](*<-lang_ru;;*);
-[conceptually-pragmatic tasks](*<-lang_en;;*);;
+[conceptually-pragmatic tasks](*<-lang_en;;*);
 
-concept_conceptually_pragmatic_tasks<- rrel_key_sc_element: ...
+<- rrel_key_sc_element: ...
 (*
 <- definition;;
 => nrel_main_idtf:
@@ -20,10 +22,10 @@ concept_conceptually_pragmatic_tasks<- rrel_key_sc_element: ...
 			->rrel_example:
 			[Концептуально прагматические задачи - это  <b><sc_element sys_idtf="task">задачи</b> <b> <sc_element sys_idtf="decision">решение</b> которых нельзя выразить в <sc_element sys_idtf="number">числовом</b> виде.](*<- lang_ru;; =>nrel_format: format_html;;*);;
 		*);;
-*);;
+*);
 
 
-concept_conceptually_pragmatic_tasks<- rrel_key_sc_element: ... 
+<- rrel_key_sc_element: ... 
 (*
  => nrel_main_idtf:
 [Утв. 1 о концептуально прагматические задачах] (* <- lang_ru;; *);;
@@ -38,10 +40,9 @@ image;
 nrel_inclusion;
 task
 };;
-*);;
+*);
 
-nrel_inclusion->(tasks=>concept_conceptually_pragmatic_tasks);;
-concept_conceptually_pragmatic_tasks<-rrel_explored_concept: section_subject_domain_tasks_solved_by_neural_networks;;
+<-rrel_explored_concept: section_subject_domain_tasks_solved_by_neural_networks;;
 
 
 

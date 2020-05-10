@@ -1,10 +1,13 @@
-concept_mathematical_tasks<-sc_node_not_relation;;
+concept_mathematical_tasks
+<-sc_node_not_relation;
+<=nrel_inclusion:tasks;
 
-concept_mathematical_tasks=>nrel_main_idtf:
+
+=>nrel_main_idtf:
 [математические задачи](*<-lang_ru;;*);
-[mathematical tasks](*<-lang_en;;*);;
+[mathematical tasks](*<-lang_en;;*);
 
-concept_mathematical_tasks<- rrel_key_sc_element: ...
+<- rrel_key_sc_element: ...
 (*
 <- definition;;
 => nrel_main_idtf:
@@ -20,10 +23,10 @@ concept_mathematical_tasks<- rrel_key_sc_element: ...
 			->rrel_example:
 			[Математические задачи - это <b><sc_element sys_idtf="task">задачи</b> включающие в себя непосредственную работу с <b><sc_element sys_idtf="number">числами</b> и <b><sc_element sys_idtf="math_concept">математическими законами</b>.](*<- lang_ru;; =>nrel_format: format_html;;*);;
 		*);;
-*);;
+*);
 
 
-concept_mathematical_tasks<- rrel_key_sc_element: ... 
+<- rrel_key_sc_element: ... 
 (*
  => nrel_main_idtf:
 [Утв. 1 о математических задачах.] (* <- lang_ru;; *);;
@@ -38,10 +41,10 @@ math_concept;
 concept_neural_network_in_graphical_representation;
 decision
 };;
-*);;
+*);
 
-nrel_inclusion->(tasks=>concept_mathematical_tasks);;
-concept_mathematical_tasks<-rrel_explored_concept: section_subject_domain_tasks_solved_by_neural_networks;;
+
+<-rrel_explored_concept: section_subject_domain_tasks_solved_by_neural_networks;;
 
 
 

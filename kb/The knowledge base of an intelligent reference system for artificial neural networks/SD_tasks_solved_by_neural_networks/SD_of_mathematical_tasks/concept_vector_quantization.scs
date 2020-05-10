@@ -1,10 +1,12 @@
-concept_vector_quantization<-sc_node_not_relation;;
+concept_vector_quantization
+<-sc_node_not_relation;
+=>nrel_inclusion:concept_mathematical_tasks;
 
-concept_vector_quantization=>nrel_main_idtf:
+=>nrel_main_idtf:
 [векторное квантование](*<-lang_ru;;*);
-[optimization](*<-lang_en;;*);;
+[optimization](*<-lang_en;;*);
 
-concept_vector_quantization<- rrel_key_sc_element: ...
+<- rrel_key_sc_element: ...
 (*
 <- definition;;
 => nrel_main_idtf:
@@ -21,10 +23,10 @@ concept_vector_quantization<- rrel_key_sc_element: ...
 			->rrel_example:
 			[Векторное квантование - это  <b><sc_element sys_idtf="task">задача</b> о разбиении диапазона отсчётных <b><sc_element sys_idtf="value">значений</b> сигнала на конечное <b><sc_element sys_idtf="number">число</b> уровней и округлениие этих <b><sc_element sys_idtf="value">значений</b> до одного из двух ближайших к ним уровней.](*<- lang_ru;; =>nrel_format: format_html;;*);;
 		*);;
-*);;
+*);
 
 
-concept_vector_quantization<- rrel_key_sc_element: ... 
+<- rrel_key_sc_element: ... 
 (*
  => nrel_main_idtf:
 [Утв. 1 о векторном квантовании.] (* <- lang_ru;; *);;
@@ -39,10 +41,9 @@ value;
 set;
 number
 };;
-*);;
+*);
 
-nrel_inclusion->(concept_mathematical_tasks=>concept_vector_quantization);;
-concept_vector_quantization<-rrel_explored_concept: section_subject_domain_of_mathematical_tasks;;
+<-rrel_explored_concept: section_subject_domain_of_mathematical_tasks;;
 
 
 
