@@ -1,0 +1,29 @@
+section_subject_domain_output_data
+=> nrel_main_idtf: 
+	[Раздел. Предметная область выходных искусственных нейронных сетей]
+	(* <- lang_ru;;*);
+	[Section. Subject domain of output data]
+	(* <- lang_en;; *);
+
+<- not_enough_formed_structure;
+<- atomic_section;;
+
+<= nrel_section_decomposition:
+{
+section_subject_domain_of_output_mathematics_data;
+section_subject_domain_of_output_picture_data;
+section_subject_domain_of_output_text_data;
+section_subject_domain_of_output_sound_data;
+section_subject_domain_of_output_video_data;
+};
+
+section_subject_domain_of_output_data = [*^"file://subject_domain_of_output_data.scsi"*];;
+
+
+
+
+
+
+
+
+
