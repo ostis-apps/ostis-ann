@@ -1,0 +1,35 @@
+sc_node_not_relation->set;;
+
+
+set=> nrel_main_idtf: [множество](* <- lang_ru;; *);;
+set=> nrel_main_idtf: [set](* <- lang_en;; *);;
+definition ->...
+(*
+->rrel_key_sc_element: set;;
+<= nrel_sc_text_translation: ...(*->rrel_example:[множество - <b><sc_element sys_idtf="set">множество</b> элементов,сформированное нейронной сетью.](*<-lang_ru;;=> nrel_format: format_html;;*);;*);;
+=> nrel_main_idtf: [Определение (множество)](*<- lang_ru;;=> nrel_format: format_html;;*);;
+=> nrel_using_constants:
+{ 
+neural_network
+};;
+*);; 
+
+
+statement ->...
+(*
+->rrel_key_sc_element: set;;
+<= nrel_sc_text_translation: ...(*->rrel_example:[Выходное множество формируется нейронной сетью из <b><sc_element sys_idtf="input_set">входного множества</b .](*<-lang_ru;;=> nrel_format: format_html;;*);;*);;
+=> nrel_main_idtf: [Утверждение(множество)](*<- lang_ru;;=> nrel_format: format_html;;*);;
+=> nrel_using_constants:
+{
+neural_network
+};;
+*);;
+illustration -> ...
+(*
+->rrel_key_sc_element: set;;
+<= nrel_sc_text_translation: ...(*->"file://images/output_set.png";;*);;
+=> nrel_main_idtf: [Рисунок(множество)](*<- lang_ru;;*);;
+*);;
+output_data=>nrel_inclusion:set;;
+set<-rrel_explored_concept: section_subject_domain_output_data;;

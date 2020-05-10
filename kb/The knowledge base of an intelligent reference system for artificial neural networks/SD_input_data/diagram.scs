@@ -1,0 +1,38 @@
+sc_node_not_relation->diagram;;
+
+diagram=> nrel_main_idtf: [диаграмма](* <- lang_ru;; *);;
+diagram=> nrel_main_idtf: [diagram](* <- lang_en;; *);;
+definition ->...
+(*
+->rrel_key_sc_element: diagram;;
+<= nrel_sc_text_translation: ...(*->rrel_example:[Диаграмма - диаграмма,содержащая определённые данные,подающиеся на <b><sc_element sys_idtf="input_data">вход</b> нейронной сети](*<-lang_ru;;=> nrel_format: format_html;;*);;*);;
+=> nrel_main_idtf: [Определение (диаграмма)](*<- lang_ru;;=> nrel_format: format_html;;*);;
+=> nrel_using_constants:
+{ 
+input_data;
+neural_network;
+diagram
+};;
+*);; 
+
+
+statement ->...
+(*
+->rrel_key_sc_element: diagram;;
+<= nrel_sc_text_translation: ...(*->rrel_example:[Диаграммы используютя нейронной сетью для обработки данный.](*<-lang_ru;;=> nrel_format: format_html;;*);;*);;
+=> nrel_main_idtf: [Утверждение(диаграмма)](*<- lang_ru;;=> nrel_format: format_html;;*);;
+=> nrel_using_constants:
+{
+neural_network;
+diagram
+};;	
+*);;
+illustration -> ...
+(*
+->rrel_key_sc_element: diagram;;
+<= nrel_sc_text_translation: ...(*->"file://images/input_diagram.png";;*);;
+=> nrel_main_idtf: [Рисунок(диаграмма)](*<- lang_ru;;*);;
+*);;
+input_data=>nrel_inclusion:diagram;;
+diagram<-rrel_explored_concept: section_subject_domain_input_data;;
+

@@ -1,0 +1,33 @@
+sc_node_not_relation->video;;
+
+
+video=> nrel_main_idtf: [видео](* <- lang_ru;; *);;
+video=> nrel_main_idtf: [video](* <- lang_en;; *);;
+definition ->...
+(*
+->rrel_key_sc_element: video;;
+<= nrel_sc_text_translation: ...(*->rrel_example:[видео является одним из видов <b><sc_element sys_idtf="input_data">входных данных</b>,которые поступают в нейронную сеть для<b><sc_element sys_idtf="nrel_learning">обучения</b>  или обработки.](*<-lang_ru;;=> nrel_format: format_html;;*);;*);;
+=> nrel_main_idtf: [Определение (видео)](*<- lang_ru;;=> nrel_format: format_html;;*);;
+=> nrel_using_constants:
+{ 
+input_data;
+neural_network;
+nrel_learning
+};;
+*);; 
+
+
+statement ->...
+(*
+->rrel_key_sc_element: video;;
+<= nrel_sc_text_translation: ...(*->rrel_example:[Нейронные сети,способные обрабатывать видео и извлекать некоторую нужную информацию,на данный момент являются одними из наиболее частоиспользуемых.](*<-lang_ru;;=> nrel_format: format_html;;*);;*);;
+=> nrel_main_idtf: [Утверждение(видео)](*<- lang_ru;;=> nrel_format: format_html;;*);;
+=> nrel_using_constants:
+{
+nrel_process;
+neural_network
+};;
+*);;
+Titanic<-rrel_example:video;;
+input_data=>nrel_inclusion:video;;
+video<-rrel_explored_concept: section_subject_domain_input_data;;

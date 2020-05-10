@@ -1,0 +1,39 @@
+sc_node_not_relation->set;;
+
+
+set=> nrel_main_idtf: [множество](* <- lang_ru;; *);;
+set=> nrel_main_idtf: [set](* <- lang_en;; *);;
+definition ->...
+(*
+->rrel_key_sc_element: set;;
+<= nrel_sc_text_translation: ...(*->rrel_example:[множество - <b><sc_element sys_idtf="set">множество</b> определённых элементов, являющимся <b><sc_element sys_idtf="input_data">входными данными</b>  нейронной сети.](*<-lang_ru;;=> nrel_format: format_html;;*);;*);;
+=> nrel_main_idtf: [Определение (множество)](*<- lang_ru;;=> nrel_format: format_html;;*);;
+=> nrel_using_constants:
+{ 
+input_data;
+neural_network;
+set
+};;
+*);; 
+
+
+statement ->...
+(*
+->rrel_key_sc_element: set;;
+<= nrel_sc_text_translation: ...(*->rrel_example:[Входное множество - набор элементов,необходимых нейронной сети для обработки.](*<-lang_ru;;=> nrel_format: format_html;;*);;*);;
+=> nrel_main_idtf: [Утверждение(множество)](*<- lang_ru;;=> nrel_format: format_html;;*);;
+=> nrel_using_constants:
+{
+neural_network;
+nrel_process
+};;
+*);;
+
+illustration -> ...
+(*
+->rrel_key_sc_element: set;;
+<= nrel_sc_text_translation: ...(*->"file://images/input_set.png";;*);;
+=> nrel_main_idtf: [Рисунок(множество)](*<- lang_ru;;*);;
+*);;
+input_data=>nrel_inclusion:set;;
+set<-rrel_explored_concept: section_subject_domain_input_data;;

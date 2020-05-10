@@ -1,0 +1,39 @@
+sc_node_not_relation->concept_equation;;
+
+concept_equation=> nrel_main_idtf: [уравнение](* <- lang_ru;; *);;
+concept_equation=> nrel_main_idtf: [equation](* <- lang_en;; *);;
+definition ->...
+(*
+->rrel_key_sc_element: concept_equation;;
+<= nrel_sc_text_translation: ...(*->rrel_example:[Уравнение - уравнение, которое является<b><sc_element sys_idtf="input_data">входными данными</b> нейронной сети.](*<-lang_ru;;=> nrel_format: format_html;;*);;*);;
+=> nrel_main_idtf: [Определение (уравнение)](*<- lang_ru;;=> nrel_format: format_html;;*);;
+=> nrel_using_constants:
+{ 
+equation;
+input_data;
+neural_network
+};;
+*);; 
+
+
+statement ->...
+(*
+->rrel_key_sc_element: concept_equation;;
+<= nrel_sc_text_translation: ...(*->rrel_example:[Входное уравнение поступает в нейронную сеть и обрабатывается таким образом,что на <b><sc_element sys_idtf="output">выход</b> поступает решение.](*<-lang_ru;;=> nrel_format: format_html;;*);;*);;
+=> nrel_main_idtf: [Утверждение(уравнение)](*<- lang_ru;;=> nrel_format: format_html;;*);;
+=> nrel_using_constants:
+{
+neural_network;
+nrel_process;
+solution
+};;
+*);;
+
+illustration -> ...
+(*
+->rrel_key_sc_element: concept_equation;;
+<= nrel_sc_text_translation: ...(*->"file://images/equation.png";;*);;
+=> nrel_main_idtf: [Рисунок(уравнение)](*<- lang_ru;;*);;
+*);;
+input_data=>nrel_inclusion:concept_equation;;
+concept_equation<-rrel_explored_concept: section_subject_domain_input_data;;

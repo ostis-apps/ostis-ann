@@ -1,0 +1,38 @@
+sc_node_not_relation->schedule;;
+
+
+schedule=> nrel_main_idtf: [график](* <- lang_ru;; *);;
+schedule=> nrel_main_idtf: [schedule](* <- lang_en;; *);;
+definition ->...
+(*
+->rrel_key_sc_element: schedule;;
+<= nrel_sc_text_translation: ...(*->rrel_example:[график - график,который является <b><sc_element sys_idtf="input_data">входными данными</b> нейронной сети.](*<-lang_ru;;=> nrel_format: format_html;;*);;*);;
+=> nrel_main_idtf: [Определение (график)](*<- lang_ru;;=> nrel_format: format_html;;*);;
+=> nrel_using_constants:
+{ 
+neural_network;
+output_data
+};;
+*);; 
+
+
+statement ->...
+(*
+->rrel_key_sc_element: schedule;;
+<= nrel_sc_text_translation: ...(*->rrel_example:[Выходной график является результатом прогнозирования нейронной сети.](*<-lang_ru;;=> nrel_format: format_html;;*);;*);;
+=> nrel_main_idtf: [Утверждение(график)](*<- lang_ru;;=> nrel_format: format_html;;*);;
+=> nrel_using_constants:
+{
+neural_network;
+nrel_forecast;
+nrel_result
+};;
+*);;
+illustration -> ...
+(*
+->rrel_key_sc_element: schedule;;
+<= nrel_sc_text_translation: ...(*->"file://images/output_schedule.png";;*);;
+=> nrel_main_idtf: [Рисунок(график)](*<- lang_ru;;*);;
+*);;
+output_data=>nrel_inclusion:schedule;;
+schedule<-rrel_explored_concept: section_subject_domain_output_data;;

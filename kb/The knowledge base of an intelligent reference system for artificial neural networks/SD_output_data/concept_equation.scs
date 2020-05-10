@@ -1,0 +1,35 @@
+sc_node_not_relation->concept_equation;;
+
+
+
+concept_equation=> nrel_main_idtf: [уравнение](* <- lang_ru;; *);;
+concept_equation=> nrel_main_idtf: [equation](* <- lang_en;; *);;
+definition ->...
+(*
+->rrel_key_sc_element: concept_equation;;
+<= nrel_sc_text_translation: ...(*->rrel_example:[уравнение - уравнение, которое является <b><sc_element sys_idtf="output_data">выходными данными</b> нейронной сети.](*<-lang_ru;;=> nrel_format: format_html;;*);;*);;
+=> nrel_main_idtf: [Определение (уравнение)](*<- lang_ru;;=> nrel_format: format_html;;*);;
+=> nrel_using_constants:
+{ 
+equation;
+output_data;
+neural_network
+};;
+*);; 
+
+
+statement ->...
+(*
+->rrel_key_sc_element: concept_equation;;
+<= nrel_sc_text_translation: ...(*->rrel_example:[Выходное уравнение поступает на <b><sc_element sys_idtf="output">выход</b> нейронной сети после обработки данных,уравнение составляется самой нейронной сетью,на основе<b><sc_element sys_idtf="input_data"> входных данных</b>.](*<-lang_ru;;=> nrel_format: format_html;;*);;*);;
+=> nrel_main_idtf: [Утверждение(уравнение)](*<- lang_ru;;=> nrel_format: format_html;;*);;
+=> nrel_using_constants:
+{
+neural_network;
+nrel_process;
+input_data
+};;
+*);;
+cryptographic_equation<-rrel_example:concept_equation;;
+output_data=>nrel_inclusion:concept_equation;;
+concept_equation<-rrel_explored_concept: section_subject_domain_output_data;;
