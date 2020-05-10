@@ -1,6 +1,6 @@
 section_subject_domain_input_output_data
 => nrel_main_idtf: 
-	[Раздел. Предметная область входных выходных данных искусственных нейронных сетей]
+	[Раздел. Предметная область входных и выходных данных искусственных нейронных сетей]
 	(* <- lang_ru;;*);
 	[Section. Subject domain of input output data]
 	(* <- lang_en;; *);
