@@ -3,14 +3,14 @@ concept_conceptually_pragmatic_tasks
 <=nrel_inclusion:tasks;
 
 =>nrel_main_idtf:
-[концептуально прагматические задачи](*<-lang_ru;;*);
-[conceptually-pragmatic tasks](*<-lang_en;;*);
+[концептуально прагматическая задача](*<-lang_ru;;*);
+[conceptually-pragmatic task](*<-lang_en;;*);
 
 <- rrel_key_sc_element: ...
 (*
 <- definition;;
 => nrel_main_idtf:
-      [Опр. (концептуально прагматические задачи)] (* <- lang_ru;; *);;
+      [Опр. (концептуально прагматическая задача)] (* <- lang_ru;; *);;
 => nrel_using_constants: 
 	{
 		task;
@@ -20,7 +20,7 @@ concept_conceptually_pragmatic_tasks
 <= nrel_sc_text_translation: ... 
 		(*
 			->rrel_example:
-			[Концептуально прагматические задачи - это  <b><sc_element sys_idtf="task">задачи</b> <b> <sc_element sys_idtf="decision">решение</b> которых нельзя выразить в <sc_element sys_idtf="number">числовом</b> виде.](*<- lang_ru;; =>nrel_format: format_html;;*);;
+			[концептуально прагматическая задача - это  <b><sc_element sys_idtf="task">задачи</b> <b> <sc_element sys_idtf="decision">решение</b> которых нельзя выразить в <sc_element sys_idtf="number">числовом</b> виде.](*<- lang_ru;; =>nrel_format: format_html;;*);;
 		*);;
 *);
 
@@ -32,7 +32,7 @@ concept_conceptually_pragmatic_tasks
  <= nrel_sc_text_translation: ...
 	 (*
     	  -> rrel_example:
-		[Концептуально прагматические <b><sc_element sys_idtf="task">задачи</b> <b><sc_element sys_idtf="nrel_inclusion">включают</b> в себя все  <b><sc_element sys_idtf="task">задачи</b> обработки <b><sc_element sys_idtf="image">изображений</b>.](*<-lang_ru;; =>nrel_format: format_html;;*);;
+		[концептуально прагматическая <b><sc_element sys_idtf="task">задача</b> <b><sc_element sys_idtf="nrel_inclusion">включают</b> в себя все  <b><sc_element sys_idtf="task">задачи</b> обработки <b><sc_element sys_idtf="image">изображений</b>.](*<-lang_ru;; =>nrel_format: format_html;;*);;
 	*);;
 => nrel_using_constants: 
 {
