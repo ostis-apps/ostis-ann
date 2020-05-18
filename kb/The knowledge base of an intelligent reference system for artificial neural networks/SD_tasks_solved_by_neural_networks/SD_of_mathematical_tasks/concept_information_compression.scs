@@ -1,4 +1,4 @@
-information_compression
+concept_information_compression
 <-sc_node_not_relation;
 
 => nrel_main_idtf: [сжатие информации](* <- lang_ru;; *);
@@ -17,9 +17,8 @@ reduce
 };;
 *);
 
-<-->rrel_key_sc_element:...
+<-rrel_key_sc_element:...
 (*
- <-statement;;
 <= nrel_sc_text_translation: ...(*->rrel_example:[В основе любого способа сжатия информации лежит модель источника информации.](*<-lang_ru;;*);;*);;
 => nrel_main_idtf: [Утверждение(сжатие информации)](*<- lang_ru;;*);;
 => nrel_using_constants:
@@ -35,28 +34,6 @@ method
 
 <=nrel_inclusion:concept_mathematical_tasks;
 <-rrel_explored_concept: section_subject_domain_of_mathematical_tasks;;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 

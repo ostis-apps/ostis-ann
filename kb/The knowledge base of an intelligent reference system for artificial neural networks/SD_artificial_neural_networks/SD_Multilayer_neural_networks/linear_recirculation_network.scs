@@ -28,7 +28,7 @@ linear_recirculation_network
 		=>nrel_main_idtf:[Опр. (линейная рециркуляционная сеть)](* <-lang_ru;; => nrel_format: format_html;;*);;
 		<=nrel_using_constants:...
 			(*
-				->pattern_recognition;bidirectional_communication;compression;recovery;; //+без учителя
+				->concept_pattern_recognition;bidirectional_communication;compression;recovery;; //+без учителя
 			*);;
 		*);
 		
@@ -50,6 +50,10 @@ linear_recirculation_network
 	*);;
 *);;
 linear_recirculation_network<-rrel_explored_concept: section_subject_domain_of_multilayer_neural_networks;;
+
+
+
+
 
 
 

@@ -52,3 +52,7 @@ sc_node_not_relation->244;;
 formal_neuron=>nrel_input_data:244;;
 number->244;;
 nrel_input_data<-rrel_explored_concept: section_subject_domain_input_output_data;;
+
+
+
+
