@@ -17,7 +17,7 @@ definition -> ...
 				-> nrel_function_maximization;;
 				-> nrel_function_minimization;;
 				-> nrel_functional_mapping;;
-				-> optimization_problem;;
+				-> concept_optimization_problem;;
 			*);;
 
 		<= nrel_sc_text_translation: ...
@@ -52,6 +52,10 @@ affirmation -> ...
 	*);;
 
 loss_function<-rrel_explored_concept: section_subject_domain_of_algorithms_and_functions;;
+
+
+
+
 
 
 

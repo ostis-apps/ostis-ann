@@ -27,7 +27,7 @@ Hamming_neural_network
 		=>nrel_main_idtf:[Опр. (сеть Хэмминга)](* <-lang_ru;; => nrel_format: format_html;;*);;
 		<=nrel_using_constants:...
 			(*
-				->pattern_recognition;relaxation_parameter;Hamming_distance;fixed_connection;feedback;; 
+				->concept_pattern_recognition;relaxation_parameter;Hamming_distance;fixed_connection;feedback;; 
 			*);;
 		*);
 ///////////////////////////////////////////////////////////////////
@@ -51,6 +51,10 @@ Hamming_neural_network
 *);;
 
 Hamming_neural_network<-rrel_explored_concept: section_subject_domain_of_neural_networks_with_feedbacks;;
+
+
+
+
 
 
 

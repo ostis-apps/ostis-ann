@@ -1,4 +1,4 @@
-optimization_problem
+concept_optimization_problem
 	<- sc_node_not_relation;
 	=> nrel_main_idtf: [задача оптимизации] (* <- lang_ru;; *);
 	=> nrel_main_idtf: [optimization problem] (* <- lang_en;; *);
@@ -45,28 +45,6 @@ optimization_problem
 	*);
 <=nrel_inclusion:concept_conceptually_pragmatic_tasks;
 <-rrel_explored_concept: section_subject_domain_of_conceptually_pragmatic_tasks;;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 

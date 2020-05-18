@@ -23,5 +23,3 @@ sc_node_not_relation->reduce;;
 sc_node_not_relation->information_source_model;;
 sc_node_not_relation->method;;
 sc_node_not_relation->some_information;;
-
-

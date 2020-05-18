@@ -1,4 +1,4 @@
-decompression
+nrel_decompression
 <-sc_node_norole_relation;
 =>nrel_main_idtf:[decompression*](* <-lang_en;; *);
 =>nrel_main_idtf:[восстановление входных данных*](* <-lang_ru;; *);
@@ -39,32 +39,6 @@ decompression
 
 <=nrel_inclusion:concept_mathematical_tasks;
 <-rrel_explored_concept: section_subject_domain_of_mathematical_tasks;;
-// done
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 

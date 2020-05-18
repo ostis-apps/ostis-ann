@@ -1,5 +1,5 @@
-concept_state_of_equilibrium<-sc_node_not_relation;;
-concept_state_of_equilibrium
+concept_state_of_equilibrium<-sc_node_not_relation;
+
 	=>nrel_main_idtf:
 	[состояние равновесия]
 	(* <- lang_ru;; *);
@@ -34,29 +34,3 @@ concept_state_of_equilibrium
 <-immeasurable_parameter;
 
 <-rrel_explored_concept:subjdomain_parameters_and_values;;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

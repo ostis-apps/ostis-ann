@@ -15,7 +15,7 @@ definition -> ...
 
 statement -> ...
 	(*
-         -> rrel_key_sc_element: dimensional_neural_network; pattern_recognition;;
+         -> rrel_key_sc_element: dimensional_neural_network; concept_pattern_recognition;;
 		=> nrel_main_idtf: [Утв.(распознавание образов)](* <- lang_ru;; *);;
 		<= nrel_sc_text_translation:...
 		(*
@@ -30,6 +30,10 @@ illustration -> ...
   *);;
 dimensional_neural_network<-rrel_explored_concept: section_subject_domain_of_multilayer_neural_networks;;
 // done
+
+
+
+
 
 
 

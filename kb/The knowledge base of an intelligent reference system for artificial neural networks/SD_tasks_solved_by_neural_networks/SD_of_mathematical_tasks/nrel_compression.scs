@@ -1,4 +1,4 @@
-compression
+nrel_compression
 <-sc_node_norole_relation;
 ->nrel_main_idtf:[compression*](* <-lang_en;; *);;
 ->nrel_main_idtf:[сжатие входных данных*](* <-lang_ru;; *);
@@ -27,7 +27,6 @@ rrel_key_sc_element: ...
 
 <-rrel_key_sc_element: ...
 	(*
-         <- statement;;
 		=> nrel_main_idtf: [Утв.(распознавание образов, задача, решение)](* <- lang_ru;; *);;
 		<= nrel_sc_text_translation:...
 		(*
@@ -39,30 +38,6 @@ rrel_key_sc_element: ...
 
 <=nrel_inclusion:concept_mathematical_tasks;
 <-rrel_explored_concept: section_subject_domain_of_mathematical_tasks;;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
