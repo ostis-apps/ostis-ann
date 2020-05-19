@@ -1,15 +1,17 @@
-weight_vector<-sc_node_not_relation;;
-
-weight_vector=>nrel_main_idtf:
-[весовой вектор](*<-lang_ru;;*);
-[weight vector](*<-lang_en;;*);;
-weight_vector=>nrel_idtf:
-[вектор весовых коэффициентов](*<-lang_ru;;*);;
-
 nrel_inclusion->(math_concept=>vector);;
-nrel_inclusion->(vector=>weighted_vector);;
 
-weight_vector<- rrel_key_sc_element: ...
+concept_weight_vector<-sc_node_not_relation;
+
+=>nrel_main_idtf:
+[весовой вектор](*<-lang_ru;;*);
+[weight vector](*<-lang_en;;*);
+
+=>nrel_idtf:
+[вектор весовых коэффициентов](*<-lang_ru;;*);
+
+<=nrel_inclusion:vector;
+
+<- rrel_key_sc_element: ...
 (*
 <- definition;;
 => nrel_main_idtf:
@@ -24,10 +26,10 @@ weight_vector<- rrel_key_sc_element: ...
 			->rrel_example:
 			[Весовой вектор - это <b><sc_element sys_idtf="vector">вектор</b> состящий из <b><sc_element sys_idtf="weight">весов</b>.](*<- lang_ru;;=>nrel_format: format_html;;*);;
 		*);;
-*);;
+*);
 
 
-weight_vector<- rrel_key_sc_element: ... 
+<- rrel_key_sc_element: ... 
 (*
  => nrel_main_idtf:
 [Утв. 1 о весовом векторе] (* <- lang_ru;; *);;
@@ -50,33 +52,3 @@ weight_vector->x;;
 nrel_vector_elem<-sc_node_norole_relation;;
 x=>nrel_vector_elem:weight;;
 *];;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

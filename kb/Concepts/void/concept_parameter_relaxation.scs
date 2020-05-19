@@ -1,4 +1,4 @@
-parameter_relaxation
+concept_parameter_relaxation
 	=>nrel_main_idtf:
 	[процесс релаксации]
 	(* <- lang_ru;; *);
@@ -36,33 +36,3 @@ parameter_relaxation
 		
 <-immeasurable_parameter;
 <-rrel_explored_concept:subjdomain_parameters_and_values;;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

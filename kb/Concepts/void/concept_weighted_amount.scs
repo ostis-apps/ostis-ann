@@ -1,13 +1,13 @@
-weighted_amount<-sc_node_not_relation;;
+concept_weighted_amount<-sc_node_not_relation;
 
-weighted_amount=>nrel_main_idtf:
+=>nrel_main_idtf:
 [взвешенная сумма](*<-lang_ru;;*);
-[weighted amount](*<-lang_en;;*);;
+[weighted amount](*<-lang_en;;*);
 
 
-nrel_inclusion->(mathematical_operation=>weighted_amount);;
+<=nrel_inclusion:mathematical_operation;
 
-weighted_amount<- rrel_key_sc_element: ...
+<- rrel_key_sc_element: ...
 (*
 <- definition;;
 => nrel_main_idtf:
@@ -24,10 +24,10 @@ weighted_amount<- rrel_key_sc_element: ...
 			->rrel_example:
 			[Взвешенная сумма - это наложение нескольких <b><sc_element sys_idtf="raster">растров</b> с <b><sc_element sys_idtf="nrel_multiplication_of_numbers">умножением</b> каждого на присвоенный им <b><sc_element sys_idtf="weight">вес</b> и общим <b><sc_element sys_idtf="nrel_sum_of_numbers">суммированием</b>.](*<- lang_ru;;=>nrel_format: format_html;;*);;
 		*);;
-*);;
+*);
 
 
-weighted_amount<- rrel_key_sc_element: ... 
+<- rrel_key_sc_element: ... 
 (*
  => nrel_main_idtf:
 [Утв. 1 о взвешенная сумма] (* <- lang_ru;; *);;
@@ -45,7 +45,7 @@ negative_value
 };;
 *);;
 
-weighted_amount-> rrel_example:
+s-> rrel_example:
 [*
 raster->A;;
 raster->B;;
@@ -78,33 +78,3 @@ weighted_amont->...
 	};;
 *);;
 *];;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

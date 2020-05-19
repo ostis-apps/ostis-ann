@@ -1,12 +1,12 @@
-total_quadratic_error<-sc_node_not_relation;;
+cohcept_total_quadratic_error<-sc_node_not_relation;
 
-total_quadratic_error=>nrel_main_idtf:
+=>nrel_main_idtf:
 [суммарная квадратичная ошибка](*<-lang_ru;;*);
-[total_quadratic_error](*<-lang_en;;*);;
+[total_quadratic_error](*<-lang_en;;*);
 
-nrel_inclusion->(error=>total_quadratic_error);;
+<=nrel_inclusion:error;
 
-total_quadratic_error<- rrel_key_sc_element: ...
+<- rrel_key_sc_element: ...
 (*
 <- definition;;
 => nrel_main_idtf:
@@ -21,10 +21,10 @@ total_quadratic_error<- rrel_key_sc_element: ...
 			->rrel_example:
 			[Суммарная квадратичная ошибка - погрешность результата измерений, состоящая из суммы случайных и неисключенных систематических погрешностей, принимаемых за случайные.](*<- lang_ru;;*);;
 		*);;
-*);;
+*);
 
 
-total_quadratic_error<- rrel_key_sc_element: ... 
+<- rrel_key_sc_element: ... 
 (*
  => nrel_main_idtf:
 [Утв. 1 об суммарной квадратичной ошибке] (* <- lang_ru;; *);;
@@ -38,34 +38,3 @@ total_quadratic_error<- rrel_key_sc_element: ...
 logical_formula
 };;
 *);;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
