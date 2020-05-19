@@ -91,28 +91,39 @@ random_event<-sc_node_not_relation;;
 max_value<-sc_node_not_relation;;
 min_value<-sc_node_not_relation;;
 
+sc_node_not_relation->data_structure;;
+sc_node_not_relation->index;;
+sc_node_not_relation->array_element;;
+sc_node_not_relation->arbitrary_access;;
+sc_node_not_relation->vector;;
 
+sc_node_norole_relation->nrel_store;;
+sc_node_norole_relation->nrel_dimension;;
+sc_node_norole_relation->nrel_size;;
 
+sc_node_norole_relation->nrel_working_capacity;;
 
+sc_node_not_relation->technical_system;;
+sc_node_not_relation->component;;
+sc_node_not_relation->component_failure;;
+sc_node_not_relation->system;;
+sc_node_not_relation->state;;
 
+sc_node_not_relation->concept_set;;
+sc_node_not_relation->concept_element;;
+sc_node_norole_relation->nrel_set_of_performance;;
 
+number<-sc_node_not_relation;;
+arity<-sc_node_not_relation;;
+nrel_mesaurement<- sc_node_norole_relation;;
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+sc_node_not_relation->computing_environment;;
+sc_node_not_relation->processor_element;;
+sc_node_not_relation->conveyor_processing;;
+sc_node_not_relation->matrix_processing;;
+sc_node_not_relation->systolic_structure;;
+sc_node_not_relation->data_transfer;;
+sc_node_not_relation->intermediate_result;;
+sc_node_not_relation->computational_process;;
+sc_node_not_relation->systolic_processor_x;;
+sc_node_not_relation->processor;;

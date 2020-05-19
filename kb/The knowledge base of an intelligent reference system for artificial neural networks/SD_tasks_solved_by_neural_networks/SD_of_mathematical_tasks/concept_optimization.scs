@@ -1,13 +1,12 @@
-concept_characteristic<-sc_node_not_relation;;
-nrel_search<- sc_node_norole_relation;;
+concept_optimization
+<-sc_node_not_relation;
+=>nrel_inclusion:concept_mathematical_tasks;
 
-concept_optimization<-sc_node_not_relation;;
-
-concept_optimization=>nrel_main_idtf:
+=>nrel_main_idtf:
 [оптимизация](*<-lang_ru;;*);
-[optimization](*<-lang_en;;*);;
+[optimization](*<-lang_en;;*);
 
-concept_optimization<- rrel_key_sc_element: ...
+<- rrel_key_sc_element: ...
 (*
 <- definition;;
 => nrel_main_idtf:
@@ -23,10 +22,10 @@ concept_optimization<- rrel_key_sc_element: ...
 			->rrel_example:
 			[Оптимизация - это  <b><sc_element sys_idtf="task">процесс</b> максимизации выходных <b><sc_element sys_idtf="concept_characteristic">характеристик</b> и минимизации расходов.](*<- lang_ru;; =>nrel_format: format_html;;*);;
 		*);;
-*);;
+*);
 
 
-concept_optimization<- rrel_key_sc_element: ... 
+<- rrel_key_sc_element: ... 
 (*
  => nrel_main_idtf:
 [Утв. 1 об оптимизации.] (* <- lang_ru;; *);;
@@ -40,15 +39,9 @@ concept_optimization<- rrel_key_sc_element: ...
 value;
 nrel_search
 };;
-*);;
+*);
 
-nrel_inclusion->(concept_mathematical_tasks=>concept_optimization);;
-concept_optimization<-rrel_explored_concept: section_subject_domain_of_mathematical_tasks;;
-
-
-
-
-
+<-rrel_explored_concept: section_subject_domain_of_mathematical_tasks;;
 
 
 

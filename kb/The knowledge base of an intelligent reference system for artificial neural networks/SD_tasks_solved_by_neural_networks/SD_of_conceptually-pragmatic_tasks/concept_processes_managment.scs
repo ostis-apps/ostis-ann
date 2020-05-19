@@ -1,14 +1,15 @@
-nrel_modeling<- sc_node_norole_relation;;
-concept_processes_management<- sc_node_norole_relation;;
+concept_processes_management
+<- sc_node_norole_relation;
+<=nrel_inclusion:concept_conceptually_pragmatic_tasks;
 
-concept_processes_management=>nrel_main_idtf:
+=>nrel_main_idtf:
 [управление процессами](*<-lang_ru;;*);
-[processes management](*<-lang_en;;*);;
+[processes management](*<-lang_en;;*);
 
-concept_processes_management=>nrel_idtf:
-[процесс управления](*<-lang_ru;;*);;
+=>nrel_idtf:
+[процесс управления](*<-lang_ru;;*);
 
-concept_processes_management<- rrel_key_sc_element: ...
+<- rrel_key_sc_element: ...
 (*
 <- definition;;
 => nrel_main_idtf:
@@ -24,10 +25,9 @@ concept_processes_management<- rrel_key_sc_element: ...
 			->rrel_example:
 			[Управление процессами- это <b><sc_element sys_idtf="process">процесс</b> постановки целей и <b><sc_element sys_idtf="task">задач</b> с целью <b><sc_element sys_idtf="nrel_forecasting">прогназирования</b> поведения производства.](*<- lang_ru;;=>nrel_format: format_html;;*);;
 		*);;
-*);;
+*);
 
-
-concept_processes_management<- rrel_key_sc_element: ... 
+<- rrel_key_sc_element: ... 
 (*
  => nrel_main_idtf:
 [Утв. 1 о процессе управления] (* <- lang_ru;; *);;
@@ -42,28 +42,9 @@ process;
 nrel_modeling;
 parametr
 };;
-*);;
+*);
 
-nrel_inclusion->(concept_conceptually_pragmatic_tasks=>concept_processes_management);;
-concept_processes_management<-rrel_explored_concept: section_subject_domain_of_conceptually_pragmatic_tasks;;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+<-rrel_explored_concept: section_subject_domain_of_conceptually_pragmatic_tasks;;
 
 
 

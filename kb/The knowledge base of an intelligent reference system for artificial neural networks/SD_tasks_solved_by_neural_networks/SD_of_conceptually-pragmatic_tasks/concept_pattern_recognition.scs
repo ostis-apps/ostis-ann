@@ -1,0 +1,21 @@
+concept_pattern_recognition;
+<-rrel_key_sc_element: ...
+(*
+	<-definition;;
+	=> nrel_main_idtf: [Опр.(распознавание образов)](* <- lang_ru;; *);;
+	<= nrel_sc_text_translation:...
+	(*
+		-> rrel_example: [Распознавание образов - определение принадлежности данного объекта к заранее выбранному классу объектов.](* <- lang_ru;; *);;
+	*);;
+	<= nrel_using_constants :...
+	(*
+		-> nrel_object; class_of_sets; nrel_belonging;;
+	*);;
+*);
+
+<-rrel_explored_concept: section_subject_domain_of_conceptually_pragmatic_tasks;
+<=nrel_inclusion:concept_conceptually_pragmatic_tasks;;
+
+
+
+

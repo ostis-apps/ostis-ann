@@ -50,3 +50,7 @@ number->2;;
 
 formal_neuron=>nrel_output_channel:first_output_channel;;
 nrel_output_channel<-rrel_explored_concept: section_subject_domain_of_output_mathematics_data;;
+
+
+
+
