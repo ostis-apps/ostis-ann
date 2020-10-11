@@ -26,6 +26,26 @@ public:
 
   SC_PROPERTY(Keynode("nrel_subdividing"), ForceCreate)
   static ScAddr nrel_subdividing;
+
+
+  SC_PROPERTY(Keynode("question_run_ann"), ForceCreate)
+  static ScAddr question_run_ann;
+
+  SC_PROPERTY(Keynode("concept_ann"), ForceCreate)
+  static ScAddr concept_ann;
+
+  SC_PROPERTY(Keynode("concept_file"), ForceCreate)
+  static ScAddr concept_file;
+
+  SC_PROPERTY(Keynode("nrel_unique_name"), ForceCreate)
+  static ScAddr nrel_unique_name;
+
+  SC_PROPERTY(Keynode("rrel_1"), ForceCreate)
+  static ScAddr rrel_1;
+
+  SC_PROPERTY(Keynode("rrel_2"), ForceCreate)
+  static ScAddr rrel_2;
+
 };
 
 } // namespace exampleModule

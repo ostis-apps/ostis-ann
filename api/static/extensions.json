@@ -1,0 +1,5 @@
+{
+  "recognition_module": [
+    { "marking_recognition": ["avi"] }
+  ]
+}
