@@ -1,0 +1,54 @@
+nrel_inclusion->(math_concept=>vector);;
+
+concept_weight_vector<-sc_node_not_relation;
+
+=>nrel_main_idtf:
+[весовой вектор](*<-lang_ru;;*);
+[weight vector](*<-lang_en;;*);
+
+=>nrel_idtf:
+[вектор весовых коэффициентов](*<-lang_ru;;*);
+
+<=nrel_inclusion:vector;
+
+<- rrel_key_sc_element: ...
+(*
+<- definition;;
+=> nrel_main_idtf:
+      [Опр. (классификатор)] (* <- lang_ru;; *);;
+=> nrel_using_constants: 
+	{
+		vector;
+		weight
+	};; 
+<= nrel_sc_text_translation: ... 
+		(*
+			->rrel_example:
+			[Весовой вектор - это <b><sc_element sys_idtf="vector">вектор</b> состящий из <b><sc_element sys_idtf="weight">весов</b>.](*<- lang_ru;;=>nrel_format: format_html;;*);;
+		*);;
+*);
+
+
+<- rrel_key_sc_element: ... 
+(*
+ => nrel_main_idtf:
+[Утв. 1 о весовом векторе] (* <- lang_ru;; *);;
+ <= nrel_sc_text_translation: ...
+	 (*
+    	  -> rrel_example:
+		[Весовой вектор можно <b><sc_element sys_idtf="nrel_install">установить</b> с помощью <b><sc_element sys_idtf="procedure">процедуры</b> определения <b><sc_element sys_idtf="weight">весов</b>.](*<-lang_ru;;=>nrel_format: format_html;;*);;
+	*);;
+=> nrel_using_constants: 
+{
+weight;
+procedure;
+nrel_install
+};;
+*);;
+
+weight_vector-> rrel_example:
+[*
+weight_vector->x;;
+nrel_vector_elem<-sc_node_norole_relation;;
+x=>nrel_vector_elem:weight;;
+*];;

@@ -1,0 +1,81 @@
+linear_recirculation_network
+	=>nrel_main_idtf:
+	[линейная рециркуляционная сеть]
+	(* <- lang_ru;; *);
+	=> nrel_idtf:
+	[линейная рециркуляционная нейронная сеть]
+	(* <- lang_ru;; *);
+	
+///////////////////////////////////////////////////////////////////////////
+	<-rrel_key_sc_element: 
+	Definition_of_linear_recirculation_network
+		(*
+			<-definition;;
+			<=nrel_sc_text_translation:...
+			(*
+				-> rrel_example:
+				[<p>				
+				<b>Линейная рециркуляционная сеть</b>  -  класс нейронной сети с <sc_element sys_idtf = "bidirectional_communication">двунаправленными связями</sc_element>, 
+				с <sc_element sys_idtf = "reduction_of_the_dimension">с динамическими связями</sc_element>, 
+				использующаяся в основном для <sc_element sys_idtf = "compression">сжатия</sc_element> и 
+				<sc_element sys_idtf = "recovery">восстановления</sc_element>, обученная без учителя. 
+				</p>] 
+				(*
+				<-lang_ru;;
+				=> nrel_format: format_html;;
+				*);;
+			*);;
+		=>nrel_main_idtf:[Опр. (линейная рециркуляционная сеть)](* <-lang_ru;; => nrel_format: format_html;;*);;
+		<=nrel_using_constants:...
+			(*
+				->concept_pattern_recognition;bidirectional_communication;compression;recovery;; //+без учителя
+			*);;
+		*);
+		
+=>nrel_inclusion:linear_recirculation_network_for_restoring;
+=>nrel_inclusion:linear_recirculation_network_for_compression;
+
+		
+///////////////////////////////////////////////////////////////////
+<- rrel_key_sc_element:...
+(*
+	<- illustration;;
+	=> nrel_main_idtf: [Рис. (Пример линейной рециркуляционной сети)] (* <- lang_ru;;	*);;
+	<= nrel_sc_text_translation:...
+	(*
+		-> rrel_example: "file://images/example_recirculation_nn.png"
+		(*
+			=> nrel_format: format_png;;
+		*);;
+	*);;
+*);;
+linear_recirculation_network<-rrel_explored_concept: section_subject_domain_of_multilayer_neural_networks;;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

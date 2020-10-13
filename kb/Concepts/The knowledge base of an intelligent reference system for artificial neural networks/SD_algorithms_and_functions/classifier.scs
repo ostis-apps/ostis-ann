@@ -1,0 +1,81 @@
+classifier<-sc_node_not_relation;;
+
+classifier=>nrel_main_idtf:
+[классификатор](*<-lang_ru;;*);
+[classifier](*<-lang_en;;*);;
+classifier=>nrel_idtf:
+[наивный классификатор](*<-lang_ru;;*);;
+
+
+classifier<- rrel_key_sc_element: ...
+(*
+<- definition;;
+=> nrel_main_idtf:
+      [Опр. (классификатор)] (* <- lang_ru;; *);;
+=> nrel_using_constants: 
+	{
+		symptom;
+		list;
+		nrel_uniqueness
+	};; 
+<= nrel_sc_text_translation: ... 
+		(*
+			->rrel_example:
+			[Классификатор - это  <b><sc_element sys_idtf="list">перечень</b>,  <b><sc_element sys_idtf="nrel_uniqueness">уникальных</b> по какому либо  <b><sc_element sys_idtf="symptom">признаку</b>, объектов.](*<- lang_ru;; =>nrel_format: format_html;;*);;
+		*);;
+*);;
+
+
+classifier<- rrel_key_sc_element: ... 
+(*
+ => nrel_main_idtf:
+[Утв. 1 о классификаторе] (* <- lang_ru;; *);;
+ <= nrel_sc_text_translation: ...
+	 (*
+    	  -> rrel_example:
+		[Классификатор определяет  <b><sc_element sys_idtf="object_class">класс объектов</b> по некоторому  <b><sc_element sys_idtf="symptom">признаку</b>](*<-lang_ru;; =>nrel_format: format_html;;*);;
+	*);;
+=> nrel_using_constants: 
+{
+object_class;
+symptom
+};;
+*);;
+
+classifier-> rrel_example:
+[*
+classifier->x;;
+x<=nrel_classify:object;;
+*];;
+
+classifier<-rrel_explored_concept: section_subject_domain_of_algorithms_and_functions;;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

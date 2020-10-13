@@ -1,0 +1,47 @@
+concept_approximation
+=>nrel_inclusion:concept_mathematical_tasks;
+<-sc_node_not_relation;
+
+=>nrel_main_idtf:
+[приблежение](*<-lang_ru;;*);
+[concept_approximation](*<-lang_en;;*);
+
+<- rrel_key_sc_element: ...
+(*
+<- definition;;
+=> nrel_main_idtf:
+      [Опр. (приблежение)] (* <- lang_ru;; *);;
+=> nrel_using_constants: 
+	{
+ 		object;
+		concept_scientific_method
+	};; 
+<= nrel_sc_text_translation: ... 
+		(*
+			->rrel_example:
+			[Приблежение - это <b><sc_element sys_idtf="concept_scientific_method">научный метод</b>, состоящий в замене одних <b><sc_element sys_idtf="object">объектов</b> другими, в каком-то смысле близкими к исходным но более простым.](*<- lang_ru;; =>nrel_format: format_html;;*);;
+		*);;
+*);
+
+
+<- rrel_key_sc_element: ... 
+(*
+ => nrel_main_idtf:
+[Утв. 1 о приблежение.] (* <- lang_ru;; *);;
+ <= nrel_sc_text_translation: ...
+	 (*
+    	  -> rrel_example:
+		[<b><sc_element sys_idtf="task">Задачу</b> приблежения решают когда точное <b><sc_element sys_idtf="value">значение</b> получить нельзя или слишком проблематично.](*<-lang_ru;; =>nrel_format: format_html;;*);;
+	*);;
+=> nrel_using_constants: 
+{
+task;
+value
+};;
+*);
+
+<-rrel_explored_concept: section_subject_domain_of_mathematical_tasks;;
+
+
+
+

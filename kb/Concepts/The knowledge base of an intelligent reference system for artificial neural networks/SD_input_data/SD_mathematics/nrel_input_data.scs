@@ -1,0 +1,58 @@
+sc_node_norole_relation->nrel_input_data;;
+
+
+nrel_input_data=> nrel_main_idtf: [входные данные*](*<- lang_ru;;*);;
+nrel_input_data=> nrel_main_idtf: [input data*](*<- lang_en;;*);;
+definition ->... 
+(*
+->rrel_key_sc_element: nrel_input_data;;
+<= nrel_sc_text_translation: ...(*->rrel_example:[Входные данные - данные , которые поступают на вход и обрабатываются <b><sc_element sys_idtf="neuron">нейроном</b> .](*<-lang_ru;;=> nrel_format: format_html;;*);;*);;
+=> nrel_main_idtf: [Определение (входные данные*)](*<- lang_ru;;=> nrel_format: format_html;;*);;
+=> nrel_using_constants:
+{
+neuron;
+data
+};;
+*);;
+
+statement ->...
+(*
+->rrel_key_sc_element:nrel_input_data;;
+<= nrel_sc_text_translation: ...(*->rrel_example:[Входные данные могут поступать как из вне, так и из других <b><sc_element sys_idtf="neuron">нейронов</b>.](*<-lang_ru;;=> nrel_format: format_html;;*);;*);;
+=> nrel_main_idtf: [Утверждение(входные данные*)](*<- lang_ru;;=> nrel_format: format_html;;*);;
+=> nrel_using_constants:
+{ 
+neuron
+};;
+*);;
+
+
+
+oriented_relation -> nrel_input_data;;
+antireflexive_relation -> nrel_input_data;; 
+antitransitive_relation -> nrel_input_data;;
+antisymmetric_relation -> nrel_input_data;;
+
+
+nrel_input_data => nrel_first_domain:neuron;;
+nrel_input_data => nrel_second_domain: data;;
+..union<=nrel_combination:
+{
+neuron;
+data
+};;
+nrel_input_data => nrel_definitional_domain:..union;; 
+
+arity->arity_2;;
+arity_2=>nrel_measurement:2;;
+arity_2->nrel_input_data;;
+number->2;;
+nrel_input_signal_vector<-rrel_explored_concept: section_subject_domain_of_input_mathematics_data;;
+sc_node_not_relation->244;;
+formal_neuron=>nrel_input_data:244;;
+number->244;;
+nrel_input_data<-rrel_explored_concept: section_subject_domain_input_output_data;;
+
+
+
+

@@ -1,0 +1,29 @@
+concept_symptom
+	=>nrel_main_idtf:
+	[признак]
+	(* <- lang_ru;; *);
+	
+///////////////////////////////////////////////////////////////////////////
+	<-rrel_key_sc_element: 
+	Definition_of_symptom
+		(*
+			<-definition;;
+			<=nrel_sc_text_translation:...
+			(*
+				-> rrel_example:
+				[<p>				
+				<b>Признак</b>  - <sc_element sys_idtf = "nrel_functional_mapping">функция</sc_element>, 
+				которая отображает какое-то множество объектов на множество признаковых описаний.
+				</p>] 
+				(*
+				<-lang_ru;;
+				=> nrel_format: format_html;;
+				*);;
+			*);;
+		=>nrel_main_idtf:[Опр. (признак)](* <-lang_ru;; => nrel_format: format_html;;*);;
+		<=nrel_using_constants:...
+			(*
+				->nrel_functional_mapping;; 
+			*);;
+		*);
+<-rrel_maximum_studied_object_class:subject_domain_of_symptom_descriptions;;

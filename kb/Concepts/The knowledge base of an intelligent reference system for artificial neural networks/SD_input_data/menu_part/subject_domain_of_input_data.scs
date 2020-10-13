@@ -1,0 +1,24 @@
+subject_domain_of_input_data
+	=> nrel_main_idtf:
+	[Предметная область входных данных искусственных нейронных сетей]
+	(* <- lang_ru;; *);
+	[Subject domain of input data]
+	(* <- lang_en;; *);
+		
+<- subject_domain;
+
+-> rrel_maximum_studied_object_class: 
+	concept_neural_network_in_graphical_representation;;
+
+
+
+
+
+
+
+
+
+
+
+
+

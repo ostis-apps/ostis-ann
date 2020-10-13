@@ -1,0 +1,92 @@
+expectation_vector<-sc_node_not_relation;;
+
+expectation_vector=>nrel_main_idtf:
+[вектор математического ожидания](*<-lang_ru;;*);
+[expectation vector](*<-lang_en;;*);;
+expectation_vector=>nrel_idtf:
+[erwartungswer](*<-lang_en;;*);;
+
+
+
+nrel_inclusion->(vector=>expectation_vector);;
+
+expectation_vector<- rrel_key_sc_element: ...
+(*
+<- definition;;
+=> nrel_main_idtf:
+      [Опр. (классификатор)] (* <- lang_ru;; *);;
+=> nrel_using_constants: 
+	{
+		theory_of_relativity;
+		random_value;
+		average_value
+	};; 
+<= nrel_sc_text_translation: ... 
+		(*
+			->rrel_example:
+			[Вектор математического ожидания - это из важнейших понятий <b><sc_element sys_idtf="theory_of_relativity">теории относительности</b>, означающее <b><sc_element sys_idtf="average_value">среднее значение</b> <b><sc_element sys_idtf="random_value">случайной велечины</b>.](*<- lang_ru;; =>nrel_format: format_html;;*);;
+		*);;
+*);;
+
+
+expectation_vector<- rrel_key_sc_element: ... 
+(*
+ => nrel_main_idtf:
+[Утв. 1 о векторе математического ожидания] (* <- lang_ru;; *);;
+ <= nrel_sc_text_translation: ...
+	 (*
+    	  -> rrel_example:
+		[На практике математическое ожидание оценивается как <b><sc_element sys_idtf="nrel_average">среднее арифметическое</b> наблюдаемых значений <b><sc_element sys_idtf="random_value">случайной величины</b>.](*<-lang_ru;; =>nrel_format: format_html;;*);;
+	*);;
+=> nrel_using_constants: 
+{
+nrel_average;
+random_value 
+};;
+*);;
+
+expectation_vector-> rrel_example:
+[*
+random_value->a;;
+random_value->b;;
+expectation_vector->...
+(*
+<=nrel_average:
+	{
+	a;
+	b
+	};;
+*);;
+*];;
+
+expectation_vector<-rrel_explored_concept: section_subject_domain_mathematics;;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

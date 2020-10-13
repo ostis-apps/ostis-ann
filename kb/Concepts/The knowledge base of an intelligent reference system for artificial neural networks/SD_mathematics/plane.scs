@@ -1,0 +1,80 @@
+plane<-sc_node_not_relation;;
+
+plane=>nrel_main_idtf:
+[плоскость](*<-lang_ru;;*);
+[plane](*<-lang_en;;*);;
+
+
+nrel_inclusion->(math_concept=>plane);;
+
+plane<- rrel_key_sc_element: ...
+(*
+<- definition;;
+=> nrel_main_idtf:
+      [Опр. (плоскость)] (* <- lang_ru;; *);;
+=> nrel_using_constants: 
+	{
+		point;
+		line;
+		surfase
+	};; 
+<= nrel_sc_text_translation: ... 
+		(*
+			->rrel_example:
+			[Плоскость - это такая <b><sc_element sys_idtf="surfase">поверхность</b> что любая <b><sc_element sys_idtf="line">прямая</b> соединяющая две её <b><sc_element sys_idtf="point">точки</b>, целиком принадлежит этой <b><sc_element sys_idtf="surfase">поверхности</b>.](*<- lang_ru;;=>nrel_format: format_html;;*);;
+		*);;
+*);;
+
+
+plane<- rrel_key_sc_element: ... 
+(*
+ => nrel_main_idtf:
+[Утв. 1 о плоскости] (* <- lang_ru;; *);;
+ <= nrel_sc_text_translation: ...
+	 (*
+    	  -> rrel_example:
+		[Плоскость одно из основных <b><sc_element sys_idtf="concept">понятий</b> <b><sc_element sys_idtf="geometry">гиометрии</b>.](*<-lang_ru;;=>nrel_format: format_html;;*);;
+	*);;
+=> nrel_using_constants: 
+{
+geometry;
+concept
+};;
+*);;
+
+plane-> rrel_example:
+[*
+plane->hyperplane;;
+*];;
+
+plane<-rrel_explored_concept: section_subject_domain_mathematics;;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,59 @@
+sc_node_not_relation->concept_learning_algorithm;;
+concept_learning_algorithm=>nrel_main_idtf:[learning algorithm](* <-lang_en;; *);;
+concept_learning_algorithm=>nrel_main_idtf:[алгоритм обучения](* <-lang_ru;; *);; 
+definition -> ...
+	(*
+		=> nrel_main_idtf: [Опр.(алгоритм обучения)](* <- lang_ru;; *);;
+		<= nrel_sc_text_translation:...
+		(*
+			-> rrel_example: [Алгоритм обучения - множество нейронных узлов, сигналов и синапсов, построенных и обработанных таким образом, чтобы обеспечить корректную работу нейронной сети.](* <- lang_ru;; *);;
+		*);;
+		-> rrel_key_sc_element: concept_learning_algorithm;;
+		<= nrel_using_constants :...
+		(*
+			-> neural_networks_without_feedbacks; concept_neuron_node; signal; sinaps; learning;;//обучение
+		*);;
+	*);; 
+ statement -> ...
+	(*
+         -> rrel_key_sc_element: concept_learning_algorithm; nrel_synapse_weight; concept_neuron_node;;
+		=> nrel_main_idtf: [Утв.(нейронный узел, вес*)](* <- lang_ru;; *);;
+		<= nrel_sc_text_translation:...
+		(*
+			-> rrel_example: [Алгоритм обучения ищет оптимальный набор входных нейронных узлов и весовых коэффициентов.](* <- lang_ru;; *);;
+		*);;
+*);;
+
+concept_learning_algorithm<-rrel_explored_concept: section_subject_domain_of_learning_neural_networks;;
+//добавить алгоритмы Анжелики
+//done
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

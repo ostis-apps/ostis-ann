@@ -1,0 +1,79 @@
+linear_recirculation_network_for_restoring
+=>nrel_main_idtf:
+	[линейная рециркуляционная нейронная сеть для восстановления]
+	(* <- lang_ru;; *);
+	=> nrel_idtf:
+	[линейная рециркуляционная нейронная сеть для увеличения размерности] 
+	(* <- lang_ru;; *);
+	[линейная рециркуляционная сеть для восстановления]
+	(* <- lang_ru;; *);
+	
+///////////////////////////////////////////////////////////////////////////
+	<-rrel_key_sc_element: 
+	Definition_of_linear_recirculation_network_for_restoring
+		(*
+			<-definition;;
+			<=nrel_sc_text_translation:...
+			(*
+				-> rrel_example:
+				[<p>				
+				<b>Линейная рециркуляционная нейронная сеть для восстановления</b>  - <sc_element sys_idtf = "linear_recirculation_network">линейная рециркуляционная нейронная сеть</sc_element>, 
+				использующая для <sc_element sys_idtf = "increase_of_the_dimension">увеличения размерности</sc_element> образа и 
+				дающая на <sc_element sys_idtf = "output">выходе</sc_element> <sc_element sys_idtf = "restoring_frame">восстановленный  образ</sc_element>.
+				</p>] 
+				(*
+				<-lang_ru;;
+				=> nrel_format: format_html;;
+				*);;
+			*);;
+		=>nrel_main_idtf:[Опр. (линейная рециркуляционная сеть для восстановления)](* <-lang_ru;; => nrel_format: format_html;;*);;
+		<=nrel_using_constants:...
+			(*
+				->linear_recirculation_network;increase_of_the_dimension;output;restoring_frame;frame;;//+применение 
+			*);;
+		*);
+		
+=>nrel_number_of_layers:[2](*<-integer;;*);
+<=inclusion:imension_increasing_neural_network;
+			 
+<-rrel_explored_concept:subject_domain_of_imension_increasing_neural_networks;
+///////////////////////////////////////////////////////////////////
+<- rrel_key_sc_element:...
+(*
+	<- illustration;;
+	=> nrel_main_idtf: [Рис. (линейная рециркуляционная нейронная сеть для восстановления)] (* <- lang_ru;;	*);;
+	<= nrel_sc_text_translation:...
+	(*
+		-> rrel_example: "file://images/example_recirculation_nn_for_restoring.png"
+		(*
+			=> nrel_format: format_png;;
+		*);;
+	*);;
+*);;
+
+
+
+linear_recirculation_network_for_restoring<-rrel_explored_concept: section_subject_domain_of_multilayer_neural_networks;;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

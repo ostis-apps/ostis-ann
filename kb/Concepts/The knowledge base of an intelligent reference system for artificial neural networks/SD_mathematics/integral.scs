@@ -1,0 +1,90 @@
+integral<-sc_node_not_relation;;
+
+integral=>nrel_main_idtf:
+[интеграл](*<-lang_ru;;*);
+[integral](*<-lang_en;;*);;
+
+integral=>nrel_idtf:
+[взять интеграл](*<-lang_ru;;*);;
+
+nrel_inclusion->(math_concept=>mathematical_operation);;
+nrel_inclusion->(mathematical_operation=>integral);;
+
+integral<- rrel_key_sc_element: ...
+(*
+<- definition;;
+=> nrel_main_idtf:
+      [Опр. (интеграл)] (* <- lang_ru;; *);;
+=> nrel_using_constants: 
+	{
+      	result;
+		nrel_sum_of_numbers;
+		term;
+		infinitesimal
+	};; 
+<= nrel_sc_text_translation: ... 
+		(*
+			->rrel_example:
+			[Интеграл - это <b><sc_element sys_idtf="result">результат</b> <b><sc_element sys_idtf="nrel_sum_of_numbers">суммирования</b> бесконечно большого числа <b><sc_element sys_idtf="infinitesimal">бесконечно малых</b> <b><sc_element sys_idtf="term">слагаемых</b>.](*<- lang_ru;;=>nrel_format: format_html;;*);;
+		*);;
+*);;
+
+
+integral<- rrel_key_sc_element: ... 
+(*
+ => nrel_main_idtf:
+[Утв. 1 об интерграле] (* <- lang_ru;; *);;
+ <= nrel_sc_text_translation: ...
+	 (*
+    	  -> rrel_example:
+		[Интеграл  <b><sc_element sys_idtf="mathematical_operation">математическая  операция</b> <b><sc_element sys_idtf="nrel_differentiation">обратная дифференцированию</b>.](*<-lang_ru;;=>nrel_format: format_html;;*);;
+	*);;
+=> nrel_using_constants: 
+{
+mathematical_operation;
+nrel_differentiation
+};;
+*);;
+
+
+integral-> rrel_example:
+[*
+
+integral->A;;
+A<=nrel_addition_of_values:
+	{
+	a(* <- infinitesimal;; *);
+	b(* <- infinitesimal;; *)
+	};;
+*];;
+
+integral<-rrel_explored_concept: section_subject_domain_mathematics;;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

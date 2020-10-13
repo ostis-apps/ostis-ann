@@ -1,0 +1,23 @@
+subject_domain_of_multilayer_neural_networks
+	=> nrel_main_idtf:
+	[Предметная область многослойных нейронных сетей]
+	(* <- lang_ru;; *);
+	[Subject domain of multilayer neural networks]
+	(* <- lang_en;; *);
+		
+<- subject_domain;
+-> rrel_maximum_studied_object_class: 
+	multilayer_neural_network;;
+
+
+
+
+
+
+
+
+
+
+
+
+

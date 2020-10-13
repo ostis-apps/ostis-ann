@@ -1,0 +1,91 @@
+nrel_weight_coefficient_matrix_of_layer
+	<- sc_node_norole_relation;
+	=> nrel_main_idtf: [weight matrix of nrel_layer*] (* <- lang_en;; *);
+	=> nrel_main_idtf: [матрица весовых коэффициентов слоя*] (* <- lang_ru;; *);;
+
+
+nrel_weight_coefficient_matrix_of_layer => nrel_definitional_domain: ...
+	(*
+		<= nrel_combination: ...
+			(*
+				-> nrel_layer
+					(*
+						<= nrel_first_domain: nrel_weight_coefficient_matrix_of_layer;;						
+					*);;
+				-> matrix
+					(*
+						<= nrel_second_domain: nrel_weight_coefficient_matrix_of_layer;;						
+					*);;
+			*);;
+	*);;
+
+nrel_weight_coefficient_matrix_of_layer
+	<- binary_relation;
+	<- oriented_relation;
+	<- antireflexive_relation;
+	<- antisymmetric_relation;
+	<- antitransitive_relation;;
+
+
+definition -> ...
+	(*
+		=> nrel_main_idtf: [Опр.(матрица весовых коэффициентов слоя*)] (* <-lang_ru;; *);;
+		-> rrel_key_sc_element: nrel_weight_coefficient_matrix_of_layer;;
+
+		<= nrel_using_constants: ...
+			(*
+				-> nrel_nrel_layer;;
+				-> nrel_synapse_weight;;	
+				-> matrix;;
+				-> concept_neuron_node;;
+				-> synaptic_connection;;
+			*);;
+
+		<= nrel_sc_text_translation: ...
+			(*
+				-> [Матрицей весовых коэффициентов i-го слоя называется матрица размером n на m, где n - количество нейронов на i - 1 слое, m - количество нейронов на i-ом слое, а jk-ый элемент (j = 1,2,3,...,n; k = 1,2,3,...,m) - это вес синаптической связи между j-ым нейроном i - 1 слоя и k-ым нейроном i-го слоя] (* <- lang_ru;; *);;
+			*);;
+	*);;
+
+
+affirmation -> ...
+	(*
+		-> rrel_key_sc_element: nrel_weight_coefficient_matrix_of_layer;;
+
+		<= nrel_sc_text_translation: ...
+			(*
+				-> [Матрица весовых коэффициентов входного слоя многослойной нейронной сети эквивалентна вектору входного сигнала] (* <- lang_ru;; *);;
+			*);;
+
+		=> nrel_main_idtf: [Утв.(матрица весовых коэффициентов слоя*, многослойная нейронная сеть, эквиваленция*, вектор входного сигнала)] (* <- lang_ru;; *);;
+	*);;
+
+
+nrel_weight_coefficient_matrix_of_layer<-rrel_explored_concept: section_subject_domain_of_layers;;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

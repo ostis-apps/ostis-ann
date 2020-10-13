@@ -1,0 +1,24 @@
+section_subject_domain_of_relaxed_networks
+=> nrel_main_idtf: 
+	[Раздел. Предметная область релаксационных нейронных сетей]
+	(* <- lang_ru;;*);
+	[Section. Subject domain of relaxed networks]
+	(* <- lang_en;; *);
+
+<- not_enough_formed_structure;
+<- atomic_section;;
+
+section_subject_domain_of_relaxed_networks = [*^"file://subject_domain_of_relaxed_networks.scsi"*];;
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,61 @@
+sc_node_not_relation->concept_unsupervised_learning;;
+concept_unsupervised_learning=>nrel_main_idtf:[unsupervised learning](* <-lang_en;; *);;
+concept_unsupervised_learning=>nrel_main_idtf:[обучение без учителя](* <-lang_ru;; *);; 
+concept_unsupervised_learning=>nrel_idtf:[cамообучение](* <-lang_ru;; *);; 
+concept_unsupervised_learning=>nrel_idtf:[спонтанное обучение](* <-lang_ru;; *);; 
+definition -> ...
+	(*
+		=> nrel_main_idtf: [Опр.(обучение без учителя)](* <- lang_ru;; *);;
+		<= nrel_sc_text_translation:...
+		(*
+			-> rrel_example: [Обучение без учителя - обучение, в котором алгоритм обучения самостоятельно ищет соответствия между входными и выходными данными.](* <- lang_ru;; *);;
+		*);;
+		-> rrel_key_sc_element: concept_unsupervised_learning;;
+		<= nrel_using_constants :...
+		(*
+			-> neural_networks_without_feedbacks; concept_learning_algorithm; input_data; output; nrel_mapping;;
+		*);;
+	*);; 
+ statement -> ...
+	(*
+         -> rrel_key_sc_element: concept_unsupervised_learning; nrel_equivalence; nrel_source_set; nrel_teaching_set;;
+		=> nrel_main_idtf: [Утв.(исходая выборка*, обучающая выборка*, эквиваленция*)](* <- lang_ru;; *);;
+		<= nrel_sc_text_translation:...
+		(*
+			-> rrel_example: [При обучении без учителя исходная выборка является обучающей выборкой.](* <- lang_ru;; *);;
+		*);;
+*);;
+
+concept_unsupervised_learning<-rrel_explored_concept: section_subject_domain_of_learning_neural_networks;;
+//в обучении должно быть разбиение с этим (для Анжелики)
+//сделано
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

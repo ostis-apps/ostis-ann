@@ -1,0 +1,24 @@
+section_subject_domain_of_output_picture_data
+=> nrel_main_idtf: 
+	[Раздел. Предметная область выходных фактографических данных искусственных нейронных сетей]
+	(* <- lang_ru;;*);
+	[Section. Subject domain of output picture data]
+	(* <- lang_en;; *);
+
+<- not_enough_formed_structure;
+<- atomic_section;;
+
+section_subject_domain_of_output_picture_data = [*^"file://subject_domain_of_output_picture_data.scsi"*];;
+
+
+
+
+
+
+
+
+
+
+
+
+

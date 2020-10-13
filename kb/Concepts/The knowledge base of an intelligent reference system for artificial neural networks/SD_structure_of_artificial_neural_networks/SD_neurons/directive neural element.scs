@@ -1,0 +1,65 @@
+sc_node_not_relation->directive_neural_element;;
+sc_node_not_relation->neural_element;;
+sc_node_not_relation->output_signal;;
+sc_node_not_relation->neural_network;;
+sc_node_not_relation->neural_element_x;;
+
+sc_node_norole_relation->rrel_present;;
+
+directive_neural_element=> nrel_main_idtf: [направляющий нейронный элемент](* <- lang_ru;; *);;
+directive_neural_element=> nrel_main_idtf: [directive neural element](* <- lang_en;; *);;
+definition ->...
+(*
+->rrel_key_sc_element: directive_neural_element;;
+<= nrel_sc_text_translation: ...(*->rrel_example:[Направляющий нейронный элемент - это нейронный элемент который направляет выходные сигналы.](*<-lang_ru;;*);;*);;
+=> nrel_main_idtf: [Определение (направляющий нейронный элемент)](*<- lang_ru;;*);;
+=> nrel_using_constants:
+{ 
+ neural_element;
+output_signal
+};;
+*);;
+
+statement ->...
+(*
+->rrel_key_sc_element: directive_neural_element;;
+<= nrel_sc_text_translation: ...(*->rrel_example:[Направляющий нейронный элемент присутствует не во всех  нейронных сетях.](*<-lang_ru;;*);;*);;
+=> nrel_main_idtf: [Утверждение(направляющий нейронный элемент)](*<- lang_ru;;*);;
+=> nrel_using_constants:
+{
+neural_network;
+rrel_present
+};;
+*);;
+neural_element_x<-rrel_example:directive_neural_element;;
+directive_neural_element=>nrel_inclusion:neural_element;;
+
+directive_neural_element<-rrel_explored_concept: section_subject_domain_of_neurons;;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

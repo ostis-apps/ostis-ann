@@ -1,0 +1,91 @@
+tanget<-sc_node_not_relation;;
+
+tanget=>nrel_main_idtf:
+[тангенс](*<-lang_ru;;*);
+[tanget](*<-lang_en;;*);;
+
+nrel_inclusion->(math_concept=>tanget);;
+
+tanget<- rrel_key_sc_element: ...
+(*
+<- definition;;
+=> nrel_main_idtf:
+      [Опр. (тангенс)] (* <- lang_ru;; *);;
+=> nrel_using_constants: 
+	{
+		triangle;
+		cathet;
+		relation;
+		nrel_opposite;
+		nrel_adjacent
+	};; 
+<= nrel_sc_text_translation: ... 
+		(*
+			->rrel_example:
+			[Тангенс - это отношение <b><sc_element sys_idtf="nrel_opposite">противолежащего</b> <b><sc_element sys_idtf="cathet">катета</b>, прямоугольного треугольника, к <b><sc_element sys_idtf="nrel_adjacent">прилежащему</b>.](*<- lang_ru;;=>nrel_format: format_html;;*);;
+		*);;
+*);;
+
+
+tanget<- rrel_key_sc_element: ... 
+(*
+ => nrel_main_idtf:
+[Утв. 1 о тангенсе] (* <- lang_ru;; *);;
+ <= nrel_sc_text_translation: ...
+	 (*
+    	  -> rrel_example:
+		[Тангенс это <b><sc_element sys_idtf="trigonometry">триганометрическая</b> <b><sc_element sys_idtf="math_function">функция</b>.](*<-lang_ru;;=>nrel_format: format_html;;*);;
+	*);;
+=> nrel_using_constants: 
+{
+math_function;
+trigonometry
+};;
+*);;
+
+tanget-> rrel_example:
+[*
+tanget->x;;
+triangle->A;;
+cathet->a;;
+cathet->b;;
+A=>nrel_adjacent:a;;
+A=>nrel_opposite:b;;
+
+b<=nrel_nrel_multiplication_of_numbers:
+{
+x;
+a
+};;
+*];;
+
+tanget<-rrel_explored_concept: section_subject_domain_mathematics;;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

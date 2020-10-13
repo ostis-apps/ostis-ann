@@ -1,0 +1,97 @@
+Bayes_theorem<-sc_node_not_relation;;
+theorem<-sc_node_not_relation;;
+
+
+Bayes_theorem=>nrel_main_idtf:
+[теорема Байеса](*<-lang_ru;;*);
+[Bayes theorem](*<-lang_en;;*);;
+Bayes_theorem=>nrel_idtf:
+[формула Байеса](*<-lang_ru;;*);;
+
+
+nrel_inclusion->(theorem=>Bayes_theorem);;
+
+Bayes_theorem<- rrel_key_sc_element: ...
+(*
+<- definition;;
+=> nrel_main_idtf:
+      [Опр. (теорема Байеса)] (* <- lang_ru;; *);;
+=> nrel_using_constants: 
+	{
+		statistics;
+		nrel_event;
+		theorem;
+		probability
+	};; 
+<= nrel_sc_text_translation: ... 
+		(*
+			->rrel_example:
+			[Теорема Байеса - это <b><sc_element sys_idtf="theorem">теорема</b> позволяет определить <b><sc_element sys_idtf="probability">вероятность</b> какого-либо <b><sc_element sys_idtf="nrel_event">события</b> при условии, что произошло другое <b><sc_element sys_idtf="statistics">статистически</b> взаимозависимое с ним <b><sc_element sys_idtf="nrel_event">событие</b>.](*<- lang_ru;; =>nrel_format: format_html;;*);;
+		*);;
+*);;
+
+
+Bayes_theorem<- rrel_key_sc_element: ... 
+(*
+ => nrel_main_idtf:
+[Утв. 1 об классификаторе] (* <- lang_ru;; *);;
+ <= nrel_sc_text_translation: ...
+	 (*
+    	  -> rrel_example:
+		[Теорема Байеса основная <b><sc_element sys_idtf="theorem">теорема</b> элементарной <b><sc_element sys_idtf="Probability_theory">теории вероятностей</b>](*<-lang_ru;; =>nrel_format: format_html;;*);;
+	*);;
+=> nrel_using_constants: 
+{
+Probability_theory;
+theorem
+};;
+*);;
+
+Bayes_theorem-> rrel_example:
+[*
+
+	equivalent_value<=nrel_composition_of_values:
+		{
+		P_ab;
+		P_b
+		};;
+	equivalent_value<=nrel_composition_of_values:
+		{
+		P_ba;
+		P_a
+		};;
+
+
+*];;
+
+Bayes_theorem<-rrel_explored_concept: section_subject_domain_mathematics;;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

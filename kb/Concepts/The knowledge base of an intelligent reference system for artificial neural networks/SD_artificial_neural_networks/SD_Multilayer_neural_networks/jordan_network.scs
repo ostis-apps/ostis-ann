@@ -1,0 +1,70 @@
+jordan_network<-sc_node_not_relation;;
+
+jordan_network=>nrel_main_idtf:
+[сеть Джордана](*<-lang_ru;;*);
+[jordan network](*<-lang_en;;*);;
+
+jordan_network<- rrel_key_sc_element: ...
+(*
+<- definition;;
+=> nrel_main_idtf:
+      [Опр. (сеть Джордана)] (* <- lang_ru;; *);;
+=> nrel_using_constants: 
+	{
+		recurrent_network;
+		multilayer_perceptron;
+		neuron
+	};; 
+<= nrel_sc_text_translation: ... 
+		(*
+			->rrel_example:
+			[сеть Джордана - рекурентная нейронная сеть, получается из многослойного перцептрона введением обратных связей](*<- lang_ru;;*);;
+		*);;
+*);;
+
+
+jordan_network<- rrel_key_sc_element: ... 
+(*
+ => nrel_main_idtf:
+[Утв. 1 об сети Джордана] (* <- lang_ru;; *);;
+ <= nrel_sc_text_translation: ...
+	 (*
+    	  -> rrel_example:
+		[Только часть рецепторов принимает сигналы из окружающего мира, на другие рецепторы приходит выходной образ из предыдущего момента времени..](*<-lang_ru;;*);;
+	*);;
+=> nrel_using_constants: 
+{
+signal;
+input_value
+};;
+*);;
+
+jordan_network<-rrel_explored_concept: section_subject_domain_of_multilayer_neural_networks;;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

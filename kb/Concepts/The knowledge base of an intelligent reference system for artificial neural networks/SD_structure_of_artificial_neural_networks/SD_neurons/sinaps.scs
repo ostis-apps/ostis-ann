@@ -1,0 +1,58 @@
+sinaps
+	=>nrel_main_idtf:
+	[синапс]
+	(* <- lang_ru;; *);
+	
+///////////////////////////////////////////////////////////////////////////
+	<-rrel_key_sc_element: 
+	Definition_of_sinaps
+		(*
+			<-definition;;
+			<=nrel_sc_text_translation:...
+			(*
+				-> rrel_example:
+				[<p>				
+				<b>Синапс</b>  - ситуативная дуга <sc_element sys_idtf = "concept_neural_network_in_graphical_representation">нейронной сети в графовом представлении</sc_element> .
+				</p>] 
+				(*
+				<-lang_ru;;
+				=> nrel_format: format_html;;
+				*);;
+			*);;
+		=>nrel_main_idtf:[Опр. (синапс)](* <-lang_ru;; => nrel_format: format_html;;*);;
+		<=nrel_using_constants:...
+			(*
+				->concept_neural_network_in_graphical_representation;temporary_connection;; 
+			*);;
+		*);
+		<-rrel_explored_concept:subject_domain_of_artificial_neural_networks;;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

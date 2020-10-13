@@ -1,0 +1,21 @@
+subject_domain_of_mathematics
+	=> nrel_main_idtf:
+	[Предметная область задач решаемых искусственными нейронными сетями]
+	(* <- lang_ru;; *);
+	[Subject domain of tasks solved by artificial neural networks]
+	(* <- lang_en;; *);
+		
+<- subject_domain;;
+
+
+
+
+
+
+
+
+
+
+
+
+

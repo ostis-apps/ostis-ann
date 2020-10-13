@@ -1,0 +1,37 @@
+section_subject_domain_of_base_artificial_neural_networks
+=> nrel_main_idtf: 
+    [База знаний интеллектуальной справочной системы по искусственным нейронным сетям](* <- lang_ru;; *);
+=> nrel_idtf: 
+	[The knowledge base of an intelligent reference system for artificial neural networks](*<- lang_en;;*);
+
+<- not_enough_formed_structure;
+<- non_atomic_section;
+
+<= nrel_section_decomposition:
+{
+section_subject_domain_of_artificial_neural_networks;
+section_subject_domain_mathematics;
+section_subject_domain_of_input_data;
+section_subject_domain_of_output_data;
+section_subject_domain_of_learning_neural_networks;
+section_subject_domain_tasks_solved_by_neural_networks;
+section_subject_domain_of_algorithms_and_functions;
+section_subject_domain_structure_of_artificial_neural_networks
+};
+
+-> rrel_key_sc_element: subject_domain_base_of_artificial_neural_networks;
+
+<- ui_start_sc_element;;
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,72 @@
+topological_space<-sc_node_not_relation;;
+
+topological_space=>nrel_main_idtf:
+[топологическое расстояние](*<-lang_ru;;*);
+[topological space](*<-lang_en;;*);;
+
+topological_space<- rrel_key_sc_element: ...
+(*
+<- definition;;
+=> nrel_main_idtf:
+      [Опр. (топологическое пространство)] (* <- lang_ru;; *);;
+=> nrel_using_constants: 
+	{
+		set;
+		structure;
+		type
+	};; 
+<= nrel_sc_text_translation: ... 
+		(*
+			->rrel_example:
+			[Топологическое пространство - множество с дополнительной структурой определённого типа.](*<- lang_ru;;*);;
+		*);;
+*);;
+
+
+topological_space<- rrel_key_sc_element: ... 
+(*
+ => nrel_main_idtf:
+[Утв. 1 об топологическом пространстве] (* <- lang_ru;; *);;
+ <= nrel_sc_text_translation: ...
+	 (*
+    	  -> rrel_example:
+		[Является основным объектом изучения раздела геометрии под названием топология.](*<-lang_ru;;*);;
+	*);;
+=> nrel_using_constants: 
+{
+geometry;
+topology
+};;
+*);;
+
+topological_space<-rrel_explored_concept: section_subject_domain_mathematics;;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

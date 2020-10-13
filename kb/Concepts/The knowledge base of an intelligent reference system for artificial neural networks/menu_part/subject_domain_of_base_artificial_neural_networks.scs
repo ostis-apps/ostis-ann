@@ -1,0 +1,23 @@
+subject_domain_base_of_artificial_neural_networks
+	=> nrel_main_idtf:
+	[База знаний по искусственным нейронным сетям]
+	(* <- lang_ru;; *);
+	[Subject domain of base of artificial neural networks]
+	(* <- lang_en;; *);
+		
+<- subject_domain;
+
+rrel_maximum_studied_object_class: 
+	concept_neural_network_in_graphical_representation;;
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,70 @@
+sc_node_not_relation->principal_component_method;;
+sc_node_not_relation->data_dimension;;
+sc_node_not_relation->information;;
+sc_node_not_relation->singular_decomposition;;
+sc_node_not_relation->data_matrix;;
+sc_node_not_relation->method_x;;
+sc_node_not_relation->method;;
+
+sc_node_norole_relation->nrel_calculation;;
+
+
+principal_component_method=> nrel_main_idtf: [метод главных компонент](* <- lang_ru;; *);;
+principal_component_method=> nrel_main_idtf: [principal component method](* <- lang_en;; *);;
+definition ->...
+(*
+->rrel_key_sc_element: principal_component_method;;
+<= nrel_sc_text_translation: ...(*->rrel_example:[Метод главных компонент — один из основных способов уменьшить размерность данных, потеряв наименьшее количество информации.](*<-lang_ru;;*);;*);;
+=> nrel_main_idtf: [Определение (метод главных компонент)](*<- lang_ru;;*);;
+=> nrel_using_constants:
+{ 
+ data_dimension;
+information
+};;
+*);; 
+
+statement ->...
+(*
+->rrel_key_sc_element: principal_component_method;;
+<= nrel_sc_text_translation: ...(*->rrel_example:[Вычисление главных компонент может быть сведено к вычислению сингулярного разложения матрицы данных.](*<-lang_ru;;*);;*);;
+=> nrel_main_idtf: [Утверждение(метод главных компонент)](*<- lang_ru;;*);;
+=> nrel_using_constants:
+{
+singular_decomposition;
+data_matrix;
+nrel_calculation
+};;
+*);;
+method_x<-rrel_example:principal_component_method;;
+principal_component_method=>nrel_inclusion:method;;
+
+principal_component_method<-rrel_explored_concept: section_subject_domain_of_algorithms_and_functions;;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

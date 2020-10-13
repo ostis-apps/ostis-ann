@@ -1,0 +1,38 @@
+sc_node_not_relation->output_data;;
+
+
+output_data=> nrel_main_idtf: [выходные данные](* <- lang_ru;; *);;
+output_data=> nrel_main_idtf: [output data](* <- lang_en;; *);;
+definition ->...
+(*
+->rrel_key_sc_element: output_data;;
+<= nrel_sc_text_translation: ...(*->rrel_example:[Выходные данные  — данные которые поступают на <b><sc_element sys_idtf="output">выход</b> <b><sc_element sys_idtf="neuron">нейрона</b>.](*<-lang_ru;;=> nrel_format: format_html;;*);;*);;
+=> nrel_main_idtf: [Определение (выходные данные)](*<- lang_ru;;=> nrel_format: format_html;;*);;
+=> nrel_using_constants:
+{ 
+data;
+output;
+neuron
+};;
+*);; 
+
+
+statement ->...
+(*
+->rrel_key_sc_element: output_data;;
+<= nrel_sc_text_translation: ...(*->rrel_example:[В нейронных сетях выходные данные одних <b><sc_element sys_idtf="neuron">нейронов</b> используются как<b><sc_element sys_idtf="input_data">входные данные</b> для других <b><sc_element sys_idtf="neuron">нейронов</b>.](*<-lang_ru;;=> nrel_format: format_html;;*);;*);;
+=> nrel_main_idtf: [Утверждение(выходные данные)](*<- lang_ru;;=> nrel_format: format_html;;*);;
+=> nrel_using_constants:
+{
+neural_network;
+neuron;
+input_data
+};;
+*);;
+true<-rrel_example:output_data;;
+output_data<=nrel_inclusion:data;;
+output_data<-rrel_explored_concept: section_subject_domain_of_output_mathematics_data;;
+
+
+
+

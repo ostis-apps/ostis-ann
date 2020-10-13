@@ -1,0 +1,84 @@
+neural_network_overtraining<-sc_node_not_relation;;
+
+neural_network_overtraining=>nrel_main_idtf:
+[перетренировка сети](*<-lang_ru;;*);
+[neural overtraining network](*<-lang_en;;*);;
+neural_network_overtraining=>nrel_idtf:
+[перетренированная сеть](*<-lang_ru;;*);;
+
+
+neural_network_overtraining<- rrel_key_sc_element: ...
+(*
+<- definition;;
+=> nrel_main_idtf:
+      [Опр. (перетренированная сеть)] (* <- lang_ru;; *);;
+=> nrel_using_constants: 
+	{
+		input_data;
+		concept_neural_network_in_graphical_representation;
+		nrel_forecasting;
+		nrel_exception;
+		result
+	};; 
+<= nrel_sc_text_translation: ... 
+		(*
+			->rrel_example:
+			[Перетренированная сеть - это <b><sc_element sys_idtf="concept_neural_network_in_graphical_representation">сеть</b> которая выдаёт 100% правильный <b><sc_element sys_idtf="result">результат</b> в прошлом но полностью исключающая прогназирование из-за избыточности <b><sc_element sys_idtf="input_data">входных данных</b>.](*<- lang_ru;;=>nrel_format: format_html;;*);;
+		*);;
+*);;
+
+
+neural_network_overtraining<- rrel_key_sc_element: ... 
+(*
+ => nrel_main_idtf:
+[Утв. 1 о перетренировке сети] (* <- lang_ru;; *);;
+ <= nrel_sc_text_translation: ...
+	 (*
+    	  -> rrel_example:
+		[Перетренировка сети происходит из-за слишком большого количества <b><sc_element sys_idtf="input">входов</b>.](*<-lang_ru;;=>nrel_format: format_html;;*);;
+	*);;
+=> nrel_using_constants: 
+{
+input;
+nrel_result
+};;
+*);;
+
+neural_network_overtraining-> rrel_example:
+[*
+concept_neural_network_in_graphical_representation->...
+(*
+->input;;
+*);;
+input<=nrel_less:input_data;;
+*];;
+
+neural_network_overtraining<-rrel_explored_concept: section_subject_domain_of_learning_neural_networks;;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

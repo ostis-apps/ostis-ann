@@ -1,0 +1,72 @@
+hybrid_neural_network<-sc_node_not_relation;;
+
+hybrid_neural_network=>nrel_main_idtf:
+[гибридная нейронная сеть](*<-lang_ru;;*);
+[hybrid neural network](*<-lang_en;;*);;
+
+hybrid_neural_network<- rrel_key_sc_element: ...
+(*
+<- definition;;
+=> nrel_main_idtf:
+      [Опр. (гибридная нейронная сеть)] (* <- lang_ru;; *);;
+=> nrel_using_constants: 
+	{
+		signal;
+		activation_function;
+		weight
+	};; 
+<= nrel_sc_text_translation: ... 
+		(*
+			->rrel_example:
+			[Гибридная нейронная сеть — это нейронная сеть с четкими сигналами, весами и активационной функцией.](*<- lang_ru;;*);;
+		*);;
+*);;
+
+
+hybrid_neural_network<- rrel_key_sc_element: ... 
+(*
+ => nrel_main_idtf:
+[Утв. 1 об гибридной нейронной сети] (* <- lang_ru;; *);;
+ <= nrel_sc_text_translation: ...
+	 (*
+    	  -> rrel_example:
+		[Входы, выходы и веса гибридной нейронной сети — веществен­ные числа, принадлежащие отрезку [0, 1].](*<-lang_ru;;*);;
+	*);;
+=> nrel_using_constants: 
+{
+weight;
+input;
+output;
+number
+};;
+*);;
+
+
+hybrid_neural_network<-rrel_explored_concept: section_subject_domain_of_heterogeneous_neural_networks;;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

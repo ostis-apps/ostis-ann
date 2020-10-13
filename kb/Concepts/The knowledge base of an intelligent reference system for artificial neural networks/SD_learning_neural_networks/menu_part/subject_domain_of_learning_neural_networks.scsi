@@ -1,0 +1,21 @@
+subject_domain_of_learning_neural_networks
+	=> nrel_main_idtf:
+	[Предметная область обучения искусственых нейронных сетей]
+	(* <- lang_ru;; *);
+	[Subject domain of learning artificial neural networks]
+	(* <- lang_en;; *);
+		
+<- subject_domain;;
+
+
+
+
+
+
+
+
+
+
+
+
+

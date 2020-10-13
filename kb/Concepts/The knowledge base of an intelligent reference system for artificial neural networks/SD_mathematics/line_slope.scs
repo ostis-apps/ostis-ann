@@ -1,0 +1,92 @@
+line_slope<-sc_node_not_relation;;
+
+line_slope=>nrel_main_idtf:
+[коэффицент наклона прямой](*<-lang_ru;;*);
+[line slope](*<-lang_en;;*);;
+line_slope=>nrel_idtf:
+[угловой коэффицент](*<-lang_ru;;*);
+[slope](*<-ang_en;;*);
+[grade](*<-ang_en;;*);;
+
+
+nrel_inclusion->(math_concept=>line_slope);;
+
+math_concept<- rrel_key_sc_element: ...
+(*
+<- definition;;
+=> nrel_main_idtf:
+      [Опр. (коэфицент наклона прямой)] (* <- lang_ru;; *);;
+=> nrel_using_constants: 
+	{
+		tanget;
+		angle;
+		straight;
+		abscissa_axis;
+		nrel_equal_numbers;
+		coefficient
+	};; 
+<= nrel_sc_text_translation: ... 
+		(*
+			->rrel_example:
+			[Коэффицент наклона прямой - это <b><sc_element sys_idtf="coefficient">коэффицент</b> численно равный <b><sc_element sys_idtf="tanget">тангенсу</b> <b><sc_element sys_idtf="angle">угла</b> между положительным направлением оси абсцисс и данной <b><sc_element sys_idtf="straight">прямой</b>.](*<- lang_ru;;=>nrel_format: format_html;;*);;
+		*);;
+*);;
+
+
+line_slope<- rrel_key_sc_element: ... 
+(*
+ => nrel_main_idtf:
+[Утв. 1 о коэффицент наклона прямой] (* <- lang_ru;; *);;
+ <= nrel_sc_text_translation: ...
+	 (*
+    	  -> rrel_example:
+		[Если <b><sc_element sys_idtf="straight">прямая</b> наклонена <b><sc_element sys_idtf="nrel_left">влево</b> то коэффицент наклона будет иметь <b><sc_element sys_idtf="negative_value">отрицательное значение</b>.](*<-lang_ru;;=>nrel_format: format_html;;*);;
+	*);;
+=> nrel_using_constants: 
+{
+straight;
+negative_value;
+incline;
+nrel_left
+};;
+*);;
+
+line_slope-> rrel_example:
+[*
+straight->x;;
+incline->a;;
+x<=nrel_left:a;;
+line_slope->k;;
+negative->k;;
+*];;
+
+line_slope<-rrel_explored_concept: section_subject_domain_mathematics;;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,51 @@
+concept_optimization_problem
+	<- sc_node_not_relation;
+	=> nrel_main_idtf: [задача оптимизации] (* <- lang_ru;; *);
+	=> nrel_main_idtf: [optimization problem] (* <- lang_en;; *);
+
+<-rrel_key_sc_element: ...
+	(*
+		<- definition;;
+		=> nrel_main_idtf: [Опр.(задача оптимизации)] (* <- lang_ru;; *);;
+		<= nrel_using_constants: ...
+			(*
+				-> nrel_function_maximization;;
+				-> nrel_function_minimization;;
+				-> concept_vector_space (* => nrel_main_idtf: [векторное пространство] (* <- lang_en;; *);; *);;
+			*);;
+
+		<= nrel_sc_text_translation: ...
+			(*
+				-> [Задачей оптимизации называется задача нахождения минимума или максимума целевой функции в некоторой области конечномерного векторного пространства, ограниченной набором линейных и/или нелинейных равенств и/или неравенств] (* <- lang_ru;; *);;
+			*);;
+	*);
+
+<-rrel_key_sc_element: ...
+	(*
+		<-affirmation;;
+
+		=> nrel_main_idtf: [Утв.(задача оптимизации)] (* <- lang_ru;; *);;
+
+		<= nrel_sc_text_translation: ...
+			(*
+				-> [Если оптимизация связана с расчётом оптимальных значений параметров при заданной структуре объекта, то она называется параметрической оптимизацией] (* <- lang_ru;; *);;
+			*);;
+	*);
+
+<- rrel_key_sc_element: ...
+	(*
+		<-affirmation;;
+
+		=> nrel_main_idtf: [Утв.(задача оптимизации)] (* <- lang_ru;; *);;
+
+		<= nrel_sc_text_translation: ...
+			(*
+				-> [Задача выбора оптимальной структуры является структурной оптимизацией] (* <- lang_ru;; *);;
+			*);;
+	*);
+<=nrel_inclusion:concept_conceptually_pragmatic_tasks;
+<-rrel_explored_concept: section_subject_domain_of_conceptually_pragmatic_tasks;;
+
+
+
+

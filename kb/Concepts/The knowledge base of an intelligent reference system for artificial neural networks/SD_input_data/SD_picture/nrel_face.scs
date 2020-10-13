@@ -1,0 +1,61 @@
+sc_node_norole_relation->nrel_input_face;;
+
+nrel_input_face=> nrel_main_idtf: [входное изображение лица*](* <- lang_ru;; *);;
+nrel_input_face=> nrel_main_idtf: [input face](* <- lang_en;; *);;
+definition ->...
+(*
+->rrel_key_sc_element: nrel_input_face;;
+<= nrel_sc_text_translation: ...(*->rrel_example:[Изображение лица  -<b><sc_element sys_idtf="input_data">входные данные</b>,которые принимает нейронная сеть для обучения или преобразования.](*<-lang_ru;;=> nrel_format: format_html;;*);;*);;
+=> nrel_main_idtf: [Определение (входное изображение лица*)](*<- lang_ru;;=> nrel_format: format_html;;*);;
+=> nrel_using_constants:
+{ 
+input_data;
+neural_network;
+nrel_learning
+};;
+*);; 
+
+
+statement ->...
+(*
+->rrel_key_sc_element: nrel_input_face;;
+<= nrel_sc_text_translation: ...(*->rrel_example:[Нейронные сети могут обрабатывать изображения так что, <b><sc_element sys_idtf="output_face">выходные изображения   лиц </b>  невозможно отличить от естественных  изображений.](*<-lang_ru;;=> nrel_format: format_html;;*);;*);;
+=> nrel_main_idtf: [Утверждение(входное изображение лица*)](*<- lang_ru;;=> nrel_format: format_html;;*);;
+=> nrel_using_constants:
+{
+output_face;
+neural_network
+};;	
+*);;
+
+oriented_relation -> nrel_input_face;;
+antireflexive_relation -> nrel_input_face;; 
+antitransitive_relation -> nrel_input_face;;
+antisymmetric_relation -> nrel_input_face;;
+
+
+nrel_input_face => nrel_first_domain:neural_network;;
+nrel_input_face => nrel_second_domain: input_picture;;
+..union<=nrel_combination:
+{
+neural_network;
+input_picture
+};;
+nrel_input_face => nrel_definitional_domain:..union;; 
+
+arity->arity_2;;
+arity_2=>nrel_measurement:2;;
+arity_2->nrel_input_face;;
+number->2;;
+
+illustration -> ...
+(*
+->rrel_key_sc_element: nrel_input_face;;
+<= nrel_sc_text_translation: ...(*->"file://images/input_face.png";;*);;
+=> nrel_main_idtf: [Рисунок(входное изображение лица*)](*<- lang_ru;;*);;
+*);;
+input_face<-rrel_explored_concept: section_subject_domain_of_input_picture_data;;
+
+
+
+

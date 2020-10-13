@@ -1,0 +1,43 @@
+concept_classification_problem
+	<- sc_node_not_relation;
+	=> nrel_main_idtf: [задача классификации] (* <- lang_ru;; *);
+	=> nrel_main_idtf: [classification problem] (* <- lang_en;; *);;
+
+
+definition -> ...
+	(*
+		-> rrel_key_sc_element: concept_classification_problem;;
+		
+		=> nrel_main_idtf: [Опр.(задача классификации)] (* <- lang_ru;; *);;
+
+		<= nrel_using_constants: ...
+			(*
+				-> set;;
+				-> concept_class (* => nrel_main_idtf: [класс] (* <- lang_en;; *);; *);;
+			*);;
+
+		<= nrel_sc_text_translation: ...
+			(*
+				-> [Задача классификации - это задача соотнесения произвольного объекта (множества объектов) к некоторому классу] (* <- lang_ru;; *);;
+			*);;
+	*);;
+
+
+affirmation -> ...
+	(*
+		-> rrel_key_sc_element: concept_classification_problem;;
+
+		=> nrel_main_idtf: [Утв.(задача классификации, сигнал, изображение, задача расопознавания образа)] (* <- lang_ru;; *);;
+
+		<= nrel_sc_text_translation: ...
+			(*
+				-> [Классификацию сигналов и изображений называют распознаванием образов] (* <- lang_ru;; *);;
+			*);;
+	*);;
+
+nrel_inclusion->(concept_conceptually_pragmatic_tasks=>concept_classification_problem);;
+concept_classification_problem<-rrel_explored_concept: section_subject_domain_of_conceptually_pragmatic_tasks;;
+
+
+
+
