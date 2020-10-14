@@ -11,9 +11,9 @@ config_provider = ConfigManager(app)
 module_data_path = './neuromodules/data/'
 
 
-@app.route('/<module>/<ann_id>/extensions', methods=['GET'])
-def get_supported_extensions(module, ann_id):
-    extensions = config_provider.get_supported_extensions(module, ann_id)
+@app.route('/<ann_id>/extensions', methods=['GET'])
+def get_supported_extensions(ann_id):
+    extensions = config_provider.get_supported_extensions(ann_id)
     return jsonify(extensions)
 
 
@@ -36,6 +36,13 @@ def upload_data(module, ann_id):
     }
 
     return jsonify(message)
+
+
+@app.route('/<ann_id>', methods=['GET'])
+def properties(ann_id):
+    properties_string = config_provider.get_ann_properties(ann_id)
+
+    return jsonify(properties_string)
 
 
 @app.route('/<ann_id>', methods=['POST'])

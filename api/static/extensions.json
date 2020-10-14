@@ -1,5 +1,3 @@
 {
-  "recognition_module": [
-    { "marking_recognition": ["avi"] }
-  ]
+    "marking_recognition": ["avi"]
 }

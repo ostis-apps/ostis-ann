@@ -117,26 +117,6 @@ string post(string route, string body)
     return string(response.str());
 }
 
-uint validateModule(ScMemoryContext* ms_context)
-{
-	bool isModuleNodeValid = ms_context->HelperCheckEdge(Keynodes::concept_module, state.moduleNode, ScType::EdgeAccessConstPosPerm);
-
-	if (!isModuleNodeValid)
-	{
-		return MODULE_NODE_INVALID;
-	}
-
-	state.moduleName = CommonUtils::getIdtfValue(ms_context, state.moduleNode, Keynodes::nrel_unique_name);
-	string properties = get(state.moduleName);
-
-	if (properties.compare("") != 0)
-	{
-		return MODULE_NOT_FOUND;
-	}
-
-	return 0;
-}
-
 uint validateAnn(ScMemoryContext* ms_context)
 {
 	bool isAnnNodeValid = ms_context->HelperCheckEdge(Keynodes::concept_ann, state.annNode, ScType::EdgeAccessConstPosPerm);
@@ -145,9 +125,9 @@ uint validateAnn(ScMemoryContext* ms_context)
 	{
 		return ANN_NODE_INVALID;
 	}
-	
-	state.annName = CommonUtils::getIdtfValue(ms_context, state.annNode, Keynodes::nrel_unique_name);
-	string properties = get(state.moduleName + "/" + state.annName);
+
+	state.annName = ms_context->HelperGetSystemIdtf(state.annNode);
+	string properties = get(state.annName);
 
 	if (properties.compare("") != 0)
 	{
@@ -166,7 +146,7 @@ uint validateFile(ScMemoryContext* ms_context)
 		return FILE_NODE_INVALID;
 	}
 
-	state.fileName = CommonUtils::getIdtfValue(ms_context, state.fileNode, Keynodes::nrel_unique_name);
+	state.fileName = ms_context->HelperGetSystemIdtf(state.fileNode);
 	string extension = state.fileName.substr(state.fileName.find('.') + 1);
 	string extensions = get(state.annName + "/extensions");
 	
@@ -180,7 +160,7 @@ uint validateFile(ScMemoryContext* ms_context)
 
 string runAnn(ScMemoryContext* ms_context)
 {
-	string response = post(state.moduleName + "/" + state.annName, state.fileName);
+	string response = post(state.annName, state.fileName);
 
 	return response;
 }
@@ -194,33 +174,11 @@ SC_AGENT_IMPLEMENTATION(RunAnnAgent)
 
 	ScAddr questionNode = ms_context->GetEdgeTarget(edgeAddr);
 	state.annNode = IteratorUtils::getFirstByOutRelation(ms_context.get(), questionNode, Keynodes::rrel_1);
-	state.moduleNode = IteratorUtils::getFirstByInRelation(ms_context.get(), state.annNode, Keynodes::nrel_module);
 	state.fileNode = IteratorUtils::getFirstByOutRelation(ms_context.get(), questionNode, Keynodes::rrel_2);
 
-	if (!(state.annNode.IsValid() && state.fileNode.IsValid() && state.moduleNode.IsValid()))
+	if (!(state.annNode.IsValid() && state.fileNode.IsValid()))
 	{
 		std::cout << "Params missing/invalid" << endl;
-		return SC_RESULT_ERROR_INVALID_PARAMS;
-	}
-
-	uint moduleValidationCode = validateModule(ms_context.get());
-
-	if (moduleValidationCode != 0)
-	{
-		switch (moduleValidationCode)
-		{
-			case MODULE_NODE_INVALID:
-			{
-				std::cout << "Module node don't belong to proper class" << endl;
-				break;
-			}
-			case MODULE_NOT_FOUND:
-			{
-				std::cout << "Module is not supported" << endl;
-				break;
-			}
-		}
-
 		return SC_RESULT_ERROR_INVALID_PARAMS;
 	}
 
