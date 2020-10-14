@@ -1,6 +1,6 @@
 import numpy as np
 
-from neuromodules.recognition_module.marking_recognition.utils.box_utils import SSDSpec, SSDBoxSizes, generate_ssd_priors
+from neuromodules.marking_recognition.utils.box_utils import SSDSpec, SSDBoxSizes, generate_ssd_priors
 
 
 image_size = 300

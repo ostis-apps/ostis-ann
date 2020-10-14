@@ -34,11 +34,21 @@ public:
   SC_PROPERTY(Keynode("concept_ann"), ForceCreate)
   static ScAddr concept_ann;
 
+  SC_PROPERTY(Keynode("concept_module"), ForceCreate)
+  static ScAddr concept_module;
+
   SC_PROPERTY(Keynode("concept_file"), ForceCreate)
   static ScAddr concept_file;
 
   SC_PROPERTY(Keynode("nrel_unique_name"), ForceCreate)
   static ScAddr nrel_unique_name;
+
+  SC_PROPERTY(Keynode("nrel_processing_result"), ForceCreate)
+  static ScAddr nrel_processing_result;
+
+  SC_PROPERTY(Keynode("nrel_module"), ForceCreate)
+  static ScAddr nrel_module;
+
 
   SC_PROPERTY(Keynode("rrel_1"), ForceCreate)
   static ScAddr rrel_1;

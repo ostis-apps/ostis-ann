@@ -7,9 +7,10 @@ import math
 import torch
 from torchvision import transforms
 
-from neuromodules.recognition_module.marking_recognition.utils.mobilenetv1_ssd import create_mobilenetv1_ssd, create_mobilenetv1_ssd_predictor
-from neuromodules.recognition_module.marking_recognition.recognition.marking_model import MarkingModel
-from neuromodules.recognition_module.marking_recognition.recognition.position_classifier import FastClassifier
+from neuromodules.marking_recognition.recognition.marking_model import MarkingModel
+from neuromodules.marking_recognition.recognition.position_classifier import FastClassifier
+from neuromodules.marking_recognition.utils.mobilenetv1_ssd import create_mobilenetv1_ssd, create_mobilenetv1_ssd_predictor
+
 
 class Recognizer:
     classnames = ['BACKGROUND', 'cap', 'label']
@@ -21,18 +22,18 @@ class Recognizer:
         self.device = torch.device("cpu")
         self.model = FastClassifier()
         self.model.load_state_dict(
-            torch.load('./neuromodules/recognition_module/marking_recognition/models/position_classifier_2_t.pth',
+            torch.load('./neuromodules/marking_recognition/models/position_classifier_2_t.pth',
                        map_location='cpu'))
         # self.model = torch.load('./models/position_classifier_2.pth', map_location='cpu')
         self.model.eval()
 
         caps_detector = create_mobilenetv1_ssd(len(self.classnames), is_test=True)
-        caps_detector.load('./neuromodules/recognition_module/marking_recognition/models/caps_detector.pth')
+        caps_detector.load('./neuromodules/marking_recognition/models/caps_detector.pth')
         # caps_detector.load('./models/caps_detector.pth')
         self.caps_predictor = create_mobilenetv1_ssd_predictor(caps_detector, candidate_size=200)
 
         num_detector = create_mobilenetv1_ssd(len(self.numbers), is_test=True)
-        num_detector.load('./neuromodules/recognition_module/marking_recognition/models/numbers_detector_5.pth')
+        num_detector.load('./neuromodules/marking_recognition/models/numbers_detector_5.pth')
         # num_detector.load('./models/numbers_detector_5.pth')
         self.num_predictor = create_mobilenetv1_ssd_predictor(num_detector, candidate_size=200)
 

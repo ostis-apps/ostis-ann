@@ -4,7 +4,7 @@ import numpy as np
 from typing import List, Tuple
 import torch.nn.functional as F
 
-from neuromodules.recognition_module.marking_recognition.utils import box_utils
+from neuromodules.marking_recognition.utils import box_utils
 from collections import namedtuple
 GraphPath = namedtuple("GraphPath", ['s0', 'name', 's1'])  #
 

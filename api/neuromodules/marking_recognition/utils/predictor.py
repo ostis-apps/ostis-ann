@@ -2,7 +2,7 @@ import torch
 
 from . import box_utils
 from .data_preprocessing import PredictionTransform
-from neuromodules.recognition_module.marking_recognition.utils.misc import Timer
+from neuromodules.marking_recognition.utils.misc import Timer
 
 
 class Predictor:

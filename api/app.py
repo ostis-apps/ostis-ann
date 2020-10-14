@@ -38,14 +38,13 @@ def upload_data(module, ann_id):
     return jsonify(message)
 
 
-@app.route('/<module>', methods=['POST'])
-def process(module):
-    ann_id = request.json['ann_id']
-    path = config_provider.get_upload_data_path(module, ann_id)
+@app.route('/<ann_id>', methods=['POST'])
+def process(ann_id):
+    path = config_provider.get_upload_data_path(ann_id)
     filename = os.path.join(path, request.json['filename'])
 
-    module_realization = importlib.import_module(f'neuromodules.{module}.{ann_id}.ann_app')
-    ann_app = module_realization.AnnApp()
+    ann_realization = importlib.import_module(f'neuromodules.{ann_id}.ann_app')
+    ann_app = ann_realization.AnnApp()
     processed_data = ann_app.process(filename)
 
     return jsonify(processed_data)

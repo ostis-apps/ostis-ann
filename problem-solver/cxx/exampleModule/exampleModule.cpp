@@ -26,7 +26,7 @@ sc_result ExampleModule::InitializeImpl()
 
 sc_result ExampleModule::ShutdownImpl()
 {
-  SC_AGENT_REGISTER(SubdividingSearchAgent)
+  SC_AGENT_UNREGISTER(SubdividingSearchAgent)
   SC_AGENT_UNREGISTER(RunAnnAgent)
 
   return SC_RESULT_OK;

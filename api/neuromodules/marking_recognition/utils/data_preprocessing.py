@@ -1,4 +1,4 @@
-from neuromodules.recognition_module.marking_recognition.utils.transforms import *
+from neuromodules.marking_recognition.utils.transforms import *
 
 
 class TrainAugmentation:
