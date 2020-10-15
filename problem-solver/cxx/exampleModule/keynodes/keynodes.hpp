@@ -27,7 +27,6 @@ public:
   SC_PROPERTY(Keynode("nrel_subdividing"), ForceCreate)
   static ScAddr nrel_subdividing;
 
-
   SC_PROPERTY(Keynode("question_run_ann"), ForceCreate)
   static ScAddr question_run_ann;
 
@@ -39,7 +38,6 @@ public:
   
   SC_PROPERTY(Keynode("nrel_processing_result"), ForceCreate)
   static ScAddr nrel_processing_result;
-
 
   SC_PROPERTY(Keynode("rrel_1"), ForceCreate)
   static ScAddr rrel_1;

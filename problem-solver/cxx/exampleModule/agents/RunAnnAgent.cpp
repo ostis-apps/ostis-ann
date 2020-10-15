@@ -183,7 +183,6 @@ SC_AGENT_IMPLEMENTATION(RunAnnAgent)
 	}
 
 	uint annValidationCode = validateAnn(ms_context.get());
-	uint fileValidationCode = validateFile(ms_context.get());
 
 	if (annValidationCode != 0)
 	{
@@ -203,6 +202,8 @@ SC_AGENT_IMPLEMENTATION(RunAnnAgent)
 
 		return SC_RESULT_ERROR_INVALID_PARAMS;
 	}
+	
+	uint fileValidationCode = validateFile(ms_context.get());
 
 	if (fileValidationCode != 0)
 	{

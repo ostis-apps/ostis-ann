@@ -1,0 +1,13 @@
+marking_recognition
+	=> nrel_main_idtf: [marking_recognition] (* <-lang_en;; *);
+	=> nrel_idtf: [marking_recognition] (* <-lang_en;; *);
+	<- concept_ann;;
+
+example_file
+	=> nrel_main_idtf: [1280.avi] (* <-lang_en;; *);
+	=> nrel_idtf: [1280.avi] (* <-lang_en;; *);
+	<- concept_file;;
+
+question_ann_agent
+	<- sc_node_not_relation;
+	=> nrel_main_idtf: [Question of starting neural network] (* <-lang_en;; *);;

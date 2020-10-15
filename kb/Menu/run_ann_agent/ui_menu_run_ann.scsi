@@ -8,12 +8,12 @@ ui_menu_run_ann
 	[Запуск обработки файла нейронной сетью]
 	(* <- lang_ru;; *);;
 
-ui_menu_run_ann 
-=> nrel_main_idtf: 
-	[Starting recognition file by neuron network]
+ui_menu_run_ann
+=> nrel_main_idtf:
+	[Start processing file by neuron network]
 	(* <- lang_en;; *);
-=> nrel_idtf: 
-	[starting recognition file by neuron network]
+=> nrel_idtf:
+	[Start processing file by neuron network]
 	(* <- lang_en;; *);;
 
 ui_menu_run_ann => ui_nrel_command_template:

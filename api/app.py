@@ -8,7 +8,6 @@ from utils.config_utils import ConfigManager
 app = Flask(__name__)
 app.config.from_pyfile('api_config.cfg')
 config_provider = ConfigManager(app)
-module_data_path = './neuromodules/data/'
 
 
 @app.route('/<ann_id>/extensions', methods=['GET'])
@@ -17,8 +16,8 @@ def get_supported_extensions(ann_id):
     return jsonify(extensions)
 
 
-@app.route('/<module>/<ann_id>/data', methods=['POST'])
-def upload_data(module, ann_id):
+@app.route('/<ann_id>/data', methods=['POST'])
+def upload_data(ann_id):
     if 'file' not in request.files:
         message = {
             'status': requests.codes.bad_request,
@@ -28,7 +27,7 @@ def upload_data(module, ann_id):
         return response
 
     file = request.files['file']
-    path = config_provider.get_upload_data_path(module, ann_id)
+    path = config_provider.get_upload_data_path(ann_id)
     file.save(os.path.join(path, file.filename))
 
     message = {
@@ -41,7 +40,6 @@ def upload_data(module, ann_id):
 @app.route('/<ann_id>', methods=['GET'])
 def properties(ann_id):
     properties_string = config_provider.get_ann_properties(ann_id)
-
     return jsonify(properties_string)
 
 
