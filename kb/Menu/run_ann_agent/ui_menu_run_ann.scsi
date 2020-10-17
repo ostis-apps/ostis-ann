@@ -18,12 +18,12 @@ ui_menu_run_ann
 
 ui_menu_run_ann => ui_nrel_command_template:
 	[*
-		question_ann_agent _-> ._question_ann_agent_instance
+		question_run_ann _-> ._question_run_ann_instance
 			(*
 				_-> rrel_1:: ui_arg_1;;
 				_-> rrel_2:: ui_arg_2;;				
 			*);;
-		._question_ann_agent_instance _<- question;;
+		._question_run_ann_instance _<- question;;
 	*];;
 
 ui_menu_run_ann => ui_nrel_command_lang_template: [Запуск нейронной сети $ui_arg_1] (* <- lang_ru;; *);;

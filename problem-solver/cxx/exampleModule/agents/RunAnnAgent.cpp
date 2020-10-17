@@ -35,11 +35,10 @@ namespace exampleModule
 
 struct ImplementationState {
 	string annName;
-	string moduleName;
 	string fileName;
+	string fileExtension;
 
 	ScAddr annNode;
-	ScAddr moduleNode;
 	ScAddr fileNode;
 };
 
@@ -126,7 +125,11 @@ uint validateAnn(ScMemoryContext* ms_context)
 		return ANN_NODE_INVALID;
 	}
 
-	state.annName = ms_context->HelperGetSystemIdtf(state.annNode);
+	ScAddr annNameLink = IteratorUtils::getFirstByOutRelation(ms_context, state.annNode, Keynodes::nrel_api_idtf);
+	state.annName =  CommonUtils::readString(ms_context, annNameLink);
+
+	std::cout << state.annName << endl;
+	std::cout << "ANN ELEMNT TYPE " << ms_context->GetElementType(annNameLink) << endl;
 	string properties = get(state.annName);
 
 	if (properties.compare("") != 0)
@@ -146,11 +149,16 @@ uint validateFile(ScMemoryContext* ms_context)
 		return FILE_NODE_INVALID;
 	}
 
+	ScAddr fileExtensionLink = IteratorUtils::getFirstByOutRelation(ms_context, state.fileNode, Keynodes::nrel_extension);
 	state.fileName = ms_context->HelperGetSystemIdtf(state.fileNode);
-	string extension = state.fileName.substr(state.fileName.find('.') + 1);
+	state.fileExtension = CommonUtils::readString(ms_context, fileExtensionLink);
+	string inNameExtension = state.fileName.substr(state.fileName.find('.') + 1);
 	string extensions = get(state.annName + "/extensions");
+
+	std::cout<< "FILE EXT ELEMNT TYPE " << ms_context->GetElementType(fileExtensionLink) << endl;
 	
-	if (extensions.find("\"" + extension + "\"") == string::npos)
+	if (inNameExtension.compare(state.fileExtension) != 0 ||
+		extensions.find("\"" + state.fileExtension + "\"") == string::npos)
 	{
 		return FILE_NOT_SUPPORTED;
 	}
@@ -190,7 +198,7 @@ SC_AGENT_IMPLEMENTATION(RunAnnAgent)
 		{
 			case ANN_NODE_INVALID:
 			{
-				std::cout << "ANN node don't belong to proper class" << endl;
+				std::cout << "ANN node don't belong to proper class/have invalid properties" << endl;
 				break;
 			}
 			case ANN_NOT_FOUND:
@@ -211,7 +219,7 @@ SC_AGENT_IMPLEMENTATION(RunAnnAgent)
 		{
 			case FILE_NODE_INVALID:
 			{
-				std::cout << "File node don't belong to proper class" << endl;
+				std::cout << "File node don't belong to proper class/have invalid properties" << endl;
 				break;
 			}
 			case ANN_NOT_FOUND:
