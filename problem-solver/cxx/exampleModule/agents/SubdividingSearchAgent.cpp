@@ -5,7 +5,10 @@
 */
 
 #include <sc-memory/cpp/sc_stream.hpp>
+<<<<<<< HEAD
 #include <sc-kpm/sc-agents-common/utils/GenerationUtils.hpp>
+=======
+>>>>>>> agent ann output intropretator finish
 #include <sc-kpm/sc-agents-common/utils/IteratorUtils.hpp>
 #include <sc-kpm/sc-agents-common/utils/AgentUtils.hpp>
 
@@ -39,7 +42,11 @@ SC_AGENT_IMPLEMENTATION(SubdividingSearchAgent)
     ms_context->CreateEdge(ScType::EdgeAccessConstPosPerm, answer, iterator5->Get(1));
     ms_context->CreateEdge(ScType::EdgeAccessConstPosPerm, answer, sheaf);
     ms_context->CreateEdge(ScType::EdgeAccessConstPosPerm, answer, iterator5->Get(3));
+<<<<<<< HEAD
     GenerationUtils::addSetToOutline(ms_context.get(), sheaf, answer);
+=======
+    IteratorUtils::addSetToOutline(ms_context.get(), sheaf, answer);
+>>>>>>> agent ann output intropretator finish
   }
 
   AgentUtils::finishAgentWork(ms_context.get(), questionNode, answer);

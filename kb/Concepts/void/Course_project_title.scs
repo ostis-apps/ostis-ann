@@ -1,4 +1,7 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> agent ann output intropretator finish
 statistics<-sc_node_not_relation;;
 Probability_theory<-sc_node_not_relation;;
 theorem<-sc_node_not_relation;;
@@ -128,6 +131,7 @@ sc_node_not_relation->intermediate_result;;
 sc_node_not_relation->computational_process;;
 sc_node_not_relation->systolic_processor_x;;
 sc_node_not_relation->processor;;
+<<<<<<< HEAD
 =======
 statistics<-sc_node_not_relation;;
 Probability_theory<-sc_node_not_relation;;
@@ -222,3 +226,5 @@ random_event<-sc_node_not_relation;;
 max_value<-sc_node_not_relation;;
 min_value<-sc_node_not_relation;;
 >>>>>>> Concepts 2019
+=======
+>>>>>>> agent ann output intropretator finish
