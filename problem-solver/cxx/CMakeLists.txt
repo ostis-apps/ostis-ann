@@ -10,4 +10,4 @@ foreach( OUTPUTCONFIG ${CMAKE_CONFIGURATION_TYPES} )
     set( CMAKE_LIBRARY_OUTPUT_DIRECTORY_${OUTPUTCONFIG} "${SC_BIN_PATH}/extensions")
 endforeach( OUTPUTCONFIG CMAKE_CONFIGURATION_TYPES )
 
-add_subdirectory(exampleModule)
+add_subdirectory(nnOutputItropretatorModule)
