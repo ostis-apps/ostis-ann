@@ -1,0 +1,21 @@
+example_ann
+	=> nrel_main_idtf: [Marking recognition ANN] (* <-lang_en;; *);
+	=> nrel_idtf: [Marking recognition ANN] (* <-lang_en;; *);
+	<= nrel_api_idtf: [marking_recognition];
+	<- concept_ann;;
+	
+example_file
+	=> nrel_main_idtf: [1280.avi] (* <-lang_en;; *);
+	=> nrel_idtf: [1280.avi] (* <-lang_en;; *);
+	<= nrel_extension: [avi];
+	<- concept_file;;
+
+question_run_ann
+	<- sc_node_not_relation;
+	=> nrel_main_idtf: [Question of starting neural network] (* <-lang_en;; *);;
+
+concept_ann <- sc_node_not_relation;;
+concept_file <- sc_node_not_relation;;
+nrel_api_idtf <- sc_node_norole_relation;;
+nrel_extension <- sc_node_norole_relation;;
+nrel_processing_result <- sc_node_norole_relation;;

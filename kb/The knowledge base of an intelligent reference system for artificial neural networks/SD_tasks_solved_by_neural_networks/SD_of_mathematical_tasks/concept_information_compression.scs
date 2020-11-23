@@ -30,7 +30,7 @@ method
 
 ->rrel_example:some_information;
 
-=>nrel_inclusion:method;;
+=>nrel_inclusion:method;
 
 <=nrel_inclusion:concept_mathematical_tasks;
 <-rrel_explored_concept: section_subject_domain_of_mathematical_tasks;;

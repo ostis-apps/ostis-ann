@@ -1,0 +1,11 @@
+lib_component_ui_menu_run_ann
+=> nrel_main_idtf:
+	[Компонент библиотеки. Команда пользовательского интерфейса запуска нейронной сети]
+	(* <- lang_ru;; *);
+	[Library component. User interface command of starting neural network]
+	(* <- lang_en;; *);
+
+<- library_of_platform_independent_reusable_components;
+<- library_of_atomic_reusable_components;;
+
+lib_component_ui_menu_run_ann = [*^"file://ui_menu_run_ann.scsi"*];;

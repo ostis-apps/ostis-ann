@@ -1,0 +1,30 @@
+ui_menu_neural_network_run <- ui_user_command_class_atom; ui_user_command_class_view_kb; ui_one_argument_command_class;;
+
+ui_menu_neural_network_run
+=> nrel_main_idtf: 
+	[Запустить нейронную сеть]
+	(* <- lang_ru;; *);
+=> nrel_idtf: 
+	[Запуск нейронной сети]
+	(* <- lang_ru;; *);;
+
+ui_menu_neural_network_run
+=> nrel_main_idtf: 
+	[What is subdividing of the specified entity?]
+	(* <- lang_en;; *);
+=> nrel_idtf: 
+	[Request searches for subdividing of the specified entity]
+	(* <- lang_en;; *);;
+
+ui_menu_neural_network_run => ui_nrel_command_template:
+	[*
+		question_run_ann_agent _-> ._question_run_ann_agent
+			(*
+				_-> rrel_1:: ui_arg_1;;
+				 -> rrel_2:: ui_arg_2;;
+			*);;
+		._question_run_ann_agent _<- question;;
+	*];;
+
+ui_menu_neural_network_run => ui_nrel_command_lang_template: [Запуск нейронной сети $ui_arg_1] (* <- lang_ru;; *);;
+ui_menu_neural_network_run => ui_nrel_command_lang_template: [Starting of neural network $ui_arg_1] (* <- lang_en;; *);;

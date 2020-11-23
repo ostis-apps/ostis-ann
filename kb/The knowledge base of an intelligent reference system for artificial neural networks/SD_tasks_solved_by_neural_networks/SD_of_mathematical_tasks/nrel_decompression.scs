@@ -27,7 +27,7 @@ nrel_decompression
 
 <-rrel_key_sc_element:...
 	(*
-        	<-statement;
+        	<-statement;;
 		=> nrel_main_idtf: [Утв.(распознавание образов, задача, решение)](* <- lang_ru;; *);;
 		<= nrel_sc_text_translation:...
 		(*
