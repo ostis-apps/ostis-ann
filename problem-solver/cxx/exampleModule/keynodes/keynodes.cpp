@@ -19,7 +19,8 @@ ScAddr Keynodes::concept_ann;
 ScAddr Keynodes::concept_file;
 ScAddr Keynodes::nrel_processing_result;
 ScAddr Keynodes::nrel_api_idtf;
-ScAddr Keynodes::nrel_extension;
+ScAddr Keynodes::nrel_file_extension;
+ScAddr Keynodes::nrel_file_name;
 ScAddr Keynodes::rrel_1;
 ScAddr Keynodes::rrel_2;
 

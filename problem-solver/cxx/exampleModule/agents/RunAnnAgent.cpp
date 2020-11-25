@@ -45,11 +45,8 @@ struct ImplementationState {
 ImplementationState state;
 const uint ANN_NODE_INVALID = 1;
 const uint ANN_NOT_FOUND = 2;
-const uint MODULE_NODE_INVALID = 3;
-const uint MODULE_NOT_FOUND = 4;
 const uint FILE_NODE_INVALID = 5;
 const uint FILE_NOT_SUPPORTED = 6;
-const uint PROCESSING_ERROR = 7;
 
 ScAddr createAnswer(ScMemoryContext* ms_context, string result)
 {
@@ -59,6 +56,7 @@ ScAddr createAnswer(ScMemoryContext* ms_context, string result)
 	if (answerLink.IsValid())
 	{
         ScStreamPtr stream;
+        std::cout << result << endl;
         stream.reset(new ScStream((sc_char*)&result, sizeof(result), SC_STREAM_FLAG_READ | SC_STREAM_FLAG_SEEK));
         ms_context->SetLinkContent(answerLink, *stream);
 
@@ -80,12 +78,18 @@ string get(string route)
 	using namespace curlpp::Options;
 	using namespace std::placeholders;
 
-	curlpp::Cleanup cleaner;
 	curlpp::Easy getRequest;
+    string url = "http://127.0.0.1:5000/" + route;
 
-	getRequest.setOpt(Verbose(true));
 	getRequest.setOpt(Url("http://127.0.0.1:5000/" + route));
-	getRequest.perform();
+
+	try {
+		getRequest.perform();		
+	}
+    catch (curlpp::LibcurlRuntimeError error) {
+    	std::cerr << "Error performing GET " << url << " request! what(): " << error.what() << endl;
+    	return "";
+    }
 
     ostringstream response;
     response << getRequest;
@@ -98,17 +102,24 @@ string post(string route, string body)
 	using namespace curlpp::Options;
 	using namespace std::placeholders;
 
-	curlpp::Easy postRequest;
-
     std::list<std::string> header;
     header.push_back("Content-Type: application/json");
 
-	postRequest.setOpt(Verbose(true));
-	postRequest.setOpt(Url("http://127.0.0.1:5000/" + route));
+	curlpp::Easy postRequest;
+    string url = "http://127.0.0.1:5000/" + route;
+
+	postRequest.setOpt(Url(url));
     postRequest.setOpt(HttpHeader(header));
     postRequest.setOpt(PostFields(body));
     postRequest.setOpt(PostFieldSize(body.size()));
-    postRequest.perform();
+
+    try {
+    	postRequest.perform();
+    }
+    catch (curlpp::LibcurlRuntimeError error) {
+    	std::cerr << "Error performing POST " << url << " request! what(): " << error.what() << endl;
+    	return "";
+    }
 
     std::ostringstream response;
     response << postRequest;
@@ -127,12 +138,9 @@ uint validateAnn(ScMemoryContext* ms_context)
 
 	ScAddr annNameLink = IteratorUtils::getFirstByOutRelation(ms_context, state.annNode, Keynodes::nrel_api_idtf);
 	state.annName =  CommonUtils::readString(ms_context, annNameLink);
-
-	std::cout << state.annName << endl;
-	std::cout << "ANN ELEMNT TYPE " << ms_context->GetElementType(annNameLink) << endl;
 	string properties = get(state.annName);
 
-	if (properties.compare("") != 0)
+	if (properties.compare("") == 0)
 	{
 		return ANN_NOT_FOUND;
 	}
@@ -149,16 +157,13 @@ uint validateFile(ScMemoryContext* ms_context)
 		return FILE_NODE_INVALID;
 	}
 
-	ScAddr fileExtensionLink = IteratorUtils::getFirstByOutRelation(ms_context, state.fileNode, Keynodes::nrel_extension);
-	state.fileName = ms_context->HelperGetSystemIdtf(state.fileNode);
+	ScAddr fileNameLink = IteratorUtils::getFirstByOutRelation(ms_context, state.fileNode, Keynodes::nrel_file_name);
+	ScAddr fileExtensionLink = IteratorUtils::getFirstByOutRelation(ms_context, state.fileNode, Keynodes::nrel_file_extension);
+	state.fileName = CommonUtils::readString(ms_context, fileNameLink);
 	state.fileExtension = CommonUtils::readString(ms_context, fileExtensionLink);
-	string inNameExtension = state.fileName.substr(state.fileName.find('.') + 1);
 	string extensions = get(state.annName + "/extensions");
-
-	std::cout<< "FILE EXT ELEMNT TYPE " << ms_context->GetElementType(fileExtensionLink) << endl;
 	
-	if (inNameExtension.compare(state.fileExtension) != 0 ||
-		extensions.find("\"" + state.fileExtension + "\"") == string::npos)
+	if (extensions.find("\"" + state.fileExtension + "\"") == string::npos)
 	{
 		return FILE_NOT_SUPPORTED;
 	}
@@ -166,9 +171,10 @@ uint validateFile(ScMemoryContext* ms_context)
 	return 0;
 }
 
-string runAnn(ScMemoryContext* ms_context)
+string runAnn()
 {
-	string response = post(state.annName, state.fileName);
+	string body = "{ \"filename\": \"" + state.fileName + "." + state.fileExtension + "\" }";
+	string response = post(state.annName, body);
 
 	return response;
 }
@@ -222,7 +228,7 @@ SC_AGENT_IMPLEMENTATION(RunAnnAgent)
 				std::cout << "File node don't belong to proper class/have invalid properties" << endl;
 				break;
 			}
-			case ANN_NOT_FOUND:
+			case FILE_NOT_SUPPORTED:
 			{
 				std::cout << "File extension for ANN given is not supported" << endl;
 				break;
@@ -232,9 +238,7 @@ SC_AGENT_IMPLEMENTATION(RunAnnAgent)
 		return SC_RESULT_ERROR_INVALID_PARAMS;
 	}
 
-	std::cout << "OHOHO!" << endl;
-
-	string processingResponse = runAnn(ms_context.get());
+	string processingResponse = runAnn();
 	ScAddr answerLink = createAnswer(ms_context.get(), processingResponse);
 
 	return answerLink.IsValid() ? SC_RESULT_OK : SC_RESULT_ERROR;

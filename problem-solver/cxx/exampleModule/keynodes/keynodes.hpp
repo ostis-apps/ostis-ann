@@ -42,8 +42,11 @@ public:
   SC_PROPERTY(Keynode("nrel_api_idtf"), ForceCreate)
   static ScAddr nrel_api_idtf;
 
-  SC_PROPERTY(Keynode("nrel_extension"), ForceCreate)
-  static ScAddr nrel_extension;
+  SC_PROPERTY(Keynode("nrel_file_extension"), ForceCreate)
+  static ScAddr nrel_file_extension;
+
+  SC_PROPERTY(Keynode("nrel_file_name"), ForceCreate)
+  static ScAddr nrel_file_name;
 
   SC_PROPERTY(Keynode("rrel_1"), ForceCreate)
   static ScAddr rrel_1;
