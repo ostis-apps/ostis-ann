@@ -1,29 +1,44 @@
 test_product_1
-	=> nrel_main_idtf: [test_product_1.scs] (* <-lang_en;; *);
-	<= nrel_extension: [scs];
+	=> nrel_main_idtf: [N1 Test classifier] (* <-lang_en;; *);
+	=> nrel_main_idtf: [N1 Тестовая классификация] (* <-lang_ru;; *);
+	=> nrel_idtf: [test_product_1.tsv] (* <-lang_en;; *);
+	<= nrel_extension: [tsv];
     <= rrel_file: test_product_1;
+	=> nrel_file_name: [test_product_1];
 	<- concept_file;;
 
 test_product_2
-	=> nrel_main_idtf: [test_product_2.scs] (* <-lang_en;; *);
-	<= nrel_extension: [scs];
+	=> nrel_main_idtf: [N2 Test classifier] (* <-lang_en;; *);
+	=> nrel_main_idtf: [N2 Тестовая классификация] (* <-lang_ru;; *);
+	=> nrel_idtf: [test_product_2.tsv] (* <-lang_en;; *);
+	<= nrel_extension: [tsv];
     <= rrel_file: test_product_2;
+	=> nrel_file_name: [test_product_2];
 	<- concept_file;;
 
 test_product_3
-	=> nrel_main_idtf: [test_product_3.scs] (* <-lang_en;; *);
-	<= nrel_extension: [scs];
+	=> nrel_main_idtf: [N3 Test classifier] (* <-lang_en;; *);
+	=> nrel_main_idtf: [N3 Тестовая классификация] (* <-lang_ru;; *);
+	=> nrel_idtf: [test_product_3.tsv] (* <-lang_en;; *);
+	<= nrel_extension: [tsv];
     <= rrel_file: test_product_3;
+	=> nrel_file_name: [test_product_3];
 	<- concept_file;;
 
 test_product_4
-	=> nrel_main_idtf: [test_product_4.scs] (* <-lang_en;; *);
-	<= nrel_extension: [scs];
+	=> nrel_main_idtf: [N4 Test classifier] (* <-lang_en;; *);
+	=> nrel_main_idtf: [N4 Тестовая классификация] (* <-lang_ru;; *);
+	=> nrel_idtf: [test_product_4.tsv] (* <-lang_en;; *);
+	<= nrel_extension: [tsv];
     <= rrel_file: test_product_4;
+	=> nrel_file_name: [test_product_4];
 	<- concept_file;;
 
 test_product_5
-	=> nrel_main_idtf: [test_product_5.scs] (* <-lang_en;; *);
-	<= nrel_extension: [scs];
+	=> nrel_main_idtf: [N5 Test classifier] (* <-lang_en;; *);
+	=> nrel_main_idtf: [N5 Тестовая классификация] (* <-lang_ru;; *);
+	=> nrel_idtf: [test_product_5.tsv] (* <-lang_en;; *);
+	<= nrel_extension: [tsv];
     <= rrel_file: test_product_5;
+	=> nrel_file_name: [test_product_5];
 	<- concept_file;;

@@ -1,21 +1,52 @@
-example_ann
-	=> nrel_main_idtf: [Marking recognition ANN] (* <-lang_en;; *);
-	=> nrel_idtf: [Marking recognition ANN] (* <-lang_en;; *);
-	<= nrel_api_idtf: [marking_recognition];
+sequence_prediction_ann
+	=> nrel_main_idtf: [Sequence prediction ANN] (* <-lang_en;; *);
+	=> nrel_main_idtf: [Нейронная сеть для предсказания последовательности] (* <-lang_ru;; *);
+	=> nrel_idtf: [Sequence prediction ANN];
+	=> nrel_api_idtf: [sequence_prediction];
 	<- concept_ann;;
 	
-example_file
-	=> nrel_main_idtf: [1280.avi] (* <-lang_en;; *);
-	=> nrel_idtf: [1280.avi] (* <-lang_en;; *);
-	<= nrel_extension: [avi];
+seq_1_txt
+	=> nrel_main_idtf: [N1 Test sequence] (* <-lang_en;; *);
+	=> nrel_main_idtf: [N1 Тестовая последовательность] (* <-lang_ru;; *);
+	=> nrel_idtf: [seq_1.txt];
+	=> nrel_file_extension: [txt];
+	=> nrel_file_name: [seq_1];
 	<- concept_file;;
 
 question_run_ann
 	<- sc_node_not_relation;
-	=> nrel_main_idtf: [Question of starting neural network] (* <-lang_en;; *);;
+	=> nrel_main_idtf: [question of starting neural network file processing] (* <-lang_en;; *);
+	=> nrel_main_idtf: [вопрос о запуске обработки файла нейронной сетью] (* <-lang_ru;; *);;
 
 concept_ann <- sc_node_not_relation;;
-concept_file <- sc_node_not_relation;;
-nrel_api_idtf <- sc_node_norole_relation;;
-nrel_extension <- sc_node_norole_relation;;
 nrel_processing_result <- sc_node_norole_relation;;
+
+concept_file
+	=> nrel_main_idtf: [file] (* <-lang_en;; *);
+	=> nrel_main_idtf: [файл] (* <-lang_ru;; *);
+	=> nrel_idtf: [file];
+	<- sc_node_not_relation;;
+
+nrel_api_idtf
+	=> nrel_main_idtf: [API entity unique identifier] (* <-lang_en;; *);
+	=> nrel_main_idtf: [уникальный идентификатор сущности в API] (* <-lang_ru;; *);
+	=> nrel_idtf: [API entity unique identifier];
+	<- sc_node_norole_relation;;
+
+nrel_file_extension
+	=> nrel_main_idtf: [file extension] (* <-lang_en;; *);
+	=> nrel_main_idtf: [расширение файла] (* <-lang_ru;; *);
+	=> nrel_idtf: [file extension];
+	<- sc_node_norole_relation;;
+
+nrel_file_name
+	=> nrel_main_idtf: [file name] (* <-lang_en;; *);
+	=> nrel_main_idtf: [имя файла] (* <-lang_ru;; *);
+	=> nrel_idtf: [file name];
+	<- sc_node_norole_relation;;
+
+nrel_processing_result
+	=> nrel_main_idtf: [processing result] (* <-lang_en;; *);
+	=> nrel_main_idtf: [результат обработки] (* <-lang_ru;; *);
+	=> nrel_idtf: [processing result];
+	<- sc_node_norole_relation;;

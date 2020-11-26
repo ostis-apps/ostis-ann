@@ -1,4 +1,4 @@
 {
-    "marking_recognition": ["avi"],
+    "sequence_prediction": ["txt"],
     "product_quality_classifier": ["tsv, scs"]
 }
