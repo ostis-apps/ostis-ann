@@ -1,3 +1,4 @@
 {
-    "marking_recognition": ["avi"]
+    "marking_recognition": ["avi"],
+    "product_quality_classifier": ["tsv, scs"]
 }

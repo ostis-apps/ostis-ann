@@ -1,3 +1,4 @@
 {
-    "marking_recognition": "Awesome ANN for bottle marking recognition"
+    "marking_recognition": "Awesome ANN for bottle marking recognition",
+    "product_quality_classifier": "Awesome ANN for defining quality of a product"
 }
