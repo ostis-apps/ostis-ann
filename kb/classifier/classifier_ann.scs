@@ -1,0 +1,6 @@
+product_quality_classifier
+	=> nrel_main_idtf: [Product quality ANN] (* <-lang_en;; *);
+    => nrel_main_idtf: [ИНС для решения задачи классификации качества продукта] (* <-lang_ru;; *);
+	<= nrel_api_idtf: [product_quality_classifier];
+	<- concept_ann;;
+	
