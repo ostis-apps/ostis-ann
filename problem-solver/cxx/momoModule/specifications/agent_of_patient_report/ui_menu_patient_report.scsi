@@ -1,0 +1,23 @@
+ui_menu_patient_report <- ui_user_command_class_atom; ui_user_command_class_view_kb; ui_one_argument_command_class;;
+
+ui_menu_patient_report 
+=> nrel_main_idtf: 
+	[создание отчета пациента]
+	(* <- lang_ru;; *);;
+
+ui_menu_patient_report 
+=> nrel_main_idtf: 
+	[patient report]
+	(* <- lang_en;; *);;
+
+ui_menu_patient_report => ui_nrel_command_template:
+	[*
+		question_patient_report _-> ._question_patient_report_instance
+			(*
+				_-> ui_arg_1;;
+			*);;
+		._question_patient_report_instance _<- question;;
+	*];;
+
+ui_menu_patient_report => ui_nrel_command_lang_template: [создание отчета $ui_arg_1] (* <- lang_ru;; *);;
+ui_menu_patient_report => ui_nrel_command_lang_template: [report generation $ui_arg_1] (* <- lang_en;; *);;
