@@ -1,4 +1,4 @@
 {
     "sequence_prediction": ["txt"],
-    "product_quality_classifier": ["tsv, scs"]
+    "product_quality_classifier": ["tsv"]
 }

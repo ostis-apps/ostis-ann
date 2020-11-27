@@ -1,0 +1,44 @@
+test_product_1
+	=> nrel_main_idtf: [N1 Test product] (* <-lang_en;; *);
+	=> nrel_main_idtf: [N1 Тестовый продукт] (* <-lang_ru;; *);
+	=> nrel_uniformity: [0.798994959386161];
+    => rrel_mass_fat_fraction: [3.3163295173507312];
+	=> nrel_mass_protein_fraction: [6.650435535205284];
+	=> nrel_has_mold: [false];
+	<- concept_product;;
+
+test_product_2
+	=> nrel_main_idtf: [N2 Test product] (* <-lang_en;; *);
+	=> nrel_main_idtf: [N2 Тестовый продукт] (* <-lang_ru;; *);
+	=> nrel_uniformity: [0.828086488920396];
+    => rrel_mass_fat_fraction: [5.393480385474044];
+	=> nrel_mass_protein_fraction: [36.31920921626641];
+	=> nrel_has_mold: [false];
+	<- concept_product;;
+
+test_product_3
+	=> nrel_main_idtf: [N3 Test product] (* <-lang_en;; *);
+	=> nrel_main_idtf: [N3 Тестовый продукт] (* <-lang_ru;; *);
+	=> nrel_uniformity: [0.8094435163522983];
+    => rrel_mass_fat_fraction: [4.676179149431384];
+	=> nrel_mass_protein_fraction: [2.708277854780958];
+	=> nrel_has_mold: [false];
+	<- concept_product;;
+
+test_product_4
+	=> nrel_main_idtf: [N4 Test product] (* <-lang_en;; *);
+	=> nrel_main_idtf: [N4 Тестовый продукт] (* <-lang_ru;; *);
+	=> nrel_uniformity: [0.8917947658875199];
+    => rrel_mass_fat_fraction: [4.736776647993627];
+	=> nrel_mass_protein_fraction: [17.966025265543564];
+	=> nrel_has_mold: [true];
+	<- concept_product;;
+
+test_product_5
+	=> nrel_main_idtf: [N5 Test product] (* <-lang_en;; *);
+	=> nrel_main_idtf: [N5 Тестовый продукт] (* <-lang_ru;; *);
+	=> nrel_uniformity: [0.7891603438650896];
+    => rrel_mass_fat_fraction: [6.864936281507398];
+	=> nrel_mass_protein_fraction: [28.175836097673177];
+	=> nrel_has_mold: [true];
+	<- concept_product;;
