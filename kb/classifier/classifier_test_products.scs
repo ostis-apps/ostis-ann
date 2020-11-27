@@ -1,7 +1,7 @@
 test_product_1
 	=> nrel_main_idtf: [N1 Test product] (* <-lang_en;; *);
 	=> nrel_main_idtf: [N1 Тестовый продукт] (* <-lang_ru;; *);
-	=> nrel_uniformity: [0.798994959386161];
+	=> nrel_uniformity: [0.898994959386161];
     => rrel_mass_fat_fraction: [3.3163295173507312];
 	=> nrel_mass_protein_fraction: [6.650435535205284];
 	=> nrel_has_mold: [false];
