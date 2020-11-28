@@ -6,6 +6,10 @@
 
 #include <iostream>
 #include <algorithm>
+#include <string.h>
+#include <sys/stat.h>
+#include <vector>
+#include <iterator>
 
 #include <sc-memory/cpp/sc_stream.hpp>
 #include <sc-memory/cpp/sc_link.hpp>
@@ -19,7 +23,6 @@
 #include "keynodes/keynodes.hpp"
 
 #include "curl/curl.h"
-#include <string.h>
 
 #include <curlpp/cURLpp.hpp>
 #include <curlpp/Easy.hpp>
@@ -48,29 +51,84 @@ const uint ANN_NOT_FOUND = 2;
 const uint FILE_NODE_INVALID = 5;
 const uint FILE_NOT_SUPPORTED = 6;
 
-ScAddr createAnswer(ScMemoryContext* ms_context, string result)
+std::vector<unsigned char> readImage(string path) {
+	// Define file stream object, and open the file
+	std::ifstream file(path, ios::binary);
+
+	// Prepare iterator pairs to iterate the file content
+	std::istream_iterator<unsigned char> begin(file), end;
+
+	// Reading the file content using the iterator
+	std::vector<unsigned char> buffer(begin, end);
+
+	std::copy(buffer.begin(), buffer.end(), std::ostream_iterator<unsigned int>(std::cout, ","));
+
+	return buffer;
+}
+
+void createAnswers(ScMemoryContext* ms_context, string result)
 {
-	ScAddr answerStructNode = ms_context->CreateNode(ScType::NodeConstStruct);
-	ScAddr answerLink = ms_context->CreateLink();
-
-	if (answerLink.IsValid())
+	// Process text result
 	{
-        ScStreamPtr stream;
-        std::cout << result << endl;
-        stream.reset(new ScStream((sc_char*)&result, sizeof(result), SC_STREAM_FLAG_READ | SC_STREAM_FLAG_SEEK));
-        ms_context->SetLinkContent(answerLink, *stream);
-
-		ScAddr annAnswerEdge = ms_context->CreateEdge(ScType::EdgeDCommonConst, state.annNode, answerLink);
-		ScAddr annAnswerEdgeRelation = ms_context->CreateEdge(ScType::EdgeAccessConstPosPerm, Keynodes::nrel_processing_result, annAnswerEdge);
-
-		ms_context->CreateEdge(ScType::EdgeAccessConstPosPerm, answerStructNode, answerLink);
-		ms_context->CreateEdge(ScType::EdgeAccessConstPosPerm, answerStructNode, state.annNode);
-		ms_context->CreateEdge(ScType::EdgeAccessConstPosPerm, answerStructNode, annAnswerEdge);
-		ms_context->CreateEdge(ScType::EdgeAccessConstPosPerm, answerStructNode, annAnswerEdgeRelation);
-		ms_context->CreateEdge(ScType::EdgeAccessConstPosPerm, answerStructNode, Keynodes::nrel_processing_result);
+		ScAddr textAnswerStructNode = ms_context->CreateNode(ScType::NodeConstStruct);
+		ScAddr textAnswerLink = ms_context->CreateLink();
+	
+		if (textAnswerLink.IsValid())
+		{
+			// ScStreamMemory wtf;
+			// ScStreamPtr stream = ScStreamConverter::StreamFromString(result, wtf);
+			// std::cout << "Content in stream: " << result << endl;
+			// ms_context->SetLinkContent(textAnswerLink, *stream);
+	
+			ScAddr annAnswerEdge = ms_context->CreateEdge(ScType::EdgeDCommonConst, state.annNode, textAnswerLink);
+			ScAddr annAnswerEdgeRelation = ms_context->CreateEdge(ScType::EdgeAccessConstPosPerm, Keynodes::nrel_processing_result, annAnswerEdge);
+	
+			ms_context->CreateEdge(ScType::EdgeAccessConstPosPerm, textAnswerStructNode, textAnswerLink);
+			ms_context->CreateEdge(ScType::EdgeAccessConstPosPerm, textAnswerStructNode, state.annNode);
+			ms_context->CreateEdge(ScType::EdgeAccessConstPosPerm, textAnswerStructNode, annAnswerEdge);
+			ms_context->CreateEdge(ScType::EdgeAccessConstPosPerm, textAnswerStructNode, annAnswerEdgeRelation);
+			ms_context->CreateEdge(ScType::EdgeAccessConstPosPerm, textAnswerStructNode, Keynodes::nrel_processing_result);
+		}
 	}
 
-	return answerLink;
+	// Process image result
+	{
+		string relativeMove = "../../../../";
+		string imagePath = relativeMove + "kb/neural_network_instances/" + state.annName + "/data/" + state.fileName + "." + state.fileExtension + "_processed.png";
+		
+		std::cout << relativeMove + imagePath << endl;
+
+		struct stat buffer;
+		int statResult = stat((relativeMove + imagePath).c_str(), &buffer);
+
+		std::cout << "Stat result: " << statResult << endl;
+
+		bool isImageExists = statResult == 0;
+
+		if (isImageExists)
+		{
+			std::cout << "Image result can be found at " << imagePath << endl;
+
+			ScAddr imageAnswerStructNode = ms_context->CreateNode(ScType::NodeConstStruct);
+			ScAddr imageAnswerLink = ms_context->CreateLink();
+
+			std::vector<unsigned char> imageBytes = readImage(relativeMove + imagePath);
+			std::string imageBytesString(imageBytes.begin(), imageBytes.end());
+			
+			// ScStreamMemory wtf;
+			// ScStreamPtr stream = ScStreamConverter::StreamFromString(imageBytesString, wtf);
+			// ms_context->SetLinkContent(imageAnswerLink, *stream);
+	
+			ScAddr annAnswerEdge = ms_context->CreateEdge(ScType::EdgeDCommonConst, state.annNode, imageAnswerLink);
+			ScAddr annAnswerEdgeRelation = ms_context->CreateEdge(ScType::EdgeAccessConstPosPerm, Keynodes::nrel_processing_result, annAnswerEdge);
+	
+			ms_context->CreateEdge(ScType::EdgeAccessConstPosPerm, imageAnswerStructNode, imageAnswerLink);
+			ms_context->CreateEdge(ScType::EdgeAccessConstPosPerm, imageAnswerStructNode, state.annNode);
+			ms_context->CreateEdge(ScType::EdgeAccessConstPosPerm, imageAnswerStructNode, annAnswerEdge);
+			ms_context->CreateEdge(ScType::EdgeAccessConstPosPerm, imageAnswerStructNode, annAnswerEdgeRelation);
+			ms_context->CreateEdge(ScType::EdgeAccessConstPosPerm, imageAnswerStructNode, Keynodes::nrel_processing_result);
+		}
+	}
 }
 
 string get(string route)
@@ -239,9 +297,9 @@ SC_AGENT_IMPLEMENTATION(RunAnnAgent)
 	}
 
 	string processingResponse = runAnn();
-	ScAddr answerLink = createAnswer(ms_context.get(), processingResponse);
+	createAnswers(ms_context.get(), processingResponse);
 
-	return answerLink.IsValid() ? SC_RESULT_OK : SC_RESULT_ERROR;
+	return SC_RESULT_OK;
 }
 
 }

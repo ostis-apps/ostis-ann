@@ -23,6 +23,10 @@ class ConfigProvider:
         path = os.path.join(self.receiver_app.config['NEURAL_NETWORKS_PATH'], ann_id, 'data')
         return path
 
+    def get_kb_path(self, ann_id):
+        path = os.path.join(self.receiver_app.config['NEURAL_NETWORKS_KB_PATH'], ann_id, 'data')
+        return path
+
     def get_training_model_path(self, ann_id):
         path = os.path.join(self.receiver_app.config['NEURAL_NETWORKS_PATH'], ann_id, 'models')
         return path
