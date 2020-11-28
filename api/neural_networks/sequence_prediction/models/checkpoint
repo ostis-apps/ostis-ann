@@ -1,0 +1,2 @@
+model_checkpoint_path: "awesome_model.tf"
+all_model_checkpoint_paths: "awesome_model.tf"

@@ -30,8 +30,8 @@ public:
   SC_PROPERTY(Keynode("question_run_ann"), ForceCreate)
   static ScAddr question_run_ann;
 
-  SC_PROPERTY(Keynode("concept_ann"), ForceCreate)
-  static ScAddr concept_ann;
+  SC_PROPERTY(Keynode("concept_neural_network_in_graphical_representation"), ForceCreate)
+  static ScAddr concept_neural_network_in_graphical_representation;
 
   SC_PROPERTY(Keynode("concept_file"), ForceCreate)
   static ScAddr concept_file;

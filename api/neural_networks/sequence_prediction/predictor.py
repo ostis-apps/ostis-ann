@@ -1,48 +1,43 @@
-import numpy as np
+import os
+import numpy
+
+from keras.layers import RepeatVector
+from keras.layers import TimeDistributed
+from tensorboard.errors import NotFoundError
+from tensorflow.python.keras.layers import Bidirectional, LSTM, Dense
+from tensorflow.python.keras.models import Sequential
 
 
 class Predictor:
-    def __init__(self, inputs, outputs):
-        self.inputs = inputs
-        self.outputs = outputs
-        self.weights = np.array([[.50], [.50], [.50]])
-        self.error_history = []
-        self.epoch_list = []
+    def __init__(self):
+        self.model = Sequential()
 
-    # activation function ==> S(x) = 1/1+e^(-x)
-    def sigmoid(self, x, deriv=False):
-        if deriv == True:
-            return x * (1 - x)
-        return 1 / (1 + np.exp(-x))
+    def train(self):
+        models_path = self.config_provider.get_training_model_path('sequence_prediction')
+        model_path = os.path.join(models_path, 'awesome_model.tf')
 
-    # data will flow through the neural network.
-    def feed_forward(self):
-        self.hidden = self.sigmoid(np.dot(self.inputs, self.weights))
+        # try:
+        #     self.model.load_weights(model_path)
+        # finally:
+        #     print("sequence_prediction: No model found or problem during loading. Creating a new model...")
 
-    # going backwards through the network to update weights
-    def backpropagation(self):
-        self.error = self.outputs - self.hidden
-        delta = self.error * self.sigmoid(self.hidden, deriv=True)
-        self.weights += np.dot(self.inputs.T, delta)
+        originals = [float(x) for x in range(5, 301, 5)]
+        projection = [float(y) for y in range(20, 316, 5)]
 
-    def train(self, epochs=50000):
-        # TODO: extract training to model for further processing
-        for epoch in range(epochs):
-            # flow forward and produce an output
-            self.feed_forward()
+        originals_reshaped = numpy.array(originals).reshape(20, 3, 1)
+        projection_reshaped = numpy.array(projection).reshape(20, 3, 1)
 
-            # go back though the network to make corrections based on the output
-            self.backpropagation()
+        self.model.add(Bidirectional(LSTM(100, activation='relu', input_shape=(3, 1))))
+        self.model.add(RepeatVector(3))
+        self.model.add(Bidirectional(LSTM(100, activation='relu', return_sequences=True)))
+        self.model.add(TimeDistributed(Dense(1)))
+        self.model.compile(optimizer='adam', loss='mse')
 
-            # keep track of the error history over each epoch
-            self.error_history.append(np.average(np.abs(self.error)))
-            self.epoch_list.append(epoch)
+        self.model.fit(originals_reshaped, projection_reshaped, epochs=150, validation_split=0.2, batch_size=3)
+        self.model.save_weights(model_path)
 
     def predict(self, new_input):
-        prediction = self.sigmoid(np.dot(new_input, self.weights))
-        return prediction
+        return self.model.predict(new_input, verbose=0)
 
 
-training_inputs = np.array([[0, 1, 0], [0, 1, 1], [0, 0, 0], [1, 0, 0], [1, 1, 1], [1, 0, 1]])
-training_outputs = np.array([[0], [0], [0], [1], [1], [1]])
-predictor_instance = Predictor(training_inputs, training_outputs)
+predictor_instance = Predictor()
