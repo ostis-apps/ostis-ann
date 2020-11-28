@@ -3,7 +3,8 @@ sequence_prediction_ann
 	=> nrel_main_idtf: [Нейронная сеть для предсказания последовательности] (* <-lang_ru;; *);
 	=> nrel_idtf: [Sequence prediction ANN];
 	=> nrel_api_idtf: [sequence_prediction];
-	<- concept_ann;;
+	<- concept_neural_network_in_graphical_representation;
+	<- multilayer_neural_network;;
 	
 seq_1_txt
 	=> nrel_main_idtf: [N1 Test sequence] (* <-lang_en;; *);
@@ -18,9 +19,6 @@ question_run_ann
 	=> nrel_main_idtf: [question of starting neural network file processing] (* <-lang_en;; *);
 	=> nrel_main_idtf: [вопрос о запуске обработки файла нейронной сетью] (* <-lang_ru;; *);;
 
-concept_ann <- sc_node_not_relation;;
-nrel_processing_result <- sc_node_norole_relation;;
-
 concept_file
 	=> nrel_main_idtf: [file] (* <-lang_en;; *);
 	=> nrel_main_idtf: [файл] (* <-lang_ru;; *);
@@ -31,22 +29,38 @@ nrel_api_idtf
 	=> nrel_main_idtf: [API entity unique identifier] (* <-lang_en;; *);
 	=> nrel_main_idtf: [уникальный идентификатор сущности в API] (* <-lang_ru;; *);
 	=> nrel_idtf: [API entity unique identifier];
+
+	=> nrel_first_domain: set;
+	=> nrel_second_domain: set;
+
 	<- sc_node_norole_relation;;
 
 nrel_file_extension
 	=> nrel_main_idtf: [file extension] (* <-lang_en;; *);
 	=> nrel_main_idtf: [расширение файла] (* <-lang_ru;; *);
 	=> nrel_idtf: [file extension];
+
+	=> nrel_first_domain: concept_file;
+	=> nrel_second_domain: set;
+
 	<- sc_node_norole_relation;;
 
 nrel_file_name
 	=> nrel_main_idtf: [file name] (* <-lang_en;; *);
 	=> nrel_main_idtf: [имя файла] (* <-lang_ru;; *);
 	=> nrel_idtf: [file name];
+
+	=> nrel_first_domain: concept_file;
+	=> nrel_second_domain: set;
+
 	<- sc_node_norole_relation;;
 
 nrel_processing_result
 	=> nrel_main_idtf: [processing result] (* <-lang_en;; *);
 	=> nrel_main_idtf: [результат обработки] (* <-lang_ru;; *);
 	=> nrel_idtf: [processing result];
+
+	=> nrel_first_domain: concept_neural_network_in_graphical_representation;
+	=> nrel_second_domain: set;
+
 	<- sc_node_norole_relation;;

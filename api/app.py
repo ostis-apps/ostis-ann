@@ -5,11 +5,11 @@ import requests
 from flask import Flask, jsonify, request
 
 from neural_networks.sequence_prediction.predictor import predictor_instance
-from utils.config_utils import ConfigManager
+from utils.config_utils import ConfigProvider
 
 app = Flask(__name__)
 app.config.from_pyfile('api_config.cfg')
-config_provider = ConfigManager(app)
+config_provider = ConfigProvider(app)
 
 
 @app.route('/<ann_id>/extensions', methods=['GET'])
@@ -60,6 +60,7 @@ def process(ann_id):
 # TODO: once a neural network has it's own training model that
 # can be used for each processing, this method must be removed
 def train_neural_networks():
+    predictor_instance.config_provider = config_provider
     predictor_instance.train()
 
 

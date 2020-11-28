@@ -129,7 +129,7 @@ string post(string route, string body)
 
 uint validateAnn(ScMemoryContext* ms_context)
 {
-	bool isAnnNodeValid = ms_context->HelperCheckEdge(Keynodes::concept_ann, state.annNode, ScType::EdgeAccessConstPosPerm);
+	bool isAnnNodeValid = ms_context->HelperCheckEdge(Keynodes::concept_neural_network_in_graphical_representation, state.annNode, ScType::EdgeAccessConstPosPerm);
 
 	if (!isAnnNodeValid)
 	{

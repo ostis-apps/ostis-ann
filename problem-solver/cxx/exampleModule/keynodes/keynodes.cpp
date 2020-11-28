@@ -15,7 +15,7 @@ ScAddr Keynodes::question_find_subdividing;
 ScAddr Keynodes::nrel_subdividing;
 
 ScAddr Keynodes::question_run_ann;
-ScAddr Keynodes::concept_ann;
+ScAddr Keynodes::concept_neural_network_in_graphical_representation;
 ScAddr Keynodes::concept_file;
 ScAddr Keynodes::nrel_processing_result;
 ScAddr Keynodes::nrel_api_idtf;

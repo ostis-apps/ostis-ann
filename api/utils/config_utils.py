@@ -3,7 +3,7 @@ import os
 from utils.json_utils import *
 
 
-class ConfigManager:
+class ConfigProvider:
     def __init__(self, receiver_app):
         self.receiver_app = receiver_app
 
@@ -21,4 +21,8 @@ class ConfigManager:
 
     def get_upload_data_path(self, ann_id):
         path = os.path.join(self.receiver_app.config['NEURAL_NETWORKS_PATH'], ann_id, 'data')
+        return path
+
+    def get_training_model_path(self, ann_id):
+        path = os.path.join(self.receiver_app.config['NEURAL_NETWORKS_PATH'], ann_id, 'models')
         return path
