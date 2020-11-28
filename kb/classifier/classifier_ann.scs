@@ -3,5 +3,6 @@ product_quality_classifier_ann
     => nrel_main_idtf: [ИНС для решения задачи классификации качества продукта] (* <-lang_ru;; *);
     => nrel_idtf: [Product quality ANN];
 	=> nrel_api_idtf: [product_quality_classifier];
-	<- concept_ann;;
+	<- concept_neural_network_in_graphical_representation;
+    <- multilayer_neural_network;;
 	
