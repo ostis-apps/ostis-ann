@@ -38,18 +38,18 @@ SC_LOG_INFO("START");
 
 
    ScIterator5Ptr iterator5 = ms_context->Iterator5(study, ScType::EdgeDCommonConst, ScType::Unknown, ScType::EdgeAccessConstPosPerm, Keynodes::nrel_patients_study);
-
-ScAddr patient;
+//находим пациента этого исследования
+  ScAddr patient;
   if (iterator5->Next())
   {
    patient = iterator5->Get(2);
   }
 
-
+//запускаем агенты создания отчета информации о пациенте и создания отчета информации об исследовании
 ScAddr patient_reportSC= AgentUtils::initAgentAndWaitResult(ms_context.get(), Keynodes::question_patient_report, { patient });
 ScAddr study_reportSC = AgentUtils::initAgentAndWaitResult(ms_context.get(), Keynodes::question_study_report, { study });
 
-
+//получаем эти отчеты
 string patient_report = CommonUtils::getIdtfValue(ms_context.get(), patient, Keynodes::nrel_patient_report );
 string study_report = CommonUtils::getIdtfValue(ms_context.get(), study, Keynodes::nrel_study_report);
 SC_LOG_INFO("PATIENT");
@@ -57,9 +57,11 @@ SC_LOG_INFO(patient_report);
 SC_LOG_INFO("STUDY");
 SC_LOG_INFO(study_report);
 
+
+//создаем общий отчет и записываем его в линк
 string common_report = patient_report+" \n "+study_report;
 SC_LOG_INFO("COMMON");
-SC_LOG_INFO(study_report);
+SC_LOG_INFO(common_report);
 
 
 
@@ -73,8 +75,8 @@ ms_context->SetLinkContent(answer_link, *stream);
 
 ms_context->CreateEdge(ScType::EdgeAccessConstPosPerm, answer, answer_link);
 
-ms_context->CreateEdge(ScType::EdgeAccessConstPosPerm, answer, patient_reportSC);
-ms_context->CreateEdge(ScType::EdgeAccessConstPosPerm, answer, study_reportSC);
+//ms_context->CreateEdge(ScType::EdgeAccessConstPosPerm, answer, patient_reportSC);
+//ms_context->CreateEdge(ScType::EdgeAccessConstPosPerm, answer, study_reportSC);
 SC_LOG_INFO("END");
 
   AgentUtils::finishAgentWork(ms_context.get(), questionNode, answer);

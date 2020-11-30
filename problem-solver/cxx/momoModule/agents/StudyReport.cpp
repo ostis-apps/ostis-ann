@@ -76,6 +76,16 @@ SC_AGENT_IMPLEMENTATION(StudyReport)
   //ms_context->CreateEdge(ScType::EdgeAccessConstPosPerm, answer, study);
 
 
+ScAddr temp = ms_context->CreateNode(ScType::NodeConstStruct);
+ScAddr Right = ms_context->CreateNode(ScType::NodeConstStruct);
+ScAddr Left = ms_context->CreateNode(ScType::NodeConstStruct);
+ms_context->CreateEdge(ScType::EdgeAccessConstPosPerm, temp, Right);
+ms_context->CreateEdge(ScType::EdgeAccessConstPosPerm, temp, Left);
+
+
+string Leftstr = CommonUtils::getIdtfValue(ms_context.get(), Keynodes::concept_left_laterality, Keynodes::nrel_main_idtf );
+string Rightstr = CommonUtils::getIdtfValue(ms_context.get(), Keynodes::concept_right_laterality, Keynodes::nrel_main_idtf );
+
   ScIterator5Ptr imageIT = ms_context->Iterator5(study, ScType::EdgeDCommonConst, ScType::Unknown, ScType::EdgeAccessConstPosPerm, Keynodes::nrel_image);
   vector<ScAddr> images(4);
     while (imageIT->Next())
@@ -133,19 +143,18 @@ SC_AGENT_IMPLEMENTATION(StudyReport)
                   }
               }
 
-
-
+string laterality_str;
               if(laterality_type.IsValid() && projection_type.IsValid()){
               //ms_context->CreateEdge(ScType::EdgeAccessConstPosPerm, answer, projection_type);
               //ms_context->CreateEdge(ScType::EdgeAccessConstPosPerm, answer, laterality_type);
 
-              string laterality_str = CommonUtils::getIdtfValue(ms_context.get(), laterality_type, Keynodes::nrel_main_idtf );
+               laterality_str = CommonUtils::getIdtfValue(ms_context.get(), laterality_type, Keynodes::nrel_main_idtf );
               string projection_str = CommonUtils::getIdtfValue(ms_context.get(), projection_type, Keynodes::nrel_main_idtf );
               string study_basic_report="latrelity - "+laterality_str+"\n projection - "+projection_str;
               spatials_report=spatials_report+"\n"+study_basic_report;
 
 
-              //SC_LOG_INFO(i);
+              //SC_LOG_INFO(laterality_str);
               //SC_LOG_INFO(study_basic_report);
 }
               ///////////////////////////////////////////////////////////////
@@ -194,6 +203,10 @@ SC_AGENT_IMPLEMENTATION(StudyReport)
                  spatials_report=spatials_report+artifact_str+"  ";
 
 
+                //if(laterality_str==Leftstr){
+                  //   string strtemp="LEFT LEFT"+laterality_str;
+                 //SC_LOG_INFO(strtemp);
+
 
                  ////////////////////////////образование
                     //форма
@@ -214,7 +227,9 @@ SC_AGENT_IMPLEMENTATION(StudyReport)
 
 
                    if(shape_type.IsValid()){
-                    //ms_context->CreateEdge(ScType::EdgeAccessConstPosPerm, answer, shape_type);
+                   if(!ms_context->HelperCheckEdge(Left, shape_type, ScType::EdgeAccessConstPosPerm)){
+                    ms_context->CreateEdge(ScType::EdgeAccessConstPosPerm,Left, shape_type);
+                   }
                     string shape_str = CommonUtils::getIdtfValue(ms_context.get(), shape_type, Keynodes::nrel_main_idtf );
                     spatials_report= spatials_report+"\n shape - "+ shape_str+" ";
                     }
@@ -236,8 +251,9 @@ SC_AGENT_IMPLEMENTATION(StudyReport)
                       }
 
                       if(marg_type.IsValid()){
-                       //ms_context->CreateEdge(ScType::EdgeAccessConstPosPerm, answer, marg_type);
-
+                          if(!ms_context->HelperCheckEdge(Left, marg_type, ScType::EdgeAccessConstPosPerm)){
+                       ms_context->CreateEdge(ScType::EdgeAccessConstPosPerm, Left, marg_type);
+}
                        string marg_str = CommonUtils::getIdtfValue(ms_context.get(), marg_type, Keynodes::nrel_main_idtf );
                        spatials_report= spatials_report+"\n margins - "+ marg_str+" ";
                       }
@@ -260,8 +276,9 @@ SC_AGENT_IMPLEMENTATION(StudyReport)
                          }
 
                          if(den_type.IsValid()){
-                          //ms_context->CreateEdge(ScType::EdgeAccessConstPosPerm, answer, den_type);
-
+                             if(!ms_context->HelperCheckEdge(Left, den_type, ScType::EdgeAccessConstPosPerm)){
+                          ms_context->CreateEdge(ScType::EdgeAccessConstPosPerm, Left, den_type);
+}
                           string den_str = CommonUtils::getIdtfValue(ms_context.get(), den_type, Keynodes::nrel_main_idtf );
                           spatials_report= spatials_report+"\n density - "+ den_str+" ";
                          }
@@ -277,8 +294,9 @@ SC_AGENT_IMPLEMENTATION(StudyReport)
 
 
                             if(size.IsValid()){
-                             //ms_context->CreateEdge(ScType::EdgeAccessConstPosPerm, answer, size);
-
+                                if(!ms_context->HelperCheckEdge(Left, size, ScType::EdgeAccessConstPosPerm)){
+                             ms_context->CreateEdge(ScType::EdgeAccessConstPosPerm, Left, size);
+}
                              string size_str = CommonUtils::getIdtfValue(ms_context.get(), artifacts[j], Keynodes::nrel_artifact_size );
                              spatials_report= spatials_report+"\n size - "+ size_str+" ";
                             }
@@ -304,13 +322,17 @@ SC_AGENT_IMPLEMENTATION(StudyReport)
                                }
 
                                if(dist_type.IsValid()){
-                                //ms_context->CreateEdge(ScType::EdgeAccessConstPosPerm, answer, dist_type);
-
+                                   if(!ms_context->HelperCheckEdge(Left, dist_type, ScType::EdgeAccessConstPosPerm)){
+                                ms_context->CreateEdge(ScType::EdgeAccessConstPosPerm, Left, dist_type);
+}
                                 string dist_str = CommonUtils::getIdtfValue(ms_context.get(), dist_type, Keynodes::nrel_main_idtf );
                                 spatials_report= spatials_report+"\n distribution - "+ dist_str+" ";
                                 }
 
-
+                }
+                // else if(laterality_str==Rightstr){
+                 //SC_LOG_INFO("RIGHT RIGHT");
+                 //}
 
                     }
                 }
@@ -318,7 +340,9 @@ SC_AGENT_IMPLEMENTATION(StudyReport)
 
 
 
-    }
+
+
+
 
 SC_LOG_INFO(spatials_report);
 
@@ -335,7 +359,7 @@ ScAddr edge_answer = ms_context->CreateEdge(ScType::EdgeDCommonConst, study, ans
 
 ScAddr edge_edge_answer = ms_context->CreateEdge(ScType::EdgeAccessConstPosPerm, Keynodes::nrel_study_report, edge_answer);
 
-
+ms_context->CreateEdge(ScType::EdgeAccessConstPosPerm, answer, Left);
 ms_context->CreateEdge(ScType::EdgeAccessConstPosPerm, answer, answer_link);
 ms_context->CreateEdge(ScType::EdgeAccessConstPosPerm, answer, study);
 ms_context->CreateEdge(ScType::EdgeAccessConstPosPerm, answer, edge_answer);

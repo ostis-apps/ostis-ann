@@ -39,6 +39,7 @@ SC_LOG_INFO("----------patient begin----------");
   if (!patient.IsValid())
     return SC_RESULT_ERROR_INVALID_PARAMS;
 
+  //находим гормональный статус пациента
 
   ScIterator5Ptr iterator5 = ms_context->Iterator5(patient, ScType::EdgeDCommonConst, ScType::Unknown, ScType::EdgeAccessConstPosPerm, Keynodes::nrel_patients_hormonal_status);
 
@@ -59,7 +60,7 @@ SC_LOG_INFO("----------patient begin----------");
     }
 
 
-
+//находим возраст пациента
     ScIterator5Ptr iterator5age = ms_context->Iterator5(patient, ScType::EdgeDCommonConst, ScType::Unknown, ScType::EdgeAccessConstPosPerm, Keynodes::nrel_age);
 
     ScAddr age;
@@ -71,7 +72,7 @@ SC_LOG_INFO("----------patient begin----------");
 
   ScAddr answer = ms_context->CreateNode(ScType::NodeConstStruct);
 
-
+//состовляем отчет о пациенте и записываем в линк
   string hormonal_status_str = CommonUtils::getIdtfValue(ms_context.get(), hormonal_status, Keynodes::nrel_main_idtf );
   string age_str = CommonUtils::getIdtfValue(ms_context.get(), patient, Keynodes::nrel_age );
   string pation_rep_str = "hormonal status - " + hormonal_status_str +" \n age - " + age_str;
@@ -85,7 +86,7 @@ SC_LOG_INFO(pation_rep_str);
   ms_context->SetLinkContent(answer_link, *stream);
 
 
-
+//формируем ответ
   ScAddr edge_answer = ms_context->CreateEdge(ScType::EdgeDCommonConst, patient, answer_link);
 
   ScAddr edge_edge_answer = ms_context->CreateEdge(ScType::EdgeAccessConstPosPerm, Keynodes::nrel_patient_report, edge_answer);
