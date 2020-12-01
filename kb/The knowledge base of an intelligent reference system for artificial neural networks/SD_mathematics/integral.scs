@@ -46,18 +46,6 @@ nrel_differentiation
 };;
 *);;
 
-
-integral-> rrel_example:
-[*
-
-integral->A;;
-A<=nrel_addition_of_values:
-	{
-	a(* <- infinitesimal;; *);
-	b(* <- infinitesimal;; *)
-	};;
-*];;
-
 integral<-rrel_explored_concept: section_subject_domain_mathematics;;
 
 

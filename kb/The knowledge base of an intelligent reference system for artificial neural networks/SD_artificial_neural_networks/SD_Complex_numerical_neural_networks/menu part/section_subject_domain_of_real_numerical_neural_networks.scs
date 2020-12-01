@@ -9,6 +9,28 @@ section_subject_domain_of_real_numerical_neural_networks
 <- not_enough_formed_structure;
 <- atomic_section;;
 
-section_subject_domain_of_real_numerical_neural_networks = [*^"file://subject_domain_of_real_numerical_neural_networks.scsi"*];;
+section_subject_domain_of_real_numerical_neural_networks = [*
+                                                             subject_domain_of_real_numerical_neural_networks
+                                                             => nrel_main_idtf: 
+                                                             	[Предметная область вещественно-численных нейронных сетей]
+                                                             	(* <- lang_ru;;*);
+                                                             	[Subject domain of real-numerical neural networks]
+                                                             	(* <- lang_en;; *);
+                                                             
+                                                             <- subject_domain;
+                                                             
+                                                             -> rrel_maximum_studied_object_class: 
+                                                             	real_numerical_neural_network;;
+                                                             	
+                                                             real_numerical_neural_network
+                                                             	<- sc_node_not_relation;
+                                                             	=>nrel_main_idtf:
+                                                             	[вещественно-численная нейронная сеть]
+                                                             	(* <- lang_ru;;*);
+                                                             	[real-numerical neural network]
+                                                             	(* <- lang_en;; *);;
+                                                             
+                                                             
 
+*];;
 

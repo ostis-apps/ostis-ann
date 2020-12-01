@@ -8,8 +8,30 @@ section_subject_domain_of_neurons
 <- not_enough_formed_structure;
 <- atomic_section;;
 
-section_subject_domain_of_neurons = [*^"file://subject_domain_of_neurons.scsi"*];;
+section_subject_domain_of_neurons = [*
+                                      subject_domain_of_neurons
+                                      	=> nrel_main_idtf:
+                                      	[Предметная область неронны нейронных сетей]
+                                      	(* <- lang_ru;; *);
+                                      	[Subject domain of neurons]
+                                      	(* <- lang_en;; *);
+                                      		
+                                      <- subject_domain;;
+                                      
+                                      
+                                      
+                                      
+                                      
+                                      
+                                      
+                                      
+                                      
+                                      
+                                      
+                                      
+                                      
 
+*];;
 
 
 

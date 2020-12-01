@@ -13,8 +13,30 @@ section_subject_domain_tasks_solved_by_neural_networks
 <- not_enough_formed_structure;
 <- non_atomic_section;;
 
-section_subject_domain_tasks_solved_by_neural_networks = [*^"file://subject_domain_of_tasks_solved_by_neural_networks.scsi"*];;
+section_subject_domain_tasks_solved_by_neural_networks = [*
+                                                           subject_domain_of_mathematics
+                                                           	=> nrel_main_idtf:
+                                                           	[Предметная область задач решаемых искусственными нейронными сетями]
+                                                           	(* <- lang_ru;; *);
+                                                           	[Subject domain of tasks solved by artificial neural networks]
+                                                           	(* <- lang_en;; *);
+                                                           		
+                                                           <- subject_domain;;
+                                                           
+                                                           
+                                                           
+                                                           
+                                                           
+                                                           
+                                                           
+                                                           
+                                                           
+                                                           
+                                                           
+                                                           
+                                                           
 
+*];;
 
 
 
