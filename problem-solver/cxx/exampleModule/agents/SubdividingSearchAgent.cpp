@@ -4,13 +4,11 @@
 * (See accompanying file COPYING.MIT or copy at http://opensource.org/licenses/MIT)
 */
 
-#include <sc-memory/cpp/sc_stream.hpp>
-#include <sc-kpm/sc-agents-common/utils/GenerationUtils.hpp>
-#include <sc-kpm/sc-agents-common/utils/IteratorUtils.hpp>
-#include <sc-kpm/sc-agents-common/utils/AgentUtils.hpp>
-
 #include "SubdividingSearchAgent.hpp"
-#include "keynodes/keynodes.hpp"
+
+#include <sc-agents-common/utils/GenerationUtils.hpp>
+#include <sc-agents-common/utils/IteratorUtils.hpp>
+#include <sc-agents-common/utils/AgentUtils.hpp>
 
 using namespace std;
 using namespace utils;

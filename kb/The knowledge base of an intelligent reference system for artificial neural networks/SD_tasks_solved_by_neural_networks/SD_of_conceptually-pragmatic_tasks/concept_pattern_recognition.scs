@@ -1,4 +1,4 @@
-concept_pattern_recognition;
+concept_pattern_recognition
 <-rrel_key_sc_element: ...
 (*
 	<-definition;;

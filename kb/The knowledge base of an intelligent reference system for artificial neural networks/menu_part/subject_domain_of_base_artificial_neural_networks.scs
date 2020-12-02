@@ -7,7 +7,7 @@ subject_domain_base_of_artificial_neural_networks
 		
 <- subject_domain;
 
-rrel_maximum_studied_object_class: 
+-> rrel_maximum_studied_object_class:
 	concept_neural_network_in_graphical_representation;;
 
 

@@ -45,20 +45,6 @@ random_value
 };;
 *);;
 
-expectation_vector-> rrel_example:
-[*
-random_value->a;;
-random_value->b;;
-expectation_vector->...
-(*
-<=nrel_average:
-	{
-	a;
-	b
-	};;
-*);;
-*];;
-
 expectation_vector<-rrel_explored_concept: section_subject_domain_mathematics;;
 
 

@@ -8,8 +8,30 @@ section_subject_domain_of_layers
 <- not_enough_formed_structure;
 <- atomic_section;;
 
-section_subject_domain_of_layers = [*^"file://subject_domain_of_layers.scsi"*];;
+section_subject_domain_of_layers = [*
+                                     subject_domain_of_layers
+                                     	=> nrel_main_idtf:
+                                     	[Предметная область слоёв нейронных сетей]
+                                     	(* <- lang_ru;; *);
+                                     	[Subject domain of layers]
+                                     	(* <- lang_en;; *);
+                                     		
+                                     <- subject_domain;;
+                                     
+                                     
+                                     
+                                     
+                                     
+                                     
+                                     
+                                     
+                                     
+                                     
+                                     
+                                     
+                                     
 
+*];;
 
 
 
