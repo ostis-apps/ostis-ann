@@ -1,0 +1,39 @@
+sc_node_not_relation->input_speech;;
+
+
+
+input_speech=> nrel_main_idtf: [входная речь](* <- lang_ru;; *);;
+input_speech=> nrel_main_idtf: [input speech](* <- lang_en;; *);;
+definition ->...
+(*
+->rrel_key_sc_element: input_speech;;
+<= nrel_sc_text_translation: ...(*->rrel_example:[Входная речь - записаная человеческая речь,которая является <b><sc_element sys_idtf="input_data">входными данными</b> для нейронной сети.](*<-lang_ru;;=> nrel_format: format_html;;*);;*);;
+=> nrel_main_idtf: [Определение (входная речь)](*<- lang_ru;;=> nrel_format: format_html;;*);;
+=> nrel_using_constants:
+{ 
+speech;
+input_data;
+neural_network
+};;
+*);; 
+
+
+statement ->...
+(*
+->rrel_key_sc_element: input_speech;;
+<= nrel_sc_text_translation: ...(*->rrel_example:[Человеческая речь используется нейронной сетью для обучения или обработки.](*<-lang_ru;;=> nrel_format: format_html;;*);;*);;
+=> nrel_main_idtf: [Утверждение(входная речь)](*<- lang_ru;;=> nrel_format: format_html;;*);;
+=> nrel_using_constants:
+{
+neural_network;
+nrel_learning;
+nrel_process
+};;	
+*);;
+teaching_speech<-rrel_example:input_speech;;
+input_data=>nrel_inclusion:input_speech;;
+input_speech<-rrel_explored_concept: section_subject_domain_of_input_sound_data;;
+
+
+
+

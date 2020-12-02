@@ -1,0 +1,77 @@
+input_signal<-sc_node_not_relation;;
+
+input_signal=>nrel_main_idtf:
+[входной сигнал](*<-lang_ru;;*);
+[input signal](*<-lang_en;;*);;
+
+
+input_signal<- rrel_key_sc_element: ...
+(*
+<- definition;;
+=> nrel_main_idtf:
+      [Опр. (входной сигнал)] (* <- lang_ru;; *);;
+=> nrel_using_constants: 
+	{
+		signal;
+		actuator;
+		nrel_transmit
+	};; 
+<= nrel_sc_text_translation: ... 
+		(*
+			->rrel_example:
+			[Входной сигнал - это внешний <b><sc_element sys_idtf="signal">сигнал</b>, <b><sc_element sys_idtf="nrel_transmit">передаваемый</b> <b><sc_element sys_idtf="actuator">исполнительному устройству</b>.](*<- lang_ru;; =>nrel_format: format_html;;*);;
+		*);;
+*);;
+
+
+input_signal<- rrel_key_sc_element: ... 
+(*
+ => nrel_main_idtf:
+[Утв. 1 о входном сигнале] (* <- lang_ru;; *);;
+ <= nrel_sc_text_translation: ...
+	 (*
+    	  -> rrel_example:
+		[Входной сигнал может быть <b><sc_element sys_idtf="nrel_submit">представлен</b> <b><sc_element sys_idtf="input_vector">входным вектором</b>.](*<-lang_ru;; =>nrel_format: format_html;;*);;
+	*);;
+=> nrel_using_constants: 
+{
+input_vector;
+nrel_submit
+};;
+*);;
+
+input_signal-> rrel_example:
+[*
+input_vector=>nrel_submit:input_signal;;
+*];;
+
+input_signal<-rrel_explored_concept: section_subject_domain_of_input_video_data;;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

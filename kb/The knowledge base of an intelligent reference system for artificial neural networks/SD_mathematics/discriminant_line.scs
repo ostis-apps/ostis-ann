@@ -1,0 +1,96 @@
+discriminant_line<-sc_node_not_relation;;
+
+discriminant_line=>nrel_main_idtf:
+[дискриминантная линия](*<-lang_ru;;*);
+[discriminant line](*<-lang_en;;*);;
+discriminant_line=>nrel_idtf:
+[дискриминантная кривая](*<-lang_ru;;*);;
+
+
+nrel_inclusion->(math_concept=>discriminant_line);;
+
+discriminant_line<- rrel_key_sc_element: ...
+(*
+<- definition;;
+=> nrel_main_idtf:
+      [Опр. (дискриминантная линия)] (* <- lang_ru;; *);;
+=> nrel_using_constants: 
+	{
+		differential_equation;
+		equation;
+		coordinates;
+		point;
+		set;
+		plane;
+		relation;
+		nrel_exception
+	};; 
+<= nrel_sc_text_translation: ... 
+		(*
+			->rrel_example:
+			[Дискриминантная линия - дифференциального уравнения 1-го порядка F(x,y,y')=0-<b><sc_element sys_idtf="set">множество</b> <b><sc_element sys_idtf="point">точек</b> (x,y)<b><sc_element sys_idtf="plane">плоскости</b>, <b><sc_element sys_idtf="coordinates">кординаты</b> которых удовлетворяют <b><sc_element sys_idtf="equation">уравнению</b> p(x,y)=0 получаемого исключением y' из соотношения F0 и F'y=0.](*<- lang_ru;;=>nrel_format: format_html;;*);;
+		*);;
+*);;
+
+
+discriminant_line<- rrel_key_sc_element: ... 
+(*
+ => nrel_main_idtf:
+[Утв. 1 о дискриминантной линии] (* <- lang_ru;; *);;
+ <= nrel_sc_text_translation: ...
+	 (*
+    	  -> rrel_example:
+		[Дискриминантная линия является <b><sc_element sys_idtf="special_decision">осбым решением</b> <b><sc_element sys_idtf="differential_equation">дифференциальног уравнения</b> если последнее существует.](*<-lang_ru;;=>nrel_format: format_html;;*);;
+	*);;
+=> nrel_using_constants: 
+{
+differential_equation;
+nrel_desision;
+special_decision
+};;
+*);;
+
+
+discriminant_line-> rrel_example:
+[*
+special_decision->a;;
+differential_equation->A;;
+a<=nrel_desision:A;;
+*];;
+
+illustration -> rrel_example: ...
+(*
+	=> nrel_main_idtf: [Рис.(дискриминатная линия)] (* <- lang_ru;; *);;
+	-> rrel_key_sc_element: discriminant_line;;
+	<= nrel_sc_text_translation: ... (* -> "file://images//disc_line.png";; *);;
+*);;
+
+discriminant_line<-rrel_explored_concept: section_subject_domain_mathematics;;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

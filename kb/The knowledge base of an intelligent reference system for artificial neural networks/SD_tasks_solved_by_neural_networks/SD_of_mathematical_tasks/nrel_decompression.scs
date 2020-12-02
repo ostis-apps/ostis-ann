@@ -1,0 +1,45 @@
+nrel_decompression
+<-sc_node_norole_relation;
+=>nrel_main_idtf:[decompression*](* <-lang_en;; *);
+=>nrel_main_idtf:[восстановление входных данных*](* <-lang_ru;; *);
+
+<-rrel_key_sc_element: ...
+	(*
+		<-definition;;
+		=> nrel_main_idtf: [Опр.(восстановление входных данных*)](* <- lang_ru;; *);;
+		<= nrel_sc_text_translation:...
+		(*
+			-> rrel_example: [Восстановление входных данных - бинарное отношение бинарное отношение между множествами элементов скрытого и выходного слоев, где множество элементов скрытого слоя строго включено в множество элементов выходного слоя.](* <- lang_ru;; *);;
+		*);;
+		<= nrel_using_constants : ...
+		(*
+			->nrel_input_layer; set; binary_relation;;
+		*);;
+	*); 
+
+ => nrel_first_domain:hidden_nrel_layer;
+ => nrel_second_domain:output_layer;
+
+ => nrel_definitional_domain:...
+	(*
+		<= nrel_combination: hidden_nrel_layer; output_layer;;
+	*);
+
+<-rrel_key_sc_element:...
+	(*
+        	<-statement;
+		=> nrel_main_idtf: [Утв.(распознавание образов, задача, решение)](* <- lang_ru;; *);;
+		<= nrel_sc_text_translation:...
+		(*
+			-> rrel_example: [Восстановление входных данных производится при решении задачи распознавания образов.](* <- lang_ru;; *);;
+		*);;
+*);
+
+<-oriented_relation; antireflexive_relation; transitive_relation; antisymmetric_relation;
+
+<=nrel_inclusion:concept_mathematical_tasks;
+<-rrel_explored_concept: section_subject_domain_of_mathematical_tasks;;
+
+
+
+

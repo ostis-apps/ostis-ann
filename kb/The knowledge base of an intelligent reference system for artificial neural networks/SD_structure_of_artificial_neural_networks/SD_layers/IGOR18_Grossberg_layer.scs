@@ -1,0 +1,69 @@
+sc_node_norole_relation->Grossberg_layer;;
+Grossberg_layer->nrel_main_idtf:[Grossberg nrel_layer*](* <-lang_en;; *);;
+Grossberg_layer->nrel_main_idtf:[слой Гроссберга*](* <-lang_ru;; *);;
+ definition -> ...
+	(*
+		=> nrel_main_idtf: [Опр.(слой Гроссберга*)](* <- lang_ru;; *);;
+		<= nrel_sc_text_translation:...
+		(*
+			-> rrel_example: [Слой Гроссберга - слой нейронной без нейронов смещения, где только один нейронный узел отличен от нуля.](* <- lang_ru;; *);;
+		*);;
+		-> rrel_key_sc_element: Grossberg_layer;;
+		<= nrel_using_constants :...
+		(*
+			-> concept_context_neuron; nrel_layer; concept_neuron_node; self_organizing_neural_network; unique_existence; negation;;
+		*);;
+	*);; 
+Grossberg_layer => nrel_first_domain: concept_neural_network_in_graphical_representation;;
+Grossberg_layer => nrel_second_domain: number;;
+Grossberg_layer => nrel_definitional_domain:...
+	(*
+		<= nrel_combination:...
+		(*
+			-> concept_neural_network_in_graphical_representation; number;;
+		*);;
+	*);;
+statement -> ...
+	(*
+         -> rrel_key_sc_element:  Grossberg_layer; Kohonen_layer; negation; nrel_equal_of_quantities; concept_neuron_node; nrel_mapping;;
+		=> nrel_main_idtf: [Утв.(нейронный узел, слой Кохонена*, соответствие*, отрицание, равенство величин*)](* <- lang_ru;; *);;
+		<= nrel_sc_text_translation:...
+		(*
+			-> rrel_example: [Ненулевой нейронный узел слоя Гроссберга ставится в соответствие единичному нейронному узлу слоя Кохонена.](* <- lang_ru;; *);;
+		*);;
+*);;
+Grossberg_layer<-oriented_relation; antireflexive_relation; antitransitive_relation; antisymmetric_relation;;
+
+Grossberg_layer<-rrel_explored_concept: section_subject_domain_of_layers;;
+//done
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

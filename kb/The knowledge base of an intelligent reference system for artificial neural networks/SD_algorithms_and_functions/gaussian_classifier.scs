@@ -1,0 +1,98 @@
+gaussian_classifier<-sc_node_not_relation;;
+classifier<-sc_node_not_relation;;
+nrel_more_or_equal<-sc_node_norole_relation;;
+nrel_less_or_equal<-sc_node_norole_relation;;
+nrel_minimal_probability<-sc_node_norole_relation;;
+nrel_maximal_probability<-sc_node_norole_relation;;
+
+nrel_inclusion<-sc_node_norole_relation;;
+gaussian_classifier=>nrel_main_idtf:
+[гауссов классификатор](*<-lang_ru;;*);
+[gaussian classifier](*<-lang_en;;*);;
+gaussian_classifier=>nrel_idtf:
+[Наивный байсовский классификатор](*<-lang_ru;;*);;
+
+
+nrel_inclusion->(classifier=>gaussian_classifier);;
+
+gaussian_classifier<- rrel_key_sc_element: ...
+(*
+<- definition;;
+=> nrel_main_idtf:
+      [Опр. (гауссов классификатор)] (* <- lang_ru;; *);;
+=> nrel_using_constants: 
+	{
+      	concept_class(*<-sc_node_not_relation;;*);
+		symptom(*<-sc_node_not_relation;;*);
+		classifier(*<-sc_node_not_relation;;*);
+		Bayes_theorem(*<-sc_node_not_relation;;*);
+		nrel_sumption(*<- sc_node_norole_relation;;*);
+		probability(*<-sc_node_not_relation;;*)
+	};; 
+<= nrel_sc_text_translation: ... 
+		(*
+			->rrel_example:
+			[Гауссов классификатор - это такой классификатор в основе которого лежат теорема Байса и допущение того что признаки класса абсолютны и независимы друг от друга.](*<- lang_ru;;*);;
+		*);;
+*);;
+
+
+gaussian_classifier<- rrel_key_sc_element: ... 
+(*
+ => nrel_main_idtf:
+[Утв. 1 об гауссовом классификаторе] (* <- lang_ru;; *);;
+ <= nrel_sc_text_translation: ...
+	 (*
+    	  -> rrel_example:
+		[Для определения класса объекта через гауссов классификатор используеться теорема байса](*<-lang_ru;;*);;
+	*);;
+=> nrel_using_constants: 
+{
+Bayes_theorem(*<-sc_node_not_relation;;*);
+concept_class(*<-sc_node_not_relation;;*);
+classifier(*<-sc_node_not_relation;;*)
+};;
+*);;
+
+gaussian_classifier-> rrel_example:
+[*
+concept_class->class_of_object_1;;
+symptom->...
+	(*
+	=>nrel_application_Bayes_theorem:...
+		(*
+		<-probability;;
+		=>nrel_sumption:...
+			(*
+				<-probability;;
+	
+				=>nrel_more_or_equal:...
+				(*
+					<-probability;;
+					<=nrel_minimal_probability:class_of_object_1;;
+				*);;
+	
+				=>nrel_less_or_equal:...
+				(*
+					<-probability;;
+					<=nrel_maximal_probability:class_of_object_1;;
+				*);;
+			*);;
+		*);;
+	*);;
+
+gaussian_classifier<-rrel_explored_concept: section_subject_domain_of_algorithms_and_functions;;
+*];;
+
+
+
+
+
+
+
+
+
+
+
+
+

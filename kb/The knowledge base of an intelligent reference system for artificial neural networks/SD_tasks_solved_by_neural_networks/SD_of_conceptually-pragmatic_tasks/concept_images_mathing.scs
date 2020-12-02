@@ -1,0 +1,53 @@
+concept_images_mathing
+<-sc_node_not_relation;
+<=nrel_inclusion:concept_conceptually_pragmatic_tasks;
+
+=>nrel_main_idtf:
+[анализ изображений](*<-lang_ru;;*);
+[images mathing](*<-lang_en;;*);
+
+=>nrel_idtf:
+[сравнение изображений](*<-lang_ru;;*);
+
+<- rrel_key_sc_element: ...
+(*
+<- definition;;
+=> nrel_main_idtf:
+      [Опр. (анализ изображений)] (* <- lang_ru;; *);;
+=> nrel_using_constants: 
+	{
+		task;
+		concept_neural_network_in_graphical_representation;
+		object;
+ 		image
+	};; 
+<= nrel_sc_text_translation: ... 
+		(*
+			->rrel_example:
+			[Анализ изображений-стандартная <b><sc_element sys_idtf="task">задача</b> решаемая с помощью <b><sc_element sys_idtf="concept_neural_network_in_graphical_representation">нейронных сетей</b>, заключающийся в <b><sc_element sys_idtf="concept_images_clustering">кластеризации изображений</b> и выделении логических <b><sc_element sys_idtf="object">объектов</b> а так же в отслеживании их изменений.](*<- lang_ru;; =>nrel_format: format_html;;*);;
+		*);;
+*);
+
+
+<- rrel_key_sc_element: ... 
+(*
+ => nrel_main_idtf:
+[Утв. 1 о генерции изображений.] (* <- lang_ru;; *);;
+ <= nrel_sc_text_translation: ...
+	 (*
+    	  -> rrel_example:
+		[Анализ изображений одна из самых расспрастранённых <b><sc_element sys_idtf="task">задач</b> решаемых <b><sc_element sys_idtf="concept_neural_network_in_graphical_representation">инс</b>.](*<-lang_ru;; =>nrel_format: format_html;;*);;
+	*);;
+=> nrel_using_constants: 
+{
+concept_neural_network_in_graphical_representation;
+task
+};;
+*);
+
+
+<-rrel_explored_concept: section_subject_domain_of_conceptually_pragmatic_tasks;;
+
+
+
+

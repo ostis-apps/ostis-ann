@@ -1,0 +1,22 @@
+subject_domain_of_mathematical_tasks
+	=> nrel_main_idtf:
+	[Предметная область математических задач]
+	(* <- lang_ru;; *);
+	[Subject domain of mathematical tasks]
+	(* <- lang_en;; *);
+		
+<- subject_domain;;
+
+
+
+
+
+
+
+
+
+
+
+
+
+

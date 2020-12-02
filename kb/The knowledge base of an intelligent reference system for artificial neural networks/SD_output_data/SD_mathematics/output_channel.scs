@@ -1,0 +1,39 @@
+sc_node_not_relation->output_channel;;
+
+
+
+output_channel=> nrel_main_idtf: [выходной канал](* <- lang_ru;; *);;
+output_channel=> nrel_main_idtf: [output channel](* <- lang_en;; *);;
+definition ->...
+(*
+->rrel_key_sc_element: output_channel;;
+<= nrel_sc_text_translation: ...(*->rrel_example:[Выходной канал  — канал  <b><sc_element sys_idtf="neuron">нейрона</b>,через который <b><sc_element sys_idtf="neuron">нейрон</b> выдаёт данные.](*<-lang_ru;;=> nrel_format: format_html;;*);;*);;
+=> nrel_main_idtf: [Определение (выходной канал)](*<- lang_ru;;=> nrel_format: format_html;;*);;
+=> nrel_using_constants:
+{ 
+channel;
+output_data;
+neuron
+};;
+*);; 
+
+
+statement ->...
+(*
+->rrel_key_sc_element: output_channel;;
+<= nrel_sc_text_translation: ...(*->rrel_example:[В <b><sc_element sys_idtf="neuron">нейроне</b> пристутсвует несколько выходных каналов,по которым <b><sc_element sys_idtf="output_data">выходные данные</b> передаются в другие <b><sc_element sys_idtf="neuron">нейроны</b> или на <b><sc_element sys_idtf="output">выход</b>.](*<-lang_ru;;=> nrel_format: format_html;;*);;*);;
+=> nrel_main_idtf: [Утверждение(выходной канал)](*<- lang_ru;;=> nrel_format: format_html;;*);;
+=> nrel_using_constants:
+{
+output_data;
+neuron;
+output
+};;
+*);;
+second_output_channel<-rrel_example:output_channel;;
+output_channel<=nrel_inclusion:channel;;
+output_channel<-rrel_explored_concept: section_subject_domain_of_output_mathematics_data;;
+
+
+
+

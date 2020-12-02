@@ -1,0 +1,78 @@
+differential<-sc_node_not_relation;;
+
+differential=>nrel_main_idtf:
+[дифференциал](*<-lang_ru;;*);
+[differential](*<-lang_en;;*);;
+
+
+nrel_inclusion->(math_concept=>differential);;
+
+differential<- rrel_key_sc_element: ...
+(*
+<- definition;;
+=> nrel_main_idtf:
+      [Опр. (дифференциал)] (* <- lang_ru;; *);;
+=> nrel_using_constants: 
+	{
+		function_increment;
+		nrel_line_part
+	};; 
+<= nrel_sc_text_translation: ... 
+		(*
+			->rrel_example:
+			[Дифференциал - <b><sc_element sys_idtf="nrel_line_part">линейная часть</b> <b><sc_element sys_idtf="function_increment">приращения функции</b>.](*<- lang_ru;;=>nrel_format: format_html;;*);;
+		*);;
+*);;
+
+
+differential<- rrel_key_sc_element: ... 
+(*
+ => nrel_main_idtf:
+[Утв. 1 о дифференциал] (* <- lang_ru;; *);;
+ <= nrel_sc_text_translation: ...
+	 (*
+    	  -> rrel_example:
+		[Иногда дифференциал вводится как часть <b><sc_element sys_idtf="definition">определения</b> <b><sc_element sys_idtf="integral">интеграла</b>](*<-lang_ru;;=>nrel_format: format_html;;*);;
+	*);;
+=> nrel_using_constants: 
+{
+integral;
+nrel_part;
+definition
+};;
+*);;
+
+differential-> rrel_example:
+[*
+differential<=nrel_line_part:function_increment;;
+*];;
+
+differential<-rrel_explored_concept: section_subject_domain_mathematics;;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

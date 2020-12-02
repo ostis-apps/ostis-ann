@@ -1,0 +1,72 @@
+concept_neuron_node<-sc_node_not_relation;;
+concept_neuron_node
+	=>nrel_main_idtf:
+	[нейронный узел]
+	(* <- lang_ru;; *);
+	
+///////////////////////////////////////////////////////////////////////////
+	<-rrel_key_sc_element: 
+	Definition_of_concept_neuron_node
+		(*
+			<-definition;;
+			<=nrel_sc_text_translation:...
+			(*
+				-> rrel_example:
+				[<p>				
+				<b>Нейронный узел</b>  - вершина <sc_element sys_idtf = "concept_neural_network_in_graphical_representation">нейронной сети в графовом представлении</sc_element> .
+				</p>] 
+				(*
+				<-lang_ru;;
+				=> nrel_format: format_html;;
+				*);;
+			*);;
+		=>nrel_main_idtf:[Опр. (нейронный узел)](* <-lang_ru;; => nrel_format: format_html;;*);;
+		<=nrel_using_constants:...
+			(*
+				->concept_neural_network_in_graphical_representation;vertex;; 
+			*);;
+		*);
+///////////////////////////////////////////////////////////////////
+<- rrel_key_sc_element:...
+(*
+	<- illustration;;
+	=> nrel_main_idtf: [Рис. (нейронный узел)] (* <- lang_ru;;	*);;
+	<= nrel_sc_text_translation:...
+	(*
+		-> rrel_example: "file://images/neuron_node.png"
+		(*
+			=> nrel_format: format_png;;
+		*);;
+	*);;
+*);
+<-rrel_explored_concept:section_subject_domain_of_neurons;;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

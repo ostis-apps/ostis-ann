@@ -1,0 +1,65 @@
+nrel_forecasting => nrel_main_idtf:
+      [прогнозирование*](*<-lang_ru;;*);
+       [forecasting*](*<-lang_en;;*);;
+
+nrel_forecasting <-rrel_key_sc_element: ... 
+(*
+<- definition;;
+=> nrel_main_idtf:[Опр. (прогнозирование*)](* <- lang_ru;; *);;
+<= nrel_sc_text_translation: ...
+	 (*
+      -> rrel_example:[ Прогнозиорвание - это специальное <b><sc_element sys_idtf="scientific_research">научное исследование</b> конкретных перспектив дальнейшего <b><sc_element sys_idtf="development">развития</b> какого-либо <b><sc_element sys_idtf="process">процесса</b>. ](* <- lang_ru;;=>nrel_format: format_html;;*);;
+	*);;
+=> nrel_using_constants: 
+	{
+		scientific_research;
+ 		development;
+		process
+    	};;
+*);;
+
+nrel_forecasting 
+<- sc_node_norole_relation;
+<- binary_relation;
+<- oriented_relation;
+<- antireflexive_relation;
+<|- symmetric_relation;
+<- transitive_relation;;
+
+nrel_forecasting 
+=> nrel_first_domain:process;
+=> nrel_second_domain: process;;
+
+nrel_forecasting =>nrel_definitional_domain:...
+(*
+<=nrel_combination: process;;
+*);;
+
+nrel_forecasting <- rrel_key_sc_element: ... 
+(*
+ <- explanation;;
+ => nrel_main_idtf:[Утв.(Прогнозирование)] (* <- lang_ru;; *);;
+<= nrel_sc_text_translation: ... 
+	(*
+      -> rrel_example:[Необходимость прогнозизрования обусловлена <b><sc_element sys_idtf="wish">желанием</b> знать <b><sc_element sys_idtf="future_event">события будущего</b>.](* <- lang_ru;; =>nrel_format: format_html;;*);;
+	*);;
+=> nrel_using_constants: 
+	{
+          wish;
+		future_event;
+		nrel_knowledge
+    	};;
+*);;
+
+number->2;;
+arity->...
+(*
+<-sc_node_not_relation;;
+<=nrel_mesaurement:2;;
+->nrel_forecasting ;;
+*);;
+nrel_forecasting<-rrel_explored_concept: section_subject_domain_of_conceptually_pragmatic_tasks;;
+
+
+
+

@@ -1,0 +1,25 @@
+concept_scientific_method<-sc_node_not_relation;;
+concept_identify_a_tendency<-sc_node_not_relation;;
+concept_message<-sc_node_not_relation;;
+concept_characteristic<-sc_node_not_relation;;
+nrel_search<- sc_node_norole_relation;;
+concept_association_memory<-sc_node_not_relation;;
+concept_segment<-sc_node_not_relation;;
+concept_transmission_time<-sc_node_not_relation;;
+nrel_modeling<- sc_node_norole_relation;;
+
+sc_node_norole_relation->nrel_calculation;;
+
+sc_node_not_relation->input_value;;
+sc_node_not_relation->output_variable;;
+sc_node_not_relation->forecast;;
+sc_node_not_relation->planning;;
+sc_node_not_relation->68;;
+sc_node_not_relation->neural_network_task;;
+
+sc_node_not_relation->algorithmic_data_conversion;;
+sc_node_not_relation->volume;;
+sc_node_not_relation->reduce;;
+sc_node_not_relation->information_source_model;;
+sc_node_not_relation->method;;
+sc_node_not_relation->some_information;;

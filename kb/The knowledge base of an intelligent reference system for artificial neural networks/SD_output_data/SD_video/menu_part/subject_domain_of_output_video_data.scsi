@@ -1,0 +1,21 @@
+subject_domain_of_output_video_data
+	=> nrel_main_idtf:
+	[Предметная область выходных видеоданных искусственных нейронных сетей]
+	(* <- lang_ru;; *);
+	[Subject domain of output video data]
+	(* <- lang_en;; *);
+		
+<- subject_domain;;
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,25 @@
+section_subject_domain_of_conceptually_pragmatic_tasks
+=> nrel_main_idtf: 
+	[Раздел. Предметная область концептуально-прагматических задач]
+	(* <- lang_ru;;*);
+	[Section. Subject domain of conceptually-pragmatic tasks]
+	(* <- lang_en;; *);
+
+<- not_enough_formed_structure;
+<- atomic_section;;
+
+section_subject_domain_of_conceptually_pragmatic_tasks = [*^"file://subject_domain_of_conceptually_pragmatic_tasks.scsi"*];;
+
+
+
+
+
+
+
+
+
+
+
+
+
+

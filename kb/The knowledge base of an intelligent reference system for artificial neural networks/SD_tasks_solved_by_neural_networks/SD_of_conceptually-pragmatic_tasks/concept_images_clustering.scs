@@ -1,0 +1,50 @@
+concept_images_clustering
+<-sc_node_not_relation;
+<=nrel_inclusion:concept_conceptually_pragmatic_tasks;
+
+=>nrel_main_idtf:
+[кластеризация изображений](*<-lang_ru;;*);
+[images clustering](*<-lang_en;;*);
+
+=>nrel_idtf:
+[сегметнация](*<-lang_ru;;*);
+
+<- rrel_key_sc_element: ...
+(*
+<- definition;;
+=> nrel_main_idtf:
+      [Опр. (кластеризаиця изображений)] (* <- lang_ru;; *);;
+=> nrel_using_constants: 
+	{
+		concept_segment;
+		image;
+		process
+	};; 
+<= nrel_sc_text_translation: ... 
+		(*
+			->rrel_example:
+			[Кластеризаиця изображений- это <b><sc_element sys_idtf="process">процесс разделения</b> <b><sc_element sys_idtf="image">цифрового изображения</b> на несколько <b><sc_element sys_idtf="concept_segment">сегментов</b>.](*<- lang_ru;; =>nrel_format: format_html;;*);;
+		*);;
+*);
+
+
+<- rrel_key_sc_element: ... 
+(*
+ => nrel_main_idtf:
+[Утв. 1 о прогназировании процессов.] (* <- lang_ru;; *);;
+ <= nrel_sc_text_translation: ...
+	 (*
+    	  -> rrel_example:
+		[Цель сегментации заключается в упрощении и/или изменении представления <b><sc_element sys_idtf="image">изображения</b>, чтобы его было проще анализировать.](*<-lang_ru;; =>nrel_format: format_html;;*);;
+	*);;
+=> nrel_using_constants: 
+{
+image
+};;
+*);
+
+<-rrel_explored_concept: section_subject_domain_of_conceptually_pragmatic_tasks;;
+
+
+
+

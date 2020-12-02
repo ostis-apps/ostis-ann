@@ -1,0 +1,65 @@
+sc_node_not_relation->intermediate_neural_element;;
+sc_node_not_relation->neural_element;;
+sc_node_not_relation->input_neural_element;;
+sc_node_not_relation->output_neural_element;;
+sc_node_not_relation->neuron;;
+sc_node_not_relation->neural_element_y;;
+
+intermediate_neural_element=> nrel_main_idtf: [промежуточный нейронный элемент](* <- lang_ru;; *);;
+intermediate_neural_element=> nrel_main_idtf: [intermediate neural element](* <- lang_en;; *);;
+definition ->...
+(*
+->rrel_key_sc_element: intermediate_neural_element;;
+<= nrel_sc_text_translation: ...(*->rrel_example:[Промежуточный нейронный элемент - нейронный элмент который служит связью между входными нейронными элементами и выходными нейронными элементами.](*<-lang_ru;;*);;*);;
+=> nrel_main_idtf: [Определение (промежуточный нейронный элемент)](*<- lang_ru;;*);;
+=> nrel_using_constants:
+{ 
+ neural_element;
+ input_neural_element;
+output_neural_element
+};;
+*);; 
+
+statement ->...
+(*
+->rrel_key_sc_element: intermediate_neural_element;;
+<= nrel_sc_text_translation: ...(*->rrel_example:[Может быть несколько промежуточных нейронных элементов в одном нейроне.](*<-lang_ru;;*);;*);;
+=> nrel_main_idtf: [Утверждение(промежуточный нейронный элемент)](*<- lang_ru;;*);;
+=> nrel_using_constants:
+{
+neuron;
+neural_element
+};;
+*);;
+neural_element_y<-rrel_example:intermediate_neural_element;;
+intermediate_neural_element=>nrel_inclusion:neural_element;;
+
+intermediate_neural_element<-rrel_explored_concept: section_subject_domain_of_neurons;;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

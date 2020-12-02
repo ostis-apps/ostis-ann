@@ -1,0 +1,84 @@
+angle<-sc_node_not_relation;;
+
+angle=>nrel_main_idtf:
+[угол](*<-lang_ru;;*);
+[angle](*<-lang_en;;*);;
+
+nrel_inclusion->(math_concept=>angle);;
+
+angle<- rrel_key_sc_element: ...
+(*
+<- definition;;
+=> nrel_main_idtf:
+      [Опр. (угол)] (* <- lang_ru;; *);;
+=> nrel_using_constants: 
+	{
+		point;
+		geometric_figure;
+		ray
+	};; 
+<= nrel_sc_text_translation: ... 
+		(*
+			->rrel_example:
+			[Угол - это геометрическая фигура образованная двумя лучами, выходящими из одной точки.](*<- lang_ru;;*);;
+		*);;
+*);;
+
+
+angle<- rrel_key_sc_element: ... 
+(*
+ => nrel_main_idtf:
+[Утв. 1 об угле] (* <- lang_ru;; *);;
+ <= nrel_sc_text_translation: ...
+	 (*
+    	  -> rrel_example:
+		[У треугольника три угла](*<-lang_ru;;*);;
+	*);;
+=> nrel_using_constants: 
+{
+triangle;
+number
+};;
+*);;
+
+angle-> rrel_example:
+[*
+angle->a;;
+angle->b;;
+angle->c;;
+triangle->a;;
+triangle->b;;
+triangle->c;;
+*];;
+
+angle<-rrel_explored_concept: section_subject_domain_mathematics;;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

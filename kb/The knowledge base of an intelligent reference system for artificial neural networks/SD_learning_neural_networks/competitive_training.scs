@@ -1,0 +1,83 @@
+competitive_training<-sc_node_not_relation;;
+
+competitive_training=>nrel_main_idtf:
+[конкурентное обучение](*<-lang_ru;;*);
+[competitive training](*<-lang_en;;*);;
+
+nrel_inclusion->(kohonen_network=>competitive_training);;
+
+competitive_training<- rrel_key_sc_element: ...
+(*
+<- definition;;
+=> nrel_main_idtf:
+      [Опр. (крнкурентное обучение)] (* <- lang_ru;; *);;
+=> nrel_using_constants: 
+	{
+		iteration;
+		competition;
+		weight_adjustment;
+		association
+	};; 
+<= nrel_sc_text_translation: ... 
+		(*
+			->rrel_example:
+			[Конкурентное обучение - это итерационный процесс, в котором на каждой итерации выполняется 3 действия: конкуренция, объединение, подстройка весов.](*<- lang_ru;;*);;
+		*);;
+*);;
+
+
+competitive_training<- rrel_key_sc_element: ... 
+(*
+ => nrel_main_idtf:
+[Утв. 1 об конкурентном обучении] (* <- lang_ru;; *);;
+ <= nrel_sc_text_translation: ...
+	 (*
+    	  -> rrel_example:
+		[Испоьзуется в сетях Кохонена](*<-lang_ru;;*);;
+	*);;
+=> nrel_using_constants: 
+{
+kohonen_network
+};;
+*);;
+
+illustration -> rrel_example: ...
+(*
+	=> nrel_main_idtf: [Рис.(конкурентном обучении)] (* <- lang_ru;; *);;
+	-> rrel_key_sc_element: competitive_training;;
+	<= nrel_sc_text_translation: ... (* -> "file://images//competitive_training.png";; *);;
+*);;
+competitive_training<-rrel_explored_concept: section_subject_domain_of_learning_neural_networks;;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

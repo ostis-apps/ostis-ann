@@ -1,0 +1,40 @@
+sc_node_not_relation->input_cortege;;
+
+input_cortege=> nrel_main_idtf: [входной кортеж](* <- lang_ru;; *);;
+input_cortege=> nrel_main_idtf: [input cortege](* <- lang_en;; *);;
+definition ->...
+(*
+->rrel_key_sc_element: input_cortege;;
+<= nrel_sc_text_translation: ...(*->rrel_example:[Входной кортеж - упорядоченное  <b><sc_element sys_idtf="set">множество</b>,состоящее из  элементов,которые поступают в нейроннyю сеть в виде  <b><sc_element sys_idtf="input_data">входных данных</b>  .](*<-lang_ru;;=> nrel_format: format_html;;*);;*);;
+=> nrel_main_idtf: [Определение (входной кортеж)](*<- lang_ru;;=> nrel_format: format_html;;*);;
+=> nrel_using_constants:
+{ 
+set;
+neural_network;
+input_data
+};;
+*);; 
+
+
+statement ->...
+(*
+->rrel_key_sc_element: input_cortege;;
+<= nrel_sc_text_translation: ...(*->rrel_example:[Кортежи так же как и <b><sc_element sys_idtf="input_set">множество</b> используются для решения задач дискретной математике.](*<-lang_ru;;=> nrel_format: format_html;;*);;*);;
+=> nrel_main_idtf: [Утверждение(входной кортеж)](*<- lang_ru;;=> nrel_format: format_html;;*);;
+=> nrel_using_constants:
+{
+input_set
+};;	
+*);;
+illustration -> ...
+(*
+->rrel_key_sc_element: input_picture;;
+<= nrel_sc_text_translation: ...(*->"file://images/input_cortege.png";;*);;
+=> nrel_main_idtf: [Рисунок(входной кортеж)](*<- lang_ru;;*);;
+*);;
+input_data=>nrel_inclusion:input_cortege;;
+input_cortege<-rrel_explored_concept: section_subject_domain_of_input_mathematics_data;;
+
+
+
+

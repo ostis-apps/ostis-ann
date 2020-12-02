@@ -1,0 +1,43 @@
+concept_array<-sc_node_not_relation;
+
+=> nrel_main_idtf: [массив](* <- lang_ru;; *);
+=> nrel_main_idtf: [array](* <- lang_en;; *);
+
+ <-rrel_key_sc_element: ...
+(*
+<- definition;;
+<= nrel_sc_text_translation: ...(*->rrel_example:[Массив  — структура данных, хранящая набор значений (элементов массива), идентифицируемых по индексу или набору индексов.](*<-lang_ru;;*);;*);;
+=> nrel_main_idtf: [Определение (массив)](*<- lang_ru;;*);;
+=> nrel_using_constants:
+{ 
+data_structure;
+ index;
+array_element;
+nrel_store
+};;
+*);; 
+
+<-rrel_key_sc_element: ...
+(*
+<= nrel_sc_text_translation: ...(*->rrel_example:[Массив относится к структурам данных с произвольным доступом.](*<-lang_ru;;*);;*);;
+=> nrel_main_idtf: [Утверждение(массив)](*<- lang_ru;;*);;
+=> nrel_using_constants:
+{
+data_structure;
+arbitrary_access
+};;
+*);;
+
+<-rrel_key_sc_element:...
+(*
+<= nrel_sc_text_translation: ...(*->rrel_example:[Форма или структура массива — сведения о количестве размерностей и размере (протяжённости) массива по каждой из размерностей.](*<-lang_ru;;*);;*);;
+=> nrel_main_idtf: [Утверждение(массив)](*<- lang_ru;;*);;
+=> nrel_using_constants:
+{
+nrel_size;
+nrel_dimension
+};;
+*);
+
+->rrel_example:vector;;
+=>nrel_inclusion:data_structure;;

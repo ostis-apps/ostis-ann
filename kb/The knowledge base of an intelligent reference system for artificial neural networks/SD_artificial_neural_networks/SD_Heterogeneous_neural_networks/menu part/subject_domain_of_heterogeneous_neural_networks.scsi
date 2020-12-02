@@ -1,0 +1,31 @@
+subject_domain_of_heterogeneous_neural_networks
+	=> nrel_main_idtf:
+	[Предметная область гетерогенных нейронных сетей]
+	(* <- lang_ru;; *);
+	[Subject domain of heterogeneous neural networks]
+	(* <- lang_en;; *);
+		
+<- subject_domain;
+-> rrel_maximum_studied_object_class: 
+	heterogeneous_neural_network;;
+	
+//heterogeneous_neural_network
+	//<- sc_node_not_relation;
+	//=>nrel_main_idtf:
+	//[гетерогенная нейронная сеть]
+	//(* <- lang_ru;;*);
+	//[heterogeneous neural network]
+	//(* <- lang_en;; *);;
+
+
+
+
+
+
+
+
+
+
+
+
+

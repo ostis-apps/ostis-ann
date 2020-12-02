@@ -1,0 +1,38 @@
+concept_forecast_horizon
+<-sc_node_not_relation;
+
+=> nrel_main_idtf: [горизонт прогназирования](* <- lang_ru;; *);
+=> nrel_main_idtf: [forecast horizon](* <- lang_en;; *);
+
+<- rrel_key_sc_element: ...
+(*
+<-definition;;
+<= nrel_sc_text_translation: ...(*->rrel_example:[Горизонт прогнозирования - число шагов по времени, считая от последнего входного значения, на которое нужно спрогнозировать значения выходной переменной.](*<-lang_ru;;*);;*);;
+=> nrel_main_idtf: [Определение (горизонт прогназирования)](*<- lang_ru;;*);;
+=> nrel_using_constants:
+{ 
+number;
+ input_value;
+output_variable
+};;
+*);
+
+<-rrel_key_sc_element: ...
+(*
+<- statement ;;
+=> nrel_main_idtf: [Утверждение(горизонт прогназирования)](*<- lang_ru;;*);;
+<= nrel_sc_text_translation: ...(*->rrel_example:[Горизонт прогнозирования применяется в задачах на прогнозирование и планирования.](*<-lang_ru;;*);;*);;
+=> nrel_using_constants:
+{
+period_of_time;
+forecast
+};;
+*);
+
+->rrel_example:68;
+=>nrel_inclusion:neural_network_task;;
+<-rrel_explored_concept: section_subject_domain_of_conceptually_pragmatic_tasks;;
+
+
+
+

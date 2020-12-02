@@ -1,0 +1,96 @@
+nrel_matrix_addition=>nrel_main_idtf:
+[сложение матриц](*<-lang_ru;;*);
+[matrix transplantation](*<-lang_en;;*);;
+
+nrel_matrix_addition<- rrel_key_sc_element: ...
+(*
+<- definition;;
+=> nrel_main_idtf:
+      [Опр. (сложение матриц)] (* <- lang_ru;; *);;
+=> nrel_using_constants: 
+	{
+		matrix;
+		matrix_element;
+		nrel_sum_of_numbers
+	};; 
+<= nrel_sc_text_translation: ... 
+		(*
+			->rrel_example:
+			[Сложение матриц - это математическая операция в ходе которой получается другая <b><sc_element sys_idtf="matrix">матрица</b>, каждый элемент которой соответсвует <b><sc_element sys_idtf="nrel_sum_of_numbers">сумме</b> соответсвующих <b><sc_element sys_idtf="matrix_element">элементов</b> в складываемых <b><sc_element sys_idtf="matrix">матрицах</b>.](*<- lang_ru;;=>nrel_format: format_html;;*);;
+		*);;
+*);;
+
+
+nrel_matrix_addition
+<- sc_node_norole_relation;
+<- binary_relation;
+<- oriented_relation;
+<|- reflexive_relation;
+<|- symmetric_relation;
+<|- transitive_relation;;
+
+nrel_matrix_addition
+=> nrel_first_domain:matrix;
+=> nrel_second_domain: matrix;;
+nrel_forecasting =>nrel_definitional_domain:...
+(*
+<=nrel_combination: matrix;;
+*);;
+
+nrel_matrix_addition<- rrel_key_sc_element: ... 
+(*
+ => nrel_main_idtf:[Утв. (Сложение матриц)] (* <- lang_ru;; *);;
+ <= nrel_sc_text_translation: ...
+	 (*
+    	  -> rrel_example:
+		[Складывать можно <b><sc_element sys_idtf="matrix">матрицы</b> только с одинаковой <b><sc_element sys_idtf="matrix_dimension">размерностью</b>.](*<-lang_ru;;=>nrel_format: format_html;;*);;
+	*);;
+=> nrel_using_constants: 
+{
+matrix;
+matrix_dimension
+};;
+*);;
+
+
+nrel_inclusion->(mathematical_operation=>nrel_matrix_addition);;
+
+number->2;;
+arity->...
+(*
+<-sc_node_not_relation;;
+<=nrel_mesaurement:2;;
+->nrel_matrix_addition ;;
+*);;
+
+nrel_matrix_addition<-rrel_explored_concept: section_subject_domain_mathematics;;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,83 @@
+hyperbola<-sc_node_not_relation;;
+
+hyperbola=>nrel_main_idtf:
+[гипербола](*<-lang_ru;;*);
+[hyperbola](*<-lang_en;;*);;
+
+nrel_inclusion->(math_concept=>hyperbola);;
+
+hyperbola<- rrel_key_sc_element: ...
+(*
+<- definition;;
+=> nrel_main_idtf:
+      [Опр. (гипербола)] (* <- lang_ru;; *);;
+=> nrel_using_constants: 
+	{
+		section;
+		number;
+		eccentricity
+	};; 
+<= nrel_sc_text_translation: ... 
+		(*
+			->rrel_example:
+			[Гипербола - это коническое сечение с эксцентриситетом, бо́льшим единицы.](*<- lang_ru;;*);;
+		*);;
+*);;
+
+
+hyperbola<- rrel_key_sc_element: ... 
+(*
+ => nrel_main_idtf:
+[Утв. 1 об гиперболе] (* <- lang_ru;; *);;
+ <= nrel_sc_text_translation: ...
+	 (*
+    	  -> rrel_example:
+		[Гипербола состоит из двух отдельных кривых, которые называют ветвями](*<-lang_ru;;*);;
+	*);;
+=> nrel_using_constants: 
+{
+
+curve;
+ramification
+};;
+*);;
+
+illustration -> rrel_example: ...
+(*
+	=> nrel_main_idtf: [Рис.(гиперболы)] (* <- lang_ru;; *);;
+	-> rrel_key_sc_element: hyperbola;;
+	<= nrel_sc_text_translation: ... (* -> "file://images//hyperbola.png";; *);;
+*);;
+
+
+hyperbola<-rrel_explored_concept: section_subject_domain_mathematics;;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

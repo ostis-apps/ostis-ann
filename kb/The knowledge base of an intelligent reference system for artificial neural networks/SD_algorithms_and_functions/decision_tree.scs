@@ -1,0 +1,73 @@
+decision_tree
+	<- sc_node_not_relation;
+	=> nrel_main_idtf: [дерево решений] (* <- lang_ru;; *);
+	=> nrel_main_idtf: [decision tree] (* <- lang_en;; *);;
+
+
+definition -> ...
+	(*
+		-> rrel_key_sc_element: decision_tree;;
+		
+		=> nrel_main_idtf: [Опр.(дерево решений)] (* <- lang_ru;; *);;
+
+		<= nrel_using_constants: ...
+			(*
+				-> decision_tree_node;;
+			*);;
+
+		<= nrel_sc_text_translation: ...
+			(*
+				-> [Дерево решений - аналитический метод, позволяющий связать узлы принятия решения, возможные стратегии и их последствия с возможными факторами, условиями внешней среды; древовидная структура из множества узлов и множества дуг дерева решений] (* <- lang_ru;; *);;
+			*);;
+	*);;
+
+
+affirmation -> ...
+	(*
+		-> rrel_key_sc_element: decision_tree;;
+
+		=> nrel_main_idtf: [Утв.(дерево решений, бинарное дерево, узел дерева решений)] (* <- lang_ru;; *);;
+
+		<= nrel_sc_text_translation: ...
+			(*
+				-> [Дерево решений будет бинарным тогда и только тогда, когда все точки принятия решений будут предполагать ответы "да" или "нет"] (* <- lang_ru;; *);;
+			*);;
+	*);;
+
+
+//illustration -> rrel_example: ...
+//(*
+//	=> nrel_main_idtf: [Рис.(дерево решений)] (* <- lang_ru;; *);;
+//	-> rrel_key_sc_element: decision_tree;;
+//	<= nrel_sc_text_translation: ... (* -> "file://images//decision_tree.png";; *);;
+//*);;
+
+decision_tree<-rrel_explored_concept: section_subject_domain_of_algorithms_and_functions;;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

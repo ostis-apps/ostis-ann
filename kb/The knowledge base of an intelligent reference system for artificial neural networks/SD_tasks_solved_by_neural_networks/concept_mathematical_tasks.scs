@@ -1,0 +1,51 @@
+concept_mathematical_tasks
+<-sc_node_not_relation;
+<=nrel_inclusion:tasks;
+
+
+=>nrel_main_idtf:
+[математическая задача](*<-lang_ru;;*);
+[mathematical task](*<-lang_en;;*);
+
+<- rrel_key_sc_element: ...
+(*
+<- definition;;
+=> nrel_main_idtf:
+      [Опр. (математическая задача)] (* <- lang_ru;; *);;
+=> nrel_using_constants: 
+	{
+ 		number;
+		task;
+		math_concept
+	};; 
+<= nrel_sc_text_translation: ... 
+		(*
+			->rrel_example:
+			[Математическая задача - это <b><sc_element sys_idtf="task">задачи</b> включающие в себя непосредственную работу с <b><sc_element sys_idtf="number">числами</b> и <b><sc_element sys_idtf="math_concept">математическими законами</b>.](*<- lang_ru;; =>nrel_format: format_html;;*);;
+		*);;
+*);
+
+
+<- rrel_key_sc_element: ... 
+(*
+ => nrel_main_idtf:
+[Утв. 1 о математических задачах.] (* <- lang_ru;; *);;
+ <= nrel_sc_text_translation: ...
+	 (*
+    	  -> rrel_example:
+		[Математическая задача решённые при помощи <b><sc_element sys_idtf="concept_neural_network_in_graphical_representation">инс</b> часто имеют более сложное но более эфективное, чисто <b><sc_element sys_idtf="math_concept">математическое</b>, <b><sc_element sys_idtf="decision">решение</b>.](*<-lang_ru;; =>nrel_format: format_html;;*);;
+	*);;
+=> nrel_using_constants: 
+{
+math_concept;
+concept_neural_network_in_graphical_representation;
+decision
+};;
+*);
+
+
+<-rrel_explored_concept: section_subject_domain_tasks_solved_by_neural_networks;;
+
+
+
+

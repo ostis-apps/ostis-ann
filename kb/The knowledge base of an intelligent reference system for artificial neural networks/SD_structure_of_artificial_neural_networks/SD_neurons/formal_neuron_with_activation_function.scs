@@ -1,0 +1,76 @@
+formal_neuron_with_activation_function
+=>nrel_main_idtf:
+	[формальный нейрон с функцией активации]
+	(* <- lang_ru;; *);
+	
+///////////////////////////////////////////////////////////////////////////
+	<-rrel_key_sc_element: 
+	Definition_of_formal_neuron_with_activation_function
+		(*
+			<-definition;;
+			<=nrel_sc_text_translation:...
+			(*
+				-> rrel_example:
+				[<p>				
+				<b>Формальный нейрон с функцией активации</b>  - <sc_element sys_idtf = "formal_neuron">формальный нейрон</sc_element>,
+				который получает и преобразует входные данные их в соответствии с заданной <sc_element sys_idtf = "activation_function">функция активации</sc_element>.
+				</p>] 
+				(*
+				<-lang_ru;;
+				=> nrel_format: format_html;;
+				*);;
+			*);;
+		=>nrel_main_idtf:[Опр. (формальный нейрон c функцией активации)](* <-lang_ru;; => nrel_format: format_html;;*);;
+		<=nrel_using_constants:...
+			(*
+				->formal_neuron;input_data;nrel_activation_function;;
+			*);;
+		*);
+///////////////////////////////////////////////////////////////////
+	<=nrel_inclusion:formal_neuron;
+	<-rrel_explored_concept:subject_domain_of_artificial_neural_networks;
+
+/////////////////////////////////////////////////////////////////////
+<- rrel_key_sc_element: statement_formal_neuron_with_activation_function
+(*
+	<- explanation;;
+	=> nrel_main_idtf: 
+		[Утв. (формальный нейрон с функцией активации, функция активации*,функция активации)](*<- lang_ru;;*);;
+	<= nrel_sc_text_translation:...
+	(*
+		-> rrel_example:[Любой формальный нейрон с функцией активации имеет функцию активации.] (*<- lang_ru;;*);;
+	*);;
+*);;
+statement_formal_neuron_with_activation_function
+->rrel_key_sc_element:nrel_activation_function;
+->rrel_key_sc_element:activation_function;; 
+
+
+formal_neuron_with_activation_function<-rrel_explored_concept: section_subject_domain_of_neurons;;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

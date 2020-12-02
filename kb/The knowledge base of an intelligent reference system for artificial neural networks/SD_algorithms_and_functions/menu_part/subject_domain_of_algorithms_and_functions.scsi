@@ -1,0 +1,21 @@
+subject_domain_of_algorithms_and_functions
+	=> nrel_main_idtf:
+	[Предметная область алгоритмов и функций искусственных нейронных сетей]
+	(* <- lang_ru;; *);
+	[Subject domain of artificial neural networks algorithms and functions]
+	(* <- lang_en;; *);
+		
+<- subject_domain;;
+
+
+
+
+
+
+
+
+
+
+
+
+

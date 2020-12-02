@@ -1,0 +1,45 @@
+concept_pulsed_neural_networks<-sc_node_not_relation;
+
+p=>nrel_main_idtf:
+[импульсная нейронная сеть](*<-lang_ru;;*);
+[pulsed neural networks](*<-lang_en;;*);
+
+<- rrel_key_sc_element: ...
+(*
+<- definition;;
+=> nrel_main_idtf:
+      [Опр. (импульсная нейронная сеть)] (* <- lang_ru;; *);;
+=> nrel_using_constants: 
+	{
+		neuron;
+		impulse
+	};; 
+<= nrel_sc_text_translation: ... 
+		(*
+			->rrel_example:
+			[Импульсная нейронная сеть - это третье поколение искусственных нейронных сетей, где нейроны обмениваются короткими импульсами одинаковой амплитуды](*<- lang_ru;;*);;
+		*);;
+*);
+
+
+<- rrel_key_sc_element: ... 
+(*
+ => nrel_main_idtf:
+[Утв. 1 об импульсной нейронной сети] (* <- lang_ru;; *);;
+ <= nrel_sc_text_translation: ...
+	 (*
+    	  -> rrel_example:
+		[Является самой реалистичной, с точки зрения физиологии, моделью ИНС](*<-lang_ru;;*);;
+	*);;
+=> nrel_using_constants: 
+{
+phisiology;
+model
+};;
+*);;
+
+
+
+
+
+

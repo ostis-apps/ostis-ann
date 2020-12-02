@@ -1,0 +1,74 @@
+one_layer_perceptron<-sc_node_not_relation;;
+
+one_layer_perceptron=>nrel_main_idtf:
+[однослойный персептрон](*<-lang_ru;;*);
+[one nrel_layer perceptron](*<-lang_en;;*);;
+
+nrel_inclusion->(perceptron=>one_layer_perceptron);;
+
+one_layer_perceptron<- rrel_key_sc_element: ...
+(*
+<- definition;;
+=> nrel_main_idtf:
+      [Опр. (однослойный персептрон)] (* <- lang_ru;; *);;
+=> nrel_using_constants: 
+	{
+		algorithm;
+		neuron;
+		neural_network;
+		lay
+	};; 
+<= nrel_sc_text_translation: ... 
+		(*
+			->rrel_example:
+			[Однослойный персептрон - это линейный алгоритм классификации, принцип работы которого основан на модели нервной клетки - нейрона. Представляет собой пример нейронной сети с одним скрытым слоем.](*<- lang_ru;;*);;
+		*);;
+*);;
+
+
+one_layer_perceptron<- rrel_key_sc_element: ... 
+(*
+ => nrel_main_idtf:
+[Утв. 1 об однослойном персепроне] (* <- lang_ru;; *);;
+ <= nrel_sc_text_translation: ...
+	 (*
+    	  -> rrel_example:
+		[Однослойный персептрон получает на вход сигнал, заданный вектором  и на выходе выдает число](*<-lang_ru;;*);;
+	*);;
+=> nrel_using_constants: 
+{
+signal;
+vector;
+number
+};;
+*);;
+
+
+one_layer_perceptron<-rrel_explored_concept: section_subject_domain_of_single_layer_neural_networks;;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

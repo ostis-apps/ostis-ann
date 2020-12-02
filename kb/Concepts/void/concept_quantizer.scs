@@ -1,0 +1,42 @@
+concept_quantizer<-sc_node_not_relation;
+
+=>nrel_main_idtf:
+[квантователь](*<-lang_ru;;*);
+[quantizer](*<-lang_en;;*);
+
+<=nrel_inclusion:actuator;
+
+<- rrel_key_sc_element: ...
+(*
+<- definition;;
+=> nrel_main_idtf:
+      [Опр. (квантование)] (* <- lang_ru;; *);;
+=> nrel_using_constants: 
+	{
+		actuator;
+		signal
+	};; 
+<= nrel_sc_text_translation: ... 
+		(*
+			->rrel_example:
+			[Квантователь - электронное устройство, которое способно преобразовывать аналоговый сигнал в сигнал, равный по величине аналоговому в дискретные промежутки времени.](*<- lang_ru;;*);;
+		*);;
+*);
+
+
+<- rrel_key_sc_element: ... 
+(*
+ => nrel_main_idtf:
+[Утв. 1 об квантователе] (* <- lang_ru;; *);;
+ <= nrel_sc_text_translation: ...
+	 (*
+    	  -> rrel_example:
+		[Это действие аналогично наблюдению, т.е. выборке аналогового сигнала, аппроксимации его наиболее близким значением и запоминанию этого значения до следующего наблюдения](*<-lang_ru;;*);;
+	*);;
+=> nrel_using_constants: 
+{
+approximation;
+signal;
+memorization
+};;
+*);;

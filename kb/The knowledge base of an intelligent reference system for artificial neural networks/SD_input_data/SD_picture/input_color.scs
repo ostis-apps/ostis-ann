@@ -1,0 +1,39 @@
+sc_node_not_relation->input_color;;
+
+input_color=> nrel_main_idtf: [входной цвет](* <- lang_ru;; *);;
+input_color=> nrel_main_idtf: [input color](* <- lang_en;; *);;
+definition ->...
+(*
+->rrel_key_sc_element: input_color;;
+<= nrel_sc_text_translation: ...(*->rrel_example:[Входной цвет  - цвет, записанный в виде двоичного кода,подающийся на<b><sc_element sys_idtf="input_data">вход</b>  нейронной сети ](*<-lang_ru;;=> nrel_format: format_html;;*);;*);;
+=> nrel_main_idtf: [Определение (входной цвет)](*<- lang_ru;;=> nrel_format: format_html;;*);;
+=> nrel_using_constants:
+{ 
+input_data;
+neural_network
+};;
+*);; 
+
+
+statement ->...
+(*
+->rrel_key_sc_element: input_color;;
+<= nrel_sc_text_translation: ...(*->rrel_example:[Входное изображение может подоваться в нейронную сеть в одной из двух систем : RGB и CMY.](*<-lang_ru;;=> nrel_format: format_html;;*);;*);;
+=> nrel_main_idtf: [Утверждение(входной цвет)](*<- lang_ru;;=> nrel_format: format_html;;*);;
+=> nrel_using_constants:
+{
+neural_network
+};;	
+*);;
+illustration -> ...
+(*
+->rrel_key_sc_element: input_color;;
+<= nrel_sc_text_translation: ...(*->"file://images/input_color.png";;*);;
+=> nrel_main_idtf: [Рисунок(входной цвет)](*<- lang_ru;;*);;
+*);;
+input_data=>nrel_inclusion:input_color;;
+input_color<-rrel_explored_concept: section_subject_domain_of_input_picture_data;;
+
+
+
+

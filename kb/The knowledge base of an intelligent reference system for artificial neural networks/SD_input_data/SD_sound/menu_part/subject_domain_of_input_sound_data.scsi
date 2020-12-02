@@ -1,0 +1,21 @@
+subject_domain_of_input_sound_data
+	=> nrel_main_idtf:
+	[Предметная область входных акустических данных искусственных нейронных сетей]
+	(* <- lang_ru;; *);
+	[Subject domain of input sound data]
+	(* <- lang_en;; *);
+		
+<- subject_domain;;
+
+
+
+
+
+
+
+
+
+
+
+
+
