@@ -1,4 +1,9 @@
 .idea
 .vscode
 *.scs~
-ostis
+ostis-web-platform
+
+__pycache__
+
+cmake-build-debug
+cmake-build-release
