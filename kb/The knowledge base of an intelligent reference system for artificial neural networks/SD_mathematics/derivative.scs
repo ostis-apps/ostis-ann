@@ -14,12 +14,12 @@ derivative<- rrel_key_sc_element: ...
 <- definition;;
 => nrel_main_idtf:
       [Опр. (производная)] (* <- lang_ru;; *);;
-=> nrel_using_constants: 
+=> nrel_using_constants:
 	{
 		math_function;
 		nrel_function_change_rate
-	};; 
-<= nrel_sc_text_translation: ... 
+	};;
+<= nrel_sc_text_translation: ...
 		(*
 			->rrel_example:
 			[Производная - это <b><sc_element sys_idtf="math_function">функция</b> характеризующая <b><sc_element sys_idtf="nrel_function_change_rate">скорость изменения некой другой функции</b>.](*<- lang_ru;;=>nrel_format: format_html;;*);;
@@ -27,7 +27,7 @@ derivative<- rrel_key_sc_element: ...
 *);;
 
 
-derivative<- rrel_key_sc_element: ... 
+derivative<- rrel_key_sc_element: ...
 (*
  => nrel_main_idtf:
 [Утв. 1 об производная] (* <- lang_ru;; *);;
@@ -36,7 +36,7 @@ derivative<- rrel_key_sc_element: ...
     	  -> rrel_example:
 		[Производная определяется как <b><sc_element sys_idtf="nrel_limit">предел</b> отношения <b><sc_element sys_idtf="function_increment">приращения функции</b> к<b><sc_element sys_idtf="argument_increment"> приращению её аргумента</b>.](*<-lang_ru;;=>nrel_format: format_html;;*);;
 	*);;
-=> nrel_using_constants: 
+=> nrel_using_constants:
 {
 function_increment;
 argument_increment;
@@ -47,37 +47,7 @@ nrel_multiplication_of_numbers
 
 derivative-> rrel_example:
 [*
-function<-sc_node_not_relation;;
 function=>nrel_function_change_rate:derivative;;
 *];;
 
 derivative<-rrel_explored_concept: section_subject_domain_mathematics;;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

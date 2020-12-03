@@ -2,7 +2,6 @@ sc_node_not_relation->radial_basis_function;;
 sc_node_not_relation->function;;
 sc_node_not_relation->kit;;
 sc_node_not_relation->activation_function;;
-sc_node_not_relation->nrel_layer;;
 sc_node_not_relation->context;;
 sc_node_not_relation->neural_network;;
 sc_node_not_relation->center;;

@@ -46,9 +46,3 @@ nrel_install
 };;
 *);;
 
-weight_vector-> rrel_example:
-[*
-weight_vector->x;;
-nrel_vector_elem<-sc_node_norole_relation;;
-x=>nrel_vector_elem:weight;;
-*];;

@@ -47,23 +47,6 @@ theorem
 };;
 *);;
 
-Bayes_theorem-> rrel_example:
-[*
-
-	equivalent_value<=nrel_composition_of_values:
-		{
-		P_ab;
-		P_b
-		};;
-	equivalent_value<=nrel_composition_of_values:
-		{
-		P_ba;
-		P_a
-		};;
-
-
-*];;
-
 Bayes_theorem<-rrel_explored_concept: section_subject_domain_mathematics;;
 
 

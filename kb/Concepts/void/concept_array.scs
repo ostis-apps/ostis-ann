@@ -28,7 +28,7 @@ arbitrary_access
 };;
 *);
 
-<-rrel_key_sc_element: ...
+<-rrel_key_sc_element:...
 (*
 <= nrel_sc_text_translation: ...(*->rrel_example:[Форма или структура массива — сведения о количестве размерностей и размере (протяжённости) массива по каждой из размерностей.](*<-lang_ru;;*);;*);;
 => nrel_main_idtf: [Утверждение(массив)](*<- lang_ru;;*);;
