@@ -19,6 +19,9 @@ _Configuration_ contains the most useful & frequently used file paths or any con
 **Endpoints**
 
 `GET /<ann_id>` Get ANN definition (some useful info; stored in one line)
+
 `GET /<ann_id>/extensions/` Fetch the list of file extensions the ANN can support as an input data
+
 `POST /<ann_id>/data` Load media file on server with `form-data` request, providing the ANN name for what your upload for. Remember that this files will not get deleted automatically after e.g. processing with this ANN; you have to take care about that on your own
+
 `POST /<ann_id> { "filename": <filename> }` Trigger file processing with the ANN specified
