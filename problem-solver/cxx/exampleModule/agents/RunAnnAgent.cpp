@@ -8,16 +8,16 @@
 #include <algorithm>
 #include <string.h>
 #include <sys/stat.h>
-#include <vector>
 #include <iterator>
+#include <fstream>
 
-#include <sc-memory/cpp/sc_stream.hpp>
-#include <sc-memory/cpp/sc_link.hpp>
+#include <sc-memory/sc_stream.hpp>
+#include <sc-memory/sc_link.hpp>
 
-#include <sc-kpm/sc-agents-common/utils/IteratorUtils.hpp>
-#include <sc-kpm/sc-agents-common/utils/AgentUtils.hpp>
-#include <sc-kpm/sc-agents-common/utils/CommonUtils.hpp>
-#include <sc-kpm/sc-agents-common/keynodes/coreKeynodes.hpp>
+#include <sc-agents-common/utils/IteratorUtils.hpp>
+#include <sc-agents-common/utils/AgentUtils.hpp>
+#include <sc-agents-common/utils/CommonUtils.hpp>
+#include <sc-agents-common/keynodes/coreKeynodes.hpp>
 
 #include "RunAnnAgent.hpp"
 #include "keynodes/keynodes.hpp"
@@ -48,23 +48,8 @@ struct ImplementationState {
 ImplementationState state;
 const uint ANN_NODE_INVALID = 1;
 const uint ANN_NOT_FOUND = 2;
-const uint FILE_NODE_INVALID = 5;
-const uint FILE_NOT_SUPPORTED = 6;
-
-std::vector<unsigned char> readImage(string path) {
-	// Define file stream object, and open the file
-	std::ifstream file(path, ios::binary);
-
-	// Prepare iterator pairs to iterate the file content
-	std::istream_iterator<unsigned char> begin(file), end;
-
-	// Reading the file content using the iterator
-	std::vector<unsigned char> buffer(begin, end);
-
-	std::copy(buffer.begin(), buffer.end(), std::ostream_iterator<unsigned int>(std::cout, ","));
-
-	return buffer;
-}
+const uint FILE_NODE_INVALID = 3;
+const uint FILE_NOT_SUPPORTED = 4;
 
 void createAnswers(ScMemoryContext* ms_context, string result)
 {
@@ -75,10 +60,10 @@ void createAnswers(ScMemoryContext* ms_context, string result)
 	
 		if (textAnswerLink.IsValid())
 		{
-			// ScStreamMemory wtf;
-			// ScStreamPtr stream = ScStreamConverter::StreamFromString(result, wtf);
-			// std::cout << "Content in stream: " << result << endl;
-			// ms_context->SetLinkContent(textAnswerLink, *stream);
+			ScStreamPtr stream;
+			stream.reset(new ScStream((sc_char*)(&result), sizeof(result), SC_STREAM_FLAG_READ | SC_STREAM_FLAG_SEEK));
+			std::cout << "Content in stream: " << result << endl;
+			ms_context->SetLinkContent(textAnswerLink, stream);
 	
 			ScAddr annAnswerEdge = ms_context->CreateEdge(ScType::EdgeDCommonConst, state.annNode, textAnswerLink);
 			ScAddr annAnswerEdgeRelation = ms_context->CreateEdge(ScType::EdgeAccessConstPosPerm, Keynodes::nrel_processing_result, annAnswerEdge);
@@ -93,13 +78,13 @@ void createAnswers(ScMemoryContext* ms_context, string result)
 
 	// Process image result
 	{
-		string relativeMove = "../../../../";
-		string imagePath = relativeMove + "kb/neural_network_instances/" + state.annName + "/data/" + state.fileName + "." + state.fileExtension + "_processed.png";
-		
-		std::cout << relativeMove + imagePath << endl;
+		string imageName = state.fileName + "." + state.fileExtension + "_processed.png";
+		string imagePath = "/home/osboxes/ann.ostis/kb/neural_network_instances/" + state.annName + "/data/" + imageName;
+
+		std::cout << imagePath << endl;
 
 		struct stat buffer;
-		int statResult = stat((relativeMove + imagePath).c_str(), &buffer);
+		int statResult = stat((imagePath).c_str(), &buffer);
 
 		std::cout << "Stat result: " << statResult << endl;
 
@@ -107,26 +92,15 @@ void createAnswers(ScMemoryContext* ms_context, string result)
 
 		if (isImageExists)
 		{
+			string annNodeName = state.annName + "_ann";
+			string knowledgeToAppend = annNodeName + " <= nrel_processing_result: ... (*-> rrel_example: \"file://data/" + imageName + "\" (* => nrel_format: format_png;; *);; *);;";
+			string pathForAppend = "/home/osboxes/ann.ostis/kb/neural_network_instances/" + state.annName + "/" + annNodeName + ".scs";
+
 			std::cout << "Image result can be found at " << imagePath << endl;
+			std::ofstream annScsFile;
 
-			ScAddr imageAnswerStructNode = ms_context->CreateNode(ScType::NodeConstStruct);
-			ScAddr imageAnswerLink = ms_context->CreateLink();
-
-			std::vector<unsigned char> imageBytes = readImage(relativeMove + imagePath);
-			std::string imageBytesString(imageBytes.begin(), imageBytes.end());
-			
-			// ScStreamMemory wtf;
-			// ScStreamPtr stream = ScStreamConverter::StreamFromString(imageBytesString, wtf);
-			// ms_context->SetLinkContent(imageAnswerLink, *stream);
-	
-			ScAddr annAnswerEdge = ms_context->CreateEdge(ScType::EdgeDCommonConst, state.annNode, imageAnswerLink);
-			ScAddr annAnswerEdgeRelation = ms_context->CreateEdge(ScType::EdgeAccessConstPosPerm, Keynodes::nrel_processing_result, annAnswerEdge);
-	
-			ms_context->CreateEdge(ScType::EdgeAccessConstPosPerm, imageAnswerStructNode, imageAnswerLink);
-			ms_context->CreateEdge(ScType::EdgeAccessConstPosPerm, imageAnswerStructNode, state.annNode);
-			ms_context->CreateEdge(ScType::EdgeAccessConstPosPerm, imageAnswerStructNode, annAnswerEdge);
-			ms_context->CreateEdge(ScType::EdgeAccessConstPosPerm, imageAnswerStructNode, annAnswerEdgeRelation);
-			ms_context->CreateEdge(ScType::EdgeAccessConstPosPerm, imageAnswerStructNode, Keynodes::nrel_processing_result);
+			annScsFile.open(pathForAppend, std::ios_base::app);
+			annScsFile << knowledgeToAppend;
 		}
 	}
 }

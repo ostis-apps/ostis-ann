@@ -13,3 +13,4 @@ seq_1_txt
 	=> nrel_file_extension: [txt];
 	=> nrel_file_name: [seq_1];
 	<- concept_file;;
+sequence_prediction_ann <= nrel_processing_result: ... (*-> rrel_example: "file://data/seq_1.txt_processed.png" (* => nrel_format: format_png;; *);; *);;
