@@ -6,20 +6,23 @@
 
 #include <iostream>
 #include <algorithm>
+#include <string.h>
+#include <sys/stat.h>
+#include <iterator>
+#include <fstream>
 
-#include <sc-memory/cpp/sc_stream.hpp>
-#include <sc-memory/cpp/sc_link.hpp>
+#include <sc-memory/sc_stream.hpp>
+#include <sc-memory/sc_link.hpp>
 
-#include <sc-kpm/sc-agents-common/utils/IteratorUtils.hpp>
-#include <sc-kpm/sc-agents-common/utils/AgentUtils.hpp>
-#include <sc-kpm/sc-agents-common/utils/CommonUtils.hpp>
-#include <sc-kpm/sc-agents-common/keynodes/coreKeynodes.hpp>
+#include <sc-agents-common/utils/IteratorUtils.hpp>
+#include <sc-agents-common/utils/AgentUtils.hpp>
+#include <sc-agents-common/utils/CommonUtils.hpp>
+#include <sc-agents-common/keynodes/coreKeynodes.hpp>
 
 #include "RunAnnAgent.hpp"
 #include "keynodes/keynodes.hpp"
 
 #include "curl/curl.h"
-#include <string.h>
 
 #include <curlpp/cURLpp.hpp>
 #include <curlpp/Easy.hpp>
@@ -45,32 +48,61 @@ struct ImplementationState {
 ImplementationState state;
 const uint ANN_NODE_INVALID = 1;
 const uint ANN_NOT_FOUND = 2;
-const uint FILE_NODE_INVALID = 5;
-const uint FILE_NOT_SUPPORTED = 6;
+const uint FILE_NODE_INVALID = 3;
+const uint FILE_NOT_SUPPORTED = 4;
 
-ScAddr createAnswer(ScMemoryContext* ms_context, string result)
+void createAnswers(ScMemoryContext* ms_context, string result)
 {
-	ScAddr answerStructNode = ms_context->CreateNode(ScType::NodeConstStruct);
-	ScAddr answerLink = ms_context->CreateLink();
-
-	if (answerLink.IsValid())
+	// Process text result
 	{
-        ScStreamPtr stream;
-        std::cout << result << endl;
-        stream.reset(new ScStream((sc_char*)&result, sizeof(result), SC_STREAM_FLAG_READ | SC_STREAM_FLAG_SEEK));
-        ms_context->SetLinkContent(answerLink, *stream);
-
-		ScAddr annAnswerEdge = ms_context->CreateEdge(ScType::EdgeDCommonConst, state.annNode, answerLink);
-		ScAddr annAnswerEdgeRelation = ms_context->CreateEdge(ScType::EdgeAccessConstPosPerm, Keynodes::nrel_processing_result, annAnswerEdge);
-
-		ms_context->CreateEdge(ScType::EdgeAccessConstPosPerm, answerStructNode, answerLink);
-		ms_context->CreateEdge(ScType::EdgeAccessConstPosPerm, answerStructNode, state.annNode);
-		ms_context->CreateEdge(ScType::EdgeAccessConstPosPerm, answerStructNode, annAnswerEdge);
-		ms_context->CreateEdge(ScType::EdgeAccessConstPosPerm, answerStructNode, annAnswerEdgeRelation);
-		ms_context->CreateEdge(ScType::EdgeAccessConstPosPerm, answerStructNode, Keynodes::nrel_processing_result);
+		ScAddr textAnswerStructNode = ms_context->CreateNode(ScType::NodeConstStruct);
+		ScAddr textAnswerLink = ms_context->CreateLink();
+	
+		if (textAnswerLink.IsValid())
+		{
+			ScStreamPtr stream;
+			stream.reset(new ScStream((sc_char*)(&result), sizeof(result), SC_STREAM_FLAG_READ | SC_STREAM_FLAG_SEEK));
+			std::cout << "Content in stream: " << result << endl;
+			ms_context->SetLinkContent(textAnswerLink, stream);
+	
+			ScAddr annAnswerEdge = ms_context->CreateEdge(ScType::EdgeDCommonConst, state.annNode, textAnswerLink);
+			ScAddr annAnswerEdgeRelation = ms_context->CreateEdge(ScType::EdgeAccessConstPosPerm, Keynodes::nrel_processing_result, annAnswerEdge);
+	
+			ms_context->CreateEdge(ScType::EdgeAccessConstPosPerm, textAnswerStructNode, textAnswerLink);
+			ms_context->CreateEdge(ScType::EdgeAccessConstPosPerm, textAnswerStructNode, state.annNode);
+			ms_context->CreateEdge(ScType::EdgeAccessConstPosPerm, textAnswerStructNode, annAnswerEdge);
+			ms_context->CreateEdge(ScType::EdgeAccessConstPosPerm, textAnswerStructNode, annAnswerEdgeRelation);
+			ms_context->CreateEdge(ScType::EdgeAccessConstPosPerm, textAnswerStructNode, Keynodes::nrel_processing_result);
+		}
 	}
 
-	return answerLink;
+	// Process image result
+	{
+		string imageName = state.fileName + "." + state.fileExtension + "_processed.png";
+		string imagePath = "/home/osboxes/ann.ostis/kb/neural_network_instances/" + state.annName + "/data/" + imageName;
+
+		std::cout << imagePath << endl;
+
+		struct stat buffer;
+		int statResult = stat((imagePath).c_str(), &buffer);
+
+		std::cout << "Stat result: " << statResult << endl;
+
+		bool isImageExists = statResult == 0;
+
+		if (isImageExists)
+		{
+			string annNodeName = state.annName + "_ann";
+			string knowledgeToAppend = annNodeName + " <= nrel_processing_result: ... (*-> rrel_example: \"file://data/" + imageName + "\" (* => nrel_format: format_png;; *);; *);;";
+			string pathForAppend = "/home/osboxes/ann.ostis/kb/neural_network_instances/" + state.annName + "/" + annNodeName + ".scs";
+
+			std::cout << "Image result can be found at " << imagePath << endl;
+			std::ofstream annScsFile;
+
+			annScsFile.open(pathForAppend, std::ios_base::app);
+			annScsFile << knowledgeToAppend;
+		}
+	}
 }
 
 string get(string route)
@@ -239,9 +271,9 @@ SC_AGENT_IMPLEMENTATION(RunAnnAgent)
 	}
 
 	string processingResponse = runAnn();
-	ScAddr answerLink = createAnswer(ms_context.get(), processingResponse);
+	createAnswers(ms_context.get(), processingResponse);
 
-	return answerLink.IsValid() ? SC_RESULT_OK : SC_RESULT_ERROR;
+	return SC_RESULT_OK;
 }
 
 }

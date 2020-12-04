@@ -1,8 +1,9 @@
 import importlib
 import os
+import shutil
 
 import requests
-from flask import Flask, jsonify, request
+from flask import Flask, jsonify, request, json
 
 from neural_networks.sequence_prediction.predictor import predictor_instance
 from utils.config_utils import ConfigProvider
@@ -52,13 +53,14 @@ def process(ann_id):
 
     ann_realization = importlib.import_module(f'neural_networks.{ann_id}.ann_app')
     ann_app = ann_realization.AnnApp()
-    processed_data = ann_app.process(filename)
+    processed_data, saved_path = ann_app.process(filename)
 
-    return jsonify(processed_data)
+    if saved_path and os.path.exists(saved_path):
+        shutil.copy2(saved_path, config_provider.get_kb_path(ann_id))
+
+    return jsonify(str(processed_data))
 
 
-# TODO: once a neural network has it's own training model that
-# can be used for each processing, this method must be removed
 def train_neural_networks():
     predictor_instance.config_provider = config_provider
     predictor_instance.train()
