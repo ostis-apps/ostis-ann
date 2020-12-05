@@ -17,7 +17,9 @@ class ClassifierAnswerWriterAgent(ScAgent):
 
         if answer_addr == "":
             return False
-        return True
+
+        # TODO: move back to True after bug described below will be fixed
+        return False
 
     def RunImpl(self, evt: ScEventParams) -> ScResult:
         answer = ""
@@ -30,7 +32,7 @@ class ClassifierAnswerWriterAgent(ScAgent):
             evt.addr, ScType.EdgeDCommonConst, ScType.Link, ScType.EdgeAccessConstPosPerm, result_addr)
         while it5.Next():
             addr2 = it5.Get(2)
-            answer = self.module.ctx.GetLinkContent(addr2).AsString()  # Bug?
+            answer = self.module.ctx.GetLinkContent(addr2).AsString()  # TODO: fix getting link content
 
         if answer == "":
             print("Answer is not found")
