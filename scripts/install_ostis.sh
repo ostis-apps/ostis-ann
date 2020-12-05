@@ -34,6 +34,12 @@ include_kb()
 
 include_problem_solver()
 {
+  if ! grep -q "${PYTHON_PATH}" "${PLATFORM_PATH}/sc-machine/config/config.ini.in";
+	then
+		PYTHON_PATH_ESCAPED="$(echo "${PYTHON_PATH}" | sed -e 's/[/]/\\&/g')"
+		sed -i "/modules_path/ s/$/;${PYTHON_PATH_ESCAPED}/" "${PLATFORM_PATH}/sc-machine/config/config.ini.in"
+	fi
+
 	cd "${APP_ROOT_PATH}"/scripts
 	./build_problem_solver.sh
 	cat "${PLATFORM_PATH}"/sc-machine/bin/config.ini >> "${PLATFORM_PATH}"/config/sc-web.ini

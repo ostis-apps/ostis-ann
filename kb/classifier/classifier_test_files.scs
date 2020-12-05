@@ -3,7 +3,7 @@ test_1
 	=> nrel_main_idtf: [N1 Тестовый файл] (* <-lang_ru;; *);
 	=> nrel_idtf: [test_1.tsv];
 	=> nrel_file_extension: [tsv];
-    <= rrel_file: test_product_1;
+    <- rrel_file: test_product_1;
 	=> nrel_file_name: [test_1];
 	<- concept_file;;
 
@@ -12,7 +12,7 @@ test_2
 	=> nrel_main_idtf: [N2 Тестовый файл] (* <-lang_ru;; *);
 	=> nrel_idtf: [test_2.tsv];
 	=> nrel_file_extension: [tsv];
-    <= rrel_file: test_product_2;
+    <- rrel_file: test_product_2;
 	=> nrel_file_name: [test_2];
 	<- concept_file;;
 
@@ -21,7 +21,7 @@ test_3
 	=> nrel_main_idtf: [N3 Тестовый файл] (* <-lang_ru;; *);
 	=> nrel_idtf: [test_3.tsv];
 	=> nrel_file_extension: [tsv];
-    <= rrel_file: test_product_3;
+    <- rrel_file: test_product_3;
 	=> nrel_file_name: [test_3];
 	<- concept_file;;
 
@@ -30,7 +30,7 @@ test_4
 	=> nrel_main_idtf: [N4 Тестовый файл] (* <-lang_ru;; *);
 	=> nrel_idtf: [test_4.tsv];
 	=> nrel_file_extension: [tsv];
-    <= rrel_file: test_product_4;
+    <- rrel_file: test_product_4;
 	=> nrel_file_name: [test_4];
 	<- concept_file;;
 
@@ -39,6 +39,6 @@ test_5
 	=> nrel_main_idtf: [N5 Тестовый файл] (* <-lang_ru;; *);
 	=> nrel_idtf: [test_5.tsv];
 	=> nrel_file_extension: [tsv];
-    <= rrel_file: test_product_5;
+    <- rrel_file: test_product_5;
 	=> nrel_file_name: [test_5];
 	<- concept_file;;
