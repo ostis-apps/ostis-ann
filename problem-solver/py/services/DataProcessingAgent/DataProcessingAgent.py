@@ -28,7 +28,6 @@ class DataProcessingAgent(ScAgent):
             test_file_addr = it5_ann_2.Get(2)
 
         if ann_addr == "" or test_file_addr == "":
-            print("File or NN is not found")
             return False
 
         return True
