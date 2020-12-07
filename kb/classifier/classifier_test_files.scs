@@ -42,3 +42,12 @@ test_5
     <- rrel_file: test_product_5;
 	=> nrel_file_name: [test_5];
 	<- concept_file;;
+
+test_invalid
+	=> nrel_main_idtf: [Invalid Test file] (* <-lang_en;; *);
+	=> nrel_main_idtf: [Некорректный тестовый файл] (* <-lang_ru;; *);
+	=> nrel_idtf: [test_invalid.tsv];
+	=> nrel_file_extension: [tsv];
+    <- rrel_file: test_product_invalid;
+	=> nrel_file_name: [test_invalid];
+	<- concept_file;;

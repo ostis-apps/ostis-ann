@@ -42,3 +42,11 @@ test_product_5
 	=> nrel_mass_protein_fraction: [28.175836097673177];
 	=> nrel_has_mold: [true];
 	<- concept_product;;
+
+test_product_invalid
+	=> nrel_main_idtf: [N5 Test product] (* <-lang_en;; *);
+	=> nrel_main_idtf: [N5 Тестовый продукт] (* <-lang_ru;; *);
+    => nrel_mass_fat_fraction: [6.864936281507398];
+	=> nrel_mass_protein_fraction: [28.175836097673177];
+	=> nrel_has_mold: [true];
+	<- concept_product;;
