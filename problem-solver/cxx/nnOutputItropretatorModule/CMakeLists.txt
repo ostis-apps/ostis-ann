@@ -1,22 +1,8 @@
-set(SC_nn_Output_Itropretator_Module_SRC "${PROBLEM_SOLVER_ROOT}/nnOutputItropretatorModule")
+file(GLOB_RECURSE SOURCES "*.cpp" "*.hpp")
 
-set(SOURCES
-		"nnOutputItropretatorModule.cpp"
-		"keynodes/keynodes.cpp"
-		"agents/nnOutputItropretatorAgent.cpp"
-		)
+include_directories(${CMAKE_CURRENT_LIST_DIR} ${SC_MEMORY_SRC} ${SC_KPM_SRC})
 
-set(HEADERS
-		"nnOutputItropretatorModule.hpp"
-		"keynodes/keynodes.hpp"
-		"agents/nnOutputItropretatorAgent.hpp"
-		)
+add_library (nnOutputItropretatorModule SHARED ${SOURCES})
+target_link_libraries(nnOutputItropretatorModule sc-memory sc-agents-common)
 
-include_directories(${SC_nn_Output_Itropretator_Module_SRC} ${SC_MEMORY_SRC} ${GLIB2_INCLUDE_DIRS})
-
-add_library(nnOutputItropretatorModule SHARED ${SOURCES} ${HEADERS})
-add_dependencies(nnOutputItropretatorModule sc-memory-cpp sc-kpm-common sc-agents-common)
-target_link_libraries(nnOutputItropretatorModule sc-memory-cpp sc-kpm-common sc-agents-common)
-
-sc_codegen(nnOutputItropretatorModule ${SC_nn_Output_Itropretator_Module_SRC})
-
+sc_codegen(nnOutputItropretatorModule ${CMAKE_CURRENT_LIST_DIR})

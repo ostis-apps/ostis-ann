@@ -5,9 +5,9 @@
 */
 #include <iostream>
 #include <sstream>
-#include <sc-memory/cpp/sc_stream.hpp>
-#include <sc-kpm/sc-agents-common/utils/IteratorUtils.hpp>
-#include <sc-kpm/sc-agents-common/utils/AgentUtils.hpp>
+#include <sc-agents-common/utils/GenerationUtils.hpp>
+#include <sc-agents-common/utils/IteratorUtils.hpp>
+#include <sc-agents-common/utils/AgentUtils.hpp>
 
 #include "nnOutputItropretatorAgent.hpp"
 #include "keynodes/keynodes.hpp"

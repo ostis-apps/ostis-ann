@@ -6,7 +6,7 @@
 
 #include "keynodes.hpp"
 
-#include <sc-memory/cpp/sc_memory.hpp>
+#include <sc-memory/sc_memory.hpp>
 
 namespace nnOutputItropretator
 {
