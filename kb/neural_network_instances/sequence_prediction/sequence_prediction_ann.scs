@@ -13,4 +13,3 @@ seq_1_txt
 	=> nrel_file_extension: [txt];
 	=> nrel_file_name: [seq_1];
 	<- concept_file;;
-	

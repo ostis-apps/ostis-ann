@@ -79,9 +79,8 @@ void createAnswers(ScMemoryContext* ms_context, string result)
 	// Process image result
 	{
 		string imageName = state.fileName + "." + state.fileExtension + "_processed.png";
-		string imagePath = "/home/osboxes/ann.ostis/kb/neural_network_instances/" + state.annName + "/data/" + imageName;
-
-		std::cout << imagePath << endl;
+		// TODO: Fix path to OSTIS
+		string imagePath = "PATH_TO_OSTIS_ON_MACHINE/ann.ostis/kb/neural_network_instances/" + state.annName + "/data/" + imageName;
 
 		struct stat buffer;
 		int statResult = stat((imagePath).c_str(), &buffer);
@@ -92,15 +91,9 @@ void createAnswers(ScMemoryContext* ms_context, string result)
 
 		if (isImageExists)
 		{
-			string annNodeName = state.annName + "_ann";
-			string knowledgeToAppend = annNodeName + " <= nrel_processing_result: ... (*-> rrel_example: \"file://data/" + imageName + "\" (* => nrel_format: format_png;; *);; *);;";
-			string pathForAppend = "/home/osboxes/ann.ostis/kb/neural_network_instances/" + state.annName + "/" + annNodeName + ".scs";
-
 			std::cout << "Image result can be found at " << imagePath << endl;
-			std::ofstream annScsFile;
-
-			annScsFile.open(pathForAppend, std::ios_base::app);
-			annScsFile << knowledgeToAppend;
+			
+			// TODO: Write image into answer node (e.g. byte array into string, then into stream)
 		}
 	}
 }
