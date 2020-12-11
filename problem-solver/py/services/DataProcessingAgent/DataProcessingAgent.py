@@ -112,8 +112,9 @@ class DataProcessingAgent(ScAgent):
         print('Data was successfully parsed')
         self.WriteToTsv(filename, uniformity, mass_fat_fraction, mass_protein_fraction, has_mold)
 
+        # TODO: uncomment after fixing link content bug
         # Link for further answer processing (will be deleted afterwards)
-        self.module.ctx.CreateEdge(ScType.EdgeAccessConstPosPerm, classifier_addr, test_product_addr)
+        # self.module.ctx.CreateEdge(ScType.EdgeAccessConstPosPerm, classifier_addr, test_product_addr)
         return ScResult.Ok
 
     @staticmethod
