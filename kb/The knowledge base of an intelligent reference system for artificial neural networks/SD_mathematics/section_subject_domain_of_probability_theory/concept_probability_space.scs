@@ -1,0 +1,49 @@
+concept_probability_space
+	<- sc_node_not_relation;
+	=> nrel_main_idtf: [Вероятностное пространство] (* <- lang_ru;; *);
+	=> nrel_main_idtf: [Probability space] (* <- lang_en;; *);;
+
+definition -> ...
+	(*
+		-> rrel_key_sc_element: concept_probability_space;;
+		
+		=> nrel_main_idtf: [Опр.(Вероятностное пространство)] (* <- lang_ru;; *);;
+
+		<= nrel_using_constants: ...
+			(*
+				-> concept_random_event;;
+				-> concept_elementary_event;;
+				-> concept_probability;;
+			*);;
+
+		<= nrel_sc_text_translation: ...
+			(*
+				-> [Вероятностное пространство — это тройка (Ω, Σ, Ρ) иногда обрамленная угловыми скобками: ⟨ , ⟩ , где
+				Ω — это множество объектов, которые называют <sc_element sys_idtf="concept_elementary_event">элементарными событиями</sc_element>, исходами или точками.
+				Σ — сигма-алгебра подмножеств, называемых <sc_element sys_idtf="concept_random_event">случайными событиями</sc_element>;
+				Ρ — вероятностная мера или <sc_element sys_idtf="concept_probability">вероятность</sc_element>.
+] (*<-lang_ru;;=>nrel_format:format_html;;*);;
+			*);;
+	*);;
+
+
+affirmation -> ...
+	(*
+		-> rrel_key_sc_element: concept_probability_space;;
+
+		=> nrel_main_idtf: [Утв.(Вероятностное пространство)] (* <- lang_ru;; *);;
+
+		<= nrel_sc_text_translation: ...
+			(*
+				-> [Вероятностное пространство — понятие, введённое А. Н. Колмогоровым в 30-х годах XX века для формализации понятия <sc_element sys_idtf="concept_probability">вероятности</sc_element>, которое дало начало бурному развитию <sc_element sys_idtf="concept_probability_theory">теории вероятностей</sc_element> как строгой математической дисциплины.] (*<-lang_ru;;=>nrel_format:format_html;;*);;
+			*);;
+		<= nrel_using_constants: ...
+			(*
+				-> concept_probability_theory;;
+				-> concept_probability;;
+			*);;
+
+	*);;
+	
+concept_probability_space<-rrel_explored_concept: section_subject_domain_of_probability_theory;;
+//<sc_element sys_idtf=""></sc_element>

@@ -1,0 +1,40 @@
+concept_covariance
+	<- sc_node_not_relation;
+	=> nrel_main_idtf: [Ковариация] (* <- lang_ru;; *);
+	=> nrel_main_idtf: [Covariance] (* <- lang_en;; *);;
+
+definition -> ...
+	(*
+		-> rrel_key_sc_element: concept_covariance;;
+		
+		=> nrel_main_idtf: [Опр.(Ковариация)] (* <- lang_ru;; *);;
+
+		<= nrel_sc_text_translation: ...
+			(*
+				-> [Ковариация — в <sc_element sys_idtf="concept_probability_theory">теории вероятностей</sc_element> и математической статистике мера линейной зависимости двух <sc_element sys_idtf="concept_random_value">случайных величин</sc_element>.] (*<-lang_ru;;=>nrel_format:format_html;;*);;
+			*);;
+		<= nrel_using_constants: ...
+			(*
+				-> concept_random_value;;
+				-> concept_probability_theory;;
+			*);;
+	*);;
+
+affirmation -> ...
+	(*
+		-> rrel_key_sc_element: concept_covariance;;
+
+		=> nrel_main_idtf: [Утв.(Ковариация)] (* <- lang_ru;; *);;
+
+		<= nrel_sc_text_translation: ...
+			(*
+				-> [Если ковариация положительна, то с ростом значений одной <sc_element sys_idtf="concept_random_value">случайной величины</sc_element>, значения второй имеют тенденцию возрастать, а если знак отрицательный — то убывать.] (*<-lang_ru;;=>nrel_format:format_html;;*);;
+			*);;
+		<= nrel_using_constants: ...
+			(*
+				-> concept_random_value;;
+			*);;
+	*);;
+	
+concept_covariance<-rrel_explored_concept: section_subject_domain_of_probability_theory;;
+//<sc_element sys_idtf=""></sc_element>

@@ -1,0 +1,84 @@
+sc_node_not_relation -> concept_functioning_algorithm;;
+
+sc_node_not_relation -> concept_hopfield_network;;
+sc_node_not_relation -> concept_step;;
+sc_node_not_relation -> concept_weight_coefficient;;
+sc_node_not_relation -> concept_threshold_value;;
+sc_node_not_relation -> concept_corresponding;;
+sc_node_not_relation -> concept_layer;;
+sc_node_not_relation -> concept_neural_network;;
+sc_node_not_relation -> concept_input;;
+sc_node_not_relation -> concept_unknown_image;;
+sc_node_not_relation -> concept_neural_element;;
+sc_node_not_relation -> concept_procedure;;
+sc_node_not_relation -> concept_calculation;;
+sc_node_not_relation -> concept_output_value;;
+sc_node_not_relation -> concept_stabilization;;
+sc_node_not_relation -> concept_single_state;;
+sc_node_not_relation -> concept_zero_state;;
+sc_node_not_relation -> concept_neural_element_winner;;
+sc_node_not_relation -> concept_choice;;
+sc_node_not_relation -> concept_random;;
+
+sc_node_norole_relation -> nrel_give;;
+sc_node_norole_relation -> nrel_consist;;
+sc_node_norole_relation -> nrel_define;;
+sc_node_norole_relation -> nrel_produce;;
+sc_node_norole_relation -> nrel_consist;;
+sc_node_norole_relation -> nrel_stabilizes;;
+sc_node_norole_relation -> nrel_have;;
+sc_node_norole_relation -> nrel_exist;;
+
+concept_functioning_algorithm => nrel_main_idtf: [алгоритм функционирования](* <- lang_ru;; *);;
+concept_functioning_algorithm => nrel_main_idtf: [functioning algorithm](* <- lang_en;; *);;
+
+definition ->...
+(*
+	-> rrel_key_sc_element : concept_functioning_algorithm;;
+	<= nrel_sc_text_translation: ...(*->rrel_example:[Алгоритм функционирования нейронной сети Хэмминга](*<-lang_ru;;*);;*);;
+	=> nrel_main_idtf: [Определение (алгоритм функционирования.)](*<- lang_ru;;*);;
+	=> nrel_using_constants: ...
+	(*
+	   -> concept_hopfield_network;;
+	*);;
+*);;
+
+statement ->...
+(*
+	-> rrel_key_sc_element : concept_functioning_algorithm;;
+	<= nrel_sc_text_translation: ...(*->rrel_example:[Алгоритм функционирования нейронной сети Хэмминга cостоит из следующих шагов: 1) Определяются весовые коэффициенты и пороговые значения для соответствующих слоев нейронной сети. 2) Подается на вход сети неизвестный образ и производится инициализация нейронных элементов сети Хопфилда. 3) Производится итерационная процедура расчета выходных значений нейронной сети Хопфилда до тех пор, пока она не стабилизируется. В этом случае на выходе сети Хэмминга один нейронный элемент будет иметь единичное состояние, а остальные - нулевое состояние. 4) Если в выходном слое существует несколько нейронных элементов победителей, то выбор одного из них производится случайным образом.](*<-lang_ru;;*);;*);;
+	=> nrel_main_idtf: [Утверждение(алгоритм функционирования.)](*<- lang_ru;;*);;
+	=> nrel_using_constants: ...
+	(*
+	   -> concept_hopfield_network;;
+	   -> concept_step;;
+	   -> concept_weight_coefficient;;
+	   -> concept_threshold_value;;
+	   -> concept_corresponding;;
+	   -> concept_layer;;
+	   -> concept_neural_network;;
+	   -> concept_input;;
+	   -> concept_unknown_image;;
+	   -> concept_neural_element;;
+	   -> concept_procedure;;
+	   -> concept_calculation;;
+	   -> concept_output_value;;
+	   -> concept_stabilization;;
+	   -> concept_single_state;;
+	   -> concept_zero_state;;
+	   -> concept_neural_element_winner;;
+	   -> concept_choice;;
+	   -> concept_random;;
+	   -> nrel_consist;;
+	   -> nrel_define;;
+	   -> nrel_give;;
+	   -> nrel_produce;;
+	   -> nrel_stabilizes;;
+	   -> nrel_have;;
+	   -> nrel_exist;;
+	*);;
+*);;
+
+
+concept_functioning_algorithm
+	<- rrel_explored_concept: section_subject_domain_of_algorithms_and_functions;;

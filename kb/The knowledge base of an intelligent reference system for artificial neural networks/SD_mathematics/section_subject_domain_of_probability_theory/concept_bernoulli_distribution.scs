@@ -1,0 +1,43 @@
+concept_bernoulli_distribution
+	<- sc_node_not_relation;
+	=> nrel_main_idtf: [Распределение Бернулли] (* <- lang_ru;; *);
+	=> nrel_main_idtf: [Bernoulli distribution] (* <- lang_en;; *);;
+
+definition -> ...
+	(*
+		-> rrel_key_sc_element: concept_bernoulli_distribution;;
+		
+		=> nrel_main_idtf: [Опр.(Распределение Бернулли)] (* <- lang_ru;; *);;
+
+		<= nrel_using_constants: ...
+			(*
+				-> concept_probability;;
+				-> concept_probability_theory;;
+			*);;
+
+		<= nrel_sc_text_translation: ...
+			(*
+				-> [Распределе́ние Берну́лли в теории вероятностей и математической статистике — дискретное распределение вероятностей, моделирующее случайный эксперимент произвольной природы, при заранее известной вероятности успеха или неудачи. ] (*<-lang_ru;;=>nrel_format:format_html;;*);;
+			*);;
+	*);;
+
+
+affirmation -> ...
+	(*
+		-> rrel_key_sc_element: concept_bernoulli_distribution;;
+
+		=> nrel_main_idtf: [Утв.(Распределение Бернулли)] (* <- lang_ru;; *);;
+
+		<= nrel_sc_text_translation: ...
+			(*
+				-> [Случайная величина X имеет распределение Бернулли, если она принимает всего два значения: 1 и 0 с вероятностями p  и q ≡ 1 − p соответственно. ] (*<-lang_ru;;=>nrel_format:format_html;;*);;
+			*);;
+			
+		<= nrel_using_constants: ...
+			(*
+				-> concept_probability;;
+			*);;
+	*);;
+	
+concept_bernoulli_distribution<-rrel_explored_concept: section_subject_domain_of_probability_theory;;
+//<sc_element sys_idtf=""></sc_element>

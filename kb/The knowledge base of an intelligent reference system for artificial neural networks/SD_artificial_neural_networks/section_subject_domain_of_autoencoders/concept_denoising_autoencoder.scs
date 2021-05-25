@@ -1,0 +1,41 @@
+concept_denoising_autoencoder
+	<- sc_node_not_relation;
+	=> nrel_main_idtf: [Шумоподавляющий автокодировщик] (* <- lang_ru;; *);
+	=> nrel_main_idtf: [Denoising Autoencoder] (* <- lang_en;; *);;
+
+definition -> ...
+	(*
+		-> rrel_key_sc_element: concept_denoising_autoencoder;;
+		
+		=> nrel_main_idtf: [Опр.(Шумоподавляющий автокодировщик)] (* <- lang_ru;; *);;
+
+		<= nrel_using_constants: ...
+			(*
+				-> concept_autoencoder;;
+			*);;
+
+		<= nrel_sc_text_translation: ...
+			(*
+				-> [Шумоподавляющим автокодировщиком (DAE) называется автокодировщик, который получает на входе искаженные данные и обучается предсказывать истинные, неискаженные данные.] (*<-lang_ru;;=>nrel_format:format_html;;*);;
+			*);;
+	*);;
+
+
+affirmation -> ...
+	(*
+		-> rrel_key_sc_element: concept_denoising_autoencoder;;
+
+		=> nrel_main_idtf: [Утв.(Шумоподавляющий автокодировщик)] (* <- lang_ru;; *);;
+
+		<= nrel_sc_text_translation: ...
+			(*
+				-> [DAE минимизирует функцию потерь между выходным узлом и поврежденным вводом.] (*<-lang_ru;;=>nrel_format:format_html;;*);;
+			*);;
+		<= nrel_using_constants: ...
+			(*
+				-> nrel_input_layer;;
+			*);;
+	*);;
+	
+concept_denoising_autoencoder<-rrel_explored_concept: section_subject_domain_of_autoencoders;;
+//<sc_element sys_idtf=""></sc_element>

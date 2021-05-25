@@ -1,0 +1,44 @@
+concept_contractive_autoencoder
+	<- sc_node_not_relation;
+	=> nrel_main_idtf: [Сжимающий автокодировщик] (* <- lang_ru;; *);
+	=> nrel_main_idtf: [Contractive Autoencoder] (* <- lang_en;; *);;
+
+definition -> ...
+	(*
+		-> rrel_key_sc_element: concept_contractive_autoencoder;;
+		
+		=> nrel_main_idtf: [Опр.(Сжимающий автокодировщик)] (* <- lang_ru;; *);;
+
+		<= nrel_sc_text_translation: ...
+			(*
+				-> [Сжимающий автокодировщик (CAE) вводит явный регуляризирующий член для кода h = f(x), поощряющий за небольшую величину производных f] (*<-lang_ru;;*);;
+			*);;
+	*);;
+
+
+affirmation -> ...
+	(*
+		-> rrel_key_sc_element: concept_contractive_autoencoder;;
+
+		=> nrel_main_idtf: [Утв.(Сжимающий автокодировщик)] (* <- lang_ru;; *);;
+
+		<= nrel_sc_text_translation: ...
+			(*
+				-> [Целью CAE является получение надежного представления данных, которое менее чувствительно к небольшим изменениям. ] (*<-lang_ru;;*);;
+			*);;
+	*);;
+	
+illustration->...
+(*
+	-> rrel_key_sc_element: concept_contractive_autoencoder;;
+	=> nrel_main_idtf:
+		[Рис. (Сжимающий автокодировщик)](*<-lang_ru;;*);
+		[Pic. (Contractive Autoencoder)](*<-lang_en;;*);;
+	<= nrel_sc_text_translation:...
+	(*
+		->"file://IMG/Contractive_Autoencoder.jpg"(*=>nrel_format:format_jpg;;*);;
+	*);;
+*);;
+	
+concept_contractive_autoencoder<-rrel_explored_concept: section_subject_domain_of_autoencoders;;
+//<sc_element sys_idtf=""></sc_element>

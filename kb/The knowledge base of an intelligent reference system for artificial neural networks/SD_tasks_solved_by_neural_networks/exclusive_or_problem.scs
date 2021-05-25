@@ -1,0 +1,51 @@
+sc_node_not_relation -> concept_exclusive_or_problem;;
+
+sc_node_not_relation -> concept_logic_function;;
+sc_node_not_relation -> concept_function;;
+sc_node_not_relation -> concept_argument;;
+sc_node_not_relation -> concept_null;;
+sc_node_not_relation -> concept_one_layer_perceptron;;
+sc_node_not_relation -> concept_signal_activation_function;;
+
+sc_node_norole_relation -> nrel_give;;
+sc_node_norole_relation -> nrel_accept;;
+sc_node_norole_relation -> nrel_solve;;
+sc_node_norole_relation -> nrel_use;;
+
+concept_exclusive_or_problem => nrel_main_idtf: [Задача исключающего ИЛИ](* <- lang_ru;; *);;
+concept_exclusive_or_problem => nrel_main_idtf: [Exclusive OR problem](* <- lang_en;; *);;
+
+definition ->...
+(*
+	-> rrel_key_sc_element : concept_exclusive_or_problem;;
+	<= nrel_sc_text_translation: ...(*->rrel_example:[Дана логическая функция XOR – исключающее ИЛИ. Это функция от двух аргументов, каждый из которых может быть нулем или единицей. Она принимает значение 1, когда один из аргументов равен единице, но не оба, иначе 0.](*<-lang_ru;;*);;*);;
+	=> nrel_main_idtf: [Определение (Задача исключающего ИЛИ.)](*<- lang_ru;;*);;
+	=> nrel_using_constants: ...
+	(*
+	   -> concept_logic_function;;
+	   -> concept_function;;
+	   -> concept_argument;;
+	   -> concept_null;;
+	   -> nrel_give;;
+	   -> nrel_accept;;
+	   -> nrel_equal;;
+	*);;
+*);;
+
+statement ->...
+(*
+	-> rrel_key_sc_element : concept_exclusive_or_problem;;
+	<= nrel_sc_text_translation: ...(*->rrel_example:[Задачу исключающего ИЛИ может решить однослойный персептрон, при исполь􏰀зовании сигнальной функции активации.](*<-lang_ru;;*);;*);;
+	=> nrel_main_idtf: [Утверждение(Задача исключающего ИЛИ.)](*<- lang_ru;;*);;
+	=> nrel_using_constants: ...
+	(*
+	   -> concept_one_layer_perceptron;;
+	   -> concept_signal_activation_function;;
+	   -> nrel_solve;;
+	   -> nrel_use;;
+	*);;
+*);;
+
+
+concept_exclusive_or_problem
+	<- rrel_explored_concept: section_subject_domain_tasks_solved_by_neural_networks;;

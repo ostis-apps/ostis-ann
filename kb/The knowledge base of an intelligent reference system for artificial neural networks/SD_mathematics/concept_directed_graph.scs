@@ -1,0 +1,65 @@
+concept_directed_graph
+	<-sc_node_not_relation;
+	=>nrel_main_idtf:
+		[Ориентированный граф](* <- lang_ru;; *);
+		[Directed graph](* <- lang_eng;; *);
+	=>nrel_idtf:
+		[Ориентированный граф](* <- lang_ru;; *);
+		[Directed graph](* <- lang_eng;; *);;
+
+concept_directed_graph
+	<- rrel_key_sc_element: ...
+	(*
+		<- definition;;
+		
+		=> nrel_main_idtf:
+    			[Опр. (Ориентированный граф)] (* <- lang_ru;; *);;
+    		  
+		=> nrel_using_constants: 
+			{
+				graph
+			};;
+			
+		<= nrel_sc_text_translation: ... 
+		(*
+			->rrel_example:
+				[<b>ориентированный граф</b> — <sc_element sys_idtf=«concept_graph»>граф</sc_element>, рёбрам которого присвоено направление.](*<- lang_ru;; =>nrel_format: format_html;;*);;
+		*);;
+	*);;
+
+
+concept_directed_graph
+	<- rrel_key_sc_element: ... 
+	(*
+		=> nrel_main_idtf:
+			[Утв.(Ориентированный граф)] (* <- lang_ru;; *);;
+			
+ 		<= nrel_sc_text_translation: ...
+		(* 
+    			-> rrel_example:
+				[Направленные рёбра именуются также <sc_element sys_idtf=«concept_edge»>дугами</sc_element>, а в некоторых источниках и просто рёбрами.](*<-lang_ru;; =>nrel_format: format_html;;*);;
+		*);;
+		
+		=> nrel_using_constants:
+			{
+				edge
+				
+			};;
+	*);;
+
+concept_directed_graph
+	<- rrel_key_sc_element:...
+	(*
+		<- illustration;;
+		=> nrel_main_idtf:[Рис. (Ориентированный граф)](* <- lang_ru;; *);;
+		<= nrel_sc_text_translation:...
+		(*
+			-> rrel_example: "file://images/directed_graph.png";;
+			
+		*);;
+*);;
+
+
+concept_directed_graph
+	<- rrel_explored_concept: section_subject_domain_mathematics;;
+

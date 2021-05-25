@@ -1,0 +1,46 @@
+concept_Gauss_Newton_algorithm<-sc_node_not_relation;;
+
+concept_Gauss_Newton_algorithm=>nrel_main_idtf:
+[алгоритм Гаусса-Ньютона](*<-lang_ru;;*);
+[Gauss-Newton algorithm](*<-lang_en;;*);;
+
+
+concept_Gauss_Newton_algorithm<- rrel_key_sc_element: ...
+(*
+<- definition;;
+=> nrel_main_idtf:
+      [Опр. алгоритм Гаусса-Ньютона] (* <- lang_ru;; *);;
+=> nrel_using_constants: 
+	{
+		concept_iterative_method;
+		concept_numerical_method;
+		concept_least_squares
+	};; 
+<= nrel_sc_text_translation: ... 
+		(*
+			->rrel_example:
+			[Алгоритм Гаусса-Ньютона - это итерационный численный метод нахождения решения задачи наименьших квадратов.](*<- lang_ru;;*);;
+		*);;
+*);;
+
+
+concept_Gauss_Newton_algorithm<- rrel_key_sc_element: ... 
+(*
+ => nrel_main_idtf:
+[Утв. 1 о алгоритме Гаусса-Ньютона] (* <- lang_ru;; *);;
+=> nrel_using_constants: 
+	{
+		concept_Jacobian_matrix;
+		concept_derivative;
+		concept_function;
+		vector;
+		concept_parameter
+	};; 
+ <= nrel_sc_text_translation: ...
+	 (*
+    	  -> rrel_example:
+		[Метод Гаусса-Ньютона использует матрицу Якобиана J производных первого порядка функции F для нахождения вектора x значений параметра,](*<-lang_ru;;=>nrel_format: format_html;;*);;
+	*);;
+*);;
+
+concept_Gauss_Newton_algorithm<-rrel_explored_concept: section_subject_domain_of_learning_neural_networks;;

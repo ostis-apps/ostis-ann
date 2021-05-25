@@ -1,0 +1,56 @@
+sc_node_not_relation -> concept_discrete_cosine_transform;;
+
+sc_node_not_relation -> concept_orthogonal_transformations;;
+sc_node_not_relation -> concept_option;;
+sc_node_not_relation -> concept_cosine_transform;;
+sc_node_not_relation -> concept_vector;;
+sc_node_not_relation -> concept_real_number;;
+sc_node_not_relation -> concept_compression_algorithms;;
+sc_node_not_relation -> concept_loss;;
+sc_node_not_relation -> concept_example;;
+sc_node_not_relation -> concept_mpeg;;
+sc_node_not_relation -> concept_jpeg;;
+
+sc_node_norole_relation -> nrel_use;;
+
+concept_discrete_cosine_transform => nrel_main_idtf: [дискретное косинусное преобразование](* <- lang_ru;; *);;
+concept_discrete_cosine_transform => nrel_main_idtf: [concept discrete cosine transform](* <- lang_en;; *);;
+
+
+definition ->...
+(*
+	-> rrel_key_sc_element : concept_discrete_cosine_transform;;
+	<= nrel_sc_text_translation: ...(*->rrel_example:[Дискретное косинусное преобразование — одно из ортогональных преобразований. Вариант косинусного преобразования для вектора действительных чисел.](*<-lang_ru;;*);;*);;
+	=> nrel_main_idtf: [Определение (дискретное косинусное преобразование.)](*<- lang_ru;;*);;
+	=> nrel_using_constants: ...
+	(*
+	   -> concept_orthogonal_transformations;;
+	   -> concept_option;;
+	   -> concept_cosine_transform;;
+	   -> concept_vector;;
+	   -> concept_real_number;;
+	*);;
+*);;
+
+
+
+
+statement ->...
+(*
+	-> rrel_key_sc_element : concept_discrete_cosine_transform;;
+	<= nrel_sc_text_translation: ...(*->rrel_example:[Применяется в алгоритмах сжатия информации с потерями, например, MPEG и JPEG.](*<-lang_ru;;*);;*);;
+	=> nrel_main_idtf: [Утверждение(дискретное косинусное преобразование.)](*<- lang_ru;;*);;
+	=> nrel_using_constants: ...
+	(*
+	   -> concept_compression_algorithms;;
+	   -> concept_loss;;
+	   -> concept_example;;
+	   -> concept_mpeg;;
+	   -> concept_jpeg;;
+	   -> nrel_use;;
+	*);;
+*);;
+
+
+concept_discrete_cosine_transform
+	<- rrel_explored_concept: section_subject_domain_of_algorithms_and_functions;;

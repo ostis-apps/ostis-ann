@@ -1,0 +1,60 @@
+sc_node_not_relation -> concept_artificial_immune_system;;
+
+sc_node_not_relation -> concept_direction;;
+sc_node_not_relation -> concept_evolutionary_computing;;
+sc_node_not_relation -> concept_base;;
+sc_node_not_relation -> concept_immune_system;;
+sc_node_not_relation -> concept_mechanism;;
+sc_node_not_relation -> concept_process;;
+sc_node_not_relation -> concept_theory;;
+sc_node_not_relation -> concept_negative_selection;;
+sc_node_not_relation -> concept_immune_network;;
+sc_node_not_relation -> concept_clonal_selection;;
+
+sc_node_norole_relation -> nrel_build;;
+sc_node_norole_relation -> nrel_copy;;
+sc_node_norole_relation -> nrel_happen;;
+sc_node_norole_relation -> nrel_describe;;
+sc_node_norole_relation -> nrel_exist;;
+
+concept_artificial_immune_system => nrel_main_idtf: [Искусственная имунная система](* <- lang_ru;; *);;
+concept_artificial_immune_system => nrel_main_idtf: [Artificial immune system](* <- lang_en;; *);;
+
+definition -> ...
+(*
+	-> rrel_key_sc_element : concept_artificial_immune_system;;
+	<= nrel_sc_text_translation: ...(*->rrel_example:[Искусственные имунные системы - направление эволюционных вычислений. Искусственная иммунная система (ИИС) строится на основе иммунной системы человека и копирует механизмы и процессы в ней происходящие.](*<-lang_ru;;*);;*);;
+	=> nrel_main_idtf: [Определение (Искусственная имунная система.)](*<- lang_ru;;*);;
+	=> nrel_using_constants: ...
+	(*
+	   -> concept_direction;;
+	   -> concept_evolutionary_computing;;
+	   -> concept_base;;
+	   -> concept_immune_system;;
+	   -> concept_mechanism;;
+	   -> concept_process;;
+	   -> nrel_build;;
+	   -> nrel_copy;;
+	   -> nrel_happen;;
+	*);;
+*);;
+
+statement ->...
+(*
+	-> rrel_key_sc_element : concept_artificial_immune_system;;
+	<= nrel_sc_text_translation: ...(*->rrel_example:[Для описания искусственной имунной системы существуют три теории: негативный отбор, иммунная сеть, клональная селекция.](*<-lang_ru;;*);;*);;
+	=> nrel_main_idtf: [Утверждение(Искусственная имунная система.)](*<- lang_ru;;*);;
+	=> nrel_using_constants: ...
+	(*
+	   -> concept_theory;;
+	   -> concept_negative_selection;;
+	   -> concept_immune_network;;
+	   -> concept_clonal_selection;;
+	   -> nrel_describe;;
+	   -> nrel_exist;;
+	*);;
+*);;
+
+
+concept_artificial_immune_system
+	<- rrel_explored_concept: section_subject_domain_structure_of_artificial_neural_networks;;

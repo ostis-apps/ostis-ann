@@ -1,0 +1,50 @@
+nrel_Cartesian_product<-sc_node_norole_relation;;
+
+nrel_Cartesian_product=>nrel_main_idtf:
+[Декартово произведение](*<-lang_ru;;*);
+[Cartesian_product](*<-lang_en;;*);;
+
+nrel_inclusion->(math_concept=>nrel_Cartesian_product);;
+nrel_Cartesian_product<-rrel_explored_concept: section_subject_domain_mathematics;;
+
+nrel_Cartesian_product<- rrel_key_sc_element: ...
+(*
+<- definition;;
+=> nrel_main_idtf:
+      [Опр. Декартово произведение] (* <- lang_ru;; *);;
+=> nrel_using_constants: 
+	{
+		concept_set;
+		concept_element;
+		nrel_ordered_pair
+	};; 
+<= nrel_sc_text_translation: ... 
+		(*
+			->rrel_example:
+			[Декартово произведение двух множеств — множество, элементами которого являются все возможные упорядоченные пары элементов исходных множеств.](*<- lang_ru;;*);;
+		*);;
+*);;
+
+
+nrel_Cartesian_product<- rrel_key_sc_element: ... 
+(*
+ => nrel_main_idtf:
+[Утв. 1 Декартово произведение] (* <- lang_ru;; *);;
+ <= nrel_sc_text_translation: ...
+	 (*
+    	  -> rrel_example:
+		[В парах, полученных декартовым произведением множетв, первый элемент (компонента) всегда принадлежит первому множеству, а второй элемент (компонента) второму.](*<-lang_ru;;*);;
+	*);;
+=> nrel_using_constants: 
+{
+concept_set;
+concept_component
+};;
+*);;
+
+nrel_Cartesian_product
+<- binary_relation;
+<- oriented_relation;
+<|-reflexive_relation;
+<|-symmetric_relation;
+<|- transitive_relation;;

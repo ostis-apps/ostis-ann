@@ -1,0 +1,58 @@
+concept_biological_neuron
+
+	<-sc_node_not_relation;
+
+	=>nrel_main_idtf:
+		[биологический нейрон](*<-lang_ru;;*);
+		[biological_neuron](*<-lang_en;;*);
+		
+	=>nrel_idtf:
+		[биологический нейрон](*<-lang_ru;;*);
+		[biological_neuron](*<-lang_en;;*);;
+
+
+concept_biological_neuron
+	<- rrel_key_sc_element: ...
+	(*
+		<- definition;;
+		
+		=> nrel_main_idtf:
+    			[Опр. (биологический нейрон)] (* <- lang_ru;; *);;
+    		  
+		=> nrel_using_constants: 
+			{
+				neurones;
+				electrical_impulses
+			};;
+			
+		<= nrel_sc_text_translation: ... 
+		(*
+			->rrel_example:
+				[Биологический нейрон – передача электрических импульсов между нейронами.](*<- lang_ru;; =>nrel_format: format_html;;*);;
+		*);;
+	*);;
+
+
+concept_biological_neuron
+	<- rrel_key_sc_element: ... 
+	(*
+		=> nrel_main_idtf:
+			[Утв.(о биологическом нейроне)] (* <- lang_ru;; *);;
+			
+ 		<= nrel_sc_text_translation: ...
+		(*
+    			-> rrel_example:
+				[Биологический нейрон состоит из тела (cell body), или сомы (soma), и отростков нервных волокон двух типов - дендритов (dendrites), по которым принимаются импульсы, и единственного аксона (ахоn), по которому нейрон может передавать импульс.](*<-lang_ru;; =>nrel_format: format_html;;*);;
+		*);;
+		
+		=> nrel_using_constants:
+			{
+				cell_body;
+				soma;
+				dendrites;
+				axon
+			};;
+	*);;
+
+concept_biological_neuron
+	<- rrel_explored_concept: section_subject_domain_structure_of_artificial_neural_networks;;

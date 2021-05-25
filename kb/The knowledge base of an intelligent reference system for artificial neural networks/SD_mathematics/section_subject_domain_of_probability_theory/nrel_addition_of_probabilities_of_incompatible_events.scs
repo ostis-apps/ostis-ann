@@ -1,0 +1,57 @@
+sc_node_norole_relation -> nrel_addition_of_probabilities_of_incompatible_events;;
+
+nrel_addition_of_probabilities_of_incompatible_events => nrel_main_idtf: [Сумма вероятностей несовместных событий*](*<- lang_ru;;*);;
+nrel_addition_of_probabilities_of_incompatible_events => nrel_main_idtf: [Composition of events*](*<- lang_en;;*);;
+
+definition -> ...
+(*
+    -> rrel_key_sc_element: nrel_addition_of_probabilities_of_incompatible_events;;
+    <= nrel_sc_text_translation: ...
+        (*
+            -> [Вероятность появления одного из двух несовместныхсобытий Aили B(без разницы какого),  равна сумме вероятностей этих событий: P(A + B) = P(A) + P(B)] (*<-lang_ru;;=>nrel_format:format_html;;*);;
+        *);;
+    => nrel_main_idtf: [Опр.(Сумма вероятностей несовместных событий*)](*<- lang_ru;;*);;
+    <= nrel_using_constants: ...
+        (*
+            ->concept_event;;
+            ->concept_probablity;;
+            ->nrel_incompatibility;;
+        *);;
+*);;
+
+
+statement -> ...
+(*
+    -> rrel_key_sc_element: nrel_addition_of_probabilities_of_incompatible_events;;
+    <= nrel_sc_text_translation: ...
+        (*
+            -> [Теорему сложения двух несовместных событий можно обобщить на случай любого числа попарно несовместных событий, которая в этом случае примет формулировку: вероятность суммы конечного числа несовместных событий равна сумме вероятностей этих событий. ] (*<-lang_ru;;=>nrel_format:format_html;;*);;
+        *);;
+    => nrel_main_idtf: [Утв.(Сумма вероятностей несовместных событий*)](*<- lang_ru;;*);;
+<= nrel_using_constants: ...
+        (*
+            ->concept_event;;
+            ->concept_probablity;;
+            ->nrel_incompatibility;;
+        *);;
+*);;
+
+parameter -> arity;;
+arity -> binary_relation;;
+binary_relation -> nrel_addition_of_probabilities_of_incompatible_events;;
+binary_relation => nrel_measurement: 2;;
+number -> 2;;
+
+relation => nrel_addition_of_probabilities_of_incompatible_events: oriented_relation;;
+relation => nrel_addition_of_probabilities_of_incompatible_events: binary_relation;;
+
+binary_relation => nrel_addition_of_probabilities_of_incompatible_events: reflexive_relation;;
+binary_relation => nrel_addition_of_probabilities_of_incompatible_events: transitive_relation;;
+binary_relation => nrel_addition_of_probabilities_of_incompatible_events: symmetric_relation;;
+
+reflexive_relation -> nrel_addition_of_probabilities_of_incompatible_events;;
+transitive_relation -|> nrel_addition_of_probabilities_of_incompatible_events;;
+symmetric_relation -|> nrel_addition_of_probabilities_of_incompatible_events;;
+
+nrel_addition_of_probabilities_of_incompatible_events<-rrel_explored_concept: section_subject_domain_of_probability_theory;;
+//<sc_element sys_idtf=""></sc_element>

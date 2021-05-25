@@ -1,0 +1,50 @@
+concept_cyclic_code
+	<-sc_node_not_relation;
+	=>nrel_main_idtf:
+		[Циклический код](* <- lang_ru;; *);
+		[Cyclic code](* <- lang_eng;; *);
+	=>nrel_idtf:
+		[Циклический код](* <- lang_ru;; *);
+		[Cyclic code](* <- lang_eng;; *);;
+
+concept_cyclic_code
+	<- rrel_key_sc_element: ...
+	(*
+		<- definition;;
+		
+		=> nrel_main_idtf:
+    			[Опр. (Циклический код)] (* <- lang_ru;; *);;
+    		  
+		=> nrel_using_constants: 
+			{
+				cyclic_permutation
+			};;
+			
+		<= nrel_sc_text_translation: ... 
+		(*
+			->rrel_example:
+				[<b>Циклический код</b> — линейный, блочный код, обладающий свойством цикличности, то есть каждая циклическая перестановка кодового слова также является кодовым словом.](*<- lang_ru;; =>nrel_format: format_html;;*);;
+		*);;
+	*);;
+
+
+concept_cyclic_code
+	<- rrel_key_sc_element: ... 
+	(*
+		=> nrel_main_idtf:
+			[Утв.(Циклический код)] (* <- lang_ru;; *);;
+			
+ 		<= nrel_sc_text_translation: ...
+		(* 
+    			-> rrel_example:
+				[Используется для преобразования информации и для защиты её от ошибок. ](*<-lang_ru;; =>nrel_format: format_html;;*);;
+		*);;
+		
+		=> nrel_using_constants:
+			{
+				information;
+				fault
+			};;
+	*);;
+concept_cyclic_code
+	<- rrel_explored_concept: section_subject_domain_of_algorithms_and_functions;;

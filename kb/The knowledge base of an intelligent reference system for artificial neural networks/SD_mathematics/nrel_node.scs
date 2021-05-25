@@ -1,0 +1,51 @@
+nrel_node<-sc_node_norole_relation;;
+
+concept_graph=>nrel_main_idtf:
+[вершина](*<-lang_ru;;*);
+[node](*<-lang_en;;*);;
+
+nrel_node<-rrel_explored_concept: section_subject_domain_mathematics;;
+
+nrel_node<- rrel_key_sc_element: ...
+(*
+<- definition;;
+=> nrel_main_idtf:
+      [Опр. Вершина] (* <- lang_ru;; *);;
+=> nrel_using_constants: 
+	{
+		concept_object;
+		nrel_node;
+		nrel_arc;
+		concept_abstract_object
+	};; 
+<= nrel_sc_text_translation: ... 
+		(*
+			->rrel_example:
+			[Вершина графа — элемент графа, обозначающий объект любой природы, входящий в множество объектов, описываемое графом.](*<- lang_ru;;*);;
+		*);;
+*);;
+
+
+nrel_node<- rrel_key_sc_element: ... 
+(*
+ => nrel_main_idtf:
+[Утв. 1 о вершине] (* <- lang_ru;; *);;
+=> nrel_using_constants: 
+	{
+		concept_digit;
+		nrel_parity;
+		nrel_odd;
+		nrel_node_degree
+	};; 
+ <= nrel_sc_text_translation: ...
+	 (*
+    	  -> rrel_example:
+		[Вершина называется нечетной, если ее степень — нечетное число, и четной, если ее степень — четное число.](*<-lang_ru;;*);;
+	*);;
+*);;
+
+nrel_node
+<- oriented_relation;
+<- antireflexive_relation;
+<- antisymmetric_relation;
+<- antitransitive_relation;;

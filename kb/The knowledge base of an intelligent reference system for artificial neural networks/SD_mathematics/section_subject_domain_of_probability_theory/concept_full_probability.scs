@@ -1,0 +1,39 @@
+concept_full_probability
+	<- sc_node_not_relation;
+	=> nrel_main_idtf: [Полная вероятность] (* <- lang_ru;; *);
+	=> nrel_main_idtf: [Full probability] (* <- lang_en;; *);;
+
+definition -> ...
+	(*
+		-> rrel_key_sc_element: concept_full_probability;;
+		
+		=> nrel_main_idtf: [Опр.(Полная вероятность)] (* <- lang_ru;; *);;
+
+		<= nrel_sc_text_translation: ...
+			(*
+				-> [Если событие A наступает только при условии появления одного из событий B1,B2,...,Bn, образующих полную группу несовместных событий, то вероятность события A равна сумме произведений вероятностей каждого из событий B1,B2,...,Bn на соответствующую условную вероятность события B1,B2,...,Bn] (*<-lang_ru;;=>nrel_format:format_html;;*);;
+			*);;
+		<= nrel_using_constants: ...
+			(*
+				-> concept_probability_theory;;
+				-> concept_event;;
+				-> nrel_addition_of_probabilities_of_incompatible_events;;
+				-> nrel_incompatible;;
+			*);;
+	*);;
+
+
+illustration->...
+(*
+	-> rrel_key_sc_element:concept_full_probability;;
+	=> nrel_main_idtf:
+		[Формула. (Полная вероятность)](*<-lang_ru;;*);
+		[Formula. (Full probability)](*<-lang_en;;*);;
+	<= nrel_sc_text_translation:...
+	(*
+		->"file://IMG/full_probability_formula.jpg"(*=>nrel_format:format_jpg;;*);;
+	*);;
+*);;
+	
+concept_full_probability<-rrel_explored_concept: section_subject_domain_of_probability_theory;;
+//<sc_element sys_idtf=""></sc_element>

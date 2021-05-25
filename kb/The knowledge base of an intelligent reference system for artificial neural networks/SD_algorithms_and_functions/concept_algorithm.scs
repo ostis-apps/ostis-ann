@@ -1,0 +1,51 @@
+concept_algorithm
+	<-sc_node_not_relation;
+	=>nrel_main_idtf:
+		[Алгоритм](* <- lang_ru;; *);
+		[Algorithm](* <- lang_eng;; *);
+	=>nrel_idtf:
+		[Алгоритм](* <- lang_ru;; *);
+		[Algorithm](* <- lang_eng;; *);;
+
+concept_algorithm
+	<- rrel_key_sc_element: ...
+	(*
+		<- definition;;
+		
+		=> nrel_main_idtf:
+    			[Опр. (Алгоритм] (* <- lang_ru;; *);;
+    		  
+		=> nrel_using_constants: 
+			{
+				task;
+				nrel_performer
+			};;
+			
+		<= nrel_sc_text_translation: ... 
+		(*
+			->rrel_example:
+				[<b>Алгоритм</b> - конечная совокупность точно заданных правил решения некоторого класса задач или набор инструкций, описывающих порядок действий <sc_element sys_idtf=«nrel_performer»>исполнителя</sc_element> для решения определённой <sc_element sys_idtf=«task»>задачи</sc_element>.](*<- lang_ru;; =>nrel_format: format_html;;*);;
+		*);;
+	*);;
+
+
+concept_algorithm
+	<- rrel_key_sc_element: ... 
+	(*
+		=> nrel_main_idtf:
+			[Утв.(Алгоритм)] (* <- lang_ru;; *);;
+			
+ 		<= nrel_sc_text_translation: ...
+		(* 
+    			-> rrel_example:
+				[Независимые инструкции могут выполняться в произвольном порядке, параллельно, если это позволяют используемые <sc_element sys_idtf=«nreL_performer»>исполнители</sc_element>.](*<-lang_ru;; =>nrel_format: format_html;;*);;
+		*);;
+		
+		=> nrel_using_constants:
+			{
+				nrel_performer
+			};;
+	*);;
+
+concept_algorithm
+	<- rrel_explored_concept: section_subject_domain_of_algorithms_and_functions;;

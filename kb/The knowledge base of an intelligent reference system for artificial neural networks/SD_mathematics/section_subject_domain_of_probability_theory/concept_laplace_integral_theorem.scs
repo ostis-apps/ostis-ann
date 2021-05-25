@@ -1,0 +1,37 @@
+concept_laplace_integral_theorem
+	<- sc_node_not_relation;
+	=> nrel_main_idtf: [Интегральная теорема Лапласа] (* <- lang_ru;; *);
+	=> nrel_main_idtf: [Laplace's Integral Theorem] (* <- lang_en;; *);;
+
+definition -> ...
+	(*
+		-> rrel_key_sc_element: concept_laplace_integral_theorem;;
+		
+		=> nrel_main_idtf: [Опр.(Интегральная теорема Лапласа)] (* <- lang_ru;; *);;
+
+		<= nrel_sc_text_translation: ...
+			(*
+				-> [Если вероятность p появления случайного события A в каждом испытании постоянна, то вероятность Pn(m1<=m<=m2) – того, что в n испытаниях событие A наступит не менее m1 и не более m2 раз (от m1 до m2 раз включительно).] (*<-lang_ru;;=>nrel_format:format_html;;*);;
+			*);;
+		<= nrel_using_constants: ...
+			(*
+				-> concept_probability;;
+				-> concept_event;;
+				-> concept_random_event;;
+			*);;
+	*);;
+
+illustration->...
+(*
+	-> rrel_key_sc_element: concept_laplace_integral_theorem;;
+	=> nrel_main_idtf:
+		[Формула. (Интегральная теорема Лапласа)](*<-lang_ru;;*);
+		[Formula. (Laplace's Integral Theorem)](*<-lang_en;;*);;
+	<= nrel_sc_text_translation:...
+	(*
+		->"file://IMG/laplace_integral_theorem.jpg"(*=>nrel_format:format_jpg;;*);;
+	*);;
+*);;
+	
+concept_laplace_integral_theorem<-rrel_explored_concept: section_subject_domain_of_probability_theory;;
+//<sc_element sys_idtf=""></sc_element>

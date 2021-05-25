@@ -1,0 +1,49 @@
+sc_node_not_relation -> concept_multirecurrent_neural_network;;
+
+sc_node_not_relation -> concept_network;;
+sc_node_not_relation -> concept_architecture;;
+sc_node_not_relation -> concept_recurrent_neural_network;;
+sc_node_not_relation -> concept_feedback;;
+sc_node_not_relation -> concept_neuron;;
+sc_node_not_relation -> concept_output_layer;;
+sc_node_not_relation -> concept_hidden_layer;;
+
+sc_node_norole_relation -> nrel_have;;
+sc_node_norole_relation -> nrel_be;;
+
+concept_multirecurrent_neural_network => nrel_main_idtf: [Мультирекуррентая нейронная сеть](* <- lang_ru;; *);;
+concept_multirecurrent_neural_network => nrel_main_idtf: [Multirecurrent neural network](* <- lang_en;; *);;
+
+definition ->...
+(*
+	-> rrel_key_sc_element : concept_multirecurrent_neural_network;;
+	<= nrel_sc_text_translation: ...(*->rrel_example:[Сеть, имеющая архитектуру рекуррентной нейронной сети, которая имеет обратные связи как от нейронов выходного, так и от нейронов скрытого слоя.](*<-lang_ru;;*);;*);;
+	=> nrel_main_idtf: [Определение (Мультирекуррентая нейронная сеть.)](*<- lang_ru;;*);;
+	=> nrel_using_constants: ...
+	(*
+	   -> concept_network;;
+	   -> concept_architecture;;
+	   -> concept_recurrent_neural_network;;
+	   -> concept_feedback;;
+	   -> concept_neuron;;
+	   -> concept_output_layer;;
+	   -> concept_hidden_layer;;
+	   -> nrel_have;;
+	*);;
+*);;
+
+statement ->...
+(*
+	-> rrel_key_sc_element : concept_multirecurrent_neural_network;;
+	<= nrel_sc_text_translation: ...(*->rrel_example:[Является динамической системой.](*<-lang_ru;;*);;*);;
+	=> nrel_main_idtf: [Утверждение(Мультирекуррентая нейронная сеть.)](*<- lang_ru;;*);;
+	=> nrel_using_constants: ...
+	(*
+		-> concept_dynamic_system;;
+		-> nrel_be;;
+	*);;
+*);;
+
+
+concept_multirecurrent_neural_network
+	<- rrel_explored_concept: section_subject_domain_of_artificial_neural_networks;;

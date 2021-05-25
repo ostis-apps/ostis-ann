@@ -1,0 +1,76 @@
+sc_node_not_relation -> concept_cognitive_processes;;
+
+sc_node_not_relation -> concept_process;;
+sc_node_not_relation -> concept_human;;
+sc_node_not_relation -> concept_feeling;;
+sc_node_not_relation -> concept_perception;;
+sc_node_not_relation -> concept_attention;;
+sc_node_not_relation -> concept_imagination;;
+sc_node_not_relation -> concept_memory;;
+sc_node_not_relation -> concept_thinking;;
+sc_node_not_relation -> concept_speech;;
+sc_node_not_relation -> concept_cognition;;
+sc_node_not_relation -> concept_conclusion;;
+sc_node_not_relation -> concept_cognitiveness;;
+sc_node_not_relation -> concept_width;;
+sc_node_not_relation -> concept_section;;
+sc_node_not_relation -> concept_psychology;;
+sc_node_not_relation -> concept_particular;;
+sc_node_not_relation -> concept_system;;
+sc_node_not_relation -> concept_artificiality;;
+sc_node_not_relation -> concept_intelligence;;
+
+sc_node_norole_relation -> nrel_include;;
+sc_node_norole_relation -> nrel_build;;
+sc_node_norole_relation -> nrel_use;;
+
+concept_cognitive_processes => nrel_main_idtf: [Когнитивные процессы](* <- lang_ru;; *);;
+concept_cognitive_processes => nrel_main_idtf: [Cognitive processes](* <- lang_en;; *);;
+
+definition ->...
+(*
+	-> rrel_key_sc_element : concept_cognitive_processes;;
+	<= nrel_sc_text_translation: ...(*->rrel_example:[Познавательные процессы человека, включая его ощущения, восприятие, внимание, воображение, память, мышление, речь.](*<-lang_ru;;*);;*);;
+	=> nrel_main_idtf: [Определение (Когнитивные процессы.)](*<- lang_ru;;*);;
+	=> nrel_using_constants: ...
+	(*
+	   -> concept_process;;
+	   -> concept_human;;
+	   -> concept_feeling;;
+	   -> concept_perception;;
+	   -> concept_attention;;
+	   -> concept_imagination;;
+	   -> concept_memory;;
+	   -> concept_thinking;;
+	   -> concept_speech;;
+	   -> concept_cognition;;
+	   -> nrel_include;;
+	*);;
+*);;
+
+statement ->...
+(*
+	-> rrel_key_sc_element : concept_cognitive_processes;;
+	<= nrel_sc_text_translation: ...(*->rrel_example:[Выводы когнитивной процессов широко используются в других разделах психологии, в частности при построении систем искусственного интеллекта.](*<-lang_ru;;*);;*);;
+	=> nrel_main_idtf: [Утверждение(Когнитивные процессы.)](*<- lang_ru;;*);;
+	=> nrel_using_constants: ...
+	(*
+	   -> concept_conclusion;;
+	   -> concept_cognitiveness;;
+	   -> concept_process;;
+	   -> concept_width;;
+	   -> concept_section;;
+	   -> concept_psychology;;
+	   -> concept_particular;;
+	   -> concept_system;;
+	   -> concept_artificiality;;
+	   -> concept_intelligence;;
+	   -> nrel_build;;
+	   -> nrel_use;;
+	*);;
+*);;
+
+
+
+concept_cognitive_processes
+	<- rrel_explored_concept: section_subject_domain_structure_of_artificial_neural_networks;;

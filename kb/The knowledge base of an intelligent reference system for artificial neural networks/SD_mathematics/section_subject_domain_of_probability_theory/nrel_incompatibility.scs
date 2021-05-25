@@ -1,0 +1,54 @@
+sc_node_norole_relation -> nrel_incompatibility;;
+
+nrel_incompatibility => nrel_main_idtf: [Несовместность*](*<- lang_ru;;*);;
+nrel_incompatibility => nrel_main_idtf: [Incompatibility*](*<- lang_en;;*);;
+
+definition -> ...
+(*
+    -> rrel_key_sc_element: nrel_incompatibility;;
+    <= nrel_sc_text_translation: ...
+        (*
+            -> [<sc_element sys_idtf="concept_event">События</sc_element> называют несовместными, если в одном и том же испытании появление одного из событий исключает появление других событий.] (*<-lang_ru;;=>nrel_format:format_html;;*);;
+        *);;
+    => nrel_main_idtf: [Опр.(Несовместность*)](*<- lang_ru;;*);;
+    <= nrel_using_constants: ...
+        (*
+            -> concept_event;;
+        *);;
+*);;
+
+
+statement -> ...
+(*
+    -> rrel_key_sc_element: nrel_incompatibility;;
+    <= nrel_sc_text_translation: ...
+        (*
+            -> [Простейшим примером несовместных <sc_element sys_idtf="concept_event">событий</sc_element>  является пара <sc_element sys_idtf="concept_opposite_event">противоположных событий</sc_element>. ] (*<-lang_ru;;=>nrel_format:format_html;;*);;
+        *);;
+    => nrel_main_idtf: [Утв.(Несовместность*)](*<- lang_ru;;*);;
+<= nrel_using_constants: ...
+        (*
+            ->concept_opposite_event;;
+            ->concept_event;;
+        *);;
+*);;
+
+parameter -> arity;;
+arity -> binary_relation;;
+binary_relation -> nrel_incompatibility;;
+binary_relation => nrel_measurement: 2;;
+number -> 2;;
+
+relation => nrel_incompatibility: unoriented_relation;;
+relation => nrel_incompatibility: binary_relation;;
+
+binary_relation => nrel_incompatibility: reflexive_relation;;
+binary_relation => nrel_incompatibility: transitive_relation;;
+binary_relation => nrel_incompatibility: symmetric_relation;;
+
+reflexive_relation -> nrel_incompatibility;;
+transitive_relation -> nrel_incompatibility;;
+symmetric_relation -> nrel_incompatibility;;
+
+nrel_incompatibility<-rrel_explored_concept: section_subject_domain_of_probability_theory;;
+//<sc_element sys_idtf=""></sc_element>

@@ -1,0 +1,54 @@
+concept_normal_distribution
+	<- sc_node_not_relation;
+	=> nrel_main_idtf: [Нормальное распределение] (* <- lang_ru;; *);
+	=> nrel_main_idtf: [Normal distribution] (* <- lang_en;; *);;
+
+definition -> ...
+	(*
+		-> rrel_key_sc_element: concept_normal_distribution;;
+		
+		=> nrel_main_idtf: [Опр.(Нормальное распределение)] (* <- lang_ru;; *);;
+
+		<= nrel_using_constants: ...
+			(*
+				-> concept_probability_distribution;;
+			*);;
+
+		<= nrel_sc_text_translation: ...
+			(*
+				-> [Нормальное распределение, также называемое распределением Гаусса или Гаусса — Лапласа — распределение вероятностей, которое в одномерном случае задаётся функцией плотности вероятности, совпадающей с функцией Гаусса] (*<-lang_ru;;=>nrel_format:format_html;;*);;
+			*);;
+	*);;
+
+
+affirmation -> ...
+	(*
+		-> rrel_key_sc_element: concept_normal_distribution;;
+
+		=> nrel_main_idtf: [Утв.(Нормальное распределение)] (* <- lang_ru;; *);;
+
+		<= nrel_sc_text_translation: ...
+			(*
+				-> [Таким образом, одномерное нормальное распределение является двухпараметрическим семейством распределений, которое принадлежит экспоненциальному классу распределений.] (*<-lang_ru;;=>nrel_format:format_html;;*);;
+			*);;
+
+		<= nrel_using_constants: ...
+			(*
+				-> concept_exponential_distribution;;
+			*);;
+	*);;
+	
+illustration->...
+(*
+	-> rrel_key_sc_element: concept_normal_distribution;;
+	=> nrel_main_idtf:
+		[Рис. (Нормальное распределение)](*<-lang_ru;;*);
+		[Pic. (Normal distribution)](*<-lang_en;;*);;
+	<= nrel_sc_text_translation:...
+	(*
+		->"file://IMG/normal_distribution_formula.jpg"(*=>nrel_format:format_jpg;;*);;
+	*);;
+*);;
+	
+concept_normal_distribution<-rrel_explored_concept: section_subject_domain_of_probability_theory;;
+//<sc_element sys_idtf=""></sc_element>

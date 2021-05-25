@@ -1,0 +1,42 @@
+concept_reliable_event
+	<- sc_node_not_relation;
+	=> nrel_main_idtf: [Достоверное событие] (* <- lang_ru;; *);
+	=> nrel_main_idtf: [Reliable event] (* <- lang_en;; *);;
+
+definition -> ...
+	(*
+		-> rrel_key_sc_element: concept_reliable_event;;
+		
+		=> nrel_main_idtf: [Опр.(Достоверное событие)] (* <- lang_ru;; *);;
+
+		<= nrel_sc_text_translation: ...
+			(*
+				-> [Достоверным называют <sc_element sys_idtf="concept_event">событие</sc_element>, которое в результате испытания (осуществления определенных действий, определённого комплекса условий) обязательно произойдёт. ] (*<-lang_ru;;=>nrel_format:format_html;;*);;
+			*);;
+			
+		<= nrel_using_constants: ...
+			(*
+				-> concept_event;;
+			*);;
+	*);;
+
+
+affirmation -> ...
+	(*
+		-> rrel_key_sc_element: concept_reliable_event;;
+
+		=> nrel_main_idtf: [Утв.(Достоверное событие)] (* <- lang_ru;; *);;
+
+		<= nrel_sc_text_translation: ...
+			(*
+				-> [Например, в условиях земного тяготения подброшенная монета непременно упадёт вниз, такое <sc_element sys_idtf="concept_event">событие</sc_element> является достоверным] (*<-lang_ru;;=>nrel_format:format_html;;*);;
+			*);;
+						
+		<= nrel_using_constants: ...
+			(*
+				-> concept_event;;
+			*);;
+	*);;
+	
+concept_reliable_event<-rrel_explored_concept: section_subject_domain_of_probability_theory;;
+//<sc_element sys_idtf=""></sc_element>

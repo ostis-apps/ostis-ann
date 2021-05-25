@@ -1,0 +1,54 @@
+concept_data_visualization
+
+	<-sc_node_not_relation;
+
+	=>nrel_main_idtf:
+		[Визуализация данных](*<-lang_ru;;*);
+		[Data visualization](*<-lang_en;;*);
+		
+	=>nrel_idtf:
+		[Визуализация данных](*<-lang_ru;;*);
+		[Data visualization](*<-lang_en;;*);;
+
+
+concept_data_visualization
+	<- rrel_key_sc_element: ...
+	(*
+		<- definition;;
+		
+		=> nrel_main_idtf:
+    			[Опр. (Визуализация данных)] (* <- lang_ru;; *);;
+    		  
+		=> nrel_using_constants: 
+			{
+				data
+			};;
+			
+		<= nrel_sc_text_translation: ... 
+		(*
+			->rrel_example:
+				[<b>Визуализация данных</b> — это представление <sc_element sys-idtf=«data»>данных</sc_element> в виде, который обеспечивает наиболее эффективную работу человека по их изучению.](*<- lang_ru;; =>nrel_format: format_html;;*);;
+		*);;
+	*);;
+
+
+concept_data_visualization
+	<- rrel_key_sc_element: ... 
+	(*
+		=> nrel_main_idtf:
+			[Утв.(Визуализация данных)] (* <- lang_ru;; *);;
+			
+ 		<= nrel_sc_text_translation: ...
+		(*
+    			-> rrel_example:
+				[Визуализация данных находит широкое применение в научных и статических исследованиях (в частности, в <sc_element sys_idtf=«nrel_forecasting»>прогнозировании</sc_element>, интеллектуальном анализе данных, бизнес-анализе), в педагогическом дизайне для обучения и <>тестирования, в новостных сводках и аналитических обзорах.](*<-lang_ru;;=>nrel_format:format_html;;*);;
+		*);;
+		
+		=> nrel_using_constants:
+			{
+				nrel_forecasting
+			};;
+	*);;
+
+concept_data_visualization
+	<- rrel_explored_concept: section_subject_domain_of_output_data;;

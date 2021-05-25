@@ -1,0 +1,29 @@
+concept_recursive_neural_network<-sc_node_not_relation;;
+
+concept_recursive_neural_network=> nrel_main_idtf: [Рекурсивная нейронная сеть](* <- lang_ru;; *);;
+concept_recursive_neural_network=> nrel_main_idtf: [Recursive neural network](* <- lang_en;; *);;
+definition ->...
+(*
+->rrel_key_sc_element: concept_recursive_neural_network;;
+<= nrel_sc_text_translation: ...(*->rrel_example:[Рекурсивные нейронные сети — вид <b><sc_element sys_idtf="neural_network">нейронных сетей</b>, работающих с данными переменной длины.](*<-lang_ru;;=>nrel_format:format_html;;*);;*);;
+=> nrel_main_idtf: [Рекурсивная нейронная сеть. Определение](*<- lang_ru;;*);;
+=> nrel_using_constants:
+{ 
+ neural_network
+};;
+*);; 
+
+statement ->...
+(*
+->rrel_key_sc_element: concept_recursive_neural_network;;
+<= nrel_sc_text_translation: ...(*->rrel_example:[В рекурсивных сетях <b><sc_element sys_idtf="concept_neuron_node">нейроны</b> с одинаковыми <b><sc_element sys_idtf="nrel_synapse_weight">весами</b> активируются рекурсивно в соответствии со структурой сети.](*<-lang_ru;;=>nrel_format:format_html;;*);;*);;
+=> nrel_main_idtf: [Рекурсивная нейронная сеть. Утверждение](*<- lang_ru;;*);;
+=> nrel_using_constants:
+{
+concept_neuron_node;
+nrel_synapse_weight
+};;
+*);;
+
+concept_recursive_neural_network<-rrel_explored_concept: section_subject_domain_of_neural_networks_with_feedbacks;;
+
