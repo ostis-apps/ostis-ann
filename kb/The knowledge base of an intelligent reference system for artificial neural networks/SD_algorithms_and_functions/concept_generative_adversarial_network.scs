@@ -1,0 +1,72 @@
+concept_generative_adversarial_network
+
+	<-sc_node_not_relation;
+
+	=>nrel_main_idtf:
+		[Генеративно - состязательная сеть](*<-lang_ru;;*);
+		[Generativ adversarial network](*<-lang_en;;*);
+		
+	=>nrel_idtf:
+		[Генеративно - состязательная сеть](*<-lang_ru;;*);
+		[Generativ adversarial network](*<-lang_en;;*);;
+
+
+concept_generative_adversarial_network
+	<- rrel_key_sc_element: ...
+	(*
+		<- definition;;
+		
+		=> nrel_main_idtf:
+    			[Опр. (Генеративно - состязательная сеть)] (* <- lang_ru;; *);;
+    		  
+		=> nrel_using_constants: 
+			{
+				algorithm;
+				unsupervised_learning;
+				frame
+			};;
+			
+		<= nrel_sc_text_translation: ... 
+		(*
+			->rrel_example:
+				[<b>Генеративно-состязательная сеть</b> — алгоритм машинного обучения без учителя, построенный на комбинации из двух нейронных сетей, одна из которых (сеть G) генерирует образцы，а другая (сеть D) старается отличить правильные («подлинные») образцы от неправильных.](*<- lang_ru;; =>nrel_format: format_html;;*);;
+		*);;
+	*);;
+
+
+concept_generative_adversarial_network
+	<- rrel_key_sc_element: ... 
+	(*
+		=> nrel_main_idtf:
+			[Утв.(Генеративно - состязательная сеть)] (* <- lang_ru;; *);;
+			
+ 		<= nrel_sc_text_translation: ...
+		(*
+    			-> rrel_example:
+				[Использование этой техники позволяет в частности генерировать фотографии, которые человеческим глазом воспринимаются как натуральные изображения.](*<-lang_ru;;=>nrel_format:format_html;;*);;
+		*);;
+		
+		=> nrel_using_constants:
+			{
+				image
+			};;
+	*);;
+
+
+concept_generative_adversarial_network
+	<- rrel_key_sc_element:...
+	(*
+		<- illustration;;
+		=> nrel_main_idtf:[Рис. (Генеративное-состязательная сеть)](* <- lang_ru;; *);;
+		<= nrel_sc_text_translation:...
+		(*
+			-> rrel_example: "file://images/generative_adversarial_network.png"
+			(*
+				<= nrel_format: format_png;;
+			*);;
+		*);;
+*);;
+
+
+concept_generative_adversarial_network
+	<- rrel_explored_concept: section_subject_domain_of_algorithms_and_functions;;

@@ -1,0 +1,55 @@
+concept_placement_function
+
+	<-sc_node_not_relation;
+
+	=>nrel_main_idtf:
+		[Функция расстановки](*<-lang_ru;;*);
+		[Placement function](*<-lang_en;;*);
+		
+	=>nrel_idtf:
+		[Функция расстановки](*<-lang_ru;;*);
+		[Placement function](*<-lang_en;;*);;
+
+
+concept_placement_function
+	<- rrel_key_sc_element: ...
+	(*
+		<- definition;;
+		
+		=> nrel_main_idtf:
+    			[Опр. (Функция расстановки)] (* <- lang_ru;; *);;
+    		  
+		=> nrel_using_constants: 
+			{
+				function
+			};;
+			
+		<= nrel_sc_text_translation: ... 
+		(*
+			->rrel_example:
+				[<b>Функция расстановки</b> — целочисленная <sc_element sys_idtf=«function»>функция</sc_element>, играющая главную роль в методике обработки информации и исключающая сплошной перебор при занесении и поиске информации.](*<- lang_ru;; =>nrel_format: format_html;;*);;
+		*);;
+	*);;
+
+
+concept_placement_function
+	<- rrel_key_sc_element: ... 
+	(*
+		=> nrel_main_idtf:
+			[Утв.(Функция расстановки)] (* <- lang_ru;; *);;
+			
+ 		<= nrel_sc_text_translation: ...
+		(*
+    			-> rrel_example:
+				[Обычный метод последовательного размещения <sc_element sys_idtf=«nrel_jbject»>объектов</sc_element> в таблице, приводящего к сплошному перебору таблицы при поиске, получается при f(a) = 0. Наиболее эффективен такой выбор функции расстановки, при котором ее <sc_element sys_idtf=«nrel_function_value»>значения</sc_element> равномерно распределены в диапазоне от 0 до 1 на случайных последовательностях <sc_element sys_idtf=«nrel_jbject»>объектов</sc_element>.](*<-lang_ru;;=>nrel_format:format_html;;*);;
+		*);;
+		
+		=> nrel_using_constants:
+			{
+				nrel_function_value;
+				nrel_object
+			};;
+	*);;
+
+concept_placement_function
+	<- rrel_explored_concept: section_subject_domain_of_algorithms_and_functions;;

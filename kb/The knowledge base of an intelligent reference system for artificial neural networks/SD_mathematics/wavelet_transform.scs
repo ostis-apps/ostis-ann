@@ -1,0 +1,48 @@
+sc_node_not_relation -> concept_wavelet_transform;;
+
+sc_node_not_relation -> concept_integral_transformation;;
+sc_node_not_relation -> concept_convolution;;
+sc_node_not_relation -> concept_wavelet_function;;
+sc_node_not_relation -> concept_signal;;
+sc_node_not_relation -> concept_temporary_presentation;;
+sc_node_not_relation -> concept_time_frequency_representation;;
+
+sc_node_norole_relation -> nrel_represent;;
+sc_node_norole_relation -> nrel_transform;;
+
+concept_wavelet_transform => nrel_main_idtf: [Вейвлет-преобразование](* <- lang_ru;; *);;
+concept_wavelet_transform => nrel_main_idtf: [wavelet transform](* <- lang_en;; *);;
+
+definition ->...
+(*
+	-> rrel_key_sc_element : concept_wavelet_transform;;
+	<= nrel_sc_text_translation: ...(*->rrel_example:[Вейвлет-преобразование — интегральное преобразование, которое представляет собой свертку вейвлет-функции с сигналом.](*<-lang_ru;;*);;*);;
+	=> nrel_main_idtf: [Определение (Вейвлет-преобразование.)](*<- lang_ru;;*);;
+	=> nrel_using_constants: ...
+	(*
+	   -> concept_integral_transformation;;
+	   -> concept_convolution;;
+	   -> concept_wavelet_function;;
+	   -> concept_signal;;
+	   -> nrel_represent;;
+	*);;
+*);;
+
+statement ->...
+(*
+	-> rrel_key_sc_element : concept_wavelet_transform;;
+	<= nrel_sc_text_translation: ...(*->rrel_example:[Вейвлет-преобразование переводит сигнал из временного представления в частотно-временное.](*<-lang_ru;;*);;*);;
+	=> nrel_main_idtf: [Утверждение(Вейвлет-преобразование.)](*<- lang_ru;;*);;
+	=> nrel_using_constants: ...
+	(*
+	   -> concept_signal;;
+	   -> concept_temporary_presentation;;
+	   -> concept_time_frequency_representation;;
+	   -> nrel_transform;;
+	*);;
+*);;
+
+
+
+concept_wavelet_transform
+	<- rrel_explored_concept: section_subject_domain_mathematics;;

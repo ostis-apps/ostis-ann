@@ -1,0 +1,58 @@
+concept_batch_learning
+
+	<-sc_node_not_relation;
+
+	=>nrel_main_idtf:
+		[групповое обучение](*<-lang_ru;;*);
+		[batch learning](*<-lang_en;;*);
+		
+	=>nrel_idtf:
+		[групповое обучение](*<-lang_ru;;*);
+		[batch learning](*<-lang_en;;*);;
+
+
+concept_batch_learning
+	<- rrel_key_sc_element: ...
+	(*
+		<- definition;;
+		
+		=> nrel_main_idtf:
+    			[Опр. (групповое обучение)] (* <- lang_ru;; *);;
+    		  
+		=> nrel_using_constants: 
+			{
+				neural_network;
+				training_sample_images
+			};;
+			
+		<= nrel_sc_text_translation: ... 
+		(*
+			->rrel_example:
+				[<b>Групповое обучение</b> – это принцип работы <sc_element sys_idtf="neural_element">нейронной сети, при котором модификация синаптических связей происходит после подачи группы или всех образов обучающей выборки на нейронную сеть.](*<- lang_ru;; =>nrel_format: format_html;;*);;
+		*);;
+	*);;
+
+
+concept_batch_learning
+	<- rrel_key_sc_element: ... 
+	(*
+		=> nrel_main_idtf:
+			[Утв.(групповое обучение)] (* <- lang_ru;; *);;
+			
+ 		<= nrel_sc_text_translation: ...
+		(*
+    			-> rrel_example:
+				[Относительно последовательного обучения, групповое обучение требует больше времени и вычислительных ресурсов.](*<-lang_ru;; =>nrel_format: format_html;;*);;
+		*);;
+		
+		=> nrel_using_constants:
+			{
+				time;
+				resuorces
+			};;
+	*);;
+
+
+
+concept_batch_learning
+	<- rrel_explored_concept: section_subject_domain_of_algorithms_and_functions;;

@@ -1,0 +1,55 @@
+concept_cyclic_permuration
+	<-sc_node_not_relation;
+	=>nrel_main_idtf:
+		[Циклическая перестановка](* <- lang_ru;; *);
+		[Cyclic permutation](* <- lang_eng;; *);
+	=>nrel_idtf:
+		[Циклическая перестановка](* <- lang_ru;; *);
+		[Cyclic permutation](* <- lang_eng;; *);;
+
+concept_cyclic_permuration
+	<- rrel_key_sc_element: ...
+	(*
+		<- definition;;
+		
+		=> nrel_main_idtf:
+    			[Опр. (Циклическая перестановка)] (* <- lang_ru;; *);;
+    		  
+		=> nrel_using_constants: 
+			{
+				set;
+				nrel_inclusion
+			};;
+			
+		<= nrel_sc_text_translation: ... 
+		(*
+			->rrel_example:
+				[<b>Циклическая перестановка</b> — это перестановка элементов некоторого <sc_element sys_idtf=«set»>множества</sc_element> X, которая <sc_element sys_idtf=«nrel_inclusion»>переставляет элементы некоторого подмножества</sc_element> S <sc_element sys_idtf=«set»>множества</sc_element> X циклическим образом, сохраняя на месте остальные элементы X .](*<- lang_ru;; =>nrel_format: format_html;;*);;
+		*);;
+	*);;
+
+
+concept_cyclic_permuration
+	<- rrel_key_sc_element: ... 
+	(*
+		=> nrel_main_idtf:
+			[Утв.(Циклическая перестановка)] (* <- lang_ru;; *);;
+			
+ 		<= nrel_sc_text_translation: ...
+		(* 
+    			-> rrel_example:
+				[Цикл в перестановке — это подмножество <sc_element sys_idtf=«element»>элементов</sc_element>, которые переставляются циклическим образом. <sc_element sys_idtf=«set»>Множество</sc_element> S называется орбитой цикла. Каждую перестановку <sc_element sys_itdf=«finite_set»>конечного множества</sc_element> элементов можно разложить в <sc_element sys_idtf=«nrel_combination»>объединение</sc_element> циклов с непересекающимися орбитами. В некоторых контекстах циклическая перестановка сама по себе называется циклом.](*<-lang_ru;; =>nrel_format: format_html;;*);;
+		*);;
+		
+		=> nrel_using_constants:
+			{
+				element;
+				set;
+				finite_set;
+				nrel_combination
+				
+			};;
+	*);;
+concept_cyclic_permuration
+	<- rrel_explored_concept: section_subject_domain_of_algorithms_and_functions;;
+

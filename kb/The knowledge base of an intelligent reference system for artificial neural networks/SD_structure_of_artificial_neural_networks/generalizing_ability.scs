@@ -1,0 +1,62 @@
+sc_node_not_relation -> concept_generalizing_ability;;
+
+sc_node_not_relation -> concept_ability;;
+sc_node_not_relation -> concept_individual;;
+sc_node_not_relation -> concept_data;;
+sc_node_not_relation -> concept_pattern;;
+sc_node_not_relation -> concept_prolongation;;
+sc_node_not_relation -> concept_result;;
+sc_node_not_relation -> concept_knowledge;;
+sc_node_not_relation -> concept_particular;;
+sc_node_not_relation -> concept_general;;
+sc_node_not_relation -> concept_training;;
+
+sc_node_norole_relation -> nrel_act;;
+sc_node_norole_relation -> nrel_reason;;
+sc_node_norole_relation -> nrel_relate;;
+sc_node_norole_relation -> nrel_nrel;;
+
+concept_modulating_neuron => nrel_main_idtf: [Обобщающая способность](* <- lang_ru;; *);;
+concept_modulating_neuron => nrel_main_idtf: [Generalizing ability](* <- lang_en;; *);;
+
+definition ->...
+(*
+	-> rrel_key_sc_element : concept_generalizing_ability;;
+	<= nrel_sc_text_translation: ...(*->rrel_example:[Способность, характеризующая способность индивида интегрировать частные данные для определения закономерностей и пролонгации ре􏰀зультатов.](*<-lang_ru;;*);;*);;
+	=> nrel_main_idtf: [Определение (Обобщающая способность.)](*<- lang_ru;;*);;
+	=> nrel_using_constants: ...
+	(*
+	   -> concept_ability;;
+	   -> concept_individual;;
+	   -> concept_data;;
+	   -> concept_pattern;;
+	   -> concept_prolongation;;
+	   -> concept_result;;
+	   -> nrel_determine;;
+	   -> nrel_integrate;;
+	*);;
+*);;
+
+statement ->...
+(*
+	-> rrel_key_sc_element : concept_generalizing_ability;;
+	<= nrel_sc_text_translation: ...(*->rrel_example:[К ней относится способность после обучения на одних данных применять полученные знания для других данных или рассуж􏰀дения от частного к общему.](*<-lang_ru;;*);;*);;
+	=> nrel_main_idtf: [Утверждение(Обобщающая способность.)](*<- lang_ru;;*);;
+	=> nrel_using_constants: ...
+	(*
+	   -> concept_ability;;
+	   -> concept_training;;
+	   -> concept_data;;
+	   -> concept_particular;;
+	   -> concept_general;;
+	   -> concept_knowledge;;
+	   -> nrel_get;;
+	   -> nrel_reason;;
+	   -> nrel_use;;
+	   -> nrel_relate;;
+	*);;
+*);;
+
+
+concept_generalizing_ability
+	<- rrel_explored_concept: section_subject_domain_structure_of_artificial_neural_networks;;

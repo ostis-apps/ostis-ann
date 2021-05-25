@@ -1,0 +1,68 @@
+sc_node_not_relation -> concept_state_machine;;
+
+sc_node_not_relation -> concept_math;;
+sc_node_not_relation -> concept_abstraction;;
+sc_node_not_relation -> concept_model;;
+sc_node_not_relation -> concept_discreteness;;
+sc_node_not_relation -> concept_device;;
+sc_node_not_relation -> concept_input;;
+sc_node_not_relation -> concept_output;;
+sc_node_not_relation -> concept_moment;;
+sc_node_not_relation -> concept_time;;
+sc_node_not_relation -> concept_state;;
+sc_node_not_relation -> concept_set;;
+sc_node_not_relation -> concept_propability;;
+
+sc_node_norole_relation -> nrel_have;;
+sc_node_norole_relation -> nrel_exist;;
+sc_node_norole_relation -> nrel_be;;
+
+concept_state_machine => nrel_main_idtf: [Конечный автомат](* <- lang_ru;; *);;
+concept_state_machine => nrel_main_idtf: [State machine](* <- lang_en;; *);;
+
+definition ->...
+(*
+	-> rrel_key_sc_element : concept_state_machine;;
+	<= nrel_sc_text_translation: ...(*->rrel_example:[Математическая абстракция, модель дискретного устройства, имеющего один вход, один выход и в каждый момент времени находящегося в одном состоянии из множества возможных.](*<-lang_ru;;*);;*);;
+	=> nrel_main_idtf: [Определение (Конечный автомат.)](*<- lang_ru;;*);;
+	=> nrel_using_constants: ...
+	(*
+	   -> concept_math;;
+	   -> concept_abstraction;;
+	   -> concept_model;;
+	   -> concept_discreteness;;
+	   -> concept_device;;
+	   -> concept_input;;
+	   -> concept_output;;
+	   -> concept_moment;;
+	   -> concept_time;;
+	   -> concept_state;;
+	   -> concept_set;;
+	   -> concept_propability;;
+	   -> nrel_have;;
+	   -> nrel_exist;;
+	*);;
+*);;
+
+statement ->...
+(*
+	-> rrel_key_sc_element : concept_state_machine;;
+	<= nrel_sc_text_translation: ...(*->rrel_example:[Является частным случаем абстрактного дискретного автомата, число возможных внутренних состояний которого конечно.](*<-lang_ru;;*);;*);;
+	=> nrel_main_idtf: [Утверждение(Конечный автомат.)](*<- lang_ru;;*);;
+	=> nrel_using_constants: ...
+	(*
+		-> concept_special_case;;
+		-> concept_abstractness;;
+		-> concept_discreteness;;
+		-> concept_machine;;
+		-> concept_number;;
+		-> concept_interior;;
+		-> concept_state;;
+		-> concept_limb;;
+		-> nrel_be;;
+	*);;
+*);;
+
+
+concept_state_machine
+	<- rrel_explored_concept: section_subject_domain_mathematics;;

@@ -1,0 +1,50 @@
+sc_node_not_relation -> concept_modulating_neuron;;
+
+sc_node_not_relation -> concept_presynaptic_cell;;
+sc_node_not_relation -> concept_neuron;;
+sc_node_not_relation -> concept_synaptic_connection;;
+sc_node_not_relation -> concept_postsynaptic_neuron;;
+sc_node_not_relation -> concept_activity;;
+
+sc_node_norole_relation -> nrel_act;;
+sc_node_norole_relation -> nrel_increase;;
+sc_node_norole_relation -> nrel_name;;
+
+concept_modulating_neuron => nrel_main_idtf: [Модулирующий нейрон](* <- lang_ru;; *);;
+concept_modulating_neuron => nrel_main_idtf: [Modulating neuron](* <- lang_en;; *);;
+
+definition ->...
+(*
+	-> rrel_key_sc_element : concept_modulating_neuron;;
+	<= nrel_sc_text_translation: ...(*->rrel_example:[Нейрон, действующий на второй, усиливая синапсис между вторым и третим, называется модулирующим.](*<-lang_ru;;*);;*);;
+	=> nrel_main_idtf: [Определение (Модулирующий нейрон.)](*<- lang_ru;;*);;
+	=> nrel_using_constants: ...
+	(*
+	   -> concept_neuron;;
+	   -> concept_synapsis;;
+	   -> nrel_act;;
+	   -> nrel_increase;;
+	*);;
+*);;
+
+statement ->...
+(*
+	-> rrel_key_sc_element : concept_modulating_neuron;;
+	<= nrel_sc_text_translation: ...(*->rrel_example:[Если на пресинаптическую клетку действует некий третий нейрон, то для усиления синаптической связи между двумя нейронами не обязательна активность постсинаптического нейрона. Этот тертий нейрон называется модулирующим.](*<-lang_ru;;*);;*);;
+	=> nrel_main_idtf: [Утверждение(Модулирующий нейрон.)](*<- lang_ru;;*);;
+	=> nrel_using_constants: ...
+	(*
+	   -> concept_presynaptic_cell;;
+	   -> concept_neuron;;
+	   -> concept_synaptic_connection;;
+	   -> concept_postsynaptic_neuron;;
+	   -> concept_activity;;
+	   -> nrel_act;;
+	   -> nrel_increase;;
+	   -> nrel_name;;
+	*);;
+*);;
+
+
+concept_modulating_neuron
+	<- rrel_explored_concept: section_subject_domain_structure_of_artificial_neural_networks;;

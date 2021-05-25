@@ -1,0 +1,68 @@
+concept_Oya_training_rule
+	<-sc_node_not_relation;
+	=>nrel_main_idtf:
+		[Правило обучения Ойя](* <- lang_ru;; *);
+		[Oya training rule](* <- lang_eng;; *);
+	=>nrel_idtf:
+		[Правило обучения Ойя](* <- lang_ru;; *);
+		[Oya training rule](* <- lang_eng;; *);;
+
+concept_Oya_training_rule
+	<- rrel_key_sc_element: ...
+	(*
+		<- definition;;
+		
+		=> nrel_main_idtf:
+    			[Опр. (Правило обучения Ойя] (* <- lang_ru;; *);;
+    		  
+		=> nrel_using_constants: 
+			{
+				principal_component_method;
+				nrel_equivalence
+			};;
+			
+		<= nrel_sc_text_translation: ... 
+		(*
+			->rrel_example:
+				[Правило обучения Ойя <sc_element sys_idtf=«nrel_equivalence»>эквивалентно</sc_element> <sc_element sys_idtf=«principal_component_method»>методу главных компонент</sc_element>.](*<- lang_ru;; =>nrel_format: format_html;;*);;
+		*);;
+	*);;
+
+
+concept_Oya_training_rule
+	<- rrel_key_sc_element: ... 
+	(*
+		=> nrel_main_idtf:
+			[Утв.(Правило обучения Ойя)] (* <- lang_ru;; *);;
+			
+ 		<= nrel_sc_text_translation: ...
+		(* 
+    			-> rrel_example:
+				[Для нелинейной сети записывается в том же виде, что и для линейной сети, где в качестве <sc_element sys_idtf=«nrel_output_data»>выходных значений</sc_element> сжимающего и восстанавливающего слоя используется нелинейная <sc_element sys_idtf=«activation_function»>функция активации</sc_element>. 
+](*<-lang_ru;; =>nrel_format: format_html;;*);;
+		*);;
+		
+		=> nrel_using_constants:
+			{
+				activation_function;
+				nrel_output_data
+			};;
+	*);;
+
+concept_Oya_training_rule
+	<- rrel_key_sc_element:...
+	(*
+		<- illustration;;
+		=> nrel_main_idtf:[Рис. (Правило обучения Ойя)](* <- lang_ru;; *);;
+		<= nrel_sc_text_translation:...
+		(*
+			-> rrel_example: "file://images/oya_training_rule.png"
+			(*
+				<= nrel_format: format_png;;
+			*);;
+		*);;
+*);;
+
+
+concept_Oya_training_rule
+	<- rrel_explored_concept: section_subject_domain_of_algorithms_and_functions;;

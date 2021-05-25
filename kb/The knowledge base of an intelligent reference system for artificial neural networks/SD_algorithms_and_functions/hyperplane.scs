@@ -1,0 +1,45 @@
+sc_node_not_relation -> concept_hyperplane;;
+
+sc_node_not_relation -> concept_space;;
+sc_node_not_relation -> concept_2;;
+sc_node_not_relation -> concept_dot;;
+sc_node_not_relation -> concept_half_space;;
+sc_node_not_relation -> concept_inequality;;
+
+sc_node_norole_relation -> nrel_divide;;
+sc_node_norole_relation -> nrel_define;;
+
+concept_hyperplane => nrel_main_idtf: [Гиперплоскость](* <- lang_ru;; *);;
+concept_hyperplane => nrel_main_idtf: [Hyperplane](* <- lang_en;; *);;
+
+definition ->...
+(*
+	-> rrel_key_sc_element : concept_hyperplane;;
+	<= nrel_sc_text_translation: ...(*->rrel_example:[Гиперплоскость делит пространство на два полупространства.](*<-lang_ru;;*);;*);;
+	=> nrel_main_idtf: [Определение (Гиперплоскость.)](*<- lang_ru;;*);;
+	=> nrel_using_constants: ...
+	(*
+	   -> concept_space;;
+	   -> concept_2;;
+	   -> concept_half_space;;
+       -> nrel_divide;;
+	*);;
+*);;
+
+statement ->...
+(*
+	-> rrel_key_sc_element : concept_hyperplane;;
+	<= nrel_sc_text_translation: ...(*->rrel_example:[Все точки каждого полупространства определяюся неравенствами.](*<-lang_ru;;*);;*);;
+	=> nrel_main_idtf: [Утверждение(Гиперплоскость.)](*<- lang_ru;;*);;
+	=> nrel_using_constants: ...
+	(*
+	   -> concept_dot;;
+	   -> concept_half_space;;
+	   -> concept_inequalty;;
+	   -> nrel_define;;
+	*);;
+*);;
+
+
+concept_hyperplane
+	<- rrel_explored_concept: section_subject_domain_of_algorithms_and_functions;;

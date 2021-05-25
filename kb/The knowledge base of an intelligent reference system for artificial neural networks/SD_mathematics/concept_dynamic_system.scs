@@ -1,0 +1,59 @@
+concept_dynamic_system
+
+	<-sc_node_not_relation;
+
+	=>nrel_main_idtf:
+		[Динамическая система](*<-lang_ru;;*);
+		[Dynamic system](*<-lang_en;;*);
+		
+	=>nrel_idtf:
+		[Динамическая система](*<-lang_ru;;*);
+		[Dynamic system](*<-lang_en;;*);;
+
+
+concept_dynamic_system
+	<- rrel_key_sc_element: ...
+	(*
+		<- definition;;
+		
+		=> nrel_main_idtf:
+    			[Опр. (Динамическая система)] (* <- lang_ru;; *);;
+    		  
+		=> nrel_using_constants: 
+			{
+				graph;
+				edge;
+				direction
+			};;
+			
+		<= nrel_sc_text_translation: ... 
+		(*
+			->rrel_example:
+				[<b>Динамическая система</b> — <sc_element sys_idtf=«»set>множество</sc_element> элементов, для которого задана функциональная зависимость между временем и положением в фазовом <sc_element sys_idtf=«space»>пространстве</sc_element> каждого элемента системы.](*<- lang_ru;; =>nrel_format: format_html;;*);;
+		*);;
+	*);;
+
+
+concept_dynamic_system
+	<- rrel_key_sc_element: ... 
+	(*
+		=> nrel_main_idtf:
+			[Утв.(Динамическая система)] (* <- lang_ru;; *);;
+			
+ 		<= nrel_sc_text_translation: ...
+		(*
+    			-> rrel_example:
+				[Данная математическая <sc_element sys_idtf=«abstract_entity»>абстракция</sc_element> позволяет изучать и описывать эволюцию систем во времени.
+Состояние динамической системы в любой момент времени описывается множеством <sc_element sys_idtf=«vector»>вещественных чисел (или векторов)</sc_element>, соответствующим определённой точке в <sc_element sys_idtf=«space»>пространстве</sc_element> состояний. Эволюция динамической системы определяется детерминированной функцией.](*<-lang_ru;;=>nrel_format:format_html;;*);;
+		*);;
+		
+		=> nrel_using_constants:
+			{
+				abstract_entity;
+				vector;
+				space
+			};;
+	*);;
+
+concept_dynamic_system
+	<- rrel_explored_concept: section_subject_domain_mathematics;;
