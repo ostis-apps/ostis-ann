@@ -1,0 +1,68 @@
+concept_compression_of_images<-sc_node_not_relation;;
+
+concept_compression_of_images=>nrel_main_idtf:
+[сжатие изображений](*<-lang_ru;;*);
+[compression of images](*<-lang_en;;*);;
+
+concept_compression_of_images<=nrel_inclusion:compression;;
+
+concept_compression_of_images<- rrel_key_sc_element: ...
+(*
+<- definition;;
+=> nrel_main_idtf:
+      [Опр. (сжатие изображений)] (* <- lang_ru;; *);;
+=> nrel_using_constants: 
+	{
+		concept_learning_algorithm;
+		concept_information_compression;
+		image
+	};; 
+<= nrel_sc_text_translation: ... 
+		(*
+			->rrel_example:
+			[<b>Сжатие изображений</b> — применение <b><sc_element sys_idtf="concept_learning_algorithm"> алгоритмов</b> <b><sc_element sys_idtf="concept_information_compression">сжатия данных</b> к<b><sc_element sys_idtf="image"> изображениям</b>, хранящимся в цифровом виде.](*<- lang_ru;; =>nrel_format: format_html;;*);;
+		*);;
+*);;
+
+
+concept_compression_of_images<- rrel_key_sc_element: ...
+(*
+ => nrel_main_idtf:
+[Утв. (сжатие изображений)] (* <- lang_ru;; *);;
+ <= nrel_sc_text_translation: ...
+	(*
+	  -> rrel_example:
+		[<b>Сжатие изображений</b> подразделяют на сжатие с <b><sc_element sys_idtf="concept_lossy_data_compression">потерями качества</b> и <b><sc_element sys_idtf="concept_lossless_data_compression">сжатие без потерь</b>.](*<- lang_ru;; =>nrel_format: format_html;;*);;
+	*);;
+=> nrel_using_constants: 
+	{
+		concept_lossy_data_compression;
+		concept_lossless_data_compression
+	};;
+*);;
+
+
+concept_compression_of_images<-rrel_explored_concept: section_subject_domain_of_conceptually_pragmatic_tasks;;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

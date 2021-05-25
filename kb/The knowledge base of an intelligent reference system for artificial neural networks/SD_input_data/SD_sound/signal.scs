@@ -1,0 +1,67 @@
+signal<-sc_node_not_relation;;
+
+signal=>nrel_main_idtf:
+[сигнал](*<-lang_ru;;*);
+[signal](*<-lang_en;;*);;
+
+signal<- rrel_key_sc_element: ...
+(*
+<- definition;;
+=> nrel_main_idtf:
+      [Опр. (сигнал)] (* <- lang_ru;; *);;
+=> nrel_using_constants: 
+	{
+		neural_network;
+		concept_gradient_learning_algorithm;
+		nrel_local_function_minimum
+	};; 
+<= nrel_sc_text_translation: ... 
+		(*
+			->rrel_example:
+			[<b>Сигнал</b> – это <b><sc_element sys_idtf="concept_material_storage_medium">материальный носитель</b> <b><sc_element sys_idtf="data">данных</b>, которые передаются от источника к потребителю.](*<- lang_ru;; =>nrel_format: format_html;;*);;
+		*);;
+*);;
+
+
+signal<- rrel_key_sc_element: ...
+(*
+ => nrel_main_idtf:
+[Утв. (сигнал)] (* <- lang_ru;; *);;
+ <= nrel_sc_text_translation: ...
+	 (*
+    	  -> rrel_example:
+		[<b>По физической природе</b> <b><sc_element sys_idtf="concept_material_storage_medium">носителя информации</b>: электрические, электромагнитные, оптические, акустические.](*<- lang_ru;; =>nrel_format: format_html;;*);;
+	*);;
+=> nrel_using_constants: 
+	{
+		concept_material_storage_medium
+	};;
+*);;
+
+input_signal<-rrel_explored_concept: section_subject_domain_of_input_sound_data;;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

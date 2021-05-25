@@ -1,0 +1,42 @@
+concept_supervised_learning_with_one_winner <- sc_node_not_relation;;
+
+concept_supervised_learning_with_one_winner => nrel_main_idtf:
+[контролируемое обучение с одним победителем] (*<-lang_ru;;*);
+[supervised learning with one winner] (*<-lang_en;;*);;
+
+concept_supervised_learning_with_one_winner <- rrel_key_sc_element: ...
+(*
+<- definition;;
+=> nrel_main_idtf:
+	[Опр. (контролируемое обучение с одним победителем)] (*<-lang_ru;;*);;
+=> nrel_using_constants:
+	{
+		neuron_winner;
+		neuron
+	};;
+<= nrel_sc_text_translation: ...
+	(*
+		-> rrel_example:
+		[<b>Контролируемое обучение с одним победителями</b> - обучение, при котором вокруг <b><sc_element sys_idtf="neuron_winner">нейрона-победителя</b>не формируются соседние <b><sc_element sys_idtf="neuron">нейроны</b>](*<- lang_ru;; =>nrel_format: format_html;;*);;
+	*);;
+*);;
+
+concept_supervised_learning_with_one_winner <- rrel_key_sc_element: ...
+(*
+<- statement;;
+=> nrel_main_idtf:
+	[Утв. (контролируемое обучение с одним победителем)] (*<-lang_ru;;*);;
+=> nrel_using_constants:
+	{
+		neuton;
+		neuron_winner
+	};;
+<= nrel_sc_text_translation: ...
+	(*
+		-> rrel_example:
+		[При <b>контролируемом обучении с одним победителем</b>, в отдельный квант времени только один <b><sc_element sys_idtf="neuton">нейрон</b> может быть <b><sc_element sys_idtf="neuron_winner">победителем</b>. ](*<- lang_ru;; =>nrel_format: format_html;;*);;
+	*);;
+*);;
+
+concept_supervised_learning_with_one_winner<-rrel_explored_concept: section_subject_domain_of_learning_neural_networks;;
+

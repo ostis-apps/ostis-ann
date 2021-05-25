@@ -1,0 +1,42 @@
+concept_synaptic_plasticity <- sc_node_not_relation;;
+
+concept_synaptic_plasticity => nrel_main_idtf:
+[синаптическая пластичность] (*<-lang_ru;;*);
+[synaptic plasticity] (*<-lang_en;;*);;
+
+concept_synaptic_plasticity <- rrel_key_sc_element: ...
+(*
+<- definition;;
+=> nrel_main_idtf:
+	[Опр. (синаптическая пластичность)] (*<-lang_ru;;*);;
+=> nrel_using_constants:
+	{
+		sinaps;
+		neural_network
+	};;
+<= nrel_sc_text_translation: ...
+	(*
+		-> rrel_example:
+		[<b>Синаптическая пластичность</b> - способность <b><sc_element sys_idtf="sinaps">синапсов</b> и <b><sc_element sys_idtf="neural_network">нейронных сетей</b> динамически изменятся в результате воздействий.](*<- lang_ru;; =>nrel_format: format_html;;*);;
+	*);;
+*);;
+
+concept_synaptic_plasticity <- rrel_key_sc_element: ...
+(*
+<- statement;;
+=> nrel_main_idtf:
+	[Утв. (синаптическая пластичность)] (*<-lang_ru;;*);;
+=> nrel_using_constants:
+	{
+		concept_effectivity;
+		neuron
+	};;
+<= nrel_sc_text_translation: ...
+	(*
+		-> rrel_example:
+		[<b>Cинаптическая пластичность</b> происходит в результате изменения <b><sc_element sys_idtf="concept_effectivity">эффективности</b> и количества связей между <b><sc_element sys_idtf="neuron">нейронами</b>](*<- lang_ru;; =>nrel_format: format_html;;*);;
+	*);;
+*);;
+
+concept_synaptic_plasticity<-rrel_explored_concept: section_subject_domain_of_neurons;;
+

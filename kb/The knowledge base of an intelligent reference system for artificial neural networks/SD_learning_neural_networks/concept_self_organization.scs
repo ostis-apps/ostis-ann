@@ -1,0 +1,35 @@
+concept_self_organization <- sc_node_not_relation;;
+
+concept_self_organization => nrel_main_idtf:
+[самоорганизация] (*<-lang_ru;;*);
+[self-organization] (*<-lang_en;;*);;
+
+concept_self_organization <- rrel_key_sc_element: ...
+(*
+<- definition;;
+=> nrel_main_idtf:
+	[Опр. (самоорганизация)] (*<-lang_ru;;*);;
+=> nrel_using_constants:
+	{
+		concept_adaptation
+	};;
+<= nrel_sc_text_translation: ...
+	(*
+		-> rrel_example:
+		[<b>Самоорганизация</b> - результат <b><sc_element sys_idtf="concept_adaptation">адаптация</b> к различным условиям функционирования](*<- lang_ru;; =>nrel_format: format_html;;*);;
+	*);;
+*);;
+
+concept_self_organization <- rrel_key_sc_element: ...
+(*
+<- statement;;
+=> nrel_main_idtf:
+	[Утв. (самоорганизация)] (*<-lang_ru;;*);;
+<= nrel_sc_text_translation: ...
+	(*
+		-> rrel_example:
+		[<b>Самоорганизация</b> всегда происходит плавно](*<- lang_ru;; =>nrel_format: format_html;;*);;
+	*);;
+*);;
+
+concept_self_organization<-rrel_explored_concept: section_subject_domain_of_learning_neural_networks;;

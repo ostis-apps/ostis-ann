@@ -1,0 +1,132 @@
+concept_kohonen_self_organizing_maps <- sc_node_not_relation;;
+
+concept_kohonen_self_organizing_maps => nrel_main_idtf:
+[самоорганизующиеся карты кохонена] (*<-lang_ru;;*);
+[kohonen self-organizing maps] (*<-lang_en;;*);;
+
+concept_kohonen_self_organizing_maps <- rrel_key_sc_element: ...
+(*
+<- definition;;
+=> nrel_main_idtf:
+	[Опр. (самоорганизующиеся карты кохонена)] (*<-lang_ru;;*);;
+=> nrel_using_constants:
+	{
+		nrel_iteration;
+		nrel_iteration;
+		competitive_training;
+		nrel_combination;
+		nrel_synapse_weight
+	};;
+<= nrel_sc_text_translation: ...
+	(*
+		-> rrel_example:
+		[<b>самоорганизующиеся карты кохонена</b> - <b><sc_element sys_idtf="nrel_iteration">итерационный процесс</b>, в котором на каждой <b><sc_element sys_idtf="nrel_iteration">итерации</b> выполняется 3 действия: <b><sc_element sys_idtf="competitive_training">конкуренция</b>, <b><sc_element sys_idtf="nrel_combination">объединение</b>, <b><sc_element sys_idtf="nrel_synapse_weight">подстройка весов</b>.](*<- lang_ru;; =>nrel_format: format_html;;*);;
+	*);;
+*);;
+
+concept_kohonen_self_organizing_maps <- rrel_key_sc_element: ...
+(*
+<- statement;;
+=> nrel_main_idtf:
+	[Утв. (самоорганизующиеся карты кохонена)] (*<-lang_ru;;*);;
+=> nrel_using_constants:
+	{
+		neural_network;
+		competitive_training
+	};;
+<= nrel_sc_text_translation: ...
+	(*
+		-> rrel_example:
+		[<b>самоорганизующиеся карты кохонена</b> являются дальнейшим расширением <b><sc_element sys_idtf="neural_network">нейронных сетей</b> с <b><sc_element sys_idtf="competitive_training">конкурентным обучением</b>](*<- lang_ru;; =>nrel_format: format_html;;*);;
+	*);;
+*);;
+
+concept_kohonen_self_organizing_maps <- rrel_key_sc_element: ...
+(*
+<- statement;;
+=> nrel_main_idtf:
+	[Утв. (самоорганизующиеся карты кохонена)] (*<-lang_ru;;*);;
+=> nrel_using_constants:
+	{
+		neuron;
+		matrix
+	};;
+<= nrel_sc_text_translation: ...
+	(*
+		-> rrel_example:
+		[<b>самоорганизующиеся карты кохонена</b> состоят из двух слоев - первый выполняет распределительные функции, а <b><sc_element sys_idtf="neuron">нейроны</b> второго расположены на плоскости, образуя <b><sc_element sys_idtf="matrix">матрицу</b>](*<- lang_ru;; =>nrel_format: format_html;;*);;
+	*);;
+*);;
+
+concept_kohonen_self_organizing_maps <- rrel_key_sc_element: ...
+(*
+<- statement;;
+=> nrel_main_idtf:
+	[Утв. (самоорганизующиеся карты кохонена)] (*<-lang_ru;;*);;
+=> nrel_using_constants:
+	{
+		concept_vector_quantization;
+		neuron
+	};;
+<= nrel_sc_text_translation: ...
+	(*
+		-> rrel_example:
+		[В отличие от обучающегося <b><sc_element sys_idtf="concept_vector_quantization">векторного квантователя</b>, здесь каждый <b><sc_element sys_idtf="neuron">нейрон</b> второго слоя связан соединениями со своими ближайшими](*<- lang_ru;; =>nrel_format: format_html;;*);;
+	*);;
+*);;
+
+concept_kohonen_self_organizing_maps <- rrel_key_sc_element: ...
+(*
+<- statement;;
+=> nrel_main_idtf:
+	[Утв. (самоорганизующиеся карты кохонена)] (*<-lang_ru;;*);;
+=> nrel_using_constants:
+	{
+		activation_function;
+		neuron
+	};;
+<= nrel_sc_text_translation: ...
+	(*
+		-> rrel_example:
+		[сила связи между <b><sc_element sys_idtf="neuron">нейронами</b> второго слоя обычно зависит от расстояния между ними и может определятся различными <b><sc_element sys_idtf="activation_function">функциями</b>](*<- lang_ru;; =>nrel_format: format_html;;*);;
+	*);;
+*);;
+
+concept_kohonen_self_organizing_maps <- rrel_key_sc_element: ...
+(*
+<- statement;;
+=> nrel_main_idtf:
+	[Утв. (самоорганизующиеся карты кохонена)] (*<-lang_ru;;*);;
+=> nrel_using_constants:
+	{
+		activation_function;
+		nrel_sigmoid_activation_function
+	};;
+<= nrel_sc_text_translation: ...
+	(*
+		-> rrel_example:
+		[В качестве <b><sc_element sys_idtf="activation_function">функции активации</b> обычно применяется <b><sc_element sys_idtf="nrel_sigmoid_activation_function">сигмоидная функция</b>](*<- lang_ru;; =>nrel_format: format_html;;*);;
+	*);;
+*);;
+
+concept_kohonen_self_organizing_maps <- rrel_key_sc_element: ...
+(*
+<- statement;;
+=> nrel_main_idtf:
+	[Утв. (самоорганизующиеся карты кохонена)] (*<-lang_ru;;*);;
+=> nrel_using_constants:
+	{
+		neuron
+	};;
+<= nrel_sc_text_translation: ...
+	(*
+		-> rrel_example:
+		[В <b>самоорганизующихся картах кохонена</b> победителем является не один <b><sc_element sys_idtf="neuron">нейрон</b>, а группа <b><sc_element sys_idtf="neuron">нейронов</b>](*<- lang_ru;; =>nrel_format: format_html;;*);;
+	*);;
+*);;
+
+
+
+concept_kohonen_self_organizing_maps<-rrel_explored_concept: section_subject_domain_of_learning_neural_networks;;
+
+

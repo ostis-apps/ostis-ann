@@ -1,0 +1,27 @@
+concept_analog_neural_network <- sc_node_not_relation;;
+
+concept_analog_neural_network => nrel_main_idtf:
+[аналогавая нейронная сеть] (*<-lang_ru;;*);
+[analog neural network] (*<-lang_en;;*);;
+
+concept_analog_neural_network <- rrel_key_sc_element: ...
+(*
+<- definition;;
+=> nrel_main_idtf:
+	[Опр. (аналогавая нейронная сеть)] (*<-lang_ru;;*);;
+=> nrel_using_constants:
+	{
+		neural_network;
+		concept_data;
+		real_number
+	};;
+<= nrel_sc_text_translation: ...
+	(*
+		-> rrel_example:
+		[<b>Аналогавая нейронная сеть</b> - <b><sc_element sys_idtf="neural_network">нейронная сеть</b>, использующая <b><sc_element sys_idtf="concept_data">информацию</b> в форме <b><sc_element sys_idtf="real_number">действительных чисел</b>](*<- lang_ru;; =>nrel_format: format_html;;*);;
+	*);;
+*);;
+
+concept_analog_neural_network<-rrel_explored_concept: section_subject_domain_of_artificial_neural_networks;;
+
+

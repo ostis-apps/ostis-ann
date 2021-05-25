@@ -1,0 +1,40 @@
+concept_linearly_ordered_set <- sc_node_not_relation;;
+
+concept_linearly_ordered_set => nrel_main_idtf:
+[линейно упорядоченное множество] (*<-lang_ru;;*);
+[linearly ordered set] (*<-lang_en;;*);;
+
+concept_linearly_ordered_set <- rrel_key_sc_element: ...
+(*
+<- definition;;
+=> nrel_main_idtf:
+	[Опр. (линейно упорядоченное множество)] (*<-lang_ru;;*);;
+=> nrel_using_constants:
+	{
+		concept_
+	};;
+<= nrel_sc_text_translation: ...
+	(*
+		-> rrel_example:
+		[Линейно упорядоченное множество (цепь) ― <b><sc_element sys_idtf="concept_">partially_ordered_set частично упорядоченное множество</b>, в котором любая пара элементов сравнима, то есть для любых двух элементов a и b имеет место a<=b или a>=b.](*<- lang_ru;; =>nrel_format: format_html;;*);;
+	*);;
+*);;
+
+concept_linearly_ordered_set <- rrel_key_sc_element: ...
+(*
+<- statement;;
+=> nrel_main_idtf:
+	[Утв. (линейно упорядоченное множество)] (*<-lang_ru;;*);;
+=> nrel_using_constants:
+	{
+		concept_subset
+	};;
+<= nrel_sc_text_translation: ...
+	(*
+		-> rrel_example:
+		[<b><sc_element sys_idtf="concept_subset">Подмножество</b> <b>линейно упорядоченного множества</b> само является <b>линейно упорядоченным</b>.  ](*<- lang_ru;; =>nrel_format: format_html;;*);;
+	*);;
+*);;
+
+concept_linearly_ordered_set<-rrel_explored_concept: section_subject_domain_of_mathematical_tasks;;
+

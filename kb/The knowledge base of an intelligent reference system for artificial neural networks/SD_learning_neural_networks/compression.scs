@@ -1,0 +1,65 @@
+compression<-sc_node_not_relation;;
+
+compression=>nrel_main_idtf:
+[сжатие информации](*<-lang_ru;;*);
+[data compression](*<-lang_en;;*);;
+
+compression<- rrel_key_sc_element: ...
+(*
+<- definition;;
+=> nrel_main_idtf:
+      [Опр. (сжатие информации)] (* <- lang_ru;; *);;
+=> nrel_using_constants: 
+	{
+		data;
+		concept_decrease_in_dimension
+	};; 
+<= nrel_sc_text_translation: ... 
+		(*
+			->rrel_example:
+			[<b>Сжатие данных</b> — алгоритмическое преобразование <b><sc_element sys_idtf="data">данных</b>, производимое с целью <b><sc_element sys_idtf="concept_decrease_in_dimension">уменьшения занимаемого ими объёма</b>.](*<- lang_ru;; =>nrel_format: format_html;;*);;
+		*);;
+*);;
+
+
+compression<- rrel_key_sc_element: ...
+(*
+ => nrel_main_idtf:
+[Утв. (сжатие информации)] (* <- lang_ru;; *);;
+ <= nrel_sc_text_translation: ...  
+	(*
+	  -> rrel_example:
+		[<b>Сжатие информации</b> применяется для более рационального использования <b><sc_element sys_idtf="concept_material_storage_medium">устройств хранения</b> и передачи <b><sc_element sys_idtf="data">данных</b>.](*<- lang_ru;; =>nrel_format: format_html;;*);;
+	*);;
+=> nrel_using_constants: 
+	{
+		concept_material_storage_medium;
+		data
+	};;
+*);;
+
+
+compression<-rrel_explored_concept: subject_domain_of_learning_neural_networks;;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

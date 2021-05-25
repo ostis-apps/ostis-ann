@@ -1,0 +1,40 @@
+concept_hopfield_neural_network <- sc_node_not_relation;;
+
+concept_hopfield_neural_network => nrel_main_idtf:
+[нейронная сеть хопфилда] (*<-lang_ru;;*);
+[hopfield neural network] (*<-lang_en;;*);;
+
+concept_hopfield_neural_network <- rrel_key_sc_element: ...
+(*
+<- definition;;
+=> nrel_main_idtf:
+	[Опр. (нейронная сеть хопфилда)] (*<-lang_ru;;*);;
+=> nrel_using_constants:
+	{
+		neural_network;
+		concept_symmetric_matrix
+	};;
+<= nrel_sc_text_translation: ...
+	(*
+		-> rrel_example:
+		[<b>Нейронная сеть Хопфилда </b>— полносвязная <b><sc_element sys_idtf="neural_network">нейронная сеть</b></b> с <b><sc_element sys_idtf="concept_symmetric_matrix">симметричной матрицей</b> связей.](*<- lang_ru;; =>nrel_format: format_html;;*);;
+	*);;
+*);;
+
+concept_hopfield_neural_network <- rrel_key_sc_element: ...
+(*
+<- statement;;
+=> nrel_main_idtf:
+	[Утв. (нейронная сеть хопфилда)] (*<-lang_ru;;*);;
+=> nrel_using_constants:
+	{
+		concept_associative_memory
+	};;
+<= nrel_sc_text_translation: ...
+	(*
+		-> rrel_example:
+		[<b>Cеть хопфилда</b> может использоваться в качестве <b><sc_element sys_idtf="concept_associative_memory">ассоциативной памяти</b>](*<- lang_ru;; =>nrel_format: format_html;;*);;
+	*);;
+*);;
+
+concept_hopfield_neural_network<-rrel_explored_concept: section_subject_domain_of_artificial_neural_networks;;

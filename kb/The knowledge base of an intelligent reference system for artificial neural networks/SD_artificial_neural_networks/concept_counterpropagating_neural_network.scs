@@ -1,0 +1,55 @@
+concept_counterpropagating_neural_network <- sc_node_not_relation;;
+
+concept_counterpropagating_neural_network => nrel_main_idtf:
+[нейронная сеть встречного распространения] (*<-lang_ru;;*);
+[ counterpropagating neural network] (*<-lang_en;;*);;
+
+concept_counterpropagating_neural_network <- rrel_key_sc_element: ...
+(*
+<- definition;;
+=> nrel_main_idtf:
+	[Опр. (нейронная сеть встречного распространения)] (*<-lang_ru;;*);;
+=> nrel_using_constants:
+	{
+		neural_network;
+		concept_kohonen_self_organizing_maps;
+		nrel_function_approximation
+	};;
+<= nrel_sc_text_translation: ...
+	(*
+		-> rrel_example:
+		[<b>нейронная сеть встречного распространения</b> - <b><sc_element sys_idtf="neural_network">нейронная сеть</b>, являющеяся расширением <b><sc_element sys_idtf="concept_kohonen_self_organizing_maps">нейронной сети Кохонена</b>, предназначенная для <b><sc_element sys_idtf="nrel_function_approximation">аппроксимации функции</b>.](*<- lang_ru;; =>nrel_format: format_html;;*);;
+	*);;
+*);;
+
+concept_counterpropagating_neural_network <- rrel_key_sc_element: ...
+(*
+<- statement;;
+=> nrel_main_idtf:
+	[Утв. (нейронная сеть встречного распространения)] (*<-lang_ru;;*);;
+=> nrel_using_constants:
+	{
+		concept_kohonen_self_organizing_maps;
+		nrel_function_approximation
+	};;
+<= nrel_sc_text_translation: ...
+	(*
+		-> rrel_example:
+		[В отличие от <b><sc_element sys_idtf="concept_kohonen_self_organizing_maps">сети кохонена</b>, которая разбивает входное n-мерное пространство на разные области, <b>сеть встречного распространения</b> ставит в соответствие каждой области числовое значение <b><sc_element sys_idtf="nrel_function_approximation">аппроксимируемой функции</b>.](*<- lang_ru;; =>nrel_format: format_html;;*);;
+	*);;
+*);;
+
+concept_counterpropagating_neural_network<- rrel_key_sc_element: ...
+    (*
+    <-sc_illustration;;
+    <=nrel_sc_text_translation:
+        ...
+        (*
+        ->rrel_example: "file://images//counterpropagation_network.png"
+            (*
+            => nrel_format: format_png;;
+            *);;
+        *);;
+    *);;
+
+concept_counterpropagating_neural_network<-rrel_explored_concept: section_subject_domain_of_artificial_neural_networks;;
