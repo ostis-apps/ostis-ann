@@ -1,0 +1,40 @@
+concept_marginal_distribution
+	<- sc_node_not_relation;
+	=> nrel_main_idtf: [Маргинальное распределение] (* <- lang_ru;; *);
+	=> nrel_main_idtf: [Marginal distribution] (* <- lang_en;; *);;
+
+definition -> ...
+	(*
+		-> rrel_key_sc_element: concept_marginal_distribution;;
+		
+		=> nrel_main_idtf: [Опр.(Маргинальное распределение)] (* <- lang_ru;; *);;
+
+		<= nrel_sc_text_translation: ...
+			(*
+				-> [Маргинальное распределение подмножества набора <sc_element sys_idtf="concept_random_value">случайных величин</sc_element> — это распределение вероятностей переменных, содержащихся в этом подмножестве.] (*<-lang_ru;;=>nrel_format:format_html;;*);;
+			*);;
+		<= nrel_using_constants: ...
+			(*
+				-> concept_random_value;;
+			*);;
+
+	*);;
+
+affirmation -> ...
+	(*
+		-> rrel_key_sc_element: concept_marginal_distribution;;
+
+		=> nrel_main_idtf: [Утв.(Маргинальное распределение)] (* <- lang_ru;; *);;
+
+		<= nrel_sc_text_translation: ...
+			(*
+				-> [Маргинальное распределение — полная противоположность <sc_element sys_idtf="concept_conditional_distribution">условному распределению</sc_element>, в котором вероятности полностью зависят от других значений переменных.] (*<-lang_ru;;=>nrel_format:format_html;;*);;
+			*);;
+		<= nrel_using_constants: ...
+			(*
+				-> concept_conditional_distribution;;
+			*);;
+	*);;
+	
+concept_marginal_distribution<-rrel_explored_concept: section_subject_domain_of_probability_theory;;
+//<sc_element sys_idtf=""></sc_element>

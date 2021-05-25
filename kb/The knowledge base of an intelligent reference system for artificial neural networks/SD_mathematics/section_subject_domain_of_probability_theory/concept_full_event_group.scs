@@ -1,0 +1,44 @@
+concept_full_event_group
+	<- sc_node_not_relation;
+	=> nrel_main_idtf: [Полная группа событий] (* <- lang_ru;; *);
+	=> nrel_main_idtf: [Full event group] (* <- lang_en;; *);;
+
+definition -> ...
+	(*
+		-> rrel_key_sc_element: concept_full_event_group;;
+		
+		=> nrel_main_idtf: [Опр.(Полная группа событий)] (* <- lang_ru;; *);;
+
+		<= nrel_sc_text_translation: ...
+			(*
+				-> [Множество <sc_element sys_idtf="nrel_incompatibility">несовместных</sc_element> событий образуют полную группу событий, если в результате отдельно взятого испытания обязательно появится одно из этих <sc_element sys_idtf="concept_event">событий</sc_element>. ] (*<-lang_ru;;=>nrel_format:format_html;;*);;
+			*);;
+			
+		<= nrel_using_constants: ...
+			(*
+				-> concept_event;;
+				-> nrel_incompatibility;;
+			*);;
+	*);;
+
+
+affirmation -> ...
+	(*
+		-> rrel_key_sc_element: concept_full_event_group;;
+
+		=> nrel_main_idtf: [Утв.(Полная группа событий)] (* <- lang_ru;; *);;
+
+		<= nrel_sc_text_translation: ...
+			(*
+				-> [Очевидно, что любая пара <sc_element sys_idtf="concept_opposite_event">противоположных событий</sc_element> (в частности, примеры выше) образует полную группу.] (*<-lang_ru;;=>nrel_format:format_html;;*);;
+			*);;
+						
+		<= nrel_using_constants: ...
+			(*
+				-> concept_opposite_event;;
+			*);;
+						
+	*);;
+	
+concept_full_event_group<-rrel_explored_concept: section_subject_domain_of_probability_theory;;
+//<sc_element sys_idtf=""></sc_element>

@@ -1,0 +1,57 @@
+sc_node_norole_relation -> nrel_composition_of_probabilities_of_independent_events;;
+
+nrel_composition_of_probabilities_of_independent_events => nrel_main_idtf: [Произведение вероятностей независимых событий*](*<- lang_ru;;*);;
+nrel_composition_of_probabilities_of_independent_events => nrel_main_idtf: [Composition of probabilities of independent events*](*<- lang_en;;*);;
+
+definition -> ...
+(*
+    -> rrel_key_sc_element: nrel_composition_of_probabilities_of_independent_events;;
+    <= nrel_sc_text_translation: ...
+        (*
+            -> [Теорема произведения вероятностей независимых событий: вероятность совместного появления независимых событий A и B равна произведению вероятностей этих событий: P(AB) = P(A) * P(B)] (*<-lang_ru;;=>nrel_format:format_html;;*);;
+        *);;
+    => nrel_main_idtf: [Опр.(Произведение вероятностей независимых событий*)](*<- lang_ru;;*);;
+    <= nrel_using_constants: ...
+        (*
+            -> concept_event;;
+            -> concept_probability;;
+            -> concept_independent_event;;
+        *);;
+*);;
+
+
+statement -> ...
+(*
+    -> rrel_key_sc_element: nrel_composition_of_probabilities_of_independent_events;;
+    <= nrel_sc_text_translation: ...
+        (*
+            -> [Вероятность совместного появления двух независимых событий равна произведению вероятностей этих событий] (*<-lang_ru;;=>nrel_format:format_html;;*);;
+        *);;
+    => nrel_main_idtf: [Утв.(Произведение вероятностей независимых событий*)](*<- lang_ru;;*);;
+<= nrel_using_constants: ...
+        (*
+            -> concept_event;;
+            -> concept_probability;;
+            -> concept_independent_event;;
+        *);;
+*);;
+
+parameter -> arity;;
+arity -> binary_relation;;
+binary_relation -> nrel_composition_of_probabilities_of_independent_events;;
+binary_relation => nrel_measurement: 2;;
+number -> 2;;
+
+relation => nrel_composition_of_probabilities_of_independent_events: oriented_relation;;
+relation => nrel_composition_of_probabilities_of_independent_events: binary_relation;;
+
+binary_relation => nrel_composition_of_probabilities_of_independent_events: reflexive_relation;;
+binary_relation => nrel_composition_of_probabilities_of_independent_events: transitive_relation;;
+binary_relation => nrel_composition_of_probabilities_of_independent_events: symmetric_relation;;
+
+reflexive_relation -> nrel_composition_of_probabilities_of_independent_events;;
+transitive_relation -|> nrel_composition_of_probabilities_of_independent_events;;
+symmetric_relation -|> nrel_composition_of_probabilities_of_independent_events;;
+
+nrel_composition_of_probabilities_of_independent_events<-rrel_explored_concept: section_subject_domain_of_probability_theory;;
+//<sc_element sys_idtf=""></sc_element>

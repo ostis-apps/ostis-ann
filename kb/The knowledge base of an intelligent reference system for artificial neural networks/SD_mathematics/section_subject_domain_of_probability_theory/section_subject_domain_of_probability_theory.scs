@@ -1,0 +1,80 @@
+section_subject_domain_of_probability_theory
+=> nrel_main_idtf:
+	[Раздел. Предметная область теории вероятностей]
+	(* <- lang_ru;; *);
+	[Section. Subject domain of probability theory]
+	(* <- lang_en;; *);
+<- non_atomic_section;;
+
+//section_subject_domain_of_probability_theory <= nrel_section_decomposition: {
+//    section_subject_domain_of_random_events;
+//    section_subject_domain_of_random_values
+//    };;
+
+//section_subject_domain_of_probability_theory->rrel_key_sc_element:
+//    subject_domain_of_probability_theory;
+//    concept_event;
+//    concept_full_event_group;
+//    concept_impossible_event;
+//    concept_independent_event;
+//    concept_opposite_event;
+//    concept_probability;
+//    concept_probability_space;
+//    concept_probability_theory;
+//    concept_random_event;
+//    concept_reliable_event;
+//    nrel_addition_of_events;
+//    nrel_addition_of_probabilities_of_incompatible_events;
+//    nrel_composition_of_events;
+//    nrel_equally_possible;
+//    nrel_incompatibility;;
+
+section_subject_domain_of_probability_theory = [*
+subject_domain_of_probability_theory
+=> nrel_main_idtf:
+	[Предметная область теории вероятностей]
+	(* <- lang_ru;; *);
+	[Subject domain of probability theory]
+	(* <- lang_en;; *);
+<- subject_domain;
+-> rrel_key_sc_element: section_subject_domain_of_probability_theory;
+-> rrel_maximum_studied_object_class: concept_probability_theory;
+-> rrel_not_maximum_studied_object_class:
+    concept_event;
+    concept_full_event_group;
+    concept_impossible_event;
+    concept_independent_event;
+    concept_opposite_event;
+    concept_probability;
+    concept_probability_space;
+    concept_random_event;
+    concept_reliable_event;
+    concept_bernoulli_distribution;
+    concept_categorical_distribution;
+    concept_conditional_distribution;
+    concept_continuous_random_variable;
+    concept_covariance;
+    concept_discrete_random_variable;
+    concept_exponential_distribution;
+    concept_full_probability;
+    concept_laplace_integral_theorem;
+    concept_local_laplace_theorem;
+    concept_marginal_distribution;
+    concept_mathematical_expectation;
+    concept_normal_distribution;
+    concept_poisson_theorem;
+    concept_random_vaule_variance;
+    concept_relative_frequency;
+    concept_space_of_elementary_events;
+    concept_statistical_probability;
+    nrel_addition_of_events;
+    nrel_addition_of_probabilities_of_incompatible_events;
+    nrel_chain_rule;
+    nrel_composition_of_events;
+    nrel_composition_of_probabilities_of_dependent_events;
+    nrel_composition_of_probabilities_of_independent_events;
+    nrel_equally_possible;
+    nrel_incompatibility;
+    nrel_probability_distribution_function;;
+    
+*];;

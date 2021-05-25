@@ -1,0 +1,36 @@
+concept_local_laplace_theorem
+	<- sc_node_not_relation;
+	=> nrel_main_idtf: [Локальная теорема Лапласа] (* <- lang_ru;; *);
+	=> nrel_main_idtf: [The local Laplace Theorem] (* <- lang_en;; *);;
+
+definition -> ...
+	(*
+		-> rrel_key_sc_element: concept_local_laplace_theorem;;
+		
+		=> nrel_main_idtf: [Опр.(Локальная теорема Лапласа)] (* <- lang_ru;; *);;
+
+		<= nrel_sc_text_translation: ...
+			(*
+				-> [Если <sc_element sys_idtf="concept_probability">вероятность</sc_element> p появления случайного <sc_element sys_idtf="concept_event">события</sc_element> A в каждом испытании постоянна, то вероятность P(m) того, что в n испытаниях событие A наступит ровно m раз] (*<-lang_ru;;=>nrel_format:format_html;;*);;
+			*);;
+		<= nrel_using_constants: ...
+			(*
+				-> concept_probability;;
+				-> concept_event;;
+			*);;
+	*);;
+
+illustration->...
+(*
+	-> rrel_key_sc_element: concept_local_laplace_theorem;;
+	=> nrel_main_idtf:
+		[Формула. (Локальная теорема Лапласа)](*<-lang_ru;;*);
+		[Formula. (The local Laplace Theorem)](*<-lang_en;;*);;
+	<= nrel_sc_text_translation:...
+	(*
+		->"file://IMG/local_laplace_theorem.jpg"(*=>nrel_format:format_jpg;;*);;
+	*);;
+*);;
+	
+concept_local_laplace_theorem<-rrel_explored_concept: section_subject_domain_of_probability_theory;;
+//<sc_element sys_idtf=""></sc_element>

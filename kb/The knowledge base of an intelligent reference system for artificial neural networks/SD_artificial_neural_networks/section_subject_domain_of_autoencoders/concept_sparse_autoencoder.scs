@@ -1,0 +1,38 @@
+concept_sparse_autoencoder
+	<- sc_node_not_relation;
+	=> nrel_main_idtf: [Разреженный автокодировщик] (* <- lang_ru;; *);
+	=> nrel_main_idtf: [Sparse Autoencoders] (* <- lang_en;; *);;
+
+definition -> ...
+	(*
+		-> rrel_key_sc_element: concept_sparse_autoencoder;;
+		
+		=> nrel_main_idtf: [Опр.(Разреженный автокодировщик)] (* <- lang_ru;; *);;
+
+		<= nrel_using_constants: ...
+			(*
+				-> nrel_hidden_nrel_layer;;
+				-> nrel_input_layer;;
+			*);;
+
+		<= nrel_sc_text_translation: ...
+			(*
+				-> [Sparse Autoencoders - размерность скрытого слоя больше, чем входного, они все еще могут обнаружить важные особенности из данных.] (*<-lang_ru;;=>nrel_format:format_html;;*);;
+			*);;
+	*);;
+
+
+affirmation -> ...
+	(*
+		-> rrel_key_sc_element: concept_sparse_autoencoder;;
+
+		=> nrel_main_idtf: [Утв.(Разреженный автокодировщик)] (* <- lang_ru;; *);;
+
+		<= nrel_sc_text_translation: ...
+			(*
+				-> [Разреженные автокодировщики чаще всего применяются для обучения признакам в интересах другой задачи, например классификации.] (*<-lang_ru;;=>nrel_format:format_html;;*);;
+			*);;
+	*);;
+	
+concept_sparse_autoencoder<-rrel_explored_concept: section_subject_domain_of_autoencoders;;
+//<sc_element sys_idtf=""></sc_element>

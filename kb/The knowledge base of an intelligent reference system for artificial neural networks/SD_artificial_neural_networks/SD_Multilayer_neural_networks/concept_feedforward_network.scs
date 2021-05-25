@@ -1,0 +1,32 @@
+concept_feedforward_network<-sc_node_not_relation;;
+
+concept_feedforward_network=> nrel_main_idtf: [сети прямого распространения](* <- lang_ru;; *);;
+concept_feedforward_network=> nrel_main_idtf: [feedforward neural network](* <- lang_en;; *);;
+
+definition ->...
+(*
+->rrel_key_sc_element: concept_feedforward_network;;
+<= nrel_sc_text_translation: ...(*->rrel_example:[Сети прямого распространения — <b><sc_element sys_idtf="neural_network">искусственные нейронные сети</b>, в которых сигнал распространяется строго от <b><sc_element sys_idtf="input_layer">входного слоя</b> к <b><sc_element sys_idtf="output_layer">выходному</b>, в обратном направлении сигнал не распространяется.](*<-lang_ru;;=>nrel_format:format_html;;*);;*);;
+=> nrel_main_idtf: [Сети прямого распространения. Определение](*<- lang_ru;;*);;
+=> nrel_using_constants:
+{ 
+ neural_network;
+ input_layer;
+ output_layer
+};;
+*);; 
+
+statement ->...
+(*
+->rrel_key_sc_element: concept_feedforward_network;;
+<= nrel_sc_text_translation: ...(*->rrel_example:[Цель сети прямого распространения – <b><sc_element sys_idtf="approximation">аппроксимировать</b> некоторую <b><sc_element sys_idtf="function">функцию</b> f.](*<-lang_ru;;=>nrel_format:format_html;;*);;*);;
+=> nrel_main_idtf: [Сети прямого распространения. Утверждение](*<- lang_ru;;*);;
+=> nrel_using_constants:
+{
+approximation;
+function
+};;
+*);;
+
+concept_feedforward_network<-rrel_explored_concept: section_subject_domain_of_multilayer_neural_networks;;
+

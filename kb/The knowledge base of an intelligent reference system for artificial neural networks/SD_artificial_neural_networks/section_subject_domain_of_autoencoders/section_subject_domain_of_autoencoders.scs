@@ -1,0 +1,25 @@
+section_subject_domain_of_autoencoders
+=> nrel_main_idtf:
+	[Раздел. Предметная область автокодировщиков]
+	(* <- lang_ru;; *);
+	[Section. Subject domain of autoencoders]
+	(* <- lang_en;; *);
+<- atomic_section;;
+
+section_subject_domain_of_autoencoders = [*
+subject_domain_of_autoencoders
+=> nrel_main_idtf:
+	[Предметная область автокодировщиков]
+	(* <- lang_ru;; *);
+	[Subject domain of autoencoders]
+	(* <- lang_en;; *);
+<- subject_domain;
+-> rrel_key_sc_element: section_subject_domain_of_autoencoders;
+-> rrel_maximum_studied_object_class: concept_autoencoder;
+-> rrel_not_maximum_studied_object_class:
+    concept_denoising_autoencoder;
+    concept_regularized_autoencoder;
+    concept_sparse_autoencoder;
+    concept_undercomplete_autoencoder;
+    concept_contractive_autoencoder;;
+*];;

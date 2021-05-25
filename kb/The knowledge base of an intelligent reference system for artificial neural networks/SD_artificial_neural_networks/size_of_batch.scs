@@ -1,0 +1,52 @@
+nrel_concept_size_of_batch<-sc_node_not_relation;;
+
+concept_size_of_batch=>nrel_main_idtf:
+[размер партии](*<-lang_ru;;*);
+[batch size](*<-lang_en;;*);;
+
+
+concept_size_of_batch<- rrel_key_sc_element: ...
+(*
+<- definition;;
+=> nrel_main_idtf:
+      [Опр. Размер партии] (* <- lang_ru;; *);;
+=> nrel_using_constants: 
+	{
+		concept_training_object;
+		nrel_quatity;
+		concept_batch
+	};; 
+<= nrel_sc_text_translation: ... 
+		(*
+			->rrel_example:
+			[Общее число тренировочных объектов, представленных в одном батче.](*<- lang_ru;;*);;
+		*);;
+*);;
+
+
+concept_size_of_batch<- rrel_key_sc_element: ... 
+(*
+ => nrel_main_idtf:
+[Утв. 1 о Размере партии] (* <- lang_ru;; *);;
+=> nrel_using_constants: 
+	{
+		concept_neural_network;
+		concept_training_sample;
+		nrel_size
+	};; 
+ <= nrel_sc_text_translation: ...
+	 (*
+    	  -> rrel_example:
+		[Размер партии относится к числу обучающих выборок, распространяемых по нейронной сети.](*<-lang_ru;;*);;
+	*);;
+*);;
+
+nrel_concept_size_of_batch
+	<- binary_relation;
+	<- oriented_relation;
+	<- antireflexive_relation;
+	<- antisymmetric_relation;
+	<- antitransitive_relation;;
+
+
+nrel_concept_size_of_batch<-rrel_explored_concept: section_subject_domain_of_artificial_neural_networks;;

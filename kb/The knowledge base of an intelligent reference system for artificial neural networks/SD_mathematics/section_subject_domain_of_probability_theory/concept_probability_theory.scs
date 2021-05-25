@@ -1,0 +1,45 @@
+concept_probability_theory
+	<- sc_node_not_relation;
+	=> nrel_main_idtf: [теория вероятностей] (* <- lang_ru;; *);
+	=> nrel_main_idtf: [probability theory] (* <- lang_en;; *);;
+
+definition -> ...
+	(*
+		-> rrel_key_sc_element: concept_probability_theory;;
+		
+		=> nrel_main_idtf: [Опр.(теория вероятностей)] (* <- lang_ru;; *);;
+
+		<= nrel_using_constants: ...
+			(*
+				-> nrel_operation;;
+				-> concept_random_value;;
+				-> concept_random_event;;
+				-> concept_math;;
+			*);;
+
+		<= nrel_sc_text_translation: ...
+			(*
+				-> [Теория вероятностей — это раздел <sc_element sys_idtf="concept_math">математики</sc_element>, который изучает закономерности случайных явлений: <sc_element sys_idtf="concept_random_event">случайные события</sc_element>, <sc_element sys_idtf="concept_random_value">случайные величины</sc_element>, их свойства и <sc_element sys_idtf="nrel_operation">операции</sc_element> над ними.] (*<-lang_ru;;=>nrel_format:format_html;;*);;
+			*);;
+	*);;
+
+
+affirmation -> ...
+	(*
+		-> rrel_key_sc_element: concept_probability_theory;;
+
+		=> nrel_main_idtf: [Утв.(теория вероятностей)] (* <- lang_ru;; *);;
+
+		<= nrel_sc_text_translation: ...
+			(*
+				-> [Первоначально теория вероятностей разрабатывалась для анализа час­
+тоты <sc_element sys_idtf="concept_event">событий</sc_element>.] (*<-lang_ru;;=>nrel_format:format_html;;*);;
+			*);;
+		<= nrel_using_constants: ...
+			(*
+				-> concept_event;;
+			*);;
+	*);;
+	
+concept_probability_theory<-rrel_explored_concept: section_subject_domain_of_probability_theory;;
+//<sc_element sys_idtf=""></sc_element>

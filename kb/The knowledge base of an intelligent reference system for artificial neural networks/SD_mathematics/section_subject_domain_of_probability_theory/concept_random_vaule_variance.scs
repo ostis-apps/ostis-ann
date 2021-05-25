@@ -1,0 +1,36 @@
+concept_random_vaule_variance
+	<- sc_node_not_relation;
+	=> nrel_main_idtf: [Дисперсия случайной величины] (* <- lang_ru;; *);
+	=> nrel_main_idtf: [Random value variance] (* <- lang_en;; *);;
+
+definition -> ...
+	(*
+		-> rrel_key_sc_element: concept_random_vaule_variance;;
+		
+		=> nrel_main_idtf: [Опр.(Дисперсия случайной величины)] (* <- lang_ru;; *);;
+
+		<= nrel_sc_text_translation: ...
+			(*
+				-> [Дисперсия – это <sc_element sys_idtf="concept_mathematical_expectation">математическое ожидание</sc_element> квадратов отклонений <sc_element sys_idtf="concept_random_value">случайной величины</sc_element> от её математического ожидания.] (*<-lang_ru;;=>nrel_format:format_html;;*);;
+			*);;
+		<= nrel_using_constants: ...
+			(*
+				-> concept_random_value;;
+				-> concept_mathematical_expectation;;
+			*);;
+	*);;
+
+affirmation -> ...
+	(*
+		-> rrel_key_sc_element: concept_random_vaule_variance;;
+
+		=> nrel_main_idtf: [Утв.(Дисперсия случайной величины)] (* <- lang_ru;; *);;
+
+		<= nrel_sc_text_translation: ...
+			(*
+				-> [Дисперсия не может быть отрицательной – возьмите этот факт на заметку!] (*<-lang_ru;;=>nrel_format:format_html;;*);;
+			*);;
+	*);;
+	
+concept_random_vaule_variance<-rrel_explored_concept: section_subject_domain_of_probability_theory;;
+//<sc_element sys_idtf=""></sc_element>

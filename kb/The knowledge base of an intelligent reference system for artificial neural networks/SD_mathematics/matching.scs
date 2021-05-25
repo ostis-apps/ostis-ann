@@ -1,0 +1,44 @@
+matching<-sc_node_not_relation;;
+
+matching=>nrel_main_idtf:
+[соответствие](*<-lang_ru;;*);
+[matching](*<-lang_en;;*);;
+
+nrel_inclusion->(math_concept=>matching);;
+matching<-rrel_explored_concept: section_subject_domain_mathematics;;
+
+matching<- rrel_key_sc_element: ...
+(*
+<- definition;;
+=> nrel_main_idtf:
+      [Опр. Соответствия] (* <- lang_ru;; *);;
+=> nrel_using_constants: 
+	{
+		concept_set;
+		concept_subset;
+		nrel_Cartesian_product
+	};; 
+<= nrel_sc_text_translation: ... 
+		(*
+			->rrel_example:
+			[Соответствием между множествами X и Y называется всякое подмножество декартова произведения этих множеств.](*<- lang_ru;;*);;
+		*);;
+*);;
+
+
+matching<- rrel_key_sc_element: ... 
+(*
+ => nrel_main_idtf:
+[Утв. 1 соответствии] (* <- lang_ru;; *);;
+ <= nrel_sc_text_translation: ...
+	 (*
+    	  -> rrel_example:
+		[Поскольку, соответствие, по определению, является подмножеством, значит, оно является множеством.](*<-lang_ru;;*);;
+	*);;
+=> nrel_using_constants: 
+{
+concept_subset;
+concept_set
+};;
+*);;
+

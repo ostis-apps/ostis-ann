@@ -1,0 +1,67 @@
+sc_node_norole_relation -> nrel_probability_distribution_function;;
+
+nrel_probability_distribution_function => nrel_main_idtf: [Функция распределения вероятностей*](*<- lang_ru;;*);;
+nrel_probability_distribution_function => nrel_main_idtf: [Probability distribution function*](*<- lang_en;;*);;
+
+definition -> ...
+(*
+    -> rrel_key_sc_element: nrel_probability_distribution_function;;
+    <= nrel_sc_text_translation: ...
+        (*
+            -> [Функция распределения определяет <sc_element sys_idtf="concept_probablity">вероятность</sc_element> того, что <sc_element sys_idtf="concept_random_value">случайная величина</sc_element> X принимает значения, меньшие фиксированного действительного числа x, т. е. F(x) = P{X < x}.] (*<-lang_ru;;=>nrel_format:format_html;;*);;
+        *);;
+    => nrel_main_idtf: [Опр.(Функция распределения вероятностей*)](*<- lang_ru;;*);;
+    <= nrel_using_constants: ...
+        (*
+            ->concept_random_value;;
+            ->concept_probablity;;
+        *);;
+*);;
+
+
+statement -> ...
+(*
+    -> rrel_key_sc_element: nrel_probability_distribution_function;;
+    <= nrel_sc_text_translation: ...
+        (*
+            -> [Функция распределения полностью характеризует <sc_element sys_idtf="concept_random_value">случайную величину</sc_element> с <sc_element sys_idtf="concept_probablity">вероятностной</sc_element> точки зрения.] (*<-lang_ru;;=>nrel_format:format_html;;*);;
+        *);;
+    => nrel_main_idtf: [Утв.(Функция распределения вероятностей*)](*<- lang_ru;;*);;
+<= nrel_using_constants: ...
+        (*
+            ->concept_random_value;;
+            ->concept_probablity;;
+        *);;
+*);;
+
+illustration->...
+(*
+	-> rrel_key_sc_element: nrel_probability_distribution_function;;
+	=> nrel_main_idtf:
+		[Рис. (Функция распределения вероятностей*)](*<-lang_ru;;*);
+		[Pic. (Probability distribution function*)](*<-lang_en;;*);;
+	<= nrel_sc_text_translation:...
+	(*
+		->"file://IMG/probability_distribution_function.jpg"(*=>nrel_format:format_jpg;;*);;
+	*);;
+*);;
+
+parameter -> arity;;
+arity -> binary_relation;;
+binary_relation -> nrel_probability_distribution_function;;
+binary_relation => nrel_measurement: 2;;
+number -> 2;;
+
+relation => nrel_probability_distribution_function: oriented_relation;;
+relation => nrel_probability_distribution_function: binary_relation;;
+
+binary_relation => nrel_probability_distribution_function: reflexive_relation;;
+binary_relation => nrel_probability_distribution_function: transitive_relation;;
+binary_relation => nrel_probability_distribution_function: symmetric_relation;;
+
+reflexive_relation -> nrel_probability_distribution_function;;
+transitive_relation -|> nrel_probability_distribution_function;;
+symmetric_relation -|> nrel_probability_distribution_function;;
+
+nrel_probability_distribution_function<-rrel_explored_concept: section_subject_domain_of_probability_theory;;
+//<sc_element sys_idtf=""></sc_element>
