@@ -1,0 +1,48 @@
+sc_node_not_relation -> concept_dynamically_linked_network;;
+
+sc_node_not_relation -> concept_network;;
+sc_node_not_relation -> concept_process;;
+sc_node_not_relation -> concept_setting;;
+sc_node_not_relation -> concept_synaptic;;
+sc_node_not_relation -> concept_connection;;
+sc_node_not_relation -> concept_learning;;
+
+sc_node_norole_relation -> nrel_happen;;
+sc_node_norole_relation -> nrel_use;;
+
+concept_dynamically_linked_network => nrel_main_idtf: [Сети с динамическими связями](* <- lang_ru;; *);;
+concept_dynamically_linked_network => nrel_main_idtf: [Dynamically linked network](* <- lang_en;; *);;
+
+definition ->...
+(*
+	-> rrel_key_sc_element : concept_dynamically_linked_network;;
+	<= nrel_sc_text_translation: ...(*->rrel_example:[Сети, в которых в процессе обучения происходит настройка синаптических связей.](*<-lang_ru;;*);;*);;
+	=> nrel_main_idtf: [Определение (Сети с динамическими связями.)](*<- lang_ru;;*);;
+	=> nrel_using_constants: ...
+	(*
+	   -> concept_network;;
+	   -> concept_process;;
+	   -> concept_setting;;
+	   -> concept_synaptic;;
+	   -> concept_connection;;
+	   -> concept_learning;;
+	   -> nrel_happen;;
+	*);;
+*);;
+
+statement ->...
+(*
+	-> rrel_key_sc_element : concept_dynamically_linked_network;;
+	<= nrel_sc_text_translation: ...(*->rrel_example:[При обучении используется формула dW/dt != 0.](*<-lang_ru;;*);;*);;
+	=> nrel_main_idtf: [Утверждение(Сети с динамическими связями.)](*<- lang_ru;;*);;
+	=> nrel_using_constants: ...
+	(*
+	   -> concept_learning;;
+	   -> concept_formula;;
+	   -> nrel_use;;
+	*);;
+*);;
+
+
+concept_dynamically_linked_network
+	<- rrel_explored_concept: section_subject_domain_of_artificial_neural_networks;;

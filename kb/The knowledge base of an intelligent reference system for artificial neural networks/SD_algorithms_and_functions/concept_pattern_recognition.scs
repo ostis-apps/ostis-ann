@@ -1,0 +1,62 @@
+concept_pattern_recognition
+
+	<-sc_node_not_relation;
+
+	=>nrel_main_idtf:
+		[распознавание образов](*<-lang_ru;;*);
+		[pattern recognition](*<-lang_en;;*);
+		
+	=>nrel_idtf:
+		[распознавание образов](*<-lang_ru;;*);
+		[pattern recognition](*<-lang_en;;*);;
+
+
+concept_pattern_recognition
+	<- rrel_key_sc_element: ...
+	(*
+		<- definition;;
+		
+		=> nrel_main_idtf:
+    			[Опр.(распознавание образов)] (* <- lang_ru;; *);;
+    		  
+		=> nrel_using_constants: 
+			{
+				class;
+				object;
+				system
+			};;
+			
+		<= nrel_sc_text_translation: ... 
+		(*
+			->rrel_example:
+				[Распознавание образов – это научное направление, связанное с разработкой принципов и построением систем, предназначенных для определения принадлежности объекта к одному из классов объектов.](*<- lang_ru;; =>nrel_format: format_html;;*);;
+		*);;
+	*);;
+
+
+concept_pattern_recognition
+	<- rrel_key_sc_element: ... 
+	(*
+		=> nrel_main_idtf:
+			[Утв.(о распознавании образов)] (* <- lang_ru;; *);;
+			
+ 		<= nrel_sc_text_translation: ...
+		(*
+    			-> rrel_example:
+				[Объекты распознавания образов: различные предметы и явления, процессы и ситуации, сигналы.](*<-lang_ru;; =>nrel_format: format_html;;*);;
+		*);;
+		
+		=> nrel_using_constants:
+			{
+				subjects;
+				signals;
+				situations;
+				processes;
+				scene
+			};;
+	*);;
+
+
+
+concept_pattern_recognition
+	<- rrel_explored_concept: section_subject_domain_of_algorithms_and_functions;;

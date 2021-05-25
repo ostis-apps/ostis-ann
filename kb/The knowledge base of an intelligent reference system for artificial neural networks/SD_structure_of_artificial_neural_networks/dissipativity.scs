@@ -1,0 +1,52 @@
+sc_node_not_relation -> concept_dissipativity;;
+
+sc_node_not_relation -> concept_dynamic_state;;
+sc_node_not_relation -> concept_level;;
+sc_node_not_relation -> concept_system;;
+sc_node_not_relation -> concept_property;;
+sc_node_not_relation -> concept_nonequilibrium_system;;
+sc_node_not_relation -> concept_new_struct;;
+sc_node_not_relation -> concept_order;;
+sc_node_not_relation -> concept_chaos;;
+
+sc_node_norole_relation -> nrel_show;;
+sc_node_norole_relation -> nrel_arise;;
+sc_node_norole_relation -> nrel_go;;
+
+concept_dissipativity => nrel_main_idtf: [Диссипативность](* <- lang_ru;; *);;
+concept_dissipativity => nrel_main_idtf: [Dissipativity](* <- lang_en;; *);;
+
+definition ->...
+(*
+	-> rrel_key_sc_element : concept_dissipativity;;
+	<= nrel_sc_text_translation: ...(*->rrel_example:[Особое динамическое состояние, когда на уровне всей системы проявляются качественно новые свойства и процессы.](*<-lang_ru;;*);;*);;
+	=> nrel_main_idtf: [Определение (Диссипативность.)](*<- lang_ru;;*);;
+	=> nrel_using_constants: ...
+	(*
+	   -> concept_dynamic_state;;
+	   -> concept_level;;
+	   -> concept_system;;
+	   -> concept_property;;
+	   -> nrel_show;;
+	*);;
+*);;
+
+statement ->...
+(*
+	-> rrel_key_sc_element : concept_dissipativity;;
+	<= nrel_sc_text_translation: ...(*->rrel_example:[Благодаря ей в неравновесных системах могут спонтанно возникать новые структуры, переходить к порядку из хаоса.](*<-lang_ru;;*);;*);;
+	=> nrel_main_idtf: [Утверждение(Диссипативность.)](*<- lang_ru;;*);;
+	=> nrel_using_constants: ...
+	(*
+	   -> concept_nonequilibrium_system;;
+	   -> concept_new_struct;;
+	   -> concept_order;;
+	   -> concept_chaos;;
+	   -> nrel_arise;;
+	   -> nrel_go;;
+	*);;
+*);;
+
+
+concept_dissipativity
+	<- rrel_explored_concept: section_subject_domain_structure_of_artificial_neural_networks;;

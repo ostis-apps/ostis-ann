@@ -1,0 +1,52 @@
+concept_fault
+	<-sc_node_not_relation;
+	=>nrel_main_idtf:
+		[Ошибка](* <- lang_ru;; *);
+		[Fault](* <- lang_eng;; *);
+	=>nrel_idtf:
+		[Ошибка](* <- lang_ru;; *);
+		[Fault](* <- lang_eng;; *);;
+
+concept_fault
+	<- rrel_key_sc_element: ...
+	(*
+		<- definition;;
+		
+		=> nrel_main_idtf:
+    			[Опр. (Ошибка)] (* <- lang_ru;; *);;
+    		  
+		=> nrel_using_constants: 
+			{
+				action;
+				value
+			};;
+			
+		<= nrel_sc_text_translation: ... 
+		(*
+			->rrel_example:
+				[<b>Оши́бка</b> — непреднамеренное, случайное отклонение от правильных <sc_element sys_idtf=«action»>действий</sc_element>, поступков, мыслей, разница между ожидаемой или измеренной и реальной <sc_element sys_idtf=«value»>величиной</sc_element>.](*<- lang_ru;; =>nrel_format: format_html;;*);;
+		*);;
+	*);;
+
+
+concept_fault
+	<- rrel_key_sc_element: ... 
+	(*
+		=> nrel_main_idtf:
+			[Утв.(Ошибка)] (* <- lang_ru;; *);;
+			
+ 		<= nrel_sc_text_translation: ...
+		(* 
+    			-> rrel_example:
+				[Ошибка может быть логической, стандартной. Программная ошибка, ошибка обучения, ошибка измерения, ошибка сегментации.](*<-lang_ru;; =>nrel_format: format_html;;*);;
+		*);;
+		
+		=> nrel_using_constants:
+			{
+				learning_error
+				
+			};;
+	*);;
+concept_fault
+	<- rrel_explored_concept: section_subject_domain_of_algorithms_and_functions;;
+

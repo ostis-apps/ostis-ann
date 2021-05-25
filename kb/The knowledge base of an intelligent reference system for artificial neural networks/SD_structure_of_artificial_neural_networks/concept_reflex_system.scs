@@ -1,0 +1,55 @@
+concept_reflex_system
+	<-sc_node_not_relation;
+	=>nrel_main_idtf:
+		[Рефлекторная система](* <- lang_ru;; *);
+		[Reflex system](* <- lang_eng;; *);
+	=>nrel_idtf:
+		[Рефлекторная система](* <- lang_ru;; *);
+		[Reflex system](* <- lang_eng;; *);;
+
+concept_reflex_system
+	<- rrel_key_sc_element: ...
+	(*
+		<- definition;;
+		
+		=> nrel_main_idtf:
+    			[Опр. (Рефлекторная система] (* <- lang_ru;; *);;
+    		  
+		=> nrel_using_constants: 
+			{
+				input_data;
+				algorithm
+			};;
+			
+		<= nrel_sc_text_translation: ... 
+		(*
+			->rrel_example:
+				[<b>Рефлекторная система</b> — это система, которая формирует вырабатываемые специальными <sc_element sys_idtf=«concept_algorithm»>алгоритмами</sc_element> ответные реакции на различные комбинации <sc_element sys_idtf=«concept_input_data»>входных воздействий</sc_element>.](*<- lang_ru;; =>nrel_format: format_html;;*);;
+		*);;
+	*);;
+
+
+concept_reflex_system
+	<- rrel_key_sc_element: ... 
+	(*
+		=> nrel_main_idtf:
+			[Утв.(Рефлекторная система)] (* <- lang_ru;; *);;
+			
+ 		<= nrel_sc_text_translation: ...
+		(* 
+    			-> rrel_example:
+				[<sc_element sys_idtf=«concept_algorithm»>Алгоритм</sc_element> обеспечивает выбор наиболее вероятной реакции <sc_element sys_idtf=«concept_intelligence_system»>интеллектуальной системы</sc_element> на <sc_element sys_idtf=«concept_set»>множество</sc_element> входных воздействий, при известных вероятностях выбора реакции на каждое <sc_element sys_idtf=«concept_input_data»>входное воздействие</sc_element>, а также на некоторые комбинации <sc_element sys_idtf=«concept_input_data»>входных воздействий</sc_element>. Данная задача подобна той, которую реализуют <sc_element sys_idtf=«concept_neural_network_in_graphical_representation»>нейросети</sc_element>.](*<-lang_ru;; =>nrel_format: format_html;;*);;
+		*);;
+		
+		=> nrel_using_constants:
+			{
+				algorithm;
+				intelligence_system;
+				set;
+				input_data;
+				concept_neural_network_in_graphical_representation
+				
+			};;
+	*);;
+concept_reflex_system
+	<- rrel_explored_concept: section_subject_domain_structure_of_artificial_neural_networks;;

@@ -1,0 +1,56 @@
+concept_clustering
+
+	<-sc_node_not_relation;
+
+	=>nrel_main_idtf:
+		[Кластеризация](*<-lang_ru;;*);
+		[Clustering](*<-lang_en;;*);
+		
+	=>nrel_idtf:
+		[Кластеризация](*<-lang_ru;;*);
+		[Clustering](*<-lang_en;;*);;
+
+
+concept_clustering
+	<- rrel_key_sc_element: ...
+	(*
+		<- definition;;
+		
+		=> nrel_main_idtf:
+    			[Опр. (Кластеризация)] (* <- lang_ru;; *);;
+    		  
+		=> nrel_using_constants: 
+			{
+				task;
+				set
+				
+			};;
+			
+		<= nrel_sc_text_translation: ... 
+		(*
+			->rrel_example:
+				[Кластеризация (или кластерный анализ) — это задача разбиения множества объектов на группы, называемые кластерами.](*<- lang_ru;; =>nrel_format: format_html;;*);;
+		*);;
+	*);;
+
+
+concept_clustering
+	<- rrel_key_sc_element: ... 
+	(*
+		=> nrel_main_idtf:
+			[Утв.(Кластеризация)] (* <- lang_ru;; *);;
+			
+ 		<= nrel_sc_text_translation: ...
+		(*
+    			-> rrel_example:
+				[Внутри каждой группы должны оказаться «похожие» объекты, а объекты разных группы должны быть как можно более отличны.](*<-lang_ru;;=>nrel_format:format_html;;*);;
+		*);;
+		
+		=> nrel_using_constants:
+			{
+				nrel_equality
+			};;
+	*);;
+
+concept_clustering
+	<- rrel_explored_concept: section_subject_domain_tasks_solved_by_neural_networks;;

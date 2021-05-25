@@ -1,0 +1,68 @@
+sc_node_not_relation -> concept_receptive_field;;
+
+sc_node_not_relation -> concept_sensory_neuron;;
+sc_node_not_relation -> concept_field;;
+sc_node_not_relation -> concept_receptor;;
+sc_node_not_relation -> concept_interaction;;
+sc_node_not_relation -> concept_stimulus;;
+sc_node_not_relation -> concept_change;;
+sc_node_not_relation -> concept_excitation;;
+sc_node_not_relation -> concept_neuron;;
+sc_node_not_relation -> concept_impact;;
+sc_node_not_relation -> concept_conception;;
+sc_node_not_relation -> concept_nervous_system;;
+sc_node_not_relation -> concept_set;;
+sc_node_not_relation -> concept_sensory;;
+sc_node_not_relation -> concept_synapse;;
+
+sc_node_norole_relation -> nrel_lead;;
+sc_node_norole_relation -> nrel_apply;;
+sc_node_norole_relation -> nrel_create;;
+sc_node_norole_relation -> nrel_form;;
+
+concept_state_machine => nrel_main_idtf: [Рецептивное поле](* <- lang_ru;; *);;
+concept_state_machine => nrel_main_idtf: [State machine](* <- lang_en;; *);;
+
+definition ->...
+(*
+	-> rrel_key_sc_element : concept_receptive_field;;
+	<= nrel_sc_text_translation: ...(*->rrel_example:[Рецептивное поле сенсорного нейрона — участок с рецепторами, которые при воздействии на них определённого стимула приводят к изменению возбуждения этого нейрона.](*<-lang_ru;;*);;*);;
+	=> nrel_main_idtf: [Определение (Рецептивное поле.)](*<- lang_ru;;*);;
+	=> nrel_using_constants: ...
+	(*
+	   -> concept_sensory_neuron;;
+	   -> concept_field;;
+	   -> concept_receptor;;
+	   -> concept_interaction;;
+	   -> concept_stimulus;;
+	   -> concept_change;;
+	   -> concept_excitation;;
+	   -> concept_neuron;;
+	   -> concept_impact;;
+	   -> nrel_lead;;
+	*);;
+*);;
+
+statement ->...
+(*
+	-> rrel_key_sc_element : concept_receptive_field;;
+	<= nrel_sc_text_translation: ...(*->rrel_example:[Концепция рецептивных полей может быть применима ко всей нервной системе. Если множество сенсорных рецепторов образуют синапсы c единственным нейроном, они совместно формируют рецептивное поле этого нейрона.](*<-lang_ru;;*);;*);;
+	=> nrel_main_idtf: [Утверждение(Рецептивное поле.)](*<- lang_ru;;*);;
+	=> nrel_using_constants: ...
+	(*
+		-> concept_conception;;
+		-> concept_nervous_system;;
+		-> concept_set;;
+		-> concept_sensory;;
+		-> concept_receptors;;
+		-> concept_synapse;;
+		-> concept_neuron;;
+		-> nrel_apply;;
+		-> nrel_create;;
+		-> nrel_form;;
+	*);;
+*);;
+
+
+concept_receptive_field
+	<- rrel_explored_concept: section_subject_domain_structure_of_artificial_neural_networks;;

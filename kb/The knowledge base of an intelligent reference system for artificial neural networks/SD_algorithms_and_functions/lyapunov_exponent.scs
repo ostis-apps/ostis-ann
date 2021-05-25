@@ -1,0 +1,54 @@
+sc_node_not_relation -> concept_lyapunov_exponent;;
+
+sc_node_not_relation -> concept_dynamism;;
+sc_node_not_relation -> concept_system;;
+sc_node_not_relation -> concept_value;;
+sc_node_not_relation -> concept_speed;;
+sc_node_not_relation -> concept_deletion;;
+sc_node_not_relation -> concept_trajectory;;
+sc_node_not_relation -> concept_positivity;;
+sc_node_not_relation -> concept_chaotic;;
+sc_node_not_relation -> concept_behavior;;
+
+sc_node_norole_relation -> nrel_characterize;;
+sc_node_norole_relation -> nrel_testifies;;
+
+concept_lyapunov_exponent => nrel_main_idtf: [Показатель ляпунова](* <- lang_ru;; *);;
+concept_lyapunov_exponent => nrel_main_idtf: [Lyapunov exponent](* <- lang_en;; *);;
+
+definition ->...
+(*
+	-> rrel_key_sc_element : concept_lyapunov_exponent;;
+	<= nrel_sc_text_translation: ...(*->rrel_example:[Показатель Ляпунова динамической системы — величина, характеризующая скорость удаления друг от друга траекторий.](*<-lang_ru;;*);;*);;
+	=> nrel_main_idtf: [Определение (Показатель ляпунова.)](*<- lang_ru;;*);;
+	=> nrel_using_constants: ...
+	(*
+	   -> concept_dynamism;;
+	   -> concept_system;;
+	   -> concept_value;;
+	   -> concept_speed;;
+	   -> concept_deletion;;
+	   -> concept_trajectory;;
+	   -> nrel_characterize;;
+	*);;
+*);;
+
+statement ->...
+(*
+	-> rrel_key_sc_element : concept_lyapunov_exponent;;
+	<= nrel_sc_text_translation: ...(*->rrel_example:[Положительность показателя Ляпунова обычно свидетельствует о хаотическом поведении системы.](*<-lang_ru;;*);;*);;
+	=> nrel_main_idtf: [Утверждение(Показатель ляпунова.)](*<- lang_ru;;*);;
+	=> nrel_using_constants: ...
+	(*
+		-> concept_positivity;;
+		-> concept_chaotic;;
+		-> concept_behavior;;
+		-> concept_system;;
+		-> nrel_testifies;;
+	*);;
+*);;
+
+
+
+concept_lyapunov_exponent
+	<- rrel_explored_concept: section_subject_domain_of_algorithms_and_functions;;

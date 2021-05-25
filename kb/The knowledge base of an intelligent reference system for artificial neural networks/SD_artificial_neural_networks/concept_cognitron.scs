@@ -1,0 +1,55 @@
+concept_cognitron
+	<-sc_node_not_relation;
+	=>nrel_main_idtf:
+		[Когнитрон](* <- lang_ru;; *);
+		[Cognitron](* <- lang_eng;; *);
+	=>nrel_idtf:
+		[Когнитрон](* <- lang_ru;; *);
+		[Cognitron](* <- lang_eng;; *);;
+
+concept_cognitron
+	<- rrel_key_sc_element: ...
+	(*
+		<- definition;;
+		
+		=> nrel_main_idtf:
+    			[Опр. (Когнитрон)] (* <- lang_ru;; *);;
+    		  
+		=> nrel_using_constants: 
+			{
+				concept_neural_network_in_graphical_representation;
+				neuron;
+				layer
+			};;
+			
+		<= nrel_sc_text_translation: ... 
+		(*
+			->rrel_example:
+				[<b>Когнитрон</b> — искусственная <sc_element sys_idtf=«concept_neural_network_in_graphical_representation»>нейронная сеть</sc_element>, на основе принципа самоорганизации. Своей архитектурой когнитрон похож на строение зрительной коры, имеет иерархическую многослойную организацию, в которой <sc_element sys_idtf=«neuron»>нейроны</sc_element> между <sc_element sys_idtf=«layer»>слоями</sc_element> связаны только локально.](*<- lang_ru;; =>nrel_format: format_html;;*);;
+		*);;
+	*);;
+
+
+concept_cognitron
+	<- rrel_key_sc_element: ... 
+	(*
+		=> nrel_main_idtf:
+			[Утв.(Когнитрон)] (* <- lang_ru;; *);;
+			
+ 		<= nrel_sc_text_translation: ...
+		(* 
+    			-> rrel_example:
+				[Обучается <sc_element sys_idtf-«concept_unsupervised_learning»>конкурентным обучением (без учителя)</sc_element>. Каждый слой мозга реализует различные уровни обобщения; <sc_element sys_idtf=«input_layer»>входной слой</sc_element> чувствителен к простым <sc_element sys_idtf=«frame»>образам</sc_element>, таким, как линии, и их ориентации в определенных областях визуальной области, в то время как реакция других слоев является более сложной, <sc_element sys_idtf=«abstract_entity»>абстрактной</sc_element> и независимой от позиции образа.](*<-lang_ru;; =>nrel_format: format_html;;*);;
+		*);;
+		
+		=> nrel_using_constants:
+			{
+				abstract_entity;
+				concept_unsupervised_learning;
+				input_layer;
+				frame
+			};;
+	*);;
+
+concept_cognitron
+	<- rrel_explored_concept: section_subject_domain_of_artificial_neural_networks;;

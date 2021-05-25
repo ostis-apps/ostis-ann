@@ -1,0 +1,59 @@
+concept_calculation_graph
+
+	<-sc_node_not_relation;
+
+	=>nrel_main_idtf:
+		[Граф вычислений](*<-lang_ru;;*);
+		[Calculation graph](*<-lang_en;;*);
+		
+	=>nrel_idtf:
+		[Граф вычислений](*<-lang_ru;;*);
+		[Calculation graph](*<-lang_en;;*);;
+
+
+concept_calculation_graph
+	<- rrel_key_sc_element: ...
+	(*
+		<- definition;;
+		
+		=> nrel_main_idtf:
+    			[Опр. (Граф вычислений] (* <- lang_ru;; *);;
+    		  
+		=> nrel_using_constants: 
+			{
+				directed_graph;
+				nrel_nodes;
+				concept_operation
+			};;
+			
+		<= nrel_sc_text_translation: ... 
+		(*
+			->rrel_example:
+				[<b>Ориентированный граф</b>, узлы которого соответствуют операциям или переменным.](*<- lang_ru;; =>nrel_format: format_html;;*);;
+		*);;
+	*);;
+
+
+concept_calculation_graph
+	<- rrel_key_sc_element: ... 
+	(*
+		=> nrel_main_idtf:
+			[Утв.(Граф вычислений)] (* <- lang_ru;; *);;
+			
+ 		<= nrel_sc_text_translation: ...
+		(*
+    			-> rrel_example:
+				[Переменные могут передавать свое значение в операции, а операции могут передавать свои результаты в другие операции. Таким образом, каждый узел в графе определяет функцию переменных.](*<-lang_ru;;=>nrel_format:format_html;;*);;
+		*);;
+		
+		=> nrel_using_constants:
+			{
+				value;
+				nrel_nodes;
+				graph;
+				function
+			};;
+	*);;
+
+concept_calculation_graph
+	<- rrel_explored_concept: section_subject_domain_mathematics;;
