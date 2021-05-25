@@ -1,0 +1,98 @@
+nrel_inverse_function
+<-sc_node_norole_relation;
+=>nrel_main_idtf:[inverse function*](* <-lang_en;; *);
+=>nrel_main_idtf:[обратная функция*](* <-lang_ru;; *);
+=>nrel_idtf:[anti-function*](* <-lang_en;; *);
+
+<-rrel_key_sc_element: ...
+(*
+	<-definition ;;
+		=> nrel_main_idtf: 
+			[Опр.(обратная функция*)](* <- lang_ru;; *);;
+		=> nrel_using_constants :
+		{
+			function;
+			binary_relation
+
+		};;
+<= nrel_sc_text_translation:...
+	(*
+		-> rrel_example:[<b>Обратная функция*</b> - <b><sc_element sys_idtf="binary_relation">бинарное отношения</b>, связывающее <b><sc_element sys_idtf="function">функцию</b> с <b><sc_element sys_idtf="function">функцию</b>функцией</b>, обратной данной. ](*<- lang_ru;; =>nrel_format: format_html;;*);;
+	*);;
+*);
+
+ => nrel_first_domain:function;
+ => nrel_second_domain:function;
+
+
+<-rrel_key_sc_element:...
+	(*
+		=> nrel_main_idtf: [Утв 1. (обратная функция*)](* <- lang_ru;; *);;
+		=> nrel_using_constants :
+		{
+			function
+		};;
+		<= nrel_sc_text_translation:...
+		(*
+			-> rrel_example: [<b><sc_element sys_idtf="function">Функция</b>, имеющая <b>обратную</b>, называется обратимой.](*<- lang_ru;; =>nrel_format: format_html;;*);;
+		*);;
+*);
+
+<-rrel_key_sc_element:...
+	(*
+		=> nrel_main_idtf: [Утв 2. (обратная функция*)](* <- lang_ru;; *);;
+		=> nrel_using_constants :
+		{
+			function;
+			task;
+			method;
+			derivative;
+			nrel_inverse_function
+		};;
+		<= nrel_sc_text_translation:...
+		(*
+			-> rrel_example: [Для каждой обратимой функции существует лишь одна <b>обратная функция<b>.](*<- lang_ru;; =>nrel_format: format_html;;*);;
+		*);;
+*);
+
+
+<-rrel_explored_concept: section_subject_domain_of_learnign_neural_networks;;
+
+relation => nrel_inclusion: oriented_relation
+(*
+	-> nrel_inverse_function;;
+*);;
+
+relation=> nrel_inclusion: binary_relation
+(*
+	=> nrel_inclusion: asymmetric_relation
+	(*
+		-|> nrel_local_function_minimum;;
+	*);;
+
+	=> nrel_inclusion: symmetric_relation
+	(*
+		-> nrel_local_function_minimum;;
+	*);;
+
+	=> nrel_inclusion: antireflexive_relation
+	(*
+		-|> nrel_local_function_minimum;;
+	*);;
+
+	=> nrel_inclusion: transitive_relation
+	(*
+		-|> nrel_local_function_minimum;;
+	*);;
+
+	=> nrel_inclusion: reflexive_relation
+	(*
+		->nrel_local_function_minimum;;
+	*);;
+*);;
+
+
+nrel_local_function_minimum=> nrel_definitional_domain: function;;
+
+nrel_local_function_minimum<-rrel_explored_concept: section_subject_domain_mathematics;;
+

@@ -1,0 +1,72 @@
+rrel_range_of_values
+<-sc_node_role_relation;
+=>nrel_main_idtf:[range of values'](* <-lang_en;; *);
+=>nrel_main_idtf:[множество значений'](* <-lang_ru;; *);
+=>nrel_idtf:[область значений'](* <-lang_ru;; *);
+
+
+<-rrel_key_sc_element: ...
+(*
+	<-definition ;;
+		=> nrel_main_idtf: 
+			[Опр.(множество значений')](* <- lang_ru;; *);;
+		=> nrel_using_constants :
+		{
+			set;
+			value;
+			function
+		};;
+<= nrel_sc_text_translation:...
+	(*
+		-> rrel_example:[<b>Множество значений функции</b> — <b><sc_element sys_idtf="set">множество</b>, состоящее из всех <b><sc_element sys_idtf="value">значений</b>, которые принимает <b><sc_element sys_idtf="function">функция</b>.](*<- lang_ru;; =>nrel_format: format_html;;*);;
+	*);;
+*);
+
+ => nrel_first_domain:function;
+ => nrel_second_domain:set;
+
+=> nrel_definitional_domain: ...
+(*
+	<= nrel_combination:
+	{
+		function;
+		set
+	};;
+*);
+
+<-rrel_key_sc_element:...
+	(*
+		=> nrel_main_idtf: [Утв. (множество значений')](* <- lang_ru;; *);;
+		=> nrel_using_constants :
+		{
+			function;
+			task;
+			method;
+			derivative;
+			nrel_inverse_function
+		};;
+		<= nrel_sc_text_translation:...
+		(*
+			-> rrel_example: [В зависимости от вида и типа <b><sc_element sys_idtf="function">функции</b>, а также условий <b><sc_element sys_idtf="task">задачи</b> для этого могут применяться различные <b><sc_element sys_idtf="method">методы</b>: графический метод, использование <b><sc_element sys_idtf="derivative">производной</b>,метод <b><sc_element sys_idtf="nrel_inverse_function"> обратной функции</b> и др.](*<- lang_ru;; =>nrel_format: format_html;;*);;
+		*);;
+*);
+
+<-oriented_relation; antireflexive_relation; transitive_relation; antisymmetric_relation;
+
+
+<=nrel_inclusion:concept_mathematical_tasks;
+<-rrel_explored_concept: section_subject_domain_of_mathematical_tasks;;
+
+rrel_range_of_values<- rrel_key_sc_element: ...
+    (*
+    <-sc_illustration;;
+    <=nrel_sc_text_translation:
+        ...
+        (*
+        ->rrel_example: "file://images//values.jpg"
+            (*
+            => nrel_format: format_png;;
+            *);;
+        *);;
+    *);;
+

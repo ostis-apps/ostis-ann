@@ -1,0 +1,89 @@
+nrel_extremum_of_function
+<-sc_node_norole_relation;
+=>nrel_main_idtf:[extremum of function*](* <-lang_en;; *);
+=>nrel_main_idtf:[экстремум функции*](* <-lang_ru;; *);
+
+<-rrel_key_sc_element: ...
+(*
+	<-definition ;;
+		=> nrel_main_idtf: 
+			[Опр.(экстремум функции*)](* <- lang_ru;; *);;
+		=> nrel_using_constants :
+		{
+			minimum_point_of_function;
+			maximum_point_of_function;
+			function;
+			binary_relation
+
+		};;
+<= nrel_sc_text_translation:...
+	(*
+		-> rrel_example:[<b>Экстремум функции</b> - <b><sc_element sys_idtf="binary_relation">бинарное отношение</b>, связывающее <b><sc_element sys_idtf="function">функцию</b> с её <b><sc_element sys_idtf="minimum_point_of_function">точкой минимума</b> или <b><sc_element sys_idtf="maximum_point_of_function">точкой максимума</b>. ](*<- lang_ru;; =>nrel_format: format_html;;*);;
+	*);;
+*);
+
+ => nrel_first_domain:function;
+ => nrel_second_domain:concept_set_of_points;
+
+
+<-rrel_key_sc_element:...
+	(*
+		=> nrel_main_idtf: [Утв. (экстремум функции*)](* <- lang_ru;; *);;
+		=> nrel_using_constants :
+		{
+			nrel_local_function_minimum;
+			nrel_local_function_maximym;
+			nrel_global_function_minimum;
+			nrel_global_function_maximum
+
+		};;
+		<= nrel_sc_text_translation:...
+		(*
+			-> rrel_example: [Существуют различные <b>точки экстремума</b>: <b><sc_element sys_idtf="nrel_local_function_maximum">локальный максимум функции</b>, <b><sc_element sys_idtf="nrel_local_function_minimum;">локальный минимум функции</b>, <b><sc_element sys_idtf="nrel_global_function_maximum">глобальный максимум функции</b>, <b><sc_element sys_idtf="nrel_global_function_minimum">глобальный минимум функции</b>.](*<- lang_ru;; =>nrel_format: format_html;;*);;
+		*);;
+*);
+
+<-rrel_explored_concept: section_subject_domain_of_learnign_neural_networks;;
+
+
+relation => nrel_inclusion: oriented_relation
+(*
+	-> nrel_extremum_of_function;;
+*);;
+
+relation=> nrel_inclusion: binary_relation
+(*
+	=> nrel_inclusion: asymmetric_relation
+	(*
+		-> nrel_extremum_of_function;;
+	*);;
+
+	=> nrel_inclusion: antireflexive_relation
+	(*
+		-> nrel_extremum_of_function;;
+	*);;
+
+	=> nrel_inclusion: symmetric_relation
+	(*
+		-|> nrel_extremum_of_function;;
+	*);;
+	=> nrel_inclusion: transitive_relation
+	(*
+		-|> nrel_extremum_of_function;;
+	*);;
+
+*);;
+
+
+nrel_extremum_of_function=> nrel_definitional_domain: ...
+(*
+	<= nrel_combination:
+	{
+		concept_set_of_points;
+		function
+	};;
+*);;
+
+
+nrel_local_function_minimum<-rrel_explored_concept: section_subject_domain_mathematics;;
+

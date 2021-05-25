@@ -5,20 +5,42 @@ section_subject_domain_mathematics
 	[Section. Subject domain of artificial neural networks mathematics]
 	(* <- lang_en;; *);
 
-//<- not_enough_formed_structure;
-<- non_atomic_section;;
-
-section_subject_domain_mathematics <= nrel_section_decomposition: {
-    section_subject_domain_of_probability_theory
-    };;
+<- not_enough_formed_structure;
+<- atomic_section;;
 
 section_subject_domain_of_mathematics = [*
-subject_domain_of_mathematics
-=> nrel_main_idtf:
-   [Предметная область математики искусственных нейронных сетей] (* <- lang_ru;; *);
-   [Subject domain of artificial neural networks mathematics] (* <- lang_en;; *);
-   <- subject_domain;
-   -> rrel_key_sc_element: section_subject_domain_mathematics;;
-   
-   *];;
+                                          subject_domain_of_mathematics
+                                          	=> nrel_main_idtf:
+                                          	[Предметная область математики искусственных нейронных сетей]
+                                          	(* <- lang_ru;; *);
+                                          	[Subject domain of artificial neural networks mathematics]
+                                          	(* <- lang_en;; *);
+                                          		
+                                          <- subject_domain;;
+                                          
+                                          
+                                          
+                                          
+                                          
+                                          
+                                          
+                                          
+                                          
+                                          
+                                          
+                                          
+                                          
+
+*];;
+
+
+
+
+
+
+
+
+
+
+
 

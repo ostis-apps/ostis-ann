@@ -1,0 +1,66 @@
+mathematical_model<-sc_node_not_relation;;
+
+mathematical_model=>nrel_main_idtf:
+[математическая модель](*<-lang_ru;;*);
+[mathematical model](*<-lang_en;;*);;
+
+mathematical_model<- rrel_key_sc_element: ...
+(*
+<- definition;;
+=> nrel_main_idtf:
+      [Опр. (математическая модель)] (* <- lang_ru;; *);;
+=> nrel_using_constants: 
+	{
+		neural_network;
+		concept_gradient_learning_algorithm;
+		nrel_local_function_minimum
+	};; 
+<= nrel_sc_text_translation: ... 
+		(*
+			->rrel_example:
+			[<b>Математическая модель</b> — это приближённое описание какого-либо <b><sc_element sys_idtf="class">класса</b> явлений внешнего мира, выраженное математическими <b><sc_element sys_idtf="concept_symbol">символами</b>.](*<- lang_ru;; =>nrel_format: format_html;;*);;
+		*);;
+*);;
+
+
+mathematical_model<- rrel_key_sc_element: ...
+(*
+ => nrel_main_idtf:
+[Утв. (математическая модель)] (* <- lang_ru;; *);;
+ <= nrel_sc_text_translation: ...
+	 (*
+    	  -> rrel_example:
+		[<b>Математическая модель</b> предназначена предсказать <b><sc_element sys_idtf="behavioral_action">поведение </b> реального<b><sc_element sys_idtf="object"> объекта</b>, но всегда представляет собой ту или иную степень его <b><sc_element sys_idtf="concept_idealization">идеализации</b>.](*<- lang_ru;; =>nrel_format: format_html;;*);;
+	*);;
+=> nrel_using_constants: 
+	{
+		behavioral_action;
+		object;
+		concept_idealization
+	};;
+*);;
+
+
+mathematical_model<-rrel_explored_concept: section_subject_domain_mathematics;;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
