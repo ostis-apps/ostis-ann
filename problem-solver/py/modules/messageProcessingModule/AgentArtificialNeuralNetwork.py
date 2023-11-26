@@ -1,19 +1,22 @@
 from sc_client.models import ScAddr
 import sc_kpm
+from sc_kpm import ScAgentClassic
+from sc_kpm.sc_result import ScResult
 import numpy as np
 from sc_client.models import *
 from sc_client.constants import sc_types
 from sc_client.client import *
 from typing import List, Union
-from FNN import FNN
-from AgentTraining import AgentTraining
+from .FNN import FNN
+from .AgentTraining import AgentTraining
 
 
-class AgentArtificialNeuralNetwork:
+class AgentArtificialNeuralNetwork(ScAgentClassic):
     def __init__(self) -> None:
-        self.__data_set_name = "training_set_1"
+        print('Created Agent')
+        super().__init__("action_solve_artificial_neural_network")
+        self.__ann_name: str = ''
         self.__train_flag: bool = True
-        self.run()
 
     def run(self) -> None:
         self._network: ScAddr = self.__find_network()
@@ -30,6 +33,29 @@ class AgentArtificialNeuralNetwork:
         self._activation_functions: List[str] = self.__get_activation_functions()
         if self.__train_flag:
             self.__train_model()
+
+    def on_event(self, event_element: ScAddr, event_edge: ScAddr, action_element: ScAddr) -> ScResult:
+        template = ScTemplate()
+        template.triple_with_relation(
+            action_element,
+            sc_types.EDGE_ACCESS_VAR_POS_PERM,
+            sc_types.NODE_VAR,
+            sc_types.EDGE_ACCESS_VAR_POS_PERM,
+            "rrel_1"
+        )
+        result = template_search(template)
+        self.__ann_name: str = sc_kpm.utils.get_system_idtf(result[0][2])
+        template = ScTemplate()
+        template.triple_with_relation(
+            action_element,
+            sc_types.EDGE_ACCESS_VAR_POS_PERM,
+            sc_types.NODE_VAR,
+            sc_types.EDGE_ACCESS_VAR_POS_PERM,
+            "rrel_2")
+        result = template_search(template)
+        self.__data_set_name: str = sc_kpm.utils.get_system_idtf(result[0][2])
+        self.run()
+        return 
 
     def __train_model(self) -> None:
         hidden_layers_size = []
@@ -58,7 +84,7 @@ class AgentArtificialNeuralNetwork:
         print(fnn.output_values())
 
     def __find_network(self) -> ScAddr:
-        main_node = sc_kpm.ScKeynodes["concept_artificial_neural_network"]
+        main_node = sc_kpm.ScKeynodes[self.__ann_name]
         template = ScTemplate()
         template.triple(  # searching for ann structure
             main_node, sc_types.EDGE_ACCESS_VAR_POS_PERM, sc_types.NODE_VAR_STRUCT
