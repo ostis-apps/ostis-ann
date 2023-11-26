@@ -1,3 +1,4 @@
+import logging
 from sc_client.models import ScAddr
 import sc_kpm
 from sc_kpm import ScAgentClassic
@@ -10,31 +11,24 @@ from typing import List, Union
 from .FNN import FNN
 from .AgentTraining import AgentTraining
 
+logging.basicConfig(
+    level=logging.INFO, format="%(asctime)s | %(name)s | %(message)s", datefmt="[%d-%b-%y %H:%M:%S]"
+)
 
 class AgentArtificialNeuralNetwork(ScAgentClassic):
     def __init__(self) -> None:
-        print('Created Agent')
         super().__init__("action_solve_artificial_neural_network")
+        self.logger.info("Created AgentArtificialNeuralNetwork")
         self.__ann_name: str = ''
         self.__train_flag: bool = True
 
-    def run(self) -> None:
-        self._network: ScAddr = self.__find_network()
-        self._layers: List[ScAddr] = self.__find_layers()
-        self._input_neurons: List[ScAddr] = self.__get_input_neurons()
-        self._output_neurons: List[ScAddr] = self.__get_output_neurons()
-        self._hidden_layers: List[ScAddr] = self.__get_hidden_layers()
-        self._hidden_neurons: List[List[ScAddr]] = self.__get_neurons_hidden_layer()
-        self._weigths: List[np.ndarray[np.float64]] = []
-        self._weigths.append(self.__get_weigths_for_neurons(self._input_neurons))
-        for pack in self._hidden_neurons:
-            self._weigths.append(self.__get_weigths_for_neurons(pack))
-        self._input_values: np.ndarray[np.float64] = self.__get_input_values()
-        self._activation_functions: List[str] = self.__get_activation_functions()
-        if self.__train_flag:
-            self.__train_model()
-
     def on_event(self, event_element: ScAddr, event_edge: ScAddr, action_element: ScAddr) -> ScResult:
+        self.logger.info("AgentArtificialNeuralNetwork started")
+        result = self.run(action_element)
+        self.logger.info("AgentArtificialNeuralNetwork finished")
+        return result
+
+    def run(self, action_node: ScAddr) -> ScResult:
         template = ScTemplate()
         template.triple_with_relation(
             action_element,
@@ -54,8 +48,23 @@ class AgentArtificialNeuralNetwork(ScAgentClassic):
             "rrel_2")
         result = template_search(template)
         self.__data_set_name: str = sc_kpm.utils.get_system_idtf(result[0][2])
-        self.run()
-        return 
+
+        self._network: ScAddr = self.__find_network()
+        self._layers: List[ScAddr] = self.__find_layers()
+        self._input_neurons: List[ScAddr] = self.__get_input_neurons()
+        self._output_neurons: List[ScAddr] = self.__get_output_neurons()
+        self._hidden_layers: List[ScAddr] = self.__get_hidden_layers()
+        self._hidden_neurons: List[List[ScAddr]] = self.__get_neurons_hidden_layer()
+        self._weigths: List[np.ndarray[np.float64]] = []
+        self._weigths.append(self.__get_weigths_for_neurons(self._input_neurons))
+        for pack in self._hidden_neurons:
+            self._weigths.append(self.__get_weigths_for_neurons(pack))
+        self._input_values: np.ndarray[np.float64] = self.__get_input_values()
+        self._activation_functions: List[str] = self.__get_activation_functions()
+        if self.__train_flag:
+            self.__train_model()
+
+        return ScResult.OK
 
     def __train_model(self) -> None:
         hidden_layers_size = []
