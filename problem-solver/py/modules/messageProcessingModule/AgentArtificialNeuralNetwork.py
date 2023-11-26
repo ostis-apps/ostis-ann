@@ -31,9 +31,9 @@ class AgentArtificialNeuralNetwork(ScAgentClassic):
     def run(self, action_node: ScAddr) -> ScResult:
         template = ScTemplate()
         template.triple_with_relation(
-            action_element,
+            action_node,
             sc_types.EDGE_ACCESS_VAR_POS_PERM,
-            sc_types.NODE_VAR,
+            sc_types.NODE_VAR_CLASS,
             sc_types.EDGE_ACCESS_VAR_POS_PERM,
             "rrel_1"
         )
@@ -41,14 +41,13 @@ class AgentArtificialNeuralNetwork(ScAgentClassic):
         self.__ann_name: str = sc_kpm.utils.get_system_idtf(result[0][2])
         template = ScTemplate()
         template.triple_with_relation(
-            action_element,
+            action_node,
             sc_types.EDGE_ACCESS_VAR_POS_PERM,
             sc_types.NODE_VAR,
             sc_types.EDGE_ACCESS_VAR_POS_PERM,
             "rrel_2")
         result = template_search(template)
         self.__data_set_name: str = sc_kpm.utils.get_system_idtf(result[0][2])
-
         self._network: ScAddr = self.__find_network()
         self._layers: List[ScAddr] = self.__find_layers()
         self._input_neurons: List[ScAddr] = self.__get_input_neurons()
@@ -273,6 +272,7 @@ class AgentArtificialNeuralNetwork(ScAgentClassic):
                 sc_types.EDGE_ACCESS_VAR_POS_PERM,
                 sc_kpm.ScKeynodes["nrel_activation_function"],
             )
+            print(layer)
             activation_function_node = template_search(template)
             template = ScTemplate()
             template.triple(
