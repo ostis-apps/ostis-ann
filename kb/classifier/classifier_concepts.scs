@@ -1,0 +1,17 @@
+sc_node_not_relation->concept_product;;
+concept_product=>nrel_main_idtf:[product](* <-lang_en;; *);;
+concept_product=>nrel_main_idtf:[продукт](* <-lang_ru;; *);;
+
+sc_node_not_relation->concept_quality_product;;
+concept_quality_product=>nrel_main_idtf:[quality product](* <-lang_en;; *);;
+concept_quality_product=>nrel_main_idtf:[качественный продукт](* <-lang_ru;; *);;
+
+sc_node_not_relation->concept_poor_quality_product;;
+concept_poor_quality_product=>nrel_main_idtf:[poor quality product](* <-lang_en;; *);;
+concept_poor_quality_product=>nrel_main_idtf:[некачественный продукт](* <-lang_ru;; *);;
+
+concept_product <= nrel_subdividing:
+    {
+  		concept_quality_product;
+		concept_poor_quality_product
+	};;

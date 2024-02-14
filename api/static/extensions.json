@@ -1,3 +1,4 @@
 {
-    "sequence_prediction": ["txt"]
+    "sequence_prediction": ["txt"],
+    "product_quality_classifier": ["tsv"]
 }

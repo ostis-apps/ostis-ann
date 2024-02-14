@@ -1,0 +1,15 @@
+sc_node_norole_relation->nrel_uniformity;;
+nrel_uniformity=>nrel_main_idtf:[uniformity*](* <-lang_en;; *);;
+nrel_uniformity=>nrel_main_idtf:[однородность*](* <-lang_ru;; *);;
+
+sc_node_norole_relation->nrel_mass_fat_fraction;;
+nrel_mass_fat_fraction=>nrel_main_idtf:[mass fat fraction*](* <-lang_en;; *);;
+nrel_mass_fat_fraction=>nrel_main_idtf:[массовая доля жиров*](* <-lang_ru;; *);;
+
+sc_node_norole_relation->nrel_mass_protein_fraction;;
+nrel_mass_protein_fraction=>nrel_main_idtf:[mass protein fraction*](* <-lang_en;; *);;
+nrel_mass_protein_fraction=>nrel_main_idtf:[массовая доля белков*](* <-lang_ru;; *);;
+
+sc_node_norole_relation->nrel_has_mold;;
+nrel_has_mold=>nrel_main_idtf:[has mold*](* <-lang_en;; *);;
+nrel_has_mold=>nrel_main_idtf:[наличие плесени*](* <-lang_ru;; *);;
