@@ -3,9 +3,8 @@
 ## Установка
 
 ```sh
-git clone https://github.com/ostis-apps/nika
-cd nika
-git submodule update --init --recursive
+git clone https://github.com/ostis-apps/ostis-ann
+cd ostis-ann
 ./scripts/install_submodules.sh
 ./scripts/install_problem_solver_deps.sh
 ./scripts/install_interface_deps.sh
@@ -39,16 +38,15 @@ git submodule update --init --recursive
 ./scripts/run_sc_server.sh
 
 # Терминал 2
-./scripts/run_sc_web.sh
+./scripts/run_py_sc_server.sh
 
 # Терминал 3
-./scripts/run_interface.sh
+./scripts/run_sc_web.sh
 ```
 
-  Данные команды запустят 2 следующих web-интерфейса:
+  Данные команды запустят web-интерфейс:
 
 - sc-web - `localhost:8000`
-- диалоговый web-интерфейс - `localhost:3033`
 
 ## Устранение неполадок
 

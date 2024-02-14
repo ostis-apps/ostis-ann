@@ -3,9 +3,8 @@
 ## Installation
 
 ```sh
-git clone https://github.com/ostis-apps/nika
-cd nika
-git submodule update --init --recursive
+git clone https://github.com/ostis-apps/ostis-ann
+cd ostis-ann
 ./scripts/install_submodules.sh
 ./scripts/install_problem_solver_deps.sh
 ./scripts/install_interface_deps.sh
@@ -43,15 +42,11 @@ git submodule update --init --recursive
   
   # Terminal 3
   ./scripts/run_sc_web.sh
-  
-  # Terminal 4
-  ./scripts/run_interface.sh
   ```
 
-  This commands will launch 2 Web UIs on your machine:
+  This commands will launch UI on your machine:
 
 - sc-web - `localhost:8000`
-- dialogue web UI - `localhost:3033`
 
 ## Troubleshooting
 

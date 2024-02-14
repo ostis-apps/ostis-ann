@@ -9,8 +9,8 @@
 ## Установка
 
 ```sh
-git clone -c core.longpaths=true -c core.autocrlf=true https://github.com/ostis-apps/nika # для избежания проблем файловой системы Windows
-cd nika
+git clone -c core.longpaths=true -c core.autocrlf=true https://github.com/ostis-apps/ostis-ann # для избежания проблем файловой системы Windows
+cd ostis-ann
 git submodule update --init --recursive
 docker compose pull
 ```
@@ -46,7 +46,7 @@ docker compose pull
     **Решение**: убедитесь, что Ваш Git репозиторий сконфигурирован на совместимость конца строк UNIX
 
     ```sh
-    cd nika
+    cd ostis-ann
     git config --local core.autocrlf true
     ```
 
@@ -55,7 +55,7 @@ docker compose pull
     **Решение**: убедитесь, что у Вашего Git репозитория свойство конфигурации `longpaths` включено:
 
     ```sh
-    cd nika
+    cd ostis-ann
     git config --local core.longpaths true
     ```
 
@@ -71,4 +71,4 @@ docker compose pull
 
     **Решение 1**: Увеличение `start_period` в `docker-compose.yml` должно помочь.
 
-    **Решение 2**: Проверьте [список ошибок](https://github.com/ostis-apps/nika/issues), если Вашу ошибку ещё не публиковали, создайте новый отчёт об ошибке!
+    **Решение 2**: Проверьте [список ошибок](https://github.com/ostis-apps/ostis-ann/issues), если Вашу ошибку ещё не публиковали, создайте новый отчёт об ошибке!

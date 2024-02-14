@@ -1,7 +1,7 @@
 FROM python:3.11-slim as base
 
 USER root
-WORKDIR /nika/problem-solver
+WORKDIR /ostis-ann/problem-solver
 
 RUN apt-get update && apt-get install -y --no-install-recommends tini
 

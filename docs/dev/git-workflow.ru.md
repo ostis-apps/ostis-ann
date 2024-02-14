@@ -7,7 +7,7 @@
 Используйте ssh для клонирования репозитория:
 
 ```sh
-git clone git@github.com:ostis-apps/nika.git
+git clone git@github.com:ostis-apps/ostis-ann.git
 ```
 
 ## Ход работы

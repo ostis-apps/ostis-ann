@@ -9,8 +9,8 @@ We recommend using Docker Desktop on [macOS](https://docs.docker.com/desktop/ins
 ## Installation
 
 ```sh
-git clone -c core.longpaths=true -c core.autocrlf=true https://github.com/ostis-apps/nika # this avoids problems on Windows filesystems
-cd nika
+git clone -c core.longpaths=true -c core.autocrlf=true https://github.com/ostis-apps/ostis-ann # this avoids problems on Windows filesystems
+cd ostis-ann
 git submodule update --init --recursive
 docker compose pull
 ```
@@ -46,7 +46,7 @@ Windows-specific problems:
     **Solution**: please make sure your Git repo is configured to be compatible UNIX line endings
 
     ```sh
-    cd nika
+    cd ostis-ann
     git config --local core.autocrlf true
     ```
 
@@ -55,7 +55,7 @@ Windows-specific problems:
     **Solution**: please make sure your Git repo has `longpaths` config option enabled:
 
     ```sh
-    cd nika
+    cd ostis-ann
     git config --local core.longpaths true
     ```
 
@@ -71,4 +71,4 @@ Common issues:
 
     **Solution 1**: Increasing `start_period` in `docker-compose.yml` might help you.
     
-    **Solution 2**: Check [known issues](https://github.com/ostis-apps/nika/issues), and in case your problem is not reported yet, create a new one! 
+    **Solution 2**: Check [known issues](https://github.com/ostis-apps/ostis-ann/issues), and in case your problem is not reported yet, create a new one! 

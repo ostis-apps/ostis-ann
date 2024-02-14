@@ -66,7 +66,7 @@ sc_result MyModule::InitializeImpl()
 
 ### Logging
 
-You can change log mode and level in nika.ini configuration file.
+You can change log mode and level in ostis-ann.ini configuration file.
 
 ## sc-web
 

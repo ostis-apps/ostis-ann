@@ -1,10 +1,7 @@
 ui_start_sc_element
 => nrel_main_idtf: 
-    [База знаний NIKA]
+    [База знаний]
     (* <- lang_ru;; *);
 <= nrel_section_decomposition: {
-    section_subject_domain_of_intelligent_study_systems;
-    section_subject_domain_of_messages;
-    section_subject_domain_of_dialogues;
     section_subject_domain_actions_and_tasks
 };;

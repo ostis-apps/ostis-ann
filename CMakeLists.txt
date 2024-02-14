@@ -1,11 +1,11 @@
-project(nika)
-set(NIKA_ROOT ${CMAKE_CURRENT_LIST_DIR})
+project(ostis-ann)
+set(OSTIS_ANN_ROOT ${CMAKE_CURRENT_LIST_DIR})
 cmake_minimum_required(VERSION 2.8.12)
 
 set(PROBLEM_SOLVER_PATH "${CMAKE_CURRENT_LIST_DIR}/problem-solver")
 set(SC_MACHINE_PATH "${PROBLEM_SOLVER_PATH}/sc-machine")
 include("${SC_MACHINE_PATH}/CMakeLists.txt")
-project_version(NIKA_PROJECT "0.1.0")
+project_version(OSTIS_ANN_PROJECT "0.1.0")
 
 # platform doesn't support multi-extensions. Have to put project binaries to sc-machine extensions
 set(CMAKE_LIBRARY_OUTPUT_DIRECTORY ${SC_EXTENSIONS_DIRECTORY})

@@ -21,7 +21,7 @@ jobs:
 
       - name: Build the Docker images
         run: |
-          docker compose build py-sc-server nika-ui problem-solver
+          docker compose build py-sc-server problem-solver
 
       - name: Run Docker Compose
         run: |
