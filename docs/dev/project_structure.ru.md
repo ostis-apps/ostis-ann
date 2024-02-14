@@ -86,10 +86,6 @@
   ./scripts/build_problem_solver.sh -f -t
   ```
 
-### run_interface.sh
-
-Запуск интерфейса.
-
 ### install_project.sh
 
 Установка или обновление ostis-web-platform.

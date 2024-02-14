@@ -52,24 +52,6 @@ services:
     command:
       - "serve"
 
-  nika-ui:
-    image: ostis/nika-ui:0.1.0
-    build:
-      context: ./interface
-      dockerfile: ./Dockerfile
-    container_name: nika-ui
-    restart: unless-stopped
-    ports:
-      - "3033:8080"
-    networks:
-      - nika
-    environment:
-      - SOCKET_URL=ws://problem-solver:8090
-      - SC_URL=ws://problem-solver:8090
-      - SC_WEB_URL=http://web:8000
-    depends_on:
-      - web
-
   py-sc-server:
     image: ostis/nika-py-agents:0.1.0
     build:

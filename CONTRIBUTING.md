@@ -8,7 +8,6 @@ We use next commit scopes:
 
  - kb - knowledge base updates
  - solver - Problem Solver updates(C++ and Python agents)
- - client - web-client updates
 
 _**Update this docs via pull request for add new scope.**_
 
