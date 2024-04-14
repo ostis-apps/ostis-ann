@@ -4,11 +4,11 @@
 [submodule "sc-web"]
 	path = sc-web
 	url = https://github.com/ostis-ai/sc-web
-	branch = release/0.8.0
+	branch = 0.8.1-Unlock
 [submodule "problem-solver/sc-machine"]
 	path = problem-solver/sc-machine
 	url = https://github.com/ostis-ai/sc-machine
-	branch = release/0.8.0
+	branch = 0.9.0-Unlock
 [submodule "kb/ims.ostis.kb"]
 	path = kb/ims.ostis.kb
 	url = https://github.com/ostis-ai/ims.ostis.kb

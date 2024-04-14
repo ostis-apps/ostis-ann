@@ -18,7 +18,7 @@ NonAtomicActionInterpreter::NonAtomicActionInterpreter(ScMemoryContext * ms_cont
 void NonAtomicActionInterpreter::interpret(ScAddr const & nonAtomicActionAddr)
 {
   ScAddr decompositionTuple =
-      utils::IteratorUtils::getFirstByInRelation(context, nonAtomicActionAddr, Keynodes::nrel_decomposition_of_action);
+      utils::IteratorUtils::getAnyByInRelation(context, nonAtomicActionAddr, Keynodes::nrel_decomposition_of_action);
   ScAddr action = getFirstSubAction(decompositionTuple);
   while (action.IsValid())
   {
@@ -34,7 +34,7 @@ void NonAtomicActionInterpreter::interpret(ScAddr const & nonAtomicActionAddr)
 ScAddr NonAtomicActionInterpreter::getFirstSubAction(ScAddr const & decompositionTuple)
 {
   ScAddr firstAction =
-      utils::IteratorUtils::getFirstByOutRelation(context, decompositionTuple, scAgentsCommon::CoreKeynodes::rrel_1);
+      utils::IteratorUtils::getAnyByOutRelation(context, decompositionTuple, scAgentsCommon::CoreKeynodes::rrel_1);
   if (!firstAction.IsValid())
   {
     throw std::runtime_error("Non atomic action structure is incorrect. Failed to find first action.");
@@ -79,7 +79,7 @@ ScAddr NonAtomicActionInterpreter::getNextAction(ScAddr const & actionAddr)
 
 ScAddr NonAtomicActionInterpreter::getThenAction(ScAddr const & actionAddr)
 {
-  ScAddr nextAction = utils::IteratorUtils::getFirstByOutRelation(context, actionAddr, Keynodes::nrel_then);
+  ScAddr nextAction = utils::IteratorUtils::getAnyByOutRelation(context, actionAddr, Keynodes::nrel_then);
   if (!nextAction.IsValid())
   {
     SC_LOG_DEBUG("Action with nrel_then relation not found, searching for nrel_goto instead");
@@ -90,7 +90,7 @@ ScAddr NonAtomicActionInterpreter::getThenAction(ScAddr const & actionAddr)
 
 ScAddr NonAtomicActionInterpreter::getElseAction(ScAddr const & actionAddr)
 {
-  ScAddr nextAction = utils::IteratorUtils::getFirstByOutRelation(context, actionAddr, Keynodes::nrel_else);
+  ScAddr nextAction = utils::IteratorUtils::getAnyByOutRelation(context, actionAddr, Keynodes::nrel_else);
   if (!nextAction.IsValid())
   {
     SC_LOG_DEBUG("Action with nrel_else relation not found, searching for nrel_goto instead");
@@ -101,5 +101,5 @@ ScAddr NonAtomicActionInterpreter::getElseAction(ScAddr const & actionAddr)
 
 ScAddr NonAtomicActionInterpreter::getGoToAction(ScAddr const & actionAddr)
 {
-  return utils::IteratorUtils::getFirstByOutRelation(context, actionAddr, Keynodes::nrel_goto);
+  return utils::IteratorUtils::getAnyByOutRelation(context, actionAddr, Keynodes::nrel_goto);
 }
