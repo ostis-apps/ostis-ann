@@ -86,13 +86,13 @@
         <node type="node/const/relation" idtf="nrel_existence" shapeColor="0" id="106662224" parent="0" left="0" top="0" right="88" bottom="25" textColor="164" text_angle="0" text_font="Times New Roman [Arial]" font_size="10" x="977.062" y="263" haveBus="false">
             <content type="0" mime_type="" file_name=""/>
         </node>
-        <node type="node/const/asymmetry" idtf="" shapeColor="0" id="106663088" parent="0" x="882.039" y="-26.219" haveBus="true">
+        <node type="node/const/attribute" idtf="" shapeColor="0" id="106663088" parent="0" x="882.039" y="-26.219" haveBus="true">
             <content type="0" mime_type="" file_name=""/>
         </node>
         <node type="node/const/group" idtf="atomic_existence" shapeColor="0" id="106660208" parent="0" left="0" top="0" right="104" bottom="25" textColor="164" text_angle="0" text_font="Times New Roman [Arial]" font_size="10" x="1479.93" y="-34.826" haveBus="true">
             <content type="0" mime_type="" file_name=""/>
         </node>
-        <node type="node/const/attribute" idtf="nrel_then" shapeColor="0" id="106667984" parent="0" left="0" top="0" right="61" bottom="25" textColor="164" text_angle="0" text_font="Times New Roman [Arial]" font_size="10" x="912.06" y="291.5" haveBus="false">
+        <node type="node/const/relation" idtf="nrel_then" shapeColor="0" id="106667984" parent="0" left="0" top="0" right="61" bottom="25" textColor="164" text_angle="0" text_font="Times New Roman [Arial]" font_size="10" x="912.06" y="291.5" haveBus="false">
             <content type="0" mime_type="" file_name=""/>
         </node>
         <arc type="arc/const/pos" idtf="" shapeColor="0" id="151775088" parent="0" id_b="103927656" id_e="104976616" b_x="714.06" b_y="-196.5" e_x="1216.87" e_y="101.389" dotBBalance="0.226369" dotEBalance="0">

@@ -62,7 +62,7 @@
         <node type="node/const/general_node" idtf="statement_formal_neuron_with_a_synaptic_transformation_function" shapeColor="0" id="104866232" parent="0" left="0" top="0" right="392" bottom="25" textColor="164" text_angle="0" text_font="Times New Roman [Arial]" font_size="10" x="953.015" y="167.147" haveBus="false">
             <content type="0" mime_type="" file_name=""/>
         </node>
-        <node type="node/const/attribute" idtf="nrel_then" shapeColor="0" id="104861336" parent="0" left="0" top="0" right="61" bottom="25" textColor="164" text_angle="0" text_font="Times New Roman [Arial]" font_size="10" x="836.295" y="486.676" haveBus="false">
+        <node type="node/const/relation" idtf="nrel_then" shapeColor="0" id="104861336" parent="0" left="0" top="0" right="61" bottom="25" textColor="164" text_angle="0" text_font="Times New Roman [Arial]" font_size="10" x="836.295" y="486.676" haveBus="false">
             <content type="0" mime_type="" file_name=""/>
         </node>
         <node type="node/const/relation" idtf="nrel_generality" shapeColor="0" id="104866520" parent="0" left="0" top="0" right="93" bottom="25" textColor="164" text_angle="0" text_font="Times New Roman [Arial]" font_size="10" x="884.795" y="323.176" haveBus="false">
@@ -74,7 +74,7 @@
         <node type="node/const/attribute" idtf="rrel_main_key_sc_element" shapeColor="0" id="104862632" parent="0" left="0" top="0" right="158" bottom="25" textColor="164" text_angle="0" text_font="Times New Roman [Arial]" font_size="10" x="917.367" y="122.176" haveBus="false">
             <content type="0" mime_type="" file_name=""/>
         </node>
-        <node type="node/const/asymmetry" idtf="" shapeColor="0" id="104860472" parent="0" x="806.274" y="168.957" haveBus="true">
+        <node type="node/const/group" idtf="" shapeColor="0" id="104860472" parent="0" x="806.274" y="168.957" haveBus="true">
             <content type="0" mime_type="" file_name=""/>
         </node>
         <node type="node/const/relation" idtf="nrel_existence" shapeColor="0" id="104862488" parent="0" left="0" top="0" right="88" bottom="25" textColor="164" text_angle="0" text_font="Times New Roman [Arial]" font_size="10" x="901.297" y="458.176" haveBus="false">

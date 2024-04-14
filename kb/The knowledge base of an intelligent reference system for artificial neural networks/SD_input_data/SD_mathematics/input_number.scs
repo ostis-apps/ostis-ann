@@ -1,0 +1,40 @@
+sc_node_not_relation->input_number;;
+
+
+
+input_number=> nrel_main_idtf: [входное число](* <- lang_ru;; *);;
+input_number=> nrel_main_idtf: [input number](* <- lang_en;; *);;
+definition ->...
+(*
+->rrel_key_sc_element: input_number;;
+<= nrel_sc_text_translation: ...(*->rrel_example:[Входное число - <b><sc_element sys_idtf="input_data">входные данные</b>,которые представляют собой число, или набор чисел , которые обрабатываются нейронной сетью .](*<-lang_ru;;=> nrel_format: format_html;;*);;*);;
+=> nrel_main_idtf: [Определение (входное число)](*<- lang_ru;;=> nrel_format: format_html;;*);;
+=> nrel_using_constants:
+{ 
+input_data;
+neural_network;
+nrel_process
+};;
+*);; 
+
+
+statement ->...
+(*
+->rrel_key_sc_element: input_number;;
+<= nrel_sc_text_translation: ...(*->rrel_example:[Обычно на вход нейронной сети подается несколько чисел или их последовательность.](*<-lang_ru;;=> nrel_format: format_html;;*);;*);;
+=> nrel_main_idtf: [Утверждение(входное число)](*<- lang_ru;;=> nrel_format: format_html;;*);;
+=> nrel_using_constants:
+{
+neural_network
+};;
+*);;
+
+sc_node_not_relation->4;;
+4<-rrel_example:input_number;;
+number->4;;
+input_data=>nrel_inclusion:input_number;;
+input_number<-rrel_explored_concept: section_subject_domain_of_input_mathematics_data;;
+
+
+
+

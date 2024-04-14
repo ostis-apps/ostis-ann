@@ -45,36 +45,3 @@ negative_value
 };;
 *);;
 
-s-> rrel_example:
-[*
-raster->A;;
-raster->B;;
-weighted_amont->...
-(*
-<=nrel_sum_of_numbers:
-	{
-	...
-		(*
-		<=nrel_multiplication_of_numbers:
-			{
-			A;
-			...
-				(*
-					<-weight;;
-				*)
-			};;
-		*);
-	...
-		(*
-		<=nrel_multiplication_of_numbers:
-			{
-			B;
-			...
-				(*
-					<-weight;;
-				*)
-			};;
-		*)
-	};;
-*);;
-*];;

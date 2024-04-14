@@ -1,0 +1,45 @@
+sc_node_not_relation->input_statistic;;
+
+
+
+input_statistic=> nrel_main_idtf: [входные статистические данные](* <- lang_ru;; *);;
+input_statistic=> nrel_main_idtf: [input statistic data](* <- lang_en;; *);;
+input_statistic=> nrel_idtf: [входная статистика](* <- lang_ru;; *);;
+input_statistic=> nrel_idtf: [input statistic](* <- lang_en;; *);;
+definition ->...
+(*
+->rrel_key_sc_element: input_statistic;;
+<= nrel_sc_text_translation: ...(*->rrel_example:[Статические данные - это собранная информация о чем-либо,переданная на <b><sc_element sys_idtf="input_data">вход</b> нейронной сети.](*<-lang_ru;;=> nrel_format: format_html;;*);;*);;
+=> nrel_main_idtf: [Определение (входные статистические данные)](*<- lang_ru;;=> nrel_format: format_html;;*);;
+=> nrel_using_constants:
+{ 
+data;
+input_data;
+neural_network
+};;
+*);; 
+
+
+statement ->...
+(*
+->rrel_key_sc_element: input_statistic;;
+<= nrel_sc_text_translation: ...(*->rrel_example:[Статистика,переданная на <b><sc_element sys_idtf="input_data">вход</b> нейронной сети используется для обработки и последующего принятия решений на её основе.](*<-lang_ru;;=> nrel_format: format_html;;*);;*);;
+=> nrel_main_idtf: [Утверждение(входные статистические данные)](*<- lang_ru;;=> nrel_format: format_html;;*);;
+=> nrel_using_constants:
+{
+neural_network;
+input_data
+};;	
+*);;
+illustration -> ...
+(*
+->rrel_key_sc_element: input_statistic;;
+<= nrel_sc_text_translation: ...(*->"file://images/input_statistic.png";;*);;
+=> nrel_main_idtf: [Рисунок(входные статистические данные)](*<- lang_ru;;*);;
+*);;
+input_data=>nrel_inclusion:input_statistic;;
+input_statistic<-rrel_explored_concept: section_subject_domain_of_input_video_data;;
+
+
+
+

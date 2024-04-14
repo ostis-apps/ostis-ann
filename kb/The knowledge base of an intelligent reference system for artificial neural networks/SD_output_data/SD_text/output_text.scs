@@ -1,0 +1,43 @@
+sc_node_not_relation->output_text;;
+
+
+output_text=> nrel_main_idtf: [выходной текст](* <- lang_ru;; *);;
+output_text=> nrel_main_idtf: [output text](* <- lang_en;; *);;
+definition ->...
+(*
+->rrel_key_sc_element: output_text;;
+<= nrel_sc_text_translation: ...(*->rrel_example:[Текст - <b><sc_element sys_idtf="output_data"> выходные данные</b>,которые нейронная сеть передаёт в результате работы.](*<-lang_ru;;=> nrel_format: format_html;;*);;*);;
+=> nrel_main_idtf: [Определение (выходной текст)](*<- lang_ru;;=> nrel_format: format_html;;*);;
+=> nrel_using_constants:
+{ 
+output_data;
+neural_network
+};;
+*);; 
+
+
+statement ->...
+(*
+->rrel_key_sc_element: output_text;;
+<= nrel_sc_text_translation: ...(*->rrel_example:[Выходной текст может быть обработанным <b><sc_element sys_idtf="input_text">входным текстом</b>  или созданным с нуля текстом,после обучения нейронной сети.](*<-lang_ru;;=> nrel_format: format_html;;*);;*);;
+=> nrel_main_idtf: [Утверждение(выходной текст)](*<- lang_ru;;=> nrel_format: format_html;;*);;
+=> nrel_using_constants:
+{
+nrel_process;
+input_text;
+nrel_learning;
+neural_network
+};;
+*);;
+illustration -> ...
+(*
+->rrel_key_sc_element: output_text;;
+<= nrel_sc_text_translation: ...(*->"file://images/output_text.png";;*);;
+=> nrel_main_idtf: [Рисунок(выходной текст)](*<- lang_ru;;*);;
+*);;
+output_data=>nrel_inclusion:output_text;;
+output_text<-rrel_explored_concept: section_subject_domain_of_output_text_data;;
+
+
+
+

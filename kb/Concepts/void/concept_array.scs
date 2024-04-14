@@ -15,7 +15,7 @@ data_structure;
 array_element;
 nrel_store
 };;
-*);; 
+*);
 
 <-rrel_key_sc_element: ...
 (*
@@ -26,7 +26,7 @@ nrel_store
 data_structure;
 arbitrary_access
 };;
-*);;
+*);
 
 <-rrel_key_sc_element:...
 (*
@@ -39,5 +39,5 @@ nrel_dimension
 };;
 *);
 
-->rrel_example:vector;;
+->rrel_example:vector;
 =>nrel_inclusion:data_structure;;

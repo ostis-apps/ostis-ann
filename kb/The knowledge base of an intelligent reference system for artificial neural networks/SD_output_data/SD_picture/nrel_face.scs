@@ -1,0 +1,62 @@
+sc_node_norole_relation->nrel_output_face;;
+
+
+nrel_output_face=> nrel_main_idtf: [выходное изображение лица*](* <- lang_ru;; *);;
+nrel_output_face=> nrel_main_idtf: [output face*](* <- lang_en;; *);;
+definition ->...
+(*
+->rrel_key_sc_element: nrel_output_face;;
+<= nrel_sc_text_translation: ...(*->rrel_example:[Выходное изображение лица - <b><sc_element sys_idtf="output_data">выходные данные</b> нейронной сети,представляющие собой обработанное или созданное изображение лица человека .](*<-lang_ru;;=> nrel_format: format_html;;*);;*);;
+=> nrel_main_idtf: [Определение (выходное изображение лица*)](*<- lang_ru;;=> nrel_format: format_html;;*);;
+=> nrel_using_constants:
+{ 
+output_data;
+neural_network
+};;
+*);; 
+
+
+statement ->...
+(*
+->rrel_key_sc_element: nrel_output_face;;
+<= nrel_sc_text_translation: ...(*->rrel_example:[С помощью нейронных сетей, <b><sc_element sys_idtf="output_data"> выпускающих</b> изображение лица сегодня создаются различные deep fake.](*<-lang_ru;;=> nrel_format: format_html;;*);;*);;
+=> nrel_main_idtf: [Утверждение(выходное изображение лица*)](*<- lang_ru;;=> nrel_format: format_html;;*);;
+=> nrel_using_constants:
+{
+output_data;
+neural_network
+};;
+*);;
+
+oriented_relation -> nrel_output_face;;
+antireflexive_relation -> nrel_output_face;; 
+antitransitive_relation -> nrel_output_face;;
+antisymmetric_relation -> nrel_output_face;;
+
+
+nrel_output_face => nrel_first_domain:neural_network;;
+nrel_output_face => nrel_second_domain: output_picture;;
+..union<=nrel_combination:
+{
+neural_network;
+output_picture
+};;
+nrel_output_face => nrel_definitional_domain:..union;; 
+
+arity->arity_2;;
+arity_2=>nrel_measurement:2;;
+arity_2->nrel_output_face;;
+number->2;;
+
+
+illustration -> ...
+(*
+->rrel_key_sc_element: nrel_output_face;;
+<= nrel_sc_text_translation: ...(*->"file://images/output_face.png";;*);;
+=> nrel_main_idtf: [Рисунок(выходное изображение лица*)](*<- lang_ru;;*);;
+*);;
+output_face<-rrel_explored_concept: section_subject_domain_of_output_picture_data;;
+
+
+
+

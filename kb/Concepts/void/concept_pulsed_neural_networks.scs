@@ -1,6 +1,6 @@
 concept_pulsed_neural_networks<-sc_node_not_relation;
 
-p=>nrel_main_idtf:
+=>nrel_main_idtf:
 [импульсная нейронная сеть](*<-lang_ru;;*);
 [pulsed neural networks](*<-lang_en;;*);
 
