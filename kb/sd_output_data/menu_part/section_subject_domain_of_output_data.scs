@@ -1,0 +1,65 @@
+section_subject_domain_of_output_data
+=> nrel_main_idtf: 
+    [Раздел. Предметная область выходных данных искусственных нейронных сетей](* <- lang_ru;; *);
+=> nrel_idtf: 
+	[Subject domain of output data](*<- lang_en;;*);
+
+<- not_enough_formed_structure;
+<- non_atomic_section;
+
+<= nrel_section_decomposition:
+{
+	section_subject_domain_of_output_mathematics_data//1
+	(*
+	=> nrel_section_base_order: 
+		section_subject_domain_of_output_picture_data;;//2
+	*);
+
+	section_subject_domain_of_output_picture_data
+	(*
+	=> nrel_section_base_order:
+		section_subject_domain_of_output_text_data;;//3
+	*);
+	
+	section_subject_domain_of_output_text_data
+	(*
+	=> nrel_section_base_order:
+		section_subject_domain_of_output_sound_data;;//7
+	*);
+
+	section_subject_domain_of_output_sound_data
+	(*
+	=> nrel_section_base_order:
+		subject_domain_of_output_video_data;;//8
+	*);
+
+	section_subject_domain_of_output_video_data	
+	
+};
+
+-> rrel_key_sc_element: subject_domain_of_artificial_neural_networks;;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

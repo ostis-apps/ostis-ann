@@ -1,0 +1,56 @@
+sc_node_norole_relation->nrel_output_channel;;
+
+nrel_output_channel=> nrel_main_idtf: [выходной канал*](*<- lang_ru;;*);;
+nrel_output_channel=> nrel_main_idtf: [output channel*](*<- lang_en;;*);;
+definition ->... 
+(*
+->rrel_key_sc_element: nrel_output_channel;;
+<= nrel_sc_text_translation: ...(*->rrel_example:[Выходной канал - канал <b><sc_element sys_idtf="neuron">нейрона</b> , по которому он передаёт обработанные данные.](*<-lang_ru;;=> nrel_format: format_html;;*);;*);;
+=> nrel_main_idtf: [Определение (выходной канал*)](*<- lang_ru;;=> nrel_format: format_html;;*);;
+=> nrel_using_constants:
+{
+neuron;
+data
+};;
+*);;
+
+statement ->...
+(*
+->rrel_key_sc_element:nrel_output_channel;;
+<= nrel_sc_text_translation: ...(*->rrel_example:[В <b><sc_element sys_idtf="neuron">нейроне</b> присутствуют несколько выходных каналов,из которых даннные передаются в другие <b><sc_element sys_idtf="neuron">нейроны</b>  или поступают на <b><sc_element sys_idtf="output">выход</b>  нейронной сети.](*<-lang_ru;;=> nrel_format: format_html;;*);;*);;
+=> nrel_main_idtf: [Утверждение(выходной канал*)](*<- lang_ru;;=> nrel_format: format_html;;*);;
+=> nrel_using_constants:
+{ 
+neuron;
+neural_network
+};;
+*);;
+
+
+
+oriented_relation -> nrel_output_channel;;
+antireflexive_relation -> nrel_output_channel;; 
+antitransitive_relation -> nrel_output_channel;;
+antisymmetric_relation -> nrel_output_channel;;
+
+
+nrel_output_channel => nrel_first_domain:neuron;;
+nrel_output_channel => nrel_second_domain: channel;;
+..union<=nrel_combination:
+{
+neuron;
+channel
+};;
+nrel_output_channel => nrel_definitional_domain:..union;; 
+
+arity->arity_2;;
+arity_2=>nrel_measurement:2;;
+arity_2->nrel_output_channel;;
+number->2;;
+
+formal_neuron=>nrel_output_channel:first_output_channel;;
+nrel_output_channel<-rrel_explored_concept: section_subject_domain_of_output_mathematics_data;;
+
+
+
+

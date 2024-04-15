@@ -23,12 +23,12 @@ SC_AGENT_IMPLEMENTATION(NonAtomicActionInterpreterAgent)
   try
   {
     ScAddr nonAtomicActionTemplateAddr =
-        utils::IteratorUtils::getFirstByOutRelation(&m_memoryCtx, actionAddr, CoreKeynodes::rrel_1);
+        utils::IteratorUtils::getAnyByOutRelation(&m_memoryCtx, actionAddr, CoreKeynodes::rrel_1);
     if (!nonAtomicActionTemplateAddr.IsValid())
     {
       throw std::runtime_error("Action params are not formed correctly.");
     }
-    ScAddr argumentsSet = utils::IteratorUtils::getFirstByOutRelation(&m_memoryCtx, actionAddr, CoreKeynodes::rrel_2);
+    ScAddr argumentsSet = utils::IteratorUtils::getAnyByOutRelation(&m_memoryCtx, actionAddr, CoreKeynodes::rrel_2);
 
     ScTemplateParams templateParams = createTemplateParams(nonAtomicActionTemplateAddr, argumentsSet);
     nonAtomicActionAddr = replaceNonAtomicAction(nonAtomicActionTemplateAddr, templateParams);
@@ -81,7 +81,7 @@ void NonAtomicActionInterpreterAgent::generateNonAtomicActionTemplate(
 ScAddr NonAtomicActionInterpreterAgent::getTemplateKeyElement(ScAddr const & templateAddr)
 {
   ScAddr templateKeyElement =
-      utils::IteratorUtils::getFirstByOutRelation(&m_memoryCtx, templateAddr, CoreKeynodes::rrel_key_sc_element);
+      utils::IteratorUtils::getAnyByOutRelation(&m_memoryCtx, templateAddr, CoreKeynodes::rrel_key_sc_element);
 
   if (!templateKeyElement.IsValid())
   {
@@ -107,7 +107,7 @@ ScTemplateParams NonAtomicActionInterpreterAgent::createTemplateParams(
       {
         break;
       }
-      ScAddr argument = utils::IteratorUtils::getFirstByOutRelation(&m_memoryCtx, argumentsSet, role);
+      ScAddr argument = utils::IteratorUtils::getAnyByOutRelation(&m_memoryCtx, argumentsSet, role);
       if (!argument.IsValid())
       {
         break;

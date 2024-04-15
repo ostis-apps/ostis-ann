@@ -1,0 +1,82 @@
+space<-sc_node_not_relation;;
+
+space=>nrel_main_idtf:
+[пространство](*<-lang_ru;;*);
+[space](*<-lang_en;;*);;
+
+
+nrel_inclusion->(math_concept=>space);;
+
+space<- rrel_key_sc_element: ...
+(*
+<- definition;;
+=> nrel_main_idtf:
+      [Опр. (пространство)] (* <- lang_ru;; *);;
+=> nrel_using_constants: 
+	{
+		set;
+		point;
+		relation
+	};; 
+<= nrel_sc_text_translation: ... 
+		(*
+			->rrel_example:
+			[Пространство - это <b><sc_element sys_idtf="set">множество</b> <b><sc_element sys_idtf="point">точек</b>, связанных неким отношением.](*<- lang_ru;;=>nrel_format: format_html;;*);;
+		*);;
+*);;
+
+
+space<- rrel_key_sc_element: ... 
+(*
+ => nrel_main_idtf:
+[Утв. 1 о пространстве] (* <- lang_ru;; *);;
+ <= nrel_sc_text_translation: ...
+	 (*
+    	  -> rrel_example:
+		[Чаще всего <b><sc_element sys_idtf="nrel_using">используют</b> <b><sc_element sys_idtf="Euclid">евклидово</b> пространство](*<-lang_ru;;=>nrel_format: format_html;;*);;
+	*);;
+=> nrel_using_constants: 
+{
+Euclid;
+nrel_using
+};;
+*);;
+
+space-> rrel_example:
+[*
+spase->
+[*
+set->point;;
+*];;
+*];;
+
+space<-rrel_explored_concept: section_subject_domain_mathematics;;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

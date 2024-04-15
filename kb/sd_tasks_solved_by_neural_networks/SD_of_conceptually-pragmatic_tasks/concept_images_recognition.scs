@@ -1,0 +1,49 @@
+concept_images_recognition
+<-sc_node_not_relation;
+<=nrel_inclusion:concept_conceptually_pragmatic_tasks;
+
+=>nrel_main_idtf:
+[распознование изображений](*<-lang_ru;;*);
+[images recognition](*<-lang_en;;*);
+
+<- rrel_key_sc_element: ...
+(*
+<- definition;;
+=> nrel_main_idtf:
+      [Опр. (распознование изображений)] (* <- lang_ru;; *);;
+=> nrel_using_constants: 
+	{
+		concept_classification_problem;
+		symptom;
+		process;
+		signal
+	};; 
+<= nrel_sc_text_translation: ... 
+		(*
+			->rrel_example:
+			[Распознование изображений - это <b><sc_element sys_idtf="concept_classification_problem">задача классификации</b> и идефикации предметов, явлений, <b><sc_element sys_idtf="process">процессов</b>, <b><sc_element sys_idtf="signal">сигналов</b> и ситуаций которые характеризуются конечным набором некоторых свойств и <b><sc_element sys_idtf="symptom">признаков</b>.](*<- lang_ru;; =>nrel_format: format_html;;*);;
+		*);;
+*);
+
+
+<- rrel_key_sc_element: ... 
+(*
+ => nrel_main_idtf:
+[Утв. 1 о распозновании изображений.] (* <- lang_ru;; *);;
+ <= nrel_sc_text_translation: ...
+	 (*
+    	  -> rrel_example:
+		[Распознование изображений одна из самых распрастранённых <b><sc_element sys_idtf="task">задач</b> решаемых при помощи <b><sc_element sys_idtf="concept_neural_network_in_graphical_representation">инс</b>.](*<-lang_ru;; =>nrel_format: format_html;;*);;
+	*);;
+=> nrel_using_constants: 
+{
+task;
+concept_neural_network_in_graphical_representation
+};;
+*);
+
+<-rrel_explored_concept: section_subject_domain_of_conceptually_pragmatic_tasks;;
+
+
+
+

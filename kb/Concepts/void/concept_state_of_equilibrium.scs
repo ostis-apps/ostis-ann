@@ -1,0 +1,36 @@
+concept_state_of_equilibrium<-sc_node_not_relation;
+
+	=>nrel_main_idtf:
+	[состояние равновесия]
+	(* <- lang_ru;; *);
+	[state of equilibrium]
+	(* <- lang_en;; *);
+	
+///////////////////////////////////////////////////////////////////////////
+	<-rrel_key_sc_element: 
+	...
+		(*
+			<-definition;;
+			<=nrel_sc_text_translation:...
+			(*
+				-> rrel_example:
+				[<p>				
+				<b>Состояние равновесия</b>  - неизмеряемый параметр, который характеризует состояние сети, 
+				при котором <sc_element sys_idtf = "synaptic_transformation_function">функция синаптического преобразования</sc_element> 
+				<sc_element sys_idtf = "concept_neuron_node">нейронных элементов</sc_element> в процессе обработки перестают изменяться.
+				</p>] 
+				(*
+				<-lang_ru;;
+				=> nrel_format: format_html;;
+				*);;
+			*);;
+		=>nrel_main_idtf:[Опр. (состояние равновесия)](* <-lang_ru;; => nrel_format: format_html;;*);;
+		<=nrel_using_constants:...
+			(*
+				->immeasurable_parameter;synaptic_transformation_function;network_state;;
+			*);;
+		*);
+		
+<-immeasurable_parameter;
+
+<-rrel_explored_concept:subjdomain_parameters_and_values;;

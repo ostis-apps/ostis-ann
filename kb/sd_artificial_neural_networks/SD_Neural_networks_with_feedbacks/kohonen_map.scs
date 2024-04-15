@@ -1,0 +1,72 @@
+kohonen_map<-sc_node_not_relation;;
+
+kohonen_map=>nrel_main_idtf:
+[карта Кохонена](*<-lang_ru;;*);
+[kohonen map](*<-lang_en;;*);;
+
+nrel_inclusion->(kohonen_network=>kohonen_map);;
+
+angle<- rrel_key_sc_element: ...
+(*
+<- definition;;
+=> nrel_main_idtf:
+      [Опр. (карта Кохонена)] (* <- lang_ru;; *);;
+=> nrel_using_constants: 
+	{
+		learning_process;
+		visualization;
+		clustering
+	};; 
+<= nrel_sc_text_translation: ... 
+		(*
+			->rrel_example:
+			[карта Кохонена - нейронная сеть с обучением без учителя, выполняющая задачу визуализации и кластеризации.](*<- lang_ru;;*);;
+		*);;
+*);;
+
+
+kohonen_map<- rrel_key_sc_element: ... 
+(*
+ => nrel_main_idtf:
+[Утв. 1 об картe Кохонена] (* <- lang_ru;; *);;
+ <= nrel_sc_text_translation: ...
+	 (*
+    	  -> rrel_example:
+		[Является методом проецирования многомерного пространства в пространство с более низкой размерностью.](*<-lang_ru;;*);;
+	*);;
+=> nrel_using_constants: 
+{
+rrel_linear_space;
+dimension
+};;
+*);;
+
+kohonen_map<-rrel_explored_concept: section_subject_domain_of_neural_networks_with_feedbacks;;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

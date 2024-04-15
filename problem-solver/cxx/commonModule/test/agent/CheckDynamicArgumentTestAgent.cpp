@@ -27,7 +27,7 @@ SC_AGENT_IMPLEMENTATION(CheckDynamicArgumentTestAgent)
   }
 
   ScTemplate scTemplate;
-  scTemplate.TripleWithRelation(
+  scTemplate.Quintuple(
         actionAddr,
         ScType::EdgeAccessVarPosPerm,
         ScType::NodeVar >> "_dynamic_argument",

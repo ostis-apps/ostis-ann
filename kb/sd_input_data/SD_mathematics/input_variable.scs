@@ -1,0 +1,38 @@
+sc_node_not_relation->input_variable;;
+
+
+input_variable=> nrel_main_idtf: [входная переменная](* <- lang_ru;; *);;
+input_variable=> nrel_main_idtf: [input variable](* <- lang_en;; *);;
+definition ->...
+(*
+->rrel_key_sc_element: input_variable;;
+<= nrel_sc_text_translation: ...(*->rrel_example:[Входная переменная - переменная содержащая различные значения и поступающая на <b><sc_element sys_idtf="input_data">вход</b> нейронной сети.](*<-lang_ru;;=> nrel_format: format_html;;*);;*);;
+=> nrel_main_idtf: [Определение (входная переменная)](*<- lang_ru;;=> nrel_format: format_html;;*);;
+=> nrel_using_constants:
+{ 
+input_data;
+neural_network;
+variable
+};;
+*);; 
+
+
+statement ->...
+(*
+->rrel_key_sc_element: input_variable;;
+<= nrel_sc_text_translation: ...(*->rrel_example:[Переменная может содержать различные значения,в зависимости от применения нейронной сети.](*<-lang_ru;;=> nrel_format: format_html;;*);;*);;
+=> nrel_main_idtf: [Утверждение(входная переменная)](*<- lang_ru;;=> nrel_format: format_html;;*);;
+=> nrel_using_constants:
+{
+neural_network;
+variable
+};;
+*);;
+
+x<-rrel_example:input_variable;;
+input_data=>nrel_inclusion:input_variable;;
+input_variable<-rrel_explored_concept: section_subject_domain_of_input_mathematics_data;;
+
+
+
+

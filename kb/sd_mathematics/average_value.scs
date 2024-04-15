@@ -1,0 +1,84 @@
+average_value<-sc_node_not_relation;;
+
+average_value=>nrel_main_idtf:
+[среднее значение](*<-lang_ru;;*);
+[average_value](*<-lang_en;;*);;
+average_value=>nrel_idtf:
+[средняя величина](*<-lang_ru;;*);;
+
+
+nrel_inclusion->(math_concept=>average_value);;
+
+average_value<- rrel_key_sc_element: ...
+(*
+<- definition;;
+=> nrel_main_idtf:
+      [Опр. (среднее значение)] (* <- lang_ru;; *);;
+=> nrel_using_constants: 
+	{
+		set;
+		number;
+		max_value;
+		symptom;
+		min_value
+	};; 
+<= nrel_sc_text_translation: ... 
+		(*
+			->rrel_example:
+			[Среднее значение -<b><sc_element sys_idtf="symptom"> числовая характеристика</b> <b><sc_element sys_idtf="set"> множества</b> <b><sc_element sys_idtf="number"> чисел</b>: некоторое число, заключённое между <b><sc_element sys_idtf="min_value"> наименьшим</b> и <b><sc_element sys_idtf="max_value"> наибольшим</b> из их значений.](*<- lang_ru;; =>nrel_format: format_html;;*);;
+		*);;
+*);;
+
+
+average_value<- rrel_key_sc_element: ... 
+(*
+ => nrel_main_idtf:
+[Утв. 1 о среднем значении] (* <- lang_ru;; *);;
+ <= nrel_sc_text_translation: ...
+	 (*
+    	  -> rrel_example:
+		[Среднее арифмитическое - это <b><sc_element sys_idtf="number"> число</b> равное <b><sc_element sys_idtf="nrel_sum_of_numbers"> сумме</b> двух <b><sc_element sys_idtf="number"> чисел</b> делённой на два.](*<-lang_ru;;=>nrel_format: format_html;;*);;
+	*);;
+=> nrel_using_constants: 
+{
+number;
+nrel_sum_of_numbers;
+nrel_multiplication_of_numbers
+};;
+*);;
+
+average_value-> rrel_example:
+[*
+average_value->a;;
+*];;
+average_value<-rrel_explored_concept: section_subject_domain_mathematics;;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

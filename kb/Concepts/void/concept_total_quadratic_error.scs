@@ -1,0 +1,40 @@
+cohcept_total_quadratic_error<-sc_node_not_relation;
+
+=>nrel_main_idtf:
+[суммарная квадратичная ошибка](*<-lang_ru;;*);
+[total_quadratic_error](*<-lang_en;;*);
+
+<=nrel_inclusion:error;
+
+<- rrel_key_sc_element: ...
+(*
+<- definition;;
+=> nrel_main_idtf:
+      [Опр. (суммарная квадратичная ошибка)] (* <- lang_ru;; *);;
+=> nrel_using_constants: 
+	{
+		error;
+		nrel_sum_of_numbers
+	};; 
+<= nrel_sc_text_translation: ... 
+		(*
+			->rrel_example:
+			[Суммарная квадратичная ошибка - погрешность результата измерений, состоящая из суммы случайных и неисключенных систематических погрешностей, принимаемых за случайные.](*<- lang_ru;;*);;
+		*);;
+*);
+
+
+<- rrel_key_sc_element: ... 
+(*
+ => nrel_main_idtf:
+[Утв. 1 об суммарной квадратичной ошибке] (* <- lang_ru;; *);;
+ <= nrel_sc_text_translation: ...
+	 (*
+    	  -> rrel_example:
+		[Вычисляется по формуле:](*<-lang_ru;;*);;
+	*);;
+=> nrel_using_constants: 
+{
+logical_formula
+};;
+*);;

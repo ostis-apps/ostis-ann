@@ -1,0 +1,59 @@
+section_subject_domain_of_relaxed_networks
+=> nrel_main_idtf: 
+	[Раздел. Предметная область релаксационных нейронных сетей]
+	(* <- lang_ru;;*);
+	[Section. Subject domain of relaxed networks]
+	(* <- lang_en;; *);
+
+<- not_enough_formed_structure;
+<- atomic_section;;
+
+section_subject_domain_of_relaxed_networks = [*
+                                               subject_domain_of_relaxed_networks
+                                                   => nrel_main_idtf:
+                                               	[Предметная область релаксационных нейронных сетей]
+                                               	(* 
+                                                       <- lang_ru;;
+                                               	*);
+                                               	[Subject domain of relaxation neural networks]
+                                               	(* 
+                                                       <- lang_en;;
+                                               	*);
+                                               <- subject_domain;
+                                               -> rrel_maximum_studied_object_class: 
+                                               	relaxed_neural_network;;
+                                               	
+                                               relaxed_neural_network
+                                               	<- sc_node_not_relation;
+                                               	=>nrel_main_idtf:
+                                               	[релаксационная нейронная сеть]
+                                               	(* <- lang_ru;;*);
+                                               	[relaxed neural network]
+                                               	(* <- lang_en;; *);;
+                                               
+                                               
+                                               
+                                               
+                                               
+                                               
+                                               
+                                               
+                                               
+                                               
+                                               
+                                               
+                                               
+
+*];;
+
+
+
+
+
+
+
+
+
+
+
+

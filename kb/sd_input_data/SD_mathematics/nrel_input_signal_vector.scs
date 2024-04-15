@@ -1,0 +1,85 @@
+nrel_input_signal_vector
+	<- sc_node_norole_relation;
+	=> nrel_main_idtf: [input signal vector*] (* <- lang_en;; *);
+	=> nrel_main_idtf: [вектор входного сигнала*] (* <- lang_ru;; *);;
+
+
+nrel_input_signal_vector => nrel_definitional_domain: ...
+	(*
+		<= nrel_combination: ...
+			(*
+				-> concept_neural_network_in_graphical_representation (* <= nrel_first_domain: nrel_input_signal_vector;; *);;
+				-> vector (* <= nrel_second_domain: nrel_input_signal_vector;; *);;
+			*);;
+	*);;
+
+
+nrel_input_signal_vector
+	<- binary_relation;
+	<- oriented_relation;
+	<- antireflexive_relation;
+	<- antisymmetric_relation;
+	<- antitransitive_relation;;
+
+
+definition -> ...
+	(*
+		=> nrel_main_idtf: [Опр.(вектор входного сигнала*)] (* <-lang_ru;; *);;
+		-> rrel_key_sc_element: nrel_input_signal_vector;;
+
+		<= nrel_using_constants: ...
+			(*
+				-> vector;;
+				-> concept_neuron_node;;
+				-> input_layer;;
+				-> concept_neural_network_in_graphical_representation;;
+			*);;
+
+		<= nrel_sc_text_translation: ...
+			(*
+				-> [Вектором входного сигнала нейронной сети называется векториз n координат, где n - количество нейронных узлов на входном слое, а i-ая (i = 1,2,3,...,n) из координат подается на вход i-ому нейронному узлу данного слоя] (* <- lang_ru;; *);;
+			*);;
+	*);;
+
+
+affirmation -> ...
+	(*
+		-> rrel_key_sc_element: nrel_input_signal_vector;;
+
+		<= nrel_sc_text_translation: ...
+			(*
+				-> [Вектор входного сигнала эквивалентен матрице весовых коэффициентов входного слоя] (* <- lang_ru;; *);;
+			*);;
+
+		=> nrel_main_idtf: [Утв.(вектор входного сигнала*, эквиваленция*, матрица весовых коэффициентов*, входной слой*)] (* <- lang_ru;; *);;
+	*);;
+
+nrel_input_signal_vector<-rrel_explored_concept: section_subject_domain_of_input_mathematics_data;;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

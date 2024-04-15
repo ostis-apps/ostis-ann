@@ -1,0 +1,86 @@
+hyperplane<-sc_node_not_relation;;
+
+hyperplane=>nrel_main_idtf:
+[гиперплоскость](*<-lang_ru;;*);
+[hyperplane](*<-lang_en;;*);;
+hyperplane=>nrel_idtf:
+[подпространство](*<-lang_ru;;*);;
+
+
+nrel_inclusion->(math_concept=>hyperplane);;
+
+hyperplane<- rrel_key_sc_element: ...
+(*
+<- definition;;
+=> nrel_main_idtf:
+      [Опр. (гиперплоскость)] (* <- lang_ru;; *);;
+=> nrel_using_constants: 
+	{
+		subspase;
+		space;
+		nrel_embrace
+	};; 
+<= nrel_sc_text_translation: ... 
+		(*
+			->rrel_example:
+			[Гиперплоскость - это <b><sc_element sys_idtf="subspase">подпространство</b> с размерностью, на единицу меньшей, чем объемлющее <b><sc_element sys_idtf="space">пространство</b>.](*<- lang_ru;; =>nrel_format: format_html;;*);;
+		*);;
+*);;
+
+
+hyperplane<- rrel_key_sc_element: ... 
+(*
+ => nrel_main_idtf:
+[Утв. 1 о гиперплоскость] (* <- lang_ru;; *);;
+ <= nrel_sc_text_translation: ...
+	 (*
+    	  -> rrel_example:
+		[Для <b><sc_element sys_idtf="two_dimensional_space">двумерного пространства</b> гиперплоскость это <b><sc_element sys_idtf="straight">прямая</b>.](*<-lang_ru;; =>nrel_format: format_html;;*);;
+	*);;
+=> nrel_using_constants: 
+{
+straight;
+two_dimensional_space
+};;
+*);;
+
+hyperplane-> rrel_example:
+[*
+hyperplane->x;;
+straight->x;;
+space->x;;
+two_dimensional_space=>nrel_embrace:straight;;
+space->two_dimensional_space;;
+*];;
+
+hyperplane<-rrel_explored_concept: section_subject_domain_mathematics;;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

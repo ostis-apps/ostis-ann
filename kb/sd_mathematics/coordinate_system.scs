@@ -1,0 +1,91 @@
+coordinate_system<-sc_node_not_relation;;
+math_concept<-sc_node_not_relation;;
+nrel_parametr<-sc_node_norole_relation;;
+
+coordinate_system=>nrel_main_idtf:
+[система координат](*<-lang_ru;;*);
+[coordinate system](*<-lang_en;;*);;
+coordinate_system=>nrel_idtf:
+[метод координат](*<-lang_ru;;*);;
+
+
+nrel_inclusion->(math_concept=>coordinate_system);;
+
+coordinate_system<- rrel_key_sc_element: ...
+(*
+<- definition;;
+=> nrel_main_idtf:
+      [Опр. (система координат)] (* <- lang_ru;; *);;
+=> nrel_using_constants: 
+	{
+		math_concept;
+		point;
+		number;
+		object;
+		symbol;
+		position_in_space;
+		nrel_define
+	};; 
+<= nrel_sc_text_translation: ... 
+		(*
+			->rrel_example:
+			[Система координат - это способ определять  <b><sc_element sys_idtf="position_in_space">положение</b>  <b><sc_element sys_idtf="point">точки</b> или  <b><sc_element sys_idtf="object">объекта</b> с помощью  <b><sc_element sys_idtf="number">чисел</b> или других  <b><sc_element sys_idtf="symbol">символов</b>.](*<- lang_ru;;=>nrel_format: format_html;;*);;
+		*);;
+*);;
+
+
+coordinate_system<- rrel_key_sc_element: ... 
+(*
+ => nrel_main_idtf:
+[Утв. 1 о системе координат] (* <- lang_ru;; *);;
+ <= nrel_sc_text_translation: ...
+	 (*
+    	  -> rrel_example:
+		[Совокупность  <b><sc_element sys_idtf="number">чисел</b>, определяющих  <b><sc_element sys_idtf="position_in_space">положение</b> конкретной  <b><sc_element sys_idtf="point">точки</b>, называется  <b><sc_element sys_idtf="coordinates">координатами</b> этой  <b><sc_element sys_idtf="point">точки</b>. ](*<-lang_ru;;=>nrel_format: format_html;;*);;
+	*);;
+=> nrel_using_constants: 
+{
+number;
+position_in_space;
+point;
+coordinates 
+};;
+*);;
+
+coordinate_system-> rrel_example:
+[*
+coordinate_system<=nrel_define:position_in_space;;
+object=>nrel_parametr:position_in_space;;
+*];;
+
+coordinate_system<-rrel_explored_concept: section_subject_domain_mathematics;;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

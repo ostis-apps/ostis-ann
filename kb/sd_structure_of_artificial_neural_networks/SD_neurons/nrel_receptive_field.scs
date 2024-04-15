@@ -1,0 +1,97 @@
+nrel_receptive_field
+	<- sc_node_norole_relation;
+	=> nrel_main_idtf: [receptive field*] (* <- lang_en;; *);
+	=> nrel_main_idtf: [рецепторное поле*] (* <- lang_ru;; *);;
+
+nrel_receptive_field => nrel_definitional_domain: ...
+	(*
+		<= nrel_combination: ...
+			(*
+				-> neuron_core
+					(*
+						<= nrel_first_domain: nrel_receptive_field;;						
+					*);;
+				-> concept_neuron_node
+					(*
+						<= nrel_second_domain: nrel_receptive_field;;						
+					*);;
+			*);;
+	*);;
+
+
+nrel_receptive_field
+	<- binary_relation;
+	<- oriented_relation;
+	<- antireflexive_relation;
+	<- antisymmetric_relation;
+	<- antitransitive_relation;;
+
+
+definition -> ...
+	(*
+		=> nrel_main_idtf: [Опр.(рецепторное поле*)] (* <-lang_ru;; *);;
+		-> rrel_key_sc_element: nrel_receptive_field;;
+
+		<= nrel_using_constants: ...
+			(*
+				-> neuron_core;;
+				-> concept_neuron_node;;	
+				-> synaptic_connection;;
+			*);;
+
+		<= nrel_sc_text_translation: ...
+			(*
+				->[Рецепторным полем нейронного ядра называется множество нейронных узлов, которые имеют с данным нейронным ядром синаптическую связь и являются ее конечными точками] (* <- lang_ru;; *);;
+			*);;
+	*);;
+
+
+affirmation -> ...
+	(*
+		-> rrel_key_sc_element: nrel_receptive_field;;
+
+		<= nrel_sc_text_translation: ...
+			(*
+				-> [Рецепторные поля нейронных ядер не пересекаются] (* <- lang_ru;; *);;
+			*);;
+
+		=> nrel_main_idtf: [Утв.(рецепторное поле*, нейронное ядро, пересечение множеств*)] (* <- lang_ru;; *);;
+	*);;
+
+
+illustration -> rrel_example: ...
+(*
+	=> nrel_main_idtf: [Рис.(рецепторное поле*)] (* <- lang_ru;; *);;
+	-> rrel_key_sc_element: nrel_receptive_field;;
+	<= nrel_sc_text_translation: ... (* -> "file://images//nrel_receptive_field.png";; *);;
+*);;
+
+nrel_receptive_field<-rrel_explored_concept: section_subject_domain_of_neurons;;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

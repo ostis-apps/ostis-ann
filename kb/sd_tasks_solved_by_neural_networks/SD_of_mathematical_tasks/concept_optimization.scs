@@ -1,0 +1,48 @@
+concept_optimization
+<-sc_node_not_relation;
+=>nrel_inclusion:concept_mathematical_tasks;
+
+=>nrel_main_idtf:
+[оптимизация](*<-lang_ru;;*);
+[optimization](*<-lang_en;;*);
+
+<- rrel_key_sc_element: ...
+(*
+<- definition;;
+=> nrel_main_idtf:
+      [Опр. (оптимизация)] (* <- lang_ru;; *);;
+=> nrel_using_constants: 
+	{
+		process;
+		concept_characteristic
+
+	};; 
+<= nrel_sc_text_translation: ... 
+		(*
+			->rrel_example:
+			[Оптимизация - это  <b><sc_element sys_idtf="task">процесс</b> максимизации выходных <b><sc_element sys_idtf="concept_characteristic">характеристик</b> и минимизации расходов.](*<- lang_ru;; =>nrel_format: format_html;;*);;
+		*);;
+*);
+
+
+<- rrel_key_sc_element: ... 
+(*
+ => nrel_main_idtf:
+[Утв. 1 об оптимизации.] (* <- lang_ru;; *);;
+ <= nrel_sc_text_translation: ...
+	 (*
+    	  -> rrel_example:
+		[Оптимизация заключается в <b><sc_element sys_idtf="nrel_search">нахождении</b> наилучшего варианта, <b><sc_element sys_idtf="value">значения</b>.](*<-lang_ru;; =>nrel_format: format_html;;*);;
+	*);;
+=> nrel_using_constants: 
+{
+value;
+nrel_search
+};;
+*);
+
+<-rrel_explored_concept: section_subject_domain_of_mathematical_tasks;;
+
+
+
+

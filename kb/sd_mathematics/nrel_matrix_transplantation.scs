@@ -1,0 +1,94 @@
+nrel_matrix_transplantation=>nrel_main_idtf:
+[транспонирование матрицы](*<-lang_ru;;*);
+[matrix transplantation](*<-lang_en;;*);;
+
+nrel_matrix_transplantation<- rrel_key_sc_element: ...
+(*
+<- definition;;
+=> nrel_main_idtf:
+      [Опр. (транспонирование матрицы)] (* <- lang_ru;; *);;
+=> nrel_using_constants: 
+	{
+		matrix;
+		column;
+		line
+	};; 
+<= nrel_sc_text_translation: ... 
+		(*
+			->rrel_example:
+			[Транспонирование матрицы - это матрица полученая из исходной <b><sc_element sys_idtf="matrix">матрицы</b> путём замены <b><sc_element sys_idtf="line">строк</b> на <b><sc_element sys_idtf="column">столбцы</b>.](*<- lang_ru;;=>nrel_format: format_html;;*);;
+		*);;
+*);;
+
+
+nrel_matrix_transplantation
+<- sc_node_norole_relation;
+<- binary_relation;
+<- oriented_relation;
+<- reflexive_relation;
+<- symmetric_relation;
+<- transitive_relation;;
+
+nrel_matrix_transplantation 
+=> nrel_first_domain:matrix;
+=> nrel_second_domain: matrix;;
+nrel_forecasting =>nrel_definitional_domain:...
+(*
+<=nrel_combination: matrix;;
+*);;
+
+nrel_matrix_transplantation<- rrel_key_sc_element: ... 
+(*
+ => nrel_main_idtf:[Утв. (Транспонирование матрицы)] (* <- lang_ru;; *);;
+ <= nrel_sc_text_translation: ...
+	 (*
+    	  -> rrel_example:
+		[Транспонированная <b><sc_element sys_idtf="nrel_matrix_addition">сумма матриц</b> равна <b><sc_element sys_idtf="nrel_matrix_addition">сумме</b> транспонированных <b><sc_element sys_idtf="matrix">матриц</b>.](*<-lang_ru;;=>nrel_format: format_html;;*);;
+	*);;
+=> nrel_using_constants: 
+{
+matrix;
+nrel_matrix_addition
+};;
+*);;
+
+
+nrel_inclusion->(mathematical_operation=>matrix_transplantation);;
+
+number->2;;
+arity->...
+(*
+<-sc_node_not_relation;;
+<=nrel_mesaurement:2;;
+->nrel_matrix_transplantation ;;
+*);;
+
+nrel_matrix_transplantation<-rrel_explored_concept: section_subject_domain_mathematics;;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

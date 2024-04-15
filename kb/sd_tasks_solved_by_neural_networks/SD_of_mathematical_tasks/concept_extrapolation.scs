@@ -1,0 +1,50 @@
+concept_extrapolation
+<-sc_node_not_relation;
+=>nrel_inclusion:concept_mathematical_tasks;
+
+=>nrel_main_idtf:
+[экстраполяция](*<-lang_ru;;*);
+[extrapolation](*<-lang_en;;*);
+
+<- rrel_key_sc_element: ...
+(*
+<- definition;;
+=> nrel_main_idtf:
+      [Опр. (экстраполяция)] (* <- lang_ru;; *);;
+=> nrel_using_constants: 
+	{
+		process;
+		result;
+		object;
+		set
+
+	};; 
+<= nrel_sc_text_translation: ... 
+		(*
+			->rrel_example:
+			[Экстраполяция - это логическая методологическая <b><sc_element sys_idtf="process">процедура</b> распространения <b><sc_element sys_idtf="result">выводов</b>, сделанных относительно какой-либо части <b><sc_element sys_idtf="object">объектов</b> на всё <b><sc_element sys_idtf="set">множество</b> данных объектов или явлений, а также на их другую какую-либо часть.](*<- lang_ru;; =>nrel_format: format_html;;*);;
+		*);;
+*);
+
+
+<- rrel_key_sc_element: ... 
+(*
+ => nrel_main_idtf:
+[Утв. 1 об экстраполяции.] (* <- lang_ru;; *);;
+ <= nrel_sc_text_translation: ...
+	 (*
+    	  -> rrel_example:
+		[Частичным <b><sc_element sys_idtf="nrel_synonymy">синонимом</b> экстраполяции является понятие <b><sc_element sys_idtf="concept_identify_a_tendency">выявлять тенденцию</b>.](*<-lang_ru;; =>nrel_format: format_html;;*);;
+	*);;
+=> nrel_using_constants: 
+{
+nrel_synonymy;
+concept_identify_a_tendency
+};;
+*);
+
+<-rrel_explored_concept: section_subject_domain_of_mathematical_tasks;;
+
+
+
+

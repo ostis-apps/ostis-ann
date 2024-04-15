@@ -55,13 +55,13 @@ ScAddr getFirstAction(ScMemoryContext & context)
         context.HelperFindBySystemIdtf("test_nonatomic_action"),
         ScType::EdgeAccessVarPosPerm,
         ScType::NodeVar >> "_nonAtomicAction");
-  scTemplate.TripleWithRelation(
+  scTemplate.Quintuple(
         ScType::NodeVar >> "_tuple",
         ScType::EdgeDCommonVar,
         "_nonAtomicAction",
         ScType::EdgeAccessVarPosPerm,
         Keynodes::nrel_decomposition_of_action);
-  scTemplate.TripleWithRelation(
+  scTemplate.Quintuple(
         "_tuple",
         ScType::EdgeAccessVarPosPerm,
         ScType::NodeVar >> "_firstAction",
@@ -121,7 +121,7 @@ TEST_F(NonAtomicActionInterpreterTest, checkDynamicArguments)
         scAgentsCommon::CoreKeynodes::question_finished_successfully, action, ScType::EdgeAccessConstPosPerm));
 
   ScTemplate scTemplate;
-  scTemplate.TripleWithRelation(
+  scTemplate.Quintuple(
         action,
         ScType::EdgeAccessVarPosPerm,
         ScType::NodeVar >> "_dynamic_argument",
@@ -293,13 +293,13 @@ TEST_F(NonAtomicActionInterpreterTest, checkArgumentsMatching)
         scAgentsCommon::CoreKeynodes::question_finished, action, ScType::EdgeAccessConstPosPerm));
 
   ScTemplate scTemplate;
-  scTemplate.TripleWithRelation(
+  scTemplate.Quintuple(
         action,
         ScType::EdgeAccessVarPosPerm,
         context.HelperFindBySystemIdtf("arg1"),
         ScType::EdgeAccessVarPosPerm,
         scAgentsCommon::CoreKeynodes::rrel_1);
-  scTemplate.TripleWithRelation(
+  scTemplate.Quintuple(
         action,
         ScType::EdgeAccessVarPosPerm,
         context.HelperFindBySystemIdtf("arg3"),
@@ -320,7 +320,7 @@ TEST_F(NonAtomicActionInterpreterTest, checkArgumentsMatching)
   EXPECT_TRUE(context.HelperCheckEdge(
         scAgentsCommon::CoreKeynodes::question_finished, action, ScType::EdgeAccessConstPosPerm));
 
-  scTemplate.TripleWithRelation(
+  scTemplate.Quintuple(
         action,
         ScType::EdgeAccessVarPosPerm,
         context.HelperFindBySystemIdtf("arg2"),

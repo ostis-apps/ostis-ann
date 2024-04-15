@@ -1,0 +1,71 @@
+sc_node_not_relation->neuron_network_architecture;;
+sc_node_not_relation->structure;;
+sc_node_not_relation->neural_network_component;;
+sc_node_not_relation->organization;;
+sc_node_not_relation->neural_network;;
+sc_node_not_relation->artificial_neuron;;
+sc_node_not_relation->convolutional_neural_network;;
+sc_node_not_relation->software_architecture;;
+
+sc_node_norole_relation->nrel_consist;;
+
+neuron_network_architecture=> nrel_main_idtf: [архитектура нейронной сети](* <- lang_ru;; *);;
+neuron_network_architecture=> nrel_main_idtf: [neuron network architecture](* <- lang_en;; *);;
+definition ->...
+(*
+->rrel_key_sc_element: neuron_network_architecture;;
+<= nrel_sc_text_translation: ...(*->rrel_example:[Архитектура нейронной сети - структура организации всех компонентов из которых состоит нейронная сеть.](*<-lang_ru;;*);;*);;
+=> nrel_main_idtf: [Определение (архитектура нейронной сети)](*<- lang_ru;;*);;
+=> nrel_using_constants:
+{ 
+structure;
+neural_network_component;
+organization
+};;
+*);;
+
+statement ->...
+(*
+->rrel_key_sc_element: neuron_network_architecture;;
+<= nrel_sc_text_translation: ...(*->rrel_example:[Любая архитектура нейронной сети состоит из искусственных нейронов.](*<-lang_ru;;*);;*);;
+=> nrel_main_idtf: [Утверждение(этап)](*<- lang_ru;;*);;
+=> nrel_using_constants:
+{
+neural_network;
+artificial_neuron;
+nrel_consist
+};;
+*);;
+convolutional_neural_network<-rrel_example:neuron_network_architecture;;
+neuron_network_architecture=>nrel_inclusion:software_architecture;;
+
+
+neuron_network_architecture<-rrel_explored_concept: section_subject_domain_of_artificial_neural_networks;;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

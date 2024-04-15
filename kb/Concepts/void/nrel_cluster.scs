@@ -1,0 +1,59 @@
+nrel_cluster<-rrel_key_sc_element: ... 
+(*
+<- definition;;
+=> nrel_main_idtf:[Опр. (кластер*)](* <- lang_ru;; *);;
+<= nrel_sc_text_translation: ...
+	 (*
+      -> rrel_example:[Кластером называется совокупность объектов с обобщающим признаком внутри некого множества](* <- lang_ru;;*);;
+	*);;
+=> nrel_using_constants: 
+	{
+       	cluster(*<-sc_node_not_relation;;*);
+		set(*<-sc_node_not_relation;;*);
+		symptom(*<-sc_node_not_relation;;*)
+    	};;
+*);
+
+
+<- sc_node_norole_relation;
+<- binary_relation;
+<- oriented_relation;
+<|- antireflexive_relation;
+<- antisymmetric_relation;
+<|- antitransitive_relation;
+
+
+=> nrel_first_domain: set(*<-sc_node_not_relation;;*);
+=> nrel_second_domain:  cluster(*<-sc_node_not_relation;;*);
+
+=> nrel_main_idtf:
+      [кластер*]
+      (*<-lang_ru;;*);
+       [cluster*]
+       (*<-lang_en;;*);
+
+<- rrel_key_sc_element: ... 
+(*
+ <- explanation;;
+ => nrel_main_idtf:[Утв.(Кластер)] (* <- lang_ru;; *);;
+<= nrel_sc_text_translation: ... 
+	(*
+      -> rrel_example:[Кластер А является подмножеством множества а](* <- lang_ru;; *);;
+	*);;
+=> nrel_using_constants: 
+	{
+       		cluster(*<-sc_node_not_relation;;*);
+		set(*<-sc_node_not_relation;;*)
+    	};;
+*);;
+
+set->set_a;;
+cluster->cluster_A;;
+nrel_cluster->(set_a=>cluster_A);;
+
+number->2;;
+arity->...
+(*
+<-sc_node_not_relation;;
+<=nrel_mesaurement:2;;
+*);;

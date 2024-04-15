@@ -1,0 +1,67 @@
+sc_node_not_relation->matrix_dimension;;
+sc_node_not_relation->line;;
+sc_node_not_relation->column;;
+sc_node_not_relation->square_matrix;;
+sc_node_not_relation->size;;
+
+
+matrix_dimension=> nrel_main_idtf: [размерность матрицы](* <- lang_ru;; *);;
+matrix_dimension=> nrel_main_idtf: [matrix dimension](* <- lang_en;; *);;
+definition ->...
+(*
+->rrel_key_sc_element:  matrix_dimension;;
+<= nrel_sc_text_translation: ...(*->rrel_example:[Размерность матрицы - это количество строк и столбцов  матрицы.](*<-lang_ru;;*);;*);;
+=> nrel_main_idtf: [Определение (размерность матрицы)](*<- lang_ru;;*);;
+=> nrel_using_constants:
+{ 
+column;
+line
+};;
+*);; 
+
+statement ->...
+(*
+->rrel_key_sc_element: matrix_dimension;;
+<= nrel_sc_text_translation: ...(*->rrel_example:[Матрица является квадратной , если количество столбцов и строк совпадает.](*<-lang_ru;;*);;*);;
+=> nrel_main_idtf: [Утверждение(размерность матрицы)](*<- lang_ru;;*);;
+=> nrel_using_constants:
+{
+square_matrix;
+line;
+column
+};;
+*);;
+4<-rrel_example:matrix_dimension;;
+matrix_dimension=>nrel_inclusion:size;;
+
+matrix_dimension<-rrel_explored_concept: section_subject_domain_mathematics;;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,55 @@
+shaped_neural_network<-sc_node_not_relation;;
+
+shaped_neural_network=>nrel_main_idtf:
+[образная нейронная сеть](*<-lang_ru;;*);
+[shaped neural network](*<-lang_en;;*);;
+
+shaped_neural_network<- rrel_key_sc_element: ...
+(*
+<- definition;;
+=> nrel_main_idtf:
+      [Опр. (образная нейронная сеть)] (* <- lang_ru;; *);;
+=> nrel_using_constants: 
+	{
+		image;
+		sign;
+		symbol;
+		hieroglyphs;
+		information
+	};; 
+<= nrel_sc_text_translation: ... 
+		(*
+			->rrel_example:
+			[Образная нейронная сеть — это нейронная сеть оперирующая информацией, представленной в виде образов: знаков, иероглифов, символов.](*<- lang_ru;;*);;
+		*);;
+*);;
+
+
+shaped_neural_network<-rrel_explored_concept: section_subject_domain_of_artificial_neural_networks;;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,72 @@
+kohonen_network<-sc_node_not_relation;;
+
+kohonen_network=>nrel_main_idtf:
+[сеть Кохонена](*<-lang_ru;;*);
+[Kohonen network](*<-lang_en;;*);;
+
+kohonen_network<- rrel_key_sc_element: ...
+(*
+<- definition;;
+=> nrel_main_idtf:
+      [Опр. (сеть Кохонена)] (* <- lang_ru;; *);;
+=> nrel_using_constants: 
+	{
+		class;
+		element;
+		kohonen_nrel_layer
+	};; 
+<= nrel_sc_text_translation: ... 
+		(*
+			->rrel_example:
+			[Сеть Кохонена - это класс нейронных сетей, основным элементом которых является слой Кохонена.](*<- lang_ru;;*);;
+		*);;
+*);;
+
+
+kohonen_network<- rrel_key_sc_element: ... 
+(*
+ => nrel_main_idtf:
+[Утв. 1 об сети Кохонена] (* <- lang_ru;; *);;
+ <= nrel_sc_text_translation: ...
+	 (*
+    	  -> rrel_example:
+		[Выходные сигналы слоя Кохонена обрабатываются по правилу нейрона победителя.](*<-lang_ru;;*);;
+	*);;
+=> nrel_using_constants: 
+{
+output_signal;
+neuron_winner
+};;
+*);;
+
+kohonen_network<-rrel_explored_concept: section_subject_domain_of_neural_networks_with_feedbacks;;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

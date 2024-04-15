@@ -1,0 +1,39 @@
+sc_node_not_relation->output_speech;;
+
+
+
+output_speech=> nrel_main_idtf: [выходная речь](* <- lang_ru;; *);;
+output_speech=> nrel_main_idtf: [output speech](* <- lang_en;; *);;
+definition ->...
+(*
+->rrel_key_sc_element: output_speech;;
+<= nrel_sc_text_translation: ...(*->rrel_example:[Выходная речь - речь , синтезированная нейронной сетью или результат обработки<b><sc_element sys_idtf="input_speech">входной речи</b> .](*<-lang_ru;;=> nrel_format: format_html;;*);;*);;
+=> nrel_main_idtf: [Определение (выходная речь)](*<- lang_ru;;=> nrel_format: format_html;;*);;
+=> nrel_using_constants:
+{ 
+speech;
+neural_network;
+nrel_result;
+input_speech
+};;
+*);; 
+
+
+statement ->...
+(*
+->rrel_key_sc_element: output_speech;;
+<= nrel_sc_text_translation: ...(*->rrel_example:[Нейронные сети , синтезирующие искусственную речь является одним из наиболее перспективных направлений развития.](*<-lang_ru;;=> nrel_format: format_html;;*);;*);;
+=> nrel_main_idtf: [Утверждение(выходная речь)](*<- lang_ru;;=> nrel_format: format_html;;*);;
+=> nrel_using_constants:
+{
+speech;
+neural_network
+};;	
+*);;
+artificial_speech<-rrel_example:output_speech;;
+output_data=>nrel_inclusion:output_speech;;
+output_speech<-rrel_explored_concept: section_subject_domain_of_output_sound_data;;
+
+
+
+

@@ -1,0 +1,79 @@
+sc_node_norole_relation->learning_step;;
+learning_step=>nrel_main_idtf:[learning step*](* <-lang_en;; *);;
+learning_step=>nrel_main_idtf:[шаг обучения*](* <-lang_ru;; *);;
+learning_step=>nrel_idtf:[learning rate*](* <-lang_en;; *);;
+learning_step=>nrel_idtf:[скорость обучения*](* <-lang_ru;; *);;
+definition -> ...
+	(*
+		=> nrel_main_idtf: [Опр.(шаг обучения*)](* <- lang_ru;; *);;
+		<= nrel_sc_text_translation:...
+		(*
+			-> rrel_example: [Шаг обучения - величина, задающая изменение весов для элементов входного слоя на каждой эпохе обучения.](* <- lang_ru;; *);;
+		*);;
+		-> rrel_key_sc_element: learning_step;;
+		<= nrel_using_constants :...
+		(*
+			-> nrel_input_layer; value; nrel_synapse_weight; age_of_study;;//+ эпоха обучения(анжи)
+		*);;
+	*);; 
+ statement -> ...
+	(*
+          -> rrel_key_sc_element: learning_step; learning; duration;;
+		=> nrel_main_idtf: [Утв.(обучение, длительность)](* <- lang_ru;; *);;//тут понятие анжелики
+		<= nrel_sc_text_translation:...
+		(*
+			-> rrel_example: [Если шаг обучения слишком мал, то обучение будет слишком длительным.](* <- lang_ru;; *);;
+		*);;
+	*);; 
+statement -> ...
+	(*
+          -> rrel_key_sc_element: learning_step; learning; nrel_result;;
+		=> nrel_main_idtf: [Утв.(обучение, результат*)](* <- lang_ru;; *);;//тут понятие анжелики
+		<= nrel_sc_text_translation:...
+		(*
+			-> rrel_example: [Если шаг обучения слишком велик, то обучение может не привести к результату.](* <- lang_ru;; *);;
+		*);;
+	*);; 
+learning_step => nrel_first_domain: concept_neural_network_in_graphical_representation;;
+learning_step => nrel_second_domain: value;;
+learning_step => nrel_definitional_domain:...
+	(*
+		<= nrel_combination:...
+		(*
+			-> concept_neural_network_in_graphical_representation; value;;
+		*);;
+	*);;
+learning_step<-oriented_relation; antireflexive_relation; antitransitive_relation; antisymmetric_relation;;
+
+learning_step<-rrel_explored_concept: section_subject_domain_of_learning_neural_networks;;
+//done
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

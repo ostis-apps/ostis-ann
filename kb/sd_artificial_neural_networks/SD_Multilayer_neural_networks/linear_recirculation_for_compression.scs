@@ -1,0 +1,83 @@
+linear_recirculation_network_for_compression
+	=>nrel_main_idtf:
+	[линейная рециркуляционная нейронная сеть для сжатия]
+	(* <- lang_ru;; *);
+	=> nrel_idtf:
+	[линейная рециркуляционная нейронная сеть для уменьшения размерности] 
+	(* <- lang_ru;; *);
+	[линейная рециркуляционная сеть для сжатия]
+	(* <- lang_ru;; *);
+	
+///////////////////////////////////////////////////////////////////////////
+	<-rrel_key_sc_element: 
+	Definition_of_linear_recirculation_network_for_compression
+		(*
+			<-definition;;
+			<=nrel_sc_text_translation:...
+			(*
+				-> rrel_example:
+				[<p>				
+				<b>Линейная рециркуляционная нейронная сеть для сжатия</b>  - <sc_element sys_idtf = "linear_recirculation_network">линейная рециркуляционная нейронная сеть</sc_element>, 
+				использующая для <sc_element sys_idtf = "reduction_of_the_dimension">уменьшения размерности</sc_element> и 
+				дающая на <sc_element sys_idtf = "output">выходе</sc_element> <sc_element sys_idtf = "compression_frame">сжатый образ</sc_element>.
+				</p>] 
+				(*
+				<-lang_ru;;
+				=> nrel_format: format_html;;
+				*);;
+			*);;
+		=>nrel_main_idtf:[Опр. (линейная рециркуляционная сеть для сжатия)](* <-lang_ru;; => nrel_format: format_html;;*);;
+		<=nrel_using_constants:...
+			(*
+				->linear_recirculation_network;reduction_of_the_dimension;output;compression_frame;;//+применение 
+			*);;
+		*);
+		
+
+=>nrel_number_of_layers:[2](*<-integer;;*);
+<=inclusion: dimensional_neural_networks;
+			 
+<-rrel_explored_concept:subject_domain_of_dimensional_neural_network;
+///////////////////////////////////////////////////////////////////
+<- rrel_key_sc_element:...
+(*
+	<- illustration;;
+	=> nrel_main_idtf: [Рис. (линейная рециркуляционная нейронная сеть для сжатия)] (* <- lang_ru;;	*);;
+	<= nrel_sc_text_translation:...
+	(*
+		-> rrel_example: "file://images/example_recirculation_nn_for_compression.png"
+		(*
+			=> nrel_format: format_png;;
+		*);;
+	*);;
+*);;
+
+
+linear_recirculation_network_for_compression<-rrel_explored_concept: section_subject_domain_of_multilayer_neural_networks;;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

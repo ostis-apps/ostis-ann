@@ -49,7 +49,7 @@ ScAddr ParameterHandler::findParameterNodeByNumber(
   ScAddr parameterNode = ScAddr();
   ScTemplate scTemplate;
   scTemplate.Triple(parameterClass, ScType::EdgeAccessVarPosPerm, ScType::NodeVar >> "_parameter_node");
-  scTemplate.TripleWithRelation(
+  scTemplate.Quintuple(
       "_parameter_node", ScType::EdgeDCommonVar, numberNode, ScType::EdgeAccessVarPosPerm, measurementRel);
   ScAddrVector parameterNodes = ScTemplateUtils::getAllWithKey(this->context, scTemplate, "_parameter_node");
   if (parameterNodes.size() == 1)
@@ -102,7 +102,7 @@ ScAddr ParameterHandler::generateParameterNode(
 {
   ScTemplate scTemplate;
   scTemplate.Triple(parameterClass, ScType::EdgeAccessVarPosPerm, ScType::NodeVar >> "_parameter_node");
-  scTemplate.TripleWithRelation(
+  scTemplate.Quintuple(
       "_parameter_node", ScType::EdgeDCommonVar, numberNode, ScType::EdgeAccessVarPosPerm, measurementRel);
 
   ScTemplateGenResult genResult;

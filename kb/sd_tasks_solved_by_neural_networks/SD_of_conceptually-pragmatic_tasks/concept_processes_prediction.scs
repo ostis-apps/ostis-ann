@@ -1,0 +1,53 @@
+concept_processes_prediction
+<-sc_node_not_relation;
+<=nrel_inclusion:concept_conceptually_pragmatic_tasks;
+
+=>nrel_main_idtf:
+[прогназирование процессов](*<-lang_ru;;*);
+[processes prediction](*<-lang_en;;*);
+
+=>nrel_idtf:
+[нейронное прогназирование](*<-lang_ru;;*);
+[neural prediction](*<-lang_en;;*);
+
+<- rrel_key_sc_element: ...
+(*
+<- definition;;
+=> nrel_main_idtf:
+      [Опр. (прогназирование процессов)] (* <- lang_ru;; *);;
+=> nrel_using_constants: 
+	{
+		scientific_research;
+ 		development;
+		nrel_modeling;
+		process
+	};; 
+<= nrel_sc_text_translation: ... 
+		(*
+			->rrel_example:
+			[Прогназирование процессов - это <b><sc_element sys_idtf="scientific_research">исследование</b> по средством нейросетевого <b><sc_element sys_idtf="nrel_modeling">моделирования</b> цель которого предсказать дальнейшее <b><sc_element sys_idtf="development">развитие</b> некоторого <b><sc_element sys_idtf="process">процесса</b>.](*<- lang_ru;; =>nrel_format: format_html;;*);;
+		*);;
+*);
+
+
+<- rrel_key_sc_element: ... 
+(*
+ => nrel_main_idtf:
+[Утв. 1 о прогназировании процессов.] (* <- lang_ru;; *);;
+ <= nrel_sc_text_translation: ...
+	 (*
+    	  -> rrel_example:
+		[Нейросетевое прогназирование активно <b><sc_element sys_idtf="nrel_using">используется</b> в экономике.](*<-lang_ru;; =>nrel_format: format_html;;*);;
+	*);;
+=> nrel_using_constants: 
+{
+economy;
+nrel_using
+};;
+*);
+
+<-rrel_explored_concept: section_subject_domain_of_conceptually_pragmatic_tasks;;
+
+
+
+

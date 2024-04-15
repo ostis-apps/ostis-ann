@@ -1,0 +1,77 @@
+the_equivalent_of_linear_recirculation_network_for_restoring_1
+	=>nrel_main_idtf:
+	[Эквивалент линейной рециркуляционной нейронной сети для восстановления 1]
+	(* <- lang_ru;; *);
+	=> nrel_idtf:
+	[Эквивалент линейной рециркуляционной сети для восстановления 1] 
+	(* <- lang_ru;; *);
+	
+///////////////////////////////////////////////////////////////////////////
+	<-rrel_key_sc_element: 
+	...
+		(*
+			<-explanation;;
+			<=nrel_sc_text_translation:...
+			(*
+				-> rrel_example:
+				[<p>				
+				<b>Эквивалент линейной рециркуляционной нейронной сети для восстановления 1</b>  - <sc_element sys_idtf = "linear_recirculation_network_for_restoring">линейная рециркуляционная сеть для восстановления</sc_element>, 
+				у которой 2 <sc_element sys_idtf = "concept_neuron_node">нейрона</sc_element> на входном слое и 3 на выходном.
+				</p>] 
+				(*
+				<-lang_ru;;
+				=> nrel_format: format_html;;
+				*);;
+			*);;
+		->rrel_key_sc_element:...
+			(*
+				->linear_recirculation_network_for_restoring;concept_neuron_node;input_layer;output_layer;;
+			*);;
+		*);
+		
+<-linear_recirculation_network_for_restoring;
+=>nrel_number_of_layers:[2](*<-integer;;*);
+	
+///////////////////////////////////////////////////////////////////
+<- rrel_key_sc_element:...
+(*
+	<- illustration;;
+	=> nrel_main_idtf: [Рис. (Эквивалент линейной рециркуляционной сети для восстановления 1)] (* <- lang_ru;;	*);;
+	<= nrel_sc_text_translation:...
+	(*
+		-> rrel_example: "file://images/example_recirculation_nn_for_restoring.png"///другую
+		(*
+			=> nrel_format: format_png;;
+		*);;
+	*);;
+*);;
+
+
+
+
+the_equivalent_of_linear_recirculation_network_for_restoring_1<-rrel_explored_concept: section_subject_domain_of_multilayer_neural_networks;;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

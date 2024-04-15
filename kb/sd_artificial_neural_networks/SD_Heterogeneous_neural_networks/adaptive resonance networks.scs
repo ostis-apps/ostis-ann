@@ -1,0 +1,67 @@
+ sc_node_not_relation->adaptive_resonance_networks;;
+sc_node_not_relation->neural_network;;
+sc_node_not_relation->adaptive_resonance_theory;;
+sc_node_not_relation->supervised_learning;;
+sc_node_not_relation->asupervised_learning;;
+sc_node_not_relation->concept_pattern_recognition;;
+sc_node_not_relation->neural_network_x;;
+
+adaptive_resonance_networks=> nrel_main_idtf: [Сети адаптивного резонанса](* <- lang_ru;; *);;
+adaptive_resonance_networks=> nrel_main_idtf: [Adaptive resonance networks](* <- lang_en;; *);;
+definition ->...
+(*
+->rrel_key_sc_element: adaptive_resonance_networks;;
+<= nrel_sc_text_translation: ...(*->rrel_example:[Сети адаптивного резонанса — разновидность искусственных нейронных сетей, основанная на теории адаптивного резонанса Стивена Гроссберга и Гейла Карпентера.](*<-lang_ru;;*);;*);;
+=> nrel_main_idtf: [Определение (Сети адаптивного резонанса)](*<- lang_ru;;*);;
+=> nrel_using_constants:
+{ 
+ neural_network;
+ adaptive_resonance_theory
+};;
+*);; 
+
+statement ->...
+(*
+->rrel_key_sc_element: adaptive_resonance_networks;;
+<= nrel_sc_text_translation: ...(*->rrel_example:[Сети адаптивного резонанса включают в себя модели обучения с учителем и без учителя, которые используются при решении задач распознавания образов и предсказания.](*<-lang_ru;;*);;*);;
+=> nrel_main_idtf: [Утверждение(Сети адаптивного резонанса)](*<- lang_ru;;*);;
+=> nrel_using_constants:
+{
+nrel_inclusion;
+supervised_learning;
+asupervised_learning;
+concept_pattern_recognition
+};;
+*);;
+neural_network_x<-rrel_example:adaptive_resonance_networks;;
+adaptive_resonance_networks=>nrel_inclusion:neural_network;;
+
+
+adaptive_resonance_networks<-rrel_explored_concept: section_subject_domain_of_heterogeneous_neural_networks;;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

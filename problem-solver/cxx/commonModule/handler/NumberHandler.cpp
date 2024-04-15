@@ -28,7 +28,7 @@ ScAddr commonModule::NumberHandler::findNumberNode(const double & number)
 
   for (ScAddr candidateLink : candidateList)
   {
-    ScAddr candidateNode = utils::IteratorUtils::getFirstByInRelation(
+    ScAddr candidateNode = utils::IteratorUtils::getAnyByInRelation(
         this->context, candidateLink, scAgentsCommon::CoreKeynodes::nrel_idtf);
     if (this->context->HelperCheckEdge(
             scAgentsCommon::CoreKeynodes::number, candidateNode, ScType::EdgeAccessConstPosPerm))
@@ -45,7 +45,7 @@ ScAddr commonModule::NumberHandler::generateNumberNode(const double & number)
   std::string numberAsString = this->numberToLikView(number);
   ScAddr numberLink = this->linkHandler->createLink(numberAsString);
   ScTemplate scTemplate;
-  scTemplate.TripleWithRelation(
+  scTemplate.Quintuple(
       ScType::NodeVar >> "_number_node",
       ScType::EdgeDCommonVar,
       numberLink,

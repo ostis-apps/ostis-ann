@@ -1,0 +1,72 @@
+neuron_winner<-sc_node_not_relation;;
+
+neuron_winner=>nrel_main_idtf:
+[нейрон победитель](*<-lang_ru;;*);
+[neuron winner](*<-lang_en;;*);;
+
+nrel_inclusion->(math_concept=>neuron_winner);;
+
+neuron_winner<- rrel_key_sc_element: ...
+(*
+<- definition;;
+=> nrel_main_idtf:
+      [Опр. (нейрон победитель)] (* <- lang_ru;; *);;
+=> nrel_using_constants: 
+	{
+		neuron;
+		nrel_output_signal_vector
+	};; 
+<= nrel_sc_text_translation: ... 
+		(*
+			->rrel_example:
+			[Нейрон победитель - это нейрон, у которого выходной сигнал суматора оказался наибольшим.](*<- lang_ru;;*);;
+		*);;
+*);;
+
+
+neuron_winner<- rrel_key_sc_element: ... 
+(*
+ => nrel_main_idtf:
+[Утв. 1 о нейроне победителе] (* <- lang_ru;; *);;
+ <= nrel_sc_text_translation: ...
+	 (*
+    	  -> rrel_example:
+		[Для обучения нейронов WTA учитель не требуется.](*<-lang_ru;;*);;
+	*);;
+=> nrel_using_constants: 
+{
+neuron;
+learning
+};;
+*);;
+
+
+
+neuron_winner<-rrel_explored_concept: section_subject_domain_of_neurons;;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

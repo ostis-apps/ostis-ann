@@ -1,0 +1,76 @@
+vector_quantization<-sc_node_not_relation;;
+
+vector_quantization=>nrel_main_idtf:
+[векторное квантование](*<-lang_ru;;*);
+[vector_quantization](*<-lang_en;;*);;
+
+nrel_inclusion->(quantizer=>vector_quantization);;
+nrel_inclusion->(vector=>vector_quantization);;
+
+vector_quantization<- rrel_key_sc_element: ...
+(*
+<- definition;;
+=> nrel_main_idtf:
+      [Опр. (векторное квантование)] (* <- lang_ru;; *);;
+=> nrel_using_constants: 
+	{
+		signal;
+		vector;
+		input_data
+	};; 
+<= nrel_sc_text_translation: ... 
+		(*
+			->rrel_example:
+			[Векторное квантование - метод квантования, при котором многопараметрический сигнал квантуется по каждому из параметров, а затем хранится и обрабатывается как единый блок данных .](*<- lang_ru;;*);;
+		*);;
+*);;
+
+
+vector_quantization<- rrel_key_sc_element: ... 
+(*
+ => nrel_main_idtf:
+[Утв. 1 о векторном квантовании] (* <- lang_ru;; *);;
+ <= nrel_sc_text_translation: ...
+	 (*
+    	  -> rrel_example:
+		[ В процессе вычислений квантователь выбирает вектор с таким набором параметров, при котором обеспечивается минимальное расхождение с исходным сигналом.](*<-lang_ru;;*);;
+	*);;
+=> nrel_using_constants: 
+{
+vector;
+signal;
+parameter
+};;
+*);;
+
+vector_quantization<-rrel_explored_concept: section_subject_domain_of_algorithms_and_functions;;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

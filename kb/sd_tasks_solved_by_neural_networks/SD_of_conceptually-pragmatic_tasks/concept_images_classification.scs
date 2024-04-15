@@ -1,0 +1,48 @@
+concept_images_classification
+<-sc_node_not_relation;
+<=nrel_inclusion:concept_conceptually_pragmatic_tasks;
+
+=>nrel_main_idtf:
+[классификация изображений](*<-lang_ru;;*);
+[images clustering](*<-lang_en;;*);
+
+<- rrel_key_sc_element: ...
+(*
+<- definition;;
+=> nrel_main_idtf:
+      [Опр. (классификация изображений)] (* <- lang_ru;; *);;
+=> nrel_using_constants: 
+	{
+		information;
+		image;
+		process
+	};; 
+<= nrel_sc_text_translation: ... 
+		(*
+			->rrel_example:
+			[Класификация изображений- это <b><sc_element sys_idtf="process">процесс</b> извлечения классов <b><sc_element sys_idtf="information">информации</b> из многоканального растрового <b><sc_element sys_idtf="image">изображения</b>.](*<- lang_ru;; =>nrel_format: format_html;;*);;
+		*);;
+*);
+
+
+<- rrel_key_sc_element: ... 
+(*
+ => nrel_main_idtf:
+[Утв. 1 о классификации изображения.] (* <- lang_ru;; *);;
+ <= nrel_sc_text_translation: ...
+	 (*
+    	  -> rrel_example:
+		[В классификации изображения с  <b><sc_element sys_idtf="learning">обучением</b> используются спектральные сигнатуры, полученые из <b><sc_element sys_idtf="training_sample">обучающих выборок</b>.](*<-lang_ru;; =>nrel_format: format_html;;*);;
+	*);;
+=> nrel_using_constants: 
+{
+training_sample;
+learning
+};;
+*);
+
+<-rrel_explored_concept: section_subject_domain_of_conceptually_pragmatic_tasks;;
+
+
+
+

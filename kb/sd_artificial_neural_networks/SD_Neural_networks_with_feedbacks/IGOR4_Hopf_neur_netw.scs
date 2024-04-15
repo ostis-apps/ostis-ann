@@ -1,0 +1,63 @@
+definition -> ...
+	(*
+		=> nrel_main_idtf: [Опр.(нейронная сеть Хопфилда)](* <- lang_ru;; *);;
+		<= nrel_sc_text_translation:...
+		(*
+			-> rrel_example: [Нейронная сеть Хопфилда - полнозвязная рекуррентная нейронная сеть с единичным обратным соответствием.](* <- lang_ru;; *);;
+		*);;
+		-> rrel_key_sc_element: Hopfield_neural_network;;
+		<= nrel_using_constants :...//переделать через соответствие и обратное соответствие
+		(*
+			-> relaxed_neural_network; nrel_backward_mapping; unique_existence;nrel_bijective_mapping;;
+		*);;
+	*);; 
+statement -> ...
+	(*
+         -> rrel_key_sc_element: Hopfield_neural_network; concept_state_of_equilibrium;;
+		=> nrel_main_idtf: [Утв.(состояние равновесия)](* <- lang_ru;; *);;
+		<= nrel_sc_text_translation:...
+		(*
+			-> rrel_example: [Состояние равновесия нейронной сети Хопфилда определяется заранее.] (*<- lang_ru;; *);;
+		*);;
+*);;
+//done
+illustration -> ...
+	(*
+         -> rrel_key_sc_element: Hopfield_neural_network;;
+		=> nrel_main_idtf: [Рис.(нейронная сеть Хопфилда)](* <- lang_ru;; *);;
+		<= nrel_sc_text_translation: ... (* -> "file://images//Hopf_neur_netw.png" ;; *);;
+  *);;
+Hopfield_neural_network<-rrel_explored_concept: section_subject_domain_of_neural_networks_with_feedbacks;;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

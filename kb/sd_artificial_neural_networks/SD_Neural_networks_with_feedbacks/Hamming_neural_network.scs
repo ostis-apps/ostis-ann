@@ -1,0 +1,82 @@
+Hamming_neural_network
+	=>nrel_main_idtf:
+	[сеть Хэмминга]
+	(* <- lang_ru;; *);
+	[нейронная сеть Хэмминга]
+	(* <- lang_ru;; *);
+	
+///////////////////////////////////////////////////////////////////////////
+	<-rrel_key_sc_element: 
+	Definition_of_Hamming_neural_network
+		(*
+			<-definition;;
+			<=nrel_sc_text_translation:...
+			(*
+				-> rrel_example:
+				[<p>				
+				<b>Сеть Хэмминга</b>  -  класс нейронной сети с <sc_element sys_idtf = "fixed_connection">фиксированными связями</sc_element>, 
+				обладающая свойством <sc_element sys_idtf = "relaxation_parameter">релаксации</sc_element>, 
+				с <sc_element sys_idtf = "feedback">обратными связями</sc_element>, использующаяся в основном для распознавания образов, 
+				мерой близости которой является <sc_element sys_idtf = "Hamming_distance">расстояние Хэмминга</sc_element>.
+				</p>] 
+				(*
+				<-lang_ru;;
+				=> nrel_format: format_html;;
+				*);;
+			*);;
+		=>nrel_main_idtf:[Опр. (сеть Хэмминга)](* <-lang_ru;; => nrel_format: format_html;;*);;
+		<=nrel_using_constants:...
+			(*
+				->concept_pattern_recognition;relaxation_parameter;Hamming_distance;fixed_connection;feedback;; 
+			*);;
+		*);
+///////////////////////////////////////////////////////////////////
+<-parameter_relaxation;
+<-concept_state_of_equilibrium;
+
+
+
+			 
+<- rrel_key_sc_element:...
+(*
+	<- illustration;;
+	=> nrel_main_idtf: [Рис. (пример нейронной сети Хэмминга)] (* <- lang_ru;;	*);;
+	<= nrel_sc_text_translation:...
+	(*
+		-> rrel_example: "file://images/example_Haming_nn.png"
+		(*
+			=> nrel_format: format_png;;
+		*);;
+	*);;
+*);;
+
+Hamming_neural_network<-rrel_explored_concept: section_subject_domain_of_neural_networks_with_feedbacks;;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

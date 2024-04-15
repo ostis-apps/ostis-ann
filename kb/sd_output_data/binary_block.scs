@@ -1,0 +1,63 @@
+sc_node_not_relation->binary_block;;
+
+binary_block=> nrel_main_idtf: [бинарный блок](* <- lang_ru;; *);;
+binary_block=> nrel_main_idtf: [binary block](* <- lang_en;; *);;
+definition ->...
+(*
+->rrel_key_sc_element: binary_block;;
+<= nrel_sc_text_translation: ...(*->rrel_example:[Бинарный блок — это объект, представляющий собой необработанные данные.](*<-lang_ru;;*);;*);;
+=> nrel_main_idtf: [Определение (бинарный блок)](*<- lang_ru;;*);;
+=> nrel_using_constants:
+{ 
+ object;
+ raw_data
+};;
+*);; 
+
+statement ->...
+(*
+->rrel_key_sc_element: binary_block;;
+<= nrel_sc_text_translation: ...(*->rrel_example:[Главная задача бинарного блока - обеспечивать эффективный способ обработки больших объектов сырых данных или больших файлов.](*<-lang_ru;;*);;*);;
+=> nrel_main_idtf: [Утверждение(бинарный блок)](*<- lang_ru;;*);;
+=> nrel_using_constants:
+{
+nrel_treatment;
+raw_data;
+file;
+nrel_main_task
+};;
+*);;
+block_y<-rrel_example:binary_block;;
+binary_block=>nrel_inclusion:neural_element;;
+
+binary_block<-rrel_concept_explored_in_unrelated_subject_domain: section_subject_domain_output_data;;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

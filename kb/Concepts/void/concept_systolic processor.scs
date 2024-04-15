@@ -1,0 +1,33 @@
+concept_systolic_processor<-sc_node_not_relation;
+
+=> nrel_main_idtf: [систолический процессор](* <- lang_ru;; *);
+=> nrel_main_idtf: [systolic processor](* <- lang_en;; *);
+
+ <-rrel_key_sc_element:...
+(*
+<-definition;;
+<= nrel_sc_text_translation: ...(*->rrel_example:[Систолический процессор - это однородная вычислительная среда из процессорных элементов, совмещающая в себе свойства конвейерной и матричной обработки.](*<-lang_ru;;*);;*);;
+=> nrel_main_idtf: [Определение (систолический процессор)](*<- lang_ru;;*);;
+=> nrel_using_constants:
+{ 
+ computing_environment;
+ processor_element;
+conveyor_processing;
+matrix_processing
+};;
+*);
+
+<-rrel_key_sc_element:...
+(*
+<= nrel_sc_text_translation: ...(*->rrel_example:[Вычислительный процесс в систолических структурах представляет собой непрерывную и регулярную передачу данных от одного ПЭ к другому без запоминания промежуточных результатов вычисления.](*<-lang_ru;;*);;*);;
+=> nrel_main_idtf: [Утверждение(систолический процессор)](*<- lang_ru;;*);;
+=> nrel_using_constants:
+{
+systolic_structure;
+data_transfer;
+intermediate_result;
+computational_process
+};;
+*);;
+systolic_processor_x<-rrel_example:systolic_processor;;
+systolic_processor=>nrel_inclusion:processor;;

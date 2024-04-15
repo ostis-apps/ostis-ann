@@ -1,0 +1,37 @@
+sc_node_not_relation->input_channel;;
+
+
+input_channel=> nrel_main_idtf: [входной канал](* <- lang_ru;; *);;
+input_channel=> nrel_main_idtf: [input channel](* <- lang_en;; *);;
+definition ->...
+(*
+->rrel_key_sc_element: input_channel;;
+<= nrel_sc_text_translation: ...(*->rrel_example:[Входной канал - канал в искусственном нейроне,через который <b><sc_element sys_idtf="neuron">нейрон</b>  получает <b><sc_element sys_idtf="input_data">входные данные</b>.](*<-lang_ru;;=> nrel_format: format_html;;*);;*);;
+=> nrel_main_idtf: [Определение (входной канал)](*<- lang_ru;;=> nrel_format: format_html;;*);;
+=> nrel_using_constants:
+{ 
+neuron;
+input_data;
+channel
+};;
+*);; 
+
+
+statement ->...
+(*
+->rrel_key_sc_element: input_channel;;
+<= nrel_sc_text_translation: ...(*->rrel_example:[В <b><sc_element sys_idtf="neuron">нейроне</b> присутствует несколько входных каналов,через которые <b><sc_element sys_idtf="neuron">нейрон</b> получает данные из других <b><sc_element sys_idtf="neuron">нейронов</b> или из вне.](*<-lang_ru;;=> nrel_format: format_html;;*);;*);;
+=> nrel_main_idtf: [Утверждение(входной канал)](*<- lang_ru;;=> nrel_format: format_html;;*);;
+=> nrel_using_constants:
+{
+neuron;
+input_data
+};;
+*);;
+first_input_channel<-rrel_example:input_channel;;
+input_channel<=nrel_inclusion:channel;;
+input_channel<-rrel_explored_concept: section_subject_domain_of_input_mathematics_data;;
+
+
+
+

@@ -1,0 +1,50 @@
+definition -> ...
+	(*
+		=> nrel_main_idtf: [Опр.(релаксационная нейронная сеть)](* <- lang_ru;; *);;
+		<= nrel_sc_text_translation:...
+		(*
+			-> rrel_example: [Релаксационная нейронная сеть - класс нейронных сетей, в котором выполнение алгоритма обучения завершается состоянием равновесия.](* <- lang_ru;; *);;
+		*);;
+		-> rrel_key_sc_element: relaxed_neural_network;;
+		<= nrel_using_constants :...
+		(*
+			-> concept_neural_network_in_graphical_representation; concept_state_of_equilibrium; concept_learning_algorithm;;
+		*);;
+	*);; 
+relaxed_neural_network -> concept_Kosco_neural_network;;
+illustration -> ...
+	(*
+         -> rrel_key_sc_element: relaxed_neural_network;;
+		=> nrel_main_idtf: [Рис.(релаксационная нейронная сеть)](* <- lang_ru;; *);;
+		<= nrel_sc_text_translation: ... (* -> "file://images//relaxed_neur_netw.png" ;; *);;
+  *);;
+// done
+
+relaxed_neural_network<-rrel_explored_concept: section_subject_domain_of_relaxed_networks;;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

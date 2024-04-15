@@ -1,0 +1,83 @@
+random_value<-sc_node_not_relation;;
+
+random_value=>nrel_main_idtf:
+[случайная величина](*<-lang_ru;;*);
+[random value](*<-lang_en;;*);;
+random_value=>nrel_idtf:
+[случайное значение](*<-lang_ru;;*);;
+
+
+nrel_inclusion->(math_concept=>random_value);;
+
+random_value<- rrel_key_sc_element: ...
+(*
+<- definition;;
+=> nrel_main_idtf:
+      [Опр. (случайная величина)] (* <- lang_ru;; *);;
+=> nrel_using_constants: 
+	{
+		variable;
+		value;
+		result;
+		random_event;
+		nrel_submit
+	};; 
+<= nrel_sc_text_translation: ... 
+		(*
+			->rrel_example:
+			[Случайная величина - <b><sc_element sys_idtf="variable">переменная</b>, <b><sc_element sys_idtf="value">значения</b> которой представляют собой <b><sc_element sys_idtf="result">исходы</b> какого-нибудь <b><sc_element sys_idtf="random_event">случайного события</b>.](*<- lang_ru;;=>nrel_format: format_html;;*);;
+		*);;
+*);;
+
+
+random_value<- rrel_key_sc_element: ... 
+(*
+ => nrel_main_idtf:
+[Утв. 1 о случайной величине] (* <- lang_ru;; *);;
+ <= nrel_sc_text_translation: ...
+	 (*
+    	  -> rrel_example:
+		[<b><sc_element sys_idtf="Probability_theory">Теория вероятности</b> <b><sc_element sys_idtf="nrel_using">использует</b> случайные величины.](*<-lang_ru;;=>nrel_format: format_html;;*);;
+	*);;
+=> nrel_using_constants: 
+{
+Probability_theory;
+nrel_using
+};;
+*);;
+
+random_value-> rrel_example:
+[*
+random_value->a;;
+*];;
+
+random_value<-rrel_explored_concept: section_subject_domain_mathematics;;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

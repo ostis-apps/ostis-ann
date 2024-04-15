@@ -1,0 +1,53 @@
+gradient_method_optimization
+	<- sc_node_not_relation;
+	=> nrel_main_idtf: [градиентный метод оптимизации] (* <- lang_ru;; *);
+	=> nrel_main_idtf: [gradient method optimization] (* <- lang_en;; *);;
+
+
+definition -> ...
+	(*
+		-> rrel_key_sc_element: gradient_method_optimization;;
+		
+		=> nrel_main_idtf: [Опр.(градиентный метод оптимизации)] (* <- lang_ru;; *);;
+
+		<= nrel_using_constants: ...
+			(*
+				-> nrel_function_gradient;;
+				-> concept_optimization_problem;;
+			*);;
+
+		<= nrel_sc_text_translation: ...
+			(*
+				-> [Градиентным методом оптимизации называется такой метод, который использует понятие градиента функции для решения задачи оптимизации] (* <- lang_ru;; *);;
+			*);;
+	*);;
+
+gradient_method_optimization<-rrel_explored_concept: section_subject_domain_of_algorithms_and_functions;;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

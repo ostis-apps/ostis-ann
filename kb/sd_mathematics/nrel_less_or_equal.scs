@@ -1,0 +1,71 @@
+nrel_less_or_equal<-rrel_key_sc_element: ... 
+(*
+<- definition;;
+=> nrel_main_idtf:[Опр. (кластер*)](* <- lang_ru;; *);;
+<= nrel_sc_text_translation: ...
+	 (*
+      -> rrel_example:[Меньше или равно-это арифметическая операция сравнения чисел, при которой первое число (первый компонент связки) может быть меньше второго или равняться ему.](* <- lang_ru;;*);;
+	*);;
+=> nrel_using_constants: 
+	{
+       	arithmetic_operation;
+		number
+    	};;
+*);;
+
+nrel_less_or_equal
+<- sc_node_norole_relation;
+<- binary_relation;
+<- oriented_relation;
+<|-reflexive_relation;
+<|-symmetric_relation;
+<- transitive_relation;
+<-non_strict_order_relation;;
+
+
+nrel_less_or_equal=> nrel_main_idtf:
+      [меньше или равно*]
+      (*<-lang_ru;;*);
+       [less or equal*]
+       (*<-lang_en;;*);;
+
+arithmetic_operation->nrel_less_or_equal;;
+nrel_less_or_equal<-rrel_explored_relation:subject_domain_numbers_and_numeric_structures;;
+
+illustration -> ...
+(*
+->rrel_key_sc_element: nrel_less_or_equal;;
+<= nrel_sc_text_translation: ...(*->"file://images//example_less_or_equal.png";;*);;
+=> nrel_main_idtf: [Рисунок(меньше или равно*)](*<- lang_ru;;*);;
+*);;
+
+nrel_less_or_equal<-rrel_explored_concept: section_subject_domain_mathematics;;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

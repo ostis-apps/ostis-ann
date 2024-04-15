@@ -1,0 +1,61 @@
+sc_node_not_relation-> neural_network_architecture;;
+neural_network_architecture=>nrel_main_idtf:[neural network architecture](* <-lang_en;; *);;
+neural_network_architecture=>nrel_main_idtf:[архитектура нейронной сети](* <-lang_ru;; *);; 
+definition -> ...
+	(*
+		=> nrel_main_idtf: [Опр.(архитектура нейронной сети)](* <- lang_ru;; *);;
+		<= nrel_sc_text_translation:...
+		(*
+			-> rrel_example: [Архитектура нейронной сети - совокупность свойств нейронной сети, которая определяет функцию активации, способ и алгоритм обучения и количество слоев.](* <- lang_ru;; *);;
+		*);;
+		-> rrel_key_sc_element: neural_network_architecture;;
+		<= nrel_using_constants :...
+		(*
+			-> concept_neural_network_in_graphical_representation;  nrel_activation_function; nrel_number_of_layer; learning; sinaps;;
+		*);;
+	*);; 
+statement -> ...
+	(*
+         -> rrel_key_sc_element:  neural_network_architecture; concept_neural_network_in_graphical_representation;;
+		=> nrel_main_idtf: [Утв.(нейронная сеть)](* <- lang_ru;; *);;
+		<= nrel_sc_text_translation:...
+		(*
+			-> rrel_example: [Любая нейронная сеть характеризуется своей архитектурой.](* <- lang_ru;; *);;
+		*);;
+*);;
+ neural_network_architecture=>nrel_subdividing: ... (*
+          <- neural_networks_without_feedbacks; neural_networks_with_feedback; self_organizing_neural_network; hybrid_neural_network;; //+гибридные  
+*);;
+neural_network_architecture<-rrel_explored_concept: section_subject_domain_of_artificial_neural_networks;;
+//классификация по архитектуре головко стр 43-44 
+//done
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

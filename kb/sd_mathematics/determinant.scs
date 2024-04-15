@@ -1,0 +1,79 @@
+sc_node_not_relation->determinant;;
+sc_node_not_relation->volume;;
+sc_node_not_relation->line;;
+sc_node_not_relation->column;;
+sc_node_not_relation->matrix;;
+sc_node_not_relation->parallelepiped;;
+sc_node_not_relation->matrix_element;;
+sc_node_not_relation->24;;
+sc_node_not_relation->matrix_characteristic;;
+
+
+sc_node_norole_relation->nrel_algebraic_sum;;
+sc_node_norole_relation->nrel_dimension;;
+sc_node_norole_relation->nrel_size;;
+
+determinant=> nrel_main_idtf: [детерминант](* <- lang_ru;; *);;
+determinant=> nrel_main_idtf: [determinant](* <- lang_en;; *);;
+definition ->...
+(*
+->rrel_key_sc_element:  determinant;;
+<= nrel_sc_text_translation: ...(*->rrel_example:[Детерминант - это число равное обьёму параллелепипеда натянутого на строки и столбцы матрицы.](*<-lang_ru;;*);;*);;
+=> nrel_main_idtf: [Определение (детерминант)](*<- lang_ru;;*);;
+=> nrel_using_constants:
+{ 
+volume;
+number;
+line;
+column;
+matrix;
+parallelepiped
+};;
+*);; 
+
+statement ->...
+(*
+->rrel_key_sc_element: determinant;;
+<= nrel_sc_text_translation: ...(*->rrel_example:[Детерминант считается как алгебраическая сумма всех элементов матрицы.](*<-lang_ru;;*);;*);;
+=> nrel_main_idtf: [Утверждение(детерминант)](*<- lang_ru;;*);;
+=> nrel_using_constants:
+{
+nrel_algebraic_sum;
+matrix_element
+};;
+*);;
+
+24<-rrel_example:determinant;;
+determinant=>nrel_inclusion:matrix_characteristic;;
+
+determinant<-rrel_explored_concept: section_subject_domain_mathematics;;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

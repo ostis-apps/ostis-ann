@@ -1,0 +1,43 @@
+sc_node_not_relation->output_martix;;
+
+
+output_martix=> nrel_main_idtf: [выходная матрица](* <- lang_ru;; *);;
+output_martix=> nrel_main_idtf: [output matrix](* <- lang_en;; *);;
+definition ->...
+(*
+->rrel_key_sc_element: output_martix;;
+<= nrel_sc_text_translation: ...(*->rrel_example:[Выходная матрица - один из видов<b><sc_element sys_idtf="output_data"> выходных данных</b>,представляющая собой<b><sc_element sys_idtf="matrix"> матрицу</b> ,содержащию различные данные,которая получилась в результате обработки нейронной сетью.](*<-lang_ru;;=> nrel_format: format_html;;*);;*);;
+=> nrel_main_idtf: [Определение (выходная матрица)](*<- lang_ru;;=> nrel_format: format_html;;*);;
+=> nrel_using_constants:
+{ 
+output_data;
+neural_network;
+nrel_process;
+matrix
+};;
+*);; 
+
+
+statement ->...
+(*
+->rrel_key_sc_element: output_martix;;
+<= nrel_sc_text_translation: ...(*->rrel_example:[Выходные матрицы представляют собой <b><sc_element sys_idtf="matrix"> матрицы</b>,с помощью которых формируется графика,усовершенствованная нейронной сетью.](*<-lang_ru;;=> nrel_format: format_html;;*);;*);;
+=> nrel_main_idtf: [Утверждение(выходная матрица)](*<- lang_ru;;=> nrel_format: format_html;;*);;
+=> nrel_using_constants:
+{
+neural_network;
+nrel_process
+};;
+*);;
+illustration -> ...
+(*
+->rrel_key_sc_element: output_martix;;
+<= nrel_sc_text_translation: ...(*->"file://images/output_matrix.png";;*);;
+=> nrel_main_idtf: [Рисунок(выходная матрица)](*<- lang_ru;;*);;
+*);;
+output_data=>nrel_inclusion:output_martix;;
+output_martix<-rrel_explored_concept: section_subject_domain_of_output_mathematics_data;;
+
+
+
+

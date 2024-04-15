@@ -1,0 +1,51 @@
+concept_processes_management
+<- sc_node_norole_relation;
+<=nrel_inclusion:concept_conceptually_pragmatic_tasks;
+
+=>nrel_main_idtf:
+[управление процессами](*<-lang_ru;;*);
+[processes management](*<-lang_en;;*);
+
+=>nrel_idtf:
+[процесс управления](*<-lang_ru;;*);
+
+<- rrel_key_sc_element: ...
+(*
+<- definition;;
+=> nrel_main_idtf:
+      [Опр. (управление процессами)] (* <- lang_ru;; *);;
+=> nrel_using_constants: 
+	{
+		process;
+		nrel_forecasting;
+		task
+	};; 
+<= nrel_sc_text_translation: ... 
+		(*
+			->rrel_example:
+			[Управление процессами- это <b><sc_element sys_idtf="process">процесс</b> постановки целей и <b><sc_element sys_idtf="task">задач</b> с целью <b><sc_element sys_idtf="nrel_forecasting">прогназирования</b> поведения производства.](*<- lang_ru;;=>nrel_format: format_html;;*);;
+		*);;
+*);
+
+<- rrel_key_sc_element: ... 
+(*
+ => nrel_main_idtf:
+[Утв. 1 о процессе управления] (* <- lang_ru;; *);;
+ <= nrel_sc_text_translation: ...
+	 (*
+    	  -> rrel_example:
+		[Процесс управления с использованием неёронных сетей сводится к <b><sc_element sys_idtf="nrel_modeling">моделированию</b> линейных и не линейных <b><sc_element sys_idtf="process">процессов</b>,сложных к пониманию <b><sc_element sys_idtf="process">процессов</b>, <b><sc_element sys_idtf="process">процессов</b> основанных на не поддающихся измерению <b><sc_element sys_idtf="parametr">параметрах</b>.](*<-lang_ru;; =>nrel_format: format_html;;*);;
+	*);;
+=> nrel_using_constants: 
+{
+process;
+nrel_modeling;
+parametr
+};;
+*);
+
+<-rrel_explored_concept: section_subject_domain_of_conceptually_pragmatic_tasks;;
+
+
+
+

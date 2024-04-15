@@ -1,0 +1,73 @@
+vector
+	<- sc_node_not_relation;
+	=> nrel_main_idtf: [вектор] (* <- lang_ru;; *);
+	=> nrel_main_idtf: [vector] (* <- lang_en;; *);;
+
+definition -> ...
+	(*
+		-> rrel_key_sc_element: vector;;
+		
+		=> nrel_main_idtf: [Опр.(вектор)] (* <- lang_ru;; *);;
+
+		<= nrel_using_constants: ...
+			(*
+				-> oriented_set;;
+				-> number;;
+			*);;
+
+		<= nrel_sc_text_translation: ...
+			(*
+				-> [Вектором называется упорядоченное множество чисел. Вектор из n чисел называется n-мерным вектором, а i-ое число этого множества называется i-ой координатой вектора] (* <- lang_ru;; *);;
+			*);;
+	*);;
+
+
+affirmation -> ...
+	(*
+		-> rrel_key_sc_element: vector;;
+
+		=> nrel_main_idtf: [Утв.(вектор, величина)] (* <- lang_ru;; *);;
+
+		<= nrel_sc_text_translation: ...
+			(*
+				-> [Если значения всех величин вектора есть нули, то этот вектор называется нулевым] (* <- lang_ru;; *);;
+			*);;
+	*);;
+
+
+illustration -> rrel_example: ...
+(*
+	=> nrel_main_idtf: [Рис.(вектор)] (* <- lang_ru;; *);;
+	-> rrel_key_sc_element: vector;;
+	<= nrel_sc_text_translation: ... (* -> "file://images//vector.png";; *);;
+*);;
+
+
+
+vector<-rrel_explored_concept: section_subject_domain_mathematics;;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

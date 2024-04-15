@@ -25,7 +25,7 @@ SC_AGENT_IMPLEMENTATION(AssignDynamicArgumentTestAgent)
     return SC_RESULT_OK;
   }
 
-  ScAddr dynamicArgument = utils::IteratorUtils::getFirstByOutRelation(
+  ScAddr dynamicArgument = utils::IteratorUtils::getAnyByOutRelation(
         &m_memoryCtx,
         actionAddr,
         scAgentsCommon::CoreKeynodes::rrel_1);

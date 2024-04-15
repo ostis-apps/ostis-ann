@@ -1,0 +1,75 @@
+sc_node_not_relation->linear_systolic_array;;
+sc_node_not_relation->data_structure;;
+sc_node_not_relation->homogeneous_network;;
+sc_node_not_relation->data_processing_unit;;
+sc_node_not_relation->data_sorting;;
+sc_node_not_relation->array_z;;
+
+sc_node_norole_relation->nrel_convolution;;
+sc_node_norole_relation->nrel_integration;;
+sc_node_norole_relation->nrel_correlation;; 
+sc_node_norole_relation->nrel_multiplication;;
+
+linear_systolic_array=> nrel_main_idtf: [линейный систолический массив](* <- lang_ru;; *);;
+linear_systolic_array=> nrel_main_idtf: [linear systolic array](* <- lang_en;; *);;
+definition ->...
+(*
+->rrel_key_sc_element:  linear_systolic_array;;
+<= nrel_sc_text_translation: ...(*->rrel_example:[Систолический массив представляет собой однородную сеть из плотно соединенных блоков обработки данных.](*<-lang_ru;;*);;*);;
+=> nrel_main_idtf: [Определение (линейный систолический массив)](*<- lang_ru;;*);;
+=> nrel_using_constants:
+{ 
+homogeneous_network;
+ data_processing_unit
+};;
+*);; 
+
+statement ->...
+(*
+->rrel_key_sc_element: linear_systolic_array;;
+<= nrel_sc_text_translation: ...(*->rrel_example:[Линейные систолические массивы часто используются для конкретных операций, такие , как,  выполнение массивно параллельной интеграции, свертки , корреляции , умножения матриц или сортировки данных задач. ](*<-lang_ru;;*);;*);;
+=> nrel_main_idtf: [Утверждение(линейный систолический массив)](*<- lang_ru;;*);;
+=> nrel_using_constants:
+{
+data_sorting;
+nrel_convolution;
+nrel_integration;
+nrel_correlation;
+nrel_multiplication
+};;
+*);;
+
+array_z<-rrel_example:linear_systolic_array;;
+linear_systolic_array=>nrel_inclusion:data_structure;;
+
+linear_systolic_array<-rrel_explored_concept: section_subject_domain_of_algorithms_and_functions;;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

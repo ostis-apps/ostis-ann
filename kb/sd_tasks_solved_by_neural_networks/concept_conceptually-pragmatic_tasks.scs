@@ -1,0 +1,49 @@
+concept_conceptually_pragmatic_tasks
+<-sc_node_not_relation;
+<=nrel_inclusion:tasks;
+
+=>nrel_main_idtf:
+[концептуально прагматическая задача](*<-lang_ru;;*);
+[conceptually-pragmatic task](*<-lang_en;;*);
+
+<- rrel_key_sc_element: ...
+(*
+<- definition;;
+=> nrel_main_idtf:
+      [Опр. (концептуально прагматическая задача)] (* <- lang_ru;; *);;
+=> nrel_using_constants: 
+	{
+		task;
+		decision;
+		number
+	};; 
+<= nrel_sc_text_translation: ... 
+		(*
+			->rrel_example:
+			[Концептуально прагматическая задача - это  <b><sc_element sys_idtf="task">задачи</b> <b> <sc_element sys_idtf="decision">решение</b> которых нельзя выразить в <sc_element sys_idtf="number">числовом</b> виде.](*<- lang_ru;; =>nrel_format: format_html;;*);;
+		*);;
+*);
+
+
+<- rrel_key_sc_element: ... 
+(*
+ => nrel_main_idtf:
+[Утв. 1 о концептуально прагматические задачах] (* <- lang_ru;; *);;
+ <= nrel_sc_text_translation: ...
+	 (*
+    	  -> rrel_example:
+		[Концептуально прагматическая <b><sc_element sys_idtf="task">задача</b> <b><sc_element sys_idtf="nrel_inclusion">включают</b> в себя все  <b><sc_element sys_idtf="task">задачи</b> обработки <b><sc_element sys_idtf="image">изображений</b>.](*<-lang_ru;; =>nrel_format: format_html;;*);;
+	*);;
+=> nrel_using_constants: 
+{
+image;
+nrel_inclusion;
+task
+};;
+*);
+
+<-rrel_explored_concept: section_subject_domain_tasks_solved_by_neural_networks;;
+
+
+
+

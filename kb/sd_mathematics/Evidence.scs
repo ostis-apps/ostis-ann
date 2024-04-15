@@ -1,0 +1,73 @@
+sc_node_not_relation->approval;;
+sc_node_not_relation->reasoning;;
+sc_node_not_relation->logical_rule;;
+sc_node_not_relation->Evidence;;
+sc_node_not_relation->hypotheses;;
+sc_node_not_relation->theories;;
+sc_node_not_relation->structural_units;;
+sc_node_not_relation->fundamental_task;;
+sc_node_not_relation->theorem_proof;;
+
+
+Evidence=> nrel_main_idtf: [Доказательство](* <- lang_ru;; *);;
+Evidence=> nrel_main_idtf: [Evidence](* <- lang_en;; *);;
+definition ->...
+(*
+->rrel_key_sc_element: Evidence;;
+<= nrel_sc_text_translation: ...(*->rrel_example:[Доказа́тельство — рассуждение по определённым логическим правилам, обосновывающее истинность какого-либо предположения, утверждения, гипотезы или теории.](*<-lang_ru;;*);;*);;
+=> nrel_main_idtf: [Определение (Доказательство)](*<- lang_ru;;*);;
+=> nrel_using_constants:
+{ 
+ approval;
+ reasoning;
+logical_rule;
+hypotheses;
+theories
+};;
+*);; 
+
+statement ->...
+(*
+->rrel_key_sc_element: Evidence;;
+<= nrel_sc_text_translation: ...(*->rrel_example:[Внутри любого доказательства можно различить постоянные структурные единицы, соответствующие его фундаметальной задаче.](*<-lang_ru;;*);;*);;
+=> nrel_main_idtf: [Утверждение(Доказательство)](*<- lang_ru;;*);;
+=> nrel_using_constants:
+{
+structural_units;
+fundamental_task
+};;
+*);;
+theorem_proof<-rrel_example:Evidence;;
+Evidence=>nrel_inclusion:reasoning;;
+
+Evidence<-rrel_explored_concept: section_subject_domain_mathematics;;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

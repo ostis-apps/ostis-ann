@@ -1,0 +1,40 @@
+sc_node_not_relation->output_map;;
+
+
+output_map=> nrel_main_idtf: [выходное соответствие](* <- lang_ru;; *);;
+output_map=> nrel_main_idtf: [output map](* <- lang_en;; *);;
+definition ->...
+(*
+->rrel_key_sc_element: output_map;;
+<= nrel_sc_text_translation: ...(*->rrel_example:[Выходное соответствие - тройка элементов(<b><sc_element sys_idtf="nrel_mapping*">соответствие</b>),которое поступает на <b><sc_element sys_idtf="output_data*">выход</b> из нейронной сети после обработки.](*<-lang_ru;;=> nrel_format: format_html;;*);;*);;
+=> nrel_main_idtf: [Определение (выходное соответствие)](*<- lang_ru;;=> nrel_format: format_html;;*);;
+=> nrel_using_constants:
+{ 
+output_data;
+neural_network;
+nrel_process;
+nrel_mapping
+};;
+*);; 
+
+
+statement ->...
+(*
+->rrel_key_sc_element: output_map;;
+<= nrel_sc_text_translation: ...(*->rrel_example:[Выходное соответствие формируется из <b><sc_element sys_idtf="input_map*">входного соответствия</b>  после обработки нейронной сетью.](*<-lang_ru;;=> nrel_format: format_html;;*);;*);;
+=> nrel_main_idtf: [Утверждение(выходное соответствие)](*<- lang_ru;;=> nrel_format: format_html;;*);;
+=> nrel_using_constants:
+{
+input_map;
+nrel_process;
+neural_network
+};;
+*);;
+
+output_map_x<-rrel_example:output_map;;
+output_data=>nrel_inclusion:output_map;;
+output_map<-rrel_explored_concept: section_subject_domain_of_output_mathematics_data;;
+
+
+
+
