@@ -1,0 +1,41 @@
+concept_feedforward_ann
+<- sc_node_class;
+<= nrel_inclusion: concept_artificial_neural_network;
+=> nrel_main_idtf:
+    [искусственная нейронная сеть с прямыми связями](* <- lang_ru;; *);
+    [feed-forward artificial neural network](* <- lang_en;; *);
+=> nrel_idtf:
+    [и.н.с. с прямыми связями](* <- lang_ru;; *);
+<= nrel_basic_decomposition: ...
+(*
+    <- sc_node_tuple;;
+    -> concept_perceptron;;
+    -> concept_support_vector_machine;;
+    -> concept_radial_basis_function_network;;
+    -> concept_convolutional_ann;;
+*);
+
+<- rrel_key_sc_element:
+    ...
+    (*
+    => nrel_main_idtf:
+        [Опр. (искусственная нейронная сеть)]
+        (* <- lang_ru;; *);
+        [Def. (artificial neural network)]
+        (* <- lang_en;; *);;
+    <- definition;;
+    => nrel_sc_text_translation:
+        {
+        rrel_example:
+            []
+            (* <- lang_ru;; *);
+        rrel_example:
+            []
+            (* <- lang_en;; *)
+        };;
+    => nrel_using_constants:
+        {
+        concept_artificial_neural_network;
+        concept_feedforward_ann
+        };;
+    *);;

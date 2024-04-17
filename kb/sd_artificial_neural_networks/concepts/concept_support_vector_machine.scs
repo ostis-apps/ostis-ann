@@ -1,0 +1,31 @@
+concept_support_vector_machine
+<- sc_node_class;
+<= nrel_inclusion: concept_feedforward_ann;
+=> nrel_main_idtf:
+    [машина опорных векторов](* <- lang_ru;; *);
+    [support vector machine](* <- lang_en;; *);
+
+<- rrel_key_sc_element:
+    ...
+    (*
+    => nrel_main_idtf:
+        [Опр. (искусственная нейронная сеть)]
+        (* <- lang_ru;; *);
+        [Def. (artificial neural network)]
+        (* <- lang_en;; *);;
+    <- definition;;
+    => nrel_sc_text_translation:
+        {
+        rrel_example:
+            []
+            (* <- lang_ru;; *);
+        rrel_example:
+            []
+            (* <- lang_en;; *)
+        };;
+    => nrel_using_constants:
+        {
+        concept_artificial_neural_network;
+        concept_support_vector_machine
+        };;
+    *);;
