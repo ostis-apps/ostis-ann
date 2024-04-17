@@ -1,6 +1,8 @@
 # Change start page
 !kb/ims.ostis.kb/ui/ui_start_sc_element.scs
 !kb/ims.ostis.kb/ims/knowledge_base_IMS.scs
+!kb/sd_artificial_neural_networks_old
 
 #components
 kb
+
