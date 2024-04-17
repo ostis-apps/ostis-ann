@@ -1,0 +1,33 @@
+concept_convolutional_ann
+<- sc_node_class;
+<= nrel_inclusion: concept_feedforward_ann;
+=> nrel_main_idtf:
+    [сверточная нейронная сеть](* <- lang_ru;; *);
+    [convolutional neural network](* <- lang_en;; *);
+=> nrel_idtf:
+    [CNN](* <- lang_en;; *);
+
+<- rrel_key_sc_element:
+    ...
+    (*
+    => nrel_main_idtf:
+        [Опр. (сверточная нейронная сеть)]
+        (* <- lang_ru;; *);
+        [Def. (convolutional neural network)]
+        (* <- lang_en;; *);;
+    <- definition;;
+    => nrel_sc_text_translation:
+        {
+        rrel_example:
+            [Сверточная нейронная сеть — это искусственная нейронная сеть с прямыми связями, которая самостоятельно выделяет признаки посредством оптимизации фильтров (или ядра).]
+            (* <- lang_ru;; *);
+        rrel_example:
+            [Convolutional neural network is feed-forward neural network that learns feature engineering by itself via filters (or kernel) optimization.]
+            (* <- lang_en;; *)
+        };;
+    => nrel_using_constants:
+        {
+        concept_artificial_neural_network;
+        concept_convolutional_ann
+        };;
+    *);;

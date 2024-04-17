@@ -1,0 +1,33 @@
+concept_jordans_ann
+<- sc_node_class;
+<= nrel_inclusion: concept_recurrent_ann;
+=> nrel_main_idtf:
+    [искусственная нейронная сеть Джордана](* <- lang_ru;; *);
+    [artificial neural network of Jordan](* <- lang_en;; *);
+=> nrel_idtf:
+    [и.н.с. Джордана](* <- lang_ru;; *);
+
+<- rrel_key_sc_element:
+    ...
+    (*
+    => nrel_main_idtf:
+        [Опр. (искусственная нейронная сеть Джордана)]
+        (* <- lang_ru;; *);
+        [Def. (artificial neural network of Jordan)]
+        (* <- lang_en;; *);;
+    <- definition;;
+    => nrel_sc_text_translation:
+        {
+        rrel_example:
+            []
+            (* <- lang_ru;; *);
+        rrel_example:
+            []
+            (* <- lang_en;; *)
+        };;
+    => nrel_using_constants:
+        {
+        concept_artificial_neural_network;
+        concept_jordans_ann
+        };;
+    *);;

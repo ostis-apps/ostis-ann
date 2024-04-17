@@ -1,0 +1,33 @@
+concept_hopfields_ann
+<- sc_node_class;
+<= nrel_inclusion: concept_relaxation_ann;
+=> nrel_main_idtf:
+    [искусственная нейронная сеть Хопфилда](* <- lang_ru;; *);
+    [artificial neural network of Hopfield](* <- lang_en;; *);
+=> nrel_idtf:
+    [и.н.с. Хопфилда](* <- lang_ru;; *);
+
+<- rrel_key_sc_element:
+    ...
+    (*
+    => nrel_main_idtf:
+        [Опр. (искусственная нейронная сеть Хопфилда)]
+        (* <- lang_ru;; *);
+        [Def. (artificial neural network of Hopfield)]
+        (* <- lang_en;; *);;
+    <- definition;;
+    => nrel_sc_text_translation:
+        {
+        rrel_example:
+            []
+            (* <- lang_ru;; *);
+        rrel_example:
+            []
+            (* <- lang_en;; *)
+        };;
+    => nrel_using_constants:
+        {
+        concept_artificial_neural_network;
+        concept_hopfields_ann
+        };;
+    *);;

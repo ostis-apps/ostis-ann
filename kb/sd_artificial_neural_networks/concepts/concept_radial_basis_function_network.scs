@@ -1,0 +1,32 @@
+concept_radial_basis_function_network
+<- sc_node_class;
+<= nrel_inclusion: concept_feedforward_ann;
+=> nrel_main_idtf:
+    [сеть радиально-базисных функций](* <- lang_ru;; *);
+    [radial basis function network](* <- lang_en;; *);
+
+<- rrel_key_sc_element:
+    ...
+    (*
+    => nrel_main_idtf:
+        [Опр. (искусственная нейронная сеть)]
+        (* <- lang_ru;; *);
+        [Def. (artificial neural network)]
+        (* <- lang_en;; *);;
+    <- definition;;
+    => nrel_sc_text_translation:
+        {
+        rrel_example:
+            [Сеть радиально-базисных функций — искусственная нейронная сеть, которая использует радиальные базисные функции как функции активации.]
+            (* <- lang_ru;; *);
+        rrel_example:
+            [Radial basis function network is an artificial neural network that uses radial basis functions as activation functions.]
+            (* <- lang_en;; *)
+        };;
+    => nrel_using_constants:
+        {
+        concept_artificial_neural_network;
+        concept_radial_basis_function_network;
+        nrel_activation_function
+        };;
+    *);;

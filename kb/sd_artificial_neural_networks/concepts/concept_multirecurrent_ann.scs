@@ -1,0 +1,33 @@
+concept_multirecurrent_ann
+<- sc_node_class;
+<= nrel_inclusion: concept_recurrent_ann;
+=> nrel_main_idtf:
+    [мультирекуррентная искусственная нейронная сеть](* <- lang_ru;; *);
+    [multirecurrent artificial neural network](* <- lang_en;; *);
+=> nrel_idtf:
+    [мультирекуррентная и.н.с.](* <- lang_ru;; *);
+
+<- rrel_key_sc_element:
+    ...
+    (*
+    => nrel_main_idtf:
+        [Опр. (мультирекуррентная искусственная нейронная сеть)]
+        (* <- lang_ru;; *);
+        [Def. (multirecurrent artificial neural network)]
+        (* <- lang_en;; *);;
+    <- definition;;
+    => nrel_sc_text_translation:
+        {
+        rrel_example:
+            []
+            (* <- lang_ru;; *);
+        rrel_example:
+            []
+            (* <- lang_en;; *)
+        };;
+    => nrel_using_constants:
+        {
+        concept_artificial_neural_network;
+        concept_multirecurrent_ann
+        };;
+    *);;

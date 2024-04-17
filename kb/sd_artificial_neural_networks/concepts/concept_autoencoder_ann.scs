@@ -1,0 +1,35 @@
+concept_autoencoder_ann
+<- sc_node_class;
+<= nrel_inclusion: concept_perceptron;
+=> nrel_main_idtf:
+    [автоэнкодерная нейронная сеть](* <- lang_ru;; *);
+    [autoencoder neural network](* <- lang_en;; *);
+
+=> nrel_idtf:
+    [автоэнкодерная и.н.с.](* <- lang_ru;; *);
+    [autoencoder](* <- lang_en;; *);
+
+<- rrel_key_sc_element:
+    ...
+    (*
+    => nrel_main_idtf:
+        [Опр. (автоэнкодерная нейронная сеть)]
+        (* <- lang_ru;; *);
+        [Def. (autoencoder neural network)]
+        (* <- lang_en;; *);;
+    <- definition;;
+    => nrel_sc_text_translation:
+        {
+        rrel_example:
+            []
+            (* <- lang_ru;; *);
+        rrel_example:
+            []
+            (* <- lang_en;; *)
+        };;
+    => nrel_using_constants:
+        {
+        concept_artificial_neural_network;
+        concept_autoencoder_ann
+        };;
+    *);;

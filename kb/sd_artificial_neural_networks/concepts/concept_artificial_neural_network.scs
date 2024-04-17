@@ -1,0 +1,50 @@
+concept_artificial_neural_network
+<- sc_node_class;
+<= nrel_inclusion: program;
+=> nrel_main_idtf:
+    [искусственная нейронная сеть](* <- lang_ru;; *);
+    [artificial neural network](* <- lang_en;; *);
+=> nrel_idtf:
+    [нейросетевой метод](* <- lang_ru;; *);
+    [и.н.с.](* <- lang_ru;; *);
+    [множество искусственных нейронных сетей](* <- lang_ru;; *);
+    [нейронная сеть](* <- lang_ru;; *);
+=> nrel_subdividing: ...
+(*
+    <- sc_node_tuple;;
+    => nrel_main_idtf: [Типология и.н.с. по признаку направленности связей] (* <- lang_ru;; *);;
+    -> concept_feedforward_ann;;
+    -> concept_feedback_ann;;
+*);
+
+=> nrel_subdividing: ...
+(*
+    <- sc_node_tuple;;
+    => nrel_main_idtf: [Типология и.н.с. по признаку полноты связей] (* <- lang_ru;; *);;
+    -> concept_fully_connected_ann;;
+    -> concept_weakly_connected_ann;;
+*);
+
+<- rrel_key_sc_element:
+    ...
+    (*
+    => nrel_main_idtf:
+        [Опр. (искусственная нейронная сеть)]
+        (* <- lang_ru;; *);
+        [Def. (artificial neural network)]
+        (* <- lang_en;; *);;
+    <- definition;;
+    => nrel_sc_text_translation:
+        {
+        rrel_example:
+            []
+            (* <- lang_ru;; *);
+        rrel_example:
+            []
+            (* <- lang_en;; *)
+        };;
+    => nrel_using_constants:
+        {
+        concept_artificial_neural_network
+        };;
+    *);;

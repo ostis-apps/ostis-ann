@@ -1,0 +1,42 @@
+concept_recurrent_ann
+<- sc_node_class;
+<= nrel_inclusion: concept_feedback_ann;
+=> nrel_main_idtf:
+    [рекуррентная нейронная сеть](* <- lang_ru;; *);
+    [recurrent artificial neural network](* <- lang_en;; *);
+=> nrel_idtf:
+    [рекуррентная и.н.с.](* <- lang_ru;; *);
+<= nrel_basic_decomposition: ...
+(*
+    <- sc_node_tuple;;
+    -> concept_jordans_ann;;
+    -> concept_elmans_ann;;
+    -> concept_multirecurrent_ann;;
+    -> concept_lstm_element;;
+    -> concept_gru_element;;
+*);
+
+<- rrel_key_sc_element:
+    ...
+    (*
+    => nrel_main_idtf:
+        [Опр. (рекуррентная нейронная сеть)]
+        (* <- lang_ru;; *);
+        [Def. (recurrent artificial neural network)]
+        (* <- lang_en;; *);;
+    <- definition;;
+    => nrel_sc_text_translation:
+        {
+        rrel_example:
+            []
+            (* <- lang_ru;; *);
+        rrel_example:
+            []
+            (* <- lang_en;; *)
+        };;
+    => nrel_using_constants:
+        {
+        concept_artificial_neural_network;
+        concept_recurrent_ann
+        };;
+    *);;
