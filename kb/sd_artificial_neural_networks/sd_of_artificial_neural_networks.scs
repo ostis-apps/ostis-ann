@@ -1,0 +1,25 @@
+section_subject_domain_of_artificial_neural_networks
+<- atomic_section;
+<- sc_node_struct;
+<- ... (* <= nrel_section_decomposition: section_subjdomain_actions_and_tasks;; *);
+=> nrel_main_idtf: 
+    [Раздел. Предметная область искусственных нейронных сетей] (* <- lang_ru;; *);
+    [Section. Subject domain of artificial neural networks] (* <- lang_en;; *);;
+
+subject_domain_of_artificial_neural_networks
+=> nrel_main_idtf: 
+    [Предметная область искусственных нейронных сетей]
+    (* <- lang_ru;; *);
+    [Subject domain of artificial neural networks]
+    (* <- lang_en;; *);
+<- sc_node_struct;
+<- subject_domain;
+<= nrel_primary_elements_class_private_subject_domain: subject_domain_of_actions_and_tasks;
+-> rrel_maximum_studied_object_class:
+    concept_artificial_neural_network;
+-> rrel_not_maximum_studied_object_class:
+    concept_atomic_conflict;
+-> rrel_explored_relation:
+    nrel_conflict_decomposition;
+-> rrel_explored_general_subject_domain_concept:
+    nrel_analysis_result;;
