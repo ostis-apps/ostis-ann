@@ -6,6 +6,7 @@ section_subject_domain_of_artificial_neural_networks
     [Раздел. Предметная область искусственных нейронных сетей] (* <- lang_ru;; *);
     [Section. Subject domain of artificial neural networks] (* <- lang_en;; *);;
 
+section_subject_domain_of_artificial_neural_networks = [*
 subject_domain_of_artificial_neural_networks
 => nrel_main_idtf: 
     [Предметная область искусственных нейронных сетей]
@@ -35,3 +36,4 @@ subject_domain_of_artificial_neural_networks
     concept_rosenblatts_perceptron;
     concept_support_vector_machine;
     concept_autoencoder_ann;;
+*];;
