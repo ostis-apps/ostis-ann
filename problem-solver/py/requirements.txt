@@ -3,3 +3,4 @@ py-sc-client==0.3.0
 requests==2.31.0
 numpy
 tensorflow==2.16.1
+google-generativeai
