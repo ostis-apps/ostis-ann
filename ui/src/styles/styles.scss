@@ -1,0 +1,31 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+html, body, #root, #root>div{
+    height: 100%;
+}
+
+
+.ann-main{
+    height: 100%;
+}
+
+text{
+    position: absolute;
+    overflow: visible;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-weight: 500;
+    z-index: 1000;
+}
+
+.node{
+    transition: filter 0.1s linear;
+    overflow: visible;
+    z-index: 1000;
+}
+
+.node:hover {
+    filter: drop-shadow(0 0 5px var(--g-color-base-info-light-hover)); /* Добавляем синее свечение */
+}
