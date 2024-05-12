@@ -1,0 +1,31 @@
+.ann-message{
+    background: var(--g-color-base-generic);
+    padding: 16px;
+    border-radius: var(--g-border-radius-xs) var(--g-border-radius-l) var(--g-border-radius-l) var(--g-border-radius-l);
+
+    .message{
+        padding: 16px;
+    }
+
+    &__from{
+        justify-content: right;
+
+        .message{
+            padding: 16px;
+            background: var(--g-color-base-brand);
+            border-radius: var(--g-border-radius-xl) var(--g-border-radius-xs) var(--g-border-radius-xl) var(--g-border-radius-xl);
+
+        }
+    }
+
+    &__to{
+        justify-content: left;
+
+        .message{
+            padding: 16px;
+            background: var(--g-color-base-generic);
+            border-radius: var(--g-border-radius-xs) var(--g-border-radius-xl) var(--g-border-radius-xl) var(--g-border-radius-xl);
+
+        }
+    }
+}
