@@ -1,0 +1,93 @@
+concept_artificial_neural_network_layer
+// <- sc_node_class;
+<= nrel_inclusion: layer;
+
+	=> nrel_main_idtf:
+	[слой искусственной нейронной сети](* <-lang_ru;; *);
+	[artificial neural network layer](* <-lang_en;; *);
+
+	=> nrel_idtf:
+	[слой и.н.с.](* <-lang_ru;; *);
+	[слой](* <-lang_ru;; *);
+	[множество слоев искусственных нейронных сетей](* <-lang_ru;; *);
+
+///////////////////////////////////////////////////////////////////////////////
+
+	<-rrel_key_sc_element: 
+	Affirmation_of_concept_artificial_neural_network_layer
+		(*
+			-> rrel_key_sc_element: concept_artificial_neural_network_layer;;
+
+			=> nrel_main_idtf: [Примечание(слой и.н.с.)] (* <- lang_ru;; *);;
+
+			<= nrel_sc_text_translation: ...
+				(*
+					-> [Отдельный слой является искусственной нейронной сетью с одним слоем] (* <- lang_ru;; *);;
+					-> [Конфигурация слоя задается типом, количеством формальных нейронов, функцией активации] (* <- lang_ru;; *);;
+					-> [Функция активации слоя является функцией активации всех формальных нейронов этого слоя] (* <- lang_ru;; *);;
+					-> [Описание последовательности слоев и.н.с. с конфигурацией каждого слоя задает архитектуру и.н.с.] (* <- lang_ru;; *);;
+									
+				*);;
+		*);
+///////////////////////////////////////////////////////////////////////////////
+	<-rrel_key_sc_element: 
+	Definition_of_concept_artificial_neural_network_layer
+		(*
+		  <- definition;;
+			<=nrel_sc_text_translation:...
+			(*
+				-> rrel_example: 
+				[<p>
+				<b>Слой и.н.с.</b> - это множество нейронных элементов, на которые в каждый такт времени параллельно
+				поступает информация от других нейронных элементов сети.
+				</p>]
+				(*
+				<- lang_ru;; 
+				=> nrel_format: format_html;;
+				*);;
+			*);;
+
+		=>nrel_main_idtf:[Опр. (слой и.н.с.)](* <-lang_ru;; => nrel_format: format_html;;*);;
+		*);
+////////////////////////////////////////////////////////////////////////////////
+
+=> nrel_subdividing: ...
+(*
+    <- sc_node_tuple;;
+    => nrel_main_idtf: [свёрточный слой искусственной нейронной сети] (* <- lang_ru;; *);;
+*);
+
+=> nrel_subdividing: ...
+(*
+    <- sc_node_tuple;;
+    => nrel_main_idtf: [полносвязный слой искусственной нейронной сети] (* <- lang_ru;; *);;
+*);
+
+=> nrel_subdividing: ...
+(*
+    <- sc_node_tuple;;
+    => nrel_main_idtf: [слой искусственной нейронной сети нелинейного преобразования] (* <- lang_ru;; *);;
+*);
+
+=> nrel_subdividing: ...
+(*
+    <- sc_node_tuple;;
+    => nrel_main_idtf: 	[dropout_artificial_neural_network_layer](* <-lang_en;; *);;
+*);
+
+=> nrel_subdividing: ...
+(*
+    <- sc_node_tuple;;
+    => nrel_main_idtf: [pooling_artificial_neural_network_layer](* <-lang_en;; *);;
+*);
+
+=> nrel_subdividing: ...
+(*
+    <- sc_node_tuple;;
+    => nrel_main_idtf: [слой искусственной нейронной сети батч-нормализации] (* <- lang_ru;; *);;
+*);;
+
+
+
+concept_artificial_neural_network_layer<-rrel_explored_concept:subject_domain_of_layers;;
+concept_artificial_neural_network_layer<-rrel_explored_concept: section_subject_domain_of_layers;;
