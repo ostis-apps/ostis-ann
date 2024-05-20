@@ -1,0 +1,40 @@
+concept_architectural_parameter_of_artificial_neural_networks
+
+	=> nrel_main_idtf:
+	[архитектурный параметр искусственной нейронной сети](* <-lang_ru;; *);
+	[architectural artificial neural network parameter](* <-lang_en;; *);
+
+	=> nrel_idtf:
+	[архитектурный параметр и.н.с.](* <-lang_ru;; *);
+
+<-rrel_key_sc_element: 
+	Affirmation_of_concept_architectural_parameter_of_artificial_neural_networks
+		(*
+			-> rrel_key_sc_element: concept_architectural_parameter_of_artificial_neural_networks;;
+
+			=> nrel_main_idtf: [Примечание(архитектурный параметр и.н.с.)] (* <- lang_ru;; *);;
+
+			<= nrel_sc_text_translation: ...
+				(*
+					-> [Параметр и.н.с., определяющий ее архитектуру.] (* <- lang_ru;; *);;
+					
+				*);;
+		*);
+
+=> nrel_subdividing: ...
+(*
+    <- sc_node_tuple;;
+    => nrel_main_idtf: [количество слоев] (* <- lang_ru;; *);;
+*);
+
+=> nrel_subdividing: ...
+(*
+    <- sc_node_tuple;;
+    => nrel_main_idtf: [количество синапсов] (* <- lang_ru;; *);;
+*);
+
+=> nrel_subdividing: ...
+(*
+    <- sc_node_tuple;;
+    => nrel_main_idtf: [количество нейронов] (* <- lang_ru;; *);;
+*);;

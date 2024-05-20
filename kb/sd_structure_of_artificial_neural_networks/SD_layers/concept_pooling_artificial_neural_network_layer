@@ -1,0 +1,11 @@
+concept_pooling_artificial_neural_network_layer
+
+    => nrel_main_idtf:
+	[pooling_artificial_neural_network_layer](* <-lang_en;; *);
+
+	=> nrel_idtf:
+	[подвыборочный слой](* <-lang_ru;; *);
+	[объединяющий слой](* <-lang_ru;; *);
+	[слой, осуществляющий уменьшение размерности входных данных](* <-lang_ru;; *);
+
+

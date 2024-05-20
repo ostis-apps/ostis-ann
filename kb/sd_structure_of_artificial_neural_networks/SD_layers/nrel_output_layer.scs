@@ -1,0 +1,36 @@
+nrel_output_layer
+// <- sc_node_class;
+<= nrel_inclusion: layer;
+
+	=> nrel_main_idtf:
+	[выходной слой*](* <-lang_ru;; *);
+	[output layer*](* <-lang_en;; *);
+
+<-rrel_key_sc_element: 
+	Definition_of_output_layer
+		(*
+			<-definition;;
+			<=nrel_sc_text_translation:...
+			(*
+				-> rrel_example:
+				[<p>				
+				<b>Выходной слой*</b>  - неролевое отношение, связывающее искусственную нейронную сеть с ее слоем,
+выходные значения нейронов которого являются выходными значениями всей нейронной сети.
+				</p>] 
+				(*
+				<-lang_ru;;
+				=> nrel_format: format_html;;
+				*);;
+			*);;
+		=>nrel_main_idtf:[Опр. (выходной слой*)](* <-lang_ru;; => nrel_format: format_html;;*);;
+		<=nrel_using_constants:...
+			(*
+				->norole_relation;binary_relation;concept_artificial_neural_network;artificial_neural_network_layer;;
+			*);;
+		*);
+    ///////////////////////////////////////////////////////////////////
+	=> nrel_first_domain:concept_artificial_neural_network;
+	=> nrel_second_domain:artificial_neural_network_layer;
+<- sc_node_norole_relation;
+<- norole_relation;
+<- binary_relation;;

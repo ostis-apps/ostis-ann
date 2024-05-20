@@ -1,0 +1,39 @@
+nrel_distribution_layer
+<= nrel_inclusion: layer;
+
+	=> nrel_main_idtf:
+	[распределяющий слой*](* <-lang_ru;; *);
+	[distribution layer*](* <-lang_en;; *);
+
+<-rrel_key_sc_element: 
+	Definition_of_distribution_layer
+		(*
+			<-definition;;
+			<=nrel_sc_text_translation:...
+			(*
+				-> rrel_example:
+				[<p>				
+				<b>Распределяющий слой*</b>  - неролевое отношение, связывающее искусственную нейронную сеть с ее
+слоем, нейроны которого принимают входные значения всей нейронной сети.
+        </p>] 
+				(*
+				<-lang_ru;;
+				=> nrel_format: format_html;;
+				*);;
+			*);;
+		=>nrel_main_idtf:[Опр. (распределяющий слой*)](* <-lang_ru;; => nrel_format: format_html;;*);;
+		<=nrel_using_constants:...
+			(*
+				->norole_relation;binary_relation;concept_artificial_neural_network;artificial_neural_network_layer;;
+			*);;
+		*);
+    ///////////////////////////////////////////////////////////////////
+	=> nrel_first_domain:concept_artificial_neural_network;
+	=> nrel_second_domain:artificial_neural_network_layer;
+<- sc_node_norole_relation;
+<- norole_relation;
+<- binary_relation;;
+
+nrel_distribution_layer<-rrel_explored_concept:subject_domain_of_layers;;
+nrel_distribution_layer<-rrel_explored_concept: section_subject_domain_of_layers;;
+

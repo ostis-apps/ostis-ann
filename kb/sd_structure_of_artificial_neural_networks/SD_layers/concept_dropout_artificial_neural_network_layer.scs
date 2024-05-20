@@ -1,0 +1,40 @@
+concept_dropout_artificial_neural_network_layer
+
+	=> nrel_main_idtf:
+	[dropout_artificial_neural_network_layer](* <-lang_en;; *);
+
+	=> nrel_idtf:
+	[слой, реализующий технику регуляризации dropout](* <-lang_ru;; *);
+
+
+	<-rrel_key_sc_element: 
+	Affirmation_of_concept_dropout_artificial_neural_network_layer
+		(*
+			-> rrel_key_sc_element: cconcept_dropout_artificial_neural_network_layer;;
+
+			=> nrel_main_idtf: [Примечание(dropout_artificial_neural_network_layer)] (* <- lang_en;; *);;
+
+			<= nrel_sc_text_translation: ...
+				(*
+					-> [Данный тип слоя функционирует только во время обучения и.н.с.] (* <- lang_ru;; *);;
+									
+				*);;
+		*);
+
+    <-rrel_key_sc_element: 
+	Affirmation_of_concept_dropout_artificial_neural_network_layer
+		(*
+			-> rrel_key_sc_element: concept_dropout_artificial_neural_network_layer;;
+
+			=> nrel_main_idtf: [Пояснение(dropout_artificial_neural_network_layer)] (* <- lang_en;; *);;
+
+			<= nrel_sc_text_translation: ...
+				(*
+					-> [Поскольку полносвязные слои имеют большое количество настраиваемых параметров,
+они подвержены эффекту переобучения. Один из способов устранить такой негативный
+эффект — выполнить частичный отсев результатов на выходе полносвязного слоя. На
+этапе обучения техника dropout позволяет отбросить выходную активность некоторых
+нейронов с определенной, заданной вероятностью. Выходная активность “отброшенных”
+нейронов полагается равной нулю.](*<-lang_ru;;*);;
+				*);;
+		*);;
