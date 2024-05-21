@@ -1,0 +1,109 @@
+concept_number_of_layers<-sc_node_not_relation;;
+concept_number_of_neurons<-sc_node_not_relation;;
+concept_number_of_synaptic_connections<-sc_node_not_relation;;
+concept_ann_architectural_parameter<-sc_node_not_relation;
+
+=> nrel_main_idtf: [архитектурный параметр и.н.с.](* <- lang_ru;; *);
+=> nrel_main_idtf: [a.n.n. architectural parameter](* <- lang_en;; *);
+
+=> nrel_definition: ...
+(*
+    -> nrel_sc_text_translation: [Архитектурный параметр и.н.с. — параметр и.н.с., определяющий её архитектуру.](*<-lang_ru;;*);;
+    -> nrel_sc_text_translation: [Architectural parameter of a.n.n. — parameter of a.n.n. that determines its architecture.](*<-lang_en;;*);;
+    => nrel_main_idtf: [Определение (архитектурный параметр и.н.с.)](*<- lang_ru;;*);;
+    => nrel_main_idtf: [Definition (a.n.n. architectural parameter)](*<- lang_ru;;*);;
+    => nrel_using_constants:
+    {
+        parameter;
+        concept_ann_parameter;
+        concept_artificial_neural_network
+    };;
+*);
+
+<-concept_ann_parameter;
+
+=> nrel_basic_decomposition:...
+(*
+    => nrel_main_idtf: [Разбиение архитектурных параметров и.н.с.](* <- lang_ru;; *);;
+    <- sc_node_tuple;;
+    -> concept_number_of_layers;;
+    -> concept_number_of_neurons;;
+    -> concept_number_of_synaptic_connections;;
+*);;
+
+
+
+concept_number_of_layers<-sc_node_not_relation;
+
+=> nrel_main_idtf: [количество слоёв и.н.с.](* <- lang_ru;; *);
+=> nrel_main_idtf: [number of layers in a.n.n.](* <- lang_en;; *);
+
+=> nrel_definition: ...
+(*
+    -> nrel_sc_text_translation: [Количество слоёв и.н.с. — архитектурный параметр и.н.с., который характеризует количество слоёв в и.н.с.](*<-lang_ru;;*);;
+    => nrel_main_idtf: [Определение (количество слоёв и.н.с.)](*<- lang_ru;;*);;
+
+    -> nrel_sc_text_translation: [Number of layers in a.n.n. — architectural parameter of the a.n.n., which characterizes the number of layers in a.n.n.](*<-lang_en;;*);;
+    => nrel_main_idtf: [Definition (number of layers in a.n.n.)](*<- lang_en;;*);;
+    => nrel_using_constants:
+    {
+        parameter;
+        concept_ann_parameter;
+        concept_ann_architectural_parameter;
+        concept_artificial_neural_network;
+        layer
+    };;
+*);
+<-concept_ann_architectural_parameter;;
+
+
+
+concept_number_of_neurons<-sc_node_not_relation;
+
+=> nrel_main_idtf: [количество нейронов и.н.с.](* <- lang_ru;; *);
+=> nrel_main_idtf: [number of neurons in a.n.n.](* <- lang_en;; *);
+
+=> nrel_definition: ...
+(*
+    -> nrel_sc_text_translation: [Количество нейронов и.н.с. — архитектурный параметр и.н.с., который характеризует количество нейронов в и.н.с..](*<-lang_ru;;*);;
+    => nrel_main_idtf: [Определение (Количество нейронов и.н.с.)](*<- lang_ru;;*);;
+
+    -> nrel_sc_text_translation: [Number of neurons in a.n.n. — architectural parameter of the a.n.n., which characterizes the number of neurons in a.n.n.](*<-lang_en;;*);;
+    => nrel_main_idtf: [Definition (number of neurons in a.n.n.)](*<- lang_en;;*);;
+
+    => nrel_using_constants:
+    {
+        parameter;
+        concept_ann_parameter;
+        concept_ann_architectural_parameter;
+        concept_artificial_neural_network;
+        neural_element
+    };;
+*);
+<-concept_ann_architectural_parameter;;
+
+
+concept_number_of_synaptic_connections<-sc_node_not_relation;
+
+=> nrel_main_idtf: [количество синаптических связей и.н.с.](* <- lang_ru;; *);
+=> nrel_main_idtf: [number of synaptic connections in a.n.n.](* <- lang_en;; *);
+
+
+=> nrel_definition: ...
+(*
+    -> nrel_sc_text_translation: [Количество синаптических связей и.н.с. — архитектурный параметр и.н.с., который характеризует количество синаптических связей в и.н.с..](*<-lang_ru;;*);;
+    => nrel_main_idtf: [Определение (количество синаптических связей и.н.с.)](*<- lang_ru;;*);;
+
+    -> nrel_sc_text_translation: [Number of synaptic connections in a.n.n. — architectural parameter of the a.n.n., which characterizes the number of synaptic connections in a.n.n.](*<-lang_en;;*);;
+    => nrel_main_idtf: [Definition (number of synaptic connections in a.n.n.)](*<- lang_en;;*);;
+
+    => nrel_using_constants:
+    {
+        parameter;
+        concept_ann_parameter;
+        concept_ann_architectural_parameter;
+        concept_artificial_neural_network;
+        synaptic_connection
+    };;
+*);
+<-concept_ann_architectural_parameter;;

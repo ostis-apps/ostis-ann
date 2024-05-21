@@ -1,0 +1,26 @@
+concept_ann_parameter<-sc_node_not_relation;
+
+=> nrel_main_idtf: [параметр и.н.с.](* <- lang_ru;; *);
+=> nrel_main_idtf: [a.n.n. parameter](* <- lang_en;; *);
+<= nrel_inclusion: [параметр](* <- lang_ru;; *);
+
+<-parameter;
+
+=> nrel_definition: ...
+(*
+    -> nrel_sc_text_translation:[Параметр и.н.с. — ](*<-lang_ru;;*);;
+    => nrel_main_idtf: [Определение (параметр и.н.с.)](*<- lang_ru;;*);;
+    => nrel_using_constants:
+    {
+        parameter;
+        concept_artificial_neural_network
+    };;
+*);
+
+=> nrel_basic_decomposition: ...
+(*
+    => nrel_main_idtf: [Разбиение параметров и.н.с.](* <- lang_ru;; *);;
+    <- sc_node_tuple;;
+    ->concept_ann_architectural_parameter;;
+    ->concept_ann_configurable_parameter;;
+*);;

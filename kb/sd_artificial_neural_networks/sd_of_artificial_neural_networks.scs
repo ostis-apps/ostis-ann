@@ -35,5 +35,24 @@ subject_domain_of_artificial_neural_networks
     concept_recurrent_ann;
     concept_rosenblatts_perceptron;
     concept_support_vector_machine;
-    concept_autoencoder_ann;;
+    concept_autoencoder_ann;
+    concept_MAE;
+concept_ann_classification_metrics;
+concept_ann_precision;
+concept_ann_quality_assessment_metrics;
+concept_ann_recall;
+concept_ann_regression_metrics;
+concept_F1_metric;
+concept_MAPE;
+concept_RMSE;
+
+concept_ann_configurable_parameter;
+concept_synaptic_connection_weighting_factor;
+concept_threshold_value;
+concept_convolution;
+concept_ann_architectural_parameter;
+concept_number_of_layers;
+concept_number_of_neurons;
+concept_number_of_synaptic_connections;
+concept_ann_parameter;;
 *];;

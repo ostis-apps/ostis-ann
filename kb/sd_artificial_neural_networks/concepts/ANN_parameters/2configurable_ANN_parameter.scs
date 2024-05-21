@@ -1,0 +1,127 @@
+concept_synaptic_connection_weighting_factor<-sc_node_not_relation;;
+concept_threshold_value<-sc_node_not_relation;;
+concept_convolution<-sc_node_not_relation;;
+concept_ann_configurable_parameter<-sc_node_not_relation;
+
+=> nrel_main_idtf: [настраиваемый параметр и.н.с.](* <- lang_ru;; *);
+=> nrel_main_idtf: [a.n.n. configurable parameter](* <- lang_en;; *);
+
+=> nrel_definition: ...
+(*
+    <- definition;;
+    -> nrel_sc_text_translation: [Настраиваемый параметр и.н.с. — параметр и.н.с., значение которого изменяется в ходе обучения.](*<-lang_ru;;*);;
+    => nrel_main_idtf: [Определение (настраиваемый параметр и.н.с.)](*<- lang_ru;;*);;
+    => nrel_using_constants:
+    {
+        parameter;
+        concept_ann_parameter;
+        concept_artificial_neural_network
+    };;
+
+*);
+
+<-concept_ann_parameter;
+
+=> nrel_basic_decomposition: ...
+(*
+    => nrel_main_idtf: [Разбиение настраиваемых параметров и.н.с.](* <- lang_ru;; *);;
+    <- sc_node_tuple;;
+    -> concept_synaptic_connection_weighting_factor;;
+    -> concept_threshold_value;;
+    -> concept_convolution;;
+*);;
+
+
+
+concept_synaptic_connection_weighting_factor<-sc_node_not_relation;
+
+=> nrel_main_idtf: [весовой коэфициент синаптической связи и.н.с.](* <- lang_ru;; *);
+=> nrel_main_idtf: [synaptic connection weighting factor of a.n.n.](* <- lang_en;; *);
+
+=>nrel_idtf: [вес синапса](* <- lang_ru;; *);
+=>nrel_idtf: [сила синаптической связи](* <- lang_ru;; *);
+<- concept_ann_classification_metrics;
+=> nrel_explanation:
+    [весовой коэффициент синаптической связи — это числовой коэффициент, который ставится в
+соответствие каждому синапсу нейронной сети и изменяется в процессе обучения.];
+=>nrel_note:
+    [Если сила синаптической связи отрицательна, то она называется тормозящей. В противном случае
+она является усиливающей.];
+
+<-concept_ann_configurable_parameter;
+
+=>nrel_definition:...
+(*
+    => nrel_main_idtf: [Определение (весовой коэфициент синаптической связи и.н.с.)](*<- lang_ru;;*);;
+    -> sc_text_translation: [весовой коэфициент синаптической связи и.н.с. — это числовой коэффициент, который ставится соответствие каждому синапсу нейронной сети и изменяется в процессе обучения.](*<-lang_ru;;*);;
+    
+    -> nrel_sc_text_translation: [Synaptic connection weighting factor of a.n.n. — this is a numerical coefficient that is assigned to each synapse of the neural network and changes during the learning process.](*<-lang_en;;*);;
+    => nrel_main_idtf: [Definition (synaptic connection weighting factor of a.n.n.)](*<- lang_en;;*);;
+    
+    => nrel_using_constants:
+        {
+        parameter;
+        concept_ann_parameter;
+        concept_ann_configurable_parameter;
+        concept_artificial_neural_network;
+        synaptic_connection
+        };;
+*);;
+
+
+concept_threshold_value<-sc_node_not_relation;
+
+=> nrel_main_idtf: [пороговое значение и.н.с.](* <- lang_ru;; *);
+=> nrel_main_idtf: [threshold value of a.n.n.](* <- lang_en;; *);
+
+<-concept_ann_configurable_parameter;
+
+=> nrel_definition: ...
+    (*
+    -> sc_text_translation: [Пороговое значение и.н.с. — найстраиваемый параметр и.н.с., который характеризует ЧТО-ТО.](*<-lang_ru;;*);;
+    => nrel_main_idtf: [Определение (пороговое значение и.н.с.)](*<- lang_ru;;*);;
+
+    -> nrel_sc_text_translation: [Threshold value of a.n.n. — ?](*<-lang_en;;*);;
+    => nrel_main_idtf: [Definition (threshold value of a.n.n.)](*<- lang_en;;*);;
+    
+    => nrel_using_constants:
+    {
+        parameter;
+        concept_ann_parameter;
+        concept_ann_configurable_parameter;
+        concept_artificial_neural_network;
+        value
+    };;
+    *);;
+
+
+
+concept_convolution<-sc_node_not_relation;
+
+=> nrel_main_idtf: [ядро свёртки и.н.с.](* <- lang_ru;; *);
+=> nrel_main_idtf: [convolution of a.n.n.](* <- lang_en;; *);
+
+=>nrel_note:
+    [Если сверточный формальный нейрон представить в виде полносвязного
+формального нейрона, соответствующее ядро свертки преобразуется в
+вектор весовых коэффициентов.] (*<-lang_ru;;*);
+
+<-concept_ann_configurable_parameter;
+
+=>nrel_definition:...
+(*
+    -> nrel_sc_text_translation:[Ядро свёртки и.н.с. — квадратная матрица произвольного порядка, элементы которой изменяются в процессе обучения и.н.с.](*<-lang_ru;;*);;
+    => nrel_main_idtf: [Определение (ядро свёртки и.н.с.)](*<- lang_ru;;*);;
+
+    -> nrel_sc_text_translation:[Convolution — a square matrix of arbitrary order, the elements of which change during the training process of the a.n.n.](*<-lang_en;;*);;
+    => nrel_main_idtf: [Definition (convolution)](*<- lang_en;;*);;
+    
+    => nrel_using_constants:
+    {
+        matrix;
+        parameter;
+        concept_ann_parameter;
+        concept_ann_configurable_parameter;
+        concept_artificial_neural_network
+    };;
+*);;
