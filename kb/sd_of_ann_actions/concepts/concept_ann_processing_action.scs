@@ -1,0 +1,15 @@
+concept_ann_processing_action
+<- sc_node_class;
+=> nrel_main_idtf:
+    [действие по обработке и.н.с.](* <- lang_ru;; *);
+    [ann processing action](* <- lang_en;; *);
+=> nrel_idtf:
+    [действие c и.н.с.](* <- lang_ru;; *);
+    [ann action](* <- lang_en;; *);
+=> nrel_basic_decomposition: ...
+(*
+    <- sc_node_tuple;;
+    -> concept_ann_interpretation_action;;
+    -> concept_ann_design_action;;
+    -> concept_ann_weight_coefficients_configuration_action;;
+*);;

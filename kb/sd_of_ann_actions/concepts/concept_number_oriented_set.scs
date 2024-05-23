@@ -1,0 +1,12 @@
+concept_number_oriented_set
+=> nrel_main_idtf:
+    [ориентированное множество чисел](* <- lang_ru;; *);
+    [oriented set of numbers](* <- lang_en;; *);
+=> nrel_idtf:
+    [ормножество чисел](* <- lang_ru;; *);
+    [orset of numbers](* <- lang_en;; *);
+<= nrel_inclusion:
+    number;
+    oriented_set;
+<= nrel_first_domain:
+    nrel_string_representation_of_an_orset_of_numbers;;

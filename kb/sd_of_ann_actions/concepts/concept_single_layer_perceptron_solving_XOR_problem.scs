@@ -1,0 +1,77 @@
+concept_single_layer_perceptron_solving_XOR_problem
+<- sc_node_class;
+=> nrel_main_idtf:
+    [однослойный персептрон, решающий "задачу ИСКЛЮЧАЮЩЕЕ ИЛИ"](* <- lang_ru;; *);
+    [single layer perceptron solving the XOR problem](* <- lang_en;; *);
+<= rrel_example: concept_perceptron;
+<= nrel_sc_text_translation: ...
+(*
+    -> rrel_example: "file://images/strong_or_ann.png"(* => nrel_format: format_png;; *);;
+    -> [схема](* <- lang_ru;; *);;
+*);
+<= nrel_sc_text_translation: ...
+(*
+    -> rrel_example: ...
+    (*
+        > [*
+        proc_exclusive_or_ann
+        <- scp_method;
+        <- perceptron;
+        -> rrel_key_sc_element: _process1;;
+
+        proc_exclusive_or_ann = [*
+        _process1
+        _<- scp_process;
+        _-> rrel_1:: rrel_in:: _input_vector;
+        _-> rrel_2:: rrel_out:: _output_vector;
+
+        _<= nrel_decomposition_of_action:: _... (*
+
+            _-> rrel_1:: _..operator1
+            (*
+                _<- action_calculate_weighted_sum_of_all_neurons_of_layer;;
+                _-> rrel_1:: rrel_fixed:: rrel_scp_var:: rrel_input_vector:: _input_vector;;
+                _-> rrel_2:: rrel_fixed:: rrel_scp_const:: rrel_synopsis_weight_matrix:: ...
+                    (*
+                        <- matrix;;
+                        -> rrel_1: ...
+                        (*
+                            <- number_oriented_set;;
+                            => nrel_oriented_set_string_representation: [1, 1];;
+                        *);;
+                    *);;
+                _-> rrel_3:: rrel_assign:: rrel_scp_var:: rrel_result:: _weighted_sum_vector;;
+
+                _=> nrel_goto:: _..operator2;;
+            *);;
+
+            _-> _..operator2
+            (*
+                _<- action_calculate_activation_function_of_all_neurons_of_layer;;
+                _-> rrel_1:: rrel_fixed:: rrel_scp_var:: _weighted_sum_vector;;
+                _-> rrel_2:: rrel_fixed:: rrel_scp_const:: rrel_threshold_set:: ...
+                    (*
+                        <- number_oriented_set;;
+                        => nrel_oriented_set_string_representation: [0.5];;
+                    *);;
+                _-> rrel_3:: rrel_fixed:: rrel_scp_const:: rrel_activation_fun:: signal_fun;;
+                    (*
+                        <- signal_activation_function;;
+                        => nrel_definition: signal_function_1_def;;
+                    *);;
+                _-> rrel_4:: rrel_assign:: rrel_scp_var:: _output_vector;;
+
+                _=> nrel_goto:: _..operator3;;
+            *);;
+
+            _-> _..operator3 (* <- return;; *);;
+        *);;
+        *];;
+        *];;
+    *);;
+    -> [описание метода на языке SCP, использующего однослойный персептрон](* <- lang_ru;; *);;
+    -> [описание метода состоит из последовательности двух обобщенных спецификаций действий —
+        действия вычисления взвешенной суммы всех нейронов слоя и действия вычисления функции
+        активации для всех нейронов слоя](* <- lang_ru;; *);;
+*);
+=> nrel_application: concept_signal_activation_function;;

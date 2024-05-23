@@ -1,0 +1,13 @@
+concept_ann_layer_configuration_action
+<- sc_node_class;
+=> nrel_main_idtf:
+    [действие конфигурации слоя и.н.с.](* <- lang_ru;; *);
+    [ann layer configuration action](* <- lang_en;; *);
+=> nrel_decomposition: ...
+(*
+    <- sc_node_tuple;;
+    <- concept_ann_layer_adding_action;;
+    <- concept_ann_layer_editing_action;;
+    <- concept_ann_layer_removing_action;;
+    <- concept_ann_layer_neuron_configuration_action;;
+*);;
