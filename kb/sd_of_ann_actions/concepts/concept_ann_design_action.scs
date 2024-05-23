@@ -1,0 +1,16 @@
+concept_ann_design_action
+<- sc_node_class;
+=> nrel_main_idtf:
+    [действие проектирования и.н.с.](* <- lang_ru;; *);
+    [ann design action](* <- lang_en;; *);
+=> nrel_idtf:
+    [действие конфигурации и.н.с.](* <- lang_ru;; *);
+    [ann configuration action](* <- lang_en;; *);
+=> nrel_decomposition: ...
+(*
+    <- sc_node_tuple;;
+    <- concept_ann_creating_action;;
+    <- concept_ann_editing_action;;
+    <- concept_ann_removing_action;;
+    <- concept_ann_layer_configuration_action;;
+*);;

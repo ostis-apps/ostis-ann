@@ -1,0 +1,13 @@
+concept_ann_layer_neuron_configuration_action
+<- sc_node_class;
+=> nrel_main_idtf:
+    [действие конфигурации нейрона в слое и.н.с.](* <- lang_ru;; *);
+    [ann neuron configuration in a layer action](* <- lang_en;; *);
+=> nrel_decomposition: ...
+(*
+    <- sc_node_tuple;;
+    <- concept_ann_layer_neuron_adding_action;;
+    <- concept_ann_layer_neuron_editing_action;;
+    <- concept_ann_layer_neuron_removing_action;;
+    <- concept_ann_layer_neuron_activation_function_setting_action;;
+*);;

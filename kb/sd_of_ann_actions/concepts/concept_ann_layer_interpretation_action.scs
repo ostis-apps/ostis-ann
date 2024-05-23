@@ -1,0 +1,13 @@
+concept_ann_layer_interpretation_action
+<- sc_node_class;
+=> nrel_main_idtf:
+    [действие интерпретации слоя и.н.с.](* <- lang_ru;; *);
+    [ann layer interpretation action](* <- lang_en;; *);
+=> nrel_basic_decomposition: ...
+(*
+    <- sc_node_tuple;;
+    -> concept_action_of_calculating_the_activation_function_of_all_neurons_in_the_layer;;
+    -> concept_all_layer_neurons_activation_function_calculating_action;;
+    -> concept_convolutional_layer_interpretation_action;;
+    -> concept_pooling_layer_interpretation_action;;
+*);;
