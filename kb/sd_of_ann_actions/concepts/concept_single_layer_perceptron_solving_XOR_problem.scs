@@ -1,7 +1,7 @@
 concept_single_layer_perceptron_solving_XOR_problem
 <- sc_node_class;
 => nrel_main_idtf:
-    [однослойный персептрон, решающий "задачу ИСКЛЮЧАЮЩЕЕ ИЛИ"](* <- lang_ru;; *);
+    [однослойный персептрон, решающий задачу "ИСКЛЮЧАЮЩЕЕ ИЛИ"](* <- lang_ru;; *);
     [single layer perceptron solving the XOR problem](* <- lang_en;; *);
 <= rrel_example: concept_perceptron;
 <= nrel_sc_text_translation: ...
