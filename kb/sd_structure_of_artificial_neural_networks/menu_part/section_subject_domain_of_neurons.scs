@@ -5,6 +5,7 @@ section_subject_domain_of_neurons
 	[Section. Subject domain of neurons]
 	(* <- lang_en;; *);
 
+-> rrel_key_sc_element: subject_domain_of_neurons;
 <- not_enough_formed_structure;
 <- atomic_section;;
 
@@ -15,7 +16,28 @@ section_subject_domain_of_neurons = [*
                                       	(* <- lang_ru;; *);
                                       	[Subject domain of neurons]
                                       	(* <- lang_en;; *);
-                                      		
+                        
+                                        
+																				-> rrel_maximum_studied_object_class:
+																					neural_element;
+																				
+								
+																				-> rrel_not_maximum_studied_object_class:
+ 																				  analytical_unit;
+																					concept_synapse_weight;
+																					concept_synaptic_connection;
+																					directive_neural_element;
+																					entry_star;
+																					formal_neuron_with_a_synaptic_transformation_function;
+																					formal_neuron_with_activation_function;
+																					formal_neuron;
+																					concept_context_neuron;
+																					intermediate_neural_element;
+																					neuron_core;
+																					concept_neuron_node;
+																					neuron_winner;
+																					sinaps;
+					
                                       <- subject_domain;;
                                       
                                       
