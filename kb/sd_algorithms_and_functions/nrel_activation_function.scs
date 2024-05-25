@@ -47,7 +47,7 @@ nrel_activation_function => nrel_second_domain: function;
 (*
     <- sc_node_tuple;;
     => nrel_main_idtf: [линейная функция] (* <- lang_ru;; *);;
-		=> nrel_formula: "file://MAE.html"(*=> nrel_format: format_html;;*);;
+		
 
 *);
 
