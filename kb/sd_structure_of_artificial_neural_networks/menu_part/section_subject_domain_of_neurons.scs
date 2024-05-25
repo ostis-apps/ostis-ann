@@ -37,6 +37,18 @@ section_subject_domain_of_neurons = [*
 																					concept_neuron_node;
 																					neuron_winner;
 																					sinaps;
+
+																				-> rrel_explored_relation:
+																					nrel_concept_neuron_node;
+																					nrel_number_of_synaptic_connections;
+																					nrel_receptive_field;
+																					nrel_sinaps;
+																					rrel_formal_neuron;
+																					rrel_synaptic_connection;
+																					rrel_threshold_formal_neuron;
+																					nrel_synapse_weight;
+
+
 					
                                       <- subject_domain;;
                                       

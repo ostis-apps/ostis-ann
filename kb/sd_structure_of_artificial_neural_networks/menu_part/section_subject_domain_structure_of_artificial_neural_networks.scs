@@ -26,13 +26,17 @@ section_subject_domain_structure_of_artificial_neural_networks = [*
 																																		-> rrel_maximum_studied_object_class:
  																																		   concept_structure_of_artificial_neural_networks;
 
-
-
-
 																																		-> rrel_not_maximum_studied_object_class:
- 																																		   layer; neural_element;
+ 																																		   layer; neural_element;;
                                                                    <- subject_domain;;
 																																	 
+																																		concept_structure_of_artificial_neural_networks
+																																		=> nrel_main_idtf: 
+																																			[структура искусственных нейронных сетей]
+																																			(* <- lang_ru;;*);
+																																			[structure of artificial neural networks]
+																																			(* <- lang_en;; *);;
+
                                                                    
                                                                    
                                                                    
