@@ -6,7 +6,7 @@ nrel_activation_function=>nrel_idtf:[функция возбуждения](* <-
 		=> nrel_main_idtf: [Опр.(функция активации*)](* <- lang_ru;; *);;
 		<= nrel_sc_text_translation:...
 		(*
-			-> rrel_example: [Функция активации - взаимно-однозначное соответствие, областью определения которого являются множество нейронных узлов предыдущего слоя, а областью значений - множество сигналов текущего слоя, преобразованного по заданной формуле.](* <- lang_ru;; *);;
+			-> rrel_example: [Функция активации* - взаимно-однозначное соответствие, областью определения которого являются множество нейронных узлов предыдущего слоя, а областью значений - множество сигналов текущего слоя, преобразованного по заданной формуле.](* <- lang_ru;; *);;
 		*);;
 		-> rrel_key_sc_element: nrel_activation_function;;
 		<= nrel_using_constants :...
@@ -14,6 +14,22 @@ nrel_activation_function=>nrel_idtf:[функция возбуждения](* <-
 			->  nrel_bijective_mapping; concept_neuron_node; nrel_layer; logical_formula;;
 		*);;
 	*);; 
+
+ definition -> ...
+	(*
+		=> nrel_main_idtf: [Опр.(функция активации*)](* <- lang_ru;; *);;
+		<= nrel_sc_text_translation:...
+		(*
+			-> rrel_example: [Функция активации* - неролевое отношение, связывающее формальный нейрон с функцией,
+результат применения которой к взвешенной сумме нейрона определяет его выходное значение.](* <- lang_ru;; *);;
+		*);;
+		-> rrel_key_sc_element: nrel_activation_function;;
+		<= nrel_using_constants :...
+		(*
+			->  nrel_bijective_mapping; concept_neuron_node; nrel_layer; logical_formula;;
+		*);;
+	*);; 
+
  statement -> ...
 	(*
          -> rrel_key_sc_element: nrel_activation_function; nrel_inclusion; concept_neural_network_in_graphical_representation;;
@@ -23,8 +39,49 @@ nrel_activation_function=>nrel_idtf:[функция возбуждения](* <-
 			-> rrel_example: [Механизм любой нейронной сети подразумевает наличие функции активации](* <- lang_ru;; *);;
 		*);;
 	*);; 
-nrel_activation_function => nrel_first_domain: concept_neuron_node;;
- nrel_activation_function => nrel_second_domain: concept_neuron_node;;
+nrel_activation_function => nrel_first_domain: formal_neuron;;
+nrel_activation_function => nrel_second_domain: function;
+
+
+=> nrel_subdividing: ...
+(*
+    <- sc_node_tuple;;
+    => nrel_main_idtf: [линейная функция] (* <- lang_ru;; *);;
+		=> nrel_formula: "file://MAE.html"(*=> nrel_format: format_html;;*);;
+
+*);
+
+=> nrel_subdividing: ...
+(*
+    <- sc_node_tuple;;
+    => nrel_main_idtf: [пороговая функция] (* <- lang_ru;; *);;
+*);
+
+=> nrel_subdividing: ...
+(*
+    <- sc_node_tuple;;
+    => nrel_main_idtf: [сигмоидная функция] (* <- lang_ru;; *);;
+*);
+
+=> nrel_subdividing: ...
+(*
+    <- sc_node_tuple;;
+    => nrel_main_idtf: [функция гиперболического тангенса] (* <- lang_ru;; *);;
+*);
+
+=> nrel_subdividing: ...
+(*
+    <- sc_node_tuple;;
+    => nrel_main_idtf: [функция ReLU] (* <- lang_ru;; *);;
+*);
+
+=> nrel_subdividing: ...
+(*
+    <- sc_node_tuple;;
+    => nrel_main_idtf: [функция softmax] (* <- lang_ru;; *);;
+*);;
+
+
  nrel_activation_function=> nrel_definitional_domain:...
 	(*
 		<= nrel_combination: number;;
