@@ -30,5 +30,5 @@ concept_convolution_layer_of_an_artificial_neural_network
 	=> nrel_first_domain:concept_artificial_neural_network;
 	=> nrel_second_domain:concept_artificial_neural_network_layer;;
 
-	convolution_layer_of_an_artificial_neural_network<-rrel_explored_concept:subject_domain_of_layers;;
+ 
   convolution_layer_of_an_artificial_neural_network<-rrel_explored_concept: section_subject_domain_of_layers;;

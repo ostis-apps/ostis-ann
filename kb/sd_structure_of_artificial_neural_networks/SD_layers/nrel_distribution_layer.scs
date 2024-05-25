@@ -6,7 +6,7 @@ nrel_distribution_layer
 	[distribution layer*](* <-lang_en;; *);
 
 <-rrel_key_sc_element: 
-	Definition_of_distribution_layer
+	Definition_of_nrel_distribution_layer
 		(*
 			<-definition;;
 			<=nrel_sc_text_translation:...
@@ -34,6 +34,6 @@ nrel_distribution_layer
 <- norole_relation;
 <- binary_relation;;
 
-nrel_distribution_layer<-rrel_explored_concept:subject_domain_of_layers;;
+
 nrel_distribution_layer<-rrel_explored_concept: section_subject_domain_of_layers;;
 

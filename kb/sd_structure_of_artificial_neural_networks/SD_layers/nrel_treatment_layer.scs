@@ -35,5 +35,5 @@ nrel_treatment_layer
 <- norole_relation;
 <- binary_relation;;
 
-nrel_treatment_layer<-rrel_explored_concept:subject_domain_of_layers;;
+
 nrel_treatment_layer<-rrel_explored_concept: section_subject_domain_of_layers;;
