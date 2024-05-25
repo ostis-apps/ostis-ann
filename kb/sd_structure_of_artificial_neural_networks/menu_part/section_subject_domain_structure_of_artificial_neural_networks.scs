@@ -11,6 +11,7 @@ section_subject_domain_of_layers;
 section_subject_domain_of_neurons
 };
 
+-> rrel_key_sc_element: layer; formal_neuron;
 <- not_enough_formed_structure;
 <- atomic_section;;
 
@@ -21,8 +22,13 @@ section_subject_domain_structure_of_artificial_neural_networks = [*
                                                                    	(* <- lang_ru;; *);
                                                                    	[Subject domain structure of artificial neural networks]
                                                                    	(* <- lang_en;; *);
-                                                                   		
+                                                                   	<= nrel_private_subject_domain: subject_domain_of_layers; subject_domain_of_neurons;
+																																		-> rrel_maximum_studied_object_class:
+ 																																		   concept_structure_of_artificial_neural_networks;
+																																		-> rrel_not_maximum_studied_object_class:
+ 																																		   layer; formal_neuron;
                                                                    <- subject_domain;;
+																																	 
                                                                    
                                                                    
                                                                    
