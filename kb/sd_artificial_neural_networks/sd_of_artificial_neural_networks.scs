@@ -23,11 +23,17 @@ subject_domain_of_artificial_neural_networks
     concept_convolutional_ann;
     concept_elmans_ann;
     concept_feedback_ann;
+    concept_feedforward_ann;
     concept_fully_connected_ann;
+    concept_self_organizing_ann;
+    concept_growing_neural_gas;
     concept_gru_element;
     concept_hammings_ann;
     concept_hopfields_ann;
     concept_jordans_ann;
+    concept_kohonens_ann;
+    concept_kohonens_map;
+    concept_hybrid_ann;
     concept_lstm_element;
     concept_multirecurrent_ann;
     concept_perceptron;
@@ -35,5 +41,6 @@ subject_domain_of_artificial_neural_networks
     concept_recurrent_ann;
     concept_rosenblatts_perceptron;
     concept_support_vector_machine;
-    concept_autoencoder_ann;;
+    concept_encoder;
+    concept_decoder;;
 *];;

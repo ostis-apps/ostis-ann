@@ -1,9 +1,14 @@
-concept_perceptron
+concept_perceptron 
+/*
+*./sd_artificial_neural_networks_old/SD_Neural_networks_with_hidden_neurons/perceptron.scs
+*/
 <- sc_node_class;
 <= nrel_inclusion: concept_feedforward_ann;
 => nrel_main_idtf:
     [персептрон](* <- lang_ru;; *);
     [perceptron](* <- lang_en;; *);
+=> nrel_idtf:
+    [перцептрон](* <- lang_ru;; *);
 <= nrel_basic_decomposition: ...
 (*
     <- sc_node_tuple;;
@@ -15,23 +20,108 @@ concept_perceptron
     ...
     (*
     => nrel_main_idtf:
-        [Опр. (искусственная нейронная сеть)]
+        [Опр. (персептрон)]
         (* <- lang_ru;; *);
-        [Def. (artificial neural network)]
+        [Def. (perceptron)]
         (* <- lang_en;; *);;
     <- definition;;
-    => nrel_sc_text_translation:
-        {
-        rrel_example:
-            []
-            (* <- lang_ru;; *);
-        rrel_example:
-            []
-            (* <- lang_en;; *)
-        };;
-    => nrel_using_constants:
+    <= nrel_sc_text_translation:
+        ...
+        (*
+        -> rrel_example:
+            [Персептрон --- это простая сеть, состоящая из сенсорных, ассоциативных и реагирующих нейронных элементов]
+            (* <- lang_ru;; *);;
+        -> rrel_example:
+            [Персептрон --- нейронная сеть прямого распространения с как минимум одним скрытым слоем]
+            (* 
+                <- lang_ru;;
+            *);;
+        <= nrel_reference:
+            goodfellow2016deeplearning;;
+        *);
+        ...
+        (*
+        -> rrel_example:
+            [A perceptron is a simple network consisting of sensory, associatiation and response neural units]
+            (* <- lang_en;; *);;
+        -> rrel_example:
+            [Perceptron is a feedforward neural network with at least one hidden layer]
+            (* <- lang_en;; *);;
+        <= nrel_reference:
+            goodfellow2016deeplearning;;
+        *);;
+
+    <= nrel_using_constants:
         {
         concept_artificial_neural_network;
         concept_perceptron
         };;
+    *);
+
+<- rrel_key_sc_element:
+    ...
+    (*
+    => nrel_main_idtf:
+        [Утв.(пороговая функция активации*, функция синаптического преобразования* )]
+        (* <- lang_ru;; *);
+        [St.(threshold activation function*, synaptic transformation function* )] // ASK
+        (* <- lang_en;;*);;
+    <- statement;;
+    <=nrel_sc_text_translation:
+        ...
+        (*
+            -> rrel_example:
+                [В перспетроне функцией синаптического преобразования является пороговая функция активации.]
+                (* <-lang_ru;; *);;
+            -> rrel_example:
+                [In a perceptron, the synaptic transformation function is the threshold activation function.]
+                (* <-lang_en;; *);;
+        *);;
+    *);
+    
+<- rrel_key_sc_element:
+    ...
+    (*
+    => nrel_main_idtf:
+        [Утв.(обучение с учителем)]
+        (* <- lang_ru;; *);
+        [St.(supervised learning)]
+        (* <- lang_en;;*);;
+    <- statement;;
+    <=nrel_sc_text_translation:
+        ...
+        (*
+            -> rrel_example:
+                [Персептрон проходит обучение с учителем.]
+                (* <-lang_ru;; *);;
+            -> rrel_example:
+                [The perceptron undergoes supervised learning.]
+                (* <-lang_en;; *);;
+        *);;
+    *);
+
+<- rrel_key_sc_element:
+    ...
+    (*
+    => nrel_main_idtf:
+        [Рис.(персептрон)]
+        (* <- lang_ru;; *);
+        [Img.(perceptron)]
+        (* <- lang_en;; *);;
+    <-illustration;;
+    <= nrel_sc_text_translation:
+    ...
+        (*
+        ->rrel_example:
+            "file://illustrations/perceptron-srtucture.png" (* => nrel_format: format_png;; *);
+            [Нейроны слоя S называются сенсорными и предназначены для формирования входных сигналов, возникающих в результате внешних воздействий. Нейроны слоя A называются ассоциативными и предназначены для непосредственной обработки входной информации. Нейроны слоя R называются эффекторными. Они служат для передачи сигналов возбуждения к соответствующему объекту, например к мышцам.]
+            (* <- lang_ru;;*);;
+        *);
+        ...
+        (*
+        ->rrel_example:
+            "file://illustrations/perceptron-srtucture.png" (* => nrel_format: format_png;; *);
+            [Layer S neurons are called 'Sensory-Units', they form input signals. Layer A neurons are called 'Association-Units', they proccess input information. Layer R neurons are called 'Response-Units', they transfer signals to objects.]
+            (* <- lang_en;;*);;
+        *);;
     *);;

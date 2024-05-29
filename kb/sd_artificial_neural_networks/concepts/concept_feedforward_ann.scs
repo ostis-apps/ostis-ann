@@ -6,6 +6,10 @@ concept_feedforward_ann
     [feed-forward artificial neural network](* <- lang_en;; *);
 => nrel_idtf:
     [и.н.с. с прямыми связями](* <- lang_ru;; *);
+    [и.н.с. прямого распространения](* <- lang_ru;; *);
+    [feedforward neural network](* <- lang_en;; *);
+    [FFNN](* <- lang_en;; *);
+    [FNN](* <- lang_en;; *);
 <= nrel_basic_decomposition: ...
 (*
     <- sc_node_tuple;;
@@ -19,23 +23,110 @@ concept_feedforward_ann
     ...
     (*
     => nrel_main_idtf:
-        [Опр. (искусственная нейронная сеть)]
+        [Опр. (искусственная нейронная сеть с прямыми связями)]
         (* <- lang_ru;; *);
-        [Def. (artificial neural network)]
+        [Def. (feed-forward artificial neural network)]
         (* <- lang_en;; *);;
     <- definition;;
-    => nrel_sc_text_translation:
+    <= nrel_sc_text_translation:
+        ...
+        (*
+        -> rrel_example:
+            [Искусственная нейронная сеть с прямыми связями --- нейронная сеть в которой происходит распространение информации только в одном направлении от слоя к слою.]
+            (* <- lang_ru;; *);;
+        -> rrel_example:
+            [Feed-forward artificial neural network is a neural network where the propagation of information only occurs in one direction, from one layer to another.]
+            (* <- lang_en;; *);;
+        *);;
+    <= nrel_using_constants:
         {
-        rrel_example:
-            []
-            (* <- lang_ru;; *);
-        rrel_example:
-            []
-            (* <- lang_en;; *)
+        concept_artificial_neural_network;
+        concept_feedforward_ann
         };;
-    => nrel_using_constants:
+    *);
+
+<- rrel_key_sc_element:
+    ...
+    (*
+    => nrel_main_idtf:
+        [Утв.(Характеристика и.н.с. с прямыми связями)]
+        (* <- lang_ru;; *);
+        [St.(Characteristics of feedforward ann)]
+        (* <- lang_en;; *);;
+    <- statement;;
+    <= nrel_sc_text_translation:
+        ...
+        (*
+        -> rrel_example:
+            [В этой сети информация перемещается только в одном направлении вперед от входных узлов, через скрытые узлы (если они есть) и к выходным узлам. В сети нет циклов или петель обратных связей]
+            (* 
+                <- lang_ru;;
+            *);;
+        -> rrel_example:
+            [Its flow is uni-directional, meaning that the information in the model flows in only one direction—forward—from the input nodes, through the hidden nodes (if any) and to the output nodes, without any cycles or loops.]
+            (* 
+                <- lang_en;;
+            *);;
+        => nrel_reference:
+            zell1994simulation;;
+        *);;
+    <= nrel_using_constants:
+        {
+        concept_artificial_neural_network;
+        concept_feedforward_ann
+        };;
+    *);
+
+<- rrel_key_sc_element:
+    ...
+    (*
+    => nrel_main_idtf:
+        [Рис.(искусственная нейронная сеть с прямыми связями)]
+        (* <- lang_ru;; *);
+        [Img.(feed-forward artificial neural network)]
+        (* <- lang_en;; *);;
+    <-illustration;;
+    <= nrel_sc_text_translation:
+        ...
+        (*
+        ->rrel_example:
+            "file://illustrations/feed-forward_ann.png" (* => nrel_format: format_png;; *);;
+        *);
+        ...
+        (*
+        ->rrel_example:
+            [В искусственной нейронной сети с прямыми связями информация перемещается только в одном направлении, никогда не возварщается назад.]
+            (* <- lang_ru;;*);;
+        *);
+        ...
+        (*
+        ->rrel_example:
+            [In a feedforward network, information always moves one direction; it never goes backwards.]
+            (* <- lang_en;;*);;
+        *);;
+    <= nrel_using_constants:
         {
         concept_artificial_neural_network;
         concept_feedforward_ann
         };;
     *);;
+
+zell1994simulation
+<-literary_source;
+=> nrel_main_idtf:
+    [Simulation neuronaler Netze]
+    (* <- lang_en;; *);
+<-nrel_reference_standard:
+...
+	(*
+		<= nrel_sc_text_translation:
+			...
+			(*
+				-> [Zell, Andreas. “Simulation neuronaler Netze.” (1994).]
+					(*<- lang_en;;*);;
+			*);;
+	*);
+	=>nrel_author:
+	{
+		[Zell, A.]
+	};;

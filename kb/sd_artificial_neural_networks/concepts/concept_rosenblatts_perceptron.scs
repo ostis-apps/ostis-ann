@@ -4,6 +4,9 @@ concept_rosenblatts_perceptron
 => nrel_main_idtf:
     [персептрон Розенблатта](* <- lang_ru;; *);
     [perceptron of Rosenblatt](* <- lang_en;; *);
+=> nrel_idtf:
+    [Rosenblatt's perceptron]
+    (* <- lang_en;; *);
 
 <- rrel_key_sc_element:
     ...
@@ -14,18 +17,39 @@ concept_rosenblatts_perceptron
         [Def. (perceptron of Rosenblatt)]
         (* <- lang_en;; *);;
     <- definition;;
-    => nrel_sc_text_translation:
-        {
-        rrel_example:
-            []
-            (* <- lang_ru;; *);
-        rrel_example:
-            []
-            (* <- lang_en;; *)
-        };;
+    <= nrel_sc_text_translation:
+        ...
+        (*
+        ->rrel_example:
+            [Персептрон Розенблатта --- это однослойный персептрон, который включает по одному слою сенсорных, ассоциативных и реагирующих нейронных элементов]
+            (* <- lang_ru;; *);;
+        ->rrel_example:
+            [Rosenblatt's perceptron is a single-layer perceptron that consists of three layers of neural units: sensory, associatiation and response.]
+            (* <- lang_en;; *);;
+        *);;
     => nrel_using_constants:
         {
         concept_artificial_neural_network;
+        concept_perceptron;
         concept_rosenblatts_perceptron
         };;
+    *);
+
+<- rrel_key_sc_element:
+    ...
+    (*
+    => nrel_main_idtf:
+        [Рис.(персептрон Розенблатта)]
+        (* <- lang_ru;; *);
+        [Img.(perceptron of Rosenblatt)]
+        (* <- lang_en;; *);;
+    <-illustration;;
+    <= nrel_sc_text_translation:
+    ...
+        (*
+        ->rrel_example:
+            "file://illustrations/rosenblatts_peceptron_structure.png" (* => nrel_format: format_png;; *);;
+        *);;
     *);;
+
+

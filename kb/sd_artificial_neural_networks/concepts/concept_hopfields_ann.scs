@@ -16,15 +16,20 @@ concept_hopfields_ann
         [Def. (artificial neural network of Hopfield)]
         (* <- lang_en;; *);;
     <- definition;;
-    => nrel_sc_text_translation:
-        {
-        rrel_example:
+    <= nrel_sc_text_translation:
+        ...
+        (*
+        ->rrel_example:
             []
-            (* <- lang_ru;; *);
-        rrel_example:
+            (* <- lang_ru;; *);;
+        *);
+        ...
+        (*
+        ->rrel_example:
             []
-            (* <- lang_en;; *)
-        };;
+            (* <- lang_en;; *);;
+        *)
+        ;;
     => nrel_using_constants:
         {
         concept_artificial_neural_network;

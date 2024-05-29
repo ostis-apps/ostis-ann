@@ -5,7 +5,7 @@ concept_fully_connected_ann
     [полносвязная искусственная нейронная сеть](* <- lang_ru;; *);
     [fully connected artificial neural network](* <- lang_en;; *);
 => nrel_idtf:
-    [полносвязная и.н.с.](* <- lang_ru;; *);
+    [полносвязная и.н.с.](* <- lang_ru;; *);    
 
 <- rrel_key_sc_element:
     ...
@@ -16,15 +16,20 @@ concept_fully_connected_ann
         [Def. (fully connected artificial neural network)]
         (* <- lang_en;; *);;
     <- definition;;
-    => nrel_sc_text_translation:
-        {
-        rrel_example:
+    <= nrel_sc_text_translation:
+        ...
+        (*
+        ->rrel_example:
             []
-            (* <- lang_ru;; *);
-        rrel_example:
+            (* <- lang_ru;; *);;
+        *);
+        ...
+        (*
+        ->rrel_example:
             []
-            (* <- lang_en;; *)
-        };;
+            (* <- lang_en;; *);;
+        *)
+        ;;
     => nrel_using_constants:
         {
         concept_artificial_neural_network;

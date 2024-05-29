@@ -6,6 +6,8 @@ concept_elmans_ann
     [artificial neural network of Elman](* <- lang_en;; *);
 => nrel_idtf:
     [и.н.с. Элмана](* <- lang_ru;; *);
+    [сеть Элмана](*<-lang_ru;;*);
+    [elman network](*<-lang_en;;*);
 
 <- rrel_key_sc_element:
     ...
@@ -16,18 +18,38 @@ concept_elmans_ann
         [Def. (artificial neural network of Elman)]
         (* <- lang_en;; *);;
     <- definition;;
-    => nrel_sc_text_translation:
-        {
-        rrel_example:
-            []
-            (* <- lang_ru;; *);
-        rrel_example:
-            []
-            (* <- lang_en;; *)
-        };;
+    <= nrel_sc_text_translation:...
+        (*
+        -> rrel_example:
+			[Cеть Элмана --- это вид рекуррентной нейронной сети, выходы нейронных элементов промежуточного слоя которой соединяются с контекстными нейронами входного слоя.]
+            (*<- lang_ru;;*);;
+        -> rrel_example:
+			[Elman network is a type of recurrent neural network in which the outputs of the neural elements of the intermediate layer are connected to the context neurons of the input layer.]
+            (*<- lang_ru;;*);;
+        => nrel_reference:
+            golovko2017;;
+        *);;
     => nrel_using_constants:
         {
         concept_artificial_neural_network;
         concept_elmans_ann
         };;
+    *);
+
+<- rrel_key_sc_element:
+    ...
+    (*
+    => nrel_main_idtf:
+        [Рис.(искусственная нейронная сеть Элмана)]
+        (* <- lang_ru;; *);
+        [Img.(artificial neural network of Elman)]
+        (* <- lang_en;; *);;
+    <-illustration;;
+    <= nrel_sc_text_translation: ...
+        (*
+        ->rrel_example:
+            "file://illustrations/elman_ann.png" (* => nrel_format: format_png;; *);;
+        *);;
+        =>nrel_reference:
+            golovko2017;;
     *);;

@@ -6,6 +6,7 @@ concept_multirecurrent_ann
     [multirecurrent artificial neural network](* <- lang_en;; *);
 => nrel_idtf:
     [мультирекуррентная и.н.с.](* <- lang_ru;; *);
+    [MRNN](* <- lang_en;;*);
 
 <- rrel_key_sc_element:
     ...
@@ -16,18 +17,37 @@ concept_multirecurrent_ann
         [Def. (multirecurrent artificial neural network)]
         (* <- lang_en;; *);;
     <- definition;;
-    => nrel_sc_text_translation:
-        {
-        rrel_example:
-            []
-            (* <- lang_ru;; *);
-        rrel_example:
-            []
-            (* <- lang_en;; *)
-        };;
-    => nrel_using_constants:
+    <= nrel_sc_text_translation: ...
+        (*
+        <- rrel_example:
+            [Мультирекуррентная искусственная нейронная сеть --- рекуррентная нейронная сеть, которая имеет обратные связи как от нейронов выходного, так и от нейронов скрытого слоя.]
+            (* <- lang_ru;; *);;
+        <- rrel_example:
+            [Multi-recurrent artificial neural network is a type of recurrent neural network that has feedback connections from both the output neurons and the hidden layer neurons.]
+            (* <- lang_en;; *);;
+        *);;
+    <= nrel_using_constants:
         {
         concept_artificial_neural_network;
+        concept_recurrent_ann;
         concept_multirecurrent_ann
         };;
+    *);
+
+<- rrel_key_sc_element:
+    ...
+    (*
+    => nrel_main_idtf:
+        [Рис.(Рекуррентная нейронная сеть)]
+        (* <- lang_ru;; *);
+        [Img.(Recurrent neural network)]
+        (* <- lang_en;; *);;
+    <-illustration;;
+    <= nrel_sc_text_translation: ...
+        (*
+        ->rrel_example:
+            "file://illustrations/recurrent_ann_structure_ru.png" (* => nrel_format: format_png;; *);;
+        *);;
+        =>nrel_reference:
+            golovko2017;;
     *);;

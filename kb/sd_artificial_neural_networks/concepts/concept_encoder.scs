@@ -1,0 +1,38 @@
+concept_encoder
+<- sc_node_class;
+<= nrel_inclusion: concept_autoencoder_ann;
+=> nrel_main_idtf:
+    [энкодер](* <- lang_ru;; *);
+    [encoder](* <- lang_en;; *);
+=> nrel_idtf:
+    [кодировщик]
+    (* <- lang_ru;; *);
+    [читатель]
+    (* <- lang_ru;; *);
+
+<- rrel_key_sc_element:
+    ...
+    (*
+    => nrel_main_idtf:
+        [Опр. (энкодер)]
+        (* <- lang_ru;; *);
+        [Def. (encoder)]
+        (* <- lang_en;; *);;
+    <- definition;;
+    <= nrel_sc_text_translation:
+        ...
+        (*
+        ->rrel_example:
+            [Энкодер переводит входной сигнал в его представление (код)]
+            (* <- lang_ru;; *);;
+        ->rrel_example:
+            [Encoder translates an input signal into its representation (code).]
+            (* <- lang_en;; *);;
+        *);;
+    => nrel_using_constants:
+        {
+        concept_artificial_neural_network;
+        concept_autoencoder_ann;
+        concept_encoder
+        };;
+    *);;

@@ -1,0 +1,79 @@
+concept_kohonens_map
+<- sc_node_class;
+=> nrel_main_idtf:
+    [самоорганизующаяся карта Кохонена]
+    (* <- lang_ru;; *);
+    [self-organizing map]
+    (* <- lang_en;; *);
+=> nrel_idtf:
+    [карта Кохонена]
+    (* <- lang_ru;; *);
+    [Kohonen self-organizing map]
+    (* <- lang_en;; *);
+    [SOM]
+    (* <- lang_en;; *);
+=> nrel_reference:
+    golovko2017;
+<- rrel_key_sc_element:
+    ...
+    (*
+    => nrel_main_idtf:
+        [Опр. (самоорганизующаяся карта Кохонена)]
+        (* <- lang_ru;; *);
+        [Def. (self-organizing map)]
+        (* <- lang_en;; *);;
+    <- definition;;
+    <= nrel_sc_text_translation:
+    ...
+        (*
+        ->rrel_example:
+            [Искусственная нейронная сеть Кохонена - это искусственная нейронная сеть, содержащая входной слой и слой активных нейронов.]
+            (* <- lang_ru;; *);;
+        ->rrel_example:
+            [Kohonen network is a type of artificial neural network that consists of an input layer and a layer of active neurons.]
+            (* <- lang_en;; *);;
+        *);;
+    <= nrel_using_constants:
+        {
+        concept_artificial_neural_network;
+        concept_kohonens_ann
+        };;
+    *);
+<- rrel_key_sc_element: ...
+(*
+    <- definition;;
+    => nrel_main_idtf:
+        [Опр. (карта Кохонена)] (* <- lang_ru;; *);
+        [Def. (Kohonen self-organizing map)] (* <- lang_en;; *);;
+    => nrel_using_constants: 
+        {
+            concept_artificial_neural_network;
+            learning_process; //TODO
+            visualization; //TODO
+            clustering //TODO
+        };; 
+    <= nrel_sc_text_translation: ... 
+            (*
+                ->rrel_example:
+                [Карта Кохонена --- нейронная сеть с обучением без учителя, выполняющая задачу визуализации и кластеризации.](*<- lang_ru;;*);;
+                ->rrel_example:
+                [Kohonen self-organizing map is a type of artificial neural network that is used for unsupervised learning. It solves tasks of visualization and clustering.](*<- lang_en;;*);;
+                
+            *);;
+*);
+<- rrel_key_sc_element: ... 
+(*
+    => nrel_main_idtf:
+    [Утв. (о картe Кохонена)] (* <- lang_ru;; *);;
+    <- statement;;
+    <= nrel_sc_text_translation: ...
+        (*
+            -> rrel_example:
+            [Является методом проецирования многомерного пространства в пространство с более низкой размерностью.](*<-lang_ru;;*);;
+        *);;
+    => nrel_using_constants: 
+    {
+    rrel_linear_space;
+    dimension
+    };;
+*);;

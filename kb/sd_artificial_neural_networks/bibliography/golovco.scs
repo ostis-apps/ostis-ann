@@ -1,0 +1,23 @@
+golovko2017
+<-literary_source;
+=> nrel_main_idtf:
+    [Нейросетевые технологии обработки данных]
+    (* <- lang_ru;; *);
+    /*[]
+    (* <- lang_en;; *);*/
+<-nrel_reference_standard:
+...
+	(*
+		<= nrel_sc_text_translation:
+			...
+			(*
+				-> [Головко, В.А. “Нейросетевые технологии обработки данных.” (2017).]
+					(*<- lang_en;;*);;
+			*);;
+	*);
+	=>nrel_author:
+	{
+		[Головко В.А.];
+        [Краснопрошин В.В.]
+	};
+    => nrel_site: "http://elib.bsu.by/handle/123456789/193558";;

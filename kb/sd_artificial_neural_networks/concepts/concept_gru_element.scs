@@ -18,18 +18,50 @@ concept_gru_element
         [Def. (gated recurrent units neural network)]
         (* <- lang_en;; *);;
     <- definition;;
-    => nrel_sc_text_translation:
-        {
-        rrel_example:
-            []
-            (* <- lang_ru;; *);
-        rrel_example:
-            []
-            (* <- lang_en;; *)
-        };;
+    <= nrel_sc_text_translation: ...
+        (*
+        -> rrel_example:
+            [Искусственная нейронная сеть с управляемыми рекуррентными блоками --- это рекуррентная нейронная сеть, аналогичная LSTM, за исключением того, что в такой сети нет отдельного долгосрочного состояния ячейки.]
+            (* <- lang_ru;; *);;
+        -> rrel_example:
+            [A gated recurrent unit (GRU) is a type of recurrent neural network that is similar to a long short-term memory (LSTM) network, but it does not have a separate long-term state cell.]
+            (* <- lang_en;; *);;
+        =>nrel_reference:
+            goodfellow2016deeplearning;;
+        *);;
     => nrel_using_constants:
         {
         concept_artificial_neural_network;
-        concept_gru_element
+        concept_lstm_element;
+        concept_gru_element;
+        concept_recurrent_ann
+        };;
+    *);
+<- rrel_key_sc_element:
+    ...
+    (*
+    => nrel_main_idtf:
+        [Утв. (искусственная нейронная сеть с управляемыми рекуррентными блоками)]
+        (* <- lang_ru;; *);
+        [St. (gated recurrent units neural network)]
+        (* <- lang_en;; *);;
+    <- statement;;
+    <= nrel_sc_text_translation: ...
+        (*
+        -> rrel_example:
+            [Состояние ячейки в GRU является комбинацией прошлого состояния и новых входных данных, модулируемых через обновляющие и сбрасывающие ворота. Это состояние обновляется на каждом шаге и переносит информацию по всей сети.]
+            (* <- lang_ru;; *);;
+        -> rrel_example:
+            [The cell state in a gated recurrent unit (GRU) is a crucial component that enables the network to process and retain information over time. It serves as a memory bank that stores the network's current understanding of the input sequence.]
+            (* <- lang_en;; *);;
+        =>nrel_reference:
+            goodfellow2016deeplearning;;
+        *);;
+    => nrel_using_constants:
+        {
+        concept_artificial_neural_network;
+        concept_lstm_element;
+        concept_gru_element;
+        concept_recurrent_ann
         };;
     *);;

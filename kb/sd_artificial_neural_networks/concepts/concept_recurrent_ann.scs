@@ -5,6 +5,8 @@ concept_recurrent_ann
     [рекуррентная нейронная сеть](* <- lang_ru;; *);
     [recurrent artificial neural network](* <- lang_en;; *);
 => nrel_idtf:
+    [recurrent neural network](* <- lang_en;; *);
+    [RNN](* <- lang_en;; *);
     [рекуррентная и.н.с.](* <- lang_ru;; *);
 <= nrel_basic_decomposition: ...
 (*
@@ -25,18 +27,63 @@ concept_recurrent_ann
         [Def. (recurrent artificial neural network)]
         (* <- lang_en;; *);;
     <- definition;;
-    => nrel_sc_text_translation:
-        {
-        rrel_example:
-            []
-            (* <- lang_ru;; *);
-        rrel_example:
-            []
-            (* <- lang_en;; *)
-        };;
-    => nrel_using_constants:
+    <= nrel_sc_text_translation: ...
+        (*
+        <- rrel_example:
+            [Рекуррентная нейронная сеть --- сеть, в которой выходы нейронных элементов последующих слоев имеют синаптические соединения с нейронами предшествующих слоев.]
+            (* <- lang_ru;; *);;
+        <- rrel_example:
+            [Recurrent neural network is a network in which the outputs of the neural elements of subsequent layers have synaptic connections with the neurons of the preceding layers.]
+            (* <- lang_en;; *);;
+        => nrel_reference:
+            golovko2017;;
+        *);;
+    <= nrel_using_constants:
         {
         concept_artificial_neural_network;
         concept_recurrent_ann
         };;
+    *);
+<- rrel_key_sc_element:
+    ...
+    (*
+    => nrel_main_idtf:
+        [Утв. (рекуррентная нейронная сеть)]
+        (* <- lang_ru;; *);
+        [St. (recurrent artificial neural network)]
+        (* <- lang_en;; *);;
+    <- statement;;
+    <= nrel_sc_text_translation: ...
+        (*
+        <- rrel_example:
+            [Рекуррентная нейронная сеть является динамической системой. Поэтому здесь необходимо использовать параметр времени.]
+            (* <- lang_ru;; *);;
+        <- rrel_example:
+            [Recurrent neural networks are dynamical systems. Therefore, it is necessary to use the time parameter here.]
+            (* <- lang_en;; *);;
+        => nrel_reference:
+            golovko2017;;
+        *);;
+    <= nrel_using_constants:
+        {
+        concept_artificial_neural_network;
+        concept_recurrent_ann
+        };;
+    *);
+<- rrel_key_sc_element:
+    ...
+    (*
+    => nrel_main_idtf:
+        [Рис.(Рекуррентная нейронная сеть)]
+        (* <- lang_ru;; *);
+        [Img.(Recurrent neural network)]
+        (* <- lang_en;; *);;
+    <-illustration;;
+    <= nrel_sc_text_translation: ...
+        (*
+        ->rrel_example:
+            "file://illustrations/recurrent_ann_structure_ru.png" (* => nrel_format: format_png;; *);;
+        *);;
+        =>nrel_reference:
+            golovko2017;;
     *);;
