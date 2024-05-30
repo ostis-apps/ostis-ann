@@ -31,6 +31,13 @@ concept_all_layer_neurons_weighted_sum_calculating_action
 (*
     -> rrel_example: "file://images/action_weighted_sum.png"(* => nrel_format: format_png;; *);;
     -> [пример спецификации действия вычисления взвешенной суммы всех нейронов слоя для слоя с двумя нейронами и входным вектором размерностью 2](* <- lang_ru;; *);;
+    => nrel_using_constants:
+        {
+        concept_all_layer_neurons_weighted_sum_calculating_action;
+        layer;
+        formal_neuron;
+        input_vector
+        };;
 *);
 => nrel_arguments_of_action: ...
 (*
