@@ -1,4 +1,4 @@
-concept_XOR_problem
+concept_xor_problem
 <- sc_node_class;
 => nrel_main_idtf:
     [задача "ИСКЛЮЧАЮЩЕЕ ИЛИ"](* <- lang_ru;; *);
