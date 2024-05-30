@@ -2,6 +2,31 @@ concept_all_layer_neurons_activation_function_calculating_action
 => nrel_main_idtf:
     [действие вычисления функции активации всех нейронов слоя](* <- lang_ru;; *);
     [action of calculating the activation function of all neurons in a layer](* <- lang_en;; *);
+<- rrel_key_sc_element:
+    ...
+    (*
+    => nrel_main_idtf:
+        [Опр. (действие вычисления функции активации всех нейронов слоя)]
+        (* <- lang_ru;; *);
+        [Def. (action of calculating the activation function of all neurons in a layer)]
+        (* <- lang_en;; *);;
+    <- definition;;
+    => nrel_sc_text_translation:
+        {
+        rrel_example:
+            [действие вычисления функции активации всех нейронов слоя — действие интерпретации слоя и.н.с., в ходе которого реализуется определенный метод, связанный с вычислением функции активации всех нейронов слоя и.н.с.]
+            (* <- lang_ru;; *)
+        };;
+    => nrel_using_constants:
+        {
+        concept_all_layer_neurons_activation_function_calculating_action;
+        concept_ann_layer_interpretation_action;
+        layer;
+        activation_function;
+        formal_neuron;
+        concept_artificial_neural_network
+        };;
+    *);
 => nrel_arguments_of_action: ...
 (*
     -> rrel_layer_neuron_weighted_sums_vector;;

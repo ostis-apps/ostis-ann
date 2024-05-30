@@ -22,7 +22,8 @@ concept_ann_training_action
         };;
     => nrel_using_constants:
         {
-        concept_ann_training_action
+        concept_ann_training_action;
+        concept_artificial_neural_network
         };;
     *);
 <= nrel_sc_text_translation: ...
