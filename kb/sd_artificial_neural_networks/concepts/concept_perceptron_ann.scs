@@ -1,0 +1,13 @@
+concept_perceptron_ann
+<-sc_node_class;
+=> nrel_main_idtf:
+    [Персептронные нейронные сети]
+    (* <- lang_ru;; *);
+=> nrel_basic_decomposition: ...
+    (*
+        <-sc_node_tuple;;
+        -> concept_multilayer_perceptron;; //TODO
+        -> concept_recurrent_ann;;
+        -> concept_convolutional_ann;;
+        -> concept_deep_ann;; //TODO
+    *);;
