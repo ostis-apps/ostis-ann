@@ -2,7 +2,7 @@ concept_pooling_layer_interpretation_action
 => nrel_main_idtf:
     [действие интерпретации пулинг слоя](* <- lang_ru;; *);
     [action of interpretation the pooling layer](* <- lang_en;; *);
-=> rrel_argument_of_action: ...
+=> nrel_arguments_of_action: ...
 (*
     -> rrel_input_matrix;;
     -> rrel_pooling_window_size;;

@@ -38,6 +38,7 @@ subject_domain_of_ann_actions
 -> rrel_explored_relation:
     nrel_explanation;
     nrel_reason;
+    nrel_arguments_of_action;
     rrel_activation_function;
     rrel_input_matrix;
     rrel_input_vector;

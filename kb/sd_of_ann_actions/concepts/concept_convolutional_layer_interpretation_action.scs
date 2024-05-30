@@ -2,7 +2,7 @@ concept_convolutional_layer_interpretation_action
 => nrel_main_idtf:
     [действие интерпретации свёрточного слоя](* <- lang_ru;; *);
     [action of interpretation the convolutional layer](* <- lang_en;; *);
-=> rrel_argument_of_action: ...
+=> nrel_arguments_of_action: ...
 (*
     -> rrel_layer_neuron_weighted_sums_vector;;
     -> rrel_layer_neuron_threshold_vector;;
