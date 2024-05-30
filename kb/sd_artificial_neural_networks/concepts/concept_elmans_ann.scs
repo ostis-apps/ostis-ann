@@ -48,7 +48,7 @@ concept_elmans_ann
     <= nrel_sc_text_translation: ...
         (*
         ->rrel_example:
-            "file://illustrations/elman_ann.png" (* => nrel_format: format_png;; *);;
+            "file://images/elman_ann.png" (* => nrel_format: format_png;; *);;
         *);;
         =>nrel_reference:
             golovko2017;;

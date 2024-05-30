@@ -113,14 +113,14 @@ concept_perceptron
     ...
         (*
         ->rrel_example:
-            "file://illustrations/perceptron-srtucture.png" (* => nrel_format: format_png;; *);
+            "file://images/perceptron-srtucture.png" (* => nrel_format: format_png;; *);
             [Нейроны слоя S называются сенсорными и предназначены для формирования входных сигналов, возникающих в результате внешних воздействий. Нейроны слоя A называются ассоциативными и предназначены для непосредственной обработки входной информации. Нейроны слоя R называются эффекторными. Они служат для передачи сигналов возбуждения к соответствующему объекту, например к мышцам.]
             (* <- lang_ru;;*);;
         *);
         ...
         (*
         ->rrel_example:
-            "file://illustrations/perceptron-srtucture.png" (* => nrel_format: format_png;; *);
+            "file://images/perceptron-srtucture.png" (* => nrel_format: format_png;; *);
             [Layer S neurons are called 'Sensory-Units', they form input signals. Layer A neurons are called 'Association-Units', they proccess input information. Layer R neurons are called 'Response-Units', they transfer signals to objects.]
             (* <- lang_en;;*);;
         *);;

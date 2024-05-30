@@ -48,7 +48,7 @@ concept_rosenblatts_perceptron
     ...
         (*
         ->rrel_example:
-            "file://illustrations/rosenblatts_peceptron_structure.png" (* => nrel_format: format_png;; *);;
+            "file://images/rosenblatts_peceptron_structure.png" (* => nrel_format: format_png;; *);;
         *);;
     *);;
 

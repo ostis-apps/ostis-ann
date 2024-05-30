@@ -75,7 +75,7 @@ concept_hammings_ann
     <= nrel_sc_text_translation: ...
         (*
         ->rrel_example:
-            "file://illustrations/hamming_ann_arcitecture.png" (* => nrel_format: format_png;; *);;
+            "file://images/hamming_ann_arcitecture.png" (* => nrel_format: format_png;; *);;
         *);;
         =>nrel_reference:
             golovko2017;;

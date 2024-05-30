@@ -65,7 +65,7 @@ concept_hopfields_ann
     <= nrel_sc_text_translation: ...
         (*
         ->rrel_example:
-            "file://illustrations/hopfield_ann_arcitecture.png" (* => nrel_format: format_png;; *);;
+            "file://images/hopfield_ann_arcitecture.png" (* => nrel_format: format_png;; *);;
         *);;
         =>nrel_reference:
             golovko2017;;

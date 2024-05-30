@@ -71,6 +71,6 @@ concept_kohonens_ann
     ...
         (*
         ->rrel_example:
-            "file://illustrations/kohonens_ann_architecture.png" (* => nrel_format: format_png;; *);;
+            "file://images/kohonens_ann_architecture.png" (* => nrel_format: format_png;; *);;
         *);;
     *);;

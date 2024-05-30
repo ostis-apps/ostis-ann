@@ -90,7 +90,7 @@ concept_feedforward_ann
         ...
         (*
         ->rrel_example:
-            "file://illustrations/feed-forward_ann.png" (* => nrel_format: format_png;; *);;
+            "file://images/feed-forward_ann.png" (* => nrel_format: format_png;; *);;
         *);
         ...
         (*

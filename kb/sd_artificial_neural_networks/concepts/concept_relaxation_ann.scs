@@ -79,6 +79,6 @@ concept_relaxation_ann
     <= nrel_sc_text_translation: ...
         (*
         ->rrel_example:
-            "file://illustrations/relaxed_neur_netw.png" (* => nrel_format: format_png;; *);;
+            "file://images/relaxed_neur_netw.png" (* => nrel_format: format_png;; *);;
         *);;
     *);;

@@ -51,7 +51,7 @@ concept_lstm_element
     <= nrel_sc_text_translation: ...
         (*
         ->rrel_example:
-            "file://illustrations/lstm.png" (* => nrel_format: format_png;; *);;
+            "file://images/lstm.png" (* => nrel_format: format_png;; *);;
         *);;
         =>nrel_reference:
             goodfellow2016deeplearning;;

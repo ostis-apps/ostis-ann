@@ -63,7 +63,7 @@ concept_jordans_ann
     <= nrel_sc_text_translation: ...
         (*
         ->rrel_example:
-            "file://illustrations/jordan_ann.png" (* => nrel_format: format_png;; *);;
+            "file://images/jordan_ann.png" (* => nrel_format: format_png;; *);;
         *);;
         =>nrel_reference:
             golovko2017;;

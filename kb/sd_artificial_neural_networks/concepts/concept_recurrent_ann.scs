@@ -82,7 +82,7 @@ concept_recurrent_ann
     <= nrel_sc_text_translation: ...
         (*
         ->rrel_example:
-            "file://illustrations/recurrent_ann_structure_ru.png" (* => nrel_format: format_png;; *);;
+            "file://images/recurrent_ann_structure_ru.png" (* => nrel_format: format_png;; *);;
         *);;
         =>nrel_reference:
             golovko2017;;
