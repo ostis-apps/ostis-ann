@@ -3,6 +3,30 @@ concept_ann_layer_neuron_configuration_action
 => nrel_main_idtf:
     [действие конфигурации нейрона в слое и.н.с.](* <- lang_ru;; *);
     [ann neuron configuration in a layer action](* <- lang_en;; *);
+<- rrel_key_sc_element:
+    ...
+    (*
+    => nrel_main_idtf:
+        [Опр. (действие конфигурации нейрона в слое и.н.с.)]
+        (* <- lang_ru;; *);
+        [Def. (ann neuron configuration in a layer action)]
+        (* <- lang_en;; *);;
+    <- definition;;
+    => nrel_sc_text_translation:
+        {
+        rrel_example:
+            [действие конфигурации нейрона в слое и.н.с. — действие конфигурации слоя и.н.с., в ходе которого реализуется определенный метод, связанный с конфигурацией нейрона в слое и.н.с.]
+            (* <- lang_ru;; *)
+        };;
+    => nrel_using_constants:
+        {
+        concept_ann_layer_neuron_configuration_action;
+        concept_ann_layer_configuration_action;
+        layer;
+        formal_neuron;
+        concept_artificial_neural_network
+        };;
+    *);
 => nrel_decomposition: ...
 (*
     <- sc_node_tuple;;

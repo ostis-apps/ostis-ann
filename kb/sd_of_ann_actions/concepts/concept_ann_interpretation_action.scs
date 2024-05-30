@@ -2,7 +2,29 @@ concept_ann_interpretation_action
 <- sc_node_class;
 => nrel_main_idtf:
     [действие интерпретации и.н.с.](* <- lang_ru;; *);
-    [concept ann interpretation action](* <- lang_en;; *);
+    [ann interpretation action](* <- lang_en;; *);
+<- rrel_key_sc_element:
+    ...
+    (*
+    => nrel_main_idtf:
+        [Опр. (действие интерпретации и.н.с.)]
+        (* <- lang_ru;; *);
+        [Def. (ann interpretation action)]
+        (* <- lang_en;; *);;
+    <- definition;;
+    => nrel_sc_text_translation:
+        {
+        rrel_example:
+            [действие интерпретации и.н.с. — действие с и.н.с., в ходе которого реализуется определенный метод, связанный с интерпретацией и.н.с.]
+            (* <- lang_ru;; *)
+        };;
+    => nrel_using_constants:
+        {
+        concept_ann_interpretation_action;
+        concept_ann_processing_action;
+        concept_artificial_neural_network
+        };;
+    *);
 => nrel_note:
     [действию соответствует агент, реализованный на соответствующем языке программирования];
 => nrel_note: ...

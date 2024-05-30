@@ -3,6 +3,29 @@ concept_ann_layer_configuration_action
 => nrel_main_idtf:
     [действие конфигурации слоя и.н.с.](* <- lang_ru;; *);
     [ann layer configuration action](* <- lang_en;; *);
+<- rrel_key_sc_element:
+    ...
+    (*
+    => nrel_main_idtf:
+        [Опр. (действие конфигурации слоя и.н.с.)]
+        (* <- lang_ru;; *);
+        [Def. (ann layer configuration action)]
+        (* <- lang_en;; *);;
+    <- definition;;
+    => nrel_sc_text_translation:
+        {
+        rrel_example:
+            [действие конфигурации слоя и.н.с. — действие конфигурации и.н.с., в ходе которого реализуется определенный метод, связанный с конфигурацией слоя и.н.с.]
+            (* <- lang_ru;; *)
+        };;
+    => nrel_using_constants:
+        {
+        concept_ann_layer_configuration_action;
+        concept_ann_design_action;
+        layer;
+        concept_artificial_neural_network
+        };;
+    *);
 => nrel_decomposition: ...
 (*
     <- sc_node_tuple;;
