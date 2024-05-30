@@ -10,7 +10,7 @@ rrel_layer_neuron_threshold_vector
 <- asymmetric_relation;
 <- antitransitive_relation;
 => nrel_first_domain: concept_ann_processing_action;
-=> nrel_second_domain: concept_oriented_set_of_numbers;
+=> nrel_second_domain: concept_number_oriented_set;
 => nrel_definitional_domain: ...
 (*
     <= nrel_combination: ...
