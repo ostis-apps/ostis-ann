@@ -32,13 +32,12 @@ subject_domain_of_ann_actions
     concept_pooling_layer_interpretation_action;
     concept_specifying_different_arguments_for_same_layer_neurons_problem;
     concept_ann_interpretation_agent_based_model;
-    concept_XOR_problem;
-    concept_single_layer_perceptron_solving_XOR_problem;
+    concept_xor_problem;
+    concept_single_layer_perceptron_solving_xor_problem;
     concept_signal_activation_function;
 -> rrel_explored_relation:
     nrel_explanation;
     nrel_reason;
-    nrel_arguments_of_action;
     rrel_activation_function;
     rrel_input_matrix;
     rrel_input_vector;
