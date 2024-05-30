@@ -17,22 +17,22 @@ concept_feedback_ann
     ...
     (*
     => nrel_main_idtf:
-        [Опр. (искусственная нейронная сеть)]
+        [Опр. (искусственная нейронная сеть с обратными связями)]
         (* <- lang_ru;; *);
-        [Def. (artificial neural network)]
+        [Def. (feedfback artificial neural network)]
         (* <- lang_en;; *);;
     <- definition;;
     <= nrel_sc_text_translation:
         ...
         (*
         ->rrel_example:
-            []
+            [Нейронная сеть с обратными связями - клаcc нейронных сетей, где для каждого соответствия между элементами входного/скрытого и скрытого/выходного слоев существует обратное соответствие.]
             (* <- lang_ru;; *);;
         *);
         ...
         (*
         ->rrel_example:
-            []
+            [Feedfback artificial neural network is a class of neural networks where there exists a feedback connection for each correspondence between elements of the input/hidden and hidden/output layers.]
             (* <- lang_en;; *);;
         *)
         ;;
