@@ -18,4 +18,4 @@ concept_xor_problem
         concept_signal_activation_function
         };;
 *);
-=> nrel_application: concept_single_layer_perceptron_solving_XOR_problem;;
+=> nrel_application: concept_single_layer_perceptron_solving_xor_problem;;
