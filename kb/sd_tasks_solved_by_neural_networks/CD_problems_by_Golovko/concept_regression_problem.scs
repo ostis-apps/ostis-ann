@@ -1,0 +1,44 @@
+concept_regression_problem
+	<- sc_node_not_relation;
+	=> nrel_main_idtf: [задача регреcсии] (* <- lang_ru;; *);
+	=> nrel_main_idtf: [regression problem] (* <- lang_en;; *);
+	=> nrel_generic_specification:regression_generic_specification;
+	=> nrel_solved_by_ann: ...
+     (*
+	<- sc_node_tuple;;
+	-> concept_convolutional_ann;;
+	-> concept_echo_state_ann;;
+	-> concept_long_short_term_memory_ann;;
+	-> concept_general_regression_ann;;
+     *);
+	=>nrel_input_data_class: ...
+	 (*
+	<- sc_node_tuple;;
+	-> object;;
+	->parametr;;
+	 *);
+	=>nrel_output_data_class: ...
+	(*
+	<- sc_node_tuple;;
+	-> value;;
+	->parametr;;
+	 *);;
+
+
+
+definition -> ...
+	(*
+		-> rrel_key_sc_element: concept_regression_problem;;
+		
+		=> nrel_main_idtf: [Опр.(задача регрессии] (* <- lang_ru;; *);;
+
+		<= nrel_sc_text_translation: ...
+			(*
+				-> [Задача регрессии - это задача определения значения парметра произвольного объекта (множества объектов) на основании известных значений других параметров объекта (множества объектов)] (* <- lang_ru;; *);;
+			*);;
+	*);;
+
+nrel_inclusion->(section_subject_domain_problems_solved_by_neural_networks=>concept_regression_problem);;
+concept_regression_problem<-rrel_explored_concept: section_subject_domain_problems_solved_by_neural_networks;;
+
+	

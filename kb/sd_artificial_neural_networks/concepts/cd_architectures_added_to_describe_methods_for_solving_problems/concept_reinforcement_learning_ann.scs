@@ -1,0 +1,8 @@
+concept_reinforcement_learning_ann 
+<- sc_node_class;
+<= nrel_inclusion: concept_artificial_neural_network;
+=> nrel_main_idtf:
+    [Нейронная сеть обученная с подкреплением](* <- lang_ru;; *);
+    [Reinforcement learning nural network](* <- lang_en;; *);
+=> nrel_idtf:
+    [RLNN](* <- lang_en;; *);;
