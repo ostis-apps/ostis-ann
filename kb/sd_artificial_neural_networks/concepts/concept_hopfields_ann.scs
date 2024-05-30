@@ -20,13 +20,13 @@ concept_hopfields_ann
         ...
         (*
         ->rrel_example:
-            []
+            [Нейронная сеть Хопфилда --- полнозвязная рекуррентная нейронная сеть с единичным обратным соответствием.]
             (* <- lang_ru;; *);;
         *);
         ...
         (*
         ->rrel_example:
-            []
+            [A Hopfield network is a type of recurrent neural network characterized by its fully connected structure and single feedback loop.]
             (* <- lang_en;; *);;
         *)
         ;;
@@ -35,4 +35,38 @@ concept_hopfields_ann
         concept_artificial_neural_network;
         concept_hopfields_ann
         };;
+    *);
+-> rrel_key_sc_element: ...
+    (*
+	=> nrel_main_idtf: 
+        [Утв.(искусственная нейронная сеть Хопфилда)](* <- lang_ru;; *);
+        [Утв.(artificial neural network of Hopfield)](* <- lang_en;; *);;
+	<= nrel_sc_text_translation:...
+		(*
+			-> rrel_example: 
+            [Нейронная сеть Хопфилда характеризуется обратными связями. В ней каждый нейрон имеет синаптические связи со всеми остальными нейронами сети.]
+            (*<- lang_ru;; *);;
+            -> rrel_example:
+            [A Hopfield network is characterized by its extensive feedback connections, where every neuron in the network is connected to every other neuron.]
+            (*<- lang_en;; *);;
+		*);;
+        => nrel_reference:
+            golovko2017;;
+    *);
+<- rrel_key_sc_element:
+    ...
+    (*
+    => nrel_main_idtf:
+        [Рис.(искусственная нейронная сеть Хэмминга)]
+        (* <- lang_ru;; *);
+        [Img.(artificial neural network of Hamming)]
+        (* <- lang_en;; *);;
+    <-illustration;;
+    <= nrel_sc_text_translation: ...
+        (*
+        ->rrel_example:
+            "file://illustrations/hopfield_ann_arcitecture.png" (* => nrel_format: format_png;; *);;
+        *);;
+        =>nrel_reference:
+            golovko2017;;
     *);;
