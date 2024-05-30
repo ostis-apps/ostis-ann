@@ -36,6 +36,13 @@ concept_ann_interpretation_action
                 данной и.н.с.](* <- lang_ru;; *);;
         => nrel_note:
              [внешний язык — язык, который не является внутренним языком ostis-системы, т.е. не Язык SCP](* <- lang_ru;; *);;
+        => nrel_using_constants:
+            {
+            concept_artificial_neural_network;
+            lang_external;
+            subject_domain;
+            concept_ann_interpretation_action
+            };;
     *);;
 *);
 => nrel_basic_decomposition: ...

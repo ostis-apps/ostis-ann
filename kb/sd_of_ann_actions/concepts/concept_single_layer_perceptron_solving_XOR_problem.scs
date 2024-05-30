@@ -1,4 +1,4 @@
-concept_single_layer_perceptron_solving_XOR_problem
+concept_single_layer_perceptron_solving_xor_problem
 <- sc_node_class;
 => nrel_main_idtf:
     [однослойный персептрон, решающий задачу "ИСКЛЮЧАЮЩЕЕ ИЛИ"](* <- lang_ru;; *);
@@ -16,5 +16,11 @@ concept_single_layer_perceptron_solving_XOR_problem
     -> [описание метода состоит из последовательности двух обобщенных спецификаций действий —
         действия вычисления взвешенной суммы всех нейронов слоя и действия вычисления функции
         активации для всех нейронов слоя](* <- lang_ru;; *);;
+    => nrel_using_constants:
+        {
+        concept_single_layer_perceptron_solving_XOR_problem;
+        concept_all_layer_neurons_weighted_sum_calculating_action;
+        concept_all_layer_neurons_activation_function_calculating_action
+        };;
 *);
 => nrel_application: concept_signal_activation_function;;

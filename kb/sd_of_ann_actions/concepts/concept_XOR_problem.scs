@@ -12,6 +12,10 @@ concept_xor_problem
 <= nrel_sc_text_translation: ...
 (*
     -> rrel_example: "file://images/strong_or_graphic.png"(* => nrel_format: format_png;; *);;
-    -> [решение задачи с помощью сигнальных функций описание сигнальной функции, использующейся для решения](* <- lang_ru;; *);;
+    -> [описание сигнальной функции активации, использующейся для решения](* <- lang_ru;; *);;
+    => nrel_using_constants:
+        {
+        concept_signal_activation_function
+        };;
 *);
 => nrel_application: concept_single_layer_perceptron_solving_XOR_problem;;
