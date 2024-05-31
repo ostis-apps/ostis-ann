@@ -4,5 +4,5 @@ concept_RMSE<-sc_node_not_relation;
 => nrel_main_idtf: [root mean squared error](* <- lang_en;; *);
 
 
-=> nrel_formula: "file://RMSE.html"(*=> nrel_format: format_html;;*);
+=> nrel_formula: "file://assets//RMSE.html"(*=> nrel_format: format_html;;*);
 <- concept_ann_classification_metrics;;

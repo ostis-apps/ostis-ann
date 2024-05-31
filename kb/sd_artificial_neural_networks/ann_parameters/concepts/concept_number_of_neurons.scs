@@ -1,15 +1,15 @@
-concept_number_of_neurons<-sc_node_not_relation;
+concept_number_of_neurons <- sc_node_not_relation;
 
 => nrel_main_idtf: [количество нейронов и.н.с.](* <- lang_ru;; *);
 => nrel_main_idtf: [number of neurons in a.n.n.](* <- lang_en;; *);
 
 => nrel_definition: ...
 (*
-    -> nrel_sc_text_translation: [Количество нейронов и.н.с. — архитектурный параметр и.н.с., который характеризует количество нейронов в и.н.с..](*<-lang_ru;;*);;
-    => nrel_main_idtf: [Определение (Количество нейронов и.н.с.)](*<- lang_ru;;*);;
+    -> nrel_sc_text_translation: [Количество нейронов и.н.с. — архитектурный параметр и.н.с., который характеризует количество нейронов в и.н.с..](* <- lang_ru;;*);;
+    => nrel_main_idtf: [Определение (Количество нейронов и.н.с.)](* <- lang_ru;;*);;
 
-    -> nrel_sc_text_translation: [Number of neurons in a.n.n. — architectural parameter of the a.n.n., which characterizes the number of neurons in a.n.n.](*<-lang_en;;*);;
-    => nrel_main_idtf: [Definition (number of neurons in a.n.n.)](*<- lang_en;;*);;
+    -> nrel_sc_text_translation: [Number of neurons in a.n.n. — architectural parameter of the a.n.n., which characterizes the number of neurons in a.n.n.](* <- lang_en;;*);;
+    => nrel_main_idtf: [Definition (number of neurons in a.n.n.)](* <- lang_en;;*);;
 
     => nrel_using_constants:
     {
@@ -20,5 +20,5 @@ concept_number_of_neurons<-sc_node_not_relation;
         neural_element
     };;
 *);
-<-concept_ann_parameter;
-<-concept_ann_architectural_parameter;;
+ <- concept_ann_parameter;
+ <- concept_ann_architectural_parameter;;

@@ -13,5 +13,5 @@ concept_MAE<-sc_node_not_relation;
 *);
 
 
-=> nrel_formula: "file://MAE.html"(*=> nrel_format: format_html;;*);
+=> nrel_formula: "file://assets//MAE.html"(*=> nrel_format: format_html;;*);
 <- concept_ann_classification_metrics;;

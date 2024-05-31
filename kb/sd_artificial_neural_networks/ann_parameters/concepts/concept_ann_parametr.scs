@@ -1,10 +1,10 @@
-concept_ann_parameter<-sc_node_not_relation;
+concept_ann_parameter <- sc_node_not_relation;
 
 => nrel_main_idtf: [параметр и.н.с.](* <- lang_ru;; *);
 => nrel_main_idtf: [a.n.n. parameter](* <- lang_en;; *);
 <= nrel_inclusion: [параметр](* <- lang_ru;; *);
 
-<-parameter;
+ <- parameter;
 
 => nrel_definition: ...
 (*
@@ -21,6 +21,6 @@ concept_ann_parameter<-sc_node_not_relation;
 (*
     => nrel_main_idtf: [Разбиение параметров и.н.с.](* <- lang_ru;; *);;
     <- sc_node_tuple;;
-    ->concept_ann_architectural_parameter;;
-    ->concept_ann_configurable_parameter;;
+    -> concept_ann_architectural_parameter;;
+    -> concept_ann_configurable_parameter;;
 *);;
