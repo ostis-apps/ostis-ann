@@ -1,0 +1,38 @@
+concept_convolution_kernels
+
+
+<-rrel_key_sc_element: 
+	Definition_of_concept_convolution_kernels
+		(*
+			<-definition;;
+			<=nrel_sc_text_translation:...
+			(*
+				-> rrel_example:
+				[<p>				
+				<b>ядро свертки</b>  - квадратная матрица произвольного порядка, элементы которой изменя-
+ются в процессе обучения и.н.с.
+				</p>] 
+				(*
+				<-lang_ru;;
+				=> nrel_format: format_html;;
+				*);;
+			*);;
+		=>nrel_main_idtf:[Опр. (ядро свертки)](* <-lang_ru;; => nrel_format: format_html;;*);;
+		*);
+
+
+<-rrel_key_sc_element: 
+	Affirmation_of_concept_convolution_kernels
+		(*
+			-> rrel_key_sc_element: concept_convolution_kernels;;
+
+			=> nrel_main_idtf: [Примечание(ядро свертки)] (* <- lang_ru;; *);;
+
+			<= nrel_sc_text_translation: ...
+				(*
+					-> [Если сверточный формальный нейрон представить в виде полносвязного
+формального нейрона, соответствующее ядро свертки преобразуется в
+вектор весовых коэффициентов.] (* <- lang_ru;; *);;
+					
+				*);;
+		*);;

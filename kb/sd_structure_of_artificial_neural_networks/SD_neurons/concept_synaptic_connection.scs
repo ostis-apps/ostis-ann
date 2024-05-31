@@ -1,0 +1,28 @@
+concept_synaptic_connection
+
+	=> nrel_main_idtf:
+	[синаптическая связь](* <-lang_ru;; *);
+	[synaptic connection](* <-lang_en;; *);
+
+	=> nrel_idtf:
+	[синапс](* <-lang_ru;; *);
+
+  <-rrel_key_sc_element: 
+	Definition_of_concept_synaptic_connection
+		(*
+		  <- definition;;
+			<=nrel_sc_text_translation:...
+			(*
+				-> rrel_example: 
+				[<p>
+				<b>синаптическая связь</b> - ориентированная пара, первым компонентом которой является нейрон, из
+которого исходит сигнал, а вторым компонентом — нейрон, который принимает этот сигнал.
+				</p>]
+				(*
+				<- lang_ru;; 
+				=> nrel_format: format_html;;
+				*);;
+			*);;
+
+		=>nrel_main_idtf:[Опр. (синаптическая связь)](* <-lang_ru;; => nrel_format: format_html;;*);;
+		*);;

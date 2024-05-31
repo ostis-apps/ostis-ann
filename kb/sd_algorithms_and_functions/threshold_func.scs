@@ -1,5 +1,5 @@
 sc_node_norole_relation->nrel_threshold_activation_function;;
-nrel_threshold_activation_function=>nrel_main_idtf:[threshlod activation function*](* <-lang_en;; *);;
+nrel_threshold_activation_function=>nrel_main_idtf:[threshold activation function*](* <-lang_en;; *);;
 nrel_threshold_activation_function=>nrel_main_idtf:[пороговая функция активации*](* <-lang_ru;; *);;
 nrel_threshold_activation_function=>nrel_idtf:[активационная функция единого скачка*](* <-lang_ru;; *);;
 definition -> ...

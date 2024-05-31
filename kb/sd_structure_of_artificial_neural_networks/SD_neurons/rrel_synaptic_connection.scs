@@ -1,0 +1,43 @@
+rrel_synaptic_connection
+
+	=> nrel_main_idtf:
+	[синаптическая связь'](* <-lang_ru;; *);
+	[synaptic connection'](* <-lang_en;; *);
+
+	=> nrel_idtf:
+	[синапс'](* <-lang_ru;; *);
+
+  => nrel_first_domain:concept_artificial_neural_network;
+	=> nrel_second_domain:concept_synaptic_connection;;
+
+rrel_synaptic_connection => nrel_definitional_domain:...
+	(*
+		
+    <= nrel_combination:...
+		(*
+			-> concept_artificial_neural_network; concept_synaps;;
+		*);;
+    -> concept_artificial_neural_network;;
+	*);
+
+
+
+  <-rrel_key_sc_element: 
+	Definition_of_rrel_synaptic_connection
+		(*
+		  <- definition;;
+			<=nrel_sc_text_translation:...
+			(*
+				-> rrel_example: 
+				[<p>
+				<b>синаптическая связь'</b> - ролевое отношение, связывающее искусственную нейронную сеть с ее
+синапсом.
+				</p>]
+				(*
+				<- lang_ru;; 
+				=> nrel_format: format_html;;
+				*);;
+			*);;
+
+		=>nrel_main_idtf:[Опр. (синаптическая связь')](* <-lang_ru;; => nrel_format: format_html;;*);;
+		*);;

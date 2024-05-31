@@ -5,6 +5,7 @@ section_subject_domain_of_layers
 	[Section. Subject domain of layers]
 	(* <- lang_en;; *);
 
+-> rrel_key_sc_element: subject_domain_of_layers;
 <- not_enough_formed_structure;
 <- atomic_section;;
 
@@ -15,7 +16,31 @@ section_subject_domain_of_layers = [*
                                      	(* <- lang_ru;; *);
                                      	[Subject domain of layers]
                                      	(* <- lang_en;; *);
-                                     		
+
+																			-> rrel_maximum_studied_object_class:
+																					layer;
+																				
+																				-> rrel_not_maximum_studied_object_class:
+ 																				  concept_artificial_neural_network_layer;
+																					concept_convolution_layer_of_an_artificial_neural_network;
+																					concept_dropout_artificial_neural_network_layer;
+																					concept_full_link_layer_of_artificial_neural_network;
+																					concept_layer_of_artificial_neural_networks_of_nonlinear_transformation;
+																					concept_pooling_artificial_neural_network_layer;
+																					concept_artificial_neural_network_layer_batch_normalization;
+																					concept_number_of_layers;
+
+																				-> rrel_explored_relation:
+																					nrel_layer;
+																					nrel_Kohonen_layer;
+																					nrel_Grossberg_layer;
+																					nrel_distribution_layer;
+																					nrel_hidden_layer;
+																					nrel_number_of_layer;
+																					nrel_output_layer;
+																					nrel_treatment_layer;
+																					nrel_weight_coefficient_matrix_of_layer;
+																				
                                      <- subject_domain;;
                                      
                                      
