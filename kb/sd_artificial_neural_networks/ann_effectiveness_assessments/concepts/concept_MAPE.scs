@@ -4,5 +4,5 @@ concept_MAPE<-sc_node_not_relation;
 => nrel_main_idtf: [mean percentage absolute error](* <- lang_en;; *);
 
 
-=> nrel_formula: "file://MAPE.html"(*=> nrel_format: format_html;;*);
+=> nrel_formula: "file://assets//MAPE.html"(*=> nrel_format: format_html;;*);
 <- concept_ann_classification_metrics;;
