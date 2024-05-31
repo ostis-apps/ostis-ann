@@ -1,0 +1,32 @@
+concept_synaptic_connection_weighting_factor<-sc_node_not_relation;;
+concept_threshold_value<-sc_node_not_relation;;
+concept_convolution<-sc_node_not_relation;;
+concept_ann_configurable_parameter<-sc_node_not_relation;
+
+=> nrel_main_idtf: [настраиваемый параметр и.н.с.](* <- lang_ru;; *);
+=> nrel_main_idtf: [a.n.n. configurable parameter](* <- lang_en;; *);
+
+=> nrel_definition: ...
+(*
+    <- definition;;
+    -> nrel_sc_text_translation: [Настраиваемый параметр и.н.с. — параметр и.н.с., значение которого изменяется в ходе обучения.](*<-lang_ru;;*);;
+    => nrel_main_idtf: [Определение (настраиваемый параметр и.н.с.)](*<- lang_ru;;*);;
+    => nrel_using_constants:
+    {
+        parameter;
+        concept_ann_parameter;
+        concept_artificial_neural_network
+    };;
+
+*);
+
+<-concept_ann_parameter;
+
+=> nrel_basic_decomposition: ...
+(*
+    => nrel_main_idtf: [Разбиение настраиваемых параметров и.н.с.](* <- lang_ru;; *);;
+    <- sc_node_tuple;;
+    -> concept_synaptic_connection_weighting_factor;;
+    -> concept_threshold_value;;
+    -> concept_convolution;;
+*);;

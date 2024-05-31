@@ -1,0 +1,24 @@
+concept_threshold_value<-sc_node_not_relation;
+
+=> nrel_main_idtf: [пороговое значение и.н.с.](* <- lang_ru;; *);
+=> nrel_main_idtf: [threshold value of a.n.n.](* <- lang_en;; *);
+
+<-concept_ann_configurable_parameter;
+
+=> nrel_definition: ...
+    (*
+    -> sc_text_translation: [Пороговое значение и.н.с. — найстраиваемый параметр и.н.с., который характеризует ЧТО-ТО.](*<-lang_ru;;*);;
+    => nrel_main_idtf: [Определение (пороговое значение и.н.с.)](*<- lang_ru;;*);;
+
+    -> nrel_sc_text_translation: [Threshold value of a.n.n. — ?](*<-lang_en;;*);;
+    => nrel_main_idtf: [Definition (threshold value of a.n.n.)](*<- lang_en;;*);;
+    
+    => nrel_using_constants:
+    {
+        parameter;
+        concept_ann_parameter;
+        concept_ann_configurable_parameter;
+        concept_artificial_neural_network;
+        value
+    };;
+    *);;
