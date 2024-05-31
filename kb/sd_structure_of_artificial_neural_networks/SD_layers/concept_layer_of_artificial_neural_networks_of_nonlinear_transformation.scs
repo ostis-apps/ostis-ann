@@ -26,7 +26,7 @@ concept_layer_of_artificial_neural_networks_of_nonlinear_transformation
       *);;
 		=>nrel_main_idtf:[Опр. (слой и.н.с нелинейного преобразования).](* <-lang_ru;; => nrel_format: format_html;;*);;
 		*);
-    ///////////////////////////////////////////////////////////////////
+    
 	<-rrel_key_sc_element: 
 	Affirmation_of_concept_layer_of_artificial_neural_networks_of_nonlinear_transformation
 		(*

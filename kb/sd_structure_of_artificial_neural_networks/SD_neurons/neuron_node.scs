@@ -4,7 +4,7 @@ concept_neuron_node
 	[нейронный узел]
 	(* <- lang_ru;; *);
 	
-///////////////////////////////////////////////////////////////////////////
+
 	<-rrel_key_sc_element: 
 	Definition_of_concept_neuron_node
 		(*
@@ -26,7 +26,7 @@ concept_neuron_node
 				->concept_neural_network_in_graphical_representation;vertex;; 
 			*);;
 		*);
-///////////////////////////////////////////////////////////////////
+
 <- rrel_key_sc_element:...
 (*
 	<- illustration;;

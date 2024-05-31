@@ -1,0 +1,5 @@
+concept_number_of_neurons
+
+=> nrel_main_idtf:
+[количество нейронов](*<-lang_ru;;*);
+[number of neurons](*<-lang_en;;*);;

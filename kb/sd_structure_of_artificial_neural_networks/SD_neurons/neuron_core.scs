@@ -1,14 +1,14 @@
-neuron_core
+concept_neuron_core
 	<- sc_node_not_relation;
 	=> nrel_main_idtf: [нейронное ядро] (* <- lang_ru;; *);
 	=> nrel_main_idtf: [neuron core] (* <- lang_en;; *);;
 
-neuron_core
+concept_neuron_core
 	<= nrel_inclusion: concept_neuron_node;;
 
 definition -> ...
 	(*
-		-> rrel_key_sc_element: neuron_core;;
+		-> rrel_key_sc_element: concept_neuron_core;;
 		
 		=> nrel_main_idtf: [Опр.(нейронное ядро)] (* <- lang_ru;; *);;
 
@@ -28,11 +28,11 @@ definition -> ...
 illustration -> rrel_example: ...
 (*
 	=> nrel_main_idtf: [Рис.(нейронное ядро)] (* <- lang_ru;; *);;
-	-> rrel_key_sc_element: neuron_core;;
+	-> rrel_key_sc_element: concept_neuron_core;;
 	<= nrel_sc_text_translation: ... (* -> "file://images//neuron_core.png";; *);;
 *);;
 
-neuron_core<-rrel_explored_concept: section_subject_domain_of_neurons;;
+concept_neuron_core<-rrel_explored_concept: section_subject_domain_of_neurons;;
 
 
 

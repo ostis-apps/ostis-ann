@@ -1,12 +1,12 @@
-neural_element<-sc_node_not_relation;;
+concept_neural_element<-sc_node_not_relation;;
 
-neural_element=>nrel_main_idtf:
+concept_neural_element=>nrel_main_idtf:
 [нейронный элемент](*<-lang_ru;;*);
 [neural_element](*<-lang_en;;*);;
-neural_element=>nrel_idtf:
+concept_neural_element=>nrel_idtf:
 [искусственный нейрон](*<-lang_ru;;*);;
 
-neural_element<- rrel_key_sc_element: ...
+concept_neural_element<- rrel_key_sc_element: ...
 (*
 <- definition;;
 => nrel_main_idtf:
@@ -15,7 +15,7 @@ neural_element<- rrel_key_sc_element: ...
 	{
 		sheaf;
 		output_signal;
-		neuron
+		concept_neuron
 	};; 
 <= nrel_sc_text_translation: ... 
 		(*
@@ -25,7 +25,7 @@ neural_element<- rrel_key_sc_element: ...
 *);;
 
 
-neural_element<- rrel_key_sc_element: ... 
+concept_neural_element<- rrel_key_sc_element: ... 
 (*
  => nrel_main_idtf:
 [Утв. 1 о нейронном элементе] (* <- lang_ru;; *);;
@@ -43,9 +43,9 @@ stimulate_sheaf
 };;
 *);;
 
-neural_element-> rrel_example:
+concept_neural_element-> rrel_example:
 [*
-neural_element=>nrel_inclusion:sheaf;;
+concept_neural_element=>nrel_inclusion:sheaf;;
 *];;
 
 

@@ -1,14 +1,14 @@
-entry_star
+concept_entry_star
 	<- sc_node_not_relation;
 	=> nrel_main_idtf: [входная звезда] (* <- lang_ru;; *);
 	=> nrel_main_idtf: [entry star] (* <- lang_en;; *);;
 
-entry_star
+concept_entry_star
 	<= nrel_inclusion: concept_neuron_node;;
 
 definition -> ...
 	(*
-		-> rrel_key_sc_element: entry_star;;
+		-> rrel_key_sc_element: concept_entry_star;;
 		
 		=> nrel_main_idtf: [Опр.(входная звезда)] (* <- lang_ru;; *);;
 
@@ -27,7 +27,7 @@ definition -> ...
 
 affirmation -> ...
 	(*
-		-> rrel_key_sc_element: entry_star;;
+		-> rrel_key_sc_element: concept_entry_star;;
 
 		=> nrel_main_idtf: [Утв.(входная звезда)] (* <- lang_ru;; *);;
 
@@ -39,7 +39,7 @@ affirmation -> ...
 
 affirmation -> ...
 	(*
-		-> rrel_key_sc_element: entry_star;;
+		-> rrel_key_sc_element: concept_entry_star;;
 
 		=> nrel_main_idtf: [Утв.(входная звезда, взвешенная сумма*)] (* <- lang_ru;; *);;
 
@@ -53,11 +53,11 @@ affirmation -> ...
 illustration -> rrel_example: ...
 (*
 	=> nrel_main_idtf: [Рис.(входная звезда)] (* <- lang_ru;; *);;
-	-> rrel_key_sc_element: entry_star;;
+	-> rrel_key_sc_element: concept_entry_star;;
 	<= nrel_sc_text_translation: ... (* -> "file://images//entry_star.png";; *);;
 *);;
 
-entry_star<-rrel_explored_concept: section_subject_domain_of_neurons;;
+concept_entry_star<-rrel_explored_concept: section_subject_domain_of_neurons;;
 
 
 

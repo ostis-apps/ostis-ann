@@ -1,0 +1,7 @@
+concept_hyperbolic_tangent_function
+
+	=> nrel_main_idtf:
+	[функция гиперболического тангенса](* <-lang_ru;; *);
+	[hyperbolic tangent function](* <-lang_en;; *);;
+
+concept_hyperbolic_tangent_function <-rrel_explored_concept: section_subject_domain_of_algorithms_and_functions;;

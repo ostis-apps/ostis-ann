@@ -1,11 +1,11 @@
-formal_neuron
+concept_formal_neuron
 	=>nrel_main_idtf:
 	[формальный нейрон]
 	(* <- lang_ru;; *);
 	
-///////////////////////////////////////////////////////////////////////////
+
 	<-rrel_key_sc_element: 
-	Definition_of_formal_neuron
+	Definition_of_concept_formal_neuron
 		(*
 			<-definition;;
 			<=nrel_sc_text_translation:...
@@ -26,7 +26,7 @@ formal_neuron
 				->mathematical_model;biological_neuron;nrel_functional_mapping;input_data;; 
 			*);;
 		*);
-///////////////////////////////////////////////////////////////////
+
 <- rrel_key_sc_element:...
 (*
 	<- illustration;;

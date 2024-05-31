@@ -1,11 +1,10 @@
-sinaps
+concept_sinaps
 	=>nrel_main_idtf:
 	[синапс]
 	(* <- lang_ru;; *);
 	
-///////////////////////////////////////////////////////////////////////////
 	<-rrel_key_sc_element: 
-	Definition_of_sinaps
+	Definition_of_concept_sinaps
 		(*
 			<-definition;;
 			<=nrel_sc_text_translation:...

@@ -21,20 +21,9 @@ concept_architectural_parameter_of_artificial_neural_networks
 				*);;
 		*);
 
-=> nrel_subdividing: ...
-(*
-    <- sc_node_tuple;;
-    => nrel_main_idtf: [количество слоев] (* <- lang_ru;; *);;
-*);
-
-=> nrel_subdividing: ...
-(*
-    <- sc_node_tuple;;
-    => nrel_main_idtf: [количество синапсов] (* <- lang_ru;; *);;
-*);
-
-=> nrel_subdividing: ...
-(*
-    <- sc_node_tuple;;
-    => nrel_main_idtf: [количество нейронов] (* <- lang_ru;; *);;
-*);;
+=> nrel_subdividing:
+{
+    concept_number_of_synapses;
+    concept_number_of_neurons;
+		concept_number_of_layers
+};;
