@@ -1,0 +1,16 @@
+concept_ann_precision<-sc_node_not_relation;
+=> nrel_main_idtf: [точность и.н.с.](* <- lang_ru;; *);
+=> nrel_main_idtf: [a.n.n. precision](* <- lang_en;; *);
+
+
+=> nrel_definition: ...
+(*
+    -> nrel_sc_text_translation:[Точность и.н.с. — доля верно идентифицированных положительных исходов в общем числе исходов, которые были идентифицированы как положительные](*<-lang_ru;;*);;
+    => nrel_main_idtf: [Определение (точность и.н.с.)](*<- lang_ru;;*);;
+    -> nrel_sc_text_translation:[Precision of a.n.n. — the proportion of reliably identified groups of outcomes in the total number of outcomes that were identified as positive](*<-lang_en;;*);;
+    => nrel_main_idtf: [Definition (precision a.n.n.)](*<- lang_en;;*);;
+*);
+
+=> nrel_formula:[PRE = TP / (TP + FP), где TP и FP — число истинно-положительных и ложно-положительных предсказаний нейронной сети соответственно](*<-lang_ru;;*);
+<- concept_ann_regression_metrics;;
+

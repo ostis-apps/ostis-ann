@@ -1,0 +1,24 @@
+concept_ann_regression_metrics<-sc_node_not_relation;
+
+=> nrel_main_idtf: [регрессионные метрики и.н.с.](* <- lang_ru;; *);
+=> nrel_main_idtf: [a.n.n. regression metrics](* <- lang_en;; *);
+
+=> nrel_basic_decomposition:...
+(*
+    =>nrel_main_idtf: [Разбиение регрессионных метрик и.н.с.](* <- lang_ru;; *);;
+    <- sc_node_tuple;;
+    -> concept_ann_precision;;
+    -> concept_ann_recall;;
+    -> concept_F1_metric;;
+*);
+
+=> nrel_definition: ...
+(*
+    -> nrel_sc_text_translation:[Регрессионные метрики — это показатели, используемые для оценки качества и эффективности работы нейронных сетей в задачах регрессии](*<-lang_ru;;*);;
+    => nrel_main_idtf: [Определение (регрессионные метрики и.н.с.)](*<- lang_ru;;*);;
+
+    -> nrel_sc_text_translation:[Regression metrics - are indicators used to assess the quality and efficiency of neural networks in regression problems](*<-lang_en;;*);;
+    => nrel_main_idtf: [Definition (a.n.n. regression metrics)](*<- lang_en;;*);;
+*);
+
+<- concept_ann_quality_assessment_metrics;;
