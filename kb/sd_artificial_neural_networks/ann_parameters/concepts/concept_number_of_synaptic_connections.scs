@@ -1,4 +1,4 @@
-concept_number_of_synaptic_connections<-sc_node_not_relation;
+concept_number_of_synaptic_connections <- sc_node_not_relation;
 
 => nrel_main_idtf: [количество синаптических связей и.н.с.](* <- lang_ru;; *);
 => nrel_main_idtf: [number of synaptic connections in a.n.n.](* <- lang_en;; *);
@@ -6,11 +6,11 @@ concept_number_of_synaptic_connections<-sc_node_not_relation;
 
 => nrel_definition: ...
 (*
-    -> nrel_sc_text_translation: [Количество синаптических связей и.н.с. — архитектурный параметр и.н.с., который характеризует количество синаптических связей в и.н.с..](*<-lang_ru;;*);;
-    => nrel_main_idtf: [Определение (количество синаптических связей и.н.с.)](*<- lang_ru;;*);;
+    -> nrel_sc_text_translation: [Количество синаптических связей и.н.с. — архитектурный параметр и.н.с., который характеризует количество синаптических связей в и.н.с..](* <- lang_ru;;*);;
+    => nrel_main_idtf: [Определение (количество синаптических связей и.н.с.)](* <- lang_ru;;*);;
 
-    -> nrel_sc_text_translation: [Number of synaptic connections in a.n.n. — architectural parameter of the a.n.n., which characterizes the number of synaptic connections in a.n.n.](*<-lang_en;;*);;
-    => nrel_main_idtf: [Definition (number of synaptic connections in a.n.n.)](*<- lang_en;;*);;
+    -> nrel_sc_text_translation: [Number of synaptic connections in a.n.n. — architectural parameter of the a.n.n., which characterizes the number of synaptic connections in a.n.n.](* <- lang_en;;*);;
+    => nrel_main_idtf: [Definition (number of synaptic connections in a.n.n.)](* <- lang_en;;*);;
 
     => nrel_using_constants:
     {
@@ -21,5 +21,5 @@ concept_number_of_synaptic_connections<-sc_node_not_relation;
         synaptic_connection
     };;
 *);
-<-concept_ann_parameter;
-<-concept_ann_architectural_parameter;;
+ <- concept_ann_parameter;
+ <- concept_ann_architectural_parameter;;

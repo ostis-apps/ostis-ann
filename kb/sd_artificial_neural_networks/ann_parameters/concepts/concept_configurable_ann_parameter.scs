@@ -1,7 +1,4 @@
-concept_synaptic_connection_weighting_factor<-sc_node_not_relation;;
-concept_threshold_value<-sc_node_not_relation;;
-concept_convolution<-sc_node_not_relation;;
-concept_ann_configurable_parameter<-sc_node_not_relation;
+concept_ann_configurable_parameter <- sc_node_not_relation;
 
 => nrel_main_idtf: [настраиваемый параметр и.н.с.](* <- lang_ru;; *);
 => nrel_main_idtf: [a.n.n. configurable parameter](* <- lang_en;; *);
@@ -20,7 +17,7 @@ concept_ann_configurable_parameter<-sc_node_not_relation;
 
 *);
 
-<-concept_ann_parameter;
+<- concept_ann_parameter;
 
 => nrel_basic_decomposition: ...
 (*
