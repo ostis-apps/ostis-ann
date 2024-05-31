@@ -1,0 +1,32 @@
+concept_number_of_layers<-sc_node_not_relation;;
+concept_number_of_neurons<-sc_node_not_relation;;
+concept_number_of_synaptic_connections<-sc_node_not_relation;;
+concept_ann_architectural_parameter<-sc_node_not_relation;
+
+=> nrel_main_idtf: [архитектурный параметр и.н.с.](* <- lang_ru;; *);
+=> nrel_main_idtf: [a.n.n. architectural parameter](* <- lang_en;; *);
+
+=> nrel_definition: ...
+(*
+    -> nrel_sc_text_translation: [Архитектурный параметр и.н.с. — параметр и.н.с., определяющий её архитектуру.](*<-lang_ru;;*);;
+    -> nrel_sc_text_translation: [Architectural parameter of a.n.n. — parameter of a.n.n. that determines its architecture.](*<-lang_en;;*);;
+    => nrel_main_idtf: [Определение (архитектурный параметр и.н.с.)](*<- lang_ru;;*);;
+    => nrel_main_idtf: [Definition (a.n.n. architectural parameter)](*<- lang_ru;;*);;
+    => nrel_using_constants:
+    {
+        parameter;
+        concept_ann_parameter;
+        concept_artificial_neural_network
+    };;
+*);
+
+<-concept_ann_parameter;
+
+=> nrel_basic_decomposition:...
+(*
+    => nrel_main_idtf: [Разбиение архитектурных параметров и.н.с.](* <- lang_ru;; *);;
+    <- sc_node_tuple;;
+    -> concept_number_of_layers;;
+    -> concept_number_of_neurons;;
+    -> concept_number_of_synaptic_connections;;
+*);;

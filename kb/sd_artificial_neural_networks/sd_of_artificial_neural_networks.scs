@@ -1,24 +1,12 @@
 section_subject_domain_of_artificial_neural_networks
-<- atomic_section;
+<- non_atomic_section;
 <- sc_node_struct;
 <- ... (* <= nrel_section_decomposition: section_subjdomain_actions_and_tasks;; *);
 => nrel_main_idtf: 
     [Раздел. Предметная область искусственных нейронных сетей] (* <- lang_ru;; *);
-    [Section. Subject domain of artificial neural networks] (* <- lang_en;; *);;
-
-section_subject_domain_of_artificial_neural_networks = [*
-subject_domain_of_artificial_neural_networks
-=> nrel_main_idtf: 
-    [Предметная область искусственных нейронных сетей]
-    (* <- lang_ru;; *);
-    [Subject domain of artificial neural networks]
-    (* <- lang_en;; *);
-<- sc_node_struct;
-<- subject_domain;
-<= nrel_primary_elements_class_private_subject_domain: subject_domain_of_actions_and_tasks;
--> rrel_maximum_studied_object_class:
-    concept_artificial_neural_network;
--> rrel_not_maximum_studied_object_class:
+    [Section. Subject domain of artificial neural networks] (* <- lang_en;; *);
+-> rrel_explored_concept: concept_artificial_neural_network;
+<- rrel_key_sc_element:
     concept_autoencoder_ann;
     concept_convolutional_ann;
     concept_elmans_ann;
@@ -36,23 +24,45 @@ subject_domain_of_artificial_neural_networks
     concept_rosenblatts_perceptron;
     concept_support_vector_machine;
     concept_autoencoder_ann;
-    concept_MAE;
-concept_ann_classification_metrics;
-concept_ann_precision;
-concept_ann_quality_assessment_metrics;
-concept_ann_recall;
-concept_ann_regression_metrics;
-concept_F1_metric;
-concept_MAPE;
-concept_RMSE;
 
-concept_ann_configurable_parameter;
-concept_synaptic_connection_weighting_factor;
-concept_threshold_value;
-concept_convolution;
-concept_ann_architectural_parameter;
-concept_number_of_layers;
-concept_number_of_neurons;
-concept_number_of_synaptic_connections;
-concept_ann_parameter;;
+<= nrel_section_decomposition:
+{
+	section_subject_domain_of_ann_parameters;
+	section_subject_domain_of_effectiveness_assessments
+};;
+
+section_subject_domain_of_artificial_neural_networks = [*
+subject_domain_of_artificial_neural_networks
+=> nrel_main_idtf: 
+    [Предметная область искусственных нейронных сетей]
+    (* <- lang_ru;; *);
+    [Subject domain of artificial neural networks]
+    (* <- lang_en;; *);
+<- sc_node_struct;
+<- subject_domain;
+<= nrel_primary_elements_class_private_subject_domain: subject_domain_of_actions_and_tasks;
+-> rrel_maximum_studied_object_class:
+    concept_artificial_neural_network;
+=>nrel_private_subject_domain:
+{
+    subject_domain_of_ann_parameters;
+    subject_domain_of_effectiveness_assessments
+};
+-> rrel_not_maximum_studied_object_class:
+    concept_convolutional_ann;
+    concept_elmans_ann;
+    concept_feedback_ann;
+    concept_fully_connected_ann;
+    concept_gru_element;
+    concept_hammings_ann;
+    concept_hopfields_ann;
+    concept_jordans_ann;
+    concept_lstm_element;
+    concept_multirecurrent_ann;
+    concept_perceptron;
+    concept_radial_basis_function_network;
+    concept_recurrent_ann;
+    concept_rosenblatts_perceptron;
+    concept_support_vector_machine;
+    concept_autoencoder_ann;;
 *];;
