@@ -1,0 +1,16 @@
+concept_reinforcement_learning_ann 
+<- sc_node_class;
+<= nrel_inclusion: concept_perceptron;
+=> nrel_main_idtf:
+    [Нейронная сеть обученная с подкреплением](* <- lang_ru;; *);
+    [kronecker multi layer neural network](* <- lang_en;; *);;
+
+affirmation -> ...
+(*
+    -> rrel_key_sc_element: concept_reinforcement_learning_ann;;
+
+    <= nrel_sc_text_translation: ...
+        (*
+            -> [Такая архитектура позволяет обучать и реализовывать нейронную сеть со значительным сокращением вычислительного времени и ресурсов, достигая при этом аналогичного уровня ошибок по сравнению с традиционной нейронной сетью прямого распространения] (* <- lang_ru;; *);;
+        *);;
+*);;
