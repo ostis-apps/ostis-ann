@@ -1,5 +1,5 @@
 concept_artificial_neural_network_layer
-// <- sc_node_class;
+<- sc_node_class;
 <= nrel_inclusion: layer;
 
 	=> nrel_main_idtf:
