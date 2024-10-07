@@ -1,5 +1,5 @@
 concept_pooling_artificial_neural_network_layer
-
+  <-sc_node_class;
   => nrel_main_idtf:
     [pooling_artificial_neural_network_layer](* <-lang_en;; *);
 
