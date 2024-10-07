@@ -1,5 +1,5 @@
 concept_number_of_neurons
-
+<-sc_node_class;
 => nrel_main_idtf:
 [количество нейронов](*<-lang_ru;;*);
 [number of neurons](*<-lang_en;;*);;
