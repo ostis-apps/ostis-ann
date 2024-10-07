@@ -1,5 +1,5 @@
 concept_entry_star
-	<- sc_node_not_relation;
+	<- sc_node_class;
 	=> nrel_main_idtf: [входная звезда] (* <- lang_ru;; *);
 	=> nrel_main_idtf: [entry star] (* <- lang_en;; *);;
 
