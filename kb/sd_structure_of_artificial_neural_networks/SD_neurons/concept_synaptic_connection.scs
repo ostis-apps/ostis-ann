@@ -1,5 +1,5 @@
 concept_synaptic_connection
-
+	<-sc_node_class;
 	=> nrel_main_idtf:
 	[синаптическая связь](* <-lang_ru;; *);
 	[synaptic connection](* <-lang_en;; *);
