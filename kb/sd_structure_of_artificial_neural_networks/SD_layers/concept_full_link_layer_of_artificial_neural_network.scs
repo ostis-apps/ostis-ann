@@ -1,5 +1,5 @@
 concept_full_link_layer_of_artificial_neural_network
-
+	<-sc_node_class;
 	=> nrel_main_idtf:
 	[полносвязный слой искусственной нейронной сети](* <-lang_ru;; *);
 	[full-link layer of artificial neural network](* <-lang_en;; *);
