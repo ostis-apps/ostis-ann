@@ -1,5 +1,5 @@
 concept_convolution_layer_of_an_artificial_neural_network
-
+	<-sc_node_class;
 	=> nrel_main_idtf:
 	[свёрточный слой искусственной нейронной сети](* <-lang_ru;; *);
 	[convolution layer of an artificial neural network](* <-lang_en;; *);
