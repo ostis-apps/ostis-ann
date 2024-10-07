@@ -1,4 +1,5 @@
 concept_formal_neuron
+	<-sc_node_class;
 	=>nrel_main_idtf:
 	[формальный нейрон]
 	(* <- lang_ru;; *);
