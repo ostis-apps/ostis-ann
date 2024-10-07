@@ -1,6 +1,6 @@
 concept_convolution_kernels
 
-
+<-sc_node_class;
 <-rrel_key_sc_element: 
 	Definition_of_concept_convolution_kernels
 		(*
