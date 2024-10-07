@@ -1,9 +1,9 @@
-sc_node_not_relation->concept_intermediate_neural_element;;
-sc_node_not_relation->concept_neural_element;;
-sc_node_not_relation->input_neural_element;;
-sc_node_not_relation->output_neural_element;;
-sc_node_not_relation->concept_neuron;;
-sc_node_not_relation->neural_element_y;;
+sc_node_class->concept_intermediate_neural_element;;
+sc_node_class->concept_neural_element;;
+sc_node_class->input_neural_element;;
+sc_node_class->output_neural_element;;
+sc_node_class->concept_neuron;;
+sc_node_class->neural_element_y;;
 
 concept_intermediate_neural_element=> nrel_main_idtf: [промежуточный нейронный элемент](* <- lang_ru;; *);;
 concept_intermediate_neural_element=> nrel_main_idtf: [intermediate neural element](* <- lang_en;; *);;
