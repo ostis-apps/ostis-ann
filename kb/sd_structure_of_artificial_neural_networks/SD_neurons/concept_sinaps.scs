@@ -1,4 +1,5 @@
 concept_sinaps
+	<-sc_node_class;
 	=>nrel_main_idtf:
 	[синапс]
 	(* <- lang_ru;; *);
