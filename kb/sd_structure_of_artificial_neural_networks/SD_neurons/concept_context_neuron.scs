@@ -1,4 +1,4 @@
-sc_node_not_relation->concept_context_neuron;;
+sc_node_class->concept_context_neuron;;
 concept_context_neuron=>nrel_main_idtf:[context neuron](* <-lang_en;; *);;
 concept_context_neuron=>nrel_main_idtf:[контекстный нейрон](* <-lang_ru;; *);; 
 concept_context_neuron=>nrel_idtf:[нейрон смещения](* <-lang_ru;; *);; 
