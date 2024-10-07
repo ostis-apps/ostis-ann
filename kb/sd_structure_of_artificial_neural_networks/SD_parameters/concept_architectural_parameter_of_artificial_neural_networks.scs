@@ -1,5 +1,5 @@
 concept_architectural_parameter_of_artificial_neural_networks
-
+	<-sc_node_class;
 	=> nrel_main_idtf:
 	[архитектурный параметр искусственной нейронной сети](* <-lang_ru;; *);
 	[architectural artificial neural network parameter](* <-lang_en;; *);
