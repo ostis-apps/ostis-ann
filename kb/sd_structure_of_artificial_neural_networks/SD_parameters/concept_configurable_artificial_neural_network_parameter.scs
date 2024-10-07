@@ -1,5 +1,5 @@
 concept_configurable_artificial_neural_network_parameter
-
+	<-sc_node_class;
 	=> nrel_main_idtf:
 	[настраиваемый параметр искусственной нейронной сети](* <-lang_ru;; *);
 	[configurable artificial neural network parameter](* <-lang_en;; *);
