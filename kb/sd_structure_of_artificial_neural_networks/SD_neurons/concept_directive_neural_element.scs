@@ -1,8 +1,8 @@
-sc_node_not_relation->concept_directive_neural_element;;
-sc_node_not_relation->neural_element;;
-sc_node_not_relation->output_signal;;
-sc_node_not_relation->neural_network;;
-sc_node_not_relation->neural_element_x;;
+sc_node_class->concept_directive_neural_element;;
+sc_node_class->neural_element;;
+sc_node_class->output_signal;;
+sc_node_class->neural_network;;
+sc_node_class->neural_element_x;;
 
 sc_node_norole_relation->rrel_present;;
 
