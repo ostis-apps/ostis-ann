@@ -15,9 +15,9 @@ SC_AGENT_IMPLEMENTATION(CheckDynamicArgumentTestAgent)
     return SC_RESULT_ERROR;
   }
 
-  ScAddr actionAddr = ms_context->GetEdgeTarget(edgeAddr);
+  ScAddr actionAddr = m_memoryCtx.GetEdgeTarget(edgeAddr);
 
-  ScIterator3Ptr iterator3Ptr = ms_context->Iterator3(
+  ScIterator3Ptr iterator3Ptr = m_memoryCtx.Iterator3(
         TestKeynodes::check_dynamic_argument_test_action,
         ScType::EdgeAccessConstPosPerm,
         actionAddr);
