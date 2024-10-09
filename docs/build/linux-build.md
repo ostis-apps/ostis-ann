@@ -5,7 +5,7 @@
 ```sh
 git clone https://github.com/ostis-apps/ostis-ann
 cd ostis-ann
-./scripts/install_submodules.sh
+git submodule update --init --recursive
 ./scripts/install_problem_solver_deps.sh
 ./scripts/install_interface_deps.sh
 ./scripts/install_py_sc_server_deps.sh
