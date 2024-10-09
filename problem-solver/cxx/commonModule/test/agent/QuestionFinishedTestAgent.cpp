@@ -14,9 +14,9 @@ SC_AGENT_IMPLEMENTATION(QuestionFinishedTestAgent)
     return SC_RESULT_ERROR;
   }
 
-  ScAddr actionAddr = ms_context->GetEdgeTarget(edgeAddr);
+  ScAddr actionAddr = m_memoryCtx.GetEdgeTarget(edgeAddr);
 
-  ScIterator3Ptr iterator3Ptr = ms_context->Iterator3(
+  ScIterator3Ptr iterator3Ptr = m_memoryCtx.Iterator3(
         TestKeynodes::finished_test_action,
         ScType::EdgeAccessConstPosPerm,
         actionAddr);
@@ -25,6 +25,6 @@ SC_AGENT_IMPLEMENTATION(QuestionFinishedTestAgent)
     return SC_RESULT_OK;
   }
 
-  ms_context->CreateEdge(ScType::EdgeAccessConstPosPerm, scAgentsCommon::CoreKeynodes::question_finished, actionAddr);
+  m_memoryCtx.CreateEdge(ScType::EdgeAccessConstPosPerm, scAgentsCommon::CoreKeynodes::question_finished, actionAddr);
   return SC_RESULT_OK;
 }

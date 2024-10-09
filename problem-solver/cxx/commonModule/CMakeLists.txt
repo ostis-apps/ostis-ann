@@ -35,7 +35,7 @@ include_directories(${CMAKE_CURRENT_LIST_DIR} ${SC_MEMORY_SRC} ${SC_KPM_SRC} ${S
 add_library(common SHARED ${SOURCES} ${HEADERS})
 
 find_package(nlohmann_json 3.7.3 REQUIRED)
-target_link_libraries(common sc-memory sc-agents-common nlohmann_json::nlohmann_json)
+target_link_libraries(common sc-memory sc-agents-common nlohmann_json::nlohmann_json curl)
 
 sc_codegen_ex(common ${CMAKE_CURRENT_LIST_DIR} ${CMAKE_CURRENT_LIST_DIR}/generated)
 
