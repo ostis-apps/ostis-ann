@@ -5,9 +5,10 @@
 ```sh
 git clone https://github.com/ostis-apps/ostis-ann
 cd ostis-ann
-git submodule update --init --recursive
+./scripts/install_submodules.sh
 ./scripts/install_problem_solver_deps.sh
 ./scripts/install_interface_deps.sh
+./scripts/install_py_sc_server_deps.sh
 ```
 
 ## Сборка
@@ -36,7 +37,10 @@ git submodule update --init --recursive
 # Терминал 1
 ./scripts/run_sc_server.sh
 
-# Терминал 2
+# Terminal 2
+./scripts/run_py_sc_server.sh
+  
+# Терминал 3
 ./scripts/run_sc_web.sh
 ```
 
