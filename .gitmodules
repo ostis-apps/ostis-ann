@@ -5,7 +5,7 @@
 [submodule "sc-web"]
 	path = sc-web
 	url = https://github.com/ostis-ai/sc-web
-	branch = c2c3532efac3865f0c840bb62f600a68f15b84da
+	branch = c180329326cfee18af5f6487b2d3932fd0a0128e
 [submodule "problem-solver/sc-machine"]
 	path = problem-solver/sc-machine
 	url = https://github.com/ostis-ai/sc-machine
@@ -13,3 +13,4 @@
 [submodule "kb/ims.ostis.kb"]
 	path = kb/ims.ostis.kb
 	url = https://github.com/ostis-ai/ims.ostis.kb
+	branch = 2518ad2cd54ac40a9e33b0e0bf9acb813e641b83
