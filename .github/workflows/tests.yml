@@ -23,7 +23,7 @@ jobs:
           key: ${{ github.job }}
       - name: Update
         run: |
-          ./scripts/install_submodules.sh
+          git submodule update --init --recursive
       - name: Install Ubuntu dependencies
         run: |
           ./scripts/install_problem_solver_deps.sh
