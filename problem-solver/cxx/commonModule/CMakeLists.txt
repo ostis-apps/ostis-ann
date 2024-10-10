@@ -29,9 +29,6 @@ set(HEADERS
     "http/sc_http_response.hpp"
 )
 
-find_package(CURL REQUIRED)
-find_package(nlohmann_json 3.7.3 REQUIRED)
-
 include_directories(${CMAKE_CURRENT_LIST_DIR} ${SC_MEMORY_SRC} ${SC_KPM_SRC} ${SC_TOOLS_SRC})
 
 add_library(common SHARED ${SOURCES} ${HEADERS})
