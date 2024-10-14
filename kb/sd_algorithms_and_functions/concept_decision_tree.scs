@@ -1,5 +1,5 @@
 decision_tree
-	<- sc_node_not_relation;
+	<- sc_node_class;
 	=> nrel_main_idtf: [дерево решений] (* <- lang_ru;; *);
 	=> nrel_main_idtf: [decision tree] (* <- lang_en;; *);;
 
