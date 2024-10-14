@@ -1,4 +1,4 @@
-minimum_standard_error<-sc_node_not_relation;;
+minimum_standard_error<-sc_node_class;;
 
 minimum_standard_error=>nrel_main_idtf:
 [минимум среднеквадратичной ошибки](*<-lang_ru;;*);
