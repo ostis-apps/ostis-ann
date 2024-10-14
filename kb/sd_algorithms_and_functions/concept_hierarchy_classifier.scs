@@ -1,8 +1,8 @@
-sc_node_not_relation->hierarchical_classifier;;
-sc_node_not_relation->input_data;;
-sc_node_not_relation->output_categories;;
-sc_node_not_relation->lower_level;;
-sc_node_not_relation->classifier_x;;
+sc_node_class->hierarchical_classifier;;
+sc_node_class->input_data;;
+sc_node_class->output_categories;;
+sc_node_class->lower_level;;
+sc_node_class->classifier_x;;
 
 nrel_inclusion->(classifier=>hierarchical_classifier);;
 
