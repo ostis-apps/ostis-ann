@@ -1,9 +1,9 @@
-sc_node_not_relation->Partitioned_Reservation;;
-sc_node_not_relation->neuron_network_architecture;;
-sc_node_not_relation->section;;
-sc_node_not_relation->approach;;
-sc_node_not_relation->approach_of_fault_tolerancef;;
-sc_node_not_relation->reservation;;
+sc_node_class->Partitioned_Reservation;;
+sc_node_class->neuron_network_architecture;;
+sc_node_class->section;;
+sc_node_class->approach;;
+sc_node_class->approach_of_fault_tolerancef;;
+sc_node_class->reservation;;
 
 sc_node_norole_relation->nrel_duplicate;;
 sc_node_norole_relation->nrel_fault_tolerance;;
