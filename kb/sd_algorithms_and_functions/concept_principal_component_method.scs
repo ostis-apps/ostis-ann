@@ -1,10 +1,10 @@
-sc_node_not_relation->principal_component_method;;
-sc_node_not_relation->data_dimension;;
-sc_node_not_relation->information;;
-sc_node_not_relation->singular_decomposition;;
-sc_node_not_relation->data_matrix;;
-sc_node_not_relation->method_x;;
-sc_node_not_relation->method;;
+sc_node_class->principal_component_method;;
+sc_node_class->data_dimension;;
+sc_node_class->information;;
+sc_node_class->singular_decomposition;;
+sc_node_class->data_matrix;;
+sc_node_class->method_x;;
+sc_node_class->method;;
 
 sc_node_norole_relation->nrel_calculation;;
 
