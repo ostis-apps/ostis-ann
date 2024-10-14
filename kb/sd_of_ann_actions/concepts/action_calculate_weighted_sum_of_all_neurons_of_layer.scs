@@ -1,0 +1,47 @@
+action_calculate_weighted_sum_of_all_neurons_of_layer
+=> nrel_main_idtf:
+    [действие вычисления взвешенной суммы всех нейронов слоя](* <- lang_ru;; *);
+    [action of calculating the weighted sum of all neurons in a layer](* <- lang_en;; *);
+<- rrel_key_sc_element:
+    ...
+    (*
+    => nrel_main_idtf:
+        [Опр. (действие вычисления взвешенной суммы всех нейронов слоя)]
+        (* <- lang_ru;; *);
+        [Def. (action of calculating the weighted sum of all neurons in a layer)]
+        (* <- lang_en;; *);;
+    <- definition;;
+    => nrel_sc_text_translation:
+        {
+        rrel_example:
+            [действие вычисления взвешенной суммы всех нейронов слоя — действие интерпретации слоя и.н.с., в ходе которого реализуется определенный метод, связанный с вычислением взвешенной суммы всех нейронов слоя и.н.с.]
+            (* <- lang_ru;; *)
+        };;
+    => nrel_using_constants:
+        {
+        action_calculate_weighted_sum_of_all_neurons_of_layer;
+        action_interpret_ann_layer;
+        concept_layer;
+        concept_weighted_amount;
+        formal_neuron;
+        concept_artificial_neural_network
+        };;
+    *);
+<= nrel_sc_text_translation: ...
+(*
+    -> rrel_example: "file://images/action_weighted_sum.png"(* => nrel_format: format_png;; *);;
+    -> [пример спецификации действия вычисления взвешенной суммы всех нейронов слоя для слоя с двумя нейронами и входным вектором размерностью 2](* <- lang_ru;; *);;
+    => nrel_using_constants:
+        {
+        action_calculate_weighted_sum_of_all_neurons_of_layer;
+        concept_layer;
+        formal_neuron;
+        input_vector
+        };;
+*);
+=> nrel_arguments_of_action: ...
+(*
+    -> rrel_input_vector;;
+    -> rrel_layer_neuron_weight_coefficients_matrix;;
+    -> rrel_result;;
+*);;
