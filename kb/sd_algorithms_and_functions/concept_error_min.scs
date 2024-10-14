@@ -1,4 +1,4 @@
-sc_node_not_relation->concept_error_minimization;;
+sc_node_class->concept_error_minimization;;
 concept_error_minimization=>nrel_main_idtf:[error minimization](* <-lang_en;; *);;
 concept_error_minimization=>nrel_main_idtf:[минимизация ошибки] (*<-lang_ru;; *);; 
 definition -> ...
