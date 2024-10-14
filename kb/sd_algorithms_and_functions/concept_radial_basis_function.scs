@@ -1,12 +1,12 @@
-sc_node_not_relation->radial_basis_function;;
-sc_node_not_relation->function;;
-sc_node_not_relation->kit;;
-sc_node_not_relation->activation_function;;
-sc_node_not_relation->context;;
-sc_node_not_relation->neural_network;;
-sc_node_not_relation->center;;
-sc_node_not_relation->function_x;;
-sc_node_not_relation->radial_function;;
+sc_node_class->radial_basis_function;;
+sc_node_class->function;;
+sc_node_class->kit;;
+sc_node_class->activation_function;;
+sc_node_class->context;;
+sc_node_class->neural_network;;
+sc_node_class->center;;
+sc_node_class->function_x;;
+sc_node_class->radial_function;;
 
 sc_node_norole_relation->nrel_distance;;
 
