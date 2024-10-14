@@ -21,7 +21,7 @@ action_calculate_weighted_sum_of_all_neurons_of_layer
         {
         action_calculate_weighted_sum_of_all_neurons_of_layer;
         action_interpret_ann_layer;
-        layer;
+        concept_layer;
         concept_weighted_amount;
         formal_neuron;
         concept_artificial_neural_network
@@ -34,7 +34,7 @@ action_calculate_weighted_sum_of_all_neurons_of_layer
     => nrel_using_constants:
         {
         action_calculate_weighted_sum_of_all_neurons_of_layer;
-        layer;
+        concept_layer;
         formal_neuron;
         input_vector
         };;

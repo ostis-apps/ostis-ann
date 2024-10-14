@@ -21,7 +21,7 @@ action_interpret_convolutional_layer
         {
         action_interpret_convolutional_layer;
         action_interpret_ann_layer;
-        layer;
+        concept_layer;
         concept_artificial_neural_network
         };;
     *);

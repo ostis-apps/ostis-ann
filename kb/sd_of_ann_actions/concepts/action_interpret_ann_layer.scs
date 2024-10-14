@@ -21,7 +21,7 @@ action_interpret_ann_layer
     => nrel_using_constants:
         {
         action_interpret_ann_layer;
-        layer;
+        concept_layer;
         action_interpret_ann;
         concept_artificial_neural_network
         };;

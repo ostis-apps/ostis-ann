@@ -21,7 +21,7 @@ action_calculate_all_layer_neurons_activation_function
         {
         action_calculate_all_layer_neurons_activation_function;
         action_interpret_ann_layer;
-        layer;
+        concept_layer;
         activation_function;
         formal_neuron;
         concept_artificial_neural_network
