@@ -1,9 +1,9 @@
-sc_node_not_relation->linear_systolic_array;;
-sc_node_not_relation->data_structure;;
-sc_node_not_relation->homogeneous_network;;
-sc_node_not_relation->data_processing_unit;;
-sc_node_not_relation->data_sorting;;
-sc_node_not_relation->array_z;;
+sc_node_class->linear_systolic_array;;
+sc_node_class->data_structure;;
+sc_node_class->homogeneous_network;;
+sc_node_class->data_processing_unit;;
+sc_node_class->data_sorting;;
+sc_node_class->array_z;;
 
 sc_node_norole_relation->nrel_convolution;;
 sc_node_norole_relation->nrel_integration;;
