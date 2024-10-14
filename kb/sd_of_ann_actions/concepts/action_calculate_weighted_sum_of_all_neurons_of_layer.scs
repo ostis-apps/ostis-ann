@@ -1,4 +1,4 @@
-concept_all_layer_neurons_weighted_sum_calculating_action
+action_calculate_weighted_sum_of_all_neurons_of_layer
 => nrel_main_idtf:
     [действие вычисления взвешенной суммы всех нейронов слоя](* <- lang_ru;; *);
     [action of calculating the weighted sum of all neurons in a layer](* <- lang_en;; *);
@@ -19,8 +19,8 @@ concept_all_layer_neurons_weighted_sum_calculating_action
         };;
     => nrel_using_constants:
         {
-        concept_all_layer_neurons_activation_function_calculating_action;
-        concept_ann_layer_interpretation_action;
+        action_calculate_weighted_sum_of_all_neurons_of_layer;
+        action_interpret_ann_layer;
         layer;
         concept_weighted_amount;
         formal_neuron;
@@ -33,7 +33,7 @@ concept_all_layer_neurons_weighted_sum_calculating_action
     -> [пример спецификации действия вычисления взвешенной суммы всех нейронов слоя для слоя с двумя нейронами и входным вектором размерностью 2](* <- lang_ru;; *);;
     => nrel_using_constants:
         {
-        concept_all_layer_neurons_weighted_sum_calculating_action;
+        action_calculate_weighted_sum_of_all_neurons_of_layer;
         layer;
         formal_neuron;
         input_vector

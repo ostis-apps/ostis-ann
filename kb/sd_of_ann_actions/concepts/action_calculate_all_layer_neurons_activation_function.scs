@@ -1,4 +1,4 @@
-concept_all_layer_neurons_activation_function_calculating_action
+action_calculate_all_layer_neurons_activation_function
 => nrel_main_idtf:
     [действие вычисления функции активации всех нейронов слоя](* <- lang_ru;; *);
     [action of calculating the activation function of all neurons in a layer](* <- lang_en;; *);
@@ -19,8 +19,8 @@ concept_all_layer_neurons_activation_function_calculating_action
         };;
     => nrel_using_constants:
         {
-        concept_all_layer_neurons_activation_function_calculating_action;
-        concept_ann_layer_interpretation_action;
+        action_calculate_all_layer_neurons_activation_function;
+        action_interpret_ann_layer;
         layer;
         activation_function;
         formal_neuron;

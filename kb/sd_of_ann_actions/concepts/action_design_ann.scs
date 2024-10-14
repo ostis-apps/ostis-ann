@@ -1,4 +1,4 @@
-concept_ann_design_action
+action_design_ann
 <- sc_node_class;
 => nrel_main_idtf:
     [действие проектирования и.н.с.](* <- lang_ru;; *);
@@ -23,16 +23,16 @@ concept_ann_design_action
         };;
     => nrel_using_constants:
         {
-        concept_ann_design_action;
-        concept_ann_processing_action;
+        action_design_ann;
+        action_process_ann;
         concept_artificial_neural_network
         };;
     *);
 => nrel_decomposition: ...
 (*
     <- sc_node_tuple;;
-    <- concept_ann_creating_action;;
-    <- concept_ann_editing_action;;
-    <- concept_ann_removing_action;;
-    <- concept_ann_layer_configuration_action;;
+    <- action_create_ann;;
+    <- action_edit_ann;;
+    <- action_remove_ann;;
+    <- action_configure_layer_ann;;
 *);;

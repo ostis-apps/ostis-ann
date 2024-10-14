@@ -19,8 +19,8 @@ concept_single_layer_perceptron_solving_xor_problem
     => nrel_using_constants:
         {
         concept_single_layer_perceptron_solving_XOR_problem;
-        concept_all_layer_neurons_weighted_sum_calculating_action;
-        concept_all_layer_neurons_activation_function_calculating_action
+        action_calculate_weighted_sum_of_all_neurons_of_layer;
+        action_calculate_all_layer_neurons_activation_function
         };;
 *);
 => nrel_application: concept_signal_activation_function;;
