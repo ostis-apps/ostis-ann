@@ -1,4 +1,4 @@
-classifier<-sc_node_not_relation;;
+classifier<-sc_node_class;;
 
 classifier=>nrel_main_idtf:
 [классификатор](*<-lang_ru;;*);
