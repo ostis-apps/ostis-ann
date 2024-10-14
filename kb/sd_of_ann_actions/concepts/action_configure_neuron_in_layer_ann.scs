@@ -22,7 +22,7 @@ action_configure_neuron_in_layer_ann
         {
         action_configure_neuron_in_layer_ann;
         action_configure_layer_ann;
-        layer;
+        concept_layer;
         formal_neuron;
         concept_artificial_neural_network
         };;

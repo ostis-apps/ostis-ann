@@ -22,7 +22,7 @@ action_configure_layer_ann
         {
         action_configure_layer_ann;
         action_design_ann;
-        layer;
+        concept_layer;
         concept_artificial_neural_network
         };;
     *);
