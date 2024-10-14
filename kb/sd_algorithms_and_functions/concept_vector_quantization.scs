@@ -1,4 +1,4 @@
-vector_quantization<-sc_node_not_relation;;
+vector_quantization<-sc_node_class;;
 
 vector_quantization=>nrel_main_idtf:
 [векторное квантование](*<-lang_ru;;*);
