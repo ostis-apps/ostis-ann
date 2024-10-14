@@ -36,7 +36,6 @@ subject_domain_of_ann_actions
     concept_single_layer_perceptron_solving_xor_problem;
     concept_signal_activation_function;
 -> rrel_explored_relation:
-    nrel_explanation;
     nrel_reason;
     rrel_activation_function;
     rrel_input_matrix;
@@ -45,6 +44,5 @@ subject_domain_of_ann_actions
     rrel_layer_neuron_weight_coefficients_matrix;
     rrel_pooling_window_size;
     rrel_pooling_window_step;
-    rrel_result;
     rrel_layer_neuron_weighted_sums_vector;;
 *];;
