@@ -1,5 +1,5 @@
 gradient_method_optimization
-	<- sc_node_not_relation;
+	<- sc_node_class;
 	=> nrel_main_idtf: [градиентный метод оптимизации] (* <- lang_ru;; *);
 	=> nrel_main_idtf: [gradient method optimization] (* <- lang_en;; *);;
 
