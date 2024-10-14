@@ -1,0 +1,15 @@
+concept_function<-sc_node_class;;
+
+concept_function=>nrel_main_idtf:[threshold function](* <-lang_en;; *);;
+concept_function=>nrel_main_idtf:[пороговая функция](* <-lang_ru;; *);
+
+=> nrel_subdividing: {
+	concept_threshold_function;
+  concept_sigmoid_function;
+  concept_hyperbolic_tangent_function;
+  concept_relu_function;
+  concept_softmax_function
+
+};;
+
+concept_function<-rrel_explored_concept: section_subject_domain_of_algorithms_and_functions;;
