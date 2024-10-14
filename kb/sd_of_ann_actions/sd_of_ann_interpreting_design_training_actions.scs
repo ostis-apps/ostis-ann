@@ -36,7 +36,6 @@ subject_domain_of_ann_actions
     concept_single_layer_perceptron_solving_xor_problem;
     concept_signal_activation_function;
 -> rrel_explored_relation:
-    nrel_reason;
     rrel_activation_function;
     rrel_input_matrix;
     rrel_input_vector;
