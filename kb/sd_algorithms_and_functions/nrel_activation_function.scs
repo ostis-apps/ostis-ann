@@ -40,17 +40,7 @@ nrel_activation_function=>nrel_idtf:[функция возбуждения](* <-
 		*);;
 	*);; 
 nrel_activation_function => nrel_first_domain: formal_neuron;;
-nrel_activation_function => nrel_second_domain: function;
-
-
-=> nrel_subdividing: {
-	concept_threshold_function;
-  concept_sigmoid_function;
-  concept_hyperbolic_tangent_function;
-  concept_relu_function;
-  concept_softmax_function
-
-};;
+nrel_activation_function => nrel_second_domain: function;;
 
  nrel_activation_function => nrel_definitional_domain:...
 	(*
