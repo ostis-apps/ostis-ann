@@ -1,11 +1,11 @@
-sc_node_not_relation->error_back_propagation_algorithm;;
-sc_node_not_relation->multilayer_perceptron;;
-sc_node_not_relation->gradient;;
-sc_node_not_relation->learning_process;;
-sc_node_not_relation->calculation_method;;
-sc_node_not_relation->direct_distribution_neural_network;;
-sc_node_not_relation->algorithm;; 
-sc_node_not_relation->algorithm_x;; 
+sc_node_class->error_back_propagation_algorithm;;
+sc_node_class->multilayer_perceptron;;
+sc_node_class->gradient;;
+sc_node_class->learning_process;;
+sc_node_class->calculation_method;;
+sc_node_class->direct_distribution_neural_network;;
+sc_node_class->algorithm;; 
+sc_node_class->algorithm_x;; 
 
 sc_node_norole_relation->nrel_weight;;
 
