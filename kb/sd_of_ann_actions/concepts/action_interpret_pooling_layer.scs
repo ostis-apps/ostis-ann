@@ -1,4 +1,4 @@
-concept_pooling_layer_interpretation_action
+action_interpret_pooling_layer
 => nrel_main_idtf:
     [действие интерпретации пулинг слоя](* <- lang_ru;; *);
     [action of interpretation the pooling layer](* <- lang_en;; *);
@@ -19,8 +19,8 @@ concept_pooling_layer_interpretation_action
         };;
     => nrel_using_constants:
         {
-        concept_convolutional_layer_interpretation_action;
-        concept_ann_layer_interpretation_action;
+        action_interpret_pooling_layer;
+        action_interpret_ann_layer;
         layer;
         concept_artificial_neural_network
         };;

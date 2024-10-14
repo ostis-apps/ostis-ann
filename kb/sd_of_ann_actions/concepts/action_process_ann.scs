@@ -1,4 +1,4 @@
-concept_ann_processing_action
+action_process_ann
 <- sc_node_class;
 => nrel_main_idtf:
     [действие по обработке и.н.с.](* <- lang_ru;; *);
@@ -9,9 +9,9 @@ concept_ann_processing_action
 => nrel_basic_decomposition: ...
 (*
     <- sc_node_tuple;;
-    -> concept_ann_interpretation_action;;
-    -> concept_ann_design_action;;
-    -> concept_ann_weight_coefficients_configuration_action;;
+    -> action_interpret_ann;;
+    -> action_design_ann;;
+    -> action_configure_weight_coefficients_ann;;
 *);
 <- rrel_key_sc_element:
     ...
@@ -30,7 +30,7 @@ concept_ann_processing_action
         };;
     => nrel_using_constants:
         {
-        concept_ann_processing_action;
+        action_process_ann;
         concept_artificial_neural_network
         };;
     *);

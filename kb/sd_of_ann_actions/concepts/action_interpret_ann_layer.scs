@@ -1,4 +1,4 @@
-concept_ann_layer_interpretation_action
+action_interpret_ann_layer
 <- sc_node_class;
 => nrel_main_idtf:
     [действие интерпретации слоя и.н.с.](* <- lang_ru;; *);
@@ -20,17 +20,17 @@ concept_ann_layer_interpretation_action
         };;
     => nrel_using_constants:
         {
-        concept_ann_layer_interpretation_action;
+        action_interpret_ann_layer;
         layer;
-        concept_ann_interpretation_action;
+        action_interpret_ann;
         concept_artificial_neural_network
         };;
     *);
 => nrel_basic_decomposition: ...
 (*
     <- sc_node_tuple;;
-    -> concept_all_layer_neurons_weighted_sum_calculating_action;;
-    -> concept_all_layer_neurons_activation_function_calculating_action;;
-    -> concept_convolutional_layer_interpretation_action;;
-    -> concept_pooling_layer_interpretation_action;;
+    -> action_calculate_weighted_sum_of_all_neurons_of_layer;;
+    -> action_calculate_all_layer_neurons_activation_function;;
+    -> action_interpret_convolutional_layer;;
+    -> action_interpret_pooling_layer;;
 *);;

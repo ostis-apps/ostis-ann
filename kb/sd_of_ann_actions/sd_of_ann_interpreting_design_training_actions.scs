@@ -17,19 +17,19 @@ subject_domain_of_ann_actions
 <- subject_domain;
 <= nrel_primary_elements_class_private_subject_domain: subject_domain_of_actions_and_tasks;
 -> rrel_maximum_studied_object_class:
-    concept_ann_processing_action;
+    action_process_ann;
 -> rrel_not_maximum_studied_object_class:
-    concept_ann_interpretation_action;
-    concept_ann_training_action;
-    concept_ann_design_action;
-    concept_ann_layer_configuration_action;
-    concept_ann_layer_neuron_configuration_action;
-    concept_ann_layer_interpretation_action;
+    action_interpret_ann;
+    action_train_ann;
+    action_design_ann;
+    action_configure_layer_ann;
+    action_configure_neuron_in_layer_ann;
+    action_interpret_ann_layer;
     concept_number_oriented_set;
-    concept_all_layer_neurons_weighted_sum_calculating_action;
-    concept_all_layer_neurons_activation_function_calculating_action;
-    concept_convolutional_layer_interpretation_action;
-    concept_pooling_layer_interpretation_action;
+    action_calculate_weighted_sum_of_all_neurons_of_layer;
+    action_calculate_all_layer_neurons_activation_function;
+    action_interpret_convolutional_layer;
+    action_interpret_pooling_layer;
     concept_specifying_different_arguments_for_same_layer_neurons_problem;
     concept_ann_interpretation_agent_based_model;
     concept_xor_problem;

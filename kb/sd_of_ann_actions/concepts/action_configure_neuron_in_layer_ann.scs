@@ -1,4 +1,4 @@
-concept_ann_layer_neuron_configuration_action
+action_configure_neuron_in_layer_ann
 <- sc_node_class;
 => nrel_main_idtf:
     [действие конфигурации нейрона в слое и.н.с.](* <- lang_ru;; *);
@@ -20,8 +20,8 @@ concept_ann_layer_neuron_configuration_action
         };;
     => nrel_using_constants:
         {
-        concept_ann_layer_neuron_configuration_action;
-        concept_ann_layer_configuration_action;
+        action_configure_neuron_in_layer_ann;
+        action_configure_layer_ann;
         layer;
         formal_neuron;
         concept_artificial_neural_network
@@ -30,8 +30,8 @@ concept_ann_layer_neuron_configuration_action
 => nrel_decomposition: ...
 (*
     <- sc_node_tuple;;
-    <- concept_ann_layer_neuron_adding_action;;
-    <- concept_ann_layer_neuron_editing_action;;
-    <- concept_ann_layer_neuron_removing_action;;
-    <- concept_ann_layer_neuron_activation_function_setting_action;;
+    <- action_add_neuron_in_layer_ann;;
+    <- action_edit_neuron_in_layer_ann;;
+    <- action_remove_neuron_in_layer_ann;;
+    <- action_set_activation_function_of_neuron_in_layer_ann;;
 *);;

@@ -9,14 +9,14 @@ rrel_layer_neuron_weighted_sums_vector
 <- antireflexive_relation;
 <- asymmetric_relation;
 <- antitransitive_relation;
-=> nrel_first_domain: concept_ann_processing_action;
+=> nrel_first_domain: action_process_ann;
 => nrel_second_domain: concept_number_oriented_set;
 => nrel_definitional_domain: ...
 (*
     <= nrel_combination: ...
     (*
         <- sc_node_tuple;;
-        -> concept_ann_processing_action;;
+        -> action_process_ann;;
         -> concept_number_oriented_set;;
     *);;
 *);;

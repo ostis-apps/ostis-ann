@@ -1,4 +1,4 @@
-concept_convolutional_layer_interpretation_action
+action_interpret_convolutional_layer
 => nrel_main_idtf:
     [действие интерпретации свёрточного слоя](* <- lang_ru;; *);
     [action of interpretation the convolutional layer](* <- lang_en;; *);
@@ -19,8 +19,8 @@ concept_convolutional_layer_interpretation_action
         };;
     => nrel_using_constants:
         {
-        concept_convolutional_layer_interpretation_action;
-        concept_ann_layer_interpretation_action;
+        action_interpret_convolutional_layer;
+        action_interpret_ann_layer;
         layer;
         concept_artificial_neural_network
         };;

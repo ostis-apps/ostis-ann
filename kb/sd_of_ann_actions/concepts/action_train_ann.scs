@@ -1,4 +1,4 @@
-concept_ann_training_action
+action_train_ann
 <- sc_node_class;
 => nrel_main_idtf:
     [действие обучения и.н.с.](* <- lang_ru;; *);
@@ -22,7 +22,7 @@ concept_ann_training_action
         };;
     => nrel_using_constants:
         {
-        concept_ann_training_action;
+        action_train_ann;
         concept_artificial_neural_network
         };;
     *);
@@ -31,4 +31,4 @@ concept_ann_training_action
     -> rrel_example: "file://images/ann_training_scg.png"(* => nrel_format: format_png;; *);;
     -> [описание на языке SCg](* <- lang_ru;; *);;
 *);
-<= nrel_inclusion: concept_ann_weight_coefficients_configuration_action;;
+<= nrel_inclusion: action_configure_weight_coefficients_ann;;
