@@ -1,14 +1,14 @@
 import numpy as np
-from numpy import exp, sin, cos, tan, arcsin, arccos, arctan
 import tensorflow as tf
 from typing import List
 from sc_kpm import ScAgentClassic
 from sc_client.models import ScAddr
 from sc_kpm.sc_result import ScResult
-from .FnnReaderModule import FnnReader
+from .FnnReader import FnnReader
 from .TrainParams import TrainParams
 
-class AgentTraining(ScAgentClassic):
+
+class FnnTrainingAgent(ScAgentClassic):
     def __init__(self) -> None:
         super().__init__("action_train_fnn")
 
@@ -18,11 +18,11 @@ class AgentTraining(ScAgentClassic):
         result = self.__run()
         self.logger.info("AgentTrainerFnn finished")
         return result
-    
+
     def __run(self):
         self.__training_params: TrainParams = self.__reader.get_training_train_params()
-        self.__training_data:np.ndarray[np.float64] = self.__training_params.input_values
-        self.__target_data:np.ndarray[np.float64] = self.__training_params.output_values
+        self.__training_data: np.ndarray[np.float64] = self.__training_params.input_values
+        self.__target_data: np.ndarray[np.float64] = self.__training_params.output_values
         self.__input_layer_size: np.int64 = self.__reader.input_layer_size
         self.__output_layer_size: np.int64 = self.__reader.output_layer_size
         self.__hidden_layers_size: List[np.int64] = self.__reader.hidden_layer_size
@@ -35,55 +35,39 @@ class AgentTraining(ScAgentClassic):
         self.__train_model()
         self.__reader.update_weight(self.__get_model_weights())
 
+    @staticmethod
+    def __get_activation_function(foo):
+        return lambda x: eval(
+            foo,
+            {
+                "x": x,
+                "exp": tf.exp,
+                "sin": tf.sin,
+                "cos": tf.cos,
+                "tan": tf.tan,
+                "arcsin": tf.asin,
+                "arccos": tf.acos,
+                "arctan": tf.atan,
+            },
+        )
+
+    def __get_dense_layer(self, size, fun):
+        return tf.keras.layers.Dense(
+            size,
+            use_bias=False,
+            activation=(self.__get_activation_function(fun)),
+            dtype=np.float64,
+        )
+
     def __create_model(self):
         for hidden_layer_size in self.__hidden_layers_size:
             foo = self.__activation_functions.pop()
-            self.model.add(
-                tf.keras.layers.Dense(
-                    hidden_layer_size,
-                    use_bias=False,
-                    activation=(
-                        lambda x: eval(
-                            foo,
-                            {
-                                "x": x,
-                                "exp": tf.exp,
-                                "sin": tf.sin,
-                                "cos": tf.cos,
-                                "tan": tf.tan,
-                                "arcsin": tf.asin,
-                                "arccos": tf.acos,
-                                "arctan": tf.atan,
-                            },
-                        )
-                    ),
-                    dtype=np.float64,
-                )
-            )
+            self.model.add(self.__get_dense_layer(hidden_layer_size, foo))
+
         foo = self.__activation_functions.pop()
-        self.model.add(
-            tf.keras.layers.Dense(
-                self.__output_layer_size,
-                use_bias=False,
-                activation=(
-                    lambda x: eval(
-                        foo,
-                        {
-                            "x": x,
-                            "exp": tf.exp,
-                            "sin": tf.sin,
-                            "cos": tf.cos,
-                            "tan": tf.tan,
-                            "arcsin": tf.asin,
-                            "arccos": tf.acos,
-                            "arctan": tf.atan,
-                        },
-                    )
-                ),
-                dtype=np.float64,
-            )
-        )
-        self.model.compile(optimizer=self.__optimizer, loss="huber_loss")
+        self.model.add(self.__get_dense_layer(self.__output_layer_size, foo))
+
+        self.model.compile(optimizer=self.__optimizer, loss=tf.keras.losses.Huber())
         return self.model
 
     def __train_model(self):

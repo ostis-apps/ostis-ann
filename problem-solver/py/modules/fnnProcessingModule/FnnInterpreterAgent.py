@@ -4,9 +4,10 @@ from typing import List
 from sc_kpm import ScAgentClassic
 from sc_client.models import ScAddr
 from sc_kpm.sc_result import ScResult
-from .FnnReaderModule import FnnReader
+from .FnnReader import FnnReader
 
-class FnnSolver(ScAgentClassic):
+
+class FnnInterpreterAgent(ScAgentClassic):
     def __init__(self) -> None:
         super().__init__("action_interpreter_fnn")
         self.__output_values: List[np.ndarray[np.float64]] = []
@@ -37,4 +38,3 @@ class FnnSolver(ScAgentClassic):
 
     def __function(self, x, i):
         return eval(self.__activation_functions[i])
-

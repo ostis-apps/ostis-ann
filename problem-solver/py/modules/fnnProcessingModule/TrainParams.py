@@ -1,5 +1,6 @@
 import numpy as np
 
+
 class TrainParams:
     def __init__(self,
                  input_values: np.ndarray[np.float64],
@@ -13,4 +14,4 @@ class TrainParams:
         self.learning_rate = learning_rate
 
     def print_params(self) -> str:
-        print(np.hstack((self.input_values,self.output_values)))
+        print(np.hstack((self.input_values, self.output_values)))
