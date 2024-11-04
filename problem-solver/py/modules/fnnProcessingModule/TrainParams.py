@@ -13,5 +13,5 @@ class TrainParams:
         self.epochs: np.ndarray[np.float64] = epochs
         self.learning_rate = learning_rate
 
-    def print_params(self) -> str:
+    def print_params(self) -> None:
         print(np.hstack((self.input_values, self.output_values)))

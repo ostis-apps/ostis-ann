@@ -13,32 +13,37 @@ class FnnTrainingAgent(ScAgentClassic):
         super().__init__("action_train_fnn")
 
     def on_event(self, event_element: ScAddr, event_edge: ScAddr, action_element: ScAddr) -> ScResult:
-        self.__reader = FnnReader(action_element)
-        self.logger.info("AgentTrainerFnn started")
-        result = self.__run()
-        self.logger.info("AgentTrainerFnn finished")
+        self.logger.info("FnnTrainingAgent started")
+        result = self.__run(action_element)
+        self.logger.info("FnnTrainingAgent finished")
         return result
 
-    def __run(self):
-        self.__training_params: TrainParams = self.__reader.get_training_train_params()
-        self.__training_data: np.ndarray[np.float64] = self.__training_params.input_values
-        self.__target_data: np.ndarray[np.float64] = self.__training_params.output_values
-        self.__input_layer_size: np.int64 = self.__reader.input_layer_size
-        self.__output_layer_size: np.int64 = self.__reader.output_layer_size
-        self.__hidden_layers_size: List[np.int64] = self.__reader.hidden_layer_size
-        self.__activation_functions: List[str] = self.__reader.activation_functions
-        self.__learning_rate: np.float64 = self.__training_params.learning_rate
-        self.__epochs: np.int64 = self.__training_params.epochs
-        self.__optimizer = tf.keras.optimizers.Adam(learning_rate=self.__learning_rate)
-        self.model = tf.keras.models.Sequential()
-        self._model = self.__create_model()
-        self.__train_model()
-        self.__reader.update_weight(self.__get_model_weights())
+    def __run(self, action_element: ScAddr) -> ScResult:
+        reader = FnnReader(action_element)
+
+        # Set up training parameters
+        self.__training_params: TrainParams = reader.get_training_params()
+        self.__input_layer_size: np.int64 = reader.input_layer_size
+        self.__output_layer_size: np.int64 = reader.output_layer_size
+        self.__hidden_layers_size: List[np.int64] = reader.hidden_layer_size
+        self.__activation_functions: List[str] = reader.activation_functions
+
+        # Build model
+        self.__model = self.__create_model()
+
+        # Train model
+        self.__train_model(self.__model)
+
+        # Write updated weights to memory
+        reader.update_weight(self.__get_model_weights())
+
+        # todo: error handling?
+        return ScResult.OK
 
     @staticmethod
-    def __get_activation_function(foo):
+    def __evaluate_function(function_string: str):
         return lambda x: eval(
-            foo,
+            function_string,
             {
                 "x": x,
                 "exp": tf.exp,
@@ -47,40 +52,39 @@ class FnnTrainingAgent(ScAgentClassic):
                 "tan": tf.tan,
                 "arcsin": tf.asin,
                 "arccos": tf.acos,
-                "arctan": tf.atan,
+                "arctan": tf.atan
             },
         )
 
-    def __get_dense_layer(self, size, fun):
+    def __get_dense_layer(self, size, activation_function: str):
         return tf.keras.layers.Dense(
             size,
             use_bias=False,
-            activation=(self.__get_activation_function(fun)),
+            activation=(self.__evaluate_function(activation_function)),
             dtype=np.float64,
         )
 
     def __create_model(self):
+        model = tf.keras.models.Sequential()
+
         for hidden_layer_size in self.__hidden_layers_size:
             foo = self.__activation_functions.pop()
-            self.model.add(self.__get_dense_layer(hidden_layer_size, foo))
+            model.add(self.__get_dense_layer(hidden_layer_size, foo))
 
         foo = self.__activation_functions.pop()
-        self.model.add(self.__get_dense_layer(self.__output_layer_size, foo))
+        model.add(self.__get_dense_layer(self.__output_layer_size, foo))
 
-        self.model.compile(optimizer=self.__optimizer, loss=tf.keras.losses.Huber())
-        return self.model
+        optimizer = tf.keras.optimizers.Adam(learning_rate=self.__training_params.learning_rate)
+        model.compile(optimizer=optimizer, loss=tf.keras.losses.Huber())
+        return model
 
-    def __train_model(self):
-        self._model.fit(
-            self.__training_data,
-            self.__target_data,
-            epochs=self.__epochs,
+    def __train_model(self, model):
+        model.fit(
+            self.__training_params.input_values,
+            self.__training_params.output_values,
+            epochs=self.__training_params.epochs,
             validation_split=0.2,
         )
 
     def __get_model_weights(self):
-        model_weights = []
-        for i, layer in enumerate(self._model.layers):
-            layer_weights = layer.get_weights()
-            model_weights.append(layer_weights)
-        return model_weights
+        return [layer.get_weights() for layer in self.__model.layers]

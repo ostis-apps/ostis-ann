@@ -13,7 +13,8 @@ logging.basicConfig(
     level=logging.INFO, format="%(asctime)s | %(name)s | %(message)s", datefmt="[%d-%b-%y %H:%M:%S]"
 )
 
-class FnnReader():
+
+class FnnReader:
     def __init__(self, action_node: ScAddr) -> None:
         self.__action_node = action_node
         self._network: ScAddr = self.__find_network()
@@ -265,7 +266,7 @@ class FnnReader():
             self._input_values_addr.append(set[2])
         return np.array(input_values, dtype=np.float64)
 
-    def get_training_train_params(self) -> TrainParams:
+    def get_training_params(self) -> TrainParams:
         template = ScTemplate()
         template.triple_with_relation(
             self.__action_node,
