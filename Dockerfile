@@ -1,19 +1,21 @@
 FROM ubuntu:focal as base
 ARG DEBIAN_FRONTEND=noninteractive
 ENV TZ=Europe/Moscow
+
 # install dependencies
 COPY ./scripts /tmp/scripts
 COPY ./problem-solver/sc-machine/scripts /tmp/problem-solver/sc-machine/scripts
 COPY ./problem-solver/sc-machine/requirements.txt /tmp/problem-solver/sc-machine/requirements.txt
-RUN apt-get update && \
-    apt-get install -y --no-install-recommends sudo ccache tini tzdata && \
+
+RUN --mount=target=/var/lib/apt/lists,type=cache,sharing=locked \
+    --mount=target=/var/cache/apt,type=cache,sharing=locked \
+    rm -f /etc/apt/apt.conf.d/docker-clean \
+    && apt-get update \
+    && apt-get install -y --no-install-recommends sudo ccache tini tzdata git && \
     /tmp/scripts/install_problem_solver_deps.sh
 
 FROM base as builder
 ENV CCACHE_DIR=/ccache
-
-RUN apt-get install -y --no-install-recommends git && \
-    /tmp/scripts/install_problem_solver_deps.sh --dev
 
 COPY . /ostis-ann
 WORKDIR /ostis-ann/scripts
