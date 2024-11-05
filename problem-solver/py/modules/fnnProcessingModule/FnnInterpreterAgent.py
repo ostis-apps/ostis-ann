@@ -23,7 +23,7 @@ class FnnInterpreterAgent(ScAgentClassic):
         return result
 
     def run(self):
-        self.__weights = self.__reader.weigths
+        self.__weights = self.__reader.weights
         self.__input_values = self.__reader.input_values
         self.__activation_functions: List[str] = self.__reader.activation_functions
         print('weights:\n', self.__weights)

@@ -4,6 +4,7 @@ from typing import List
 from sc_kpm import ScAgentClassic
 from sc_client.models import ScAddr
 from sc_kpm.sc_result import ScResult
+
 from .FnnReader import FnnReader
 from .TrainParams import TrainParams
 
@@ -22,14 +23,10 @@ class FnnTrainingAgent(ScAgentClassic):
         reader = FnnReader(action_element)
 
         # Set up training parameters
-        self.__training_params: TrainParams = reader.get_training_params()
-        self.__input_layer_size: np.int64 = reader.input_layer_size
-        self.__output_layer_size: np.int64 = reader.output_layer_size
-        self.__hidden_layers_size: List[np.int64] = reader.hidden_layer_size
-        self.__activation_functions: List[str] = reader.activation_functions
+        self.__setup_training_params(reader)
 
         # Build model
-        self.__model = self.__create_model()
+        self.__model: tf.keras.Model = self.__create_model()
 
         # Train model
         self.__train_model(self.__model)
@@ -41,7 +38,7 @@ class FnnTrainingAgent(ScAgentClassic):
         return ScResult.OK
 
     @staticmethod
-    def __evaluate_function(function_string: str):
+    def __get_evaluation_lambda(function_string: str):
         return lambda x: eval(
             function_string,
             {
@@ -60,14 +57,25 @@ class FnnTrainingAgent(ScAgentClassic):
         return tf.keras.layers.Dense(
             size,
             use_bias=False,
-            activation=(self.__evaluate_function(activation_function)),
+            activation=(self.__get_evaluation_lambda(activation_function)),
             dtype=np.float64,
         )
 
-    def __create_model(self):
-        model = tf.keras.models.Sequential()
+    def __setup_training_params(self, reader: FnnReader) -> None:
+        self.__training_params: TrainParams = reader.get_training_params()
+        self.__input_layer_size: np.int64 = reader.input_layer_size
+        self.__output_layer_size: np.int64 = reader.output_layer_size
+        self.__hidden_layers_sizes: List[np.int64] = reader.hidden_layer_size
+        self.__activation_functions: List[str] = reader.activation_functions
 
-        for hidden_layer_size in self.__hidden_layers_size:
+    def __create_model(self) -> tf.keras.Model:
+        print(f'__hidden_layers_size: {self.__hidden_layers_sizes}')
+        print(f'__activation_functions: {len(self.__activation_functions)}')
+
+        model = tf.keras.models.Sequential()
+        model.add(self.__get_dense_layer(self.__input_layer_size, 'relu'))
+
+        for hidden_layer_size in self.__hidden_layers_sizes:
             foo = self.__activation_functions.pop()
             model.add(self.__get_dense_layer(hidden_layer_size, foo))
 
@@ -78,7 +86,7 @@ class FnnTrainingAgent(ScAgentClassic):
         model.compile(optimizer=optimizer, loss=tf.keras.losses.Huber())
         return model
 
-    def __train_model(self, model):
+    def __train_model(self, model) -> None:
         model.fit(
             self.__training_params.input_values,
             self.__training_params.output_values,

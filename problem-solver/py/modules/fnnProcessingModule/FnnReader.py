@@ -1,8 +1,6 @@
 import logging
-from sc_client.models import ScAddr
 import sc_kpm
 import numpy as np
-import sc_client
 from sc_client.models import *
 from sc_client.constants import sc_types
 from sc_client.client import *
@@ -22,37 +20,30 @@ class FnnReader:
         self._input_neurons: List[ScAddr] = self.__get_input_neurons()
         self._output_neurons: List[ScAddr] = self.__get_output_neurons()
         self._hidden_layers: List[ScAddr] = self.__get_hidden_layers()
-        self._hidden_neurons: List[List[ScAddr]] = self.__get_neurons_hidden_layer()[::-1]
-        self._weigths: List[np.ndarray[np.float64]] = []
-        self._weigths_addr: List[ScAddr] = []
-        self._weigths.append(self.__get_weigths_for_neurons(self._input_neurons))
+        self._hidden_neurons: List[ScAddr] = self.__get_neurons_hidden_layer()[::-1]
+        self._weights: np.ndarray[np.float64] = []
+        self._weights_addr: List[ScAddr] = []
+        self._weights.append(self.__get_weights_for_neurons(self._input_neurons))
         self._activation_functions: List[str] = self.__get_activation_functions()
         for pack in self._hidden_neurons:
-            self._weigths.append(self.__get_weigths_for_neurons(pack))
+            self._weights.append(self.__get_weights_for_neurons(pack))
         self._input_values_addr: List[ScAddr] = []
         self._input_values: np.ndarray[np.float64] = self.__get_input_values()
-        
-        # if self.__train_flag:
-        #     self.__train_model()
-        #     self.__update_weight()
-        # self._training_params.print_params()
-        # self._output_values: List[np.ndarray[np.float64]] = self.__get_output_values()
-        # self.__commit_result()
 
     @property
-    def weigths(self) -> np.ndarray[np.float64]:
-        return self._weigths
+    def weights(self) -> np.ndarray[np.float64]:
+        return self._weights
     
     @property
     def activation_functions(self) -> List[str]:
         return self._activation_functions
     
     @property
-    def input_values(self) -> List[np.ndarray[np.float64]]:
+    def input_values(self) -> np.ndarray[np.float64]:
         return self._input_values 
 
     @property
-    def hidden_layer_size(self)-> List[np.int64]:
+    def hidden_layer_size(self) -> List[np.int64]:
         hidden_layers_size = []
         for hidden_number in self._hidden_neurons:
             hidden_layers_size.append(len(hidden_number)) 
@@ -65,27 +56,6 @@ class FnnReader:
     @property
     def output_layer_size(self) -> np.int64:
         return len(self._output_neurons)
-
-    # def __train_model(self) -> None:
-    #     hidden_layers_size = []
-    #     for hidden_number in self._hidden_neurons:
-    #         hidden_layers_size.append(len(hidden_number))
-    #     model = AgentTraining(
-    #         self._training_params.input_values,
-    #         self._training_params.output_values,
-    #         len(self._input_neurons),
-    #         len(self._output_neurons),
-    #         self._activation_functions,
-    #         hidden_layers_size,
-    #         learning_rate=self._training_params.learning_rate,
-    #         epochs=self._training_params.epochs
-    #     )
-    #     model.run()
-    #     self._updated_weights = model.get_model_weights()
-    #     t_weights = []
-    #     for weights in self._updated_weights:
-    #         t_weights.append(weights[0])
-    #     print("Предсказания обученной модели:\n",model.model.predict(self._input_values))
 
     def __find_network(self) -> ScAddr:
         template = ScTemplate()
@@ -126,7 +96,7 @@ class FnnReader:
         print(self._output_neurons, "output neurons ids")
         print(self._hidden_layers, "hidden layers ids")
         print(self._hidden_neurons, "hidden neurons ids")
-        print(self._weigths, "weigths")
+        print(self._weights, "weights")
         print(self._input_values, "input values")
         print(self._activation_functions, "activation functions")
 
@@ -204,22 +174,20 @@ class FnnReader:
             neurons_of_hidden_layers.append([neuron[2] for neuron in neurons])
         return neurons_of_hidden_layers
 
-    def __get_weigths_for_neurons(
-        self, neurons: List[ScAddr]
-    ) -> List[List[np.float64]]:
-        weigths = []
-        weigths_layer_addr = []
+    def __get_weights_for_neurons(self, neurons: List[ScAddr]) -> List[np.float64]:
+        weights = []
+        weights_layer_addr = []
         for neuron in neurons:
-            weigths_for_neuron = []
-            weigths_for_neuron_addr = []
+            weights_for_neuron = []
+            weights_for_neuron_addr = []
             template = ScTemplate()
             template.triple(
                 neuron,
                 sc_types.EDGE_D_COMMON_VAR,
                 sc_types.NODE_VAR,
             )
-            result_search_for_neurons_weigths = template_search(template)
-            for edge in result_search_for_neurons_weigths:
+            result_search_for_neurons_weights = template_search(template)
+            for edge in result_search_for_neurons_weights:
                 template = ScTemplate()
                 template.triple_with_relation(
                     sc_types.NODE_VAR_CLASS,
@@ -236,14 +204,14 @@ class FnnReader:
                     sc_types.LINK_VAR,
                 )
                 weight_value = template_search(template)
-                weigths_for_neuron.append(
+                weights_for_neuron.append(
                     np.float64(sc_kpm.utils.get_link_content_data(weight_value[0][2]))
                 )
-                weigths_for_neuron_addr.append(weight_value[0][2])
-            weigths.append(weigths_for_neuron)
-            weigths_layer_addr.append(weigths_for_neuron_addr)
-        self._weigths_addr.append(weigths_layer_addr)
-        return np.array(weigths)
+                weights_for_neuron_addr.append(weight_value[0][2])
+            weights.append(weights_for_neuron)
+            weights_layer_addr.append(weights_for_neuron_addr)
+        self._weights_addr.append(weights_layer_addr)
+        return np.array(weights)
 
     def __get_input_values(self) -> np.ndarray[np.float64]:
         input_values = []
@@ -307,13 +275,13 @@ class FnnReader:
         template.triple(
             training_data_node, sc_types.EDGE_ACCESS_VAR_POS_PERM, sc_types.NODE_STRUCT
         )
-        data_sctruct_nodes = template_search(template)
+        data_struct_nodes = template_search(template)
         input_values = []
         output_values = []
-        for data_sctruct_node in data_sctruct_nodes:
+        for data_struct_node in data_struct_nodes:
             template = ScTemplate()
             template.triple_with_relation(
-                data_sctruct_node[2],
+                data_struct_node[2],
                 sc_types.EDGE_ACCESS_VAR_POS_PERM, 
                 sc_types.LINK_VAR,
                 sc_types.EDGE_ACCESS_VAR_POS_PERM,
@@ -323,7 +291,7 @@ class FnnReader:
                 input_values.append(sc_kpm.utils.get_link_content_data(input_link[2]).split(";"))
             template = ScTemplate()
             template.triple_with_relation(
-                data_sctruct_node[2],
+                data_struct_node[2],
                 sc_types.EDGE_ACCESS_VAR_POS_PERM, 
                 sc_types.LINK_VAR,
                 sc_types.EDGE_ACCESS_VAR_POS_PERM,
@@ -331,14 +299,13 @@ class FnnReader:
             )
             for output_link in template_search(template):
                 output_values.append(sc_kpm.utils.get_link_content_data(output_link[2]).split(";"))
-        input_values: np.ndarray[np.float64] = np.array(input_values,dtype=np.float64)
-        output_values: np.ndarray[np.float64] = np.array(output_values,dtype=np.float64)
+        input_values: np.ndarray[np.float64] = np.array(input_values, dtype=np.float64)
+        output_values: np.ndarray[np.float64] = np.array(output_values, dtype=np.float64)
         return TrainParams(input_values, output_values, number_epochs, learning_rate)
 
     def __get_activation_functions(self) -> List[str]:
         activation_functions: List[str] = []
-        layers = []
-        layers.append(self.__get_layer_by_name("processing_layer"))
+        layers = [self.__get_layer_by_name("processing_layer")]
         layers += self._hidden_layers
         for layer in layers:
             template = ScTemplate()
@@ -362,7 +329,7 @@ class FnnReader:
             activation_functions.append(activation_function)
         return activation_functions
 
-    def update_weight(self,weights: np.ndarray[np.float64]) -> None:
+    def update_weight(self, weights: np.ndarray[np.float64]) -> None:
         def make_linear(l):
             if not isinstance(l, list):
                 return [l]
@@ -370,7 +337,8 @@ class FnnReader:
             for elm in l:
                 answer += make_linear(elm)
             return answer
-        weights_addr = make_linear(self._weigths_addr)
+
+        weights_addr = make_linear(self._weights_addr)
         weights_values = []
         for i in weights:
             for j in i:
@@ -381,11 +349,10 @@ class FnnReader:
             link_content = ScLinkContent(str(weight), ScLinkContentType.STRING, addr)
             set_link_contents(link_content)
 
-    def commit_result(self, output_values: List[np.ndarray[np.float64]]) -> None:
+    def commit_result(self, output_values: List[np.ndarray[np.float64]], sc_client) -> None:
         # ScConstruction.create_node(sc_type: ScType, alias: str = None)
         # ScConstruction.create_edge(sc_type: ScType, src: str | ScAddr, trg: str | ScAddr, alias: str = None)
         # ScConstruction.create_link(sc_type: ScType, content: ScLinkContent, alias: str = None)
-        self.__action_node
         construction = ScConstruction()
         construction.create_node(sc_types.NODE_CONST_NOROLE, alias="nrel_answer") # creating nrel_answer node
         nrel_answer_node = sc_client.client.create_elements(construction)[0]
@@ -410,7 +377,7 @@ class FnnReader:
         construction.create_edge(sc_types.EDGE_ACCESS_CONST_POS_PERM,struct_node,main_tuple_node) # connect struct&tuple
         sc_client.client.create_elements(construction)
 
-        for i,data_node in enumerate(self._input_values_addr):
+        for i, data_node in enumerate(self._input_values_addr):
             construction = ScConstruction()
             construction.create_node(sc_types.NODE_CONST_TUPLE, alias="")
             tuple_node = sc_client.client.create_elements(construction)[0]
