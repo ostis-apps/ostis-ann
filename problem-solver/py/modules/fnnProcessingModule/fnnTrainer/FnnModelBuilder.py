@@ -35,7 +35,7 @@ def build_model(training_parameters: TrainingParameters) -> tf.keras.Model:
     model.add(output_layer)
 
     # Compile model and return
-
+    # todo: configurable optimizers and metrics?
     # optimizer = tf.keras.optimizers.Adam(learning_rate=training_parameters.learning_rate)
     # optimizer = tf.train.RMSPropOptimizer(learning_rate=0.001)
     # model.compile(optimizer=optimizer, loss=tf.keras.losses.Huber(), metrics=['accuracy'])

@@ -1,8 +1,8 @@
 import pandas as pd
 from sc_client.models import ScAddr
 
-from modules.fnnProcessingModule.FnnModelBuilder import build_model
-from modules.fnnProcessingModule.FnnTrainer import train_model
+from modules.fnnProcessingModule.fnnTrainer.FnnModelBuilder import build_model
+from modules.fnnProcessingModule.fnnTrainer.FnnTrainer import train_model
 from modules.fnnProcessingModule.dataClasses.DatasetStruct import DatasetStruct
 from modules.fnnProcessingModule.dataClasses.FnnLayerConfiguration import FnnLayerConfiguration
 from modules.fnnProcessingModule.dataClasses.FnnStruct import FnnStruct

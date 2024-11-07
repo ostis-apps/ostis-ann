@@ -18,6 +18,13 @@ logging.basicConfig(
 )
 
 
+# todo: use absolute filepaths?
+def get_ann_path() -> str:
+    script_directory = dirname(dirname(abspath(__file__)))
+    ann_path = dirname(dirname(dirname(dirname(dirname(script_directory)))))
+    return ann_path
+
+
 class TrainingParametersReader:
     def __init__(self) -> None:
         pass
@@ -81,9 +88,7 @@ class TrainingParametersReader:
         dataset_filepath = get_link_content(filepath_link_addr)[0].data
 
         # todo: review and maybe refactor specification of filepath
-        script_directory = dirname(dirname(abspath(__file__)))
-        ann_path = dirname(dirname(dirname(dirname(script_directory))))
-        kb_path = f'{ann_path}/kb'
+        kb_path = f'{get_ann_path()}/kb'
 
         df = pd.read_csv(f'{kb_path}/{dataset_filepath}')
         return df
