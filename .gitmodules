@@ -1,14 +1,16 @@
 [submodule "subsystems/scl-machine"]
 	path = subsystems/scl-machine
 	url = https://github.com/ostis-ai/scl-machine
+	commit = fa3c72165674c7400f433302fc0aac6eb2136cc0
 [submodule "sc-web"]
 	path = sc-web
 	url = https://github.com/ostis-ai/sc-web
-	branch = 0.8.1-Unlock
+	branch = c180329326cfee18af5f6487b2d3932fd0a0128e
 [submodule "problem-solver/sc-machine"]
 	path = problem-solver/sc-machine
 	url = https://github.com/ostis-ai/sc-machine
-	branch = 0.9.0-Unlock
+	branch = b598d32c39736fad5ccee87eaf184e1ef7eaf9c4
 [submodule "kb/ims.ostis.kb"]
 	path = kb/ims.ostis.kb
 	url = https://github.com/ostis-ai/ims.ostis.kb
+	branch = 2518ad2cd54ac40a9e33b0e0bf9acb813e641b83
