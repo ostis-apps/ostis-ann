@@ -24,6 +24,7 @@ RUN --mount=type=cache,target=/ccache/ ./build_problem_solver.sh -r
 FROM base as final
 COPY --from=builder /ostis-ann/problem-solver/sc-machine/scripts /ostis-ann/problem-solver/sc-machine/scripts
 COPY --from=builder /ostis-ann/problem-solver/sc-machine/requirements.txt /ostis-ann/problem-solver/sc-machine/requirements.txt
+RUN /ostis-ann/problem-solver/sc-machine/scripts/install_deps_python.sh
 
 COPY --from=builder /ostis-ann/bin /ostis-ann/bin
 COPY --from=builder /ostis-ann/scripts /ostis-ann/scripts

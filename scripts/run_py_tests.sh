@@ -25,6 +25,7 @@ bg_process_pid=$(jobs -p)
 # kill sc-server on exit
 trap kill_bg_process EXIT INT TERM
 
+source "$APP_ROOT_PATH/.venv/bin/activate"
 until python3 "${SC_MACHINE_PATH}/scripts/healthcheck.py" --port 8091 
 do
     echo ...
