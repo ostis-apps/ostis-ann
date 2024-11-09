@@ -23,10 +23,10 @@ concept_lstm_element
     <= nrel_sc_text_translation: ...
         (*
         -> rrel_example:
-            [LSTM-сеть --- это такая рекуррентная нейронная сеть, в которой имеются «LSTM-ячейки», обладающие внут­ренней рекуррентностью (петлей) в дополнение к внешней рекуррентности.]
+            [LSTM-сеть --- это искусственная нейронная сеть, у которой имеются «LSTM-ячейки», обладающие внут­ренней рекуррентностью (петлей) в дополнение к внешней рекуррентности.]
             (* <- lang_ru;; *);;
         -> rrel_example:
-            [Long short-term memory network --- is a type of recurrent neural network that has LSTM cells, which have an internal recurrent loop in addition to the external recurrent loop.]
+            [Long short-term memory network is a type of artificial neural network that has LSTM cells, which have an internal recurrent loop in addition to the external recurrent loop.]
             (* <- lang_en;; *);;
         =>nrel_reference:
             goodfellow2016deeplearning;;

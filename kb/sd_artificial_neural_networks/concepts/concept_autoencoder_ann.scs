@@ -31,10 +31,10 @@ concept_autoencoder_ann
     ...
         (*
         ->rrel_example:
-            [Автоэнкодерная нейронная сеть --- нейронная сеть прямого распространения, которая восстанавливает входной сигнал на выходе.]
+            [Автоэнкодерная нейронная сеть --- это искусственная нейронная сеть прямого распространения, которая восстанавливает входной сигнал на выходе.]
             (* <- lang_ru;; *);;
         ->rrel_example:
-            [Autoencoder neural network is a special type of neural network that is trained to copy its input to its output.]
+            [Autoencoder neural network is an artificial neural network that is trained to copy its input to its output.]
             (* <- lang_en;; *);;
         *);;
     => nrel_using_constants:

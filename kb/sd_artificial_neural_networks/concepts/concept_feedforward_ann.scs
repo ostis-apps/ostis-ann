@@ -32,10 +32,10 @@ concept_feedforward_ann
         ...
         (*
         -> rrel_example:
-            [Искусственная нейронная сеть с прямыми связями --- нейронная сеть в которой происходит распространение информации только в одном направлении от слоя к слою.]
+            [Искусственная нейронная сеть с прямыми связями --- это искусственная нейронная сеть, у которой происходит распространение информации только в одном направлении от слоя к слою.]
             (* <- lang_ru;; *);;
         -> rrel_example:
-            [Feed-forward artificial neural network is a neural network where the propagation of information only occurs in one direction, from one layer to another.]
+            [Feed-forward artificial neural network is an artificial neural network where the propagation of information only occurs in one direction, from one layer to another.]
             (* <- lang_en;; *);;
         *);;
     <= nrel_using_constants:

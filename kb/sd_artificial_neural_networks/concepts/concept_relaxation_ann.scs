@@ -26,13 +26,13 @@ concept_relaxation_ann
         ...
         (*
         ->rrel_example:
-            [Релаксационная нейронная сеть --- класс нейронных сетей, в котором выполнение алгоритма обучения завершается состоянием равновесия.]
+            [Релаксационная нейронная сеть --- это искусственная нейронная сеть, у которой выполнение алгоритма обучения завершается состоянием равновесия.]
             (* <- lang_ru;; *);;
         *);
         ...
         (*
         ->rrel_example:
-            [Relaxation neural network is a class of neural networks that are characterized by the iterative process of minimizing an energy function until a state of equilibrium is reached.]
+            [Relaxation neural network is an artificial neural network that are characterized by the iterative process of minimizing an energy function until a state of equilibrium is reached.]
             (* <- lang_en;; *);;
         *)
         ;;

@@ -27,10 +27,10 @@ concept_self_organizing_ann
         ...
         (*
         ->rrel_example:
-            [Самоорганизующаяся нейронная сеть --- класс нейронных сетей, с обучением без учителя, в результате которого происходит адаптация сети к решаемой задаче.]
+            [Самоорганизующаяся нейронная сеть --- это искусственная нейронная сеть, у которой происходит обучение без учителя, в результате которого происходит адаптация сети к решаемой задаче.]
             (* <- lang_ru;; *);;
         ->rrel_example:
-            [Self-Organizing Neural Network is a class of neural networks that utilizes unsupervised learning, allowing the network to adapt itself to the task.]
+            [Self-Organizing Neural Network is an artificial neural network that utilizes unsupervised learning, allowing the network to adapt itself to the task.]
             (* <- lang_en;; *);;
         *);;
     => nrel_using_constants:

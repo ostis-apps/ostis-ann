@@ -22,10 +22,10 @@ concept_jordans_ann
     ...
         (*
         -> rrel_example:
-            [Сеть Джордана --- рекуррентная нейронная сеть, в которой выходы нейронных элементов последнего слоя посредством специальных входных нейронов соединены с нейронами промежуточного слоя.]
+            [Сеть Джордана --- это искусственная нейронная сеть, у которой выходы нейронных элементов последнего слоя посредством специальных входных нейронов соединены с нейронами промежуточного слоя.]
             (* <- lang_ru;; *);;
         -> rrel_example:
-            [Jordan network is a type of recurrent neural network in which the outputs of the neural elements of the last layer are connected to the neurons of the intermediate layer through special input neurons.]
+            [Jordan network is a type of an artificial neural network where the outputs of the neural elements of the last layer are connected to the neurons of the intermediate layer through special input neurons.]
             (* <- lang_en;; *);;
         *);;
     => nrel_using_constants:

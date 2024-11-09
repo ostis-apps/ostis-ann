@@ -1,5 +1,6 @@
 concept_kohonens_map
 <- sc_node_class;
+<= nrel_inclusion: concept_kohonens_ann;
 => nrel_main_idtf:
     [самоорганизующаяся карта Кохонена]
     (* <- lang_ru;; *);
@@ -14,31 +15,6 @@ concept_kohonens_map
     (* <- lang_en;; *);
 => nrel_reference:
     golovko2017;
-<- rrel_key_sc_element:
-    ...
-    (*
-    => nrel_main_idtf:
-        [Опр. (самоорганизующаяся карта Кохонена)]
-        (* <- lang_ru;; *);
-        [Def. (self-organizing map)]
-        (* <- lang_en;; *);;
-    <- definition;;
-    <= nrel_sc_text_translation:
-    ...
-        (*
-        ->rrel_example:
-            [Искусственная нейронная сеть Кохонена - это искусственная нейронная сеть, содержащая входной слой и слой активных нейронов.]
-            (* <- lang_ru;; *);;
-        ->rrel_example:
-            [Kohonen network is a type of artificial neural network that consists of an input layer and a layer of active neurons.]
-            (* <- lang_en;; *);;
-        *);;
-    <= nrel_using_constants:
-        {
-        concept_artificial_neural_network;
-        concept_kohonens_ann
-        };;
-    *);
 <- rrel_key_sc_element: ...
 (*
     <- definition;;
@@ -55,9 +31,9 @@ concept_kohonens_map
     <= nrel_sc_text_translation: ... 
             (*
                 ->rrel_example:
-                [Карта Кохонена --- нейронная сеть с обучением без учителя, выполняющая задачу визуализации и кластеризации.](*<- lang_ru;;*);;
+                [Карта Кохонена --- это искусственная нейронная сеть с обучением без учителя, выполняющая задачу визуализации и кластеризации.](*<- lang_ru;;*);;
                 ->rrel_example:
-                [Kohonen self-organizing map is a type of artificial neural network that is used for unsupervised learning. It solves tasks of visualization and clustering.](*<- lang_en;;*);;
+                [Kohonen self-organizing map is a type of artificial neural neural network that is used for unsupervised learning. It solves tasks of visualization and clustering.](*<- lang_en;;*);;
                 
             *);;
 *);

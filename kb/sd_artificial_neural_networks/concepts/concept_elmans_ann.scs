@@ -21,10 +21,10 @@ concept_elmans_ann
     <= nrel_sc_text_translation:...
         (*
         -> rrel_example:
-			[Cеть Элмана --- это вид рекуррентной нейронной сети, выходы нейронных элементов промежуточного слоя которой соединяются с контекстными нейронами входного слоя.]
+			[Cеть Элмана --- это искусственная нейронная сеть, у которой выходы нейронных элементов промежуточного слоя соединяются с контекстными нейронами входного слоя.]
             (*<- lang_ru;;*);;
         -> rrel_example:
-			[Elman network is a type of recurrent neural network in which the outputs of the neural elements of the intermediate layer are connected to the context neurons of the input layer.]
+			[Elman network is an artificial neural network in which the outputs of the neural elements of the intermediate layer are connected to the context neurons of the input layer.]
             (*<- lang_ru;;*);;
         => nrel_reference:
             golovko2017;;

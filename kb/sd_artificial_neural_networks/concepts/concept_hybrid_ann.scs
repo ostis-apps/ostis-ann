@@ -1,5 +1,6 @@
 concept_hybrid_ann//TODO
-<-sc_node_class;
+<- sc_node_class;
+<= nrel_inclusion: concept_artificial_neural_network;
 => nrel_main_idtf:
     [гибридная нейронная сеть](* <- lang_ru;; *);
     [hybrid neural network](* <- lang_en;; *);
@@ -23,10 +24,10 @@ concept_hybrid_ann//TODO
         ...
         (*
         -> rrel_example:
-            [Гибридная нейронная сеть — это нейронная сеть с четкими сигналами, весами и функцией активации.]
+            [Гибридная нейронная сеть — это искусственная нейронная сеть, у которой есть четкие сигналы, веса и функция активации.]
             (* <- lang_ru;; *);;
         -> rrel_example:
-            [A hybrid neural network is a neural network with clear signals, weights, and an activation function.]
+            [A hybrid neural network is an artificial neural network with clear signals, weights, and an activation function.]
             (* <- lang_en;; *);;
         *);;
     <= nrel_using_constants:

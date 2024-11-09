@@ -21,13 +21,13 @@ concept_hammings_ann
         ...
         (*
         ->rrel_example:
-            [Искусственная нейронная сеть Хэмминга --- релаксационная многослойная сеть, в которой применяются обратные связи между отдельными слоями.]
+            [Искусственная нейронная сеть Хэмминга --- это искусственная нейронная сеть, у которой применяются обратные связи между отдельными слоями.]
             (* <- lang_ru;; *);;
         *);
         ...
         (*
         ->rrel_example:
-            [A Hamming neural network is a type of relaxation multilayer network that utilizes feedback connections between its layers.]
+            [A Hamming neural network is a type of an artificial neural network that utilizes feedback connections between its layers.]
             (* <- lang_en;; *);;
         *);;
         =>nrel_reference;

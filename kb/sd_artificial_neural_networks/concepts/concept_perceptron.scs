@@ -32,7 +32,7 @@ concept_perceptron
             [Персептрон --- это простая сеть, состоящая из сенсорных, ассоциативных и реагирующих нейронных элементов]
             (* <- lang_ru;; *);;
         -> rrel_example:
-            [Персептрон --- нейронная сеть прямого распространения с как минимум одним скрытым слоем]
+            [Персептрон --- это искусственная нейронная сеть прямого распространения с как минимум одним скрытым слоем]
             (* 
                 <- lang_ru;;
             *);;
@@ -45,7 +45,7 @@ concept_perceptron
             [A perceptron is a simple network consisting of sensory, associatiation and response neural units]
             (* <- lang_en;; *);;
         -> rrel_example:
-            [Perceptron is a feedforward neural network with at least one hidden layer]
+            [Perceptron is a feedforward artificial neural network with at least one hidden layer]
             (* <- lang_en;; *);;
         <= nrel_reference:
             goodfellow2016deeplearning;;

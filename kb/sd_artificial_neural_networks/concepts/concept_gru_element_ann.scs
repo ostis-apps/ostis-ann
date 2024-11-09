@@ -21,10 +21,10 @@ concept_gru_element
     <= nrel_sc_text_translation: ...
         (*
         -> rrel_example:
-            [Искусственная нейронная сеть с управляемыми рекуррентными блоками --- это рекуррентная нейронная сеть, аналогичная LSTM, за исключением того, что в такой сети нет отдельного долгосрочного состояния ячейки.]
+            [Искусственная нейронная сеть с управляемыми рекуррентными блоками --- это искусственная нейронная сеть, аналогичная LSTM, за исключением того, что в такой сети нет отдельного долгосрочного состояния ячейки.]
             (* <- lang_ru;; *);;
         -> rrel_example:
-            [A gated recurrent unit (GRU) is a type of recurrent neural network that is similar to a long short-term memory (LSTM) network, but it does not have a separate long-term state cell.]
+            [A gated recurrent unit (GRU) is a type of an artificial neural network that is similar to a long short-term memory (LSTM) network, but it does not have a separate long-term state cell.]
             (* <- lang_en;; *);;
         =>nrel_reference:
             goodfellow2016deeplearning;;

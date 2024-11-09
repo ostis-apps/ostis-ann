@@ -20,13 +20,13 @@ concept_hopfields_ann
         ...
         (*
         ->rrel_example:
-            [Нейронная сеть Хопфилда --- полнозвязная рекуррентная нейронная сеть с единичным обратным соответствием.]
+            [Нейронная сеть Хопфилда --- это искусственная нейронная сеть с единичным обратным соответствием.]
             (* <- lang_ru;; *);;
         *);
         ...
         (*
         ->rrel_example:
-            [A Hopfield network is a type of recurrent neural network characterized by its fully connected structure and single feedback loop.]
+            [A Hopfield network is a type of an artificial neural network characterized by its fully connected structure and single feedback loop.]
             (* <- lang_en;; *);;
         *)
         ;;

@@ -30,10 +30,10 @@ concept_recurrent_ann
     <= nrel_sc_text_translation: ...
         (*
         <- rrel_example:
-            [Рекуррентная нейронная сеть --- сеть, в которой выходы нейронных элементов последующих слоев имеют синаптические соединения с нейронами предшествующих слоев.]
+            [Рекуррентная нейронная сеть --- это искусственная нейронная сеть, у которой выходы нейронных элементов последующих слоев имеют синаптические соединения с нейронами предшествующих слоев.]
             (* <- lang_ru;; *);;
         <- rrel_example:
-            [Recurrent neural network is a network in which the outputs of the neural elements of subsequent layers have synaptic connections with the neurons of the preceding layers.]
+            [Recurrent neural network is an artificial neural network where the outputs of the neural elements of subsequent layers have synaptic connections with the neurons of the preceding layers.]
             (* <- lang_en;; *);;
         => nrel_reference:
             golovko2017;;

@@ -20,7 +20,7 @@ concept_multirecurrent_ann
     <= nrel_sc_text_translation: ...
         (*
         <- rrel_example:
-            [Мультирекуррентная искусственная нейронная сеть --- рекуррентная нейронная сеть, которая имеет обратные связи как от нейронов выходного, так и от нейронов скрытого слоя.]
+            [Мультирекуррентная искусственная нейронная сеть --- это искусственная нейронная сеть, которая имеет обратные связи как от нейронов выходного, так и от нейронов скрытого слоя.]
             (* <- lang_ru;; *);;
         <- rrel_example:
             [Multi-recurrent artificial neural network is a type of recurrent neural network that has feedback connections from both the output neurons and the hidden layer neurons.]

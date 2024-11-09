@@ -20,13 +20,13 @@ concept_fully_connected_ann
         ...
         (*
         ->rrel_example:
-            [Полносвязная искусственная нейронная сеть --- класс нейросетей, в котором каждый нейрон передает свой выходной сигнал остальным нейронам, в том числе и самому себе.]
+            [Полносвязная искусственная нейронная сеть --- это искусственная нейронная сеть, у которой каждый нейрон передает свой выходной сигнал остальным нейронам, в том числе и самому себе.]
             (* <- lang_ru;; *);;
         *);
         ...
         (*
         ->rrel_example:
-            [A fully connected artificial neural network is a type of neural network where every neuron in one layer is connected to every neuron in the next layer.]
+            [A fully connected artificial neural network is a type of an artificial neural network where every neuron in one layer is connected to every neuron in the next layer.]
             (* <- lang_en;; *);;
         *)
         ;;

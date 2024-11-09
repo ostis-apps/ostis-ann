@@ -36,10 +36,10 @@ concept_kohonens_ann
     ...
         (*
         ->rrel_example:
-            [Искусственная нейронная сеть Кохонена - это искусственная нейронная сеть, содержащая входной слой и слой активных нейронов.]
+            [Искусственная нейронная сеть Кохонена - это искусственная нейронная сеть, у которой есть входной слой и слой активных нейронов.]
             (* <- lang_ru;; *);;
         ->rrel_example:
-            [Kohonen network is a type of artificial neural network that consists of an input layer and a layer of active neurons.]
+            [Kohonen network is a type of artificial neural network where exists an input layer and a layer of active neurons.]
             (* <- lang_en;; *);;
         *);;
     <= nrel_using_constants:

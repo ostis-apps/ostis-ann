@@ -17,7 +17,7 @@ concept_radial_basis_function_network
     <= nrel_sc_text_translation:...
         (*
         <- rrel_example:
-            [Сеть радиально-базисных функций — искусственная нейронная сеть, которая использует радиальные базисные функции как функции активации.]
+            [Сеть радиально-базисных функций --- это искусственная нейронная сеть, которая использует радиальные базисные функции как функции активации.]
             (* <- lang_ru;; *);;
         <- rrel_example:
             [Radial basis function network is an artificial neural network that uses radial basis functions as activation functions.]
