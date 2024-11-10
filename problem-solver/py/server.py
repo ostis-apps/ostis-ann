@@ -1,13 +1,6 @@
 import argparse
-import time
-from threading import Thread
 
-import sc_kpm
-from sc_client.client import create_elements
-from sc_client.constants import sc_types
-from sc_client.models import ScConstruction
 from sc_kpm import ScServer
-from modules.fnnProcessingModule.FnnInterpreterModule import FnnInterpreterModule
 from modules.fnnProcessingModule.fnnTrainer.FnnTrainingModule import FnnTrainingModule
 
 SC_SERVER_PROTOCOL = "protocol"
@@ -25,8 +18,7 @@ def main(args: dict):
 
     with server.connect():
         modules = [
-            FnnAgentProcessingModule(),
-            FnnTrainerProcessingModule()
+            FnnTrainingModule()
         ]
         server.add_modules(*modules)
         with server.register_modules():
