@@ -1,0 +1,6 @@
+concept_echo_state_ann
+<- sc_node_class;
+<= nrel_inclusion: concept_artificial_neural_network;
+=> nrel_main_idtf:
+    [Нейронная сеть c эхо-состоянием](* <- lang_ru;; *);
+    [Echo state neural network](* <- lang_en;; *);;

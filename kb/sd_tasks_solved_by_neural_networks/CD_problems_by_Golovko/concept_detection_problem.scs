@@ -1,0 +1,30 @@
+concept_detection_problem
+	<- sc_node_not_relation;
+	=> nrel_main_idtf: [задача детекции] (* <- lang_ru;; *);
+	=> nrel_main_idtf: [etection problem] (* <- lang_en;; *);
+	=> nrel_solved_by_ann: ...
+     (*
+	<- sc_node_tuple;;
+	-> concept_convolutional_ann;;
+	-> concept_high_resolution_ann;;
+     *);;
+
+definition -> ...
+	(*
+		-> rrel_key_sc_element: concept_detection_problem;;
+		
+		=> nrel_main_idtf: [Опр.(задача классификации)] (* <- lang_ru;; *);;
+
+		<= nrel_sc_text_translation: ...
+			(*
+				-> [Задача детекции - это задача определения наличия или отсутствия объекта во входных данных] (* <- lang_ru;; *);;
+			*);;
+	*);;
+
+
+
+nrel_inclusion->(section_subject_domain_problems_solved_by_neural_networks=>concept_detection_problem);;
+concept_detection_problem<-rrel_explored_concept: section_subject_domain_problems_solved_by_neural_networks;;
+
+
+

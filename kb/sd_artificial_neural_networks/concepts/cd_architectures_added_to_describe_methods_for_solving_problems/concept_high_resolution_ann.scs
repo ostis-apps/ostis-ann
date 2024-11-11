@@ -1,0 +1,16 @@
+concept_high_resolution_ann
+<- sc_node_class;
+<= nrel_inclusion: concept_convolutional_ann;
+=> nrel_main_idtf:
+    [Yейронная сеть высокого разрешения](* <- lang_ru;; *);
+    [High resolution nural network](* <- lang_en;; *);;
+
+affirmation -> ...
+(*
+    -> rrel_key_sc_element: concept_high_resolution_ann;;
+
+    <= nrel_sc_text_translation: ...
+        (*
+            -> [предназначены для обработки изображений с высоким разрешением и решения задач высококачественной обработки изображений, сегментации и классификации. Состоит из сверточных нейронных сетей с большими рецептивными полями и картами объектов высокого разрешения для сбора подробной информации из входных изображений.] (* <- lang_ru;; *);;
+        *);;
+*);;

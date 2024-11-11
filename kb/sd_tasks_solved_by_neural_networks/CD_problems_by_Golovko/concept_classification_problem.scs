@@ -1,0 +1,51 @@
+concept_classification_problem
+	<- sc_node_not_relation;
+	=> nrel_main_idtf: [задача классификации] (* <- lang_ru;; *);
+	=> nrel_main_idtf: [classification problem] (* <- lang_en;; *);
+	=> nrel_solved_by_ann: ...
+     (*
+	<- sc_node_tuple;;
+	-> concept_lenet5_ann;;
+     *);
+	=> nrel_input_data:object;
+	=> nrel_input_data:concept_class;
+	=>nrel_input_data_class:object;
+	=>nrel_output_data_class:concept_class;;
+	
+definition -> ...
+	(*
+		-> rrel_key_sc_element: concept_classification_problem;;
+		
+		=> nrel_main_idtf: [Опр.(задача классификации)] (* <- lang_ru;; *);;
+
+		<= nrel_using_constants: ...
+			(*
+				-> set;;
+				-> concept_class (* => nrel_main_idtf: [класс] (* <- lang_en;; *);; *);;
+			*);;
+
+		<= nrel_sc_text_translation: ...
+			(*
+				-> [Задача классификации - это задача соотнесения произвольного объекта (множества объектов) к некоторому классу] (* <- lang_ru;; *);;
+			*);;
+	*);;
+
+
+affirmation -> ...
+	(*
+		-> rrel_key_sc_element: concept_classification_problem;;
+
+		=> nrel_main_idtf: [Утв.(задача классификации, сигнал, изображение, задача расопознавания образа)] (* <- lang_ru;; *);;
+
+		<= nrel_sc_text_translation: ...
+			(*
+				-> [Классификацию сигналов и изображений называют распознаванием образов] (* <- lang_ru;; *);;
+			*);;
+	*);;
+
+nrel_inclusion->(section_subject_domain_problems_solved_by_neural_networks=>concept_classification_problem);;
+concept_classification_problem<-rrel_explored_concept: section_subject_domain_problems_solved_by_neural_networks;;
+
+
+
+
