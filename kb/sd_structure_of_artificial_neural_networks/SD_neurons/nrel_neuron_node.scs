@@ -3,7 +3,7 @@ nrel_concept_neuron_node
 	[нейронный узел*]
 	(* <- lang_ru;; *);
 	
-///////////////////////////////////////////////////////////////////////////
+
 	<-rrel_key_sc_element: 
 	Definition_of_concept_neuron_node
 		(*
@@ -26,7 +26,7 @@ nrel_concept_neuron_node
 				->temporary_connection;sc_arc_membership;concept_neuron_node;;
 			*);;
 		*);
-///////////////////////////////////////////////////////////////////
+
 	=>nrel_first_domain:set;
 	=> nrel_second_domain:concept_neuron_node;
 <- sc_node_norole_relation;
@@ -35,7 +35,7 @@ nrel_concept_neuron_node
 <- antisymmetric_relation;
 <- antitransitive_relation;
 <-rrel_explored_concept:section_subject_domain_of_neurons;
-/////////////////////////////////////////////////////////////////////
+
 <- rrel_key_sc_element:...
 (*
 	<- illustration;;
