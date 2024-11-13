@@ -1,0 +1,80 @@
+concept_self_organizing_ann
+<-sc_node_class;
+<= nrel_inclusion: ...; //TODO
+=> nrel_main_idtf:
+    [самоорганизующаяся искусственная нейронная сеть]
+    (* <- lang_ru;; *);
+    [self-organizing neural network]
+    (* <- lang_en;; *);
+=> nrel_reference:
+    golovko2017;
+=> nrel_basic_decomposition: ...
+    (*
+        <-sc_node_tuple;;
+        -> concept_kohonens_ann;;
+        -> concept_growing_neural_gas;;
+    *);
+<- rrel_key_sc_element:
+    ...
+    (*
+    => nrel_main_idtf:
+        [Опр. (самоорганизующаяся искусственная нейронная сеть)]
+        (* <- lang_ru;; *);
+        [Def. (self-organizing neural network)]
+        (* <- lang_en;; *);;
+    <- definition;;
+    <= nrel_sc_text_translation:
+        ...
+        (*
+        ->rrel_example:
+            [Самоорганизующаяся нейронная сеть --- это искусственная нейронная сеть, у которой происходит обучение без учителя, в результате которого происходит адаптация сети к решаемой задаче.]
+            (* <- lang_ru;; *);;
+        ->rrel_example:
+            [Self-Organizing Neural Network is an artificial neural network that utilizes unsupervised learning, allowing the network to adapt itself to the task.]
+            (* <- lang_en;; *);;
+        *);;
+    => nrel_using_constants:
+        {
+        concept_artificial_neural_network;
+        concept_self_organizing_ann;
+        concept_supervised_learning
+        };;
+    *);
+
+<- rrel_key_sc_element: ... 
+    (*
+    => nrel_main_idtf:
+        [Утв. (входные данные, размерность, изображение)] (* <- lang_ru;; *);;
+    <- statement;;
+    <= nrel_sc_text_translation: ...
+        (*
+            -> rrel_example:
+            [В самоорганизующейся нейронной сети многомерные входные данные упрощаются с помощью визуализации.](*<-lang_ru;;*);;
+        *);;
+    => nrel_using_constants:
+        {
+            concept_self_organizing_ann;
+            concept_kohonens_ann;
+            image;
+            input_data; //TODO
+            dimension //TODO
+        };;
+    *);
+<- rrel_key_sc_element: ... 
+    (*
+    => nrel_main_idtf:
+        [Утв. (нейронный узел, постоянная сущность, отрицание)] (* <- lang_ru;; *);;
+    <- statement;;
+    <= nrel_sc_text_translation: ...
+        (*
+            -> rrel_example:
+            [Количество нейронных узлов в самоорганизующейся нейронной не постоянно.](*<-lang_ru;;*);;
+        *);;
+    => nrel_using_constants:
+        {
+            concept_self_organizing_ann;
+            negation;
+            permanent_entity;
+            concept_neuron_node //TODO or check element in kb
+        };;
+    *);;

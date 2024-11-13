@@ -1,0 +1,23 @@
+goodfellow2016deeplearning
+<-literary_source;
+=> nrel_main_idtf:
+    [Глубокое обучение]
+    (* <- lang_ru;; *);
+    [Deep Learning]
+    (* <- lang_en;; *);
+<-nrel_reference_standard:
+...
+	(*
+		<= nrel_sc_text_translation:
+			...
+			(*
+				-> [Goodfellow, Ian. “Deep Learning.” (2016).]
+					(*<- lang_en;;*);;
+			*);;
+	*);
+	=>nrel_author:
+	{
+		[Ian Goodfellow];
+        [Yoshua Bengio];
+        [Aaron Courville]
+	};;

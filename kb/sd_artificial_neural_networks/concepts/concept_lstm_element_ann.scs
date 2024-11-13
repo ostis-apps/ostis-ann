@@ -1,0 +1,58 @@
+concept_lstm_element
+<- sc_node_class;
+<= nrel_inclusion: concept_recurrent_ann;
+=> nrel_main_idtf:
+    [искусственная нейронная сеть с долгой краткосрочной памятью](* <- lang_ru;; *);
+    [long short-term memory neural network](* <- lang_en;; *);
+=> nrel_idtf:
+    [долгая краткосрочная память](* <- lang_ru;; *);
+    [длинная цепь элементов краткосрочной памяти](* <- lang_ru;; *);
+    [LSTM-сеть](* <- lang_ru;; *);
+    [LSTM](* <- lang_en;; *);
+    [Long short-term memory network](* <- lang_en;; *);
+
+<- rrel_key_sc_element:
+    ...
+    (*
+    => nrel_main_idtf:
+        [Опр. (искусственная нейронная сеть с долгой краткосрочной памятью)]
+        (* <- lang_ru;; *);
+        [Def. (long short-term memory neural network)]
+        (* <- lang_en;; *);;
+    <- definition;;
+    <= nrel_sc_text_translation: ...
+        (*
+        -> rrel_example:
+            [LSTM-сеть --- это искусственная нейронная сеть, у которой имеются «LSTM-ячейки», обладающие внут­ренней рекуррентностью (петлей) в дополнение к внешней рекуррентности.]
+            (* <- lang_ru;; *);;
+        -> rrel_example:
+            [Long short-term memory network is a type of artificial neural network that has LSTM cells, which have an internal recurrent loop in addition to the external recurrent loop.]
+            (* <- lang_en;; *);;
+        =>nrel_reference:
+            goodfellow2016deeplearning;;
+        *);;
+    <= nrel_using_constants:
+        {
+        concept_artificial_neural_network;
+        concept_lstm_element;
+        concept_recurrent_ann
+        };;
+    *);
+
+<- rrel_key_sc_element:
+    ...
+    (*
+    => nrel_main_idtf:
+        [Рис.(схема искусственной нейронной сети с долгой краткосрочной памятью)]
+        (* <- lang_ru;; *);
+        [Img.(long short-term memory neural network sheme)]
+        (* <- lang_en;; *);;
+    <-illustration;;
+    <= nrel_sc_text_translation: ...
+        (*
+        ->rrel_example:
+            "file://images/lstm.png" (* => nrel_format: format_png;; *);;
+        *);;
+        =>nrel_reference:
+            goodfellow2016deeplearning;;
+    *);;

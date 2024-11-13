@@ -6,6 +6,7 @@ concept_hammings_ann
     [artificial neural network of Hamming](* <- lang_en;; *);
 => nrel_idtf:
     [и.н.с. Хэмминга](* <- lang_ru;; *);
+    [сеть Хэмминга](* <- lang_ru;; *);
 
 <- rrel_key_sc_element:
     ...
@@ -16,18 +17,66 @@ concept_hammings_ann
         [Def. (artificial neural network of Hamming)]
         (* <- lang_en;; *);;
     <- definition;;
-    => nrel_sc_text_translation:
-        {
-        rrel_example:
-            []
-            (* <- lang_ru;; *);
-        rrel_example:
-            []
-            (* <- lang_en;; *)
-        };;
+    <= nrel_sc_text_translation:
+        ...
+        (*
+        ->rrel_example:
+            [Искусственная нейронная сеть Хэмминга --- это искусственная нейронная сеть, у которой применяются обратные связи между отдельными слоями.]
+            (* <- lang_ru;; *);;
+        *);
+        ...
+        (*
+        ->rrel_example:
+            [A Hamming neural network is a type of an artificial neural network that utilizes feedback connections between its layers.]
+            (* <- lang_en;; *);;
+        *);;
+        =>nrel_reference;
+            golovko2017;;
     => nrel_using_constants:
         {
         concept_artificial_neural_network;
         concept_hammings_ann
         };;
+    *);
+<- rrel_key_sc_element:
+    ...
+    (*
+    => nrel_main_idtf:
+        [Утв.(искусственная нейронная сеть Хэмминга)]
+        (* <- lang_ru;; *);
+        [St.(artificial neural network of Hamming)]
+        (* <- lang_en;;*);;
+    <- statement;;
+    <= nrel_sc_text_translation:
+        ...
+        (*
+            -> rrel_example:
+                [Сеть Хэмминга используется в качестве ассоциативной памяти. 
+                При распознавании образов в ней в качестве меры близости применяют расстояние Хэмминга. 
+                Весовые коэффициенты и пороги сети Хэмминга определяются из условия задачи. 
+                Поэтому такая сеть является нейронной сетью с фиксированными связями.]
+                (* <-lang_ru;; *);;
+            -> rrel_example:
+                [A Hamming neural network is indeed a type of associative memory network that utilizes the Hamming distance as a measure of similarity for pattern recognition tasks. The network's weights and thresholds are determined based on the specific problem or task, making it a fixed-weight neural network.]
+                (* <-lang_en;; *);;
+            => nrel_reference:
+                golovko2017;;
+        *);;
+    *);
+<- rrel_key_sc_element:
+    ...
+    (*
+    => nrel_main_idtf:
+        [Рис.(искусственная нейронная сеть Хэмминга)]
+        (* <- lang_ru;; *);
+        [Img.(artificial neural network of Hamming)]
+        (* <- lang_en;; *);;
+    <-illustration;;
+    <= nrel_sc_text_translation: ...
+        (*
+        ->rrel_example:
+            "file://images/hamming_ann_arcitecture.png" (* => nrel_format: format_png;; *);;
+        *);;
+        =>nrel_reference:
+            golovko2017;;
     *);;
