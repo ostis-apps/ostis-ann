@@ -17,7 +17,6 @@ private:
   ScAddr getProblemActionNode(ScAddr const & problemStruct);
   ScAddr getProblemConcept(ScAddr const & problemStruct);
   ScAddr getSolvingMethodWorkingResultTemplate(ScAddr const & solvingMethod);
-  bool isGeneratedStructureFound(const ScStructure & generatedStruct, const ScTemplateSearchResult &);
   void formResult(ScAction & action, ScAddrSet const & suitableMethods);
   void removeGeneratedStructures(ScAddrSet const & structuresToRemove, ScAddrSet const & elementsToSave);
 };

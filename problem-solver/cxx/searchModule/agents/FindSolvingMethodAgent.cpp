@@ -85,9 +85,16 @@ ScResult FindSolvingMethodAgent::DoProgram(ScActionInitiatedEvent const & event,
             generatedStruct << templateResult[i];
           }
           ScTemplateSearchResult searchResult;
-
-          if (m_context.SearchByTemplate(targetSituationTemplate, searchResult) &&
-              isGeneratedStructureFound(generatedStruct, searchResult))
+          bool isGeneratedConstructionFound = false;
+          m_context.SearchByTemplate(
+              targetSituationTemplate,
+              [&isGeneratedConstructionFound](ScTemplateSearchResultItem const & item) -> void {
+                isGeneratedConstructionFound = true;
+              },
+              [this, generatedStruct](ScAddr const & elementAddr) -> bool {
+                return m_context.CheckConnector(generatedStruct, elementAddr, ScType::EdgeAccessConstPosPerm);
+              });
+          if (isGeneratedConstructionFound)
           {
             suitableMethods.insert(solvingMethod);
             break;
@@ -205,34 +212,6 @@ ScAddr FindSolvingMethodAgent::getSolvingMethodWorkingResultTemplate(ScAddr cons
   }
 
   throw std::runtime_error("Problem solving method has incorrect condition of use and result edge");
-}
-
-bool FindSolvingMethodAgent::isGeneratedStructureFound(
-    ScStructure const & generatedStruct,
-    ScTemplateSearchResult const & searchResult)
-{
-  bool isFound;
-  for (size_t i = 0; i < searchResult.Size(); i++)
-  {
-    isFound = true;
-    ScTemplateResultItem resultItem;
-    searchResult.Get(i, resultItem);
-    for (size_t j = 0; j < resultItem.Size(); j++)
-    {
-      ScAddr el;
-      resultItem.Get(j, el);
-      if (!m_context.CheckConnector(generatedStruct, el, ScType::EdgeAccessConstPosPerm))
-      {
-        isFound = false;
-        break;
-      }
-    }
-    if (isFound)
-    {
-      break;
-    }
-  }
-  return isFound;
 }
 
 void FindSolvingMethodAgent::formResult(ScAction & action, ScAddrSet const & suitableMethods)
