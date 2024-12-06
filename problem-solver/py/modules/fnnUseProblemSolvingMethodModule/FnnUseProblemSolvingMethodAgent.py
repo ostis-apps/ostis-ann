@@ -9,8 +9,8 @@ import tensorflow as tf
 import numpy
 import sys
 import os
-sys.path.append('/home/dom/ostis/ostis-ann/problem-solver/py/tests/') # Тут прописан костыль, нужно избавиться
-from fashion_converter import Converter # Путь к конвертеру сделать через переменную
+
+from tests.fashion_converter import Converter
 
 class FnnUseProblemSolvingMethodAgent(ScAgentClassic):
     def __init__(self)-> None:
