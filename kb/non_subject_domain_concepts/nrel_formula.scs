@@ -1,0 +1,33 @@
+nrel_formula 
+<- sc_node_norole_relation;
+=> nrel_main_idtf:
+    [формула*]
+    (* <- lang_ru;; *);
+    [formula*]
+    (* <- lang_en;; *);
+=>nrel_first_domain: concept_calculated_value;
+=>nrel_second_domain: concept_formula;
+<-nrel_explanation: [Неролевое отношение "формула*" узакывает на связь значение и формулы, по которой это самое значение высчитывается](* <- lang_ru;; *);
+<- relation;;
+
+concept_formula <- sc_node_not_relation;
+=> nrel_main_idtf:
+    [формула]
+    (* <- lang_ru;; *);
+    [formula]
+    (* <- lang_en;; *);;
+
+concept_calculated_value <- sc_node_not_relation;
+=> nrel_main_idtf:
+    [вычисляемое значение]
+    (* <- lang_ru;; *);
+    [calculated value]
+    (* <- lang_en;; *);;
+
+nrel_explanation
+<- sc_node_norole_relation;
+=> nrel_main_idtf:
+    [пояснение*]
+    (* <- lang_ru;; *);
+    [explanation*]
+    (* <- lang_en;; *);;
