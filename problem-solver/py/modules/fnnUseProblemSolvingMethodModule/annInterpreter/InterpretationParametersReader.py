@@ -1,13 +1,27 @@
 import logging
+from os.path import dirname, abspath
 from typing import List
+
+import PIL.Image
+import numpy
 
 import numpy as np
 import sc_kpm
 from sc_client.client import *
 from sc_client.constants import sc_types
 from sc_client.models import *
+from tensorflow.python import keras
 
-from modules.fnnUseProblemSolvingMethodModule.dataClasses import InterpretationParameters
+from modules.fnnUseProblemSolvingMethodModule.dataClasses.InterpretationParameters import InterpretationParameters
+from modules.fnnUseProblemSolvingMethodModule.dataClasses.AnnStruct import AnnStruct
+from modules.fnnUseProblemSolvingMethodModule.dataClasses.inputOutput.ImageStruct import Image
+
+
+# todo: use absolute filepaths?
+def get_ann_path() -> str:
+    script_directory = dirname(dirname(abspath(__file__)))
+    ann_path = dirname(dirname(dirname(dirname(dirname(script_directory)))))
+    return ann_path
 
 
 class InterpretationParametersReader:
@@ -16,12 +30,16 @@ class InterpretationParametersReader:
 
     def get_interpretation_parameters(self, action_addr: ScAddr) -> InterpretationParameters:
         ann_address = self.__get_ann_address(action_addr)
-        problem = self.__get_problem(action_addr)
-        input_type
 
+        ann_input_shape = self.__get_ann_input_shape(ann_address)
+        ann_output_shape = self.__get_ann_output_shape(ann_address)
 
+        ann_struct = AnnStruct(ann_address, ann_input_shape, ann_output_shape)
 
-        return InterpretationParameters(ann_struct=ann_address,)
+        problem_addr = self.__get_problem_addr(action_addr)
+        input_struct = self.__get_image(self.__get_image_addr(problem_addr))
+
+        return InterpretationParameters(ann_struct, input_struct)
 
     @staticmethod
     def __get_rrel_target(source_addr: ScAddr, rrel_name: str) -> ScAddr:
@@ -47,33 +65,55 @@ class InterpretationParametersReader:
         )
         return template_search(template)[0][2]
 
-    @staticmethod
-    def __get_classes(source_addr: ScAddr) -> List[ScAddr]:
-        template = ScTemplate()
-        template.triple(
-            source_addr,
-            sc_types.EDGE_ACCESS_VAR_POS_PERM,
-            sc_types.NODE_CLASS
-        )
+    # def __get_classes(source_addr: ScAddr) -> List[ScAddr]:
+    #     template = ScTemplate()
+    #     template.triple(
+    #         sc_types.NODE_CLASS,
+    #         sc_types.EDGE_ACCESS_VAR_POS_PERM,
+    #         source_addr
+    #     )
+    #
+    #     sc_classes = []
+    #     for template_result in template_search(template):
+    #         sc_classes.append(template_result[2])
+    #     return sc_classes
 
-        sc_classes = []
-        for template_result in template_search(template):
-            sc_classes.append(template_result[2])
-        return sc_classes
-
-    def __get_aliases(self, sc_classes:List[ScAddr]) -> List[str]:
-        for sc_class in sc_classes:
-            ScTemplateValueItem
-
-    def __get_problem(self, action_addr: ScAddr) -> ScAddr:
+    def __get_problem_addr(self, action_addr: ScAddr) -> ScAddr:
         return self.__get_rrel_target(action_addr, "rrel_1")
 
-    def __get_problem_types(self, problem_addr: ScAddr) -> List[ScAddr]:
-        return self.__get_classes(problem_addr)
+    # def __get_problem_types(self, problem_addr: ScAddr) -> List[ScAddr]:
+    #     return self.__get_classes(problem_addr)
+
+    def __get_image_addr(self, problem_addr: ScAddr) -> ScAddr:
+        return self.__get_rrel_target(problem_addr, "rrel_input_image")
+
+    def __get_file(self, file_addr: ScAddr, nrel_name: str) -> str:
+        filepath_link_addr = self.__get_nrel_target_link(file_addr, nrel_name)
+        file_filepath = get_link_content(filepath_link_addr)[0].data
+        return file_filepath
+
+    def __get_image(self, image_addr: ScAddr) -> Image:
+        image_path = self.__get_file(image_addr, "nrel_filepath")
+        kb_path = f'{get_ann_path()}/kb'
+
+        image = PIL.Image.open(f'{kb_path}/{image_path}')
+        image_struct = Image(numpy.array(image), image_shape=image.size)
+        return image_struct
 
     def __get_ann_address(self, action_addr: ScAddr) -> ScAddr:
         return self.__get_rrel_target(action_addr, "rrel_2")
 
-    def __get_problem_input(self, problem_addr: ScAddr, input_type:str) -> np.array:
-        filepath_link_addr =self.__get_nrel_target_link(problem_addr, input_type)
-        file_filepath = get_link_content(filepath_link_addr)[0].data
+    def __get_keras_model(self, model_addr: ScAddr) -> keras.Model:
+        ann_path = self.__get_file(model_addr, "nrel_keras_ann")
+        kb_path = f'{get_ann_path()}/kb'
+
+        model = keras.models.load_model(f"{kb_path}/{ann_path}")
+        return model
+
+    def __get_ann_input_shape(self, ann_addr: ScAddr) -> int:
+        model = self.__get_keras_model(ann_addr)
+        return model.input_shape
+
+    def __get_ann_output_shape(self, ann_addr: ScAddr) -> int:
+        model = self.__get_keras_model(ann_addr)
+        return model.output_shape
