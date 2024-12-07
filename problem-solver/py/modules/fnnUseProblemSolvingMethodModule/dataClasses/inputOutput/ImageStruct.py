@@ -7,5 +7,5 @@ import numpy as np
 @dataclass
 class Image(InputOutput):
     image_array: np.array
-    image_shape: tuple
-    label: str
+    image_shape: tuple = None
+    label: str = None
