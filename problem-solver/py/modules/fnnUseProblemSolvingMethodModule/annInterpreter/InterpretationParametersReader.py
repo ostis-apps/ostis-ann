@@ -31,10 +31,14 @@ class InterpretationParametersReader:
     def get_interpretation_parameters(self, action_addr: ScAddr) -> InterpretationParameters:
         ann_address = self.__get_ann_address(action_addr)
 
+        ann_model = self.__get_keras_model(ann_address)
         ann_input_shape = self.__get_ann_input_shape(ann_address)
         ann_output_shape = self.__get_ann_output_shape(ann_address)
 
-        ann_struct = AnnStruct(ann_address, ann_input_shape, ann_output_shape)
+        ann_struct = AnnStruct(network_address=ann_address,
+                               ann_model=ann_model,
+                               num_of_inputs=ann_input_shape,
+                               num_of_outputs=ann_output_shape)
 
         problem_addr = self.__get_problem_addr(action_addr)
         input_struct = self.__get_image(self.__get_image_addr(problem_addr))
