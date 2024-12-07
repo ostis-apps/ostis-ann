@@ -1,5 +1,5 @@
 # Git
-# .git - project uses submodules
+.git
 .gitignore
 .gitmodules
 .gitattributes

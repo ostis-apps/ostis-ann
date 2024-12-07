@@ -37,7 +37,7 @@ services:
     expose:
       - 8090
     healthcheck:
-      test: "python3 /ostis-ann/problem-solver/sc-machine/scripts/healthcheck.py"
+      test: "/ostis-ann/problem-solver/sc-machine/scripts/healthcheck.sh"
       interval: 5s
       timeout: 10s
       retries: 6

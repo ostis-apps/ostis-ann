@@ -5,7 +5,7 @@
 ```sh
 git clone https://github.com/ostis-apps/ostis-ann
 cd ostis-ann
-./scripts/install_submodules.sh
+git submodule update --init --recursive
 ./scripts/install_problem_solver_deps.sh
 ./scripts/install_interface_deps.sh
 ./scripts/install_py_sc_server_deps.sh
@@ -47,30 +47,3 @@ cd ostis-ann
   This commands will launch UI on your machine:
 
 - sc-web - `localhost:8000`
-
-## Troubleshooting
-
-- You can have a problem while running the next script:
-
-  ```sh
-  ./install_interface_deps.sh
-  ```
-  
-  **Solution**: Please make sure that you have the nessesary version of Node-js. Try to download Node-js 16.
-
-- You can have a problem with `yarn` which looks like `ERROR: There are no scenarios; must have at least one` while running the next script:
-
-  ```sh
-  ./run_interface.sh
-  ```
-
-  **Solution**: you can try to reinstall it:
-
-    ```sh
-    sudo apt remove cmdtest
-    sudo apt remove yarn
-    curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | sudo apt-key add -
-    echo "deb https://dl.yarnpkg.com/debian/ stable main" | sudo tee /etc/apt/sources.list.d/yarn.list
-    sudo apt update
-    sudo apt install yarn
-    ```
