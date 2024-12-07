@@ -1,5 +1,8 @@
 from dataclasses import dataclass
 
+import numpy as np
+
+
 @dataclass
 class InputOutput:
-    pass
+    data_array: np.array

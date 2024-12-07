@@ -10,8 +10,10 @@ import numpy
 
 from modules.fnnUseProblemSolvingMethodModule.annInterpreter.InterpretationParametersReader import \
     InterpretationParametersReader
+from modules.fnnUseProblemSolvingMethodModule.converters.ImageConverter import ImageConverter
 
 from modules.fnnUseProblemSolvingMethodModule.dataClasses import InterpretationParameters
+from tests.fashion_converter import Converter
 
 
 class UseProblemSolvingMethodAgent(ScAgentClassic):
@@ -19,13 +21,23 @@ class UseProblemSolvingMethodAgent(ScAgentClassic):
         super().__init__("action_use_problem_solving_method")
 
     def on_event(self, event_element: ScAddr, event_edge: ScAddr, action_element: ScAddr) -> ScResult:
-        self.logger.info("FnnUseAgent started")
+        self.logger.info("UseProblemSolvingMethodAgent started")
         result = self.__run(action_element)
-        self.logger.info("FnnUseAgent finished")
+        self.logger.info("UseProblemSolvingAgent finished")
         return result
 
     def __run(self, action_element: ScAddr) -> ScResult:
+        # Get Interpretation parameters frim input struct
         reader = InterpretationParametersReader()
         interpretation_parameters: InterpretationParameters = reader.get_interpretation_parameters(action_element)
 
-        pass
+        model = interpretation_parameters.ann_struct.ann_model
+        input_data = ImageConverter.convert_image_to_inputs(interpretation_parameters.input_struct,
+                                                            interpretation_parameters.ann_struct.num_of_inputs)
+
+        predictions = model.predict(input_data)
+        score = tf.nn.softmax(predictions[0])
+        print(numpy.max(score * 100))
+        print(score)
+
+        return ScResult.OK
