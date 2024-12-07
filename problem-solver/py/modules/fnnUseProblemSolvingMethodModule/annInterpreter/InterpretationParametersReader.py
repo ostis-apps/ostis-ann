@@ -101,7 +101,9 @@ class InterpretationParametersReader:
         kb_path = f'{get_ann_path()}/kb'
 
         image = PIL.Image.open(f'{kb_path}/{image_path}')
-        image_struct = Image(numpy.array(image), image_shape=image.size)
+        image_struct = Image(object_addr=image_addr,
+                             data_array=numpy.array(image),
+                             image_shape=image.size)
         return image_struct
 
     def __get_ann_address(self, action_addr: ScAddr) -> ScAddr:
