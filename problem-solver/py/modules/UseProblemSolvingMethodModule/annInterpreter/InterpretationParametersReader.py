@@ -10,12 +10,15 @@ import sc_kpm
 from sc_client.client import *
 from sc_client.constants import sc_types
 from sc_client.models import *
-from tensorflow.python import keras
+import tensorflow as tf
 
-from modules.fnnUseProblemSolvingMethodModule.dataClasses.InterpretationParameters import InterpretationParameters
-from modules.fnnUseProblemSolvingMethodModule.dataClasses.AnnStruct import AnnStruct
-from modules.fnnUseProblemSolvingMethodModule.dataClasses.inputOutput.ImageStruct import Image
+from modules.UseProblemSolvingMethodModule.dataClasses.InterpretationParameters import InterpretationParameters
+from modules.UseProblemSolvingMethodModule.dataClasses.AnnStruct import AnnStruct
+from modules.UseProblemSolvingMethodModule.dataClasses.inputOutput.ImageStruct import Image
 
+logging.basicConfig(
+    level=logging.INFO, format="%(asctime)s | %(name)s | %(message)s", datefmt="[%d-%b-%y %H:%M:%S]"
+)
 
 # todo: use absolute filepaths?
 def get_ann_path() -> str:
@@ -104,22 +107,26 @@ class InterpretationParametersReader:
         image_struct = Image(object_addr=image_addr,
                              data_array=numpy.array(image),
                              image_shape=image.size)
+        logging.info(f'Image imported')
         return image_struct
 
     def __get_ann_address(self, action_addr: ScAddr) -> ScAddr:
         return self.__get_rrel_target(action_addr, "rrel_2")
 
-    def __get_keras_model(self, model_addr: ScAddr) -> keras.Model:
+    def __get_keras_model(self, model_addr: ScAddr) -> tf.keras.Model:
         ann_path = self.__get_file(model_addr, "nrel_keras_ann")
         kb_path = f'{get_ann_path()}/kb'
 
-        model = keras.models.load_model(f"{kb_path}/{ann_path}")
+        model = tf.keras.models.load_model(f"{kb_path}/{ann_path}")
         return model
 
     def __get_ann_input_shape(self, ann_addr: ScAddr) -> int:
         model = self.__get_keras_model(ann_addr)
-        return model.input_shape
+        logging.info(f"Input shape: {model.input_shape[1]}")
+        return model.input_shape[1]
 
     def __get_ann_output_shape(self, ann_addr: ScAddr) -> int:
         model = self.__get_keras_model(ann_addr)
-        return model.output_shape
+        logging.info(f"Output shape: {model.output_shape[1]}")
+        return model.output_shape[1]
+
