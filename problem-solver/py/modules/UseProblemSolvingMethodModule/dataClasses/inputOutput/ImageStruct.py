@@ -1,5 +1,5 @@
 from dataclasses import dataclass
-from InputOutputStruct import InputOutput
+from .InputOutputStruct import InputOutput
 
 import numpy as np
 
