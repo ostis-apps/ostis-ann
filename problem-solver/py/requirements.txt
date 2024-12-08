@@ -3,5 +3,5 @@ py-sc-client==0.3.0
 requests==2.31.0
 numpy~=1.26.4
 tensorflow==2.16.1
-
+pandas~=2.2.2
 pillow~=11.0.0

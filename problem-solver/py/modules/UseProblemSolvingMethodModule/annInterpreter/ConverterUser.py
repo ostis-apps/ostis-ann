@@ -1,6 +1,6 @@
 from typing import List
 
-from modules.fnnUseProblemSolvingMethodModule.converters import Converter
+from modules.UseProblemSolvingMethodModule.converters import Converter
 
 
 class ConverterUser:
