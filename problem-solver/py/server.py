@@ -5,7 +5,6 @@ from modules.UseProblemSolvingMethodModule.annInterpreter.UseProblemSolvingMetho
 from modules.messageProcessingModule.FnnAgentProcessingModule import FnnAgentProcessingModule
 from modules.messageProcessingModule.FnnTrainerProcessingModule import FnnTrainerProcessingModule
 from pathlib import Path
-# from modules.fnnUseProblemSolvingMethodModule.FnnUseProblemSolvingMethodModule import FnnUseProblemSolvingMethodModule
 
 SC_SERVER_PROTOCOL = "protocol"
 SC_SERVER_HOST = "host"
