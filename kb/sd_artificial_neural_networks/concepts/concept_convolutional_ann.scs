@@ -16,18 +16,79 @@ concept_convolutional_ann
         [Def. (convolutional neural network)]
         (* <- lang_en;; *);;
     <- definition;;
-    => nrel_sc_text_translation:
-        {
-        rrel_example:
-            [Сверточная нейронная сеть — это искусственная нейронная сеть с прямыми связями, которая самостоятельно выделяет признаки посредством оптимизации фильтров (или ядра).]
-            (* <- lang_ru;; *);
-        rrel_example:
-            [Convolutional neural network is feed-forward neural network that learns feature engineering by itself via filters (or kernel) optimization.]
-            (* <- lang_en;; *)
-        };;
-    => nrel_using_constants:
+    <= nrel_sc_text_translation: ...
+        (*
+            <- rrel_example:
+                [Сверточная нейронная сеть --- это искусственная нейронная сеть с прямыми связями, которая самостоятельно выделяет признаки посредством оптимизации фильтров (или ядра).]
+                (* <- lang_ru;; *);;
+            <- rrel_example:
+                [Convolutional neural network is feed-forward neural network that learns feature engineering by itself via filters (or kernel) optimization.]
+                (* <- lang_en;; *);;
+        *);;
+    <= nrel_using_constants:
         {
         concept_artificial_neural_network;
         concept_convolutional_ann
         };;
+    *);
+
+<- rrel_key_sc_element:
+    ...
+    (*
+    => nrel_main_idtf:
+        [Утв.(сверточная нейронная сеть)]
+        (* <- lang_ru;; *);;
+    <- statement;;
+    <=nrel_sc_text_translation: ...
+        (*
+            <- rrel_example:
+                [Свёрточная нейронная сеть --- специальная архитектура искусственных нейронных сетей, нацеленная на эффективное распознавание образов.]
+                (*<-lang_ru;;*);;
+        *);;
+    *);
+
+<- rrel_key_sc_element:
+    ...
+    (*
+    => nrel_main_idtf:
+        [Утв.(о сверточной нейронной сети)]
+        (* <- lang_ru;; *);;
+    <- statement;;
+    <=nrel_sc_text_translation: ...
+        (*
+            <- rrel_example:
+                [Сверточная нейронная сеть объединяет три подхода при обработке
+                изображений. Это использование локального рецептивного поля для
+                каждого нейрона сверточного слоя, формирование сверточных слоев в
+                виде набора карт, нейронные элементы которых имеют одинаковые
+                синаптические связи, и наличие карт подвыборочного (subsampling)
+                слоя, повышающего инвариантность сети к искажениям.]
+                (*<-lang_ru;;*);;
+        *);;
+        <=nrel_reference:
+            golovko2017;;
+        <=nrel_using_constants:
+            {
+            concept_convolutional_ann;
+            concept_neural_element
+            };;
+    *);
+    
+<- rrel_key_sc_element:
+    ...
+    (*
+    => nrel_main_idtf:
+        [Рис.(Архитектура сверточной нейронной сети)]
+        (* <- lang_ru;; *);
+        [Img.(Convolutional neural network architecture)]
+        (* <- lang_en;; *);;
+    <-illustration;;
+    <= nrel_sc_text_translation:
+    ...
+        (*
+        ->rrel_example:
+            "file://images/convolutional_ann_architecture.png" (* => nrel_format: format_png;; *);
+            [Нейроны слоя S называются сенсорными и предназначены для формирования входных сигналов, возникающих в результате внешних воздействий. Нейроны слоя A называются ассоциативными и предназначены для непосредственной обработки входной информации. Нейроны слоя R называются эффекторными. Они служат для передачи сигналов возбуждения к соответствующему объекту, например к мышцам.];;
+        *);;
     *);;
+

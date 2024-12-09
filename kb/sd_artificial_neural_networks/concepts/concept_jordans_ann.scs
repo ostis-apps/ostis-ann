@@ -6,6 +6,8 @@ concept_jordans_ann
     [artificial neural network of Jordan](* <- lang_en;; *);
 => nrel_idtf:
     [и.н.с. Джордана](* <- lang_ru;; *);
+    [сеть Джордана](*<-lang_ru;;*);
+    [Jordan network](*<-lang_en;;*);
 
 <- rrel_key_sc_element:
     ...
@@ -17,17 +19,52 @@ concept_jordans_ann
         (* <- lang_en;; *);;
     <- definition;;
     => nrel_sc_text_translation:
-        {
-        rrel_example:
-            []
-            (* <- lang_ru;; *);
-        rrel_example:
-            []
-            (* <- lang_en;; *)
-        };;
+    ...
+        (*
+        -> rrel_example:
+            [Сеть Джордана --- это искусственная нейронная сеть, у которой выходы нейронных элементов последнего слоя посредством специальных входных нейронов соединены с нейронами промежуточного слоя.]
+            (* <- lang_ru;; *);;
+        -> rrel_example:
+            [Jordan network is a type of an artificial neural network where the outputs of the neural elements of the last layer are connected to the neurons of the intermediate layer through special input neurons.]
+            (* <- lang_en;; *);;
+        *);;
     => nrel_using_constants:
         {
         concept_artificial_neural_network;
+        concept_recurrent_ann;
         concept_jordans_ann
         };;
+    *);
+<- rrel_key_sc_element: ... 
+(*
+    => nrel_main_idtf:
+    [Утв. (о сети Джордана)] (* <- lang_ru;; *);;
+    <= nrel_sc_text_translation: ...
+	    (*
+    	-> rrel_example:
+            [Только часть входных нейронов принимает сигналы из окружающего мира, на другие входные нейроны приходит выходной образ из предыдущего момента времени.]
+            (*<-lang_ru;;*);;
+	    *);;
+    => nrel_using_constants:
+        {
+        concept_jordans_ann
+        };;
+*);
+
+<- rrel_key_sc_element:
+    ...
+    (*
+    => nrel_main_idtf:
+        [Рис.(искусственная нейронная сеть Джордана)]
+        (* <- lang_ru;; *);
+        [Img.(artificial neural network of Jordan)]
+        (* <- lang_en;; *);;
+    <-illustration;;
+    <= nrel_sc_text_translation: ...
+        (*
+        ->rrel_example:
+            "file://images/jordan_ann.png" (* => nrel_format: format_png;; *);;
+        *);;
+        =>nrel_reference:
+            golovko2017;;
     *);;
