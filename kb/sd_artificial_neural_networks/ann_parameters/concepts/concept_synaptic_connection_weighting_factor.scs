@@ -1,0 +1,34 @@
+concept_synaptic_connection_weighting_factor <- sc_node_not_relation;
+
+=> nrel_main_idtf: [весовой коэфициент синаптической связи и.н.с.](* <- lang_ru;; *);
+=> nrel_main_idtf: [synaptic connection weighting factor of a.n.n.](* <- lang_en;; *);
+
+=> nrel_idtf: [вес синапса](* <- lang_ru;; *);
+=> nrel_idtf: [сила синаптической связи](* <- lang_ru;; *);
+<- concept_ann_classification_metrics;
+=> nrel_explanation:
+    [весовой коэффициент синаптической связи — это числовой коэффициент, который ставится в
+соответствие каждому синапсу нейронной сети и изменяется в процессе обучения.];
+=> nrel_note:
+    [Если сила синаптической связи отрицательна, то она называется тормозящей. В противном случае
+она является усиливающей.];
+
+<- concept_ann_configurable_parameter;
+
+=> nrel_definition:...
+(*
+    => nrel_main_idtf: [Определение (весовой коэфициент синаптической связи и.н.с.)](*<- lang_ru;;*);;
+    -> sc_text_translation: [весовой коэфициент синаптической связи и.н.с. — это числовой коэффициент, который ставится соответствие каждому синапсу нейронной сети и изменяется в процессе обучения.](*<-lang_ru;;*);;
+    
+    -> nrel_sc_text_translation: [Synaptic connection weighting factor of a.n.n. — this is a numerical coefficient that is assigned to each synapse of the neural network and changes during the learning process.](*<-lang_en;;*);;
+    => nrel_main_idtf: [Definition (synaptic connection weighting factor of a.n.n.)](*<- lang_en;;*);;
+    
+    => nrel_using_constants:
+        {
+        parameter;
+        concept_ann_parameter;
+        concept_ann_configurable_parameter;
+        concept_artificial_neural_network;
+        synaptic_connection
+        };;
+*);;

@@ -1,0 +1,29 @@
+concept_convolution <- sc_node_not_relation;
+
+=> nrel_main_idtf: [ядро свёртки и.н.с.](* <- lang_ru;; *);
+=> nrel_main_idtf: [convolution of a.n.n.](* <- lang_en;; *);
+
+=> nrel_note:
+    [Если сверточный формальный нейрон представить в виде полносвязного
+формального нейрона, соответствующее ядро свертки преобразуется в
+вектор весовых коэффициентов.] (* <- lang_ru;;*);
+
+<- concept_ann_configurable_parameter;
+
+=> nrel_definition:...
+(*
+    -> nrel_sc_text_translation:[Ядро свёртки и.н.с. — квадратная матрица произвольного порядка, элементы которой изменяются в процессе обучения и.н.с.](* <- lang_ru;;*);;
+    => nrel_main_idtf: [Определение (ядро свёртки и.н.с.)](* <- lang_ru;;*);;
+
+    -> nrel_sc_text_translation:[Convolution — a square matrix of arbitrary order, the elements of which change during the training process of the a.n.n.](* <- lang_en;;*);;
+    => nrel_main_idtf: [Definition (convolution)](* <- lang_en;;*);;
+    
+    => nrel_using_constants:
+    {
+        matrix;
+        parameter;
+        concept_ann_parameter;
+        concept_ann_configurable_parameter;
+        concept_artificial_neural_network
+    };;
+*);;

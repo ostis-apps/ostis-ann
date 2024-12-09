@@ -17,6 +17,7 @@ ostis-web-platform
 kb.bin
 data.db
 secret.txt
+fashion_mnist_train.csv
 
 __pycache__
 
