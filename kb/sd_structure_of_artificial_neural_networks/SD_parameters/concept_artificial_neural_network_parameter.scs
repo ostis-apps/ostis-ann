@@ -1,0 +1,21 @@
+concept_artificial_neural_network_parameter
+<-sc_node_class;
+<= nrel_inclusion: parameter;
+	=> nrel_main_idtf:
+	[параметр искусственной нейронной сети](* <-lang_ru;; *);
+	[artificial neural network parameter](* <-lang_en;; *);
+
+	=> nrel_idtf:
+	[параметр и.н.с.](* <-lang_ru;; *);
+
+=> nrel_subdividing: ...
+(*
+    <- sc_node_tuple;;
+    => nrel_main_idtf: [настраиваемый параметр искусственной нейронной сети] (* <- lang_ru;; *);;
+*);
+
+=> nrel_subdividing: ...
+(*
+    <- sc_node_tuple;;
+    => nrel_main_idtf: [архитектурный параметр искусственной нейронной сети] (* <- lang_ru;; *);;
+*);;

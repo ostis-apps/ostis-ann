@@ -1,0 +1,7 @@
+concept_sigmoid_function
+
+  => nrel_main_idtf:
+  [сигмоидная функция](* <-lang_ru;; *);
+	[sigmoid function](* <-lang_en;; *);;
+
+concept_sigmoid_function <- rrel_explored_concept: section_subject_domain_of_algorithms_and_functions;;

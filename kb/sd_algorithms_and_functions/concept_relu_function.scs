@@ -1,0 +1,7 @@
+concept_relu_function
+
+	=> nrel_main_idtf:
+	[функция ReLU](* <-lang_ru;; *);
+	[relu function](* <-lang_en;; *);;
+
+concept_relu_function <-rrel_explored_concept: section_subject_domain_of_algorithms_and_functions;;

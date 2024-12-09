@@ -3,9 +3,9 @@ nrel_sinaps
 	[синапс*]
 	(* <- lang_ru;; *);
 	
-///////////////////////////////////////////////////////////////////////////
+
 	<-rrel_key_sc_element: 
-	Definition_of_sinaps
+	Definition_of_nrel_sinaps
 		(*
 			<-definition;;
 			<=nrel_sc_text_translation:...
@@ -23,12 +23,12 @@ nrel_sinaps
 		=>nrel_main_idtf:[Опр. (синапс*)](* <-lang_ru;; => nrel_format: format_html;;*);;
 		<=nrel_using_constants:...
 			(*
-				->temporary_connection;sc_arc_membership;sinaps;;
+				->temporary_connection;sc_arc_membership;concept_sinaps;;
 			*);;
 		*);
-///////////////////////////////////////////////////////////////////
+
 	=>nrel_first_domain:set;
-	=> nrel_second_domain:sinaps;
+	=> nrel_second_domain:concept_sinaps;
 <- sc_node_norole_relation;
 <- oriented_relation;
 <- antireflexive_relation;
@@ -36,7 +36,7 @@ nrel_sinaps
 <- antitransitive_relation;
 <-rrel_explored_concept:section_subject_domain_of_neurons;
 
-/////////////////////////////////////////////////////////////////////
+
 <- rrel_key_sc_element:...
 (*
 	<- illustration;;
