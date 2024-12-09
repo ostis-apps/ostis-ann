@@ -11,6 +11,8 @@ set(SOURCES
     "http/sc_http.cpp"
     "http/sc_http_request.cpp"
     "http/sc_http_response.cpp"
+    "agent/sc_agent_recommend_training_parameters.cpp"
+
 )
 
 set(HEADERS
@@ -27,6 +29,7 @@ set(HEADERS
     "http/sc_http.hpp"
     "http/sc_http_request.hpp"
     "http/sc_http_response.hpp"
+    "agent/sc_agent_recommend_training_parameters.hpp"
 )
 
 find_package(CURL REQUIRED)
