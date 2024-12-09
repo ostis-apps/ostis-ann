@@ -1,0 +1,52 @@
+action_interpret_ann
+<- sc_node_class;
+=> nrel_main_idtf:
+    [действие интерпретации и.н.с.](* <- lang_ru;; *);
+    [ann interpretation action](* <- lang_en;; *);
+<- rrel_key_sc_element:
+    ...
+    (*
+    => nrel_main_idtf:
+        [Опр. (действие интерпретации и.н.с.)]
+        (* <- lang_ru;; *);
+        [Def. (ann interpretation action)]
+        (* <- lang_en;; *);;
+    <- definition;;
+    => nrel_sc_text_translation:
+        {
+        rrel_example:
+            [действие интерпретации и.н.с. — действие с и.н.с., в ходе которого реализуется определенный метод, связанный с интерпретацией и.н.с.]
+            (* <- lang_ru;; *)
+        };;
+    => nrel_using_constants:
+        {
+        action_interpret_ann;
+        action_process_ann;
+        concept_artificial_neural_network
+        };;
+    *);
+=> nrel_note:
+    [действию соответствует агент, реализованный на соответствующем языке программирования];
+=> nrel_note: ...
+(*
+    <= nrel_sc_text_translation: ...
+    (*
+        -> [в случае описания и.н.с. на внешнем языке, такая и.н.с. описывается в соответствующей
+                предметной области, в рамках которой также специфицируется действие интерпретации
+                данной и.н.с.](* <- lang_ru;; *);;
+        => nrel_note:
+             [внешний язык — язык, который не является внутренним языком ostis-системы, т.е. не Язык SCP](* <- lang_ru;; *);;
+        => nrel_using_constants:
+            {
+            concept_artificial_neural_network;
+            lang_external;
+            subject_domain;
+            action_interpret_ann
+            };;
+    *);;
+*);
+=> nrel_basic_decomposition: ...
+(*
+    <- sc_node_tuple;;
+    -> action_interpret_ann_layer;;
+*);;

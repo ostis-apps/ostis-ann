@@ -1,0 +1,48 @@
+action_process_ann
+<- sc_node_class;
+=> nrel_main_idtf:
+    [действие по обработке и.н.с.](* <- lang_ru;; *);
+    [ann processing action](* <- lang_en;; *);
+=> nrel_idtf:
+    [действие c и.н.с.](* <- lang_ru;; *);
+    [ann action](* <- lang_en;; *);
+=> nrel_basic_decomposition: ...
+(*
+    <- sc_node_tuple;;
+    -> action_interpret_ann;;
+    -> action_design_ann;;
+    -> action_configure_weight_coefficients_ann;;
+*);
+<- rrel_key_sc_element:
+    ...
+    (*
+    => nrel_main_idtf:
+        [Опр. (действие по обработке и.н.с.)]
+        (* <- lang_ru;; *);
+        [Def. (ann processing action)]
+        (* <- lang_en;; *);;
+    <- definition;;
+    => nrel_sc_text_translation:
+        {
+        rrel_example:
+            [действие по обработке и.н.с. — действие, в ходе которого реализуется определенный метод, связанный с разработкой и.н.с.]
+            (* <- lang_ru;; *)
+        };;
+    => nrel_using_constants:
+        {
+        action_process_ann;
+        concept_artificial_neural_network
+        };;
+    *);
+=> nrel_note:
+    [действия по обработке и.н.с осуществляет соответствующий коллектив агентов.](* <- lang_ru;; *);
+<= nrel_sc_text_translation: ...
+(*
+    -> rrel_example: "file://images/temporal_neural_network_scg.png"(* => nrel_format: format_png;; *);;
+    -> [так как в результате действий по обработке и.н.с объект этих действий, конкретная и.н.с, может
+             существенно меняться (меняется конфигурация сети, ее весовые коэффициенты), то и.н.с представляется в базе знаний как темпоральное объединение всех ее версий. Каждая версия является и.н.с.
+             и темпоральной сущностью. На множестве этих темпоральных сущностей задается темпоральная
+             последовательность с указанием первой и последней версии. Для каждой версии описываются
+             специфичные знания. Общие для всех версий знания описываются для и.н.с, являющейся темпоральным объединением всех версий.](* <- lang_ru;; *);;
+    <- explanation;;
+*);;
