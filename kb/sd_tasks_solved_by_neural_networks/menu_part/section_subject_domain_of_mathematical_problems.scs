@@ -1,0 +1,47 @@
+section_subject_domain_of_mathematical_problems
+=> nrel_main_idtf: 
+	[Раздел. Предметная область математических задач]
+	(* <- lang_ru;;*);
+	[Section. Subject domain of mathematical problems]
+	(* <- lang_en;; *);
+
+<- not_enough_formed_structure;
+<- atomic_section;;
+
+section_subject_domain_of_mathematical_problems = [*
+                                                 subject_domain_of_mathematical_problems
+                                                 	=> nrel_main_idtf:
+                                                 	[Предметная область математических задач]
+                                                 	(* <- lang_ru;; *);
+                                                 	[Subject domain of mathematical problems]
+                                                 	(* <- lang_en;; *);
+                                                 		
+                                                 <- subject_domain;;
+                                                 
+                                                 
+                                                 
+                                                 
+                                                 
+                                                 
+                                                 
+                                                 
+                                                 
+                                                 
+                                                 
+                                                 
+                                                 
+                                                 
+
+*];;
+
+
+
+
+
+
+
+
+
+
+
+

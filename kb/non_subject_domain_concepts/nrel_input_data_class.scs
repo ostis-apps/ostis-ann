@@ -1,0 +1,10 @@
+nrel_input_data_class
+<- sc_node_norole_relation;
+=> nrel_main_idtf:
+    [класс входных данных*]
+    (* <- lang_ru;; *);
+    [input data class*]
+    (* <- lang_en;; *);
+<- relation;
+<- binary_relation;
+<- oriented_relation;;

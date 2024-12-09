@@ -1,0 +1,18 @@
+concept_clustering_with_neural_network_and_index_ann
+<- sc_node_class;
+<= nrel_inclusion: concept_artificial_neural_network;
+=> nrel_main_idtf:
+    [Модель кластеризации с помощью нейронной сети и индексирования](* <- lang_ru;; *);
+    [Clustering with Neural Network and Index Model](* <- lang_en;; *);
+=> nrel_idtf:
+    [CNNI](* <- lang_en;; *);;
+
+affirmation -> ...
+(*
+    -> rrel_key_sc_element: concept_clustering_with_neural_network_and_index_ann;;
+
+    <= nrel_sc_text_translation: ...
+        (*
+            -> [Использует нейронную сеть для кластеризации точек данных. Обучение нейронной сети имитирует контролируемое обучение, при этом внутренний индекс оценки кластеризации действует как функция потерь.Результат показывает, что CNNI может  работать с данными невыпуклой формы (неплоской геометрии).] (* <- lang_ru;; *);;
+        *);;
+*);;
