@@ -62,6 +62,8 @@ services:
     depends_on:
       problem-solver:
         condition: service_healthy
+    volumes:
+      - ./kb:/ostis-ann/kb
     command:
       - "--host=problem-solver"
     networks:
