@@ -14,7 +14,7 @@ from modules.UseProblemSolvingMethodModule.annInterpreter.InterpretationParamete
 from modules.UseProblemSolvingMethodModule.converters.ImageConverter import ImageConverter
 
 from modules.UseProblemSolvingMethodModule.dataClasses.InterpretationParameters import InterpretationParameters
-from tests.fashion_converter import Converter
+
 
 
 class UseProblemSolvingMethodAgent(ScAgentClassic):
