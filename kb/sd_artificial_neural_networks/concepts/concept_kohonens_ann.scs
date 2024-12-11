@@ -1,0 +1,76 @@
+concept_kohonens_ann
+<- sc_node_class;
+<= nrel_inclusion: concept_self_organizing_ann;
+=> nrel_main_idtf:
+    [искусственная нейронная сеть Кохонена]
+    (* <- lang_ru;; *);
+    [нейросеть кохонена]
+    (* <- lang_ru;; *);
+    [сеть кохонена]
+    (* <- lang_ru;; *);
+    [artificial neural network of Kohonen]
+    (* <- lang_en;; *);
+=> nrel_reference:
+    golovko2017;
+=> nrel_idtf:
+    [и.н.с. Кохонена]
+    (* <- lang_ru;; *);
+    [Kohonen network]
+    (* <- lang_en;; *); 
+=> nrel_basic_decomposition: ...
+    (*
+        <- sc_node_tuple;;
+        //-> concept_kohonens_layer;;
+        -> concept_kohonens_map;;
+    *);
+<- rrel_key_sc_element:
+    ...
+    (*
+    => nrel_main_idtf:
+        [Опр. (искусственная нейронная сеть Кохонена)]
+        (* <- lang_ru;; *);
+        [Def. (artificial neural network of Kohonen)]
+        (* <- lang_en;; *);;
+    <- definition;;
+    <= nrel_sc_text_translation:
+    ...
+        (*
+        ->rrel_example:
+            [Искусственная нейронная сеть Кохонена - это искусственная нейронная сеть, у которой есть входной слой и слой активных нейронов.]
+            (* <- lang_ru;; *);;
+        ->rrel_example:
+            [Kohonen network is a type of artificial neural network where exists an input layer and a layer of active neurons.]
+            (* <- lang_en;; *);;
+        *);;
+    <= nrel_using_constants:
+        {
+        concept_artificial_neural_network;
+        concept_kohonens_ann
+        };;
+    *);
+<- rrel_key_sc_element: ... 
+    (*
+    => nrel_main_idtf:
+        [Утв. (о сети Кохонена)] (* <- lang_ru;; *);;
+    <- statement;;
+    <= nrel_sc_text_translation: ...
+        (*
+            -> rrel_example:
+            [Сигналы входного слоя сети Кохонена обрабатываются по правилу нейрона победителя.](*<-lang_ru;;*);;
+        *);;
+    *);
+<- rrel_key_sc_element: ...
+    (*
+    => nrel_main_idtf:
+        [Рис. (архитектура нейронной сети Кохонена)]
+        (* <- lang_ru;; *);
+        [Img. (artificial neural network of Kohonen architecture)]
+        (* <- lang_en;; *);;
+        <-illustration;;
+    <= nrel_sc_text_translation:
+    ...
+        (*
+        ->rrel_example:
+            "file://images/kohonens_ann_architecture.png" (* => nrel_format: format_png;; *);;
+        *);;
+    *);;

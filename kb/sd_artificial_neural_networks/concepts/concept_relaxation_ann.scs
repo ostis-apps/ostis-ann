@@ -22,18 +22,63 @@ concept_relaxation_ann
         [Def. (relaxation artificial neural network)]
         (* <- lang_en;; *);;
     <- definition;;
-    => nrel_sc_text_translation:
-        {
-        rrel_example:
-            []
-            (* <- lang_ru;; *);
-        rrel_example:
-            []
-            (* <- lang_en;; *)
-        };;
-    => nrel_using_constants:
+    <= nrel_sc_text_translation:
+        ...
+        (*
+        ->rrel_example:
+            [Релаксационная нейронная сеть --- это искусственная нейронная сеть, у которой выполнение алгоритма обучения завершается состоянием равновесия.]
+            (* <- lang_ru;; *);;
+        *);
+        ...
+        (*
+        ->rrel_example:
+            [Relaxation neural network is an artificial neural network that are characterized by the iterative process of minimizing an energy function until a state of equilibrium is reached.]
+            (* <- lang_en;; *);;
+        *)
+        ;;
+    <= nrel_using_constants:
         {
         concept_artificial_neural_network;
         concept_relaxation_ann
         };;
+    *);
+<- rrel_key_sc_element:
+    ...
+    (*
+    => nrel_main_idtf:
+        [Утв.(релаксационная нейронная сеть)]
+        (* <- lang_ru;; *);
+        [St.(relaxation artificial neural network)]
+        (* <- lang_en;;*);;
+    <- statement;;
+    <=nrel_sc_text_translation:
+        ...
+        (*
+            -> rrel_example:
+                [Релаксационные нейронные сети характеризуются прямым и обратным распространением информации между слоями нейронной сети. 
+                В основе функционирования таких сетей лежит итерационный принцип работы. 
+                Он заключается в том, что на каждой итерации процесса происходит обработка данных, полученных на предыдущем шаге. 
+                Такая циркуляция информации продолжается до тех пор, пока не установится состояние равновесия.]
+                (* <-lang_ru;; *);;
+            -> rrel_example:
+                [Relaxation neural networks are a type of neural network characterized by the bidirectional flow of information between layers and an iterative processing approach. This distinguishes them from traditional feedforward neural networks, where information flows in a unidirectional manner from input to output.]
+                (* <-lang_en;; *);;
+            => nrel_reference:
+                golovko2017;;
+        *);;
+    *);
+<- rrel_key_sc_element:
+    ...
+    (*
+    => nrel_main_idtf:
+        [Рис.(релаксационная нейронная сеть)]
+        (* <- lang_ru;; *);
+        [Img.(relaxation artificial neural network)]
+        (* <- lang_en;; *);;
+    <-illustration;;
+    <= nrel_sc_text_translation: ...
+        (*
+        ->rrel_example:
+            "file://images/relaxed_neur_netw.png" (* => nrel_format: format_png;; *);;
+        *);;
     *);;
