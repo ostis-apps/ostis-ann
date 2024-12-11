@@ -9,21 +9,26 @@ concept_support_vector_machine
     ...
     (*
     => nrel_main_idtf:
-        [Опр. (искусственная нейронная сеть)]
+        [Опр. (машина опорных векторов)]
         (* <- lang_ru;; *);
-        [Def. (artificial neural network)]
+        [Def. (support vector machine)]
         (* <- lang_en;; *);;
     <- definition;;
-    => nrel_sc_text_translation:
-        {
-        rrel_example:
+    <= nrel_sc_text_translation:
+        ...
+        (*
+        ->rrel_example:
             []
-            (* <- lang_ru;; *);
-        rrel_example:
+            (* <- lang_ru;; *);;
+        *);
+        ...
+        (*
+        ->rrel_example:
             []
-            (* <- lang_en;; *)
-        };;
-    => nrel_using_constants:
+            (* <- lang_en;; *);;
+        *)
+        ;;
+    <= nrel_using_constants:
         {
         concept_artificial_neural_network;
         concept_support_vector_machine

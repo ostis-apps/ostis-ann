@@ -7,8 +7,17 @@ concept_autoencoder_ann
 
 => nrel_idtf:
     [автоэнкодерная и.н.с.](* <- lang_ru;; *);
+
+    [автоэнкодер](* <- lang_ru;; *);
+    [автокодировщик](* <- lang_ru;; *);
     [autoencoder](* <- lang_en;; *);
 
+=> nrel_subdividing:...
+(*
+    <- sc_node_tuple;;
+    -> concept_encoder;;
+    -> concept_decoder;;
+*);
 <- rrel_key_sc_element:
     ...
     (*
@@ -18,18 +27,65 @@ concept_autoencoder_ann
         [Def. (autoencoder neural network)]
         (* <- lang_en;; *);;
     <- definition;;
-    => nrel_sc_text_translation:
-        {
-        rrel_example:
-            []
-            (* <- lang_ru;; *);
-        rrel_example:
-            []
-            (* <- lang_en;; *)
-        };;
+
+    <= nrel_sc_text_translation:
+    ...
+        (*
+        ->rrel_example:
+            [Автоэнкодерная нейронная сеть --- это искусственная нейронная сеть прямого распространения, которая восстанавливает входной сигнал на выходе.]
+            (* <- lang_ru;; *);;
+        ->rrel_example:
+            [Autoencoder neural network is an artificial neural network that is trained to copy its input to its output.]
+            (* <- lang_en;; *);;
+        *);;
     => nrel_using_constants:
         {
         concept_artificial_neural_network;
         concept_autoencoder_ann
         };;
+
+    *);
+    //part 14 in goodfellow2016deeplearning
+
+<-rrel_key_sc_element:
+    ...
+    (*
+    => nrel_main_idtf:
+        [структура автокодировщика]
+        (* <- lang_ru;; *);
+        [autoencoder structure]
+        (* <- lang_en;; *);;
+    <-illustration;;
+    <= nrel_sc_text_translation:
+    ...
+        (*
+        ->rrel_example:
+            "file://images/autoencoder_2.png" (* => nrel_format: format_png;; *);;
+        *);
+    ...
+        (*
+        ->rrel_example:
+            [Общая структура автокодировщика, отображающего вход x на выход r (называемый реконструкцией) через внутреннее представление, или код h. Автокодировщик состоит из двух частей: кодировщик f (отображение x в h) и декодер g (отображение h в r).]
+            (* 
+                <- lang_ru;;
+            *);;
+            =>nrel_reference:
+                goodfellow2016deeplearning;;
+        *);
+    ...
+        (*
+        ->rrel_example:
+            "file://images/autoencoder_2.png" (* => nrel_format: format_png;; *);;
+        *);
+    ...
+        (*
+        ->rrel_example:
+            [The general structure of an autoencoder, mapping an input x to an output r (called reconstruction) through an internal representation or code h. The autoencoder has two components: the encoder f (mapping x to h) and the decoder g (mapping h to r)]
+            (* 
+                <- lang_en;;
+            *);;
+            => nrel_reference:
+                goodfellow2016deeplearning;;
+        *);;
+    
     *);;

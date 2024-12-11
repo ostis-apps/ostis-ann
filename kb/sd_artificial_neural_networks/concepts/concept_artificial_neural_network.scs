@@ -15,6 +15,7 @@ concept_artificial_neural_network
     => nrel_main_idtf: [Типология и.н.с. по признаку направленности связей] (* <- lang_ru;; *);;
     -> concept_feedforward_ann;;
     -> concept_feedback_ann;;
+    -> concept_recurrent_ann;;
 *);
 
 => nrel_subdividing: ...
@@ -25,6 +26,18 @@ concept_artificial_neural_network
     -> concept_weakly_connected_ann;;
 *);
 
+=> nrel_subdividing: ...
+(*
+    <- sc_node_tuple;;
+    => nrel_main_idtf: [Типология и.н.с. по архитектуре и обучению] (* <- lang_ru;; *);;
+    -> concept_perceptron_ann;;
+    -> concept_self_organizing_ann;;
+    -> concept_relaxation_ann;;
+    -> concept_hybrid_ann;;
+    => nrel_reference:
+        golovko2017;;
+*);
+>>>>>>> main
 <- rrel_key_sc_element:
     ...
     (*
@@ -34,17 +47,21 @@ concept_artificial_neural_network
         [Def. (artificial neural network)]
         (* <- lang_en;; *);;
     <- definition;;
-    => nrel_sc_text_translation:
-        {
-        rrel_example:
-            []
-            (* <- lang_ru;; *);
-        rrel_example:
-            []
-            (* <- lang_en;; *)
-        };;
+
+    => nrel_sc_text_translation: ...
+        (*
+        -> rrel_example:
+            [Искусственная нейронная сеть --- это совокупность нейронных элементов и связей между ними.]
+            (* <- lang_ru;; *);;
+        -> rrel_example:
+            [An artificial neural network is a collection of neural elements and connections between them.]
+            (* <- lang_en;; *);;
+        *);;
     => nrel_using_constants:
         {
-        concept_artificial_neural_network
+        concept_artificial_neural_network;
+        concept_neural_element; //TODO check in kb
+        concept_connection //TODO check in kb (mb as neural_connection)
+>>>>>>> main
         };;
     *);;
