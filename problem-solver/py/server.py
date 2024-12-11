@@ -1,5 +1,7 @@
 import argparse
 from sc_kpm import ScServer
+
+from modules.UseProblemSolvingMethodModule.annInterpreter.UseProblemSolvingMethodModule import UseProblemSolvingMethodModule
 from modules.messageProcessingModule.FnnAgentProcessingModule import FnnAgentProcessingModule
 from modules.messageProcessingModule.FnnTrainerProcessingModule import FnnTrainerProcessingModule
 from pathlib import Path
@@ -20,7 +22,8 @@ def main(args: dict):
     with server.connect():
         modules = [
             FnnAgentProcessingModule(),
-            FnnTrainerProcessingModule()
+            FnnTrainerProcessingModule(),
+            UseProblemSolvingMethodModule()
         ]
         server.add_modules(*modules)
         with server.register_modules():
