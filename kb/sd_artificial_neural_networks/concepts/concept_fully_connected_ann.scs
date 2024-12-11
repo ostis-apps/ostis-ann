@@ -5,7 +5,7 @@ concept_fully_connected_ann
     [полносвязная искусственная нейронная сеть](* <- lang_ru;; *);
     [fully connected artificial neural network](* <- lang_en;; *);
 => nrel_idtf:
-    [полносвязная и.н.с.](* <- lang_ru;; *);
+    [полносвязная и.н.с.](* <- lang_ru;; *);    
 
 <- rrel_key_sc_element:
     ...
@@ -16,15 +16,20 @@ concept_fully_connected_ann
         [Def. (fully connected artificial neural network)]
         (* <- lang_en;; *);;
     <- definition;;
-    => nrel_sc_text_translation:
-        {
-        rrel_example:
-            []
-            (* <- lang_ru;; *);
-        rrel_example:
-            []
-            (* <- lang_en;; *)
-        };;
+    <= nrel_sc_text_translation:
+        ...
+        (*
+        ->rrel_example:
+            [Полносвязная искусственная нейронная сеть --- это искусственная нейронная сеть, у которой каждый нейрон передает свой выходной сигнал остальным нейронам, в том числе и самому себе.]
+            (* <- lang_ru;; *);;
+        *);
+        ...
+        (*
+        ->rrel_example:
+            [A fully connected artificial neural network is a type of an artificial neural network where every neuron in one layer is connected to every neuron in the next layer.]
+            (* <- lang_en;; *);;
+        *)
+        ;;
     => nrel_using_constants:
         {
         concept_artificial_neural_network;

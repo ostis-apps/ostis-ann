@@ -1,0 +1,90 @@
+concept_hybrid_ann//TODO
+<- sc_node_class;
+<= nrel_inclusion: concept_artificial_neural_network;
+=> nrel_main_idtf:
+    [гибридная нейронная сеть](* <- lang_ru;; *);
+    [hybrid neural network](* <- lang_en;; *);
+=> nrel_basic_decomposition: ...
+(*
+    <- sc_node_tuple;;
+    -> concept_counter_propagation_ann;; //TODO
+    -> concept_radial_basis_function_network;;
+    -> concept_neuro_fuzzy;; //TODO Нечеткие нейронные сети
+*);
+<- rrel_key_sc_element:
+    ...
+    (*
+    => nrel_main_idtf:
+        [Опр. (гибридная нейронная сеть)]
+        (* <- lang_ru;; *);
+        [Def. (hybrid neural network)]
+        (* <- lang_en;; *);;
+    <- definition;;
+    <= nrel_sc_text_translation:
+        ...
+        (*
+        -> rrel_example:
+            [Гибридная нейронная сеть — это искусственная нейронная сеть, у которой есть четкие сигналы, веса и функция активации.]
+            (* <- lang_ru;; *);;
+        -> rrel_example:
+            [A hybrid neural network is an artificial neural network with clear signals, weights, and an activation function.]
+            (* <- lang_en;; *);;
+        *);;
+    <= nrel_using_constants:
+        {
+        concept_artificial_neural_network;
+        concept_hybrid_ann
+        };;
+    <= nrel_reference:
+        golovko2017;;
+    *);
+<- rrel_key_sc_element:
+    ...
+    (*
+    => nrel_main_idtf:
+        [Утв. (Особенности гибридных нейронных сетей)]
+        (* <- lang_ru;; *);
+        [St. (Features of hybrid neural networks)]
+        (* <- lang_en;; *);;
+    <- statement;;
+    <= nrel_sc_text_translation:
+        ...
+        (*
+        -> rrel_example:
+            [Гибридная нейронная сеть отличается применением двух подходов к обучению – с учителем и без учителя.]
+            (* <- lang_ru;; *);;
+        -> rrel_example:
+            []
+            (* <- lang_en;; *);;
+        *);;
+    <= nrel_using_constants:
+        {
+        concept_hybrid_ann
+        };;
+    *);
+
+    <- rrel_key_sc_element:
+    ...
+    (*
+    => nrel_main_idtf:
+        [Утв. (о гибридной нейронной сети)]
+        (* <- lang_ru;; *);
+        [St. (about hybrid neural network)]
+        (* <- lang_en;; *);;
+    <- statement;;
+    <= nrel_sc_text_translation:
+        ...
+        (*
+        -> rrel_example:
+            [Входы, выходы и веса гибридной нейронной сети — веществен­ные числа, принадлежащие отрезку \[0, 1\].]
+            (* <- lang_ru;; *);;
+        -> rrel_example:
+            [The inputs, outputs and weights of the hybrid neural network are real numbers belonging to the segment \[0, 1\].]
+            (* <- lang_en;; *);;
+        *);;
+    <= nrel_using_constants:
+        {
+        concept_hybrid_ann
+        // TODO
+        };;
+    *);;
