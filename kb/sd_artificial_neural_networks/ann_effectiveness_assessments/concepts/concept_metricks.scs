@@ -1,0 +1,20 @@
+concept_ann_quality_assessment_metrics<-sc_node_not_relation;
+
+=> nrel_main_idtf: [метрики оценки качества и.н.с.](* <- lang_ru;; *);
+=> nrel_main_idtf: [a.n.n. quality assessment metrics](* <- lang_en;; *);
+
+=> nrel_definition: ...
+(*
+    -> nrel_sc_text_translation:[метрики оценки качества и.н.с. — это показатели, используемые для оценки качества и эффективности работы нейронных сетей](*<-lang_ru;;*);;
+    => nrel_main_idtf: [Определение (метрики оценки качества и.н.с.)](*<- lang_ru;;*);;
+    -> nrel_sc_text_translation:[Classification metrics - indicators used to assess the quality and efficiency of neural networks](*<-lang_en;;*);;
+    => nrel_main_idtf: [Definition (a.n.n. quality assessment metrics)](*<- lang_en;;*);;
+*);
+
+=> nrel_basic_decomposition:...
+(*
+    =>nrel_main_idtf: [Разбиение метрик и.н.с.](* <- lang_ru;; *);;
+    <-sc_node_tuple;;
+    ->concept_ann_classification_metrics;;
+    ->concept_ann_regression_metrics;;
+*);;
