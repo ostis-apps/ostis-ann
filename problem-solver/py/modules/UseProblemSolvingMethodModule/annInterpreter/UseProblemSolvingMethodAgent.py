@@ -14,7 +14,7 @@ from modules.UseProblemSolvingMethodModule.annInterpreter.InterpretationParamete
 from modules.UseProblemSolvingMethodModule.converters.ImageConverter import ImageConverter
 
 from modules.UseProblemSolvingMethodModule.dataClasses.InterpretationParameters import InterpretationParameters
-
+from tests.fashion_converter import Converter
 
 
 class UseProblemSolvingMethodAgent(ScAgentClassic):
@@ -58,19 +58,12 @@ class UseProblemSolvingMethodAgent(ScAgentClassic):
 
     def __save_ann_output(self, predictions: numpy.array, interpretation_parameters: InterpretationParameters) -> None:
         objet_addr = interpretation_parameters.input_struct.object_addr
+        max_prediction: int = numpy.max(tf.nn.softmax(predictions[0]) * 100)
+        self.__save_ann_output_to_sc_memory(max_prediction, objet_addr)
 
-        score = tf.nn.softmax(predictions[0])
-        max_prediction: int = numpy.max(score * 100)
-        max_prediction_index: int = int(numpy.argmax(score * 100))
-        self.__save_ann_output_to_sc_memory(max_prediction, max_prediction_index, objet_addr)
-
-    def __save_ann_output_to_sc_memory(self, max_prediction: int, max_prediction_index: int,
-                                       object_addr: ScAddr) -> None:
+    def __save_ann_output_to_sc_memory(self, max_prediction: int, object_addr: ScAddr) -> None:
         self.logger.info(f"Max prediction: {max_prediction}")
-
-        # TODO add ann classes if exists
-        # Now it name recognised class as index of output array
-        result_node_params = ScIdtfResolveParams(idtf=f'[{max_prediction_index}]', type=sc_types.NODE_CONST_CLASS)
+        result_node_params = ScIdtfResolveParams(idtf=f'someclass', type=sc_types.NODE_CONST_CLASS)
         result_node_addr = resolve_keynodes(result_node_params)[0]
         construction = ScConstruction()
         construction.create_edge(sc_type=sc_types.EDGE_ACCESS_CONST_FUZ_PERM,
