@@ -1,0 +1,5 @@
+concept_artificial_neural_network_layer_batch_normalization
+<-sc_node_class;
+=> nrel_main_idtf:
+	[слой искусственной нейронной сети батч-нормализации](* <-lang_ru;; *);
+	[artificial neural network layer batch normalization](* <-lang_en;; *);;

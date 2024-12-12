@@ -7,7 +7,7 @@ nrel_receptive_field => nrel_definitional_domain: ...
 	(*
 		<= nrel_combination: ...
 			(*
-				-> neuron_core
+				-> concept_neuron_core
 					(*
 						<= nrel_first_domain: nrel_receptive_field;;						
 					*);;
@@ -34,9 +34,9 @@ definition -> ...
 
 		<= nrel_using_constants: ...
 			(*
-				-> neuron_core;;
+				-> concept_neuron_core;;
 				-> concept_neuron_node;;	
-				-> synaptic_connection;;
+				-> rrel_synaptic_connection;;
 			*);;
 
 		<= nrel_sc_text_translation: ...

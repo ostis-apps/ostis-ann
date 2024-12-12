@@ -1,0 +1,44 @@
+concept_synapse_weight
+	<-sc_node_class;
+	=> nrel_main_idtf:
+	[весовой коэффициент синаптической связи](* <-lang_ru;; *);
+	[synapse weight](* <-lang_en;; *);
+
+	=> nrel_idtf:
+	[вес синапса](* <-lang_ru;; *);
+  [сила синаптической связи](* <-lang_ru;; *);
+
+ <-rrel_key_sc_element: 
+	Affirmation_of_concept_synapse_weight
+		(*
+			-> rrel_key_sc_element: concept_synapse_weight;;
+
+			=> nrel_main_idtf: [Пояснение(весовой коэффициент синаптической связи)] (* <- lang_ru;; *);;
+
+			<= nrel_sc_text_translation: ...
+				(*
+					-> [<p>				
+        <b>весовой коэффициент синаптической связи</b>  - это числовой коэффициент, который ставится в
+соответствие каждому синапсу нейронной сети и изменяется в процессе обучения.]
+				(*
+				<-lang_ru;;
+				=> nrel_format: format_html;;
+				*);;
+				*);;
+		*);
+
+<-rrel_key_sc_element: 
+	Affirmation_of_concept_synapse_weight
+		(*
+			-> rrel_key_sc_element: cconcept_synapse_weight;;
+
+			=> nrel_main_idtf: [Примечание(весовой коэффициент синаптической связи)] (* <- lang_ru;; *);;
+
+			<= nrel_sc_text_translation: ...
+				(*
+					-> [Если сила синаптической связи отрицательна, то она называется тормозящей. В противном случае
+она является усиливающей.] (* <- lang_ru;; *);;
+					
+				*);;
+		*);;
+

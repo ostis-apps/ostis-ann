@@ -1,0 +1,6 @@
+concept_softmax_function
+
+  =>nrel_main_idtf:
+  [softmax function](* <-lang_en;;  *);;
+
+concept_softmax_function <-rrel_explored_concept: section_subject_domain_of_algorithms_and_functions;;

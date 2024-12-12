@@ -1,0 +1,4 @@
+concept_threshold_function=>nrel_main_idtf:[threshold function](* <-lang_en;; *);;
+concept_threshold_function=>nrel_main_idtf:[пороговая функция](* <-lang_ru;; *);;
+
+concept_threshold_function<-rrel_explored_concept: section_subject_domain_of_algorithms_and_functions;;
