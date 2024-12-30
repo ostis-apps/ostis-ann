@@ -1,0 +1,14 @@
+concept_ann_recall<-sc_node_not_relation;
+=> nrel_main_idtf: [полнота и.н.с.](* <- lang_ru;; *);
+=> nrel_main_idtf: [a.n.n. recall](* <- lang_en;; *);
+
+=> nrel_definition: ...
+(*
+    -> nrel_sc_text_translation:[Полнота и.н.с. — доля верно идентифицированных положительных исходов в общем числе положительных исходов](*<-lang_ru;;*);;
+    => nrel_main_idtf: [Определение (полнота и.н.с.)](*<- lang_ru;;*);;
+    -> nrel_sc_text_translation:[a.n.n. recall — the proportion of correctly identified positive outcomes in the total number of positive outcomes](*<-lang_en;;*);;
+    => nrel_main_idtf: [Definition (a.n.n. recall)](*<- lang_en;;*);;
+*);
+
+=> nrel_formula:[REC = TP / (TP + FN), где TP и FN — число истинно-положительных и ложно-отрицательных предсказаний нейронной сети соответственно](*<-lang_ru;;*);
+<- concept_ann_regression_metrics;;
