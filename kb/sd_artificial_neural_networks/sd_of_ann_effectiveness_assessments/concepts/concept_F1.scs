@@ -1,0 +1,6 @@
+concept_F1_metric<-sc_node_not_relation;
+=> nrel_main_idtf: [F1-метрика](* <- lang_ru;; *);
+=> nrel_main_idtf: [F1-metric](* <- lang_en;; *);
+
+=> nrel_formula:[F1 = 2 * ((PRE * REC) / (PRE + REC)), где PRE и REC — точность и полнота и.н.с. соответственно](*<-lang_ru;;*);
+<- concept_ann_regression_metrics;;
