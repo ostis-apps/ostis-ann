@@ -1,0 +1,21 @@
+concept_reduction_of_parametr_space_dimensionality_problem
+	<- sc_node_not_relation;
+	=> nrel_main_idtf: [задача понижения размерности признакового пространства] (* <- lang_ru;; *);
+	=> nrel_main_idtf: [reduction of parametr space dimensionality problem] (* <- lang_en;; *);
+	=> nrel_generic_specification:reduction_of_parametric_space_generic_specifiction;
+	=> nrel_solved_by_ann: concept_kronecker_multi_layer_ann;;
+definition -> ...
+	(*
+		-> rrel_key_sc_element: concept_reduction_of_parametr_space_dimensionality_problem;;
+		
+		=> nrel_main_idtf: [Опр.(задача понижения размерности признакового пространства)] (* <- lang_ru;; *);;
+		
+		<= nrel_sc_text_translation: ...
+			(*
+				-> [Задача понижения размерности признакового пространства - это задача определения нового призанкового пространства для объекта (множества объектов)] (* <- lang_ru;; *);;
+			*);;
+	*);;
+
+
+nrel_inclusion->(section_subject_domain_problems_solved_by_neural_networks=>concept_reduction_of_parametr_space_dimensionality_problem);;
+concept_reduction_of_parametr_space_dimensionality_problem<-rrel_explored_concept: section_subject_domain_problems_solved_by_neural_networks;;

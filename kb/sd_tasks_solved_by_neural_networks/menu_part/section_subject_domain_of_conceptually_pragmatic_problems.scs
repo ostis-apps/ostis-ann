@@ -1,0 +1,48 @@
+section_subject_domain_of_conceptually_pragmatic_problems
+=> nrel_main_idtf: 
+	[Раздел. Предметная область концептуально-прагматических задач]
+	(* <- lang_ru;;*);
+	[Section. Subject domain of conceptually-pragmatic problems]
+	(* <- lang_en;; *);
+
+<- not_enough_formed_structure;
+<- atomic_section;;
+
+section_subject_domain_of_conceptually_pragmatic_problems = [*
+                                                           subject_domain_of_conceptually_pragmatic_problems
+                                                           	=> nrel_main_idtf:
+                                                           	[Предметная область концептуально-прагматических задач]
+                                                           	(* <- lang_ru;; *);
+                                                           	[Subject domain of conceptually-pragmatic problems]
+                                                           	(* <- lang_en;; *);
+                                                           		
+                                                           <- subject_domain;;
+                                                           
+                                                           
+                                                           
+                                                           
+                                                           
+                                                           
+                                                           
+                                                           
+                                                           
+                                                           
+                                                           
+                                                           
+                                                           
+                                                           
+
+*];;
+
+
+
+
+
+
+
+
+
+
+
+
+

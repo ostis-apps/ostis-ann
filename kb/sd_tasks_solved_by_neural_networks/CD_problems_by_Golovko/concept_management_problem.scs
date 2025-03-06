@@ -1,0 +1,36 @@
+concept_management_problem
+	<- sc_node_not_relation;
+	=> nrel_main_idtf: [задача управления] (* <- lang_ru;; *);
+	=> nrel_main_idtf: [manegment problem] (* <- lang_en;; *);
+	=>nrel_input_data_class: ...
+	 (*
+	<- sc_node_tuple;;
+	-> object;;
+	-> parametr;;
+	 *);
+	=>nrel_output_data_class: action;
+	=> nrel_solved_by_ann: ...
+     (*
+	<- sc_node_tuple;;
+	-> concept_convolutional_ann;;
+	-> concept_recurrent_ann;;
+	-> concept_reinforcement_learning_ann;;
+     *);;
+
+
+definition -> ...
+	(*
+		-> rrel_key_sc_element: concept_management_problem;;
+		
+		=> nrel_main_idtf: [Опр.(задача управления)] (* <- lang_ru;; *);;
+
+		<= nrel_sc_text_translation: ...
+			(*
+				-> [Задача управления - это задача построения модели-регулятора состояния сложного динамического объект] (* <- lang_ru;; *);;
+			*);;
+	*);;
+
+
+
+nrel_inclusion->(section_subject_domain_problems_solved_by_neural_networks=>concept_management_problem);;
+concept_management_problem<-rrel_explored_concept: section_subject_domain_problems_solved_by_neural_networks;;

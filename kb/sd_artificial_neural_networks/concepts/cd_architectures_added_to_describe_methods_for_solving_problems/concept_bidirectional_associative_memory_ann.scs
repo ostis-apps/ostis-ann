@@ -1,0 +1,20 @@
+concept_bidirectional_associative_memory_ann
+<- sc_node_class;
+<= nrel_inclusion: concept_hopfields_ann;
+=> nrel_main_idtf:
+    [Нейронная сеть Коско](* <- lang_ru;; *);
+    [bidirectional associative memory](* <- lang_en;; *);
+
+=> nrel_idtf:
+    [Двунаправленная ассоциативная память](* <- lang_ru;; *);;
+
+affirmation -> ...
+(*
+    -> rrel_key_sc_element: concept_bidirectional_associative_memory_ann;;
+
+    <= nrel_sc_text_translation: ...
+        (*
+            -> [Нейронная сеть Коско - это нейронная сеть с обратными связями, базируется на двух идеях: адаптивной резонансной теории Стефана Гросберга и автоассоциативной памяти Хопфилда. Является гетероассоциативной: входной вектор поступает на один набор нейронов, а соответствующий выходной вектор вырабатывается на другом наборе нейронов.Способна к обобщению, вырабатывая правильные реакции, несмотря на искажённые входы] (* <- lang_ru;; *);;
+        *);;
+*);;
+

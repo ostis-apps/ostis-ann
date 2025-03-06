@@ -1,0 +1,10 @@
+nrel_solved_by_ann
+<- sc_node_norole_relation;
+=> nrel_main_idtf:
+    [решается с помощью  нейросетевой архитектуры*]
+    (* <- lang_ru;; *);
+    [solved by neural network architecture*]
+    (* <- lang_en;; *);
+<- relation;
+<- binary_relation;
+<- oriented_relation;;

@@ -1,0 +1,17 @@
+concept_long_short_term_memory_ann 
+<- sc_node_class;
+<= nrel_inclusion: concept_recurrent_ann;
+=> nrel_main_idtf:
+    [Нейронная сеть c долговременной памятью](* <- lang_ru;; *);
+    [Long short term memory ann](* <- lang_en;; *);;
+
+    
+affirmation -> ...
+(*
+    -> rrel_key_sc_element: concept_long_short_term_memory_ann;;
+
+    <= nrel_sc_text_translation: ...
+        (*
+            -> [Это тип рекуррентной нейронной сети ,предназначенный для решения проблемы исчезающего градиента, присутствующей в традиционных рекуррентных нейронных сетях. Её относительная нечувствительность к длине промежутка является  преимуществом.] (* <- lang_ru;; *);;
+        *);;
+*);;

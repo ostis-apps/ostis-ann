@@ -1,0 +1,30 @@
+concept_associative_memory_problem
+	<- sc_node_not_relation;
+	=> nrel_main_idtf: [задача с ассоциативной паматью] (* <- lang_ru;; *);
+	=> nrel_main_idtf: [associative memory problem] (* <- lang_en;; *);
+	=> nrel_solved_by_ann: ...
+     (*
+	<- sc_node_tuple;;
+	-> concept_hopfields_ann;;
+	-> concept_bidirectional_associative_memory_ann;;
+     *);
+	=>nrel_input_data:pattern;
+	=>nrel_output_data:original_pattern;;
+
+
+definition -> ...
+	(*
+		-> rrel_key_sc_element: concept_associative_memory_problem;;
+		
+		=> nrel_main_idtf: [Опр.(задача с ассоциативной паматью)] (* <- lang_ru;; *);;
+		
+
+		<= nrel_sc_text_translation: ...
+			(*
+				-> [задача с ассоциативной паматью - это задача построения модели, позволяющей выполнить реконструкцию исходного образа на основании сохраненных ранее образов] (* <- lang_ru;; *);;
+			*);;
+	*);;
+
+
+nrel_inclusion->(section_subject_domain_problems_solved_by_neural_networks=>concept_associative_memory_problem);;
+concept_associative_memory_problem<-rrel_explored_concept: section_subject_domain_problems_solved_by_neural_networks;;

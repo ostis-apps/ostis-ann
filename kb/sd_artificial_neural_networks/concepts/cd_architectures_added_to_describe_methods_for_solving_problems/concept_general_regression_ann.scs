@@ -1,0 +1,19 @@
+concept_general_regression_ann
+<- sc_node_class;
+<= nrel_inclusion: concept_artificial_neural_network;
+=> nrel_main_idtf:
+    [Обобщенная регрессионная нейронная сеть ](* <- lang_ru;; *);
+    [bidirectional associative memory](* <- lang_en;; *);
+
+=> nrel_idtf:
+    [GRNN](* <- lang_en;; *);;
+
+affirmation -> ...
+(*
+    -> rrel_key_sc_element: concept_general_regression_ann;;
+
+    <= nrel_sc_text_translation: ...
+        (*
+            -> [Обобщенная регрессионная нейронная сеть  представляет алгоритм однопроходного обучения с высокопараллельной структурой] (* <- lang_ru;; *);;
+        *);;
+*);;

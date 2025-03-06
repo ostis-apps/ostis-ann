@@ -1,0 +1,29 @@
+concept_filtering_problem
+	<- sc_node_not_relation;
+	=> nrel_main_idtf: [задача фильтрации] (* <- lang_ru;; *);
+	=> nrel_main_idtf: [filtering problem] (* <- lang_en;; *);
+	=> nrel_solved_by_ann: ...
+     (*
+	<- sc_node_tuple;;
+	-> concept_convolutional_ann;;
+	-> concept_recurrent_ann;;
+     *);;
+
+
+definition -> ...
+	(*
+		-> rrel_key_sc_element: concept_filtering_problem;;
+		
+		=> nrel_main_idtf: [Опр.(задача фильтрации)] (* <- lang_ru;; *);;		
+
+		<= nrel_sc_text_translation: ...
+			(*
+				-> [задача фильтрации - это задача построения модели, которая производит очистку исходного сигнала, содержащего
+некоторый шум и уменьшает влияние случайных ошибок в сигнале] (* <- lang_ru;; *);;
+			*);;
+	*);;
+
+
+
+nrel_inclusion->(section_subject_domain_problems_solved_by_neural_networks=>concept_filtering_problem);;
+concept_filtering_problem<-rrel_explored_concept: section_subject_domain_problems_solved_by_neural_networks;;
