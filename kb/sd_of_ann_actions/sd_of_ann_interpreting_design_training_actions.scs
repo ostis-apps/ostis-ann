@@ -1,0 +1,47 @@
+section_subject_domain_of_ann_actions
+<- atomic_section;
+<- sc_node_struct;
+<- ... (* <= nrel_section_decomposition: section_subjdomain_actions_and_tasks;; *);
+=> nrel_main_idtf:
+    [Раздел. Предметная область действий c и.н.с.] (* <- lang_ru;; *);
+    [Section. Subject domain of ann actions] (* <- lang_en;; *);;
+
+section_subject_domain_of_ann_actions = [*
+subject_domain_of_ann_actions
+=> nrel_main_idtf:
+    [Предметная область действий c и.н.с.]
+    (* <- lang_ru;; *);
+    [Subject domain of ann actions]
+    (* <- lang_en;; *);
+<- sc_node_struct;
+<- subject_domain;
+<= nrel_primary_elements_class_private_subject_domain: subject_domain_of_actions_and_tasks;
+-> rrel_maximum_studied_object_class:
+    action_process_ann;
+-> rrel_not_maximum_studied_object_class:
+    action_interpret_ann;
+    action_train_ann;
+    action_design_ann;
+    action_configure_layer_ann;
+    action_configure_neuron_in_layer_ann;
+    action_interpret_ann_layer;
+    concept_number_oriented_set;
+    action_calculate_weighted_sum_of_all_neurons_of_layer;
+    action_calculate_all_layer_neurons_activation_function;
+    action_interpret_convolutional_layer;
+    action_interpret_pooling_layer;
+    concept_specifying_different_arguments_for_same_layer_neurons_problem;
+    concept_ann_interpretation_agent_based_model;
+    concept_xor_problem;
+    concept_single_layer_perceptron_solving_xor_problem;
+    concept_signal_activation_function;
+-> rrel_explored_relation:
+    rrel_activation_function;
+    rrel_input_matrix;
+    rrel_input_vector;
+    rrel_layer_neuron_threshold_vector;
+    rrel_layer_neuron_weight_coefficients_matrix;
+    rrel_pooling_window_size;
+    rrel_pooling_window_step;
+    rrel_layer_neuron_weighted_sums_vector;;
+*];;

@@ -1,0 +1,42 @@
+concept_underfitting_problem
+<- sc_node_class;
+=> nrel_main_idtf:
+    [Недообучение]
+    (* <- lang_ru;; *);
+    [Underfitting]
+    (* <- lang_en;; *);
+=> nrel_idtf:
+    [проблема недообучения](* <- lang_ru;; *);
+    [underfitting problem](* <- lang_en;; *);
+<- rrel_key_sc_element:
+    ...
+    (*
+    => nrel_main_idtf:
+        [Опр. (Недообучение)]
+        (* <- lang_ru;; *);
+        [Def. (Underfitting)]
+        (* <- lang_en;; *);;
+    <- definition;;
+    => nrel_sc_text_translation:
+        {
+        rrel_example:
+            [Недообучение — проблема, возникающая при обучении и.н.с., заключающаяся в том, что
+             сеть дает одинаково плохие результаты на обучающей и контрольной выборках. Чаще всего
+             такого рода проблема возникает при недостаточном времени, затраченном на обучение
+             модели. Однако это может быть вызвано и слишком простой архитектурой модели либо
+             малым размером обучающей выборки. Соответственно решение, которое может быть принято
+             ML-инженером, заключается в устранении этих недостатков: увеличение времени обучения,
+             использование модели с большим числом настраиваемых параметров, увеличение размера
+             обучающей выборки, а также уменьшение регуляризации и более тщательный отбор призна-
+             ков для обучающих примеров.]
+            (* <- lang_ru;; *)
+        };;
+    => nrel_using_constants:
+        {
+        concept_underfitting_problem;
+        concept_ann_training_action;
+        concept_ann_parameter;
+        training_sample
+        };;
+    *);
+<-rrel_explored_concept: section_subject_domain_of_learning_neural_networks;;
