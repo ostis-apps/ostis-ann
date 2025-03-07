@@ -10,4 +10,4 @@ RUN --mount=type=cache,target=/root/.cache/pip pip3 install -r requirements.txt
 
 COPY problem-solver/py/ ./problem-solver/py/
 
-ENTRYPOINT [ "python3", "./problem-solver/py/server.py"]
+ENTRYPOINT [ "python3", "./problem-solver/py/modules/server.py"]
