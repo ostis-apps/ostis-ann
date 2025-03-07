@@ -1,0 +1,36 @@
+action_interpret_ann_layer
+<- sc_node_class;
+=> nrel_main_idtf:
+    [действие интерпретации слоя и.н.с.](* <- lang_ru;; *);
+    [ann layer interpretation action](* <- lang_en;; *);
+<- rrel_key_sc_element:
+    ...
+    (*
+    => nrel_main_idtf:
+        [Опр. (действие интерпретации слоя и.н.с.)]
+        (* <- lang_ru;; *);
+        [Def. (ann layer interpretation action)]
+        (* <- lang_en;; *);;
+    <- definition;;
+    => nrel_sc_text_translation:
+        {
+        rrel_example:
+            [действие интерпретации слоя и.н.с. — действие интерпретации и.н.с., в ходе которого реализуется определенный метод, связанный с интерпретацией слоя и.н.с.]
+            (* <- lang_ru;; *)
+        };;
+    => nrel_using_constants:
+        {
+        action_interpret_ann_layer;
+        concept_layer;
+        action_interpret_ann;
+        concept_artificial_neural_network
+        };;
+    *);
+=> nrel_basic_decomposition: ...
+(*
+    <- sc_node_tuple;;
+    -> action_calculate_weighted_sum_of_all_neurons_of_layer;;
+    -> action_calculate_all_layer_neurons_activation_function;;
+    -> action_interpret_convolutional_layer;;
+    -> action_interpret_pooling_layer;;
+*);;

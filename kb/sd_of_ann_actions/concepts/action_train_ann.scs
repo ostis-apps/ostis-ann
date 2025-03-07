@@ -1,0 +1,34 @@
+action_train_ann
+<- sc_node_class;
+=> nrel_main_idtf:
+    [действие обучения и.н.с.](* <- lang_ru;; *);
+    [ann training action](* <- lang_en;; *);
+=> nrel_idtf:
+    [действие обучения искусственной нейронной сети](* <- lang_ru;; *);
+<- rrel_key_sc_element:
+    ...
+    (*
+    => nrel_main_idtf:
+        [Опр. (действие обучения и.н.с.)]
+        (* <- lang_ru;; *);
+        [Def. (ann training action)]
+        (* <- lang_en;; *);;
+    <- definition;;
+    => nrel_sc_text_translation:
+        {
+        rrel_example:
+            [действие обучения и.н.с. — действие, в ходе которого реализуется определенный метод обучения и.н.с. с заданными параметрами обучения и.н.с., методом оптимизации и функцией потерь.]
+            (* <- lang_ru;; *)
+        };;
+    => nrel_using_constants:
+        {
+        action_train_ann;
+        concept_artificial_neural_network
+        };;
+    *);
+<= nrel_sc_text_translation: ...
+(*
+    -> rrel_example: "file://images/ann_training_scg.png"(* => nrel_format: format_png;; *);;
+    -> [описание на языке SCg](* <- lang_ru;; *);;
+*);
+<= nrel_inclusion: action_configure_weight_coefficients_ann;;

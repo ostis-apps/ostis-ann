@@ -1,0 +1,22 @@
+rrel_result
+=> nrel_main_idtf:
+	[результат'] (* <- lang_ru;; *);
+	[result'] (* <- lang_en;; *);
+<- relation;
+<- sc_node_role_relation;
+<- binary_relation;
+<- oriented_relation;
+<- antireflexive_relation;
+<- asymmetric_relation;
+<- antitransitive_relation;
+=> nrel_first_domain: question;
+=> nrel_second_domain: concept_result;
+=> nrel_definitional_domain: ...
+(*
+    <= nrel_combination: ...
+    (*
+        <- sc_node_tuple;;
+        -> question;;
+        -> concept_result;;
+    *);;
+*);;

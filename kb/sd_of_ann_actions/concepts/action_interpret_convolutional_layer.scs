@@ -1,0 +1,34 @@
+action_interpret_convolutional_layer
+=> nrel_main_idtf:
+    [действие интерпретации свёрточного слоя](* <- lang_ru;; *);
+    [action of interpretation the convolutional layer](* <- lang_en;; *);
+<- rrel_key_sc_element:
+    ...
+    (*
+    => nrel_main_idtf:
+        [Опр. (действие интерпретации свёрточного слоя)]
+        (* <- lang_ru;; *);
+        [Def. (action of interpretation the convolutional layer)]
+        (* <- lang_en;; *);;
+    <- definition;;
+    => nrel_sc_text_translation:
+        {
+        rrel_example:
+            [действие интерпретации свёрточного слоя — действие интерпретации слоя и.н.с., в ходе которого реализуется определенный метод, связанный с интерпретацией свёрточного слоя и.н.с.]
+            (* <- lang_ru;; *)
+        };;
+    => nrel_using_constants:
+        {
+        action_interpret_convolutional_layer;
+        action_interpret_ann_layer;
+        concept_layer;
+        concept_artificial_neural_network
+        };;
+    *);
+=> nrel_arguments_of_action: ...
+(*
+    -> rrel_layer_neuron_weighted_sums_vector;;
+    -> rrel_layer_neuron_threshold_vector;;
+    -> rrel_activation_function;;
+    -> rrel_result;;
+*);;

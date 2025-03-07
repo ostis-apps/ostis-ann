@@ -1,0 +1,38 @@
+action_design_ann
+<- sc_node_class;
+=> nrel_main_idtf:
+    [действие проектирования и.н.с.](* <- lang_ru;; *);
+    [ann design action](* <- lang_en;; *);
+=> nrel_idtf:
+    [действие конфигурации и.н.с.](* <- lang_ru;; *);
+    [ann configuration action](* <- lang_en;; *);
+<- rrel_key_sc_element:
+    ...
+    (*
+    => nrel_main_idtf:
+        [Опр. (действие проектирования и.н.с.)]
+        (* <- lang_ru;; *);
+        [Def. (ann design action)]
+        (* <- lang_en;; *);;
+    <- definition;;
+    => nrel_sc_text_translation:
+        {
+        rrel_example:
+            [действие проектирования и.н.с. — действие с и.н.с., в ходе которого реализуется определенный метод, связанный с проектированием и.н.с.]
+            (* <- lang_ru;; *)
+        };;
+    => nrel_using_constants:
+        {
+        action_design_ann;
+        action_process_ann;
+        concept_artificial_neural_network
+        };;
+    *);
+=> nrel_decomposition: ...
+(*
+    <- sc_node_tuple;;
+    <- action_create_ann;;
+    <- action_edit_ann;;
+    <- action_remove_ann;;
+    <- action_configure_layer_ann;;
+*);;

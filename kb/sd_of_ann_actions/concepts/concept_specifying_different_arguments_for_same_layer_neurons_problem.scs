@@ -1,0 +1,17 @@
+concept_specifying_different_arguments_for_same_layer_neurons_problem
+<- sc_node_class;
+=> nrel_main_idtf:
+    [проблема задания различных аргументов для нейронов одного слоя](* <- lang_ru;; *);
+    [problem of specifying different arguments for neurons of the same layer](* <- lang_en;; *);
+=> nrel_explanation:
+    [присутствует необходимость спецификации соответствующего действия(задание различных аргу-
+     ментов для нейронов одного слоя)](* <- lang_ru;; *);
+=> nrel_note: ...
+(*
+    <= nrel_sc_text_translation: ...
+    (*
+        -> [нерешённая на данный момент](* <- lang_ru;; *);;
+        => nrel_reason:
+            [слабая изученность нейросетевых моделей решения задач подобного рода](* <- lang_ru;; *);;
+    *);;
+*);;

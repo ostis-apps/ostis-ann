@@ -1,9 +1,12 @@
 import argparse
+
 from sc_kpm import ScServer
 
 from modules.UseProblemSolvingMethodModule.annInterpreter.UseProblemSolvingMethodModule import UseProblemSolvingMethodModule
 from modules.messageProcessingModule.FnnAgentProcessingModule import FnnAgentProcessingModule
 from modules.messageProcessingModule.FnnTrainerProcessingModule import FnnTrainerProcessingModule
+from modules.fnnProcessingModule.fnnTrainer.FnnTrainingModule import FnnTrainingModule
+
 from pathlib import Path
 
 SC_SERVER_PROTOCOL = "protocol"
@@ -24,6 +27,7 @@ def main(args: dict):
             FnnAgentProcessingModule(),
             FnnTrainerProcessingModule(),
             UseProblemSolvingMethodModule()
+            FnnTrainingModule()
         ]
         server.add_modules(*modules)
         with server.register_modules():

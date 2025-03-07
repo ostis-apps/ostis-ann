@@ -1,0 +1,21 @@
+concept_signal_activation_function
+<- sc_node_class;
+=> nrel_main_idtf:
+    [сигнальная функция активации](* <- lang_ru;; *);
+    [signal activation function](* <- lang_en;; *);
+<= rrel_example: activation_function;
+<= nrel_sc_text_translation: ...
+(*
+    -> rrel_example: "file://images/strong_or_ann.png"(* => nrel_format: format_png;; *);;
+    -> [схема](* <- lang_ru;; *);;
+*);
+<= nrel_sc_text_translation: ...
+(*
+    -> rrel_example: "file://images/signal_function_formula.png"(* => nrel_format: format_png;; *);;
+    -> [формула](* <- lang_ru;; *);;
+*);
+<= nrel_sc_text_translation: ...
+(*
+    -> rrel_example: "file://images/signal_function_def.png"(* => nrel_format: format_png;; *);;
+    <= nrel_inclusion: logical_formula;;
+*);;
