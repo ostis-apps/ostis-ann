@@ -34,6 +34,18 @@ public:
   static inline ScKeynode const nrel_measurement{"nrel_measurement", ScType::NodeConstNoRole};
 
   static inline ScKeynode const lang_en{"lang_en", ScType::NodeConstClass};
+
+  static inline ScKeynode const action_recommend_training_parameters{"action_recommend_training_parameters", ScType::NodeConstClass};
+
+  static inline ScKeynode const rrel_number_epochs{"rrel_number_epochs", ScType::NodeConstRole};
+
+  static inline ScKeynode const rrel_learning_rate{"rrel_learning_rate", ScType::NodeConstRole};
+
+  static inline ScKeynode const rrel_batch_size{"rrel_batch_size", ScType::NodeConstRole};
+
+  static inline ScKeynode const rrel_loss{"rrel_loss", ScType::NodeConstRole};
+
+  static inline ScKeynode const rrel_accuracy{"rrel_accuracy", ScType::NodeConstRole};
 };
 
-}  // namespace commonModule
+}
