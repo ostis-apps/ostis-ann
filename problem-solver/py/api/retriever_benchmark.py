@@ -107,4 +107,4 @@ sns.heatmap(results_df.iloc[:,5:].T, annot=True,square = True,
             )
 plt.xticks(rotation=45)
 
-plt.show
+plt.show()
