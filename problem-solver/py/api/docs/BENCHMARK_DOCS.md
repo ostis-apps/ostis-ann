@@ -1,9 +1,20 @@
 # Оценка работы API RAG-приложения
 ## Главные библиотеки и подходы в оценке
 - ### **sklearn (cosine_similarity)**
+- ### **bleu_score**
+- ### **f1 Score**
 - ### **requests**
 
 ## Методы оценки
+
+- ### Функция для избавления от знаков препинания и заглавных букв.
+
+```python
+def preprocess_text(text):
+    text = re.sub(r'[^\w\s]',"",text)
+    text = text.lower()
+    return text
+```
 
 - ### **cosine_similarity**
 Функция, находящая косинусное расстояние между полученным результатом и итоговый результатом. 
@@ -19,6 +30,53 @@ def calculate_cos_query(response,reference):
 - ### **requests**
 ***Библиотека, которую будем использовать для обращения к нашему приложению по url-адрессу.***
 
+- ### **Bleu score**
+
+Считает насколько предложение соответствует n-грамме. В нашем случае n=2. Это значит, мы проверяем, сколько последовательностей из 2 слов в ответе системы совпадают с последовательностями из 2 слов в ожидаемом ответе.
+``` python
+def calculate_bleu_score(response,reference):
+    reference_tokens = reference.split()
+    responce_tokens = response.split()
+    smoothin_func = SmoothingFunction().method1
+    score = sentence_bleu([reference_tokens],responce_tokens,weights=(0.5,0.5,0,0),smoothing_function=smoothin_func)
+    return score
+```
+
+В коде weights = (0.5,0.5,0,0) означают значимость совпадения слов в последовательности из 4 слов.
+
+[Подробнее об этом на официальном сайте библиотеки nltk](https://www.nltk.org/_modules/nltk/translate/bleu_score.html)
+
+- ### **F1 score**
+
+F1 строится на двуз основных понятиях:
+- Точность (precision)
+= какая доля от предсказанных результатов соответствует желаемым.
+
+- Полнота (recall)
+= какая доля от предсказанных результатов была найдена из всех возможных
+
+И из этих чисел находят гармоническое среднее
+
+``` python
+def calculate_f1_score(response,reference):
+    ref_tokens = set(reference)
+    res_tokens = set(response)
+    common = ref_tokens.intersection(res_tokens)
+    
+    if len(common) == 0:
+        return 0.0
+    
+    precision = len(common) / len(res_tokens)
+    recall = len(common) / len(ref_tokens)
+    f1 = 2 * (precision * recall) / (precision + recall)
+    return f1
+```
+
+### ___F1 Score=2⋅(Precision*Recall)/(Precision+Recall)___
+​
+
+[Подробнее об этом на вики](https://en.wikipedia.org/wiki/F-score)
+
 ## Алгоритм оценки rag-приложения
 
 ### 1.Инициализируем свой набор данных
@@ -31,9 +89,8 @@ def calculate_cos_query(response,reference):
 ``` python
 dataset = [
     {
-        "question": "Как изменения в информационной революции повлияли на восприятие новостей?",
-        "answer": "Информационная революция привела к тому, что всё больше людей начинают зависеть от онлайн-новостей для получения информации, использующих такие термины как «цифровые аборигены»" 
-        ...
+        "question": "Что изучает механика?",
+        "answer": "Механика изучает механическое движение тел, то есть изменение их положения в пространстве относительно других тел с течением времени."
     }
     ...
 ]
@@ -63,11 +120,22 @@ for example in dataset:
 ```
 ## 4.Оценка ответов
 ```python
- cosine_answer = calculate_cos_query(res['answer'],example['answer'])
+    preprocessed_reference = preprocess_text(example['answer'])
+
+    ...
     
-    cosine_distance.append({
+    answer_as_example = preprocess_text(answer_as_example)
+    
+    cosine_answer = calculate_cos_query(answer_as_example,preprocessed_reference)
+    bleu_score = calculate_bleu_score(answer_as_example,preprocessed_reference)
+    f1 = calculate_f1_score(answer_as_example,preprocessed_reference)
+    
+    metrics.append({
         "cosine_answer":cosine_answer,
+        "bleu_score":bleu_score,
+        "f1":f1
     })   
+    ...
 ```
 ## 5.Таблица результатов
 
