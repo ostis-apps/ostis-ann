@@ -1,5 +1,7 @@
 from sklearn.metrics.pairwise import cosine_similarity
 from nltk.translate.bleu_score import sentence_bleu,SmoothingFunction
+from sklearn.metrics import jaccard_score
+from nltk.translate.meteor_score import meteor_score
 
 from chroma_utils import embedding_function
 import seaborn as sns
@@ -22,6 +24,12 @@ def preprocess_text(text):
     text = text.lower()
     return text
 
+def calculate_jaccard_similarity(response, reference):
+    response_set = set(response.split())
+    reference_set = set(reference.split())
+    intersection = len(response_set.intersection(reference_set))
+    union = len(response_set.union(reference_set))
+    return intersection / union if union != 0 else 0
 
 def calculate_cos_query(response,reference):
     resp = embedding_function.embed_query(response)
@@ -124,12 +132,16 @@ for example in dataset:
     cosine_answer = calculate_cos_query(answer_as_example,preprocessed_reference)
     bleu_score = calculate_bleu_score(answer_as_example,preprocessed_reference)
     f1 = calculate_f1_score(answer_as_example,preprocessed_reference)
-    
-    metrics.append({
-        "cosine_answer":cosine_answer,
-        "bleu_score":bleu_score,
-        "f1":f1
-    })   
+    jaccard = calculate_jaccard_similarity(answer_as_example, preprocessed_reference)
+
+    metrics.append(
+        {
+            "cosine_answer": cosine_answer,
+            "bleu_score": bleu_score,
+            "f1": f1,
+            "jaccard_similarity": jaccard,
+        }
+    )
     
     system_answers.append({
         "user_input":example['question'],
