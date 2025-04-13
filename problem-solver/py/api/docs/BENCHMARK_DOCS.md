@@ -1,9 +1,10 @@
 # Оценка работы API RAG-приложения
 ## Главные библиотеки и подходы в оценке
 - ### **sklearn (cosine_similarity)**
-- ### **bleu_score**
-- ### **f1 Score**
 - ### **requests**
+- ### **bleu_score**
+- ### **Jaccard similarity**
+- ### **f1 Score**
 
 ## Методы оценки
 
@@ -27,12 +28,18 @@ def calculate_cos_query(response,reference):
     result = cosine_similarity(resp,refr)
     return result[0][0]
 ```
+
+
 - ### **requests**
 ***Библиотека, которую будем использовать для обращения к нашему приложению по url-адрессу.***
+
 
 - ### **Bleu score**
 
 Считает насколько предложение соответствует n-грамме. В нашем случае n=2. Это значит, мы проверяем, сколько последовательностей из 2 слов в ответе системы совпадают с последовательностями из 2 слов в ожидаемом ответе.
+
+*Стоит отметить, что данный метод очень требователен к самим словам. То есть он не учитывает синонимичность слов.*
+
 ``` python
 def calculate_bleu_score(response,reference):
     reference_tokens = reference.split()
@@ -46,6 +53,22 @@ def calculate_bleu_score(response,reference):
 
 [Подробнее об этом на официальном сайте библиотеки nltk](https://www.nltk.org/_modules/nltk/translate/bleu_score.html)
 
+
+- ### **Jaccard similarity**
+Данный метод считает насколько полученный ответ соответствует эталонному.
+ 
+*Стоит отметить, что данный метод очень требователен к самим словам. То есть он не учитывает синонимичность слов.*
+
+``` python
+def calculate_jaccard_similarity(response, reference):
+    response_set = set(response.split())
+    reference_set = set(reference.split())
+    intersection = len(response_set.intersection(reference_set))
+    union = len(response_set.union(reference_set))
+    return intersection / union if union != 0 else 0
+```
+
+
 - ### **F1 score**
 
 F1 строится на двуз основных понятиях:
@@ -56,6 +79,8 @@ F1 строится на двуз основных понятиях:
 = какая доля от предсказанных результатов была найдена из всех возможных
 
 И из этих чисел находят гармоническое среднее
+
+*Стоит отметить, что данный метод очень требователен к самим словам. То есть он не учитывает синонимичность слов.*
 
 ``` python
 def calculate_f1_score(response,reference):
@@ -129,23 +154,25 @@ for example in dataset:
     cosine_answer = calculate_cos_query(answer_as_example,preprocessed_reference)
     bleu_score = calculate_bleu_score(answer_as_example,preprocessed_reference)
     f1 = calculate_f1_score(answer_as_example,preprocessed_reference)
-    
-    metrics.append({
-        "cosine_answer":cosine_answer,
-        "bleu_score":bleu_score,
-        "f1":f1
-    })   
+    jaccard = calculate_jaccard_similarity(answer_as_example, preprocessed_reference)
+
+    metrics.append(
+        {
+            "cosine_answer": cosine_answer,
+            "bleu_score": bleu_score,
+            "f1": f1,
+            "jaccard_similarity": jaccard,
+        }
+    )
     ...
 ```
 ## 5.Таблица результатов
 
 ![](imgs/table_of_API.png)
 
-
-
 ------------------------
 
-# ***Оценка работы retriever от всей системы***
+# ***Оценка работы retriever вне всей системы***
 ## Главные библиотеки и подходы в оценке
 - ### **ragas (NonLLMContextPrecisionWithReference)**
 - ### **ragas (NonLLMContextRecall)**
