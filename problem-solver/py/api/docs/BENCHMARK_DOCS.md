@@ -3,6 +3,7 @@
 - ### **sklearn (cosine_similarity)**
 - ### **requests**
 - ### **bleu_score**
+- ### **meteor score**
 - ### **Jaccard similarity**
 - ### **f1 Score**
 
@@ -53,6 +54,15 @@ def calculate_bleu_score(response,reference):
 
 [Подробнее об этом на официальном сайте библиотеки nltk](https://www.nltk.org/_modules/nltk/translate/bleu_score.html)
 
+- ### **Meteor score**
+Оценивает семантическую схожесть предложений. Что позволяет оценить то, насколько смысл одного предложения совпадает со смыслом другого. 
+Не самым лучшим образом работает с русским языком. (одни и те же строки, но на разных языках выдают разную точность)
+
+``` python
+
+def meteor(response,reference):
+    return meteor_score([reference.split()],response.split())
+```
 
 - ### **Jaccard similarity**
 Данный метод считает насколько полученный ответ соответствует эталонному.
@@ -101,6 +111,9 @@ def calculate_f1_score(response,reference):
 ​
 
 [Подробнее об этом на вики](https://en.wikipedia.org/wiki/F-score)
+
+
+
 
 ## Алгоритм оценки rag-приложения
 
@@ -151,18 +164,10 @@ for example in dataset:
     
     answer_as_example = preprocess_text(answer_as_example)
     
-    cosine_answer = calculate_cos_query(answer_as_example,preprocessed_reference)
-    bleu_score = calculate_bleu_score(answer_as_example,preprocessed_reference)
-    f1 = calculate_f1_score(answer_as_example,preprocessed_reference)
-    jaccard = calculate_jaccard_similarity(answer_as_example, preprocessed_reference)
+    *Подсчёт указанных в самом начале метрик*
 
     metrics.append(
-        {
-            "cosine_answer": cosine_answer,
-            "bleu_score": bleu_score,
-            "f1": f1,
-            "jaccard_similarity": jaccard,
-        }
+        * Результаты метрик *
     )
     ...
 ```
