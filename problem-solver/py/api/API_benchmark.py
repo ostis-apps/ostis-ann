@@ -1,28 +1,32 @@
+#metrics
 from sklearn.metrics.pairwise import cosine_similarity
 from nltk.translate.bleu_score import sentence_bleu,SmoothingFunction
-from sklearn.metrics import jaccard_score
 from nltk.translate.meteor_score import meteor_score
 
+#utils
 from chroma_utils import embedding_function
 import seaborn as sns
 import matplotlib.pyplot as plt
-
 import requests
 import pandas as pd
 import numpy as np
 import re
 
-def calculate_bleu_score(response,reference):
-    reference_tokens = reference.split()
-    responce_tokens = response.split()
-    smoothin_func = SmoothingFunction().method1
-    score = sentence_bleu([reference_tokens],responce_tokens,weights=(0.5,0.5,0,0),smoothing_function=smoothin_func)
-    return score
-
+#metric functions
 def preprocess_text(text):
     text = re.sub(r'[^\w\s]',"",text)
     text = text.lower()
     return text
+
+def calculate_bleu_score(response,reference):
+     reference_tokens = reference.split()
+     responce_tokens = response.split()
+     smoothin_func = SmoothingFunction().method1
+     score = sentence_bleu([reference_tokens],responce_tokens,weights=(0.5,0.5,0,0),smoothing_function=smoothin_func)
+     return score
+
+def meteor(response,reference):
+    return meteor_score([reference.split()],response.split())
 
 def calculate_jaccard_similarity(response, reference):
     response_set = set(response.split())
@@ -43,15 +47,13 @@ def calculate_f1_score(response,reference):
     ref_tokens = set(reference)
     res_tokens = set(response)
     common = ref_tokens.intersection(res_tokens)
-    
-    if len(common) == 0:
-        return 0.0
-    
+      
     precision = len(common) / len(res_tokens)
     recall = len(common) / len(ref_tokens)
     f1 = 2 * (precision * recall) / (precision + recall)
     return f1
 
+#dataset
 file_names = ["kinematics.pdf"]
 
 dataset = [
@@ -89,13 +91,14 @@ dataset = [
     }
 ]
 
-
+#loading file
 for filename in file_names:
     with open(filename, "rb") as f:
         files = {'file': (f.name,f,'pdf')}
         response = requests.post("http://localhost:8000/upload-doc", files=files)
         assert response.status_code == 200
 
+#creating a new dataset
 system_answers = []
 metrics = []
 
@@ -118,28 +121,26 @@ for example in dataset:
     #So we have to 'crop' it to delete some text, that may create a trouble with accuary of our answer 
 
     preprocessed_reference = preprocess_text(example['answer'])
-    
     answer_list = res['answer'].split()
     length_of_reference = len(preprocessed_reference.split())
-
     amount_of_extra_words = 4
-    
     #Our response, the size of the expected one
     answer_as_example = " ".join(answer_list[:length_of_reference+amount_of_extra_words])
-
     answer_as_example = preprocess_text(answer_as_example)
     
     cosine_answer = calculate_cos_query(answer_as_example,preprocessed_reference)
     bleu_score = calculate_bleu_score(answer_as_example,preprocessed_reference)
     f1 = calculate_f1_score(answer_as_example,preprocessed_reference)
     jaccard = calculate_jaccard_similarity(answer_as_example, preprocessed_reference)
-
+    meteor_val = meteor(answer_as_example,preprocessed_reference)
+    
     metrics.append(
         {
             "cosine_answer": cosine_answer,
             "bleu_score": bleu_score,
             "f1": f1,
             "jaccard_similarity": jaccard,
+            "meteor":meteor_val
         }
     )
     
@@ -148,7 +149,9 @@ for example in dataset:
         "system_answer":answer_as_example,
         "reference_answer":example['answer'],
     })
+
     
+#dataframes
 answers_df = pd.DataFrame(system_answers)
 metrics_df = pd.DataFrame(metrics)
 results_df = pd.concat([answers_df,metrics_df],axis=1)
