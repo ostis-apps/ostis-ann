@@ -181,6 +181,7 @@ for example in dataset:
 ## Главные библиотеки и подходы в оценке
 - ### **ragas (NonLLMContextPrecisionWithReference)**
 - ### **ragas (NonLLMContextRecall)**
+- ### f1_score
 - ### **sklearn (cosine_similarity)**
 
 ## Методы оценки
@@ -196,6 +197,20 @@ def calculate_cos_query(response,reference):
     result = cosine_similarity(resp,refr)
     return result[0][0]
 ```
+- ### **f1_score**
+Функция для нахождения среднего гармонического между Precision, Recall
+``` python
+def calculate_f1_score(response,reference):
+    ref_tokens = set(reference)
+    res_tokens = set(response)
+    common = ref_tokens.intersection(res_tokens)
+      
+    precision = len(common) / len(res_tokens)
+    recall = len(common) / len(ref_tokens)
+    f1 = 2 * (precision * recall) / (precision + recall)
+    return precision,recall,f1
+```
+
 - ### NonLLMContextPrecisionWithReference
     [Ссылка на официальную документацию по этому классу](https://docs.ragas.io/en/stable/concepts/metrics/available_metrics/context_precision/#non-llm-based-context-precision)
 - ### NonLLMContextRecall
@@ -237,7 +252,7 @@ temp_vectorstore.add_documents(split_documents)
 ## 3.Этап создания нового набора данных
 ``` python
 system_answers = []
-cos_distance = []
+results_of_our_metrics = []
 for example in eval_dataset:  
     
     question = example["user_input"]  
@@ -247,18 +262,24 @@ for example in eval_dataset:
     response = process_question_with_rag(question)
     
     retrieved_contexts = [i.page_content for i in response['context']]
-    
-    cossim = calculate_cos(response['answer'],reference)
-    cos_distance.append(cossim)
+
+    precision,recall,f1_score = calculate_f1_score("".join(retrieved_contexts),"".join(reference_contexts))
+    cos_context = calculate_cos_query("".join(retrieved_contexts),"".join(reference_contexts))
+    results_of_our_metrics.append({"cosine_context":cos_context,
+                                   "precision":precision,
+                                   "recall":recall,
+                                   "f1_score":f1_score})
     
     system_answers.append({"user_input": question,
                            "reference":reference,
                            "response": response['answer'],
                            "retrieved_contexts":retrieved_contexts,
                            "reference_contexts": reference_contexts})
+            
 ```
 ## 4.Этап оценки нового набора данных
 ``` python
+...
 answers_df = pd.DataFrame(system_answers)
 answers_df.to_csv("./benchmark/system_answers.csv", index=False)
 eval_dataset_for_metrics = EvaluationDataset.from_pandas(answers_df)
@@ -267,13 +288,13 @@ metrics = [
     NonLLMContextRecall()
 ]
 
-results = evaluate(dataset=eval_dataset_for_metrics, metrics=metrics)
+results_of_ragas_metrics = evaluate(dataset=eval_dataset_for_metrics, metrics=metrics)
+...
 
-results_df = results.to_pandas()
-results_df['cosine_similarity'] = cos_distance
 ```
 ## 5.Этап построения таблицы
 ``` python
+...
 sns.heatmap(results_df.iloc[:,5:].T, annot=True,linewidths= 2,square = True,
             cmap="Blues",
             )
