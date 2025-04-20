@@ -52,3 +52,4 @@ api/chroma_db
 benchmark/
 .ipynb_checkpoints/
 *.pdf
+*.ipynb
