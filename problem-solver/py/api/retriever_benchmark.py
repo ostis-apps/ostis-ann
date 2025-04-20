@@ -26,6 +26,15 @@ def calculate_cos_query(response,reference):
     result = cosine_similarity(resp,refr)
     return result[0][0]
 
+def calculate_f1_score(response,reference):
+    ref_tokens = set(reference)
+    res_tokens = set(response)
+    common = ref_tokens.intersection(res_tokens)
+      
+    precision = len(common) / len(res_tokens)
+    recall = len(common) / len(ref_tokens)
+    f1 = 2 * (precision * recall) / (precision + recall)
+    return precision,recall,f1
 
 temp_dir = tempfile.TemporaryDirectory()
 
@@ -58,7 +67,7 @@ def process_question_with_rag(question: str, chat_history: list = []):
     return response
 
 system_answers = []
-cos_distance = []
+results_of_our_metrics = []
 for example in eval_dataset:  
     
     question = example["user_input"]  
@@ -68,20 +77,21 @@ for example in eval_dataset:
     response = process_question_with_rag(question)
     
     retrieved_contexts = [i.page_content for i in response['context']]
-    
-    cos_answer = calculate_cos_query(response['answer'],reference)
+
+    precision,recall,f1_score = calculate_f1_score("".join(retrieved_contexts),"".join(reference_contexts))
     cos_context = calculate_cos_query("".join(retrieved_contexts),"".join(reference_contexts))
-    cos_distance.append({"cosine_answer":cos_answer,
-                         "cosine_context":cos_context})
+    results_of_our_metrics.append({"cosine_context":cos_context,
+                                   "precision":precision,
+                                   "recall":recall,
+                                   "f1_score":f1_score})
     
     system_answers.append({"user_input": question,
                            "reference":reference,
                            "response": response['answer'],
                            "retrieved_contexts":retrieved_contexts,
                            "reference_contexts": reference_contexts})
+
     
-#Подсчитываем метрики
-   
 answers_df = pd.DataFrame(system_answers)
 answers_df.to_csv("./benchmark/system_answers.csv", index=False)
 eval_dataset_for_metrics = EvaluationDataset.from_pandas(answers_df)
@@ -90,14 +100,15 @@ metrics = [
     NonLLMContextRecall()
 ]
 
-results = evaluate(dataset=eval_dataset_for_metrics, metrics=metrics)
+results_of_ragas_metrics = evaluate(dataset=eval_dataset_for_metrics, metrics=metrics)
 
-cos = pd.DataFrame(cos_distance)
+results_of_our_metrics_df = pd.DataFrame(results_of_our_metrics)
 
 #Конвертируем в DataFrame
 
-results_df = results.to_pandas()
-results_df = pd.concat([results_df,cos],axis=1)
+results_of_ragas_metrics_df = results_of_ragas_metrics.to_pandas()
+
+results_df = pd.concat([results_of_ragas_metrics_df,results_of_our_metrics_df],axis=1)
 #Сохрнаяем результаты в файл
 results_df.to_csv("./benchmark/rag_system_metrics.csv", index=False)
 
