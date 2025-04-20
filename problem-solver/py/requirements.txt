@@ -20,4 +20,4 @@ matplotlib
 seaborn
 datasets
 scikit-learn
-
+nltk
