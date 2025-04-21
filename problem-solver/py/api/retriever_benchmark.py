@@ -1,24 +1,29 @@
-import tempfile
-
+#datasets
 from ragas import EvaluationDataset, evaluate
-from ragas.metrics import NonLLMContextPrecisionWithReference, NonLLMContextRecall
-
 from langchain.schema import Document
-from langchain_utils import get_rag_chain
-from langchain_chroma import Chroma
-
 from datasets import load_dataset
-from chroma_utils import embedding_function,text_splitter
+from langchain_chroma import Chroma
+from datasets import load_dataset
+
+#metrics
+from ragas.metrics import NonLLMContextPrecisionWithReference, NonLLMContextRecall
 from sklearn.metrics.pairwise import cosine_similarity
 
+#graphics
 import seaborn as sns
 import matplotlib.pyplot as plt
 
+#utils
+from langchain_utils import get_rag_chain
+from chroma_utils import embedding_function,text_splitter
 import pandas as pd
 import numpy as np
+from typing import Tuple
+import tempfile
 
-#функция для подсчёта косинусного расстояния
-def calculate_cos_query(response,reference):
+
+def calculate_cos_query(response: str,reference: str) -> float:
+    '''Calculate cosine similarity between two strings(semantic-level)'''
     resp = embedding_function.embed_query(response)
     refr = embedding_function.embed_query(reference)
     resp = np.array(resp).reshape(1, -1) 
@@ -26,7 +31,8 @@ def calculate_cos_query(response,reference):
     result = cosine_similarity(resp,refr)
     return result[0][0]
 
-def calculate_f1_score(response,reference):
+def calculate_f1_score(response: str,reference: str) -> Tuple[float,float,float]:
+    '''Calculate f1 score (word-level)'''
     ref_tokens = set(reference)
     res_tokens = set(response)
     common = ref_tokens.intersection(res_tokens)
@@ -46,7 +52,7 @@ dataset = load_dataset(
 
 eval_dataset = dataset["eval"].select(range(10))
 
-#Cоздание временной Chroma
+#creating temporary Chromadb
 
 documents = [Document(page_content="".join(example['retrieved_contexts'])) for example in eval_dataset]
 
@@ -60,7 +66,7 @@ retriever = temp_vectorstore.as_retriever(search_kwargs = {"k":2})
 
 rag_chain = get_rag_chain(model="llama3.2",retriever=retriever) 
 
-#Создаём собственный датасет, который будет оцениваться с помощью метрик
+#creating our dataset for evaluation
 
 def process_question_with_rag(question: str, chat_history: list = []):
     response = rag_chain.invoke({"input": question, "chat_history": chat_history})
@@ -104,15 +110,15 @@ results_of_ragas_metrics = evaluate(dataset=eval_dataset_for_metrics, metrics=me
 
 results_of_our_metrics_df = pd.DataFrame(results_of_our_metrics)
 
-#Конвертируем в DataFrame
-
+#to dataframe
 results_of_ragas_metrics_df = results_of_ragas_metrics.to_pandas()
 
 results_df = pd.concat([results_of_ragas_metrics_df,results_of_our_metrics_df],axis=1)
-#Сохрнаяем результаты в файл
+
+#saving
 results_df.to_csv("./benchmark/rag_system_metrics.csv", index=False)
 
-
+#diagramm
 sns.heatmap(results_df.iloc[:,5:].T, annot=True,square = True,
             cmap="Blues",
             )

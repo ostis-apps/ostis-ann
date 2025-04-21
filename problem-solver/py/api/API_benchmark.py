@@ -5,45 +5,61 @@ from nltk.translate.meteor_score import meteor_score
 
 #utils
 from chroma_utils import embedding_function
-import seaborn as sns
-import matplotlib.pyplot as plt
 import requests
 import pandas as pd
 import numpy as np
+from typing import Dict
+from tqdm import tqdm
 import re
 
+#graphics
+import seaborn as sns
+import matplotlib.pyplot as plt
+
+
 #metric functions
-def preprocess_text(text):
+def preprocess_text(text: str) -> str:
+    '''Preprocess text'''
     text = re.sub(r'[^\w\s]',"",text)
     text = text.lower()
     return text
 
-def calculate_bleu_score(response,reference):
-     reference_tokens = reference.split()
-     responce_tokens = response.split()
-     smoothin_func = SmoothingFunction().method1
-     score = sentence_bleu([reference_tokens],responce_tokens,weights=(0.5,0.5,0,0),smoothing_function=smoothin_func)
-     return score
+def calculate_bleu_score(response: str,reference: str) -> float:
+    '''Calculate the bleu  n-gramm where n=2(word-level)'''
+    reference_tokens = reference.split()
+    responce_tokens = response.split()
+    
+    smoothin_func = SmoothingFunction().method1
+    score = sentence_bleu([reference_tokens],responce_tokens,weights=(0.5,0.5,0,0),smoothing_function=smoothin_func)
+    return score
 
-def meteor(response,reference):
+def meteor(response: str,reference: str) -> float:
+    '''Calculate METEOR score (word-level + synonyms)'''
     return meteor_score([reference.split()],response.split())
 
-def calculate_jaccard_similarity(response, reference):
+def calculate_jaccard_similarity(response: str, reference: str) -> float:
+    '''Calculate jaccard similarity (word-level)'''
     response_set = set(response.split())
     reference_set = set(reference.split())
+    
     intersection = len(response_set.intersection(reference_set))
     union = len(response_set.union(reference_set))
+    
     return intersection / union if union != 0 else 0
 
-def calculate_cos_query(response,reference):
+def calculate_cos_query(response: str,reference: str) -> float:
+    '''Calculate cosine similarity between two strings(semantic-level)'''
     resp = embedding_function.embed_query(response)
     refr = embedding_function.embed_query(reference)
+    
     resp = np.array(resp).reshape(1, -1) 
     refr = np.array(refr).reshape(1, -1)
+    
     result = cosine_similarity(resp,refr)
     return result[0][0]
 
-def calculate_f1_score(response,reference):
+def calculate_f1_score(response: str,reference: str) -> float:
+    '''Calculate f1 score (word-level)'''
     ref_tokens = set(reference)
     res_tokens = set(response)
     common = ref_tokens.intersection(res_tokens)
@@ -52,6 +68,23 @@ def calculate_f1_score(response,reference):
     recall = len(common) / len(ref_tokens)
     f1 = 2 * (precision * recall) / (precision + recall)
     return f1
+
+#all_metrics
+def calculate_all_metrics(response: str,reference: str) -> Dict[str,float]:
+    '''Calculate all metrics and return dictionary of them'''
+    cosine_answer = calculate_cos_query(response,reference)
+    bleu_score = calculate_bleu_score(response,reference)
+    f1 = calculate_f1_score(response,reference)
+    jaccard = calculate_jaccard_similarity(response, reference)
+    meteor_val = meteor(response,reference)
+    return {"cosine_answer": cosine_answer,
+            "bleu_score": bleu_score,
+            "f1": f1,
+            "jaccard_similarity": jaccard,
+            "meteor":meteor_val
+    }
+
+
 
 #dataset
 file_names = ["kinematics.pdf"]
@@ -91,7 +124,7 @@ dataset = [
     }
 ]
 
-#loading file
+# loading files
 for filename in file_names:
     with open(filename, "rb") as f:
         files = {'file': (f.name,f,'pdf')}
@@ -107,7 +140,7 @@ headers = {
         'Content-Type': 'application/json'
     }
 
-for example in dataset:
+for example in tqdm(dataset):
     data = {
         "question":example['question'],
         "model":"llama3.2"
@@ -125,28 +158,16 @@ for example in dataset:
     length_of_reference = len(preprocessed_reference.split())
     amount_of_extra_words = 4
     #Our response, the size of the expected one
-    answer_as_example = " ".join(answer_list[:length_of_reference+amount_of_extra_words])
-    answer_as_example = preprocess_text(answer_as_example)
+    preprocessed_answer = " ".join(answer_list[:length_of_reference+amount_of_extra_words])
+    preprocessed_answer = preprocess_text(preprocessed_answer)
     
-    cosine_answer = calculate_cos_query(answer_as_example,preprocessed_reference)
-    bleu_score = calculate_bleu_score(answer_as_example,preprocessed_reference)
-    f1 = calculate_f1_score(answer_as_example,preprocessed_reference)
-    jaccard = calculate_jaccard_similarity(answer_as_example, preprocessed_reference)
-    meteor_val = meteor(answer_as_example,preprocessed_reference)
+    results_of_metrics = calculate_all_metrics(preprocessed_answer,preprocessed_reference)
     
-    metrics.append(
-        {
-            "cosine_answer": cosine_answer,
-            "bleu_score": bleu_score,
-            "f1": f1,
-            "jaccard_similarity": jaccard,
-            "meteor":meteor_val
-        }
-    )
+    metrics.append(results_of_metrics)
     
     system_answers.append({
         "user_input":example['question'],
-        "system_answer":answer_as_example,
+        "system_answer":res['answer'],
         "reference_answer":example['answer'],
     })
 
@@ -157,6 +178,7 @@ metrics_df = pd.DataFrame(metrics)
 results_df = pd.concat([answers_df,metrics_df],axis=1)
 results_df.to_csv("./benchmark/API_results.csv",index=False)
 
+#diagramm
 sns.heatmap(results_df.iloc[:,3:].T, annot=True,square = True,
             cmap="Blues",
             )
