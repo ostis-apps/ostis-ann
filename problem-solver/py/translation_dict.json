@@ -1,0 +1,62 @@
+{
+    "ru_en_dict": {
+        "ансамблирование": "ensemble learning",
+        "байесовская оптимизация": "Bayesian optimization",
+        "бустинг": "boosting",
+        "метод опорных векторов": "support vector machine (SVM)",
+        "метрика качества": "performance metric",
+        "обратное распространение": "backpropagation",
+        "отбор признаков": "feature selection",
+        "разреженность": "sparsity",
+        "регуляризация": "regularization",
+        "скрещивание": "crossover",
+        "стохастический градиент": "stochastic gradient",
+        "стратегия обучения": "learning policy",
+        "нейронная сеть" : "neural network",
+        "автоэнкодер": "autoencoder",
+        "ванильный RNN": "vanilla RNN",
+        "денойзинг": "denoising",
+        "дискриминатор": "discriminator",
+        "квантизация": "quantization",
+        "квантование весов": "weight quantization",
+        "механизм внимания": "attention mechanism",
+        "нормализация по пакету": "batch normalization",
+        "остаточные связи": "skip connections",
+        "сверточная": "convolutional",
+        "трансформер": "transformer",
+        
+        "токенизация": "tokenization",
+        "лемматизация": "lemmatization",
+        "разреженное внимание": "sparse attention",
+        "семантическое сходство": "semantic similarity",
+        "состязательная атака": "adversarial attack",
+        "трансферное обучение": "transfer learning",
+        "эмбеддинг": "embedding",
+        "языковая модель": "language model",
+
+        "аугментация данных": "data augmentation",
+        "детекция объектов": "object detection",
+        "карта признаков": "feature map",
+        "маска сегментации": "segmentation mask",
+        "пирамида признаков": "feature pyramid",
+
+        "адаптивный момент (Adam)": "adaptive moment estimation",
+        "градиентный взрыв": "gradient explosion",
+        "кривая обучения": "learning curve",
+        "метаобучение": "meta-learning",
+        "отсев (Dropout)": "dropout",
+
+        "вариационный автокодировщик": "variational autoencoder (VAE)",
+        "диффузионная модель": "diffusion model",
+        "порождающее состязательное обучение": "generative adversarial network (GAN)",
+
+        "бутстреппинг": "bootstrapping",
+        "жадное обучение": "greedy training",
+        "проклятие размерности": "curse of dimensionality",
+        "ранжирование по сходству": "similarity ranking",
+        "карта кохонена" : "kohonens map"
+        },
+    "proper_names": {
+            "kohhonens": "kohonens"
+        }
+}
