@@ -47,3 +47,9 @@ htmlcov/
 
 # Chroma
 api/chroma_db
+
+#benchmark
+benchmark/
+.ipynb_checkpoints/
+*.pdf
+*.ipynb

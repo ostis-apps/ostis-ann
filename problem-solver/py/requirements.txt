@@ -15,3 +15,9 @@ python-multipart
 sentence-transformers
 fastapi
 uvicorn
+ragas
+matplotlib
+seaborn
+datasets
+scikit-learn
+nltk
