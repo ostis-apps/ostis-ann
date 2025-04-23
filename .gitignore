@@ -18,6 +18,8 @@ kb.bin
 data.db
 secret.txt
 
+node_modules/
+
 __pycache__
 
 sc-server.log

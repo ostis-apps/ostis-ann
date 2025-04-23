@@ -9,6 +9,7 @@ langchain
 langchain-core
 langchain_community
 langchain_chroma
+langchain-huggingface
 docx2txt
 pypdf
 python-multipart

@@ -1,9 +1,9 @@
 import streamlit as st
-from api_utils import upload_document, list_documents, delete_document
+from api_utils import upload_document, list_documents, delete_document, list_models
 
 def display_sidebar():
     # Sidebar: Model Selection
-    model_options = ["llama3.2", "gpt-4o", "gpt-4o-mini"]
+    model_options = list_models()
     st.sidebar.selectbox("Select Model", options=model_options, key="model")
 
     # Sidebar: Upload Document

@@ -1,0 +1,123 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 250 100% 99%;
+    --foreground: 250 10% 10%;
+
+    --card: 250 33% 99%;
+    --card-foreground: 250 10% 10%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 250 10% 10%;
+
+    --primary: 265 89% 50%;
+    --primary-foreground: 250 10% 98%;
+
+    --secondary: 244 82% 60%;
+    --secondary-foreground: 250 10% 98%;
+
+    --muted: 250 10% 95%;
+    --muted-foreground: 250 10% 40%;
+
+    --accent: 273 93% 65%;
+    --accent-foreground: 250 10% 98%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 250 10% 98%;
+
+    --border: 250 10% 90%;
+    --input: 250 10% 90%;
+    --ring: 265 89% 50%;
+
+    --radius: 0.5rem;
+
+    --sidebar-background: 250 33% 98%;
+    --sidebar-foreground: 250 10% 20%;
+    --sidebar-primary: 265 89% 50%;
+    --sidebar-primary-foreground: 250 10% 98%;
+    --sidebar-accent: 250 33% 96%;
+    --sidebar-accent-foreground: 250 10% 20%;
+    --sidebar-border: 250 10% 92%;
+    --sidebar-ring: 265 89% 60%;
+  }
+
+  .dark {
+    --background: 260 50% 10%;
+    --foreground: 250 10% 98%;
+
+    --card: 260 50% 12%;
+    --card-foreground: 250 10% 98%;
+
+    --popover: 260 50% 8%;
+    --popover-foreground: 250 10% 98%;
+
+    --primary: 265 89% 60%;
+    --primary-foreground: 250 10% 98%;
+
+    --secondary: 244 82% 70%;
+    --secondary-foreground: 250 10% 98%;
+
+    --muted: 260 50% 20%;
+    --muted-foreground: 250 10% 60%;
+
+    --accent: 273 93% 70%;
+    --accent-foreground: 250 10% 98%;
+
+    --destructive: 0 62.8% 50.6%;
+    --destructive-foreground: 250 10% 98%;
+
+    --border: 260 50% 20%;
+    --input: 260 50% 20%;
+    --ring: 265 89% 60%;
+
+    --sidebar-background: 260 50% 15%;
+    --sidebar-foreground: 250 10% 90%;
+    --sidebar-primary: 265 89% 60%;
+    --sidebar-primary-foreground: 250 10% 98%;
+    --sidebar-accent: 260 50% 20%;
+    --sidebar-accent-foreground: 250 10% 90%;
+    --sidebar-border: 260 50% 20%;
+    --sidebar-ring: 265 89% 60%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+@layer utilities {
+  .neural-connection {
+    stroke: theme('colors.neural.accent');
+    stroke-width: 1;
+    stroke-dasharray: 5;
+    opacity: 0.6;
+    fill: none;
+  }
+
+  .neural-node {
+    fill: theme('colors.neural.primary');
+    stroke: theme('colors.neural.highlight');
+    stroke-width: 1;
+    filter: drop-shadow(0 0 2px theme('colors.neural.primary'));
+  }
+  
+  .neural-gradient-bg {
+    @apply bg-gradient-to-br from-neural-background via-neural-background to-neural-primary/30;
+  }
+  
+  .network-grid {
+    background-size: 25px 25px;
+    background-image: 
+      radial-gradient(circle, rgba(139, 92, 246, 0.1) 1px, transparent 1px);
+  }
+}
