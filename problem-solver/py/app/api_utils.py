@@ -67,3 +67,16 @@ def delete_document(file_id):
     except Exception as e:
         st.error(f"An error occurred while deleting the document: {str(e)}")
         return None
+
+
+def list_models():
+    try:
+        response = requests.get("http://localhost:8000/list-models")
+        if response.status_code == 200:
+            return response.json()
+        else:
+            st.error(f"Failed to fetch document list. Error: {response.status_code} - {response.text}")
+            return []
+    except Exception as e:
+        st.error(f"An error occurred while fetching the models list: {str(e)}")
+        return []

@@ -3,8 +3,9 @@ from enum import Enum
 from datetime import datetime
 
 class ModelName(str, Enum):
-    GPT4_O = "gpt-4o"
-    GPT4_O_MINI = "gpt-4o-mini"
+    # GPT4_O = "gpt-4o"
+    # GPT4_O_MINI = "gpt-4o-mini"
+    GEMMA3 = "gemma3"
     LLAMA3_2 = "llama3.2"
 
 class QueryInput(BaseModel):
@@ -24,3 +25,7 @@ class DocumentInfo(BaseModel):
 
 class DeleteFileRequest(BaseModel):
     file_id: int
+
+def get_all_models():
+    models = list(map(lambda model: model.value, ModelName))
+    return models

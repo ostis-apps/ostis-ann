@@ -1,5 +1,5 @@
 from fastapi import FastAPI, File, UploadFile, HTTPException
-from pydantic_models import QueryInput, QueryResponse, DocumentInfo, DeleteFileRequest
+from pydantic_models import QueryInput, QueryResponse, DocumentInfo, DeleteFileRequest, ModelName, get_all_models
 from langchain_utils import get_rag_chain
 from db_utils import insert_application_logs, get_chat_history, get_all_documents, insert_document_record, delete_document_record
 from chroma_utils import index_document_to_chroma, delete_doc_from_chroma
@@ -58,6 +58,10 @@ def upload_and_index_document(file: UploadFile = File(...)):
 @app.get("/list-docs", response_model=list[DocumentInfo])
 def list_documents():
     return get_all_documents()
+
+@app.get("/list-models", response_model=list[ModelName])
+def list_models():
+    return get_all_models()
 
 @app.post("/delete-doc")
 def delete_document(request: DeleteFileRequest):
