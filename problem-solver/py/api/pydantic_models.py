@@ -6,6 +6,7 @@ class ModelName(str, Enum):
     GPT4_O = "gpt-4o"
     GPT4_O_MINI = "gpt-4o-mini"
     LLAMA3_2 = "llama3.2"
+    GEMMA3 = "gemma3"
 
 class QueryInput(BaseModel):
     question: str
