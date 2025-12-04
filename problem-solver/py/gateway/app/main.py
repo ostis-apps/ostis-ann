@@ -48,6 +48,7 @@ app.add_middleware(
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
+    expose_headers=["*"],
 )
 
 def fetch_jwks():
@@ -189,6 +190,14 @@ async def proxy_request(target_base: str, request: Request, path_suffix: str):
                 if k.lower() not in ("content-encoding", "transfer-encoding", "content-length")
             }
             
+            # Preserve CORS headers from backend
+            cors_headers = ["access-control-allow-origin", "access-control-allow-credentials", 
+                          "access-control-allow-methods", "access-control-allow-headers",
+                          "access-control-expose-headers"]
+            for header in cors_headers:
+                if header in resp.headers:
+                    response_headers[header] = resp.headers[header]
+            
             response_headers["Content-Length"] = str(len(response_content))
             
             from fastapi.responses import Response
@@ -222,13 +231,34 @@ async def keycloak_proxy(full_path: str, request: Request):
     return await proxy_request(KC_PREFIX, request, f"/{full_path}")
 
 @app.api_route("/api/{full_path:path}", methods=["GET","POST","PUT","PATCH","DELETE","OPTIONS"])
-async def api_proxy(full_path: str, request: Request, token: str = Depends(get_bearer_token)):
-    claims = verify_jwt(token)
-
-    request.state.user = {"sub": claims.get("sub"), "claims": claims}
-    target_url = f"{TARGET_API}/{full_path}"
-    logger.info(f"Proxying {request.method} {request.url.path} -> {target_url}")
-    return await proxy_request(TARGET_API, request, f"/{full_path}")
+async def api_proxy(full_path: str, request: Request):
+    # Handle preflight OPTIONS requests without authentication
+    if request.method == "OPTIONS":
+        from fastapi.responses import Response
+        return Response(
+            status_code=200,
+            headers={
+                "Access-Control-Allow-Origin": request.headers.get("origin", "*"),
+                "Access-Control-Allow-Methods": "GET, POST, PUT, PATCH, DELETE, OPTIONS",
+                "Access-Control-Allow-Headers": "Content-Type, Authorization",
+                "Access-Control-Allow-Credentials": "true",
+                "Access-Control-Max-Age": "3600",
+            }
+        )
+    
+    try:
+        token = get_bearer_token(request)
+        claims = verify_jwt(token)
+        request.state.user = {"sub": claims.get("sub"), "claims": claims}
+        target_url = f"{TARGET_API}/api/{full_path}"
+        logger.info(f"Proxying {request.method} {request.url.path} -> {target_url}")
+        return await proxy_request(TARGET_API, request, f"/api/{full_path}")
+    except HTTPException as e:
+        logger.error(f"HTTP error in api_proxy: {e.status_code} - {e.detail} - path: {request.url.path}")
+        raise
+    except Exception as e:
+        logger.error(f"Unexpected error in api_proxy: {str(e)} - path: {request.url.path}", exc_info=True)
+        raise
 
 @app.api_route("/{full_path:path}", methods=["GET","POST","PUT","PATCH","DELETE","OPTIONS"])
 async def direct_api_proxy(full_path: str, request: Request):

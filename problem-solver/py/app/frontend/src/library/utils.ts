@@ -107,8 +107,7 @@ async function refreshAccessToken(): Promise<TokenResponse | null> {
 
 const GATEWAY_BASE_URL =
   (import.meta as any).env?.VITE_GATEWAY_BASE ||
-  (import.meta as any).env?.VITE_API_BASE ||
-  "https://gateway.local.test/api";
+  "https://gateway.local.test";
 
 const API: AxiosInstance = axios.create({
     baseURL: GATEWAY_BASE_URL,
@@ -283,12 +282,6 @@ export interface DialogMessage {
   category?: TaskCategory | null;
   meta?: Record<string, unknown> | null;
 }
-
-const API_BASE_URL = import.meta.env.VITE_UNIFIED_API_URL ?? "http://localhost:8000";
-
-const API: AxiosInstance = axios.create({
-  baseURL: API_BASE_URL,
-});
 
 export const api = {
   async chat(payload: ChatPayload): Promise<ChatResponse> {

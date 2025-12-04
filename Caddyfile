@@ -17,7 +17,7 @@
 
 api.local.test {
     tls /etc/caddy/certs/local.crt /etc/caddy/certs/local.key
-    reverse_proxy api:8000 {
+    reverse_proxy unified-api:8000 {
         import handlers
     }
 }

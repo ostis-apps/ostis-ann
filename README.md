@@ -18,19 +18,22 @@ You will need [Docker](https://docs.docker.com/) (with Compose plugin) installed
 
 We recommend using Docker Desktop on [macOS](https://docs.docker.com/desktop/install/mac-install/) / [Windows](https://docs.docker.com/desktop/install/windows-install/) and using [Docker Server](https://docs.docker.com/engine/install/#server) distribution for your Linux distribution of choice. Use installation instructions provided in the links above.
 ## Installation
+Firstly, generate SSL certificates with this command
+```sh
+./scripts/generate-certs.sh
+```
+After go to a Settings of your browser and add this certificate
 
 ```sh
 git clone -c core.longpaths=true -c core.autocrlf=true https://github.com/ostis-apps/ostis-ann
 cd ostis-ann
 git submodule update --init --recursive
-./scripts/generate-certs.sh
 docker compose build
 ```
 Then go to your terminal and add this command
 ```sh
 sudo sh -c 'echo "127.0.0.1 frontend.local.test gateway.local.test api.local.test" >> /etc/hosts'
 ```
-You may need to add the created certificate to the list of valid ones for the browser
 
 ## 🚀 Usage
 - Launch

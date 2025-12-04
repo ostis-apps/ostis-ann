@@ -11,7 +11,10 @@ openssl req -x509 -newkey rsa:4096 \
   -out "$CERTS_DIR/local.crt" \
   -days 365 -nodes \
   -subj "/CN=localhost" \
-  -addext 'subjectAltName=DNS:localhost,DNS:local.test,DNS:*.local.test,DNS:api.local.test,DNS:frontend.local.test,DNS:gateway.local.test,DNS:keycloak.local.test,IP:127.0.0.1,IP:::1'
+  -addext 'subjectAltName=DNS:localhost,DNS:local.test,DNS:*.local.test,DNS:api.local.test,DNS:frontend.local.test,DNS:gateway.local.test,DNS:keycloak.local.test,IP:127.0.0.1,IP:::1' \
+  -addext 'basicConstraints=CA:FALSE' \
+  -addext 'keyUsage=digitalSignature,keyEncipherment' \
+  -addext 'extendedKeyUsage=serverAuth,clientAuth'
 
 chmod 644 "$CERTS_DIR/local.crt"
 chmod 600 "$CERTS_DIR/local.key"
