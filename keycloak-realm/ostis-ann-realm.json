@@ -725,8 +725,8 @@
     "enabled" : true,
     "alwaysDisplayInConsole" : true,
     "clientAuthenticatorType" : "client-secret",
-    "redirectUris" : [ "https://frontend.local.test/*", "https://frontend.local.test/auth/callback" ],
-    "webOrigins" : [ "https://frontend.local.test", "http://localhost:8080" ],
+    "redirectUris" : [ "http://localhost:8080/*", "http://localhost:8080/auth/callback" ],
+    "webOrigins" : [ "http://localhost:8080" ],
     "notBefore" : 0,
     "bearerOnly" : false,
     "consentRequired" : false,
@@ -1395,31 +1395,6 @@
   "enabledEventTypes" : [ ],
   "adminEventsEnabled" : false,
   "adminEventsDetailsEnabled" : false,
-  "identityProviders" : [ {
-    "alias" : "google",
-    "displayName" : "",
-    "internalId" : "d531ceaa-ef2c-4c14-91d9-e021f3e11ed9",
-    "providerId" : "google",
-    "enabled" : true,
-    "updateProfileFirstLoginMode" : "on",
-    "trustEmail" : false,
-    "storeToken" : false,
-    "addReadTokenRoleOnCreate" : false,
-    "authenticateByDefault" : false,
-    "linkOnly" : false,
-    "hideOnLogin" : false,
-    "config" : {
-      "offlineAccess" : "false",
-      "acceptsPromptNoneForwardFromClient" : "false",
-      "clientId" : "1003123614225-0kt1pnsi1ph2uelslfobre5iaf21m9l5.apps.googleusercontent.com",
-      "disableUserInfo" : "false",
-      "showInAccountConsole" : "ALWAYS",
-      "filteredByClaim" : "false",
-      "syncMode" : "IMPORT",
-      "clientSecret" : "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",
-      "caseSensitiveOriginalUsername" : "false"
-    }
-  } ],
   "identityProviderMappers" : [ ],
   "components" : {
     "org.keycloak.services.clientregistration.policy.ClientRegistrationPolicy" : [ {
