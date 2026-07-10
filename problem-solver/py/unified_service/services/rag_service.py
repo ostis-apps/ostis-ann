@@ -4,8 +4,8 @@ RAG service for informational queries using ChromaDB
 import logging
 from typing import List, Dict
 from langchain_core.prompts import ChatPromptTemplate, MessagesPlaceholder
-from langchain.chains import create_history_aware_retriever, create_retrieval_chain
-from langchain.chains.combine_documents import create_stuff_documents_chain
+from langchain_classic.chains import create_history_aware_retriever, create_retrieval_chain
+from langchain_classic.chains.combine_documents import create_stuff_documents_chain
 from database.vector_store import get_retriever
 from utils.llm import get_llm
 from utils.exceptions import RAGException
@@ -212,4 +212,3 @@ class RAGService:
         except Exception as e:
             logger.error(f"Error in RAG service: {e}", exc_info=True)
             raise RAGException(f"Failed to answer query with RAG: {str(e)}")
-

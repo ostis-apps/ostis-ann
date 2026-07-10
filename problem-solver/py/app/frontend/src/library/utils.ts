@@ -47,7 +47,7 @@ function setTokens(tokens: TokenResponse): void {
   sessionStorage.setItem('kc_tokens', JSON.stringify(tokens));
 }
 
-const KEYCLOAK_BASE = (import.meta as any).env?.VITE_KEYCLOAK_BASE || 'https://localhost:8443';
+const KEYCLOAK_BASE = (import.meta as any).env?.VITE_KEYCLOAK_BASE || 'http://localhost:8081';
 const CLIENT_ID = (import.meta as any).env?.VITE_KEYCLOAK_CLIENT_ID || 'spa-client';
 const TOKEN_ENDPOINT = `${KEYCLOAK_BASE}/realms/ostis-ann/protocol/openid-connect/token`;
 
@@ -107,11 +107,12 @@ async function refreshAccessToken(): Promise<TokenResponse | null> {
 
 const GATEWAY_BASE_URL =
   (import.meta as any).env?.VITE_GATEWAY_BASE ||
-  "https://gateway.local.test";
+  "http://gateway.local.test";
 
 const API: AxiosInstance = axios.create({
     baseURL: GATEWAY_BASE_URL,
     headers: {"Content-Type": "application/json"},
+    timeout: 3000000
 });
 
 API.interceptors.request.use(async (config: InternalAxiosRequestConfig) => {
@@ -284,58 +285,109 @@ export interface DialogMessage {
 }
 
 export const api = {
-  async chat(payload: ChatPayload): Promise<ChatResponse> {
-    const { data } = await API.post<ChatResponse>("/api/v1/chat", payload);
-    return data;
-  },
+   async chat(payload: ChatPayload): Promise<ChatResponse> {
+     const { data } = await API.post<ChatResponse>("/api/v1/chat", payload);
+     return data;
+   },
 
-  async uploadDoc(file: File): Promise<FileUploadResponse> {
-    const formData = new FormData();
-    formData.append("file", file);
+   async uploadDoc(file: File): Promise<FileUploadResponse> {
+     const formData = new FormData();
+     formData.append("file", file);
 
-    const { data } = await API.post<FileUploadResponse>(
-      "/api/v1/documents/upload",
-      formData,
-      {
-        headers: {
-          "Content-Type": "multipart/form-data",
-        },
-      },
+     const { data } = await API.post<FileUploadResponse>(
+       "/api/v1/documents/upload",
+       formData,
+       {
+         headers: {
+           "Content-Type": "multipart/form-data",
+         },
+       },
+     );
+     return data;
+   },
+
+   async deleteDoc(fileId: number): Promise<FileDeleteResponse> {
+     const payload: DocumentDeleteRequest = { file_id: fileId };
+     const { data } = await API.delete<FileDeleteResponse>("/api/v1/documents/delete", {
+       data: payload,
+       headers: { "Content-Type": "application/json" },
+     });
+     return data;
+   },
+
+   async getFileList(): Promise<DocumentsInfo[]> {
+     const { data } = await API.get<DocumentsInfo[]>("/api/v1/documents/list");
+     return data;
+   },
+
+   async listDialogs(): Promise<DialogInfo[]> {
+     const { data } = await API.get<DialogInfo[]>("/api/v1/dialogs");
+     return data;
+   },
+
+   async createDialog(title?: string, chatMode?: ChatMode): Promise<DialogInfo> {
+     const { data } = await API.post<DialogInfo>("/api/v1/dialogs", { title, chat_mode: chatMode });
+     return data;
+   },
+
+   async getDialogMessages(sessionId: string): Promise<DialogMessage[]> {
+     const { data } = await API.get<DialogMessage[]>(`/api/v1/dialogs/${sessionId}/messages`);
+     return data;
+   },
+
+    async deleteDialog(sessionId: string): Promise<{ success: boolean; message: string }> {
+      const { data } = await API.delete<{ success: boolean; message: string }>(`/api/v1/dialogs/${sessionId}`);
+      return data;
+    },
+
+    async compileManualModel(body: { 
+      model_name: string; 
+      layers: Array<{type: string; params: Record<string, any>}> 
+    },
+    sessionId: string) {
+      const { data } = await API.post<AnswerSchema>(
+        "/api/v1/nn/gen_model",
+        body,
+        {headers:{'session_id': sessionId}}
+      );
+      return data;
+    },
+
+    async downloadModel(body: { 
+      model_name: string; 
+      layers: Array<{type: string; params: Record<string, any>}> 
+    }) {
+      const { data } = await API.post<BlobPart>(
+        "/api/v1/nn/download_model",
+        body,
+        {
+          responseType: 'blob', // Critical for file download
+        }
+      );
+      return data;
+    },
+
+    async getModelHistory(sessionId: string) {
+      const { data } = await API.get<Array<any>>(
+        `/api/v1/nn/get_models/${sessionId}`
+      );
+      return data;
+    },
+
+    async getSpecificModel(sessionId: string, modelId: number) {
+      const { data } = await API.get<any>(
+        `/api/v1/nn/get_model/${sessionId}/${modelId}`
+      );
+      return data;
+    },
+
+    async deleteModel(modelId: number, sessionId: string) {
+    const { data } = await API.delete<{ success: boolean; message: string }>(
+        `/api/v1/nn/delete_model/${modelId}`,
+        {
+            headers: { "session_id": sessionId }
+        }
     );
     return data;
-  },
-
-  async deleteDoc(fileId: number): Promise<FileDeleteResponse> {
-    const payload: DocumentDeleteRequest = { file_id: fileId };
-    const { data } = await API.delete<FileDeleteResponse>("/api/v1/documents/delete", {
-      data: payload,
-      headers: { "Content-Type": "application/json" },
-    });
-    return data;
-  },
-
-  async getFileList(): Promise<DocumentsInfo[]> {
-    const { data } = await API.get<DocumentsInfo[]>("/api/v1/documents/list");
-    return data;
-  },
-
-  async listDialogs(): Promise<DialogInfo[]> {
-    const { data } = await API.get<DialogInfo[]>("/api/v1/dialogs");
-    return data;
-  },
-
-  async createDialog(title?: string, chatMode?: ChatMode): Promise<DialogInfo> {
-    const { data } = await API.post<DialogInfo>("/api/v1/dialogs", { title, chat_mode: chatMode });
-    return data;
-  },
-
-  async getDialogMessages(sessionId: string): Promise<DialogMessage[]> {
-    const { data } = await API.get<DialogMessage[]>(`/api/v1/dialogs/${sessionId}/messages`);
-    return data;
-  },
-
-  async deleteDialog(sessionId: string): Promise<{ success: boolean; message: string }> {
-    const { data } = await API.delete<{ success: boolean; message: string }>(`/api/v1/dialogs/${sessionId}`);
-    return data;
-  },
+}
 };

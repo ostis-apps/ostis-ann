@@ -18,7 +18,7 @@ from fastapi.middleware.cors import CORSMiddleware
 from config import settings
 from utils import setup_logging
 from routers import health_router, documents_router, chat_router, dialogs_router
-
+from nn_creation_service.nn_creation_router import router as nn_router
 # Setup logging
 setup_logging()
 logger = logging.getLogger(__name__)
@@ -96,6 +96,7 @@ app.include_router(health_router)
 app.include_router(documents_router)
 app.include_router(chat_router)
 app.include_router(dialogs_router)
+app.include_router(nn_router)
 
 logger.info("Routers registered successfully")
 

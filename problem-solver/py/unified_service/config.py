@@ -23,7 +23,7 @@ class Settings(BaseSettings):
     ollama_base_url: str = "http://host.docker.internal:11434"
     llm_model: str = "tinyllama"
     llm_temperature: float = 0.7
-    llm_timeout: int = 60
+    llm_timeout: int = 300
     
     # Database Settings
     sqlite_db_name: str = "unified_rag_app.db"

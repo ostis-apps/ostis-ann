@@ -59,6 +59,17 @@ def init_database() -> None:
                 upload_timestamp TIMESTAMP DEFAULT CURRENT_TIMESTAMP
             )
         ''')
+        # Model creation table
+        conn.execute('''
+            CREATE TABLE IF NOT EXISTS user_model_architectures (
+                id INTEGER PRIMARY KEY AUTOINCREMENT,
+                user_id TEXT NOT NULL,
+                model_name TEXT NOT NULL,
+                architecture JSON NOT NULL,
+                generated_code TEXT,
+                created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+                updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+            );''')
         
         # Session state table
         conn.execute('''
@@ -444,7 +455,58 @@ def delete_old_sessions(hours: int = 24) -> int:
     finally:
         conn.close()
 
+def save_user_model_architecture(user_id: str, model_name: str, architecture: dict, generated_code: str = None):
+    """Save a model architecture for a specific user"""
+    conn = get_db_connection()
+    cursor = conn.cursor()
+    cursor.execute("""
+        INSERT INTO user_model_architectures (user_id, model_name, architecture, generated_code)
+        VALUES (?, ?, ?, ?)
+    """, (user_id, model_name, json.dumps(architecture), generated_code))
+    conn.commit()
+    conn.close()
+
+def get_user_model_architectures(user_id: str):
+    """Get all model architectures for a user"""
+    conn = get_db_connection()
+    cursor = conn.cursor()
+    cursor.execute("SELECT * FROM user_model_architectures WHERE user_id = ?", (user_id,))
+    rows = cursor.fetchall()
+    conn.close()
+    return [dict(row) for row in rows]
+
+def get_user_model_architecture(user_id: str, model_id: int):
+    """Get a specific model architecture for a user"""
+    conn = get_db_connection()
+    cursor = conn.cursor()
+    cursor.execute("SELECT * FROM user_model_architectures WHERE id = ? AND user_id = ?", (model_id, user_id))
+    row = cursor.fetchone()
+    conn.close()
+    return dict(row) if row else None
+
+def delete_user_model(model_id: int, session_id: str) -> bool:
+    """Delete a model by ID, checking session_id"""
+    conn = get_db_connection()
+    try:
+        # Проверяем, что модель существует и принадлежит этой сессии
+        cursor = conn.execute(
+            "SELECT id FROM user_model_architectures WHERE id = ? AND user_id = ?",
+            (model_id, session_id)
+        )
+        if not cursor.fetchone():
+            logger.warning(f"Model {model_id} not found or access denied for session {session_id}")
+            return False
+
+        # Удаляем модель
+        conn.execute('DELETE FROM user_model_architectures WHERE id = ?', (model_id,))
+        conn.commit()
+        logger.info(f"Deleted model {model_id} for session {session_id}")
+        return True
+    except Exception as e:
+        logger.error(f"Error deleting model: {e}")
+        return False
+    finally:
+        conn.close()
 
 # Initialize database on module import
 init_database()
-

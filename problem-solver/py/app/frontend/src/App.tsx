@@ -12,6 +12,8 @@ import Projects from "./pages/Projects";
 import CompareModels from "./pages/CompareModels";
 import Assistant from "./pages/Assistant";
 import Documentation from "./pages/Documentation";
+import ManualArchitecture from "./pages/ManualArchitecture";
+import UserModels from "./pages/UserModels";
 
 const queryClient = new QueryClient();
 
@@ -24,6 +26,8 @@ const App = () => (
         <Routes>
           <Route path="/" element={<Index />} />
           <Route path="/create" element={<CreateModel />} />
+          <Route path="/architect" element={<ManualArchitecture />} />
+           <Route path="/user-models" element={<UserModels />} />
           <Route path="/models" element={<ModelLibrary />} />
           <Route path="/projects" element={<Projects />} />
           <Route path="/compare" element={<CompareModels />} />

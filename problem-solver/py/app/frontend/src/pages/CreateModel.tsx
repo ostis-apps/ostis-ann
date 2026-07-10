@@ -3,9 +3,10 @@ import React, { useMemo } from 'react';
 import MainLayout from '@/components/layout/MainLayout';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
 import ChatInterface from '@/components/assistant/ChatInterface';
 import { Brain, Layers, Code } from "lucide-react";
-import { useLocation } from "react-router-dom";
+import { useLocation, Link } from "react-router-dom";
 
 const CreateModel = () => {
   const location = useLocation();
@@ -50,8 +51,18 @@ const CreateModel = () => {
                   Конструктор архитектуры нейронной сети с помощью графического интерфейса
                 </CardDescription>
               </CardHeader>
-              <CardContent className="h-[400px] flex items-center justify-center border-2 border-dashed rounded-md">
-                <p className="text-muted-foreground">Интерфейс визуального конструктора (в разработке)</p>
+              <CardContent className="h-[400px] flex flex-col items-center justify-center gap-4">
+                <Layers className="h-16 w-16 text-muted-foreground/50" />
+                <p className="text-muted-foreground text-center max-w-md">
+                  Визуальный конструктор позволяет построить архитектуру нейронной сети,
+                  добавляя и настраивая слои в графическом редакторе
+                </p>
+                <Button asChild size="lg">
+                  <Link to="/architect">
+                    <Layers className="h-4 w-4 mr-2" />
+                    Открыть конструктор
+                  </Link>
+                </Button>
               </CardContent>
             </Card>
           </TabsContent>

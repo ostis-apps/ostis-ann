@@ -1,46 +1,23 @@
-# FastAPI and server
 fastapi>=0.109.0
 uvicorn[standard]>=0.27.0
 python-multipart>=0.0.9
-
-# Pydantic
 pydantic>=2.6.0
 pydantic-settings>=2.1.0
-
-# LangChain - migrated to TinyLlama
-langchain>=0.3.24,<0.4.0
-langchain-community>=0.3.22,<0.4.0
-langchain-core>=0.3.55,<0.4.0
-langchain-text-splitters>=0.3.8,<0.4.0
-langchain-huggingface>=0.1.2,<0.2.0
-langchain-chroma>=0.2.3,<0.3.0
-
-# Ollama
-# Using ChatOllama from langchain-community
-
-# Vector DB and Embeddings
+langchain>=1.0.0
+langchain-community>=0.4.0
+langchain-core>=1.0.0
+langchain-text-splitters>=1.0.0
+langchain-huggingface>=0.2.0
+langchain-chroma>=0.3.0
+langchain-ollama>=1.0.1
+langchain-classic>=1.0.0
 chromadb>=0.4.22
 sentence-transformers>=2.3.1
-
-# Document processing
 pypdf>=4.0.1
 docx2txt>=0.8
 python-docx>=1.1.0
 unstructured>=0.12.0
-
-# HTTP client
 httpx>=0.26.0
 requests>=2.31.0
-
-# Database
-# sqlite3 is a built-in Python module, no need to install
-
-# Utilities
 python-dotenv>=1.0.1
-
-# Logging
-# Standard library logging is sufficient
-
-# Optional: MCP clients (if needed for advanced integrations)
-# fastmcp>=2.13.0  # Commented out as it's optional
 

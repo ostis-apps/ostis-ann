@@ -3,7 +3,7 @@ LLM utilities - unified LLM manager using TinyLlama
 """
 import logging
 from typing import Optional, List, Dict, Any
-from langchain_community.chat_models import ChatOllama
+from langchain_ollama import ChatOllama
 from langchain_core.messages import BaseMessage, HumanMessage, SystemMessage, AIMessage
 from config import settings
 from .exceptions import LLMException

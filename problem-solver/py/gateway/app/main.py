@@ -56,7 +56,7 @@ def fetch_jwks():
     now = time.time()
     if _JWKS and (now - _JWKS_TS) < _JWKS_TTL:
         return _JWKS
-    r = httpx.get(JWKS_URL, timeout=5.0)
+    r = httpx.get(JWKS_URL, timeout=50.0)
     r.raise_for_status()
     _JWKS = r.json()
     _JWKS_TS = now
@@ -178,7 +178,7 @@ async def proxy_request(target_base: str, request: Request, path_suffix: str):
 
     body = await request.body()
     logger.info(f"Proxy request: {method} {url} (body size: {len(body)} bytes)")
-    async with httpx.AsyncClient(follow_redirects=True, timeout=30.0) as client:
+    async with httpx.AsyncClient(follow_redirects=True, timeout=300.0) as client:
         try:
             resp = await client.request(method, url, headers=headers, content=body, params=request.query_params)
             logger.info(f"Proxy response: {resp.status_code} from {url}")

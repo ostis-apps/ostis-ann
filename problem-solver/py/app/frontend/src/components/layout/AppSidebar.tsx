@@ -66,6 +66,19 @@ const AppSidebar: React.FC = () => {
               </SidebarMenuItem>
               <SidebarMenuItem>
                 <SidebarMenuButton asChild>
+                  <NavLink to="/architect" className={({ isActive }) => 
+                    `flex items-center gap-3 px-3 py-2 rounded-md transition-colors ${
+                      isActive ? 'bg-sidebar-accent text-sidebar-accent-foreground' : 
+                      'hover:bg-sidebar-accent/50 hover:text-sidebar-accent-foreground'
+                    }`
+                  }>
+                    <Layers className="h-5 w-5" />
+                    <span>Ручная архитектура</span>
+                  </NavLink>
+                </SidebarMenuButton>
+              </SidebarMenuItem>
+              <SidebarMenuItem>
+                <SidebarMenuButton asChild>
                   <NavLink to="/models" className={({ isActive }) => 
                     `flex items-center gap-3 px-3 py-2 rounded-md transition-colors ${
                       isActive ? 'bg-sidebar-accent text-sidebar-accent-foreground' : 
